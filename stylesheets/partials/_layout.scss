@@ -1,0 +1,21 @@
+header[role="banner"]{
+ h1 {
+  a {
+    background:url('images/sprite.png') left top no-repeat;
+    text-indent:-999em;
+    width:148px;
+    height:64px;
+    display:block;
+    overflow:hidden;
+  }
+ }
+
+  h2 {
+    display:none;
+  }
+
+}
+
+footer {
+  background:#2C2C2C;
+}

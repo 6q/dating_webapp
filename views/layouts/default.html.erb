@@ -7,13 +7,22 @@
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="container">
       <header role="banner">
         <h1><a href="/">Cellove</a></h1>
         <h2>Ponle alas al amor</h2>
-        <div class="action-link"><a href="http://get-serve.com/documentation">Documentation</a></div>
+        <%= render '/shared/public-header-login' %>
+        <nav role="navigation">
+          <ul>
+            <li><%= link_to 'Inicio','/home' %></li>
+            <li><%= link_to 'Quiero recomendar','/quiero-recomendar' %></li>
+            <li><%= link_to 'Quiero encontrar','/quiero-encontrar' %></li>
+            <li><%= link_to 'Ver usuarios','/ver-usuarios' %></li>
+          </ul>
+        </nav>
       </header>
       <section role="main">
         <article>
@@ -21,13 +30,39 @@
           <%= yield %>
         </article>
       </section>
+    </div>
       <footer>
-        <small>
-          <p>Serve is copyright © 2007-2011 John W. Long and Adam I. Williams. Portions have
-            been contributed by Robert Evans and others. Serve is distributed under a MIT-style
-            license and is open source software. Enjoy!</p>
-          <p>Questions? <a href="http://get-serve.com/mailing-list">Join the  mailing list.</a></p>
-        </small>
+        <div class="container">
+          <nav class="row">
+            <div class="span3">
+              <h4>Popularidad en Encomi</h4>
+              <ul>
+                <li><%= link_to '¿Qué es?', '#' %></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <h4>Anuncio TV</h4>
+              <ul>
+                <li><%= link_to '¿Qué es?', '#' %></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <h4>Blog Cellove</h4>
+              <ul>
+                <li><%= link_to '¿Qué es?', '#' %></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <h4>Legal y conducta</h4>
+              <ul>
+                <li><%= link_to '¿Qué es?', '#' %></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </footer>
     </div>
   </body>

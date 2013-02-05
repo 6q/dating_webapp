@@ -7,7 +7,7 @@ gem 'serve', '1.5.1'
 
 # Use Compass and Sass
 gem 'compass'
-gem 'compass_twitter_bootstrap', '2.0.3'
+gem 'compass_twitter_bootstrap'
 
 gem 'tilt', :git => 'git://github.com/rtomayko/tilt.git', :branch => 'encodings'
 
