@@ -1,5 +1,3 @@
-#\ -p 51571
-
 require 'rubygems'
 require 'bundler'
 begin
