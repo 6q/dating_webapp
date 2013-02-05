@@ -6,7 +6,7 @@ $reversed-text: false;
 
 // Base Font
 $base-font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
-$base-font-size: 110%;
+$base-font-size: 100%;
 $base-line-height: 1.4;
 
 // Fixed Font
@@ -21,9 +21,9 @@ $quiet-color: soften($text-color, 1.5);
 $header-color: strengthen($text-color, 0.66);
 
 // Link Colors
-$link-color: #bb3a08;
-$link-visited-color: #a72;
-$link-hover-color: #f66933;
+$link-color: #5caae8;
+$link-visited-color: #5caae8;
+$link-hover-color: #5caae8;
 
 // Theme Colors
 $background-color: #F1F1F1;

@@ -1,0 +1,34 @@
+#in-love {
+
+  background:#f9f9f9;
+  padding:20px 0;
+
+  article {
+
+    h1 {
+      font-size:120%;
+      margin:0;
+      font-weight:normal;
+      border-bottom:#e0e0e0 1px solid;
+      padding-bottom:10px;
+      margin-bottom:10px;
+
+      a {
+        background:url(images/sprite.png) 0px -120px no-repeat;
+        padding-left:25px;
+        color:#000;
+        text-decoration:none;
+      }
+    }
+
+    p {
+      font-size:90%;
+    }
+
+    img {
+      float:left;
+      margin-right:10px;
+      margin-top:5px;
+    }
+  }
+}

@@ -1,10 +1,21 @@
 header[role="banner"]{
+
+  padding-top:100px;
+  position:relative;
+  margin-bottom:30px;
+
  h1 {
+    width:289px;
+    height:120px;
+    margin:0;
+    padding:0;
+    float:left;
+
   a {
     background:url('images/sprite.png') left top no-repeat;
     text-indent:-999em;
-    width:148px;
-    height:64px;
+    width:289px;
+    height:120px;
     display:block;
     overflow:hidden;
   }
@@ -14,8 +25,120 @@ header[role="banner"]{
     display:none;
   }
 
+  #login-box {
+    position:absolute;
+    top:30px;
+    right:0;
+
+    h4 {
+      color:#fff;
+      margin:0;
+      float:left;
+      font-weight:normal;
+      font-size:100%;
+    }
+
+    small {
+      font-size:.7em;
+      margin-bottom:.5em;
+      color:#fff;
+      display:block;
+      text-align:right;
+      a {
+        color:#fff;
+      }
+    }
+
+    fieldset {
+      border:0;
+      padding:0;
+      margin:0;
+
+      input[type="submit"]{
+        margin-bottom: 10px;
+        text-transform:uppercase;
+        @include button(#363636,#242625,#ffffff);
+      }
+    }
+
+  }
+
+  nav[role="navigation"]{
+
+    margin-top:62px;
+    font-size:110%;
+
+    float:right;
+    @include gradient(#363636,#242625);
+
+    ul {
+      list-style:none;
+      padding:0;
+      margin:0;
+
+      li {
+        display:inline;
+
+        a {
+          display:block;
+          float:left;
+          padding:1em 1.4em;
+          color:#fff;
+          border-left:#353535 1px solid;
+          border-right:#242625 1px solid;
+          border-top:#3f3f3f 1px solid;
+          border-bottom:#3f3f3f 1px solid;
+
+          &:hover, &.active {
+            background:#000;
+            border-color:#000;
+            text-decoration:none;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
   background:#2C2C2C;
+  padding-top:20px;
+  padding-bottom:20px;
+
+  h4 {
+    color:#d0d0d0;
+  }
+
+  ul {
+    font-size:85%;
+    padding:0;
+    margin:0;
+    list-style:none;
+    border-top:#373737 1px solid;
+
+    li {
+      border-bottom:#373737 1px solid;
+      padding:10px 0;
+      line-height:120%;
+      a {
+        color:#747474!important;
+        text-decoration:none!important;
+        &:hover {
+          text-decoration:underline!important;
+        }
+      }
+    }
+  }
+
+  #legal {
+    text-align:center;
+    color:#a4a4a4;
+    font-size:90%;
+    margin-top:30px;
+    margin-bottom:20px;
+
+    a {
+      color:#747474;
+    }
+  }
 }
