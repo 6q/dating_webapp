@@ -1,3 +1,9 @@
+#slider {
+  height:445px;
+  background:url(images/bg-slider.png) center bottom no-repeat;
+  padding-bottom:40px;
+}
+
 .container {
   position:relative;
 }
@@ -7,7 +13,8 @@ header[role="banner"]{
   background:url(images/bg/main-bg4.jpg) center top no-repeat;
   padding-top:60px;
   position:relative;
-  margin-bottom:30px;
+  margin-bottom:10px;
+  padding-bottom:10px;
 
  h1 {
     width:289px;

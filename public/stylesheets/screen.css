@@ -6403,6 +6403,12 @@ a.more:after {
   padding: 1px 1em;
 }
 
+#slider {
+  height: 445px;
+  background: url(images/bg-slider.png) center bottom no-repeat;
+  padding-bottom: 40px;
+}
+
 .container {
   position: relative;
 }
@@ -6411,7 +6417,8 @@ header[role="banner"] {
   background: url(images/bg/main-bg4.jpg) center top no-repeat;
   padding-top: 60px;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 header[role="banner"] h1 {
   width: 289px;
@@ -6587,10 +6594,6 @@ body.home header[role="banner"] {
   float: left;
   margin-right: 10px;
   margin-top: 5px;
-}
-
-#slider {
-  height: 445px;
 }
 
 #home-highlights {
