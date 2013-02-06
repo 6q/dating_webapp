@@ -69,6 +69,13 @@ aside {
       a {
         color:#333;
       }
+
+      &.active {
+        a {
+          color:$link_color;
+        }
+      }
+
     }
   }
 

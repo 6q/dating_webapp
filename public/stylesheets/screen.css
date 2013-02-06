@@ -6653,6 +6653,9 @@ aside ul li:first-child {
 aside ul li a {
   color: #333;
 }
+aside ul li.active a {
+  color: #5caae8;
+}
 aside.sidebar {
   margin-top: 2.1em;
 }
