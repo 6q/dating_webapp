@@ -6599,13 +6599,25 @@ body.home header[role="banner"] {
   border-top: #e0e0e0 1px solid;
   padding: 20px 0;
 }
+#in-love a.fold {
+  background: url(images/sprite.png) -392px -27px no-repeat;
+  display: block;
+  width: 36px;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  overflow: hidden;
+  text-indent: -999em;
+}
+#in-love a.fold.active {
+  background-position: -429px -27px;
+}
 #in-love article h1 {
   font-size: 120%;
   margin: 0;
   font-weight: normal;
-  border-bottom: #e0e0e0 1px solid;
   padding-bottom: 10px;
-  margin-bottom: 10px;
 }
 #in-love article h1 a {
   background: url(images/sprite.png) 0px -120px no-repeat;
@@ -6615,11 +6627,15 @@ body.home header[role="banner"] {
 }
 #in-love article p {
   font-size: 90%;
+  border-top: #e0e0e0 1px solid;
+  padding-top: 10px;
 }
 #in-love article img {
   float: left;
   margin-right: 10px;
-  margin-top: 5px;
+  margin-top: 3px;
+  width: 80px;
+  height: 80px;
 }
 
 aside ul {
