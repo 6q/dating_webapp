@@ -14,21 +14,23 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/stylesheets/screen.css">
   </head>
-  <body class="<%= @page.downcase %>">
-    <div class="container">
-      <header role="banner" class="clearfix">
+  <body class="<%= @page.downcase if @page %>">
+    <header role="banner" class="clearfix">
+      <div class="container">
         <%= render '/shared/public-header-login' %>
         <h1><a href="/">Cellove</a></h1>
         <h2>Ponle alas al amor</h2>
         <nav role="navigation">
           <ul class="clearfix">
             <li><%= link_to 'Inicio','/home' %></li>
-            <li><%= link_to 'Quiero recomendar','/quiero-recomendar' %></li>
-            <li><%= link_to 'Quiero encontrar','/quiero-encontrar' %></li>
-            <li><%= link_to 'Ver usuarios','/ver-usuarios' %></li>
+            <li><%= link_to 'Quiero recomendar','/public/quiero-recomendar' %></li>
+            <li><%= link_to 'Quiero encontrar','/public/quiero-encontrar' %></li>
+            <li><%= link_to 'Ver usuarios','/public/ver-usuarios' %></li>
           </ul>
         </nav>
-      </header>
+      </div>
+    </header>
+    <div class="container">
       <section role="main">
           <%= yield %>
       </section>

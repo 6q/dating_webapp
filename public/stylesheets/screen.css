@@ -6403,8 +6403,13 @@ a.more:after {
   padding: 1px 1em;
 }
 
+.container {
+  position: relative;
+}
+
 header[role="banner"] {
-  padding-top: 100px;
+  background: url(images/bg/main-bg4.jpg) center top no-repeat;
+  padding-top: 60px;
   position: relative;
   margin-bottom: 30px;
 }
@@ -6428,7 +6433,7 @@ header[role="banner"] h2 {
 }
 header[role="banner"] #login-box {
   position: absolute;
-  top: 30px;
+  top: -30px;
   right: 0;
 }
 header[role="banner"] #login-box h4 {
@@ -6552,6 +6557,9 @@ footer #legal a {
 
 body.home {
   background: url(images/bg/main-bg5.jpg) center top no-repeat;
+}
+body.home header[role="banner"] {
+  background: none;
 }
 
 #in-love {

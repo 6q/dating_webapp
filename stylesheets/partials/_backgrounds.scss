@@ -1,5 +1,9 @@
 body {
   &.home {
     background:url(images/bg/main-bg5.jpg) center top no-repeat;
+
+    header[role="banner"]{
+      background:none;
+    }
   }
 }
