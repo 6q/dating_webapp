@@ -18,68 +18,29 @@
     <header role="banner" class="clearfix">
       <div class="container">
         <%= render '/shared/public-header-login' %>
-        <h1><a href="/">Cellove</a></h1>
+        <h1><a href="/public/home">Cellove</a></h1>
         <h2>Ponle alas al amor</h2>
-        <nav role="navigation">
-          <ul class="clearfix">
-            <li><%= link_to 'Inicio','/home' %></li>
-            <li><%= link_to 'Quiero recomendar','/public/quiero-recomendar' %></li>
-            <li><%= link_to 'Quiero encontrar','/public/quiero-encontrar' %></li>
-            <li><%= link_to 'Ver usuarios','/public/ver-usuarios' %></li>
-          </ul>
-        </nav>
+        <%= render '/shared/public-main-nav' %>
       </div>
     </header>
     <div class="container">
       <section role="main">
+
+        <% if @sidebar %>
+        <div class="row">
+          <div class="span3">
+            <%= render '/shared/public-flat-sidebar' %>
+          </div>
+          <div class="span9">
+            <%= yield %>
+          </div>
+        <% else %>
           <%= yield %>
+        <% end %>
       </section>
     </div>
     <%= render '/shared/public-in-love' %>
-      <footer>
-        <div class="container">
-          <nav class="row">
-            <div class="span3">
-              <h4>Popularidad en Cellove</h4>
-              <ul>
-                <li><%= link_to '¿Qué es?', '#' %></li>
-                <li><%= link_to '¿Cómo consigo popularidad?', '#' %></li>
-                <li><%= link_to 'Celestin@s', '#' %></li>
-              </ul>
-            </div>
-
-            <div class="span3">
-              <h4>Anuncio TV</h4>
-              <ul>
-                <li><%= link_to '¿Te vienes al concierto?', '#' %></li>
-                <li><%= link_to 'Lorem ipsum dolor, ¿te vienes al concierto?', '#' %></li>
-                <li><%= link_to 'Esto es otro spot de TV para que los usuarios se apunten', '#' %></li>
-              </ul>
-            </div>
-
-            <div class="span3">
-              <h4>Blog Cellove</h4>
-              <ul>
-                <li><%= link_to 'Lorem ipsum noticia del blog destacada en la home', '#' %></li>
-                <li><%= link_to 'Novedad mundial lorem ipsum noticia', '#' %></li>
-                <li><%= link_to 'Récord de usuarios registrados en un día', '#' %></li>
-              </ul>
-            </div>
-
-            <div class="span3">
-              <h4>Legal y conducta</h4>
-              <ul>
-                <li><%= link_to 'Consejos de uso', '#' %></li>
-                <li><%= link_to 'Legal y conducta', '#' %></li>
-                <li><%= link_to 'Sobre Cellove.com', '#' %></li>
-              </ul>
-            </div>
-          </nav>
-          <div id="legal" class="span12">
-            <small>© 2013 Cellove - <%= link_to 'Aviso legal', '#' %> - <%= link_to 'Política de Privacidad', '#' %> - <%= link_to 'Contacta', '#' %>
-          </div>
-        </div>
-      </footer>
+    <%= render '/shared/public-footer' %>  
     </div>
   </body>
 </html>

@@ -6524,6 +6524,10 @@ header[role="banner"] nav[role="navigation"] ul li a:hover, header[role="banner"
   text-decoration: none;
 }
 
+section[role="main"] {
+  padding-bottom: 30px;
+}
+
 footer {
   background: #2C2C2C;
   padding-top: 20px;
@@ -6598,7 +6602,6 @@ body.home header[role="banner"] {
 
 #home-highlights {
   margin-top: 20px;
-  margin-bottom: 30px;
 }
 #home-highlights h1 {
   font-size: 120%;

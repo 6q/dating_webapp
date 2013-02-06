@@ -1,6 +1,6 @@
 <div id="login-box">
 	<h4>Acceso usuarios</h4>
-	<small><a href="#">¿Has olvidado tu contraseña?</a> - <a href="#">Regístrate gratis</a></small>
+	<small><a href="#">¿Has olvidado tu contraseña?</a> - <%= link_to 'Regístrate gratis', '/public/alta-usuario' %></small>
 	<fieldset>
 		<form action="/login" method="post">
 			<input type="text" placeholder="email">
