@@ -133,11 +133,12 @@ header[role="banner"]{
           border-right:#242625 1px solid;
           border-top:#3f3f3f 1px solid;
           border-bottom:#3f3f3f 1px solid;
+          text-decoration:none;
 
           &:hover, &.active {
             background:#000;
             border-color:#000;
-            text-decoration:none;
+            text-decoration:underline;
           }
         }
       }
@@ -153,6 +154,7 @@ footer {
   background:#2C2C2C;
   padding-top:20px;
   padding-bottom:20px;
+  border-top:#000 1px solid;
 
   h4 {
     color:#d0d0d0;

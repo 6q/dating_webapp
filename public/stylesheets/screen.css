@@ -6267,16 +6267,8 @@ body {
   line-height: 1.4;
 }
 
-a:link {
+a {
   color: #5caae8;
-  text-decoration: underline;
-}
-a:visited {
-  color: #5caae8;
-}
-a:hover {
-  color: #5caae8;
-  text-decoration: none;
 }
 
 a.more {
@@ -6544,11 +6536,12 @@ header[role="banner"] nav[role="navigation"] ul li a {
   border-right: #242625 1px solid;
   border-top: #3f3f3f 1px solid;
   border-bottom: #3f3f3f 1px solid;
+  text-decoration: none;
 }
 header[role="banner"] nav[role="navigation"] ul li a:hover, header[role="banner"] nav[role="navigation"] ul li a.active {
   background: #000;
   border-color: #000;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 section[role="main"] {
@@ -6559,6 +6552,7 @@ footer {
   background: #2C2C2C;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-top: black 1px solid;
 }
 footer h4 {
   color: #d0d0d0;
@@ -6602,6 +6596,7 @@ body.home header[role="banner"] {
 
 #in-love {
   background: #f9f9f9;
+  border-top: #e0e0e0 1px solid;
   padding: 20px 0;
 }
 #in-love article h1 {
@@ -6641,6 +6636,9 @@ aside ul li:first-child {
 }
 aside ul li a {
   color: #333;
+}
+aside.sidebar {
+  margin-top: 2.1em;
 }
 
 #home-highlights {

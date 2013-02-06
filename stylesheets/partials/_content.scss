@@ -2,7 +2,10 @@
 // Virtual Content Classes
 //
 
-a { @include basic-link($link-color, $link-visited-color, $link-hover-color); }
+a { 
+  color:$link-color;
+    //@include basic-link($link-color, $link-color, $link-hover-color); 
+}
 a.more {
   white-space: nowrap;
   &:after { content: " »"; }

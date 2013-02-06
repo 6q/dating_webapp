@@ -1,6 +1,7 @@
 #in-love {
 
   background:#f9f9f9;
+  border-top:#e0e0e0 1px solid;
   padding:20px 0;
 
   article {
@@ -54,6 +55,6 @@ aside {
   }
 
   &.sidebar {
-
+    margin-top:2.1em;
   }
 }
