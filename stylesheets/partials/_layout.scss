@@ -8,6 +8,39 @@
   position:relative;
 }
 
+.box {
+  border:#dbdbdb 1px solid;
+  padding:6px;
+  background:#fff;
+
+  article {
+    background:#f1f1f1;
+    font-size:90%;
+
+    header {
+
+      margin-bottom:10px;
+
+      h1 {
+        margin:0;
+        font-size:1.6em;
+        padding:.5em 10px;
+        border-bottom:#ccc 1px solid;
+        color:$link-color;
+      }
+    }
+
+    .article-body {
+      padding:10px;
+      color:#333;
+
+      p:last-child {
+        margin-bottom:0;
+      }
+    }
+  }
+}
+
 header[role="banner"]{
 
   background:url(images/bg/main-bg4.jpg) center top no-repeat;

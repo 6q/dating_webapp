@@ -6413,6 +6413,33 @@ a.more:after {
   position: relative;
 }
 
+.box {
+  border: #dbdbdb 1px solid;
+  padding: 6px;
+  background: #fff;
+}
+.box article {
+  background: #f1f1f1;
+  font-size: 90%;
+}
+.box article header {
+  margin-bottom: 10px;
+}
+.box article header h1 {
+  margin: 0;
+  font-size: 1.6em;
+  padding: 0.5em 10px;
+  border-bottom: #cccccc 1px solid;
+  color: #5caae8;
+}
+.box article .article-body {
+  padding: 10px;
+  color: #333;
+}
+.box article .article-body p:last-child {
+  margin-bottom: 0;
+}
+
 header[role="banner"] {
   background: url(images/bg/main-bg4.jpg) center top no-repeat;
   padding-top: 60px;
@@ -6598,6 +6625,22 @@ body.home header[role="banner"] {
   float: left;
   margin-right: 10px;
   margin-top: 5px;
+}
+
+aside ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+aside ul li {
+  border-top: #cccccc 1px solid;
+  padding: 0.5em 0;
+}
+aside ul li:first-child {
+  border: none;
+}
+aside ul li a {
+  color: #333;
 }
 
 #home-highlights {
