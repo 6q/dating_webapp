@@ -2,6 +2,11 @@
   height:445px;
   background:url(images/bg-slider.png) center bottom no-repeat;
   padding-bottom:40px;
+
+  img {
+    width:940px;
+    height:440px;
+  }
 }
 
 .container {
@@ -139,10 +144,14 @@ header[role="banner"]{
           border-bottom:#3f3f3f 1px solid;
           text-decoration:none;
 
+          span {
+            color:#fffead;
+          }
+
           &:hover, &.active {
             background:#000;
             border-color:#000;
-            text-decoration:underline;
+            text-decoration:none;
           }
         }
       }

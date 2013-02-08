@@ -6419,11 +6419,25 @@ fieldset .actions {
 fieldset .actions button {
   text-transform: uppercase;
 }
+fieldset#get-password label {
+  font-weight: bold;
+  padding-right: 10px;
+  float: left;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+fieldset#get-password input {
+  margin-right: 10px;
+}
 
 #slider {
   height: 445px;
   background: url(images/bg-slider.png) center bottom no-repeat;
   padding-bottom: 40px;
+}
+#slider img {
+  width: 940px;
+  height: 440px;
 }
 
 .container {
@@ -6567,10 +6581,13 @@ header[role="banner"] nav[role="navigation"] ul li a {
   border-bottom: #3f3f3f 1px solid;
   text-decoration: none;
 }
+header[role="banner"] nav[role="navigation"] ul li a span {
+  color: #fffead;
+}
 header[role="banner"] nav[role="navigation"] ul li a:hover, header[role="banner"] nav[role="navigation"] ul li a.active {
   background: #000;
   border-color: #000;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 section[role="main"] {

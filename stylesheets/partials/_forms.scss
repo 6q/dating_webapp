@@ -30,4 +30,18 @@ fieldset {
     }
   }
 
+  &#get-password {
+    label {
+      font-weight:bold;
+      padding-right:10px;
+      float:left;
+      padding-top:5px;
+      margin-bottom:5px;
+    }
+
+    input {
+      margin-right:10px;
+    }
+  }
+
 }
