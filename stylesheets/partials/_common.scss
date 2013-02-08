@@ -52,6 +52,56 @@
   }
 }
 
+#top-users {
+
+  margin-top:40px;
+}
+
+.public-user-list {
+
+
+  h3 {
+    border-bottom:#ccc 1px solid;
+  }
+
+  ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+
+    li {
+
+        a {
+          color:#000;
+          &:hover {
+            text-decoration:none;
+          }
+        }
+
+      .pic {
+        float:left;
+        width:140px;
+        margin-right:20px;
+      }
+
+      .data {
+
+          h4 {
+            margin:0;
+          }
+
+          p {
+            font-size:.8em;
+          }
+
+          blockquote {
+            font-style:italic;
+          }
+        }
+    }
+  }
+}
+
 aside {
 
   ul {

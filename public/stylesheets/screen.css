@@ -6395,6 +6395,31 @@ a.more:after {
   padding: 1px 1em;
 }
 
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+fieldset legend {
+  border-bottom: #cccccc 1px solid;
+}
+fieldset small {
+  color: #666;
+  font-size: .7em;
+}
+fieldset.standard-form label {
+  font-weight: bold;
+  padding-right: 10px;
+}
+fieldset .actions {
+  margin-top: 40px;
+}
+fieldset .actions button {
+  text-transform: uppercase;
+}
+
 #slider {
   height: 445px;
   background: url(images/bg-slider.png) center bottom no-repeat;
@@ -6403,6 +6428,10 @@ a.more:after {
 
 .container {
   position: relative;
+}
+
+.center {
+  text-align: center;
 }
 
 .box {
@@ -6636,6 +6665,39 @@ body.home header[role="banner"] {
   margin-top: 3px;
   width: 80px;
   height: 80px;
+}
+
+#top-users {
+  margin-top: 40px;
+}
+
+.public-user-list h3 {
+  border-bottom: #cccccc 1px solid;
+}
+.public-user-list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.public-user-list ul li a {
+  color: #000;
+}
+.public-user-list ul li a:hover {
+  text-decoration: none;
+}
+.public-user-list ul li .pic {
+  float: left;
+  width: 140px;
+  margin-right: 20px;
+}
+.public-user-list ul li .data h4 {
+  margin: 0;
+}
+.public-user-list ul li .data p {
+  font-size: .8em;
+}
+.public-user-list ul li .data blockquote {
+  font-style: italic;
 }
 
 aside ul {

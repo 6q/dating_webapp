@@ -1,4 +1,86 @@
 <% @page = "ver-usuarios" %>
 <% @title = "Ver usuarios" %>
 
-ver usuarios
+<div id="last-users" class="public-user-list">
+
+	<h3>Últimos usuarios en Cellove <%= link_to '¡Date de alta!', '/public/alta-usuario' %></h3>
+	<div class="row">
+		<ul>
+			<li class="span4">
+				<a href="/public/alta-usuario">
+					<div class="pic"><img src="http://lorempixel.com/140/140/people"></div>
+					<div class="data">
+						<h4>María</h4>
+						<p>29 años, Barcelona</p>
+						<blockquote>Lo que me va mucho a mi es la marcha tropical.</blockquote>
+					</div>
+				</a>
+			</li>
+
+			<li class="span4">
+				<a href="/public/alta-usuario">
+					<div class="pic"><img src="http://lorempixel.com/140/140/animals"></div>
+					<div class="data">
+						<h4>Pinguino</h4>
+						<p>29 años, Barcelona</p>
+						<blockquote>Lo que me va mucho a mi es la marcha tropical.</blockquote>
+					</div>
+				</a>
+			</li>
+
+			<li class="span4">
+				<a href="/public/alta-usuario">
+					<div class="pic"><img src="http://lorempixel.com/140/140/transport"></div>
+					<div class="data">
+						<h4>Aeroplano</h4>
+						<p>29 años, Barcelona</p>
+						<blockquote>Lo que me va mucho a mi es la marcha tropical.</blockquote>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<div id="top-users" class="public-user-list">
+
+	<h3>Usuarios más populares <%= link_to '¡Date de alta!', '/public/alta-usuario' %></h3>
+
+	<div class="row">
+		<ul class="clearfix">
+			<li class="span4">
+				<a href="/public/alta-usuario">
+					<div class="pic"><img src="http://lorempixel.com/140/140/food"></div>
+					<div class="data">
+						<h4>María</h4>
+						<p>29 años, Barcelona</p>
+						<blockquote>Lo que me va mucho a mi es la marcha tropical.</blockquote>
+					</div>
+				</a>
+			</li>
+
+			<li class="span4">
+				<a href="/public/alta-usuario">
+					<div class="pic"><img src="http://lorempixel.com/140/140/city"></div>
+					<div class="data">
+						<h4>Pinguino</h4>
+						<p>29 años, Barcelona</p>
+						<blockquote>Lo que me va mucho a mi es la marcha tropical.</blockquote>
+					</div>
+				</a>
+			</li>
+
+			<li class="span4">
+				<a href="/public/alta-usuario">
+					<div class="pic"><img src="http://lorempixel.com/140/140/fashion"></div>
+					<div class="data">
+						<h4>Aeroplano</h4>
+						<p>29 años, Barcelona</p>
+						<blockquote>Lo que me va mucho a mi es la marcha tropical.</blockquote>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

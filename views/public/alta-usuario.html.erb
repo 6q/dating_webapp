@@ -2,8 +2,45 @@
 
 <header>
 	<h1>Alta Usuari@</h1>
-	<p>Aliquam eget dapibus diam. Morbi vulputate convallis nibh ac sagittis. In suscipit sapien quis enim adipiscing sed interdum neque consectetur. Donec et dui in erat mattis aliquet ut eget mauris. Quisque iaculis semper massa et hendrerit. Sed quis metus ante, ac tincidunt diam. Integer nulla orci, volutpat vitae interdum volutpat, tempus ut lacus. Vestibulum vitae erat mi. Nunc eget tristique nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 </header>
-<fieldset>
-	formulario de registro de usuario
-</fieldset>
+<p>Aliquam eget dapibus diam. Morbi vulputate convallis nibh ac sagittis. In suscipit sapien quis enim adipiscing sed interdum neque consectetur. Donec et dui in erat mattis aliquet ut eget mauris. Quisque iaculis semper massa et hendrerit. Sed quis metus ante, ac tincidunt diam. Integer nulla orci, volutpat vitae interdum volutpat, tempus ut lacus. Vestibulum vitae erat mi. Nunc eget tristique nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+<form class="form-horizontal inline-form">
+	<fieldset id="name" class="clearfix">
+		<legend>¿Quién eres?</legend>
+		<p>Me llamo <input type="text" placeholder="Nombre" class="span2"> <input type="text" placeholder="Apellidos" class="span2"> y quiero que mi nombre para mostrar sea <input type="text" placeholder="Nombre para mostrar" class="span3"> *</p>
+		<small>* En Cellove te recomendamos utilizar tu nombre real para tener más posibilidades de contactos y Celestin@s. Deja este campo vacío para usar tu nombre real.</small>
+	</fieldset>
+
+	<fieldset id="photo" class="clearfix standard-form">
+		<legend>¿Cómo eres?</legend>
+		<div class="control-group">
+			<label class="control-label">Sube tu foto</label><input type="file" class="span4">
+		</div>
+	</fieldset>
+	
+	<fieldset id="access" class="clearfix standard-form">
+		<legend>Datos de acceso a Cellove</legend>
+		<div class="row">
+			<div class="span6">
+				<div class="control-group">
+					<label class="control-label">Email</label><input type="email" class="span3">
+				</div>
+				<div class="control-group">
+					<label class="control-label">Confrimar email</label><input type="email" class="span3">
+				</div>
+			</div>
+			<div class="span6">
+				<div class="control-group">
+					<label class="control-label">Contraseña</label><input type="password" class="span3">
+				</div>
+				<div class="control-group">
+					<label class="control-label">Confrimar contraseña</label><input type="password" class="span3">
+				</div>
+			</div>
+		</div>
+		<div class="center actions">
+			<button class="btn btn-info btn-large">¡Registrarme!</button>
+		</div>
+	</fieldset>
+</form>
