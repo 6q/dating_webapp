@@ -5778,7 +5778,7 @@ html[xmlns] .slides {
 }
 
 .flex-direction-nav .flex-next {
-  background-position: -349px -25px;
+  background-position: -349px -20px;
   right: -36px;
 }
 
@@ -6476,7 +6476,7 @@ fieldset#get-password input {
 }
 
 header[role="banner"] {
-  background: url(images/bg/main-bg4.jpg) center top no-repeat;
+  /* random background here in default */
   padding-top: 60px;
   position: relative;
   margin-bottom: 10px;
@@ -6633,9 +6633,6 @@ footer #legal a {
   color: #747474;
 }
 
-body.home {
-  background: url(images/bg/main-bg5.jpg) center top no-repeat;
-}
 body.home header[role="banner"] {
   background: none;
 }
