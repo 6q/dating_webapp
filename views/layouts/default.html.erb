@@ -29,10 +29,18 @@
         <% if @sidebar %>
         <div class="row">
           <div class="span3">
-            <%= render '/shared/public-flat-sidebar' %>
+            <% if @isblog %>
+              <%= render '/shared/public-blog-sidebar' %>
+            <% else %>
+              <%= render '/shared/public-flat-sidebar' %>
+            <% end %>
           </div>
           <div class="span9">
-            <div class="box">
+            <% if @isblog %>
+              <div id="box-blog">
+            <% else %>
+              <div class="box">
+            <% end %>
               <div class="box-content">
                 <%= yield %>
               </div>
