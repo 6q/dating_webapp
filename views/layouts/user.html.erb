@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %> | Cellove.com</title>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/javascripts/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="/javascripts/jquery.flexslider-min.js"></script>
+    <script src="/javascripts/functions.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+    <% if @page == 'home' %>
+      <style>
+        body {
+          background:url('/stylesheets/images/bg/main-bg<%= Random.rand(4) + 1 %>.jpg') top left no-repeat;
+        }
+      </style>
+      <% else %>
+      <style>
+        header[role="banner"] {
+          background:url('/stylesheets/images/bg/main-bg<%= Random.rand(4) + 1 %>.jpg') top left no-repeat;
+        }
+      </style>
+      <% end %>
+  </head>
+  <body class="<%= @page.downcase if @page %> user">
+    <header role="banner" class="clearfix">
+      <div class="container">
+        <%= render '/shared/public-header-login' %>
+        <h1><a href="/public/home">Cellove</a></h1>
+        <h2>Ponle alas al amor</h2>
+        <%= render '/shared/user/main-nav' %>
+      </div>
+    </header>
+    <div class="container">
+      <section role="main">
+        <div class="row">
+          <div class="span3">
+              <%= render '/shared/public-blog-sidebar' %>
+          </div>
+          <div class="span9">
+            <%= yield %>
+          </div>
+      </section>
+    </div>
+    <%= render '/shared/public-in-love' %>
+    <%= render '/shared/public-footer' %>  
+    </div>
+  </body>
+</html>
