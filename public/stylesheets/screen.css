@@ -6593,6 +6593,20 @@ header[role="banner"] nav[role="navigation"] ul li a:hover, header[role="banner"
 section[role="main"] {
   padding-bottom: 30px;
 }
+section[role="main"] header.bg {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+section[role="main"] header.bg h1 {
+  background: #5cabe8;
+  margin: 0;
+  padding: 20px;
+  padding-left: 40px;
+  padding-bottom: 15px;
+  width: 245px;
+  min-height: 120px;
+  float: left;
+}
 
 footer {
   background: #2C2C2C;
@@ -6714,6 +6728,9 @@ body.home header[role="banner"] {
   font-style: italic;
 }
 
+aside {
+  position: relative;
+}
 aside ul {
   padding: 0;
   margin: 0;
@@ -6734,6 +6751,17 @@ aside ul li.active a {
 }
 aside.sidebar {
   margin-top: 2.1em;
+}
+aside.sidebar #sidebar-logo {
+  background: #fff;
+  border: #cccccc 1px solid;
+  position: relative;
+  margin-top: 20px;
+}
+aside.sidebar #sidebar-logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #home-highlights {
