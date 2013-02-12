@@ -6695,6 +6695,28 @@ body.home header[role="banner"] {
   height: 80px;
 }
 
+ul.miniSlider {
+  list-style: none;
+  width: 635px;
+  height: 155px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+}
+ul.miniSlider li {
+  position: absolute;
+  width: 635px;
+  height: 155px;
+  left: 0;
+  top: 0;
+  display: none;
+}
+ul.miniSlider li.active {
+  display: block;
+}
+
 #top-users {
   margin-top: 40px;
 }
@@ -6756,12 +6778,13 @@ aside.sidebar #sidebar-logo {
   background: #fff;
   border: #cccccc 1px solid;
   position: relative;
-  margin-top: 20px;
+  margin-top: 2.1em;
 }
 aside.sidebar #sidebar-logo img {
+  position: absolute;
+  bottom: 8px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  left: 8px;
 }
 
 #home-highlights {
