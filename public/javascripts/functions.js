@@ -1,4 +1,32 @@
 $(document).ready(function(){
+
+	jQuery.fn.exists = function(){return this.length>0;}
+
+	jQuery.fn.slideSwitch = function () {
+   	 		
+		doTheSlideThing = function(){
+			var $active = $('.miniSlider li.active');
+
+    		if ( $active.length == 0 ) $active = $('.miniSlider li');
+
+    		var $next =  $active.next().length ? $active.next()
+        		: $('.miniSlider li').first();
+
+    		$active.addClass('last-active');
+        
+    		$next.css({opacity: 0.0})
+        		.addClass('active')
+        		.animate({opacity: 1.0}, 1000, function() {
+            		$active.removeClass('active last-active');
+        		});
+		}
+
+       setInterval( doTheSlideThing, 5000 );
+
+	}
+
+	$('.miniSlider').slideSwitch();
+
 	$('.flexslider').flexslider({
       animation: "slide",
       slideshowSpeed: 5000
@@ -10,12 +38,17 @@ $(document).ready(function(){
 		$('#in-love article p').slideToggle();
 	});
 
-	pageHeight = $('.span9 .article-body').height();
-	sidebarHeight = $('aside.sidebar').height();
+	function setSidebarLogoPosition(){
 
-	logoPos = $('#in-love').offset().top - pageHeight - 57; // pageHeight - sidebarHeight - 273;
+		if($('aside.sidebar ul').exists()){
+			var refHeight = $('.span9 .article-body').height();
+			var menuHeight = $('aside.sidebar ul').height();
+			var menuPos = $('aside.sidebar ul').offset().top;
 
-	$('aside.sidebar #sidebar-logo img').animate({ marginTop: logoPos }, 1000);
-	//.css('marginTop',logoPos + 'px');
+			$('aside.sidebar #sidebar-logo').height(refHeight - menuHeight + 38);
+		}
+	}
+
+	setSidebarLogoPosition();
 
 });
