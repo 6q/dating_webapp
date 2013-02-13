@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 	jQuery.fn.slideSwitch = function () {
    	 		
+		$('.miniSlider li.active').clone().appendTo('.miniSlider').removeClass('active');
+
 		doTheSlideThing = function(){
 			var $active = $('.miniSlider li.active');
 
