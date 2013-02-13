@@ -41,11 +41,18 @@ $(document).ready(function(){
 	function setSidebarLogoPosition(){
 
 		if($('aside.sidebar ul').exists()){
+
 			var refHeight = $('.span9 .article-body').height();
 			var menuHeight = $('aside.sidebar ul').height();
 			var menuPos = $('aside.sidebar ul').offset().top;
 
-			$('aside.sidebar #sidebar-logo').height(refHeight - menuHeight + 38);
+			if(refHeight > menuHeight) {
+				$('aside.sidebar #sidebar-logo').height(refHeight - menuHeight + 38);	
+			} else {
+				$('aside.sidebar #sidebar-logo').hide();
+			}
+
+			
 		}
 	}
 
