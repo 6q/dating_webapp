@@ -1,82 +1,42 @@
-What is this?
+Structure
 =============
 
-This is a simple HTML prototype written in HAML or ERB that is designed to be
-viewed with Serve.
+To create new views, just add them to /views/* folder.
 
-What is Serve? Serve is an open-source rapid prototyping framework for Web
-applications. It makes it easy to prototype functionality without writing a
-single line of backend code.
+There you will find:
 
+- /layouts/ with public and private base layout
+- /public/ all public views
+- /user/ all logged user views
+- /shared/ all shared partials, also divided in /public/ and /user/
 
 How do I install and run Serve?
 -------------------------------
 
 Serve is distributed as a Ruby gem to make it easy to get up and running. You
-must have Ruby installed in order to download and use Serve. The Ruby download
-page provides instructions for getting Ruby setup on different platforms:
+must have Ruby installed in order to download and use Serve. 
 
-<http://www.ruby-lang.org/en/downloads/>
-
-After you have Ruby installed, open up the command prompt and type:
+Once you have Ruby installed, open up the command prompt and type:
 
     gem install serve
 
 (OSX and Unix users may need to prefix the command with `sudo`.)
 
-After Serve is installed, you can start it up in a given directory like this:
+It's also recommended to install bundler
 
-    serve
+	gem intall bundler
 
-This will start Serve on port 4000. You can now view the prototype in your
-Web browser at this URL:
+After everything is intalled, clone the project and run bundle install to get all gems.
 
-<http://localhost:4000>
+When you're done, you just need to run
 
+    bundle exec serve
 
-Compass and Sass
-----------------
+And point your browser to
 
-This prototype uses Compass and Sass to generate CSS. Both are distributed as
-Ruby gems and can be easily installed from the command prompt. Since the
-Compass gem depends on Sass, you can install them both with one command:
+<http://localhost:3000>
 
-    gem install compass
-
-Learn more about Sass:
-
-<http://sass-lang.org>
-
-Learn more about Compass:
-
-<http://compass-style.org>
-
-
-Rack and Passenger
-------------------
-
-Astute users may notice that this project is also a simple Rack application.
-This means that it is easy to deploy it on Passenger or in any other
-Rack-friendly environment. Rack it up with the `rackup` command. For more
-information about using Serve and Passenger see:
-
-<http://bit.ly/serve-and-passenger>
-
-
-Exporting
----------
-
-To export this project to pure HTML and CSS you will need the prerelease
-version of Serve. To get started with the prerelease version:
-
-    gem install --pre serve
-
-To export your project, use the new "export" command:
-
-    serve export <project>:<output>
-
-Where "project" is the path to the project and "output" is the path to the
-directory where you would like your HTML and CSS generated.
+By default, Serve runs on port 4000 but here we've removed this behaviour to allow heroku's deploy.
 
 
 Learning More
