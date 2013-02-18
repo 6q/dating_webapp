@@ -6895,6 +6895,27 @@ aside.sidebar #sidebar-logo img {
 .user header[role="banner"] h1 {
   padding: 0;
 }
+.user header[role="banner"] #header-actions {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: .8em;
+  color: #fff;
+  text-align: right;
+}
+.user header[role="banner"] #header-actions a {
+  color: #fff;
+  text-decoration: underline;
+}
+.user header[role="banner"] #header-actions a:hover {
+  text-decoration: none;
+}
+.user header[role="banner"] #header-actions #color-switcher {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  background: #000;
+}
 .user header[role="banner"] nav[role="navigation"] {
   font-size: 105%;
   margin-top: 64px;

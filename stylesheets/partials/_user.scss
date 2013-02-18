@@ -1,10 +1,33 @@
 .user {
-  header[role="banner"] {
 
+  header[role="banner"] {
     h1 {
       padding:0;
     }
 
+
+    #header-actions {
+      position:absolute;
+      right:0;
+      top:-20px;
+      font-size:.8em;
+      color:#fff;
+      text-align:right;
+      a {
+        color:#fff;
+        text-decoration:underline;
+        &:hover {
+          text-decoration:none;
+        }
+      }
+
+      #color-switcher {
+        position:absolute;
+        right:0;
+        top:-40px;
+        background:#000;
+      }
+    }
 
     nav[role="navigation"] {
       font-size:105%;
@@ -49,5 +72,4 @@
       }
     }
   }
-
 }
