@@ -6620,6 +6620,15 @@ section[role="main"] header.bg h1 {
   min-height: 120px;
   float: left;
 }
+section[role="main"] article ul.miniSlider {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+section[role="main"] article ul.miniSlider li {
+  margin: 0;
+  padding: 0;
+}
 section[role="main"] a.more {
   background: #5caae8;
   color: #fff;

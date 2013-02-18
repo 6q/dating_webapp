@@ -196,6 +196,21 @@ section[role="main"] {
     }
   }
 
+  article {
+    ul {
+      &.miniSlider {
+        padding:0;
+        list-style:none;
+        margin:0;
+
+        li {
+          margin:0;
+          padding:0;
+        }
+      }
+    }
+  }
+
   a.more {
     background:$link-color;
     color:#fff;
