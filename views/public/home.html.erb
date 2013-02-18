@@ -5,19 +5,25 @@
   <div class="flexslider">
     <ul class="slides">
       <li>
-        <img src="http://lorempixel.com/949/445/people">
+        <img src="/images/home1.jpg">
       </li>
       <li>
-        <img src="http://lorempixel.com/949/445/nightlife">
+        <img src="/images/home2.jpg">
       </li>
       <li>
-        <img src="http://lorempixel.com/949/445/fashion">
+        <img src="/images/home3.jpg">
       </li>
       <li>
-        <img src="http://lorempixel.com/949/445/animals">
+        <img src="/images/home4.jpg">
       </li>
       <li>
-        <img src="http://lorempixel.com/949/445/sports">
+        <img src="/images/home5.jpg">
+      </li>
+      <li>
+        <img src="/images/home6.jpg">
+      </li>
+      <li>
+        <img src="/images/home7.jpg">
       </li>
     </ul>
   </div>
@@ -29,8 +35,7 @@
       <h1>Registro GRATIS</h1>
     </header>
     <p>Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!</p>
-    <p><%= link_to 'Regístrate GRATIS','/public/alta-usuario' %> ahora en Cellove, es fácil y rápido.</p>
-    <p>¡Ponle alas al amor!</p>
+    <p><%= link_to 'Regístrate GRATIS','/public/alta-usuario' %> ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!</p>
     <%= link_to 'Registro gratis', '/public/alta-usuario', class: 'more'  %>
   </article>
   <article class="span4">
@@ -45,8 +50,8 @@
     <header>
       <h1>¿Cómo funciona?</h1>
     </header>
-    <p>Es muy fácil y efectivo. Si te registras como usuario podrás encontrar personas afines por edad, gustos, estilo de vida...</p>
-    <p>Además podrás proponer actividades a usuari@s, comprobar si hacéis buena pareja y otras utilidades únicas y muy útiles para hacer que tus citas no sean a ciegas.</p>
+    <p>Es muy fácil y efectivo. <%= link_to 'Regístrate', '/public/alta-usuario' %> para encontrar personas afines por edad, gustos, estilo de vida...</p>
+    <p>Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas.</p>
     <%= link_to 'Leer más', '/public/como-funciona', class: 'more'  %>
   </article>
 </div>

@@ -5767,7 +5767,7 @@ html[xmlns] .slides {
   height: 40px;
   margin: -20px 0 0;
   display: block;
-  background: url(images/sprite.png) no-repeat -309px -23px;
+  background: url(images/sprite.png) no-repeat -310px -25px;
   position: absolute;
   top: 50%;
   z-index: 10;
@@ -5778,7 +5778,7 @@ html[xmlns] .slides {
 }
 
 .flex-direction-nav .flex-next {
-  background-position: -349px -20px;
+  background-position: -350px -25px;
   right: -36px;
 }
 
@@ -6431,13 +6431,13 @@ fieldset#get-password input {
 }
 
 #slider {
-  height: 445px;
+  height: 420px;
   background: url(images/bg-slider.png) center bottom no-repeat;
   padding-bottom: 40px;
 }
 #slider img {
   width: 940px;
-  height: 440px;
+  height: 420px;
 }
 
 .container {
@@ -6483,10 +6483,11 @@ header[role="banner"] {
   padding-bottom: 10px;
 }
 header[role="banner"] h1 {
-  width: 289px;
+  width: 298px;
   height: 120px;
   margin: 0;
   padding: 0;
+  padding-left: 50px;
   float: left;
 }
 header[role="banner"] h1 a {
@@ -6548,6 +6549,13 @@ header[role="banner"] #login-box fieldset input[type="submit"] {
 header[role="banner"] #login-box fieldset input[type="submit"]:hover {
   border-color: #363636;
   background: #242625;
+}
+header[role="banner"] #login-box #user-count {
+  position: absolute;
+  top: 62px;
+  right: 0;
+  font-size: .8em;
+  color: #fff;
 }
 header[role="banner"] nav[role="navigation"] {
   margin-top: 62px;
@@ -6787,9 +6795,6 @@ aside.sidebar #sidebar-logo img {
   left: 8px;
 }
 
-#home-highlights {
-  margin-top: 20px;
-}
 #home-highlights h1 {
   font-size: 120%;
   margin: 0;

@@ -1,11 +1,11 @@
 #slider {
-  height:445px;
+  height:420px;
   background:url(images/bg-slider.png) center bottom no-repeat;
   padding-bottom:40px;
 
   img {
     width:940px;
-    height:440px;
+    height:420px;
   }
 }
 
@@ -60,10 +60,11 @@ header[role="banner"]{
   padding-bottom:10px;
 
  h1 {
-    width:289px;
+    width:298px;
     height:120px;
     margin:0;
     padding:0;
+    padding-left:50px;
     float:left;
 
   a {
@@ -114,6 +115,14 @@ header[role="banner"]{
         text-transform:uppercase;
         @include button(#363636,#242625,#ffffff);
       }
+    }
+
+    #user-count {
+      position:absolute;
+      top:62px;
+      right:0;
+      font-size:.8em;
+      color:#fff;
     }
 
   }
