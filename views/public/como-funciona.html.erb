@@ -1,15 +1,29 @@
 <% @page = "consigue-popularidad" %>
 <% @title = "¿Cómo funciona?" %>
-<% @sidebar = true %>
 
 <article>
 
-	<header>
-		<h1><%= @title %></h1>
+	<header class="bg clearfix">
+		<h1>¿Cómo<br>funciona?</h1>
+		<ul class="miniSlider">
+			<li class="item active"><img src="/images/teaser-user.jpg"></li>
+			<li class="item"><img src="/images/teaser-user2.jpg"></li>
+		</ul>
 	</header>
-
 	<div class="article-body">
-		<p>Es muy fácil y efectivo. Nuestra plataforma cellove cuenta con potentes herramientas para que puedas encontrar a esa persona especial.</p>
-		<p>Si te registras como usuari@ podrás encontrar personas afines por edad, gustos, estilo de vida... Además podrás proponer actividades a usuari@s, comprobar si hacéis buena pareja y otras utilidades únicas y muy útiles para hacer que tus citas no sean a ciegas.</p>
+		<p>Encontrar a tu pareja idea es muy fácil. Solo tienes que <%= link_to 'registrarte en Cellove', '/public/alta-usuario' %>, especificar que características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que más se adecuen y mejor encajen con tu perfil ¡para que seas tu quien elija!</p>
+
+		<p>En Cellove lo más importante eres tú y que encuentres exactamente lo que buscas. Por ello, y porque el tiempo es oro, contamos con nuestra función exclusiva llamada <%= link_to 'Celestin@s', '/public/celestinos/' %>.</p>
+
+		<p>A través de nuestra plataforma podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones muy potentes para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc.</p>
+
+		<p><%= link_to 'Registrarse en Cellove es totalmente gratuito', '/public/alta-usuario' %>. Podrás incluir tus datos y las características de la persona que buscas sin coste alguno. Cellove te proporcionara gratis acceso a los perfiles compatibles y afines a ti. Podrás navegar ilimitadamente por nuestra plataforma, 24h al día durante todo el año y visualizar todos los perfiles que desees, características de estos, sus Celestin@s, que es lo que buscan, sus gustos, actividades... ¡Lo que quieras!</p>
+
+		<p>Tu panel de control como usuario registrado va actualizándose a tiempo real, si recibes visitas nuevas a tu perfil, nuevos mensajes, propuestas de actividad, etc. De esta forma estarás al corriente de todo, podrás interactuar al instante y sacar máximo provecho de nuestra plataforma.</p>
+
+		<p>Cellove te ofrece todas las herramientas y todo el potencial de nuestra plataforma por tan solo 1€ al mes. Sin duda es un precio simbólico e inmejorable por hacer realidad tu objetivo más íntimo y emocional, encontrar esa persona especial, sea amor o amistad duradera.</p>
+
+		<p>Con Cellove, ¡tus citas ya no serán a ciegas!</p>
+		<%= link_to '¡Regístrate ahora Gratis!', '/public/alta-usuario', class: 'more' %>
 	</div>
 </article>
