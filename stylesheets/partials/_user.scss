@@ -1,6 +1,11 @@
 .user {
-
   header[role="banner"] {
+
+    h1 {
+      padding:0;
+    }
+
+
     nav[role="navigation"] {
       font-size:105%;
       margin-top:64px;

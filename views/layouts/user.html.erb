@@ -30,7 +30,7 @@
   <body class="<%= @page.downcase if @page %> user">
     <header role="banner" class="clearfix">
       <div class="container">
-        <%= render '/shared/user/header-login' %>
+        <%= render '/shared/public/header-login' %>
         <h1><a href="/public/home">Cellove</a></h1>
         <h2>Ponle alas al amor</h2>
         <%= render '/shared/user/main-nav' %>
@@ -40,15 +40,15 @@
       <section role="main">
         <div class="row">
           <div class="span3">
-              <%= render '/shared/user/blog-sidebar' %>
+              <%= render '/shared/public/blog-sidebar' %>
           </div>
           <div class="span9">
             <%= yield %>
           </div>
       </section>
     </div>
-    <%= render '/shared/user/in-love' %>
-    <%= render '/shared/user/footer' %>  
+    <%= render '/shared/public/in-love' %>
+    <%= render '/shared/public/footer' %>  
     </div>
   </body>
 </html>

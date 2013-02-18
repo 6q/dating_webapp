@@ -6892,6 +6892,9 @@ aside.sidebar #sidebar-logo img {
   font-size: 1.1em;
 }
 
+.user header[role="banner"] h1 {
+  padding: 0;
+}
 .user header[role="banner"] nav[role="navigation"] {
   font-size: 105%;
   margin-top: 64px;
