@@ -6480,6 +6480,16 @@ fieldset#get-password input {
   margin-bottom: 0;
 }
 
+blockquote {
+  border: none;
+  padding-left: 2em;
+}
+blockquote p {
+  font-size: 100%;
+  margin: 1.5em 0;
+  line-height: 1.2em;
+}
+
 header[role="banner"] {
   /* random background here in default */
   padding-top: 60px;
@@ -6628,6 +6638,9 @@ section[role="main"] article ul.miniSlider {
 section[role="main"] article ul.miniSlider li {
   margin: 0;
   padding: 0;
+}
+section[role="main"] article a.more {
+  font-size: 1.1em;
 }
 section[role="main"] a.more {
   background: #5caae8;

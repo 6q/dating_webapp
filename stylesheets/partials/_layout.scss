@@ -56,6 +56,17 @@
   }
 }
 
+blockquote {
+  border:none;
+  padding-left:2em;
+
+  p {
+    font-size:100%;
+    margin:1.5em 0;
+    line-height:1.2em;
+  }
+}
+
 header[role="banner"]{
 
   /* random background here in default */
@@ -209,6 +220,11 @@ section[role="main"] {
         }
       }
     }
+
+    a.more {
+      font-size:1.1em;
+    }
+
   }
 
   a.more {
