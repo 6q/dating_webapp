@@ -6793,6 +6793,8 @@ aside.sidebar #sidebar-logo img {
 #home-highlights h1 {
   font-size: 120%;
   margin: 0;
+  background: url(images/sprite.png) -431px -76px no-repeat;
+  padding-left: 45px;
 }
 #home-highlights header {
   margin-bottom: 15px;
