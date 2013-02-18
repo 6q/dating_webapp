@@ -176,6 +176,7 @@ header[role="banner"]{
 }
 
 section[role="main"] {
+
   padding-bottom:30px;
 
   header.bg {
@@ -193,8 +194,15 @@ section[role="main"] {
         min-height:120px;
         float:left;
     }
+  }
 
-
+  a.more {
+    background:$link-color;
+    color:#fff;
+    display:inline-block;
+    padding:.5em 1em;
+    text-decoration:none;
+    margin-top:20px;
   }
 
 }

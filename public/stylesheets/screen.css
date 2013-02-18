@@ -6620,6 +6620,14 @@ section[role="main"] header.bg h1 {
   min-height: 120px;
   float: left;
 }
+section[role="main"] a.more {
+  background: #5caae8;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  margin-top: 20px;
+}
 
 footer {
   background: #2C2C2C;
@@ -6808,14 +6816,6 @@ aside.sidebar #sidebar-logo img {
 }
 #home-highlights header {
   margin-bottom: 15px;
-}
-#home-highlights a.more {
-  background: #5caae8;
-  color: #fff;
-  display: inline-block;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  margin-top: 20px;
 }
 
 .blog-sidebar ul {
