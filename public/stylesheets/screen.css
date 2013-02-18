@@ -6817,18 +6817,6 @@ aside ul li.active a {
 aside.sidebar {
   margin-top: 2.1em;
 }
-aside.sidebar #sidebar-logo {
-  background: #fff;
-  border: #cccccc 1px solid;
-  position: relative;
-  margin-top: 2.1em;
-}
-aside.sidebar #sidebar-logo img {
-  position: absolute;
-  bottom: 8px;
-  display: block;
-  left: 8px;
-}
 
 #home-highlights h1 {
   font-size: 120%;

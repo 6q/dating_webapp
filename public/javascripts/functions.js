@@ -29,13 +29,6 @@ $(document).ready(function(){
 
 	$('.miniSlider').slideSwitch();
 
-	/*
-	$('.flexslider').flexslider({
-      animation: "slide",
-      slideshowSpeed: 5000,
-      randomize: true
-    });
-	*/
 
 	$('#in-love .fold').click(function(e){
 		e.preventDefault();
@@ -44,26 +37,6 @@ $(document).ready(function(){
 	});
 
 	$('.user #in-love .fold').removeClass('active');
-
-	function setSidebarLogoPosition(){
-
-		if($('aside.sidebar ul').exists()){
-
-			var refHeight = $('.span9 .article-body').height();
-			var menuHeight = $('aside.sidebar ul').height();
-			var menuPos = $('aside.sidebar ul').offset().top;
-
-			if(refHeight > menuHeight) {
-				$('aside.sidebar #sidebar-logo').height(refHeight - menuHeight + 38);	
-			} else {
-				$('aside.sidebar #sidebar-logo').hide();
-			}
-
-			
-		}
-	}
-
-	setSidebarLogoPosition();
 
 });
 
