@@ -29,10 +29,13 @@ $(document).ready(function(){
 
 	$('.miniSlider').slideSwitch();
 
+	/*
 	$('.flexslider').flexslider({
       animation: "slide",
-      slideshowSpeed: 5000
+      slideshowSpeed: 5000,
+      randomize: true
     });
+	*/
 
 	$('#in-love .fold').click(function(e){
 		e.preventDefault();
@@ -61,3 +64,18 @@ $(document).ready(function(){
 	setSidebarLogoPosition();
 
 });
+
+$(window).load(function() {
+
+       var target_flexslider = $('.flexslider');
+
+       target_flexslider.flexslider({
+      		animation: "slide",
+      		slideshowSpeed: 5000,
+      		randomize: true,
+
+           start: function(slider) {
+               target_flexslider.removeClass('loading');
+           }
+    });
+});    
