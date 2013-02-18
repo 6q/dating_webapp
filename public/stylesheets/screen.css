@@ -6951,3 +6951,9 @@ aside.sidebar #sidebar-logo img {
   width: 18px;
   height: 20px;
 }
+.user #in-love h2 a {
+  display: none;
+}
+.user #in-love article p {
+  display: none;
+}

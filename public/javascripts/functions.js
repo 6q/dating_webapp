@@ -43,6 +43,8 @@ $(document).ready(function(){
 		$('#in-love article p').slideToggle();
 	});
 
+	$('.user #in-love .fold').removeClass('active');
+
 	function setSidebarLogoPosition(){
 
 		if($('aside.sidebar ul').exists()){
