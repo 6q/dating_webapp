@@ -6670,7 +6670,7 @@ body.home header[role="banner"] {
   padding: 20px 0;
 }
 #in-love a.fold {
-  background: url(images/sprite.png) -392px -27px no-repeat;
+  background: url(images/sprite.png) -429px -27px no-repeat;
   display: block;
   width: 36px;
   height: 35px;
@@ -6681,7 +6681,7 @@ body.home header[role="banner"] {
   text-indent: -999em;
 }
 #in-love a.fold.active {
-  background-position: -429px -27px;
+  background-position: -392px -27px;
 }
 #in-love article h1 {
   font-size: 120%;
