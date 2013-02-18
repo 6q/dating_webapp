@@ -30,10 +30,10 @@
   <body class="<%= @page.downcase if @page %>">
     <header role="banner" class="clearfix">
       <div class="container">
-        <%= render '/shared/public-header-login' %>
+        <%= render '/shared/public/header-login' %>
         <h1><a href="/public/home">Cellove</a></h1>
         <h2>Ponle alas al amor</h2>
-        <%= render '/shared/public-main-nav' %>
+        <%= render '/shared/public/main-nav' %>
       </div>
     </header>
     <div class="container">
@@ -43,9 +43,9 @@
         <div class="row">
           <div class="span3">
             <% if @isblog %>
-              <%= render '/shared/public-blog-sidebar' %>
+              <%= render '/shared/public/blog-sidebar' %>
             <% else %>
-              <%= render '/shared/public-flat-sidebar' %>
+              <%= render '/shared/public/flat-sidebar' %>
             <% end %>
           </div>
           <div class="span9">
@@ -64,8 +64,8 @@
         <% end %>
       </section>
     </div>
-    <%= render '/shared/public-in-love' %>
-    <%= render '/shared/public-footer' %>  
+    <%= render '/shared/public/in-love' %>
+    <%= render '/shared/public/footer' %>  
     </div>
   </body>
 </html>
