@@ -6430,6 +6430,13 @@ fieldset#get-password input {
   margin-right: 10px;
 }
 
+#contact {
+  margin-top: 15px;
+}
+#contact .actions {
+  margin-left: 180px;
+}
+
 #slider {
   height: 420px;
   background: url(images/bg-slider.png) center bottom no-repeat;
@@ -6451,6 +6458,10 @@ fieldset#get-password input {
 
 .center {
   text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 
 .box {
