@@ -6582,7 +6582,7 @@ header[role="banner"] nav[role="navigation"] ul li a {
   text-decoration: none;
 }
 header[role="banner"] nav[role="navigation"] ul li a span {
-  color: #fffead;
+  color: #5cabe8;
 }
 header[role="banner"] nav[role="navigation"] ul li a:hover, header[role="banner"] nav[role="navigation"] ul li a.active {
   background: #000;
