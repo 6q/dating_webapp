@@ -1,0 +1,11 @@
+<section>
+	<header>
+		<h1>Mensajes y actividades</h1>
+	</header>
+	<ul>
+		<li><%= link_to 'Recibidos', '/user/messages' %></li>
+		<li><%= link_to 'Propuestas de actividad', '/user/messages?activities' %></li>
+		<li><%= link_to 'Enviados', '/user/messages?sent' %></li>
+		<li><%= link_to 'Eliminados', '/user/messages?deleted' %></li>
+	</ul>
+</section>
