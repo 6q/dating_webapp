@@ -45,6 +45,10 @@ fieldset {
     }
   }
 
+  &#orientation {
+    padding-left:40px;
+  }
+
   &#get-password {
     label {
       font-weight:bold;
@@ -65,6 +69,66 @@ fieldset {
     legend {
       border-bottom:0;
       padding-left:0;
+    }
+  }
+
+  &#photo {
+
+    label {
+      font-weight:bold;
+    }
+
+    input[type="file"]{
+      line-height:1em;
+      margin-top:.5em;
+      margin-left:10px;
+    }
+
+    input[type="checkbox"] {
+      margin-right:10px;
+      margin-top:0;
+    }
+
+    small {
+      display:block;
+      width:280px;
+      padding-left:30px;
+    }
+
+    .photo {
+      margin-left:40px;
+    }
+  }
+
+  &#access {
+    label {
+      font-weight:normal;
+      margin-right:10px;
+      font-weight:bold;
+    }
+
+    .actions {
+
+      button {
+        margin-left:50px;
+      }
+
+      input[type="checkbox"] {
+        margin-right:10px;
+        margin-top:3px;
+        float:left;
+      }
+
+      label {
+        font-weight:normal;
+        display:block;
+        font-size:.8em;
+        padding-left:30px;
+      }
+
+      .clearfix {
+        margin-top:10px;
+      }
     }
   }
 

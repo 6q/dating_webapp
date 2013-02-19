@@ -6432,6 +6432,9 @@ fieldset .actions {
 fieldset .actions button {
   text-transform: uppercase;
 }
+fieldset#orientation {
+  padding-left: 40px;
+}
 fieldset#get-password label {
   font-weight: bold;
   padding-right: 10px;
@@ -6449,6 +6452,48 @@ fieldset#name {
 fieldset#name legend {
   border-bottom: 0;
   padding-left: 0;
+}
+fieldset#photo label {
+  font-weight: bold;
+}
+fieldset#photo input[type="file"] {
+  line-height: 1em;
+  margin-top: .5em;
+  margin-left: 10px;
+}
+fieldset#photo input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 0;
+}
+fieldset#photo small {
+  display: block;
+  width: 280px;
+  padding-left: 30px;
+}
+fieldset#photo .photo {
+  margin-left: 40px;
+}
+fieldset#access label {
+  font-weight: normal;
+  margin-right: 10px;
+  font-weight: bold;
+}
+fieldset#access .actions button {
+  margin-left: 50px;
+}
+fieldset#access .actions input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 3px;
+  float: left;
+}
+fieldset#access .actions label {
+  font-weight: normal;
+  display: block;
+  font-size: .8em;
+  padding-left: 30px;
+}
+fieldset#access .actions .clearfix {
+  margin-top: 10px;
 }
 
 #contact {
