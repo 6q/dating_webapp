@@ -7128,14 +7128,41 @@ section.list .user-card ul.pics li img {
   padding: 4px;
   border: #cccccc 1px solid;
 }
+section.list .user-card ul.actions {
+  margin-bottom: 10px;
+}
 section.list .user-card ul.actions li {
   display: block;
   width: 30px;
+  height: 30px;
   float: left;
+  margin: 5px;
+}
+section.list .user-card ul.actions li a {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -999em;
+  background: url(images/sprite.png) left top no-repeat;
+}
+section.list .user-card ul.actions li.message a {
+  background-position: 4px -156px;
+}
+section.list .user-card ul.actions li.chat a {
+  background-position: -25px -156px;
+}
+section.list .user-card ul.actions li.like a {
+  background-position: -57px -156px;
+}
+section.list .user-card ul.actions li.block a {
+  background-position: -86px -156px;
 }
 section.list .user-card header {
   padding: 10px;
   border: 0;
+  margin: 0;
 }
 section.list .user-card header h1 {
   font-size: .8em;
