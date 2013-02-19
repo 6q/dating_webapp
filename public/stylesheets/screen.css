@@ -7189,3 +7189,30 @@ section.list .user-card header h1 a {
 section.list .user-card header h1 span {
   font-size: .9em;
 }
+section.list .pagination {
+  overflow: hidden;
+  *zoom: 1;
+  font-size: .8em;
+  color: #999;
+}
+section.list .pagination span.pages {
+  display: block;
+  float: right;
+}
+section.list .pagination span.pages a.prev, section.list .pagination span.pages a.next {
+  background: #5caae8;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0 0.5em;
+  text-decoration: none;
+  margin: 0 5px;
+}
+section.list .pagination span.pages a.prev:hover, section.list .pagination span.pages a.next:hover {
+  background: #005580;
+}
+section.list .pagination span.pages a.current {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #666;
+}
