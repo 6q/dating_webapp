@@ -6888,6 +6888,7 @@ ul.miniSlider li.active {
   font-style: italic;
 }
 
+/*= sidebar */
 aside {
   position: relative;
 }
@@ -6911,6 +6912,47 @@ aside ul li.active a {
 }
 aside.sidebar {
   margin-top: 2.1em;
+}
+aside#main-sidebar {
+  font-size: .9em;
+}
+aside#main-sidebar header {
+  background: #fff;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+aside#main-sidebar header h1 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: #005580;
+  margin: 0;
+  padding: 0;
+}
+aside#main-sidebar ul li {
+  background: #fff;
+  padding: 5px;
+  border: none;
+  margin-bottom: 2px;
+}
+aside#main-sidebar ul li a {
+  padding: 5px;
+  display: block;
+  background: #F1F1F1;
+  text-decoration: none;
+}
+aside#main-sidebar ul li a:hover {
+  background: #E5F2FB;
+}
+aside#main-sidebar ul li a span {
+  background: #5caae8;
+  color: #fff;
+  display: inline-block;
+  padding: 0px 5px;
+  line-height: 1.4em;
+  margin-left: 5px;
+  border-radius: 20px;
+  font-size: .8em;
 }
 
 #home-highlights h1 {

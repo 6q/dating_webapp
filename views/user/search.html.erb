@@ -1,1 +1,18 @@
-search
+buscador
+
+<hr>
+
+<section class="list">
+	<header>
+		<h1>Resultados de la búsqueda</h1>
+		<%= render '/shared/user/sorting' %>
+	</header>
+	<ul class="user-list clearfix">
+		<% (1..12).each do %>
+		  <li><%= render '/shared/user/user-card' %></li>
+		<% end %>
+	</ul>
+
+	<%= render '/shared/user/pagination' %>
+
+</section>
