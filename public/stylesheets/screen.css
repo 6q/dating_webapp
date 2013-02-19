@@ -7108,6 +7108,9 @@ section.list .user-list li li {
 section.list .user-card {
   background: #fff;
 }
+section.list .user-card.online .pics img {
+  background: #8CCC8C;
+}
 section.list .user-card ul {
   margin: 0;
   padding: 0;
@@ -7117,13 +7120,20 @@ section.list .user-card ul li {
   padding: 0;
   margin: 0;
 }
+section.list .user-card ul.pics {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  overflow: hidden;
+}
 section.list .user-card ul.pics li {
-  display: none;
+  position: absolute;
+  z-index: 1;
 }
 section.list .user-card ul.pics li:first-child {
-  display: block;
+  z-index: 2;
 }
-section.list .user-card ul.pics li img {
+section.list .user-card ul.pics li a img {
   width: 155px;
   padding: 4px;
   border: #cccccc 1px solid;

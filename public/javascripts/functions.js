@@ -38,8 +38,18 @@ $(document).ready(function(){
 
 	$('.user #in-love .fold').removeClass('active');
 
+  // image slide thing for user cards
+  $(".user-card .pics").hover(function(){
+    $("li:first-child", this).stop().animate({opacity:0},{queue:false,duration:500});
+  }, function() {
+    $("li:first-child", this).stop().animate({opacity:1},{queue:false,duration:500});
+  });
+
+
 });
 
+
+// does not work on document.ready. Don't ask me why.
 $(window).load(function() {
 
        var target_flexslider = $('.flexslider');
