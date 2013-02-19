@@ -1,1 +1,11 @@
-les he gustado
+<section class="list">
+	<header>
+		<h1>Les he gustado</h1>
+		<%= render '/shared/user/sorting' %>
+	</header>
+	<ul class="user-list clearfix">
+		<% (1..12).each do %>
+		  <li><%= render '/shared/user/user-card' %></li>
+		<% end %>
+	</ul>
+</section>

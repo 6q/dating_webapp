@@ -7062,3 +7062,93 @@ aside.sidebar {
 .user #in-love article p {
   display: none;
 }
+
+/*= user stuff */
+section.list {
+  margin-top: 1em;
+}
+section.list header {
+  overflow: hidden;
+  *zoom: 1;
+  border-bottom: #cccccc 1px solid;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+section.list header h1 {
+  float: left;
+  margin: 0;
+  font-size: 1.6em;
+  color: #5caae8;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+section.list header form {
+  margin: 0;
+}
+section.list header .sort {
+  float: right;
+}
+section.list .user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -12px;
+}
+section.list .user-list li {
+  width: 165px;
+  float: left;
+  margin-left: 13px;
+  margin-bottom: 13px;
+}
+section.list .user-list li li {
+  float: none;
+  width: auto;
+  margin: 0;
+}
+section.list .user-card {
+  background: #fff;
+}
+section.list .user-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+section.list .user-card ul li {
+  padding: 0;
+  margin: 0;
+}
+section.list .user-card ul.pics li {
+  display: none;
+}
+section.list .user-card ul.pics li:first-child {
+  display: block;
+}
+section.list .user-card ul.pics li img {
+  width: 155px;
+  padding: 4px;
+  border: #cccccc 1px solid;
+}
+section.list .user-card ul.actions li {
+  display: block;
+  width: 30px;
+  float: left;
+}
+section.list .user-card header {
+  padding: 10px;
+  border: 0;
+}
+section.list .user-card header h1 {
+  font-size: .8em;
+  line-height: 1.2em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+section.list .user-card header h1 a {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+section.list .user-card header h1 span {
+  font-size: .9em;
+}
