@@ -6402,12 +6402,25 @@ fieldset {
   margin-top: 40px;
   padding-bottom: 20px;
 }
+fieldset label {
+  font-size: 100%;
+}
 fieldset legend {
   border-bottom: #cccccc 1px solid;
+  color: #5caae8;
+  padding-left: 40px;
 }
 fieldset small {
-  color: #666;
+  color: #5caae8;
   font-size: .7em;
+  line-height: 1.2em;
+  display: block;
+}
+fieldset small[class*="span"] {
+  margin-left: 0;
+}
+fieldset .control-group {
+  margin: 20px 0;
 }
 fieldset.standard-form label {
   font-weight: bold;
@@ -6428,6 +6441,14 @@ fieldset#get-password label {
 }
 fieldset#get-password input {
   margin-right: 10px;
+}
+fieldset#name {
+  margin-top: 0;
+  padding-left: 40px;
+}
+fieldset#name legend {
+  border-bottom: 0;
+  padding-left: 0;
 }
 
 #contact {

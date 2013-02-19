@@ -6,13 +6,28 @@ fieldset {
   margin-top:40px;
   padding-bottom:20px;
 
+  label {
+    font-size:100%;
+  }
+
   legend {
     border-bottom:#ccc 1px solid;
+    color:$link_color;
+    padding-left:40px;
   }
 
   small {
-    color:#666;
+    color:$link_color;
     font-size:.7em;
+    line-height:1.2em;
+    display:block;
+    &[class*="span"] {
+      margin-left:0;
+    }
+  }
+
+  .control-group {
+    margin:20px 0;
   }
 
   &.standard-form {
@@ -41,6 +56,15 @@ fieldset {
 
     input {
       margin-right:10px;
+    }
+  }
+
+  &#name {
+    margin-top:0;
+    padding-left:40px;
+    legend {
+      border-bottom:0;
+      padding-left:0;
     }
   }
 
