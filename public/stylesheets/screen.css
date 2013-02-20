@@ -6518,6 +6518,14 @@ fieldset#access .actions .clearfix {
   height: 420px;
 }
 
+hr {
+  color: #e0e0e0;
+  background: #e0e0e0;
+  border: none;
+  border-bottom: #e0e0e0 1px solid;
+  margin: 10px 0;
+}
+
 .container {
   position: relative;
 }
