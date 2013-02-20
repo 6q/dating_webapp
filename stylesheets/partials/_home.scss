@@ -11,3 +11,67 @@
     margin-bottom:15px;
   }
 }
+
+
+section.home{
+
+	@extend section.list;
+
+	/* ARTICLES */ 
+	
+	/* related-list */
+	article.related-list{
+	  background-color: lightgray;
+	  display: inline-block;
+	  width: 100%;
+	
+	  ul{margin: 10px 0 10px 20px;}
+	
+	  li{
+	  	list-style: none;
+	  	float: left;  
+	  	margin-left: 15px;
+		}
+	
+		h4{
+	  	text-align: right;
+	  	line-height: 15px;
+		}
+	}
+	
+	/* direct-search */
+	article.direct-search .control-label{
+	  font-weight: bold;
+	  
+	  span{
+	  	font-weight: normal;
+		}
+	}
+	
+	/* last-chats */
+	
+	article.last-chats {
+	
+		.reply{
+	  	width: 30px;
+	  	height: 30px;
+	  	background-color: gray;
+	  	position: absolute;
+	  	right:0px;
+	  }
+	
+	  .proposal{
+	  	background-color: lightgray;
+	  	margin:0px;
+	  	padding: 5px 0;
+	  }
+	  .no-mg-btm{
+	  	margin-bottom: 0px;
+	  }
+	
+	  .button{
+	  	margin:40px 0;
+	  	text-align: center;
+	  }
+	}
+}

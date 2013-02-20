@@ -290,3 +290,106 @@ section.list {
   }
 
 }
+
+
+/* CHAT */
+
+section.chat{
+  @extend section.list;
+
+  header{
+    line-height: 1.9em;
+    border:none;
+    h1{
+      line-height: 1em;
+      margin-right: 10px;
+    }
+    a{
+      margin-left: 20px;
+    }
+    span{
+      float: right;
+    }
+    
+  }
+
+  .user-info{
+    background-color: lightgray;
+
+    img{
+      float: left;
+      margin:10px;
+    }
+    .text{
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .status{
+      color:green;
+      font-size: 14px;
+      float:right;
+      margin-right: 5px;
+    }
+    .user-card{background-color: lightgray;}
+  }
+
+  .log{
+    margin-bottom: 15px;
+    .who{
+      width:110px;
+      text-align: right;
+      float: left;
+      p{
+        margin: 15px 0 0 0;
+      }
+      span{
+        font-size: 12px;
+        line-height: 10px;
+      }
+    }
+    .msg{
+      float:left;
+      margin-left: 10px;
+      p{
+        margin-top: 15px;
+      }
+    }
+  }
+
+  hr{
+    margin:0;
+  }
+
+  .msg-form{
+    background-color: lightgray;
+    width: 100%;
+    display: inline-block;
+    form{
+      padding:10px;
+      textarea{
+        width:506px;
+      }
+      button{
+        margin:10px 0;
+      }
+    }
+  }
+
+  .sidebar{ 
+    hr{
+      margin: 0px;
+    }
+    ul{
+      margin: 10px 0;
+    }
+    ul li{
+      list-style: none;
+      margin:10px 0;
+    }
+  }
+
+
+}
+
+
+
