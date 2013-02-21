@@ -26,9 +26,11 @@
       font-size:120%;
       margin:0;
       font-weight:normal;
-      padding-bottom:10px;
+      padding-bottom:5px;
+      border-bottom:#e0e0e0 1px solid;
 
-      a {
+
+      i {
         background:url(images/sprite.png) 0px -120px no-repeat;
         padding-left:25px;
         color:#000;
@@ -38,16 +40,14 @@
 
     p {
       font-size:90%;
-      border-top:#e0e0e0 1px solid;
       padding-top:10px;
     }
 
     img {
-      float:left;
-      margin-right:10px;
-      margin-top:3px;
-      width:80px;
-      height:80px;
+      margin-top:10px;
+      display:block;
+      width:220px;
+      height:90px;
     }
   }
 }

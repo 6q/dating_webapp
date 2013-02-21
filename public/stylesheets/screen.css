@@ -6820,9 +6820,10 @@ body.home header[role="banner"] {
   font-size: 120%;
   margin: 0;
   font-weight: normal;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: #e0e0e0 1px solid;
 }
-#in-love article h1 a {
+#in-love article h1 i {
   background: url(images/sprite.png) 0px -120px no-repeat;
   padding-left: 25px;
   color: #000;
@@ -6830,15 +6831,13 @@ body.home header[role="banner"] {
 }
 #in-love article p {
   font-size: 90%;
-  border-top: #e0e0e0 1px solid;
   padding-top: 10px;
 }
 #in-love article img {
-  float: left;
-  margin-right: 10px;
-  margin-top: 3px;
-  width: 80px;
-  height: 80px;
+  margin-top: 10px;
+  display: block;
+  width: 220px;
+  height: 90px;
 }
 
 ul.miniSlider {
