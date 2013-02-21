@@ -7439,15 +7439,27 @@ section.chat .sidebar ul li {
 .profile .quien {
   font-size: 0.9em;
 }
-.profile .quien em {
-  font-size: 0.8em;
-  line-height: 15px;
-  color: gray;
-}
 .profile .nav-tabs li a {
   background-color: white;
 }
 .profile .nav-tabs .active a {
   background-color: #f1f1f1;
   color: #5caae8;
+}
+.profile em {
+  font-size: 0.8em;
+  line-height: 15px;
+  color: gray;
+}
+.profile #dicen .comment {
+  border-bottom: 1px lightgrey solid;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.profile #dicen .last {
+  border-bottom: none;
+}
+.profile #dicen .center {
+  font-size: 20px;
+  margin-bottom: 40px;
 }

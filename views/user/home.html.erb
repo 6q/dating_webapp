@@ -19,9 +19,9 @@
 				<div class="row">
 					<div class="span6">
 						<div class="control-group">
-							<label class="control-label">Edad <span>Entre 27 y 33 años</span></label>
+							<label class="control-label">Edad</label>
 							<div class="controls">
-								<input type="text">
+								<input id="years" type="slider" name="" value="18;80"/>
 							</div>
 						</div>
 						<div class="control-group">
@@ -32,9 +32,9 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label">Distancia <span>20 km</span></label>
+							<label class="control-label">Distancia</label>
 							<div class="controls">
-								<input type="text">
+								<input id="kms" type="slider" name="" value="20"/>
 							</div>
 						</div>
 						<div class="control-group">
@@ -121,12 +121,14 @@
 		<div class="button">
 			<a href="#" class="btn btn-large ">Ver más</a>
 		</div>
-		
-
-
 
 	</article>
-
 </section>
 
+<script src="/javascripts/jquery.slider.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	jQuery("#years").slider({ from: 18, to: 80, step: 1, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;años' });
+
+ 	jQuery("#kms").slider({ from: 0, to: 200, step: 20, round: 1, skin: "plastic", dimension: '&nbsp;kms' });
+</script>
 

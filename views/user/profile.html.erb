@@ -43,7 +43,7 @@
 			<form>
 	</article>
 
-	<article class="quien">
+	<div class="quien">
 		<h3>¿Quien eres?</h3>
 		<form class="form-inline">
 			Me llamo
@@ -57,21 +57,418 @@
 
 	<article>
 		<ul class="nav nav-tabs" id="myTab">
-		  <li class="active"><a href="#home">Home</a></li>
-		  <li><a href="#profile">Profile</a></li>
-		  <li><a href="#messages">Messages</a></li>
-		  <li><a href="#settings">Settings</a></li>
+		  <li class="active"><a href="#como">¿Cómo eres?</a></li>
+		  <li><a href="#gustos">Tus gustos</a></li>
+		  <li><a href="#buscas">Qué buscas</a></li>
+		  <li><a href="#dicen">Que dicen de ti</a></li>
 		</ul>
 		 
 		<div class="tab-content">
-		  <div class="tab-pane active" id="home">...</div>
-		  <div class="tab-pane" id="profile">...</div>
-		  <div class="tab-pane" id="messages">...</div>
-		  <div class="tab-pane" id="settings">...</div>
+		  <div class="tab-pane active" id="como">
+
+		  	<article>
+		  		<form class="form-inline">
+						Soy
+						<select>
+  						<option>chico</option>
+  						<option>chica</option>
+						</select>
+						<select>
+  						<option>hetero</option>
+  						<option>gay</option>
+						</select>
+						y
+						<select>
+  						<option>Estoy buscando</option>
+  						<option>Estoy curioseando</option>
+						</select>
+						, nací el <input class="input-mini" type="text" placeholder="dia">
+						<select>
+  						<option>Enero</option>
+  						<option>Febrero</option>
+  						<option>Marzo</option>
+  						<option>Abril</option>
+  						<option>Mayo</option>
+  						<option>Junio</option>
+  						<option>Julio</option>
+  						<option>Agosto</option>
+  						<option>Septiembre</option>
+  						<option>Octubre</option>
+  						<option>Noviembre</option>
+  						<option>Diciembre</option>
+						</select>
+						<input class="input-mini" type="text" placeholder="año">
+	
+						Vivo en <input class="" type="text" placeholder="población">,
+						<select>
+							<option>España</option>
+							<option>Francia</option>
+						</select>
+						y mi código postal es <input class="input-mini" type="text" placeholder="CP">
+	
+		  			<hr>
+	
+		  			Soy 
+		  			<select>
+							<option>atractivo</option>
+							<option>feo</option>
+						</select>
+						y mi estilo es 
+						<select>
+							<option>bohemio</option>
+							<option>pijo</option>
+						</select>.
+						Mido <input class="input-mini" type="text"> m. Y peso <input class="input-mini" type="text">kg.
+						</br>
+						Mi complexión es 
+						<select>
+							<option>normal</option>
+							<option>atlética</option>
+						</select>.
+						</br>
+	
+						<select>
+							<option>Tengo hijos</option>
+							<option>Tengo perro</option>
+						</select>
+						y 
+						<select>
+							<option>no quiero tener más</option>
+							<option>quiero adoptar</option>
+						</select>
+						, ademas 
+						<select>
+							<option>fumo</option>
+							<option>no fumo</option>
+						</select>
+						y 
+						<select>
+							<option>no me molesta el humo</option>
+							<option>me indigna el humo</option>
+						</select>
+						</br>
+						
+						A la hora de comer, lo hago
+						<select>
+							<option>estrictamente</option>
+							<option>sin control</option>
+						</select>.
+						<select>
+							<option>Bebo alcohol</option>
+							<option>Soy abstemio</option>
+						</select>
+						y
+						<select>
+							<option>tomo drogas</option>
+							<option>salgo</option>
+						</select>
+						<select>
+							<option>de vez en cuando</option>
+							<option>siempre</option>
+						</select>
+						<hr>
+	
+						Soy
+						<select>
+							<option>agnostico</option>
+							<option>creiente</option>
+						</select>
+						y
+						<select>
+							<option>me lo tomo muy en serio</option>
+							<option>no practicante</option>
+						</select>.
+						<select>
+							<option>Me gustan</option>
+							<option>Odio</option>
+						</select>
+						los animales de compañia y, de hecho
+						<select>
+							<option>tengo</option>
+							<option>adopto</option>
+						</select>
+						<select>
+							<option>animales exóticos</option>
+							<option>perros</option>
+						</select>
+						<hr>
+	
+						Mi nivel de estudios es 
+						<select>
+							<option>módulo profesional</option>
+							<option>universitario</option>
+						</select>
+						y hablo
+						<select>
+							<option>Holandés - nivel alto</option>
+							<option>Ingés - nivel nativo</option>
+						</select>.
+						</br>
+	
+						Ahora mismo, trabajo en 
+						<select>
+							<option>ordenadores y tecnología</option>
+							<option>política</option>
+						</select>
+						con un nivel de ingresos
+						<select>
+							<option>medio</option>
+							<option>alto</option>
+						</select>
+						<hr>
+
+					</form>
+				</article>
+
+				<article>
+					<h3>¿Cómo te describirias?</h3>
+					<p><em>Una pequeña descripción de cómo te ces a ti mismo ayudará a otros usuari@s a conocerte mejor!</br>
+						No desaproveches esta oportunidad...</em>
+					</p>
+					<form>
+						<textarea class="span9" rows="4"></textarea>
+					</form>
+					<hr>
+				</article>
+
+				<article>
+					<h3>¿Cómo te consideras?</h3>
+					<p><em>Puntua de 1 a 5 cada una de estas características</em></p>
+					<div class="span4">
+						<% (1..12).each do %>
+							<h5>Amable</h5>
+							<input id="points" type="slider" name="" value="3"/>
+						<% end %>
+					</div>
+
+					<div class="span4">
+						<% (1..12).each do %>
+							<h5>Amable</h5>
+							<input id="points" type="slider" name="" value="3"/>
+						<% end %>
+					</div>
+					<div class="clearfix"></div>
+				</article>
+		  </div>
+
+
+
+		  <div class="tab-pane" id="gustos">
+		  	<% (1..4).each do %>
+		  	<article>
+					<h3>¿Cómo te describirias?</h3>
+					<p><em>Una pequeña descripción de cómo te ces a ti mismo ayudará a otros usuari@s a conocerte mejor!</br>
+						No desaproveches esta oportunidad...</em>
+					</p>
+					<form>
+						<textarea class="span9" rows="4"></textarea>
+					</form>
+				</article>
+				<% end %>
+
+
+		  </div>
+		  <div class="tab-pane" id="buscas">
+		  	<form class="form-inline">
+						Busco
+						<select>
+  						<option>chico</option>
+  						<option>chica</option>
+						</select>
+						<select>
+  						<option>hetero</option>
+  						<option>gay</option>
+						</select>
+						y
+						<select>
+  						<option>Estoy buscando</option>
+  						<option>Estoy curioseando</option>
+						</select>
+						, de entre <input class="input-mini" type="text"> y <input class="input-mini" type="text">
+						</br>
+	
+						Que viva en <input class="" type="text" placeholder="población">,
+						<select>
+							<option>España</option>
+							<option>Francia</option>
+						</select>
+						cerca del código postal <input class="input-mini" type="text" placeholder="CP">
+	
+		  			<hr>
+	
+		  			Que sea
+		  			<select>
+							<option>atractivo</option>
+							<option>feo</option>
+						</select>
+						y 
+						<select>
+							<option>bohemio</option>
+							<option>pijo</option>
+						</select>.
+						Que mida entre <input class="input-mini" type="text"> y <input class="input-mini" type="text"> m y pese entre <input class="input-mini" type="text"> y <input class="input-mini" type="text">kg.
+						</br>
+						Y con una complexión
+						<select>
+							<option>normal</option>
+							<option>atlética</option>
+						</select>.
+						</br>
+						
+						Que 
+						<select>
+							<option>tenga hijos</option>
+							<option>tenga perro</option>
+						</select>
+						y 
+						<select>
+							<option>no quiera tener más</option>
+							<option>quiera adoptar</option>
+						</select>
+						, además 
+						<select>
+							<option>no fume</option>
+							<option>fume</option>
+						</select>
+						y 
+						<select>
+							<option>le moleste el humo</option>
+							<option>le indigne el humo</option>
+						</select>
+						</br>
+						
+						Para comer,
+						<select>
+							<option>estrictamente</option>
+							<option>sin control</option>
+						</select>.
+						Que
+						<select>
+							<option>beba alcohol</option>
+							<option>sea abstemio</option>
+						</select>
+						y
+						<select>
+							<option>tome drogas</option>
+							<option>salga</option>
+						</select>
+						<select>
+							<option>de vez en cuando</option>
+							<option>siempre</option>
+						</select>
+						<hr>
+	
+						Que sea
+						<select>
+							<option>agnostico</option>
+							<option>creiente</option>
+						</select>
+						y
+						<select>
+							<option>se lo tome muy en serio</option>
+							<option>no practicante</option>
+						</select>.
+						Que
+						<select>
+							<option>le gusten</option>
+							<option>odie</option>
+						</select>
+						los animales de compañia y, que 
+						<select>
+							<option>tenga</option>
+							<option>adopte</option>
+						</select>
+						<select>
+							<option>animales exóticos</option>
+							<option>perros</option>
+						</select>
+						<hr>
+	
+						Su nivel de estudios sea
+						<select>
+							<option>módulo profesional</option>
+							<option>universitario</option>
+						</select>
+						y hable
+						<select>
+							<option>Holandés - nivel alto</option>
+							<option>Ingés - nivel nativo</option>
+						</select>.
+						</br>
+	
+						Que trabaje en 
+						<select>
+							<option>ordenadores y tecnología</option>
+							<option>política</option>
+						</select>
+						y con un nivel de ingresos
+						<select>
+							<option>medio</option>
+							<option>alto</option>
+						</select>
+						<hr>
+
+					</form>
+		  </div>
+
+		  <div class="tab-pane" id="dicen">
+		  	<div class="span4">
+					<% (1..12).each do %>
+						<h5>Amable</h5>
+						<input id="points" type="slider" name="" value="3"/>
+					<% end %>
+				</div>
+
+				<div class="span4">
+					<% (1..12).each do %>
+						<h5>Amable</h5>
+						<input id="points" type="slider" name="" value="3"/>
+					<% end %>
+				</div>
+				<div class="clearfix"></div>
+
+				
+				<% (1..3).each do %>
+				<article class="comment">
+					<h4 class="pull-left">Maria</h4><span>cor-sprite</span> Ex-novia
+					<div class="pull-right">05/11/2012 - 22:35h</div>
+					<div class="clearfix"></div>
+					<p>Es buena persona, generoso, simpático y además le gusta mucho recoger animalitos atropellados en la autopista. Y lo hace sin ánimo de lucro porque luego no vende sus pieles. Les da un entierro digno.</p>
+				</article>
+				<% end %>
+				<article class="comment last">
+					<h4 class="pull-left">Maria</h4><span>cor-sprite</span> Ex-novia
+					<div class="pull-right">05/11/2012 - 22:35h</div>
+					<div class="clearfix"></div>
+					<p>Es buena persona, generoso, simpático y además le gusta mucho recoger animalitos atropellados en la autopista. Y lo hace sin ánimo de lucro porque luego no vende sus pieles. Les da un entierro digno.</p>
+				</article>
+				
+
+				<div class="center"><a href="">Consigue más puntos!</a></div>
+				
+
+
+		  </div>
+
+
 		</div>
-		 
-		
-	</article>
-
-
+	</div>
 </section>
+
+<script src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$('#myTab a').click(function (e) {
+  	e.preventDefault();
+  	$(this).tab('show');
+	})
+</script>
+
+<script src="/javascripts/jquery.slider.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+ 	jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
+</script>
+
+
+
+
+
