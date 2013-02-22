@@ -299,12 +299,12 @@ section.list {
 }
 
 
-/* chat */
+/*= chat */
 
 section.chat{
   @extend section.list;
 
-  header{
+  header {
     line-height: 1.9em;
     border:none;
     h1 {
@@ -328,14 +328,17 @@ section.chat{
       }
 
     }
-    a {
-      margin-left: 20px;
+
+    .new-window {
+      float:right;
+      font-size:.8em;
     }
     
   }
 
-  .user-info{
-    background-color: lightgray;
+  .user-info {
+    background-color: #fff;
+    border-bottom:#e0e0e0 1px solid;
 
     img{
       float: left;
@@ -349,52 +352,58 @@ section.chat{
       color:green;
       font-size: 14px;
       float:right;
-      margin-right: 5px;
+      margin-right:10px;
     }
-    .user-card{background-color: lightgray;}
+    
   }
 
-  .log{
-    margin-bottom: 15px;
+  .chat-container {
+    max-height:300px;
+    overflow-y: auto;
+  }
 
-    .who{
-      width:110px;
+  .log {
+    
+    background:#fff;
+    padding:10px 0;
+    border-bottom:#e0e0e0 1px solid;
+
+    .who {
+      width:90px;
       text-align: right;
       float: left;
-      p{
-        margin: 15px 0 0 0;
-      }
-      span{
-        font-size: 12px;
-        line-height: 10px;
+
+      span {
+        font-size: .7em;
+        color:#999;
+        display:block;
+        line-height:1.2em;
       }
     }
-    .msg{
+    .msg {
       float:left;
       margin-left: 10px;
-      p{
-        margin-top: 15px;
-      }
     }
   }
 
-  hr{
-    margin:0;
-  }
+  .msg-form {
+    margin-top:10px;
 
-  .msg-form{
-    background-color: lightgray;
-    width: 100%;
-    display: inline-block;
+    form {
+      label {
+        width:90px;
+        float:left;
+        font-weight:bold;
+        text-align:right;
+        margin-right:10px;
+        line-height:30px;
+      }
 
-    form{
-      padding:10px;
-      textarea{
-        width:506px;
+      input[type="text"] {
+        width:340px;
+        margin-left:10px;
       }
-      button{
-        margin:10px 0;
-      }
+
     }
   }
 
