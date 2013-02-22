@@ -79,11 +79,39 @@ hr {
     background:#f2f2f2;
 
     [class*="span"] {
-      margin-left:10px;
+      margin-left:10px;      
+    }
+
+
+    article {
+      margin:0 10px;
+
+      h3 {
+        font-size:1.2em;
+        color:$link-color;
+        font-weight:normal;
+      }
     }
 
     header {
       padding:10px;
+      margin-bottom:20px;
+      line-height: 1.9em;
+      border-bottom:#e0e0e0 1px solid;
+
+      h1 {
+        color:$link-color;
+        font-weight:normal;
+        font-size:1.4em;
+        line-height: 1em;
+        margin:0;
+        margin-right: 10px;
+
+        span {
+          color:#000;
+        }
+      }
+
     }
   }
 }

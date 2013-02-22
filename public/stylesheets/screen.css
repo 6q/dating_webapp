@@ -6577,8 +6577,30 @@ hr {
 .boxed .boxed-inner [class*="span"] {
   margin-left: 10px;
 }
+.boxed .boxed-inner article {
+  margin: 0 10px;
+}
+.boxed .boxed-inner article h3 {
+  font-size: 1.2em;
+  color: #5caae8;
+  font-weight: normal;
+}
 .boxed .boxed-inner header {
   padding: 10px;
+  margin-bottom: 20px;
+  line-height: 1.9em;
+  border-bottom: #e0e0e0 1px solid;
+}
+.boxed .boxed-inner header h1 {
+  color: #5caae8;
+  font-weight: normal;
+  font-size: 1.4em;
+  line-height: 1em;
+  margin: 0;
+  margin-right: 10px;
+}
+.boxed .boxed-inner header h1 span {
+  color: #000;
 }
 
 blockquote {
@@ -7347,18 +7369,6 @@ section.list .pagination span.pages a.current, section.home .pagination span.pag
 }
 
 /*= chat */
-section.chat header {
-  line-height: 1.9em;
-  border: none;
-}
-section.chat header h1 {
-  font-size: 1.4em;
-  line-height: 1em;
-  margin-right: 10px;
-}
-section.chat header h1 span {
-  color: #000;
-}
 section.chat header h1 em {
   font-style: normal;
 }
