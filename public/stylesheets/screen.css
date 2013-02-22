@@ -6568,11 +6568,14 @@ hr {
 .boxed {
   margin-left: -10px;
   background: #fff;
-  border: #cccccc 1px solid;
+  border: #e0e0e0 1px solid;
   padding: 4px;
 }
 .boxed .boxed-inner {
   background: #f2f2f2;
+}
+.boxed .boxed-inner [class*="span"] {
+  margin-left: 10px;
 }
 .boxed .boxed-inner header {
   padding: 10px;

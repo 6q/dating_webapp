@@ -72,11 +72,15 @@ hr {
 .boxed {
   margin-left:-10px;
   background:#fff;
-  border:#ccc 1px solid;
+  border:#e0e0e0 1px solid;
   padding:4px;
 
   .boxed-inner {
     background:#f2f2f2;
+
+    [class*="span"] {
+      margin-left:10px;
+    }
 
     header {
       padding:10px;
