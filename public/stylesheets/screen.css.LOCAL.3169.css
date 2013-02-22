@@ -6577,30 +6577,8 @@ hr {
 .boxed .boxed-inner [class*="span"] {
   margin-left: 10px;
 }
-.boxed .boxed-inner article {
-  margin: 0 10px;
-}
-.boxed .boxed-inner article h3 {
-  font-size: 1.2em;
-  color: #5caae8;
-  font-weight: normal;
-}
 .boxed .boxed-inner header {
   padding: 10px;
-  margin-bottom: 20px;
-  line-height: 1.9em;
-  border-bottom: #e0e0e0 1px solid;
-}
-.boxed .boxed-inner header h1 {
-  color: #5caae8;
-  font-weight: normal;
-  font-size: 1.4em;
-  line-height: 1em;
-  margin: 0;
-  margin-right: 10px;
-}
-.boxed .boxed-inner header h1 span {
-  color: #000;
 }
 
 blockquote {
@@ -7369,7 +7347,6 @@ section.list .pagination span.pages a.current, section.home .pagination span.pag
 }
 
 /*= chat */
-<<<<<<< HEAD
 section.chat header, .messages header {
   line-height: 1.9em;
   border: none;
@@ -7383,9 +7360,6 @@ section.chat header h1 span, .messages header h1 span {
   color: #000;
 }
 section.chat header h1 em, .messages header h1 em {
-=======
-section.chat header h1 em {
->>>>>>> 99f04c0934659cfe986a9ef0b80acd9978c2d0c2
   font-style: normal;
 }
 section.chat header h1 em.offline, .messages header h1 em.offline {
