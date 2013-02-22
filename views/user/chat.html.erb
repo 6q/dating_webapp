@@ -1,62 +1,57 @@
-<section class="chat">
-	<header class="row">
-		<div class="span7">	
-			<h1>Chat |</h1> no conectado <%= link_to "Conectar", "" %>
-			<span><%= link_to "Abrir en una ventana nueva", "" %></span>
-		</div>
-	</header>
+<section class="chat boxed">
+	<div class="boxed-inner">
+		<header>
+				<h1>Chat <span>| no conectado</span> <%= link_to "Conectar", "#" %></h1>
+				<%= link_to "Abrir en una ventana nueva", "#" %>
+		</header>
 
-	<div class="row">
-		
-		<div class="span7">
-			<div class="user-info clearfix">
-				<a href="#"><img src="/users/placeholder2.jpg" width="80" height ="80"></a>	
-				<div class="text">
-					<span class="info"><%= link_to "Judit", "#" %> 21 años, Barcelona</span><span class="	status">&bull; Conectada</span>
-					<div class="user-card">
-						<ul class="actions user-card">
-  	 					<li class="message"><a href="#">Send Message</a></li>
-  	 					<li class="chat"><a href="#">Chat</a></li>
-  	 					<li class="like"><a href="#">Like</a></li>
-  	 					<li class="block"><a href="#">Block</a></li>
-  					</ul>
-  				</div>
+		<div class="row">
+			<div class="span7">
+				<div class="user-info clearfix">
+					<a href="#"><img src="/users/placeholder2.jpg" width="80" height ="80"></a>	
+					<div class="text">
+						<span class="info"><%= link_to "Judit", "#" %> 21 años, Barcelona</span><span class="	status">&bull; Conectada</span>
+						<div class="user-card">
+							<ul class="actions user-card">
+	  	 					<li class="message"><a href="#">Send Message</a></li>
+	  	 					<li class="chat"><a href="#">Chat</a></li>
+	  	 					<li class="like"><a href="#">Like</a></li>
+	  	 					<li class="block"><a href="#">Block</a></li>
+	  					</ul>
+	  				</div>
+					</div>
 				</div>
+				
+				<% (1..4).each do %>
+					<div class="log row">
+						<div class="who">
+							<p>Sara:</p>
+							<span>14:36h</span>
+						</div>
+						<div class="msg">
+							<p>hols</p>
+						</div>
+					</div>
+					<hr>
+				<% end %>
+				<div class="msg-form">
+					<form>
+	  	      <textarea rows="4"></textarea>
+	  	      <div><button class="btn pull-right" type="submit">Enviar</button></div>
+	  	  	</form>
+	  	  </div>
 			</div>
-			
-			<% (1..4).each do %>
-				<div class="log row">
-					<div class="who">
-						<p>Sara:</p>
-						<span>14:36h</span>
-					</div>
-					<div class="msg">
-						<p>hols</p>
-					</div>
-				</div>
+			<div class="span2 row sidebar">
 				<hr>
-			<% end %>
-	
-			
-			<div class="msg-form">
-				<form>
-  	      <textarea rows="4"></textarea>
-  	      <div><button class="btn pull-right" type="submit">Enviar</button></div>
-  	  	</form>
-  	  </div>
-		</div>
-		
-		<div class="span2 row sidebar">
-			<hr>
-			<ul>
-				<li>Sara González</li>
-				<li><%= link_to "Carla Morgades", "" %></li>
-				<li><%= link_to "Mila Fontanals", "" %></li>
-			</ul>
-			<hr>
-		</div>
+				<ul>
+					<li>Sara González</li>
+					<li><%= link_to "Carla Morgades", "" %></li>
+					<li><%= link_to "Mila Fontanals", "" %></li>
+				</ul>
+				<hr>
+			</div>
 
+		</div>
 	</div>
-
 
 </section>

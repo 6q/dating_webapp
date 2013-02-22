@@ -69,6 +69,21 @@ hr {
   }
 }
 
+.boxed {
+  margin-left:-10px;
+  background:#fff;
+  border:#ccc 1px solid;
+  padding:4px;
+
+  .boxed-inner {
+    background:#f2f2f2;
+
+    header {
+      padding:10px;
+    }
+  }
+}
+
 blockquote {
   border:none;
   padding-left:2em;

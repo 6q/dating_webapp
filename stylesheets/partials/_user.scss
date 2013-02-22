@@ -100,7 +100,6 @@ li{
 
 section.list {
 
-  margin-top:1em;
 
   header {
 
@@ -308,15 +307,13 @@ section.chat{
   header{
     line-height: 1.9em;
     border:none;
-    h1{
+    h1 {
+      font-size:1.4em;
       line-height: 1em;
       margin-right: 10px;
     }
-    a{
+    a {
       margin-left: 20px;
-    }
-    span{
-      float: right;
     }
     
   }

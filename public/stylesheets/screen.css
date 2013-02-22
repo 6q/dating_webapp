@@ -6565,6 +6565,19 @@ hr {
   margin-bottom: 0;
 }
 
+.boxed {
+  margin-left: -10px;
+  background: #fff;
+  border: #cccccc 1px solid;
+  padding: 4px;
+}
+.boxed .boxed-inner {
+  background: #f2f2f2;
+}
+.boxed .boxed-inner header {
+  padding: 10px;
+}
+
 blockquote {
   border: none;
   padding-left: 2em;
@@ -7180,9 +7193,6 @@ li {
 }
 
 /*= user stuff */
-section.list, section.home, section.chat {
-  margin-top: 1em;
-}
 section.list header, section.home header, section.chat header {
   overflow: hidden;
   *zoom: 1;
@@ -7339,14 +7349,12 @@ section.chat header {
   border: none;
 }
 section.chat header h1 {
+  font-size: 1.4em;
   line-height: 1em;
   margin-right: 10px;
 }
 section.chat header a {
   margin-left: 20px;
-}
-section.chat header span {
-  float: right;
 }
 section.chat .user-info {
   background-color: lightgray;
