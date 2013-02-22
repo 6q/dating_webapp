@@ -30,13 +30,14 @@ $(document).ready(function(){
 	$('.miniSlider').slideSwitch();
 
 
-	$('#in-love .fold').click(function(e){
+	$('#in-love .fold, #in-love header').click(function(e){
 		e.preventDefault();
-		$(this).toggleClass('active');
+		$('#in-love .fold').toggleClass('active');
 		$('#in-love article p').slideToggle();
 	});
 
 	$('.user #in-love .fold').removeClass('active');
+  $('#in-love .fold').click();
 
   // image slide thing for user cards
   $(".user-card .pics").hover(function(){
