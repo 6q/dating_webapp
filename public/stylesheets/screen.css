@@ -7238,7 +7238,7 @@ section.list .user-card, section.home .user-card, section.chat .user-card {
   background: #fff;
 }
 section.list .user-card.online .pics img, section.home .user-card.online .pics img, section.chat .user-card.online .pics img {
-  background: #8CCC8C;
+  background: #8ccc8c;
 }
 section.list .user-card ul, section.home .user-card ul, section.chat .user-card ul {
   margin: 0;
@@ -7355,6 +7355,18 @@ section.chat header h1 {
   font-size: 1.4em;
   line-height: 1em;
   margin-right: 10px;
+}
+section.chat header h1 span {
+  color: #000;
+}
+section.chat header h1 em {
+  font-style: normal;
+}
+section.chat header h1 em.offline {
+  color: #cc0000;
+}
+section.chat header h1 em.online {
+  color: #8ccc8c;
 }
 section.chat header a {
   margin-left: 20px;

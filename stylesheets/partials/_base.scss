@@ -38,6 +38,10 @@ $body-margin-x: 15%;
 // Border Radius
 $default-border-radius: 8px;
 
+// Statuses 
+$online-color:#8CCC8C;
+$offline-color:#c00;
+
 @import "modules/all";
 @import "vendor/normalize";
 

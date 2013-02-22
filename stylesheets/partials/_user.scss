@@ -155,7 +155,7 @@ section.list {
     &.online {
       .pics {
         img {
-          background: #8CCC8C;
+          background: $online-color;
         }
       }
     }
@@ -311,6 +311,22 @@ section.chat{
       font-size:1.4em;
       line-height: 1em;
       margin-right: 10px;
+
+      span {
+        color:#000;
+      }
+
+      em {
+        font-style:normal;
+        &.offline {
+          color:$offline-color;
+        }
+
+        &.online {
+          color:$online-color;
+        }
+      }
+
     }
     a {
       margin-left: 20px;
