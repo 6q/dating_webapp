@@ -7462,3 +7462,14 @@ section.chat .sidebar ul li {
   font-size: 20px;
   margin-bottom: 40px;
 }
+
+/* search */
+.search {
+  display: inline-block;
+}
+.search form .controls {
+  margin-left: 130px;
+}
+.search form .control-label {
+  width: 120px;
+}
