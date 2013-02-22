@@ -7026,7 +7026,6 @@ section.home {
   /* ARTICLES */
   /* related-list */
   /* direct-search */
-  /* last-chats */
 }
 section.home article.related-list {
   background-color: lightgray;
@@ -7045,30 +7044,15 @@ section.home article.related-list h4 {
   text-align: right;
   line-height: 15px;
 }
+section.home .button {
+  margin: 40px 0;
+  text-align: center;
+}
 section.home article.direct-search .control-label {
   font-weight: bold;
 }
 section.home article.direct-search .control-label span {
   font-weight: normal;
-}
-section.home article.last-chats .reply {
-  width: 30px;
-  height: 30px;
-  background-color: gray;
-  position: absolute;
-  right: 0px;
-}
-section.home article.last-chats .proposal {
-  background-color: lightgray;
-  margin: 0px;
-  padding: 5px 0;
-}
-section.home article.last-chats .no-mg-btm {
-  margin-bottom: 0px;
-}
-section.home article.last-chats .button {
-  margin: 40px 0;
-  text-align: center;
 }
 
 .blog-sidebar ul {
@@ -7218,14 +7202,14 @@ li {
 }
 
 /*= user stuff */
-section.list header, section.home header, section.chat header {
+section.list header, section.home header, section.chat header, section.messages header {
   overflow: hidden;
   *zoom: 1;
   border-bottom: #cccccc 1px solid;
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
-section.list header h1, section.home header h1, section.chat header h1 {
+section.list header h1, section.home header h1, section.chat header h1, section.messages header h1 {
   float: left;
   margin: 0;
   font-size: 1.6em;
@@ -7233,73 +7217,73 @@ section.list header h1, section.home header h1, section.chat header h1 {
   font-weight: normal;
   line-height: 1.2em;
 }
-section.list header form, section.home header form, section.chat header form {
+section.list header form, section.home header form, section.chat header form, section.messages header form {
   margin: 0;
 }
-section.list header .sort, section.home header .sort, section.chat header .sort {
+section.list header .sort, section.home header .sort, section.chat header .sort, section.messages header .sort {
   float: right;
 }
-section.list .user-list, section.home .user-list, section.chat .user-list {
+section.list .user-list, section.home .user-list, section.chat .user-list, section.messages .user-list {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: -12px;
 }
-section.list .user-list li, section.home .user-list li, section.chat .user-list li {
+section.list .user-list li, section.home .user-list li, section.chat .user-list li, section.messages .user-list li {
   width: 165px;
   float: left;
   margin-left: 13px;
   margin-bottom: 13px;
 }
-section.list .user-list li li, section.home .user-list li li, section.chat .user-list li li {
+section.list .user-list li li, section.home .user-list li li, section.chat .user-list li li, section.messages .user-list li li {
   float: none;
   width: auto;
   margin: 0;
 }
-section.list .user-card, section.home .user-card, section.chat .user-card {
+section.list .user-card, section.home .user-card, section.chat .user-card, section.messages .user-card {
   background: #fff;
 }
-section.list .user-card.online .pics img, section.home .user-card.online .pics img, section.chat .user-card.online .pics img {
+section.list .user-card.online .pics img, section.home .user-card.online .pics img, section.chat .user-card.online .pics img, section.messages .user-card.online .pics img {
   background: #8ccc8c;
 }
-section.list .user-card ul, section.home .user-card ul, section.chat .user-card ul {
+section.list .user-card ul, section.home .user-card ul, section.chat .user-card ul, section.messages .user-card ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-section.list .user-card ul li, section.home .user-card ul li, section.chat .user-card ul li {
+section.list .user-card ul li, section.home .user-card ul li, section.chat .user-card ul li, section.messages .user-card ul li {
   padding: 0;
   margin: 0;
 }
-section.list .user-card ul.pics, section.home .user-card ul.pics, section.chat .user-card ul.pics {
+section.list .user-card ul.pics, section.home .user-card ul.pics, section.chat .user-card ul.pics, section.messages .user-card ul.pics {
   position: relative;
   width: 165px;
   height: 165px;
   overflow: hidden;
 }
-section.list .user-card ul.pics li, section.home .user-card ul.pics li, section.chat .user-card ul.pics li {
+section.list .user-card ul.pics li, section.home .user-card ul.pics li, section.chat .user-card ul.pics li, section.messages .user-card ul.pics li {
   position: absolute;
   z-index: 1;
 }
-section.list .user-card ul.pics li:first-child, section.home .user-card ul.pics li:first-child, section.chat .user-card ul.pics li:first-child {
+section.list .user-card ul.pics li:first-child, section.home .user-card ul.pics li:first-child, section.chat .user-card ul.pics li:first-child, section.messages .user-card ul.pics li:first-child {
   z-index: 2;
 }
-section.list .user-card ul.pics li a img, section.home .user-card ul.pics li a img, section.chat .user-card ul.pics li a img {
+section.list .user-card ul.pics li a img, section.home .user-card ul.pics li a img, section.chat .user-card ul.pics li a img, section.messages .user-card ul.pics li a img {
   width: 155px;
   padding: 4px;
   border: #cccccc 1px solid;
 }
-section.list .user-card ul.actions, section.home .user-card ul.actions, section.chat .user-card ul.actions {
+section.list .user-card ul.actions, section.home .user-card ul.actions, section.chat .user-card ul.actions, section.messages .user-card ul.actions {
   margin-bottom: 10px;
 }
-section.list .user-card ul.actions li, section.home .user-card ul.actions li, section.chat .user-card ul.actions li {
+section.list .user-card ul.actions li, section.home .user-card ul.actions li, section.chat .user-card ul.actions li, section.messages .user-card ul.actions li {
   display: block;
   width: 30px;
   height: 30px;
   float: left;
   margin: 5px;
 }
-section.list .user-card ul.actions li a, section.home .user-card ul.actions li a, section.chat .user-card ul.actions li a {
+section.list .user-card ul.actions li a, section.home .user-card ul.actions li a, section.chat .user-card ul.actions li a, section.messages .user-card ul.actions li a {
   display: block;
   float: left;
   width: 30px;
@@ -7308,24 +7292,24 @@ section.list .user-card ul.actions li a, section.home .user-card ul.actions li a
   text-indent: -999em;
   background: url(images/sprite.png) left top no-repeat;
 }
-section.list .user-card ul.actions li.message a, section.home .user-card ul.actions li.message a, section.chat .user-card ul.actions li.message a {
+section.list .user-card ul.actions li.message a, section.home .user-card ul.actions li.message a, section.chat .user-card ul.actions li.message a, section.messages .user-card ul.actions li.message a {
   background-position: 4px -156px;
 }
-section.list .user-card ul.actions li.chat a, section.home .user-card ul.actions li.chat a, section.chat .user-card ul.actions li.chat a {
+section.list .user-card ul.actions li.chat a, section.home .user-card ul.actions li.chat a, section.chat .user-card ul.actions li.chat a, section.messages .user-card ul.actions li.chat a {
   background-position: -25px -156px;
 }
-section.list .user-card ul.actions li.like a, section.home .user-card ul.actions li.like a, section.chat .user-card ul.actions li.like a {
+section.list .user-card ul.actions li.like a, section.home .user-card ul.actions li.like a, section.chat .user-card ul.actions li.like a, section.messages .user-card ul.actions li.like a {
   background-position: -57px -156px;
 }
-section.list .user-card ul.actions li.block a, section.home .user-card ul.actions li.block a, section.chat .user-card ul.actions li.block a {
+section.list .user-card ul.actions li.block a, section.home .user-card ul.actions li.block a, section.chat .user-card ul.actions li.block a, section.messages .user-card ul.actions li.block a {
   background-position: -86px -156px;
 }
-section.list .user-card header, section.home .user-card header, section.chat .user-card header {
+section.list .user-card header, section.home .user-card header, section.chat .user-card header, section.messages .user-card header {
   padding: 10px;
   border: 0;
   margin: 0;
 }
-section.list .user-card header h1, section.home .user-card header h1, section.chat .user-card header h1 {
+section.list .user-card header h1, section.home .user-card header h1, section.chat .user-card header h1, section.messages .user-card header h1 {
   font-size: .8em;
   line-height: 1.2em;
   font-weight: normal;
@@ -7333,24 +7317,24 @@ section.list .user-card header h1, section.home .user-card header h1, section.ch
   padding: 0;
   color: #333;
 }
-section.list .user-card header h1 a, section.home .user-card header h1 a, section.chat .user-card header h1 a {
+section.list .user-card header h1 a, section.home .user-card header h1 a, section.chat .user-card header h1 a, section.messages .user-card header h1 a {
   font-weight: bold;
   font-size: 1.1em;
 }
-section.list .user-card header h1 span, section.home .user-card header h1 span, section.chat .user-card header h1 span {
+section.list .user-card header h1 span, section.home .user-card header h1 span, section.chat .user-card header h1 span, section.messages .user-card header h1 span {
   font-size: .9em;
 }
-section.list .pagination, section.home .pagination, section.chat .pagination {
+section.list .pagination, section.home .pagination, section.chat .pagination, section.messages .pagination {
   overflow: hidden;
   *zoom: 1;
   font-size: .8em;
   color: #999;
 }
-section.list .pagination span.pages, section.home .pagination span.pages, section.chat .pagination span.pages {
+section.list .pagination span.pages, section.home .pagination span.pages, section.chat .pagination span.pages, section.messages .pagination span.pages {
   display: block;
   float: right;
 }
-section.list .pagination span.pages a.prev, section.home .pagination span.pages a.prev, section.chat .pagination span.pages a.prev, section.list .pagination span.pages a.next, section.home .pagination span.pages a.next, section.chat .pagination span.pages a.next {
+section.list .pagination span.pages a.prev, section.home .pagination span.pages a.prev, section.chat .pagination span.pages a.prev, section.messages .pagination span.pages a.prev, section.list .pagination span.pages a.next, section.home .pagination span.pages a.next, section.chat .pagination span.pages a.next, section.messages .pagination span.pages a.next {
   background: #5caae8;
   display: inline-block;
   border-radius: 5px;
@@ -7359,10 +7343,10 @@ section.list .pagination span.pages a.prev, section.home .pagination span.pages 
   text-decoration: none;
   margin: 0 5px;
 }
-section.list .pagination span.pages a.prev:hover, section.home .pagination span.pages a.prev:hover, section.chat .pagination span.pages a.prev:hover, section.list .pagination span.pages a.next:hover, section.home .pagination span.pages a.next:hover, section.chat .pagination span.pages a.next:hover {
+section.list .pagination span.pages a.prev:hover, section.home .pagination span.pages a.prev:hover, section.chat .pagination span.pages a.prev:hover, section.messages .pagination span.pages a.prev:hover, section.list .pagination span.pages a.next:hover, section.home .pagination span.pages a.next:hover, section.chat .pagination span.pages a.next:hover, section.messages .pagination span.pages a.next:hover {
   background: #005580;
 }
-section.list .pagination span.pages a.current, section.home .pagination span.pages a.current, section.chat .pagination span.pages a.current {
+section.list .pagination span.pages a.current, section.home .pagination span.pages a.current, section.chat .pagination span.pages a.current, section.messages .pagination span.pages a.current {
   font-size: 1.1em;
   font-weight: bold;
   color: #666;
@@ -7450,6 +7434,24 @@ section.chat .sidebar ul li {
   margin: 10px 0;
 }
 
+/* messages items */
+.msg-item .reply {
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  position: absolute;
+  right: 10px;
+}
+.msg-item .no-mg-btm {
+  margin-bottom: 0px;
+}
+
+.proposal {
+  background-color: lightgray;
+  margin-top: 10px;
+  padding: 5px 0;
+}
+
 /* profile */
 .profile header {
   line-height: 50px;
@@ -7513,3 +7515,9 @@ section.chat .sidebar ul li {
 }
 
 /* messages */
+section.messages header p {
+  float: right;
+}
+section.messages article.conv {
+  margin: 0px;
+}

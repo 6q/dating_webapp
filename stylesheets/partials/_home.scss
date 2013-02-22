@@ -38,6 +38,11 @@ section.home{
 	  	line-height: 15px;
 		}
 	}
+
+	.button{
+    margin:40px 0;
+    text-align: center;
+  }
 	
 	/* direct-search */
 	article.direct-search .control-label{
@@ -48,30 +53,4 @@ section.home{
 		}
 	}
 	
-	/* last-chats */
-	
-	article.last-chats {
-	
-		.reply{
-	  	width: 30px;
-	  	height: 30px;
-	  	background-color: gray;
-	  	position: absolute;
-	  	right:0px;
-	  }
-	
-	  .proposal{
-	  	background-color: lightgray;
-	  	margin: 10px 0 0 0;
-	  	padding: 5px 0;
-	  }
-	  .no-mg-btm{
-	  	margin-bottom: 0px;
-	  }
-	
-	  .button{
-	  	margin:40px 0;
-	  	text-align: center;
-	  }
-	}
 }

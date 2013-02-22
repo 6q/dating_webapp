@@ -88,14 +88,42 @@
 	</article>
 	<hr>
 
-	<article class="last-chats">
+	<article>
 		<h4>Últimas conversaciones</h4>
 		<% (1..4).each do %>
-			<%= render '/shared/user/msg-item' %>
+			<div class="row msg-item">
+				<div class="span1"><a href="#"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
+				<div class="span8">
+					<div class="info">8/12/2012 - <%= link_to "Judit", "#" %> 21 años, Barcelona</div>
+					<p>Hola Jamelga, estas tremenda bla bla bla bla</p>
+				</div>
+				<div class="reply">sprite</div>
+			</div>
+			<hr>
 		<% end %>
 		<!-- item with proposal -->
-		<%= render '/shared/user/msg-item-proposal' %>
-
+		<div class="row msg-item">
+			<div class="span1"><a href="#"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
+			<div class="span8">
+				<div class="info">8/12/2012 - <%= link_to "Judit", "#" %> 21 años, Barcelona</div>
+				<p>Hola Jamelga, estas tremenda bla bla bla bla</p>
+			</div>
+			<div class="reply">sprite</div>
+			<div class="clearfix"></div>
+			<div class="proposal span9">
+	<div class="">
+		<div class="pull-left">
+			<b>Propuesta de actividad:</b> Comer o tomar algo el próximo 15 de febrero de 2013
+		</div>
+		<div class="pull-right"><%= link_to "Aceptar", "" %> - <%= link_to "Rechazar", "" %></div>
+	</div>
+</div>
+		</div>
+		<hr>
+			
+		
+			
+		
 		<div class="button">
 			<a href="#" class="btn btn-large ">Ver más</a>
 		</div>

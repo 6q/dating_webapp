@@ -3,10 +3,10 @@
 		<header>
 			<h1>Mensajes y actividades</h1>
 			<p>Estas usando el 35% de tu buzón. <%= link_to "Amplia", "" %> la capacidad!</p>
-			<div class="clearfix"></div>
 		</header>
 		
-		<div class="">
+
+		<div class="clearfix">
 		<ul class="nav nav-tabs" id="myTab">
   		<li class="active"><a href="#recibidos">Recibidos (2)</a></li>
 		  <li><a href="#enviados">Enviados</a></li>
@@ -14,16 +14,27 @@
 		</ul>
 		
 		<div class="tab-content">
+			
 		  <div class="tab-pane active" id="recibidos">
-		  	<% 2.times.each do %>
-		  		<%= render '/shared/user/msg-item-proposal' %>
-		  	<% end %>
-		  	<% 4.times.each do %>
-		  		<%= render '/shared/user/msg-item' %>
-		  	<% end %>
+		  	
+		  		<% 3.times do  %>
+		  			<%= render '/shared/user/msg-item-proposal' %>
+		  			<hr>
+		  		<% end %>
+
+		  		<% 4.times do  %>
+		  			<%= render '/shared/user/msg-item' %>
+		  			<hr>
+		  		<% end %>
+		  		<%= render '/shared/user/pagination' %>
+		  	
+		  </div>
+
+		  <div class="tab-pane" id="enviados">
+
+
 
 		  </div>
-		  <div class="tab-pane" id="enviados">...</div>
 		  <div class="tab-pane" id="eliminados">...</div>
 		</div>
 		</div>

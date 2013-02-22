@@ -1,19 +1,8 @@
-<div class="row">
-	<div class="span1"><a href="#"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
-	<div class="span8">
-		<div class="info">8/12/2012 - <%= link_to "Judit", "#" %> 21 años, Barcelona</div>
-		<p>Hola Jamelga, estas tremenda bla bla bla bla</p>
-	</div>
-	<div class="reply">sprite</div>
-</div>
+<%= render '/shared/user/msg-item' %>
 
-<div class="proposal">
-	<div class="row">
-		<div class="span7 pull-left">
-			<b>Propuesta de actividad:</b> Comer o tomar algo el próximo 15 de febrero de 2013
-		</div>
-		<div class="span2 pull-right"><%= link_to "Aceptar", "" %> - <%= link_to "Rechazar", "" %></div>
+<div class="clearfix proposal">
+	<div class="pull-left">
+		<b>Propuesta de actividad:</b> Comer o tomar algo el próximo 15 de febrero de 2013
 	</div>
+	<div class="pull-right"><%= link_to "Aceptar", "" %> - <%= link_to "Rechazar", "" %></div>
 </div>
-
-<hr>
