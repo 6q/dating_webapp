@@ -6802,6 +6802,12 @@ body.home header[role="banner"] {
   border-top: #e0e0e0 1px solid;
   padding: 20px 0;
 }
+#in-love header {
+  cursor: pointer;
+}
+#in-love h2 a {
+  font-size: .7em;
+}
 #in-love a.fold {
   background: url(images/sprite.png) -429px -27px no-repeat;
   display: block;
