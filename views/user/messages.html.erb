@@ -16,27 +16,34 @@
 		<div class="tab-content">
 			
 		  <div class="tab-pane active" id="recibidos">
-		  	
-		  		<% 3.times do  %>
-		  			<%= render '/shared/user/msg-item-proposal' %>
-		  			<hr>
-		  		<% end %>
-
-		  		<% 4.times do  %>
-		  			<%= render '/shared/user/msg-item' %>
-		  			<hr>
-		  		<% end %>
-		  		<%= render '/shared/user/pagination' %>
-		  	
+		  	<% 3.times do  %>
+		  		<%= render '/shared/user/msg-item-proposal' %>
+		  		<hr>
+		  	<% end %>
+		  	<% 4.times do  %>
+		  		<%= render '/shared/user/msg-item' %>
+		  		<hr>
+		  	<% end %>
+		  	<%= render '/shared/user/pagination' %>
 		  </div>
 
 		  <div class="tab-pane" id="enviados">
-
-
-
+		  	<% 6.times do %>
+		  		<%= render '/shared/user/msg-archive' %>
+					<hr>
+		  	<% end %>
+		  	<%= render '/shared/user/pagination' %>
 		  </div>
-		  <div class="tab-pane" id="eliminados">...</div>
-		</div>
+		  
+		  <div class="tab-pane" id="eliminados">
+		  	<% 6.times do %>
+		  		<%= render '/shared/user/msg-archive' %>
+					<hr>
+		  	<% end %>
+		  	<%= render '/shared/user/pagination' %>
+		  </div>
+
+			
 		</div>
 
 	</div>

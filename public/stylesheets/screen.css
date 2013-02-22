@@ -7442,6 +7442,9 @@ section.chat .sidebar ul li {
   position: absolute;
   right: 10px;
 }
+.msg-item .small {
+  font-size: .8em;
+}
 .msg-item .no-mg-btm {
   margin-bottom: 0px;
 }
