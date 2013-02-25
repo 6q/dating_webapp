@@ -7506,6 +7506,60 @@ section.chat .sidebar ul li {
   margin-bottom: 40px;
 }
 
+/* user-profile */
+.user-profile .description {
+  background-color: white;
+  border-left: 1px solid;
+}
+.user-profile article.links, .user-profile article.content, .user-profile section[role=main] > article {
+  width: 100%;
+  margin: 20px 0 20px -10px;
+  padding: 0 5px;
+  background-color: blue;
+  display: inline-block;
+}
+.user-profile article.links li, .user-profile article.content li, .user-profile section[role=main] > article li {
+  float: left;
+  margin-left: 50px;
+}
+.user-profile article.links li a, .user-profile article.content li a, .user-profile section[role=main] > article li a {
+  color: white;
+}
+.user-profile .adv {
+  background-color: white;
+  border-top: 1px solid;
+  margin: 10px 0px;
+  padding: 10px;
+}
+.user-profile .profile-tabs {
+  margin: 30px 0;
+}
+.user-profile .profile-tabs .nav {
+  margin-bottom: 0px;
+}
+.user-profile .profile-tabs .nav-tabs {
+  border: none;
+}
+.user-profile .profile-tabs .nav-tabs .last {
+  float: right;
+  margin-right: 30px;
+}
+.user-profile .profile-tabs #datos {
+  margin: 20px 0;
+}
+.user-profile .profile-tabs #datos .item-desc {
+  text-align: right;
+}
+.user-profile .profile-tabs #datos .item-ans {
+  background-color: white;
+  border-left: 1px blue solid;
+  padding-left: 10px;
+}
+.user-profile .profile-tabs #notas h4 span {
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
 /* search */
 .search {
   display: inline-block;

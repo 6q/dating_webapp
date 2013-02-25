@@ -1,1 +1,92 @@
-user profile de un usuario que no eres tu
+<section class="user-profile">
+
+	<article class="boxed">
+		<div class="boxed-inner">
+			<div class="clearfix">
+				<div class="offset1 pull-left"><h4>Maria González</h4></div>
+				<div class="span5 description">
+					<p>Tengo 36 años, vivo en Barcelona</p>
+					<p>Hablo catalán, español e inglés</p>
+					<p>Estoy soltera y no tengo hijos</p>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article class="links">
+		<ul>
+			<li><a href="">Enviar e-mail</a></li>
+			<li><a href="">Chatear</a></li>
+			<li><a href="">Me gusta!</a></li>
+			<li><a href="">Añadir favoritos</a></li>
+		</ul>
+	</article>
+
+	<article class="boxed">
+		<div class="boxed-inner">
+			<div class="clearfix">
+				<div class="offset1"><h4>Mi anuncio</h4></div>
+				<div class="span8 adv">
+					<p>Soy una persona simpática y buena amiga, almenos eso es lo que dicen de mi. Si me quieres conocer mejor, enviame un e-mail y cuando tenga un momento lo contesto y si nos caemos bién, nunca se sabe podemos vernos algún día de estos jiji</p>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article class="profile-tabs">
+		<ul class="nav nav-tabs" id="myTab">
+  		<li class="active"><a href="#datos">Mis datos</a></li>
+		  <li><a href="#gustos">Mis gustos</a></li>
+		  <li><a href="#busco">Que busco</a></li>
+		  <li class="last"><a href="#notas">Tus notas</a></li>
+		</ul>
+
+		<div class="boxed">
+			<div class="boxed-inner">
+				<div class="tab-content">
+
+		  		<div class="tab-pane active" id="datos">
+		  			<% 10.times do %>
+		  				<div class="span3 item-desc">hola</div>
+		  				<div class="span5 item-ans">hola hola</div>
+		  			<% end %>
+		  		</div>
+
+		  		<div class="tab-pane" id="gustos">
+		  			¿ text or table mis gustos ?
+		  		</div>
+
+		  		<div class="tab-pane" id="busco">
+		  			<p>A alguien atractivo, de estilo bohemio que sea más alto que yo y que pese igual que yo.</p>
+		  			<p>Si puede ser, con los ojos de color marrón y de complexión fuerte. Me gustaría que tuviera hijos y que deseara tener más.</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="notas">
+		  			<h4>Tus notas de María González <span>(tranquilo, ella no las verá)</span></h4>
+		  			<hr>
+
+		  			
+
+
+		  		</div>
+
+				</div>
+			</div>
+
+		</div>
+		
+
+	</article>
+
+
+</section>
+
+
+
+<script src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$('#myTab a').click(function (e) {
+  	e.preventDefault();
+  	$(this).tab('show');
+	})
+</script>
