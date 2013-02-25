@@ -47,8 +47,8 @@
 
 		  		<div class="tab-pane active" id="datos">
 		  			<% 10.times do %>
-		  				<div class="span3 item-desc">hola</div>
-		  				<div class="span5 item-ans">hola hola</div>
+		  				<div class="span3 item-desc">Silueta:</div>
+		  				<div class="span5 item-ans">Muñeco Michelin</div>
 		  			<% end %>
 		  		</div>
 
@@ -64,10 +64,27 @@
 		  		<div class="tab-pane" id="notas">
 		  			<h4>Tus notas de María González <span>(tranquilo, ella no las verá)</span></h4>
 		  			<hr>
+		  			<% 3.times do %>
+		  				<div class="nota-item">
+		  					<div class="erase">X</div>
+		  					<div class="info">05/11/2013 - 22:36h</div>
+		  					<p>Es buena personam generoso, atractivo, simpáticoy además le gusta mucho recoger animalicos atropellados en la autopista. Y lo hace sin animo de lucro porque luego no vende sus peles. Les da un entierro digno.</p>	
+		  				</div>
+		  				<hr>
+		  			<% end %>
 
+		  			<div class="new-nota">
+		  				<form>
+		  					<textarea rows="4" class="span8" placeholder="Nueva nota"></textarea>
+		  					<div class="pull-right controls">
+		  						<%= link_to "Cancelar", "" %> <button type="submit" class="btn">Añadir nota</button>
+		  					</div>
+		  				</form>
+		  				<div class="clearfix"></div>
+		  			</div>
 		  			
-
-
+		  			<%= render '/shared/user/pagination' %>
+		  			
 		  		</div>
 
 				</div>

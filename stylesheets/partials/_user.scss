@@ -547,9 +547,26 @@ section.chat{
       }
     }
     #notas{
+      @extend section.list;
       h4 span{
         font-weight: normal;
         font-size: 0.9em;
+      }
+      .nota-item{
+        .erase{
+          position: absolute;
+          right:10px;
+        }
+      }
+      .new-nota {
+        background-color: gray;
+        textarea{
+          padding-right: 45px;
+          margin:10px 0 10px 20px;
+        }
+        .controls{
+          margin: 0 20px 20px 0;
+        }
       }
     }
     
