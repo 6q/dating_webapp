@@ -49,9 +49,83 @@
 
 	<article class="subscribe boxed">
 		<div class="boxed-inner clearfix">
-			<div class="well span4">hola</div>
-			<div class="well span4">hola</div>
+			<div class="white-box">
+				<h4>Quieres ganar 3 puntos?</h4>
+				<p>Recomiéndanos un nuevo usuari@ y te regalamos 3 puntos. Así de fácil.</p>
+				<form class="form-inline">
+					<input type="text" class="input-medium" placeholder="Email">
+					<button type="submit" class="btn">OK</button>
+				</form>
+			</div>
+
+			<div class="white-box">
+				<h4>Quieres proponer un Celestin@?</h4>
+				<p>Propón un nuevo celesti@ para que te recomiende y gaes más puntos.</p>
+				<form class="form-inline">
+					<input type="text" class="input-medium" placeholder="Email">
+					<button type="submit" class="btn">OK</button>
+				</form>
+			</div>
+		</div>
+	</article>
+
+	<article class="celes-list boxed">
+		<div class="boxed-inner">
+			<h4>Celestin@s pendientes de confirmar: <span>2 nuevos</span></h4>
+			<hr>
+	
+			<% 2.times do %>
+				<div class="celes-item confirm">
+					<img src="/users/placeholder2.jpg" width="100" height ="100">
+					<div class="text-celes pull-left">
+						<p><%= link_to "Maria González", "user-profile" %></p>
+						<p>29 años - 168 cm</p>
+						<p>Barcelona</p>
+						<p>Relación contigo: Herman@</p>
+						<p>Atributos sobre ti: buena persona, simpático y generoso.</p>
+					</div>
+					<div class="confirm-controls">Enviado: 5/10/2012 <a href="#"><i class="icon-ok"></i></a><a href="#"><i class="icon-remove"></i></a></div>
+				</div>
+			<% end %>
+			<hr>
+			<%= render '/shared/user/pagination' %>
+		</div>
+	</article>
+
+	<article class="celes-list boxed">
+		<div class="boxed-inner">
+			<h4>Celestin@s actuales: <span>2 nuevos</span></h4>
+			<hr>
+	
+			<% 2.times do %>
+				<div class="celes-item confirm">
+					<img src="/users/placeholder2.jpg" width="100" height ="100">
+					<div class="text-celes pull-left">
+						<p><%= link_to "Maria González", "user-profile" %></p>
+						<p>29 años - 168 cm</p>
+						<p>Barcelona</p>
+						<p>Relación contigo: Herman@</p>
+						<p>Atributos sobre ti: buena persona, simpático y generoso.</p>
+					</div>
+					<div class="confirm-controls">
+						Confirmado: 5/10/2012<a href="#"><i class="icon-remove"></i></a></br>Enviado: 3/10/2012
+					</div>
+				</div>
+			<% end %>
+			<hr>
+			<%= render '/shared/user/pagination' %>
 		</div>
 	</article>
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
