@@ -7439,15 +7439,47 @@ section.chat .sidebar ul li {
 }
 
 /* messages items */
-.msg-item .reply {
-  width: 30px;
-  height: 30px;
-  background-color: gray;
-  position: absolute;
-  right: 10px;
+.msg-item {
+  position: relative;
 }
-.msg-item .small {
-  font-size: .8em;
+.msg-item .pic img {
+  background: #fff;
+  border: #e0e0e0 1px solid;
+  padding: 3px;
+}
+.msg-item .info {
+  background: #fff;
+}
+.msg-item .info .msg-data {
+  font-size: .85em;
+  color: #666;
+  line-height: 1em;
+  padding: .5em;
+}
+.msg-item .info .msg-data a {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.msg-item .info .msg {
+  padding: 0em 0.5em;
+  line-height: 1em;
+}
+.msg-item .info .msg a {
+  font-size: 1em;
+  color: #333;
+}
+.msg-item .reply {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.msg-item .reply a {
+  background: url(images/sprite.png) -355px -83px no-repeat;
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
 }
 .msg-item .no-mg-btm {
   margin-bottom: 0px;
