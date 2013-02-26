@@ -7631,8 +7631,10 @@ section.messages article.conv {
 
 /* celestinos */
 section .celestinos h4 {
-  margin: 0px;
+  margin: 0 0 0 2%;
+  padding: 13px 0 5px 0;
   color: #5caae8;
+  font-weight: normal;
 }
 section .celestinos h4 span {
   font-weight: normal;
@@ -7725,4 +7727,12 @@ section .celestinos .celes-list .celes-item .confirm-controls {
 }
 section .celestinos .celes-list .pagination {
   margin: 0;
+}
+section .celestinos .text-want {
+  padding-bottom: 20px;
+  text-align: center;
+}
+section .celestinos .text-want h5 {
+  font-size: 1.2em;
+  font-weight: normal;
 }
