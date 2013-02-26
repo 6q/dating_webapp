@@ -7134,6 +7134,10 @@ li {
   list-style: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* user */
 .user header[role="banner"] h1 {
   padding: 0;
@@ -7591,4 +7595,63 @@ section.messages header p {
 }
 section.messages article.conv {
   margin: 0px;
+}
+
+/* celestinos */
+section .celestinos h4 {
+  margin: 0px;
+  color: #5caae8;
+}
+section .celestinos h4 span {
+  font-weight: normal;
+  color: #333333;
+}
+section .celestinos p {
+  margin: 0;
+}
+section .celestinos p span {
+  color: #5caae8;
+}
+section .celestinos .celes-box {
+  background-color: white;
+  width: 96%;
+  display: inline-block;
+  margin: 20px 0 20px 2%;
+}
+section .celestinos .celes-box ul {
+  margin: 20px 0 20px 24px;
+  display: inline-block;
+}
+section .celestinos .celes-box ul li {
+  width: 120px;
+  float: left;
+  margin-left: 30px;
+  text-align: center;
+}
+section .celestinos .celes-box .red-heart {
+  color: red;
+}
+section .celestinos .celes-box .red-violet {
+  color: violet;
+}
+section .celestinos .celes-box .red-green {
+  color: green;
+}
+section .celestinos .celes-box .red-yellow {
+  color: yellow;
+}
+section .celestinos .celes-box .small-box {
+  background-color: lightgray;
+}
+section .celestinos .celes-box .small-box span {
+  color: #333333;
+}
+section .celestinos .text {
+  margin: 15px 0;
+}
+section .celestinos .text p {
+  text-align: center;
+}
+section .celestinos .text span {
+  color: #5caae8;
 }

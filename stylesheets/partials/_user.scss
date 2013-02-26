@@ -2,6 +2,9 @@
 li{
   list-style: none;
 }
+.text-center{
+  text-align: center;
+}
 
 
 
@@ -569,10 +572,7 @@ section.chat{
         }
       }
     }
-    
-
   }
-
 }
 
 
@@ -597,6 +597,68 @@ section.messages{
   article.conv{margin:0px;}
 }
 
+
+/* celestinos */
+section .celestinos{
+  h4{
+    margin: 0px;
+    color: $link-color;
+    span{
+      font-weight: normal;
+      color: $text-color;
+    }
+  }
+  p {
+    margin:0;
+    span{color: $link-color;}
+  }
+  .celes-box{
+    background-color: white;
+    width:96%;
+    display: inline-block;
+    margin: 20px 0 20px 2%; 
+    ul{
+      margin:20px 0 20px 24px;
+      display: inline-block;
+      li{
+        width: 120px;
+        float: left;
+        margin-left: 30px;
+        text-align: center;
+      }
+    }
+
+    .red-heart{
+      color:red;
+    }
+    .red-violet{
+      color:violet;
+    }
+    .red-green{
+      color:green;
+    }
+    .red-yellow{
+      color:yellow;
+    }
+
+    .small-box{
+      background-color: lightgray;
+      
+      span{
+        color: $text-color;
+      }
+    }
+  }
+  .text{
+    margin: 15px 0;
+    p{
+      text-align: center;
+    }
+    span{
+      color:$link-color;
+    }
+  }
+}
 
 
 
