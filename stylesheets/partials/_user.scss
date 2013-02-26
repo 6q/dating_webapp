@@ -721,6 +721,8 @@ section .celestinos{
   .celes-list{
     @extend section.list;
 
+    margin-top: 10px;
+
     h3{
       span{
         color:$text-color;

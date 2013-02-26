@@ -1,1 +1,34 @@
-aumenta tu índice cellove > celestinos
+<section class="celestinos">
+	<div class="boxed">
+		<div class="boxed-inner">
+			<h4>Celestin@: <span>Realizar nueva recomendación</span></h4>
+			<hr>
+	
+			<%= render '/shared/user/celes-box' %>
+	
+			<div class="text-want">
+				<h5>¿Quieres recomendar a una ususaria registrada </br> o a alguien que aún no es usuaria?</h5>
+				<p><a href="#"><i class="icon-ok"></i> Recomendar usuaria registrada</a></p>
+				<p><a href="#"><i class="icon-ok"></i> Recomendar alguien que aún no es usuaria</a></p>
+			</div>
+		</div>
+	</div>
+
+
+	<article class="celes-list boxed">
+		<div class="boxed-inner">
+			<h4>Celestin@s: <span>Mis recomendaciones (2)</span></h4>
+			<hr>
+	
+			<% 2.times do %>
+				<%= render '/shared/user/celes-item-confirmed' %>
+			<% end %>
+			<hr>
+			<%= render '/shared/user/pagination' %>
+		</div>
+	</article>
+
+
+
+
+</section>

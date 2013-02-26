@@ -7700,6 +7700,9 @@ section .celestinos .white-box {
 section .celestinos .white-box h4 {
   padding-left: 60px;
 }
+section .celestinos .celes-list {
+  margin-top: 10px;
+}
 section .celestinos .celes-list h3 span {
   color: #333333;
 }
