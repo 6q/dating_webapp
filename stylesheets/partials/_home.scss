@@ -13,14 +13,14 @@
 }
 
 
-section.home{
+section.user-home{
 
 	@extend section.list;
 
 	/* ARTICLES */ 
 	
 	/* related-list */
-	article.related-list{
+	section#related-list{
 	  background-color: lightgray;
 	  display: inline-block;
 	  width: 100%;
