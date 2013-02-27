@@ -7786,3 +7786,53 @@ section .celestinos .text-want h5 {
   position: absolute;
   top: 1em;
 }
+
+section#pay fieldset {
+  margin-left: 13px;
+}
+section#pay .payment {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 200px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+section#pay .payment ul li {
+  font-size: .8em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+section#pay .payment h3 {
+  background: #5caae8;
+  margin: 0;
+  color: #fff;
+  margin-bottom: .5em;
+  text-align: center;
+}
+section#pay .payment .call {
+  text-align: center;
+  border-top: #e0e0e0 1px solid;
+  padding: 0.7em 0;
+}
+section#pay .payment button {
+  margin: 0 auto;
+}
+section#pay .payment.plan2 {
+  font-size: 1.2em;
+  width: 250px;
+  margin-top: -13px;
+  z-index: 3;
+  border: white 2px solid;
+}
+section#pay .payment.plan2 ul {
+  margin-top: 20px;
+}
+section#pay .payment.plan2 h3 {
+  background: #51A351;
+}
+section#pay .payment.plan2 button {
+  font-size: 1em;
+  padding: 0.5em 0.5em;
+}
