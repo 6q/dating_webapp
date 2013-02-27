@@ -1,17 +1,19 @@
 <section class="user-home">
 
 	<section id="related-list">
-		<div class="row">
-			<h4 class="span2">Afines cerca de ti...</h4>
-			<ul class="span7">
-				<% (1..7).each do %>
-					<li><a href="#"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></li>
-				<% end %>
-			</ul>
+		<div class="boxed">
+			<div class="boxed-inner">
+				<h4>Afines cerca de ti...</h4>
+				<ul class="clearfix">
+					<% (1..8).each do %>
+						<li><a href="/user/user-profile/"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></li>
+					<% end %>
+				</ul>
+			</div>
 		</div>
 	</section>
-	<hr>
 
+	<hr>
 	<section class="direct-search">
 		<div class="row">
 			<h4 class="span1">Búsqueda directa:</h4>

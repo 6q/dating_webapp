@@ -7027,22 +7027,30 @@ section.user-home {
   /* related-list */
   /* direct-search */
 }
-section.user-home section#related-list {
-  background-color: lightgray;
-  display: inline-block;
-  width: 100%;
-}
 section.user-home section#related-list ul {
-  margin: 10px 0 10px 20px;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
 }
 section.user-home section#related-list li {
   list-style: none;
   float: left;
-  margin-left: 15px;
+  margin: 0px 5px;
 }
 section.user-home section#related-list h4 {
   text-align: right;
-  line-height: 15px;
+  margin: 10px 0;
+  margin-left: 15px;
+  padding: 0;
+  min-height: 40px;
+  padding-top: 10px;
+  width: 100px;
+  line-height: 1em;
+  color: #5caae8;
+  float: left;
+  border-right: #5caae8 1px solid;
+  margin-right: 10px;
+  padding-right: 10px;
 }
 section.user-home .button {
   margin: 40px 0;

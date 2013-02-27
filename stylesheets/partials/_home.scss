@@ -21,21 +21,33 @@ section.user-home{
 	
 	/* related-list */
 	section#related-list{
-	  background-color: lightgray;
-	  display: inline-block;
-	  width: 100%;
-	
-	  ul{margin: 10px 0 10px 20px;}
+
+	  ul {
+      margin:0;
+      padding:0;
+      padding-top:5px;
+    }
 	
 	  li{
 	  	list-style: none;
-	  	float: left;  
-	  	margin-left: 15px;
+	  	float: left;
+      margin: 0px 5px;
 		}
 	
-		h4{
-	  	text-align: right;
-	  	line-height: 15px;
+		h4 {
+	  	text-align:right;
+      margin:10px 0;
+      margin-left:15px;
+      padding:0;
+      min-height:40px;
+      padding-top:10px;
+      width:100px;
+	  	line-height:1em;
+      color:$link-color;
+      float:left;
+      border-right:$link-color 1px solid;
+      margin-right:10px;
+      padding-right:10px;
 		}
 	}
 
