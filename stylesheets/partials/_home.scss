@@ -55,14 +55,50 @@ section.user-home{
     margin:40px 0;
     text-align: center;
   }
+}
+
 	
 	/* direct-search */
-	article.direct-search .control-label{
-	  font-weight: bold;
-	  
-	  span{
-	  	font-weight: normal;
-		}
-	}
-	
+
+section.home-users {
+  margin-left:-10px;
+
+  .user-list {
+    li {
+      margin-left: 15px!important;
+      li {
+        margin:0!important;
+      }
+    }
+  }
 }
+
+section.direct-search {
+
+  h4 {
+    color:$link-color;
+    border-right:$link-color 1px solid;
+    padding-right:20px;
+    padding-top:10px;
+    margin:0;
+    margin-left:15px;
+    width:90px;
+    min-height:200px;
+    text-align:right;
+    float:left;
+    background:url(images/cupido.png) 10px 80px no-repeat;
+  }
+
+  .searchform {
+    float:left;
+  }
+
+  .control-label{
+      font-weight: bold;
+      
+      span{
+        font-weight: normal;
+      }
+    }
+}
+	

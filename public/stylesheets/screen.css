@@ -6526,6 +6526,12 @@ hr {
   margin: 10px 0;
 }
 
+hr.thin {
+  color: none;
+  background: none;
+  border: none;
+}
+
 .container {
   position: relative;
 }
@@ -6572,6 +6578,8 @@ hr {
   padding: 5px;
 }
 .boxed .boxed-inner {
+  overflow: hidden;
+  *zoom: 1;
   background: #f2f2f2;
 }
 .boxed .boxed-inner [class*="span"] {
@@ -7025,7 +7033,6 @@ aside#main-sidebar ul li a span {
 section.user-home {
   /* ARTICLES */
   /* related-list */
-  /* direct-search */
 }
 section.user-home section#related-list ul {
   margin: 0;
@@ -7056,10 +7063,38 @@ section.user-home .button {
   margin: 40px 0;
   text-align: center;
 }
-section.user-home article.direct-search .control-label {
+
+/* direct-search */
+section.home-users {
+  margin-left: -10px;
+}
+section.home-users .user-list li {
+  margin-left: 15px!important;
+}
+section.home-users .user-list li li {
+  margin: 0!important;
+}
+
+section.direct-search h4 {
+  color: #5caae8;
+  border-right: #5caae8 1px solid;
+  padding-right: 20px;
+  padding-top: 10px;
+  margin: 0;
+  margin-left: 15px;
+  width: 90px;
+  min-height: 200px;
+  text-align: right;
+  float: left;
+  background: url(images/cupido.png) 10px 80px no-repeat;
+}
+section.direct-search .searchform {
+  float: left;
+}
+section.direct-search .control-label {
   font-weight: bold;
 }
-section.user-home article.direct-search .control-label span {
+section.direct-search .control-label span {
   font-weight: normal;
 }
 

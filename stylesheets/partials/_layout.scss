@@ -24,6 +24,12 @@ hr {
   margin:10px 0;
 }
 
+hr.thin {
+  color:none;
+  background:none;
+  border:none;
+}
+
 .container {
   position:relative;
 }
@@ -76,6 +82,7 @@ hr {
   padding:5px;
 
   .boxed-inner {
+    @include clearfix;
     background:#f2f2f2;
 
     [class*="span"] {

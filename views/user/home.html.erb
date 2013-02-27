@@ -13,13 +13,14 @@
 		</div>
 	</section>
 
-	<hr>
+	<hr class="thin">
+
 	<section class="direct-search">
-		<div class="row">
-			<h4 class="span1">Búsqueda directa:</h4>
-			<form class="span8 form-horizontal">
-				<div class="row">
-					<div class="span6">
+		<div class="boxed">
+			<div class="boxed-inner">
+				<h4>Búsqueda directa:</h4>
+				<div class="searchform form-horizontal">
+					<form>
 						<div class="control-group">
 							<label class="control-label">Edad</label>
 							<div class="controls">
@@ -45,24 +46,22 @@
 								<input type="text">
 							</div>
 						</div>
-					</div>
-					<div class="span2">
 						<label class="checkbox">
       						<input type="checkbox"> Con foto
     					</label>
     					<label class="checkbox">
       						<input type="checkbox"> Online
     					</label>
-					</div>
-				
-					<button type="submit" class="btn pull-center">Buscar</button>
+						<button type="submit" class="btn pull-center">Buscar</button>
+					</form>
 				</div>
-			<form>
+			</div>
 		</div>
 	</section>
-	<hr>
 
-	<section>
+	<hr class="thin">
+
+	<section id="new-users" class="home-users">
 		<h4 class="pull-left">Ususarios nuevos en tu zona</h4>
 		<div class="pull-right">
 			En ratio de 50 km <%= link_to "Cambiar ratio", "#" %> | <%= link_to "Ver más", "#" %>
@@ -76,7 +75,7 @@
 	</section>
 	<hr>
 
-	<section>
+	<section id="best-rated" class="home-users">
 		<h4 class="pull-left">Usuari@s con mejor puntuación</h4>
 		<div class="pull-right">
 			En ratio de 50 km <%= link_to "Cambiar ratio", "#" %> | <%= link_to "Ver más", "#" %>
