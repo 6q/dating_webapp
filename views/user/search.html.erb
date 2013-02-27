@@ -19,7 +19,7 @@
 			</div>
 			<div class="span5">
 				<div class="control-group">
-					<label class="control-label">Que les gusten</label>
+					<label class="control-label">A las que les gusten</label>
 					<select class="span2">
 						<option>chicas</option>
 						<option>chicos</option>
@@ -32,28 +32,31 @@
 		<div class="row">
 			<div class="span8">
 
-				<div class="control-group">
+				<div class="control-group slider">
 					<label class="control-label">Edad</label>
-					<div class="span5">
+					<div class="span6">
 						<input id="years" type="slider" name="" value="18;80"/>
+					</div>
+				</div>
+
+				<div class="row search-location">
+					<div class="span8">
+						<div class="control-group">
+							<label class="control-label">Localidad</label><input type="text" class="location" placeholder="Localidad">
+							<label class="control-label zip">Código postal</label><input type="text" class="span1" placeholder="CP">
+						</div>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="span4">
-						<div class="control-group">
-							<label class="control-label">Localidad</label>
-							<div class="controls">
-								<input type="text" class="span2" placeholder="Población">
-							</div>
-						</div>
-						<div class="control-group">
+						<div class="control-group slider">
 							<label class="control-label">Distancia</label>
 							<div class="controls">
 								<input id="kms" type="slider" name="" value="20"/>
 							</div>
 						</div>
-						<div class="control-group">
+						<div class="control-group slider">
 							<label class="control-label">Altura</label>
 							<div class="controls">
 								<input id="altura" type="slider" name="" value="170;190"/>
@@ -62,32 +65,28 @@
 						<div class="control-group">
 							<label class="control-label">Palabra clave</label>
 							<div class="controls">
-								<input type="text" class="span2">
+								<input type="text" class="">
 							</div>
 						</div>
 					</div>
 
 					<div class="span4">
-						<div class="control-group">
-							<label class="control-label">Código postal</label>
-							<div class="controls">
-								<input type="text" class="span2" placeholder="CP">
-							</div>
-						</div>
-						<div class="control-group">
+						<div class="control-group slider">
 							<label class="control-label">Afinidad</label>
 							<div class="controls">
 								<input id="afinidad" type="slider" name="" value="70"/>
 							</div>
 						</div>
-						<div class="control-group">
+						<div class="control-group fit">
 							<label class="control-label">Complexión</label>
-							<select class="span2">
+							<select>
 								<option>atlética</option>
 								<option>curvas</option>
 							</select>
 						</div>
-						<button type="submit" class="btn">Buscar</button>
+						<div class="right">
+							<button type="submit" class="btn btn-info">Buscar</button>
+						</div>
 					</div>
 
 				</div>
@@ -127,11 +126,3 @@
 	<%= render '/shared/user/pagination' %>
 
 </section>
-
-<script src="/javascripts/jquery.slider.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-	jQuery("#years").slider({ from: 18, to: 80, step: 1, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;años' });
- 	jQuery("#kms").slider({ from: 0, to: 200, step: 20, round: 1, skin: "plastic", dimension: '&nbsp;kms' });
- 	jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;cm' });
- 	jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
-</script>

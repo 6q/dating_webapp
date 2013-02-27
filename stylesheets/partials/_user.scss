@@ -625,9 +625,59 @@ section.chat{
 
 .search{
   display: inline-block;
-  form{
-    .controls{margin-left: 130px;}
-    .control-label{width:120px;}
+
+  form {
+
+    margin:0;
+
+    label {
+      font-size:.8em;
+    }
+
+    .slider {
+      label {
+        margin-top:.5em;
+      }
+    }
+
+    .controls{
+      margin-left: 130px;
+    }
+    .control-label{
+      width:120px;
+    }
+
+    .search-location {
+
+      input {
+        float:left;
+
+        &.location {
+          width:200px;
+          margin-left:10px;
+          margin-right:10px;
+        }
+      }
+
+      .zip {
+        width:auto;
+      }
+    }
+
+    .fit {
+      select {
+        width:170px;
+        margin-left:10px;
+      }
+    }
+
+    button {
+      font-size:1.1em;
+      width:170px;
+      padding:.3em .7em;
+      margin-top:5px;
+    }
+
   }
 }
 
@@ -762,11 +812,3 @@ section .celestinos{
     }
   }
 }
-
-
-
-
-
-
-
-

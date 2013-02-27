@@ -32,6 +32,9 @@ $(document).ready(function(){
     }
   });
 
+  jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;cm' });
+  jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
+
 
   // modal calls
 

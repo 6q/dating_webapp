@@ -7928,11 +7928,41 @@ section.chat .sidebar ul li {
 .search {
   display: inline-block;
 }
+.search form {
+  margin: 0;
+}
+.search form label {
+  font-size: .8em;
+}
+.search form .slider label {
+  margin-top: .5em;
+}
 .search form .controls {
   margin-left: 130px;
 }
 .search form .control-label {
   width: 120px;
+}
+.search form .search-location input {
+  float: left;
+}
+.search form .search-location input.location {
+  width: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.search form .search-location .zip {
+  width: auto;
+}
+.search form .fit select {
+  width: 170px;
+  margin-left: 10px;
+}
+.search form button {
+  font-size: 1.1em;
+  width: 170px;
+  padding: 0.3em 0.7em;
+  margin-top: 5px;
 }
 
 /* messages */
