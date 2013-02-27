@@ -104,18 +104,24 @@
    				</label>
    				<label class="checkbox">
     				<input type="checkbox">Con hijos
-   				</label>
+   				</label> 				
 			</div>
+			</form>
 		</div>
-	<form>
+	</div>
 </section>
 
-<hr>
+<hr class="thin">
+
 
 <section class="list">
 	<header>
-		<h1>Resultados de la búsqueda</h1>
-		<%= render '/shared/user/sorting' %>
+		<div class="pull-left">
+			<h1>Resultados de la búsqueda</h1>
+		</div>
+		<div class="pull-right">
+			<%= render '/shared/user/sorting' %>
+		</div>
 	</header>
 	<ul class="user-list clearfix">
 		<% (1..12).each do %>

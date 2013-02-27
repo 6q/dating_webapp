@@ -115,7 +115,8 @@ section.list {
     h1 {
       float:left;
       margin:0;
-      font-size:1.6em;
+      margin-top:5px;
+      font-size:1.2em;
       color:$link_color;
       font-weight:normal;
       line-height:1.2em;
@@ -126,6 +127,10 @@ section.list {
     }
     .sort {
       float:right;
+
+      select {
+        font-size:.8em;
+      }
     }
   }
 

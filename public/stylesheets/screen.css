@@ -7530,7 +7530,8 @@ section.list header, section.user-home header, section.chat header, .user-profil
 section.list header h1, section.user-home header h1, section.chat header h1, .user-profile .profile-tabs #notas header h1, section.messages header h1, section .celestinos .celes-list header h1 {
   float: left;
   margin: 0;
-  font-size: 1.6em;
+  margin-top: 5px;
+  font-size: 1.2em;
   color: #5caae8;
   font-weight: normal;
   line-height: 1.2em;
@@ -7540,6 +7541,9 @@ section.list header form, section.user-home header form, section.chat header for
 }
 section.list header .sort, section.user-home header .sort, section.chat header .sort, .user-profile .profile-tabs #notas header .sort, section.messages header .sort, section .celestinos .celes-list header .sort {
   float: right;
+}
+section.list header .sort select, section.user-home header .sort select, section.chat header .sort select, .user-profile .profile-tabs #notas header .sort select, section.messages header .sort select, section .celestinos .celes-list header .sort select {
+  font-size: .8em;
 }
 section.list .user-list, section.user-home .user-list, section.chat .user-list, .user-profile .profile-tabs #notas .user-list, section.messages .user-list, section .celestinos .celes-list .user-list {
   list-style: none;
