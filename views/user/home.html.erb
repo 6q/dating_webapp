@@ -21,39 +21,45 @@
 				<h4>Búsqueda directa:</h4>
 				<div class="searchform form-horizontal">
 					<form>
-						<div class="control-group">
-							<label class="control-label">Edad</label>
-							<div class="controls">
-								<input id="years" type="slider" name="" value="18;80"/>
+						<fieldset class="span6">
+							<div class="control-group sliders">
+								<label>Edad <span></span></label>
+								<div class="controls">
+									<input id="years" type="slider" name="" value="18;80"/>
+								</div>
 							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label">Población y código postal</label>
-							<div class="controls controls-row">
-								<input type="text" class="span2" placeholder="Población">
-								<input type="text" class="span1" placeholder="CP">
+							<div class="control-group">
+								<label>Población y código postal</label>
+								<div class="controls">
+									<input type="text" placeholder="Población" class="span3">
+									<input type="text" placeholder="CP" class="span1">
+								</div>
 							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label">Distancia</label>
-							<div class="controls">
-								<input id="kms" type="slider" name="" value="20"/>
+							<div class="control-group sliders">
+								<label>Distancia <span></span></label>
+								<div class="controls">
+									<input id="kms" type="slider" name="" value="20"/>
+								</div>
 							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label">Palabra clave</span></label>
-							<div class="controls">
-								<input type="text">
+							<div class="control-group">
+								<label>Palabra clave</label>
+								<div class="controls">
+									<input type="text">
+								</div>
 							</div>
-						</div>
-						<label class="checkbox">
-      						<input type="checkbox"> Con foto
-    					</label>
-    					<label class="checkbox">
-      						<input type="checkbox"> Online
-    					</label>
-						<button type="submit" class="btn pull-center">Buscar</button>
+						</fieldset>
+
+						<fieldset class="form-options">
+							<label class="checkbox">
+	      						<input type="checkbox">Con foto
+	    					</label>
+	    					<label class="checkbox">
+	      						<input type="checkbox">Online
+	    					</label>
+	    					<button type="submit" class="btn btn-info">Buscar</button>
+						</fieldset>
 					</form>
+
 				</div>
 			</div>
 		</div>
