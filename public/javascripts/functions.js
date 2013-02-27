@@ -1,34 +1,35 @@
 $(document).ready(function(){
 
-	jQuery.fn.exists = function(){return this.length>0;}
 
-	jQuery.fn.slideSwitch = function () {
-   	 		
-		$('.miniSlider li.active').clone().appendTo('.miniSlider').removeClass('active');
+  // mini slider for flat pages
 
-		doTheSlideThing = function(){
-			var $active = $('.miniSlider li.active');
-
-    		if ( $active.length == 0 ) $active = $('.miniSlider li');
-
-    		var $next =  $active.next().length ? $active.next()
-        		: $('.miniSlider li').first();
-
-    		$active.addClass('last-active');
+  jQuery.fn.exists = function(){return this.length>0;}
+  jQuery.fn.slideSwitch = function () {
         
-    		$next.css({opacity: 0.0})
-        		.addClass('active')
-        		.animate({opacity: 1.0}, 1000, function() {
-            		$active.removeClass('active last-active');
-        		});
-		}
+    $('.miniSlider li.active').clone().appendTo('.miniSlider').removeClass('active');
 
+    doTheSlideThing = function(){
+      var $active = $('.miniSlider li.active');
+
+        if ( $active.length == 0 ) $active = $('.miniSlider li');
+
+        var $next =  $active.next().length ? $active.next()
+            : $('.miniSlider li').first();
+
+        $active.addClass('last-active');
+        
+        $next.css({opacity: 0.0})
+            .addClass('active')
+            .animate({opacity: 1.0}, 1000, function() {
+                $active.removeClass('active last-active');
+            });
+    }
        setInterval( doTheSlideThing, 5000 );
+  }
+  $('.miniSlider').slideSwitch();
 
-	}
 
-	$('.miniSlider').slideSwitch();
-
+  // in love folding functions
 
 	$('#in-love .fold, #in-love header').click(function(e){
 		e.preventDefault();
@@ -39,13 +40,15 @@ $(document).ready(function(){
 	$('.user #in-love .fold').removeClass('active');
   $('#in-love .fold').click();
 
+
+
+
   // image slide thing for user cards
   $(".user-card .pics").hover(function(){
     $("li:first-child", this).stop().animate({opacity:0},{queue:false,duration:500});
   }, function() {
     $("li:first-child", this).stop().animate({opacity:1},{queue:false,duration:500});
   });
-
 
 });
 

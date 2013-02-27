@@ -99,7 +99,7 @@
 						<p class="msg-data"><small>8/12/2012</small> - <%= link_to "Judit", "/user/profile/" %> 21 años, Barcelona</p>
 						<p class="msg"><%= link_to 'Ola Jamelga, estas tremenda. Te viene conmigo o ke ase?' ,'#' %>...</p>
 					</div>
-					<div class="reply"><%= link_to 'Responder', '#' %></div>
+					<div class="reply"><%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' %></div>
 				</div>
 			</article>
 			<hr>
@@ -131,10 +131,5 @@
 	</section>
 </section>
 
-<script src="/javascripts/jquery.slider.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-	jQuery("#years").slider({ from: 18, to: 80, step: 1, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;años' });
-
- 	jQuery("#kms").slider({ from: 0, to: 200, step: 20, round: 1, skin: "plastic", dimension: '&nbsp;kms' });
-</script>
+<%= render '/shared/user/messages_fast-reply' %>
 
