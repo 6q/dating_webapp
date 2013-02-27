@@ -7232,6 +7232,9 @@ section.user-home {
   /* ARTICLES */
   /* related-list */
 }
+section.user-home h4 {
+  color: #5caae8;
+}
 section.user-home section#related-list ul {
   margin: 0;
   padding: 0;
@@ -7241,6 +7244,12 @@ section.user-home section#related-list li {
   list-style: none;
   float: left;
   margin: 0px 5px;
+}
+section.user-home section#related-list li.online img {
+  padding: 3px;
+  background: #8ccc8c;
+  width: 54px;
+  height: 54px;
 }
 section.user-home section#related-list h4 {
   text-align: right;
@@ -7261,13 +7270,23 @@ section.user-home .button {
   margin: 40px 0;
   text-align: center;
 }
+section.user-home .list-header {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
 
 /* direct-search */
 section.home-users {
   margin-left: -10px;
 }
+section.home-users h4 {
+  margin: 0;
+}
+section.home-users .user-list {
+  margin-left: -17px!important;
+}
 section.home-users .user-list li {
-  margin-left: 15px!important;
+  margin-left: 16px!important;
 }
 section.home-users .user-list li li {
   margin: 0!important;
