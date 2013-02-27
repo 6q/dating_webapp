@@ -2056,7 +2056,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('../images/glyphicons-halflings.png?1360304060');
+  background-image: url('../images/glyphicons-halflings.png?1361954983');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -7738,4 +7738,38 @@ section .celestinos .text-want {
 section .celestinos .text-want h5 {
   font-size: 1.2em;
   font-weight: normal;
+}
+
+.modal .modal-header {
+  border: none;
+}
+.modal .modal-header .user-detail .pic {
+  float: left;
+  margin-right: 10px;
+}
+.modal .modal-header .user-detail small {
+  display: block;
+  color: #999;
+  font-size: .8em;
+}
+.modal .modal-body .prevmsg {
+  color: #000;
+  margin-bottom: 1em;
+}
+.modal .modal-body textarea {
+  width: 96%;
+  height: 100px;
+  padding: 2%;
+  font-size: .9em;
+  color: #666;
+}
+.modal .modal-footer {
+  position: relative;
+}
+.modal .modal-footer .btn {
+  margin-left: 10px;
+}
+.modal .modal-footer .activity {
+  position: absolute;
+  top: 1em;
 }

@@ -1,0 +1,51 @@
+.modal {
+
+  .modal-header {
+    border:none;
+
+    .user-detail {
+      .pic {
+        float:left;
+        margin-right:10px;
+      }
+
+      small {
+        display:block;
+        color:#999;
+        font-size:.8em;
+      }
+
+    }
+
+  }
+
+  .modal-body {
+
+    .prevmsg {
+      color:#000;
+      margin-bottom:1em;
+    }
+
+    textarea {
+      width:96%;
+      height:100px;
+      padding:2%;
+      font-size:.9em;
+      color:#666;
+    }
+  }
+
+  .modal-footer {
+
+    position:relative;
+
+    .btn {
+      margin-left:10px;
+    }
+
+    .activity {
+      position:absolute;
+      top:1em;
+    }
+  }
+}
