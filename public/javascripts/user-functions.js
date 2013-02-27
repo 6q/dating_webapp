@@ -12,6 +12,10 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  //$('#fast-reply').modal('show');
+  $('.block a').click(function(e){
+  	e.preventDefault();
+  });
+
+  //$('#user-block').modal('show');
 
 });

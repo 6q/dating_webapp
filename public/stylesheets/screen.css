@@ -7743,9 +7743,16 @@ section .celestinos .text-want h5 {
 .modal .modal-header {
   border: none;
 }
+.modal .modal-header h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
 .modal .modal-header .user-detail .pic {
   float: left;
   margin-right: 10px;
+}
+.modal .modal-header .user-detail .data a {
+  font-weight: bold;
 }
 .modal .modal-header .user-detail small {
   display: block;
@@ -7762,6 +7769,12 @@ section .celestinos .text-want h5 {
   padding: 2%;
   font-size: .9em;
   color: #666;
+}
+.modal .modal-body fieldset .checkbox.inline {
+  width: 40%;
+}
+.modal .modal-body fieldset .checkbox.inline:first-child {
+  margin-left: 5%;
 }
 .modal .modal-footer {
   position: relative;
