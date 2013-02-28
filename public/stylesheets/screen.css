@@ -6792,6 +6792,8 @@ hr.thin {
   font-weight: normal;
 }
 .boxed .boxed-inner header {
+  overflow: hidden;
+  *zoom: 1;
   padding: 10px;
   margin-bottom: 20px;
   line-height: 1.9em;
@@ -7813,8 +7815,23 @@ section.chat .sidebar ul li {
 .profile header {
   line-height: 50px;
 }
+.profile header.main-header {
+  border-bottom: 0;
+  margin: 0;
+}
+.profile header.main-header h1 {
+  line-height: 1.2em;
+}
+.profile header.main-header .pull-right {
+  margin-right: 10px;
+  font-size: .9em;
+}
 .profile header h1 {
   margin-top: 0;
+}
+.profile fieldset {
+  margin: 0;
+  padding: 0;
 }
 .profile form .left {
   margin-right: 25px;
@@ -7834,6 +7851,9 @@ section.chat .sidebar ul li {
 }
 .profile .quien {
   font-size: 0.9em;
+}
+.profile .quien small {
+  margin-top: 10px;
 }
 .profile .nav-tabs li a {
   background-color: white;

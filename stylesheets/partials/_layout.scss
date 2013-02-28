@@ -101,6 +101,7 @@ hr.thin {
     }
 
     header {
+      @include clearfix;
       padding:10px;
       margin-bottom:20px;
       line-height: 1.9em;
