@@ -125,8 +125,17 @@ hr.thin {
 
   &.headless {
     header {
-      border:none;
+      border-bottom:0;
       margin:0;
+
+      h1 {
+        line-height:1.2em;
+      }
+
+      .pull-right {
+        margin-right:10px;
+        font-size:.9em;
+      }
     }
   }
 
