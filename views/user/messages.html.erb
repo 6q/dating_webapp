@@ -11,49 +11,46 @@
 	<hr class="thin">
 
 
-		<div class="clearfix">
-		<ul class="nav nav-tabs" id="myTab">
-  		<li class="active"><a href="#recibidos">Recibidos (2)</a></li>
-		  <li><a href="#enviados">Enviados</a></li>
-		  <li><a href="#eliminados">Eliminados</a></li>
-		</ul>
+			<ul class="nav nav-tabs" id="myTab">
+	  		  <li class="active"><a href="#recibidos">Recibidos (2)</a></li>
+			  <li><a href="#enviados">Enviados</a></li>
+			  <li><a href="#eliminados">Eliminados</a></li>
+			</ul>
 	
-		
-		<div class="tab-content">
-			
-		  <div class="tab-pane active" id="recibidos">
-		  	<% 3.times do  %>
-		  		<%= render '/shared/user/msg-item-proposal' %>
-		  		<hr>
-		  	<% end %>
-		  	<% 4.times do  %>
-		  		<%= render '/shared/user/msg-item' %>
-		  		<hr>
-		  	<% end %>
-		  	<%= render '/shared/user/pagination' %>
-		  </div>
+	<div class="boxed">
+		<div class="boxed-inner">
+			<div class="tab-content">
 
-		  <div class="tab-pane" id="enviados">
-		  	<% 6.times do %>
-		  		<%= render '/shared/user/msg-archive' %>
-					<hr>
-		  	<% end %>
-		  	<%= render '/shared/user/pagination' %>
-		  </div>
-		  
-		  <div class="tab-pane" id="eliminados">
-		  	<% 6.times do %>
-		  		<%= render '/shared/user/msg-archive' %>
-					<hr>
-		  	<% end %>
-		  	<%= render '/shared/user/pagination' %>
-		  </div>
+			  <div class="tab-pane active" id="recibidos">
+			  	<% 3.times do  %>
+			  		<%= render '/shared/user/msg-item-proposal' %>
+			  		<hr>
+			  	<% end %>
+			  	<% 4.times do  %>
+			  		<%= render '/shared/user/msg-item' %>
+			  		<hr>
+			  	<% end %>
+			  	<%= render '/shared/user/pagination' %>
+			  </div>
 
-			
+			  <div class="tab-pane" id="enviados">
+			  	<% 6.times do %>
+			  		<%= render '/shared/user/msg-archive' %>
+					<hr>
+			  	<% end %>
+			  	<%= render '/shared/user/pagination' %>
+			  </div>
+			  
+			  <div class="tab-pane" id="eliminados">
+			  	<% 6.times do %>
+			  		<%= render '/shared/user/msg-archive' %>
+					<hr>
+			  	<% end %>
+			  	<%= render '/shared/user/pagination' %>
+			  </div>
+			</div>
 		</div>
-
 	</div>
-</section>
 
 <script src="/javascripts/bootstrap.min.js"></script>
 <script type="text/javascript">
