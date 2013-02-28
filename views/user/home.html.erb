@@ -96,16 +96,7 @@
 		<h4>Últimas conversaciones</h4>
 
 		<% (1..4).each do %>
-			<article class="row">
-				<div class="msg-item">
-					<div class="span1 pic"><a href="/user/profile/"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
-					<div class="span8 info">
-						<p class="msg-data"><small>8/12/2012</small> - <%= link_to "Judit", "/user/profile/" %> 21 años, Barcelona</p>
-						<p class="msg"><%= link_to 'Ola Jamelga, estas tremenda. Te viene conmigo o ke ase?' ,'#' %>...</p>
-					</div>
-					<div class="reply"><%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' %></div>
-				</div>
-			</article>
+			<%= render '/shared/user/msg-item-archive-home' %>
 			<hr>
 		<% end %>
 		<!-- item with proposal 
