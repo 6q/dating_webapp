@@ -7616,7 +7616,7 @@ section.list .user-card ul.actions li, section.user-home .user-card ul.actions l
   width: 30px;
   height: 30px;
   float: left;
-  margin: 5px;
+  margin: 5px!important;
 }
 section.list .user-card ul.actions li a, section.user-home .user-card ul.actions li a, section.chat .user-card ul.actions li a, .user-profile .profile-tabs #notas .user-card ul.actions li a, section .celestinos .celes-list .user-card ul.actions li a {
   display: block;
