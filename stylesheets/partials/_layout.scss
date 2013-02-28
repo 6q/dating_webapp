@@ -122,6 +122,14 @@ hr.thin {
 
     }
   }
+
+  &.headless {
+    header {
+      border:none;
+      margin:0;
+    }
+  }
+
 }
 
 blockquote {
