@@ -46,15 +46,7 @@
 					<div class="clearfix"></div>
 
 					<% 3.times do %>
-					<div class="conf-item">
-						<h5><%= link_to "Maria", "user-profile" %></h5>
-						<div class="relationship"><i class="icon-heart"></i>Ex-novia</div>
-						<div class="erase"><%= link_to "Eliminar celestin@", "" %></div>
-						<div class="date">05/11/2012 - 22:36h</div>
-						<div class="clearfix"></div>
-						<p>Es buena persona, generoso, simpático y además le gusta mucho recoger animalitos atropellados en la autopista. Y lo hace sin ánimo de lucro porque luego no vende sus pieles. Les da un entierro digno.</p>
-						<hr>
-					</div>
+					<%= render '/shared/user/celes-item' %>
 					<% end %>
 
 					<%= render '/shared/user/pagination' %>
@@ -62,15 +54,11 @@
 			  </div>
 
 			  <div class="tab-pane" id="confirmar">
+			  	<h4>Celestin@s por confirmar</h4>
+					<div class="clearfix"></div>
+					
 			  	<% 3.times do %>
-					<div class="conf-item">
-						<h5><%= link_to "Maria", "user-profile" %></h5>
-						<div class="relationship"><i class="icon-heart"></i>Ex-novia</div>
-						<div class="erase"><%= link_to "Eliminar celestin@", "" %></div>
-						<div class="date">05/11/2012 - 22:36h</div>
-						<div class="clearfix"></div>
-						<p>Es buena persona, generoso, simpático y además le gusta mucho recoger animalitos atropellados en la autopista. Y lo hace sin ánimo de lucro porque luego no vende sus pieles. Les da un entierro digno.</p>
-					</div>
+					<%= render '/shared/user/celes-item' %>
 
 					<div class="choose">
 						<p>¿Aceptar?</p>
@@ -86,11 +74,25 @@
 			  </div>
 			  
 			  <div class="tab-pane" id="mejora">
-			  	<% 6.times do %>
-			  		<%= render '/shared/user/msg-archive' %>
-					<hr>
-			  	<% end %>
-			  	<%= render '/shared/user/pagination' %>
+					<div class="clearfix">
+						<div class="white-box">
+							<h4>¿Quieres aumentar tu indice Cellove?</h4>
+							<p>Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos.</p>
+							<form class="form-inline">
+								<input type="text" class="input-medium" placeholder="Email">
+								<button type="submit" class="btn">OK</button>
+							</form>
+						</div>
+			
+						<div class="white-box">
+							<h4>¿Quieres proponer un Celestin@?</h4>
+							<p>Propón un nuevo celesti@ para que te recomiende y gana más puntos.</p>
+							<form class="form-inline">
+								<input type="text" class="input-medium" placeholder="Email">
+								<button type="submit" class="btn">OK</button>
+							</form>
+						</div>
+					</div>
 			  </div>
 			  <!-- end tabs -->
 			</div>
@@ -109,92 +111,6 @@
 
 	});
 </script>
-
-
-
-
-
-	<section class="celestinos">
-	<article class="boxed">
-		<div class="boxed-inner">
-			<h4>Mis Celestin@s: <span>Tu indice es del 40% y tienes 2 Celestin@s</span></h4>
-			<div class="mejora"><%= link_to "Mejora tu indice!" , "celestinos-more" %></div>
-			<div class="clearfix"></div>
-			<hr>
-			<p class="text-center"><span>Celestin@s</span> son personas que te conocen y te recomiendan mediante</br> 
-				un registro gratuito, y esto te da puntuación, más visibilidad</br>
-			 	y mayor acceso a usuari@s afines a ti :)
-			</p>
-
-			<%= render '/shared/user/celes-box' %>
-
-		</div>
-	</article>
-
-	<div class="text">
-		<p>Cuantos más <span>Celestin@os</span> tengas, más <span>Popularidad</span> tendrás.</p>
-		<p>Cuanta más <span>Popularidad</span> tengas, más visible y accesible serás!</p>
-	</div>
-
-	<article class="subscribe boxed">
-		<div class="boxed-inner clearfix">
-			<div class="white-box">
-				<h4>Quieres ganar 3 puntos?</h4>
-				<p>Recomiéndanos un nuevo usuari@ y te regalamos 3 puntos. Así de fácil.</p>
-				<form class="form-inline">
-					<input type="text" class="input-medium" placeholder="Email">
-					<button type="submit" class="btn">OK</button>
-				</form>
-			</div>
-
-			<div class="white-box">
-				<h4>Quieres proponer un Celestin@?</h4>
-				<p>Propón un nuevo celesti@ para que te recomiende y gaes más puntos.</p>
-				<form class="form-inline">
-					<input type="text" class="input-medium" placeholder="Email">
-					<button type="submit" class="btn">OK</button>
-				</form>
-			</div>
-		</div>
-	</article>
-
-	<article class="celes-list boxed">
-		<div class="boxed-inner">
-			<h4>Celestin@s pendientes de confirmar: <span>2 nuevos</span></h4>
-			<hr>
-	
-			<% 2.times do %>
-				<div class="celes-item confirm">
-					<img src="/users/placeholder2.jpg" width="100" height ="100">
-					<div class="text-celes pull-left">
-						<p><%= link_to "Maria González", "user-profile" %></p>
-						<p>29 años - 168 cm</p>
-						<p>Barcelona</p>
-						<p>Relación contigo: Herman@</p>
-						<p>Atributos sobre ti: buena persona, simpático y generoso.</p>
-					</div>
-					<div class="confirm-controls">Enviado: 5/10/2012 <a href="#"><i class="icon-ok"></i></a><a href="#"><i class="icon-remove"></i></a></div>
-				</div>
-			<% end %>
-			<hr>
-			<%= render '/shared/user/pagination' %>
-		</div>
-	</article>
-
-	<article class="celes-list boxed">
-		<div class="boxed-inner">
-			<h4>Celestin@s actuales: <span>2 nuevos</span></h4>
-			<hr>
-	
-			<% 2.times do %>
-				<%= render '/shared/user/celes-item-confirmed' %>
-			<% end %>
-			<hr>
-			<%= render '/shared/user/pagination' %>
-		</div>
-	</article>
-
-</section>
 
 
 

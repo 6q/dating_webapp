@@ -8050,18 +8050,6 @@ section.chat .sidebar ul li {
     }
   }
 
-  .white-box{
-    background-color: white;
-    float: left;
-    width:40%;
-    padding: 0 2%;
-    margin:20px 0 20px 4%;
-    display: block;
-    h4{
-      padding-left: 60px; 
-    }
-  }
-
   .celes-list{
     @extend section.list;
 
@@ -8129,24 +8117,24 @@ section.chat .sidebar ul li {
 .celestinos p span {
   color: #5caae8;
 }
-.celestinos .conf-item {
+.celestinos .celes-item {
   padding: 15px;
 }
-.celestinos .conf-item h5 {
+.celestinos .celes-item h5 {
   float: left;
   margin: 0 10px 0 0;
 }
-.celestinos .conf-item .relationship {
+.celestinos .celes-item .relationship {
   float: left;
   margin-right: 10px;
 }
-.celestinos .conf-item .erase {
+.celestinos .celes-item .erase {
   float: left;
 }
-.celestinos .conf-item .date {
+.celestinos .celes-item .date {
   float: right;
 }
-.celestinos #confirmar .conf-item {
+.celestinos #confirmar .celes-item {
   float: left;
   width: 570px;
 }
@@ -8157,6 +8145,25 @@ section.chat .sidebar ul li {
   margin-top: 17px;
   padding: 20px 0;
   text-align: center;
+}
+.celestinos .white-box {
+  text-align: center;
+  background-color: white;
+  float: left;
+  width: 40%;
+  padding: 0 2%;
+  margin: 20px 0 20px 4%;
+  display: block;
+}
+.celestinos .white-box h4 {
+  padding: 0px;
+  margin: 15px 0;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}
+.celestinos .white-box p {
+  margin: 15px 0;
 }
 
 /* settings */
