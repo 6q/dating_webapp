@@ -10,7 +10,6 @@
 		
 	<hr class="thin">
 
-
 			<ul class="nav nav-tabs" id="myTab">
 	  		  <li class="active"><a href="#recibidos">Recibidos (2)</a></li>
 			  <li><a href="#enviados">Enviados</a></li>
@@ -24,7 +23,7 @@
 			  <!-- begin tabs -->
 			  <div class="tab-pane active" id="recibidos">
 			  	<% 3.times do  %>
-			  		<%= render '/shared/user/msg-item-proposal' %>
+			  		<%= render '/shared/user/msg-item' %>
 			  		<hr>
 			  	<% end %>
 			  	<% 4.times do  %>
@@ -36,7 +35,7 @@
 
 			  <div class="tab-pane" id="enviados">
 			  	<% 6.times do %>
-			  		<%= render '/shared/user/msg-archive' %>
+			  		<%= render '/shared/user/msg-item' %>
 					<hr>
 			  	<% end %>
 			  	<%= render '/shared/user/pagination' %>
@@ -44,7 +43,7 @@
 			  
 			  <div class="tab-pane" id="eliminados">
 			  	<% 6.times do %>
-			  		<%= render '/shared/user/msg-archive' %>
+			  		<%= render '/shared/user/msg-item' %>
 					<hr>
 			  	<% end %>
 			  	<%= render '/shared/user/pagination' %>
