@@ -5,6 +5,9 @@ li{
 .text-center{
   text-align: center;
 }
+.text-right{
+  text-align: right;
+}
 
 
 
@@ -836,4 +839,49 @@ section .celestinos{
       font-weight: normal;
     }
   }
+}
+
+
+/* settings */
+
+.settings{
+
+  .col{
+    width:350px;
+    float: left;
+  }
+
+  .checkbox {
+    display: block;
+    width: 94px;
+    height: 27px;
+    overflow: hidden;
+    border-radius: 3px;
+    float:left;
+    margin-left: 10px;
+    margin-top: 5px;
+  } 
+  
+  input[type=checkbox] {
+    display: none;
+  }
+  
+  input[type=checkbox] + label {
+    text-indent: -9999px;
+    display: block;
+    width: 94px;
+    height: 27px;
+    line-height: 27px;
+    background: transparent url(images/checkbox.png) no-repeat -56px 0;
+    -webkit-transition: background-position 0.3s ease-in-out;
+    -moz-transition: background-position 0.3s ease-in-out;
+  }
+  
+  input[type=checkbox]:checked + label{
+    -webkit-transition: background-position 0.3s ease-in-out;
+    -moz-transition: background-position 0.3s ease-in-out;
+    background-position: -3px 0;
+  }
+  
+
 }
