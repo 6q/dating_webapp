@@ -575,33 +575,39 @@ section.chat{
 
 .user-profile{
 
-  .description{
-    background-color: white;
-    border-left: 1px solid;
+  .photo{
+    .description{
+      width:460px;
+      margin: 0;
+      padding: 0 10px;
+      h5{
+        font-size: 1.5em;
+        span{
+          font-size: .8em;
+          font-weight: normal;
+        }
+      }
+    }
+    a{text-decoration: underline;}
+  }
+  .small{
+    font-size: .8em;
   }
 
-  article.links{
+  article.action-links{
     width:100%;
     margin: 20px 0 20px -10px;
     padding: 0 5px;
-    background-color: blue;
     display: inline-block;
     li{
       float: left;
       margin-left: 50px;
-      a{color:white;}
+      
     }
   }
 
-  .adv{
-    background-color: white;
-    border-top: 1px solid;
-    margin: 10px 0px;
-    padding: 10px;
-  }
-
   .profile-tabs{
-    margin: 30px 0;
+    margin: 0;
 
     .nav{margin-bottom: 0px;}
     
@@ -612,17 +618,15 @@ section.chat{
         margin-right: 30px;
       }
     }
-    #datos{
-      margin: 20px 0;
-      .item-desc{
-        text-align: right;
-      }
-      .item-ans{
-        background-color: white;
-        border-left: 1px blue solid;
-        padding-left: 10px;
-      }
+    
+    .tab-pane{
+      margin:10px;
     }
+
+    #dicen{
+      @extend .celestinos;
+    }
+
     #notas{
       @extend section.list;
       h4 span{

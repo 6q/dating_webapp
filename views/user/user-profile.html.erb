@@ -2,42 +2,30 @@
 
 	<article class="boxed">
 		<div class="boxed-inner">
-			<div class="clearfix">
-				<div class="offset1 pull-left"><h4>Maria González</h4></div>
-				<div class="span5 description">
-					<p>Tengo 36 años, vivo en Barcelona</p>
-					<p>Hablo catalán, español e inglés</p>
-					<p>Estoy soltera y no tengo hijos</p>
+			<div class="photo">
+				<div class="pull-left">
+					<img src="/users/placeholder-user.jpg" width="210">
+				</div>
+				<div class="pull-left description">
+					<h5>Maria González | <span>Sabadell, Barcelona</span></h5>
+					<p class="small">Chica - 24 años - 1'72 altura</p>
+					<p class="small">Maria es soltera y sin hijos. Busca a un chico de entre 16 y 20 años para hacer amigos y que esté cerca de Sabadell, Barcelona</p>
+					<p>Tengo 36 años y vivo en Barcelona. Me gusta hacer monólogos, pero lodicen mis amigos. Me fustra poque es que hablo mucho, muy rápido y muy seguido.</p>
+					<p><%= link_to "Leer más", "" %></p>
 				</div>
 			</div>
+			
 		</div>
 	</article>
 
-	<article class="links">
-		<ul>
-			<li><a href="">Enviar e-mail</a></li>
-			<li><a href="">Chatear</a></li>
-			<li><a href="">Me gusta!</a></li>
-			<li><a href="">Añadir favoritos</a></li>
-		</ul>
-	</article>
-
-	<article class="boxed">
-		<div class="boxed-inner">
-			<div class="clearfix">
-				<div class="offset1"><h4>Mi anuncio</h4></div>
-				<div class="span8 adv">
-					<p>Soy una persona simpática y buena amiga, almenos eso es lo que dicen de mi. Si me quieres conocer mejor, enviame un e-mail y cuando tenga un momento lo contesto y si nos caemos bién, nunca se sabe podemos vernos algún día de estos jiji</p>
-				</div>
-			</div>
-		</div>
-	</article>
+	<%= render '/shared/user/profile-action-links' %>
 
 	<article class="profile-tabs">
 		<ul class="nav nav-tabs" id="myTab">
-  		<li class="active"><a href="#datos">Mis datos</a></li>
-		  <li><a href="#gustos">Mis gustos</a></li>
-		  <li><a href="#busco">Que busco</a></li>
+  		<li class="active"><a href="#como">¿Cómo es?</a></li>
+		  <li><a href="#gustos">Sus gustos</a></li>
+		  <li><a href="#busca">Qué busca</a></li>
+		  <li><a href="#dicen">Qué dicen de ella</a></li>
 		  <li class="last"><a href="#notas">Tus notas</a></li>
 		</ul>
 
@@ -45,20 +33,36 @@
 			<div class="boxed-inner">
 				<div class="tab-content">
 
-		  		<div class="tab-pane active" id="datos">
-		  			<% 10.times do %>
-		  				<div class="span3 item-desc">Silueta:</div>
-		  				<div class="span5 item-ans">Muñeco Michelin</div>
-		  			<% end %>
+		  		<div class="tab-pane active" id="como">
+		  			
+						<p>Tengo 36 años y vivo en Barcelona. Me gusta hacer monólogos, pero lodicen mis amigos. Me fustra poque es que hablo mucho, muy rápido y muy seguido.</p>
+						<p class="small">Me considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+						<p class="small">Mido 1'75m y peso 65kg. Tengo los ojos de color marrón y mi complexión es fuerte.</p>
+						<p class="small">Mi nivel de estudios es diplomado y hablo castellano fluido. Trabajo en el sector salud y mi nivel de ingresos es inimaginable.</p>
+						<p class="small">Soy cristiana y me lo tomo muy en serio.</p>
+
 		  		</div>
 
 		  		<div class="tab-pane" id="gustos">
-		  			¿ text or table mis gustos ?
+		  			<p>Me gusta comer estrictamente de todo. Bebo alcohol raramente y no tomo drogas.</p>
+						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
 		  		</div>
 
-		  		<div class="tab-pane" id="busco">
+		  		<div class="tab-pane" id="busca">
 		  			<p>A alguien atractivo, de estilo bohemio que sea más alto que yo y que pese igual que yo.</p>
 		  			<p>Si puede ser, con los ojos de color marrón y de complexión fuerte. Me gustaría que tuviera hijos y que deseara tener más.</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="dicen">
+		  			<% 3.times do %>
+						<%= render '/shared/user/celes-item' %>
+						<hr>
+						<% end %>
+
+						<%= render '/shared/user/pagination' %>
 		  		</div>
 
 		  		<div class="tab-pane" id="notas">
@@ -84,15 +88,14 @@
 		  			</div>
 		  			
 		  			<%= render '/shared/user/pagination' %>
-		  			
+		  
 		  		</div>
-
 				</div>
 			</div>
-
 		</div>
-
 	</article>
+
+	<%= render '/shared/user/profile-action-links' %>
 
 </section>
 
