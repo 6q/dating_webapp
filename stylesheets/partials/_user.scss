@@ -499,6 +499,8 @@ section.chat{
 
 .profile{
 
+  @extend .celestinos;
+
   header {
     line-height: 50px;
 
@@ -794,20 +796,23 @@ section.messages{
     }
 
   }
-  /*
   
+  .box-title{
+    text-align: center;
+    font-size: 1.5em;
+  }
   .celes-box{
     background-color: white;
-    width:96%;
     display: inline-block;
-    margin: 20px 0 20px 2%; 
+    width:80%;
+    margin: 20px 0 20px 10%; 
     ul{
-      margin:20px 0 20px 24px;
+      margin:20px 0;
       display: inline-block;
       li{
-        width: 120px;
+        width: 90px;
         float: left;
-        margin-left: 30px;
+        margin-left: 40px;
         text-align: center;
       }
     }
@@ -815,24 +820,25 @@ section.messages{
     .red-heart{
       color:red;
     }
-    .red-violet{
+    .violet-heart{
       color:violet;
     }
-    .red-green{
+    .green-heart{
       color:green;
     }
-    .red-yellow{
+    .yellow-heart{
       color:yellow;
     }
-
-    .small-box{
-      background-color: lightgray;
-      
-      span{
-        color: $text-color;
+    .btns{
+      margin:10px auto;
+      text-align: center;
+      .btn{
+        width:220px;
       }
     }
   }
+  
+/*
   .text{
     margin: 15px 0;
     p{

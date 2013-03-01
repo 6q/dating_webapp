@@ -1,11 +1,41 @@
 <section class="celestinos boxed">
 	<div class="boxed-inner">
-		<h4>Celestin@ | <span>Realizar una recomendación</span></h4>
+		<h3>Celestin@ | <span>Realizar una recomendación</span></h3>
 		<div class="clearfix"></div>
 		<hr>
 
-		<%= render '/shared/user/celes-item' %>
+		<div class="box-title">Quieres recomendar a una usuaria registrada o alguien que no es usuaria?</div>
+		<div class="celes-box">
+			<ul>
+				<li class="red-heart">
+					Ex pareja
+				</li>
+		
+				<li class="violet-heart">
+					Amigo especial
+				</li>
+		
+				<li class="green-heart">
+					Amigo
+				</li>
+		
+				<li class="yellow-heart">
+					Familiar
+				</li>
+			</ul>
+			<div class="btns">
+				<button class="btn btn-medium btn-info" type="button">Recomendar usuario registrado</button>
+				<button class="btn btn-medium btn-info" type="button">Recomendar usuario</button>
+			</div>
+		</div>
 
+
+		<h4>Personas a las que has hecho de Celestin@</h4>
+		<div class="clearfix"></div>
+		<% 3.times do %>
+		<%= render '/shared/user/celes-item' %>
+		<hr>
+		<% end %>
 		
 
 	</div>
