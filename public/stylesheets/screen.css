@@ -7778,6 +7778,18 @@ section.chat .sidebar ul li {
 }
 
 /* messages items */
+.tabs {
+  position: relative;
+}
+.tabs .sort {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.tabs .sort select {
+  font-size: .85em;
+}
+
 .tab-pane .msg-item {
   margin: 10px;
 }

@@ -427,6 +427,20 @@ section.chat{
 
 /* messages items */
 
+.tabs {
+
+  position:relative;
+
+  .sort {
+    position:absolute;
+    right:0;
+    top:0;
+    select {
+      font-size:.85em;
+    }
+  }
+}
+
 .tab-pane {
   .msg-item {
     margin:10px;

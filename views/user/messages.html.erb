@@ -10,14 +10,18 @@
 		
 	<hr class="thin">
 
-			<ul class="nav nav-tabs" id="myTab">
-	  		  <li class="active"><a href="#recibidos">Recibidos (2)</a></li>
-			  <li><a href="#enviados">Enviados</a></li>
-			  <li><a href="#eliminados">Eliminados</a></li>
-			</ul>
+	<div class="tabs">
+		<ul class="nav nav-tabs" id="myTab">
+  		  <li class="active"><a href="#recibidos">Recibidos (2)</a></li>
+		  <li><a href="#enviados">Enviados</a></li>
+		  <li><a href="#eliminados">Eliminados</a></li>
+		</ul>
+		<%= render '/shared/user/sorting' %>
+	</div>
 	
 	<div class="boxed">
 		<div class="boxed-inner">
+
 			<div class="tab-content">
 
 			  <!-- begin tabs -->
@@ -29,17 +33,15 @@
 			  </div>
 
 			  <div class="tab-pane" id="enviados">
-			  	<% 6.times do %>
+			  	<% 10.times do %>
 			  		<%= render '/shared/user/msg-item' %>
-					<hr>
 			  	<% end %>
 			  	<%= render '/shared/user/pagination' %>
 			  </div>
 			  
 			  <div class="tab-pane" id="eliminados">
-			  	<% 6.times do %>
+			  	<% 10.times do %>
 			  		<%= render '/shared/user/msg-item' %>
-					<hr>
 			  	<% end %>
 			  	<%= render '/shared/user/pagination' %>
 			  </div>
