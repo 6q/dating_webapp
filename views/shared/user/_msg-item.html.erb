@@ -7,7 +7,7 @@
 			<p class="msg"><%= link_to 'Hola Jamelga, estas tremenda bla bla bla bla', '/user/message-show' %></p>
 			</div>
 		<div class="reply">
-			<a href="#" class="delete">Eliminar</a>
+			<%= link_to 'Eliminar', '#delete-confirm', 'data-toggle' => 'modal', :class => 'delete' %>
 			<%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' %>
 		</div>
 	</div>
