@@ -427,11 +427,22 @@ section.chat{
 
 /* messages items */
 
+.tab-pane {
+  .msg-item {
+    margin:10px;
+  }
+}
+
 .msg-item {
 
+  @include clearfix;
+  background:#fff;
   position:relative;
 
   .pic {
+
+    float:left;
+    margin-right:10px;
 
     img {
       background:#fff;
@@ -468,17 +479,24 @@ section.chat{
 
   .reply {
 
-    width:21px;
-    height:21px;
+    width:65px;
     position: absolute;
     right:5px;
-    top:5px;
+    top:7px;
 
     a {
+      width:21px;
+      height:21px;
       background:url(images/sprite.png) -355px -83px no-repeat;  
       display:block;
+      float:left;
+      margin-left:10px;
       text-indent:-999em;
       overflow:hidden;
+
+      &.delete {
+        background-position:-353px -108px;
+      }
     }
     
   }

@@ -2056,7 +2056,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('../images/glyphicons-halflings.png?1360304060');
+  background-image: url('../images/glyphicons-halflings.png?1362309786');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -7242,11 +7242,15 @@ aside#main-sidebar ul li a span {
 }
 
 section.user-home {
+  /* MESSAGES */
   /* ARTICLES */
   /* related-list */
 }
 section.user-home h4 {
   color: #5caae8;
+}
+section.user-home section#last-messages {
+  margin-left: -10px;
 }
 section.user-home section#related-list ul {
   margin: 0;
@@ -7774,8 +7778,19 @@ section.chat .sidebar ul li {
 }
 
 /* messages items */
+.tab-pane .msg-item {
+  margin: 10px;
+}
+
 .msg-item {
+  overflow: hidden;
+  *zoom: 1;
+  background: #fff;
   position: relative;
+}
+.msg-item .pic {
+  float: left;
+  margin-right: 10px;
 }
 .msg-item .pic img {
   background: #fff;
@@ -7804,17 +7819,23 @@ section.chat .sidebar ul li {
   color: #333;
 }
 .msg-item .reply {
-  width: 21px;
-  height: 21px;
+  width: 65px;
   position: absolute;
   right: 5px;
-  top: 5px;
+  top: 7px;
 }
 .msg-item .reply a {
+  width: 21px;
+  height: 21px;
   background: url(images/sprite.png) -355px -83px no-repeat;
   display: block;
+  float: left;
+  margin-left: 10px;
   text-indent: -999em;
   overflow: hidden;
+}
+.msg-item .reply a.delete {
+  background-position: -353px -108px;
 }
 .msg-item .no-mg-btm {
   margin-bottom: 0px;

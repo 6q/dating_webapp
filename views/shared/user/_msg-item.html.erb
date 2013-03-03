@@ -1,10 +1,14 @@
 <div class="msg-item">
 	<div>
-		<div class=""><a href="#"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
-		<div class="">
-			<div class="info">8/12/2012 - <%= link_to "Judit", "#" %> 21 años, Barcelona</div>
-			<p>Hola Jamelga, estas tremenda bla bla bla bla</p>
+		<div class="pic"><a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
+			<div class="info">
+				<p class="msg-data">8/12/2012 - <%= link_to "Judit", "#" %> 21 años, Barcelona</p>
+			
+			<p class="msg"><%= link_to 'Hola Jamelga, estas tremenda bla bla bla bla', '/user/message-show' %></p>
+			</div>
+		<div class="reply">
+			<a href="#" class="delete">Eliminar</a>
+			<%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' %>
 		</div>
-		<div class="reply">sprite</div>
 	</div>
 </div>

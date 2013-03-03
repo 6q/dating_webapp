@@ -22,13 +22,8 @@
 
 			  <!-- begin tabs -->
 			  <div class="tab-pane active" id="recibidos">
-			  	<% 3.times do  %>
+			  	<% 10.times do  %>
 			  		<%= render '/shared/user/msg-item' %>
-			  		<hr>
-			  	<% end %>
-			  	<% 4.times do  %>
-			  		<%= render '/shared/user/msg-item' %>
-			  		<hr>
 			  	<% end %>
 			  	<%= render '/shared/user/pagination' %>
 			  </div>
@@ -54,7 +49,6 @@
 		</div>
 	</div>
 
-<script src="/javascripts/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$('#myTab a').click(function (e) {
   	e.preventDefault();
