@@ -7793,6 +7793,15 @@ section.chat .sidebar ul li {
 .tab-pane .msg-item {
   margin: 10px;
 }
+.tab-pane .pagination {
+  margin: 20px;
+  font-size: .85em;
+  text-align: center;
+}
+.tab-pane .pagination .total {
+  display: block;
+  margin-bottom: 5px;
+}
 
 .msg-item {
   overflow: hidden;

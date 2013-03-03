@@ -445,6 +445,16 @@ section.chat{
   .msg-item {
     margin:10px;
   }
+
+  .pagination {
+    margin:20px;
+    font-size:.85em;
+    text-align:center;
+    .total {
+      display:block;
+      margin-bottom:5px;
+    }
+  }
 }
 
 .msg-item {
