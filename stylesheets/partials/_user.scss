@@ -525,15 +525,17 @@ section.chat{
     
   }
   
+  .proposal {
+    padding:10px;
+    font-size:.8em;
+    margin-top:-1px;
+    background:#E5F2FB;
+    border-top:#e0e0e0 1px dashed;
+  }
+
   .no-mg-btm{
     margin-bottom: 0px;
   }
-}
-
-.proposal{
-  background-color: lightgray;
-  margin-top: 10px;
-  padding: 5px 0;
 }
 
 
