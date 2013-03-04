@@ -1,11 +1,14 @@
 <section class="settings">
 
-	<div class="boxed">
+	<section class="boxed">
 		<div class="boxed-inner">
-			<h4>Configuración</h4>
-			<p>Desde aquí podrás configurar tus parámetros en Cellove</p>
 
-			<div class="clearfix">
+			<header>
+				<h1>Configuración</h1>
+				<div>Desde aquí podrás configurar tus parámetros en Cellove</div>
+			</header>
+
+			<article class="clearfix">
 				<div class="col">
 					<h5>Visibilidad</h5>
 					<p>¿Cómo de real quieres que sea el tiempo real?</p>
@@ -115,36 +118,44 @@
 					</form>
 				</div>
 
-				<div class="clearfix"></div>
-			</div>
+			</article>
 		</div>
-	</div>
+	</section>
 
-	<div class="boxed">
+	<hr class="thin">
+
+	<section class="boxed">
 		<div class="boxed-inner blocked">
+
+			<header>
+				<h1>Configuración</h1>
+				<div>Desde aquí podrás configurar tus parámetros en Cellove</div>
+			</header>
 		
-			<h4>Ususarios bloqueados</h4>
-			<p>Has bloqueado estos ususarios. ¿Has cambiado de opinión?</p>
 
-			<div class="table">
-				<div class="span1 text-center">No le veo</div>
-				<div class="span1 text-center">No me ve</div>
-			</div>
+			<article>
+				<h4>Ususarios bloqueados</h4>
+				<p>Has bloqueado estos ususarios. ¿Has cambiado de opinión?</p>
 
-			<% 4.times.each do %>
-			<div class="offset1">
-				<div class="span4"><i class="icon-remove"></i> <%= link_to "Maria", "user-profile" %> 24 años, Barcelona</div>
-				<div class="span1 align-center"><input type="checkbox"></div>
-				<div class="span1 align-center"><input type="checkbox"></div>
-			</div>
-			<% end %>
+				<div class="table">
+					<div class="span1 text-center">No le veo</div>
+					<div class="span1 text-center">No me ve</div>
+				</div>
 
-			<div class="clearfix"></div>
+				<% 4.times.each do %>
+				<div class="offset1">
+					<div class="span4"><i class="icon-remove"></i> <%= link_to "Maria", "user-profile" %> 24 años, Barcelona</div>
+					<div class="span1 align-center"><input type="checkbox"></div>
+					<div class="span1 align-center"><input type="checkbox"></div>
+				</div>
+				<% end %>
+
+			</article>
 		</div>
-	</div>
+	</section>
 	
 	<div class="button">
-		<button class="btn btn-large btn-info" type="button">Save settings</button>
+		<button class="btn btn-large btn-info" type="button">Guardar Configuración</button>
 	</div>
 
 </section>
