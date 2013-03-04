@@ -568,7 +568,7 @@ section.chat{
 
 /* profile */
 
-.profile{
+.profile {
 
   @extend .celestinos;
 
@@ -586,6 +586,7 @@ section.chat{
   }
 
   form {
+
     .left {
       margin-right: 25px;
 
@@ -611,20 +612,40 @@ section.chat{
       margin-top:10px;
     }
   }
-  .nav-tabs{
-    li a{
-      background-color: white;
+
+  .profile-tabs {
+    select, input, article {
+      font-size:.9em;
     }
-    .active a{
-        background-color: #f1f1f1;
-        color:#5caae8;
+
+    textarea {
+      width:665px;
+      height:100px;
+      margin:20px 0;
     }
-  } 
+
+    hr {
+      margin:20px 0;
+    }
+  }
+  
   em{
       font-size: 0.8em; 
       line-height: 15px;
       color: gray;
   }
+
+  #gustos {
+
+    h3 {
+      margin:0;
+    }
+
+    textarea {
+      margin:0;
+    }
+  }
+
   #dicen{
     .comment{
       border-bottom: 1px lightgray solid;
@@ -727,7 +748,8 @@ section.chat{
     }
   }
 
-  .profile-tabs{
+  .profile-tabs {
+
     margin: 0;
 
     .nav{margin-bottom: 0px;}

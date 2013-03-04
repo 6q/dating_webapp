@@ -7957,17 +7957,27 @@ section.chat .sidebar ul li {
 .profile .quien small {
   margin-top: 10px;
 }
-.profile .nav-tabs li a {
-  background-color: white;
+.profile .profile-tabs select, .profile .profile-tabs input, .profile .profile-tabs article {
+  font-size: .9em;
 }
-.profile .nav-tabs .active a {
-  background-color: #f1f1f1;
-  color: #5caae8;
+.profile .profile-tabs textarea {
+  width: 665px;
+  height: 100px;
+  margin: 20px 0;
+}
+.profile .profile-tabs hr {
+  margin: 20px 0;
 }
 .profile em {
   font-size: 0.8em;
   line-height: 15px;
   color: gray;
+}
+.profile #gustos h3 {
+  margin: 0;
+}
+.profile #gustos textarea {
+  margin: 0;
 }
 .profile #dicen .comment {
   border-bottom: 1px lightgrey solid;
