@@ -1026,6 +1026,10 @@ section.messages{
       line-height:1em;
     }
 
+    h5 {
+      font-size:1.1em;
+    }
+
     .checkbox {
       display: block;
       width: 68px;
@@ -1035,6 +1039,15 @@ section.messages{
       float:left;
       margin-left: 10px;
     } 
+
+    form {
+      margin-top:30px;
+    }
+
+    .control-group {
+      margin-bottom:25px;
+      line-height:1em;
+    }
     
     input[type=checkbox] {
       display: none;

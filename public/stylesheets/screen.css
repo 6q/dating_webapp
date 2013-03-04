@@ -8268,6 +8268,9 @@ section.chat .sidebar ul li {
   margin-bottom: 15px;
   line-height: 1em;
 }
+.settings .col h5 {
+  font-size: 1.1em;
+}
 .settings .col .checkbox {
   display: block;
   width: 68px;
@@ -8276,6 +8279,13 @@ section.chat .sidebar ul li {
   border-radius: 3px;
   float: left;
   margin-left: 10px;
+}
+.settings .col form {
+  margin-top: 30px;
+}
+.settings .col .control-group {
+  margin-bottom: 25px;
+  line-height: 1em;
 }
 .settings .col input[type=checkbox] {
   display: none;
