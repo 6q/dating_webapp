@@ -55,25 +55,32 @@ $(document).ready(function(){
       e.preventDefault();
       $(this).tab('show');
 
-      console.log(document.location.hash);
-
       if(document.location.hash == '#tab_confirmados') {
         $('.indice').slideDown('fast');
       } else {
         $('.indice').slideUp('fast');
       }
-      
   });
+
+  $('.celestinos header a[href="#mejora"]').click(function( e ){
+    e.preventDefault();
+    $('.nav-tabs a[href="#mejora"]').click();
+  });
+
 
   var hash = document.location.hash;
   var prefix = "tab_";
   if (hash) {
       $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+      if(hash != '#tab_confirmados') {
+        $('.indice').slideUp('fast');
+      }
   } 
 
   // Change hash for page-reload
   $('.nav-tabs a').on('shown', function (e) {
       window.location.hash = e.target.hash.replace("#", "#" + prefix);
+
   });
 
 

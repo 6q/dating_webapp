@@ -1,9 +1,9 @@
 <section class="celestinos">
-	<article class="boxed">
+	<article class="boxed headless">
 		<div class="boxed-inner">
 			<header>
 				<h1>Mis Celestin@s | <span>Tu índice es del 40% y tienes 2 Celestin@s.</span></h1>
-				<%= link_to "Mejora tu indice!" , "celestinos-more", :class => 'pull-right' %>
+				<%= link_to "¡Mejora tu indice!" , "#mejora", :class => 'pull-right' %>
 			</header>
 		</div>
 	</article>
@@ -26,15 +26,14 @@
 						<input id="points" type="slider" name="" value="3"/>
 					<% end %>
 				</div>
-				<div class="clearfix"></div>
 			</div>
 		</div>
 	</article>
 
-		<hr class="thin">	
+	<hr class="thin">	
 
 	<ul class="nav nav-tabs" id="celestinos-tab">
-	 	<li class="active"><a href="#confirmados">Confirmados</a></li>
+	  <li class="active"><a href="#confirmados">Confirmados</a></li>
 	  <li><a href="#confirmar">Por confirmar</a></li>
 	  <li><a href="#mejora">Mejora tu índice</a></li>
 	</ul>
@@ -49,8 +48,8 @@
 					<div class="mejora"><%= link_to "Mejora tu indice!" , "celestinos-more" %></div>
 					<div class="clearfix"></div>
 
-					<% 3.times do %>
-					<%= render '/shared/user/celes-item' %>
+					<% 5.times do %>
+						<%= render '/shared/user/celes-item' %>
 					<% end %>
 
 					<%= render '/shared/user/pagination' %>

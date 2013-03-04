@@ -8158,6 +8158,9 @@ section.chat .sidebar ul li {
 .celestinos p span, .profile p span, .user-profile .profile-tabs #dicen p span {
   color: #5caae8;
 }
+.celestinos .indice .boxed-inner, .profile .indice .boxed-inner, .user-profile .profile-tabs #dicen .indice .boxed-inner {
+  padding-bottom: 20px;
+}
 .celestinos .celes-item, .profile .celes-item, .user-profile .profile-tabs #dicen .celes-item {
   padding: 15px;
 }
