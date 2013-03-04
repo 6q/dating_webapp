@@ -13,7 +13,14 @@
 			<%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
 		</div>
 	</div>
-	<% if rand(1...50) > 25 %>
-		<%= render '/shared/user/msg-item-proposal' %>
+
+	<% if boolean_param('activities').present? %>
+			<%= render '/shared/user/msg-item-proposal' %>
+	<% else %>
+		<% if rand(1...50) > 25 %>
+				<%= render '/shared/user/msg-item-proposal' %>
+		<% end %>
 	<% end %>
+
+	
 </div>

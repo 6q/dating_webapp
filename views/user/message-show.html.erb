@@ -50,6 +50,22 @@
 								<p>¡Taxidermista! Qué profesión tan interesante. Mi gato murió la semana pasada y no me atreví a enterrarlo. Lo tengo en el congelador. ¿Podrías disecarlo por mí?</p>
 							</div>
 
+							<% if rand(1...50) > 25 %>
+
+							<div class="activity">
+								<i class="type">
+									Tomar una cerveza
+								</i>
+								<p><strong>Judith</strong> the ha propuesto...</p>
+								<p>Bueno qué, ¿nos vamos de cañas picarón?</p>
+								<div class="actions right">
+									<a class="btn btn-danger" href="#proposal-reject" data-toggle="modal"><i class="icon icon-remove icon-white"></i> Rechazar</a>
+									<a class="btn btn-success" href="#proposal-accept" data-toggle="modal"><i class="icon icon-ok icon-white"></i> Aceptar</a>
+								</div>
+							</div>
+
+							<% end %>
+
 							<div class="msg-reply-dialog clearfix">
 
 								<div class="pic">

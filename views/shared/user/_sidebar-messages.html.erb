@@ -4,8 +4,8 @@
 	</header>
 	<ul>
 		<li><%= link_to 'Recibidos <span>999</span>'.html_safe, '/user/messages' %></li>
-		<li><%= link_to 'Propuestas de actividad', '/user/messages?activities' %></li>
-		<li><%= link_to 'Enviados', '/user/messages?sent' %></li>
-		<li><%= link_to 'Eliminados', '/user/messages?deleted' %></li>
+		<li><%= link_to 'Propuestas de actividad', '/user/messages?activities=true' %></li>
+		<li><%= link_to 'Enviados', '/user/messages#tab_enviados' %></li>
+		<li><%= link_to 'Eliminados', '/user/messages#tab_eliminados' %></li>
 	</ul>
 </section>

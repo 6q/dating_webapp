@@ -7992,6 +7992,27 @@ section.chat .sidebar ul li {
   margin-bottom: 40px;
 }
 
+.conversation .activity {
+  background: #E5F2FB;
+  padding: 10px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.conversation .activity .type {
+  font-style: normal;
+  display: block;
+  float: left;
+  width: 60px;
+  height: 30px;
+  background: url(images/sprite-activities.png) top left no-repeat;
+  font-size: .8em;
+  text-align: center;
+  color: #666;
+  padding-top: 70px;
+  margin: 0px 15px;
+  line-height: 1em;
+}
+
 #activity-proposal p {
   margin: 0;
 }
