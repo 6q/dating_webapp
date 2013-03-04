@@ -1,1 +1,28 @@
-detalle mensaje
+<section class="messages">
+	<div class="boxed headless">
+		<div class="boxed-inner">
+			<header>
+				<h1 class="span3">Mensajes y actividades</h1>
+				<div class="pull-right">Estas usando el 35% de tu buzón. ¡<%= link_to "Amplia", "/user/pay" %> la capacidad!</div>
+			</header>
+		</div>
+	</div>
+		
+	<hr class="thin">
+
+	<div class="tabs">
+		<ul class="nav nav-tabs">
+  		  <li><a href="/user/messages/#tab_recibidos">Recibidos (2)</a></li>
+		  <li><a href="/user/messages/#tab_enviados">Enviados</a></li>
+		  <li><a href="/user/messages/#eliminados">Eliminados</a></li>
+		</ul>
+		<%= render '/shared/user/sorting' %>
+	</div>
+	
+	<div class="boxed">
+		<div class="boxed-inner">
+
+			message body
+
+		</div>
+	</div>
