@@ -454,6 +454,10 @@ section.chat{
       display:block;
       margin-bottom:5px;
     }
+
+    span.pages {
+      float:none;
+    }
   }
 }
 
@@ -839,7 +843,7 @@ section.messages{
 }
 
 /* celestinos */
-.celestinos{
+.celestinos {
   @extend section.list;
 
   .boxed .boxed-inner header h1 {
@@ -858,17 +862,48 @@ section.messages{
     padding-bottom:20px;
   }
 
-  .celes-item{
-    padding:15px;
-    h5{
-      float: left;
-      margin:0 10px 0 0;
+  .celes-item {
+    @include clearfix;
+
+    background:#fff;
+    margin:10px 0;
+    padding:10px;
+    border-bottom:#e0e0e0 1px solid;
+
+    header {
+      border:none;
+      padding:0;
+      margin:0;
+
+      font-size:.8em;
+
+      i {
+        margin-right:5px;
+      }
+
+      span {
+        display:inline-block;
+        margin:0px 10px;
+      }
+
+      .date {
+        float:right;
+        color:#666;
+        font-size:.9em;
+      }
+
+      a:first-child {
+        font-size:1.2em;
+        font-weight:bold;
+      }
     }
-    .relationship{float: left;
+    
+
+    .relationship {
       margin-right: 10px;
     }
-    .erase{float: left;}
-    .date{float: right;}
+
+    
   }
 
   #confirmar{

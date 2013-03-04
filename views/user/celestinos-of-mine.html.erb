@@ -44,14 +44,10 @@
 
 			  <!-- begin tabs -->
 			  <div class="tab-pane active" id="confirmados">
-			  	<h4>Mis Celestin@s: <span>Tu indice es del 40% y tienes 2 Celestin@s</span></h4>
-					<div class="mejora"><%= link_to "Mejora tu indice!" , "celestinos-more" %></div>
-					<div class="clearfix"></div>
-
+			  	<h4>Tus Celestin@s</h4>
 					<% 5.times do %>
 						<%= render '/shared/user/celes-item' %>
 					<% end %>
-
 					<%= render '/shared/user/pagination' %>
 
 			  </div>

@@ -7802,6 +7802,9 @@ section.chat .sidebar ul li {
   display: block;
   margin-bottom: 5px;
 }
+.tab-pane .pagination span.pages {
+  float: none;
+}
 
 .msg-item {
   overflow: hidden;
@@ -8162,21 +8165,37 @@ section.chat .sidebar ul li {
   padding-bottom: 20px;
 }
 .celestinos .celes-item, .profile .celes-item, .user-profile .profile-tabs #dicen .celes-item {
-  padding: 15px;
+  overflow: hidden;
+  *zoom: 1;
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: #e0e0e0 1px solid;
 }
-.celestinos .celes-item h5, .profile .celes-item h5, .user-profile .profile-tabs #dicen .celes-item h5 {
-  float: left;
-  margin: 0 10px 0 0;
+.celestinos .celes-item header, .profile .celes-item header, .user-profile .profile-tabs #dicen .celes-item header {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: .8em;
+}
+.celestinos .celes-item header i, .profile .celes-item header i, .user-profile .profile-tabs #dicen .celes-item header i {
+  margin-right: 5px;
+}
+.celestinos .celes-item header span, .profile .celes-item header span, .user-profile .profile-tabs #dicen .celes-item header span {
+  display: inline-block;
+  margin: 0px 10px;
+}
+.celestinos .celes-item header .date, .profile .celes-item header .date, .user-profile .profile-tabs #dicen .celes-item header .date {
+  float: right;
+  color: #666;
+  font-size: .9em;
+}
+.celestinos .celes-item header a:first-child, .profile .celes-item header a:first-child, .user-profile .profile-tabs #dicen .celes-item header a:first-child {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 .celestinos .celes-item .relationship, .profile .celes-item .relationship, .user-profile .profile-tabs #dicen .celes-item .relationship {
-  float: left;
   margin-right: 10px;
-}
-.celestinos .celes-item .erase, .profile .celes-item .erase, .user-profile .profile-tabs #dicen .celes-item .erase {
-  float: left;
-}
-.celestinos .celes-item .date, .profile .celes-item .date, .user-profile .profile-tabs #dicen .celes-item .date {
-  float: right;
 }
 .celestinos #confirmar .celes-item, .profile #confirmar .celes-item, .user-profile .profile-tabs #dicen #confirmar .celes-item {
   float: left;
