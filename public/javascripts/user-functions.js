@@ -96,4 +96,8 @@ $(document).ready(function(){
     $(this).parent().parent().find('li a').removeClass('active');
   });
 
+  // image gallery in user profile
+
+  $("a[rel^='prettyPhoto']").prettyPhoto();
+
 });
