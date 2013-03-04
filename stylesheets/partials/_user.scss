@@ -1019,15 +1019,21 @@ section.messages{
     width:335px;
     float: left;
 
+    font-size:.9em;
+
+    .text-right {
+      margin-bottom:15px;
+      line-height:1em;
+    }
+
     .checkbox {
       display: block;
-      width: 94px;
-      height: 27px;
+      width: 68px;
+      height: 21px;
       overflow: hidden;
       border-radius: 3px;
       float:left;
       margin-left: 10px;
-      margin-top: 5px;
     } 
     
     input[type=checkbox] {
@@ -1037,10 +1043,10 @@ section.messages{
     input[type=checkbox] + label {
       text-indent: -9999px;
       display: block;
-      width: 94px;
-      height: 27px;
-      line-height: 27px;
-      background: transparent url(images/checkbox.png) no-repeat -56px 0;
+      width: 68px;
+      height: 21px;
+      line-height: 21px;
+      background: transparent url(images/checkbox.png) no-repeat -39px 0;
       -webkit-transition: background-position 0.3s ease-in-out;
       -moz-transition: background-position 0.3s ease-in-out;
     }
@@ -1048,7 +1054,7 @@ section.messages{
     input[type=checkbox]:checked + label{
       -webkit-transition: background-position 0.3s ease-in-out;
       -moz-transition: background-position 0.3s ease-in-out;
-      background-position: -3px 0;
+      background-position: 0px 0;
     }
   }
 
@@ -1057,7 +1063,6 @@ section.messages{
     .table{
       margin-left:385px;
       display: block;
-      font-size: 13px;
     }
   }
 
