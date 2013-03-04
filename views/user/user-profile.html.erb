@@ -35,20 +35,25 @@
 
 		  		<div class="tab-pane active" id="como">
 		  			
-						<p>Tengo 36 años y vivo en Barcelona. Me gusta hacer monólogos, pero lodicen mis amigos. Me fustra poque es que hablo mucho, muy rápido y muy seguido.</p>
-						<p class="small">Me considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
-						<p class="small">Mido 1'75m y peso 65kg. Tengo los ojos de color marrón y mi complexión es fuerte.</p>
-						<p class="small">Mi nivel de estudios es diplomado y hablo castellano fluido. Trabajo en el sector salud y mi nivel de ingresos es inimaginable.</p>
-						<p class="small">Soy cristiana y me lo tomo muy en serio.</p>
-
+					<h4>Tengo 36 años y vivo en Barcelona. Me gusta hacer monólogos, pero lodicen mis amigos. Me fustra poque es que hablo mucho, muy rápido y muy seguido.</h4>
+					<p>Me considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+					<p>Mido 1'75m y peso 65kg. Tengo los ojos de color marrón y mi complexión es fuerte.</p>
+					<p>Mi nivel de estudios es diplomado y hablo castellano fluido. Trabajo en el sector salud y mi nivel de ingresos es inimaginable.</p>
+					<p>Soy cristiana y me lo tomo muy en serio.</p>
 		  		</div>
 
 		  		<div class="tab-pane" id="gustos">
-		  			<p>Me gusta comer estrictamente de todo. Bebo alcohol raramente y no tomo drogas.</p>
-						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
-						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
-						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
-						<p><b>Sus aficiones...</b> e considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+					<p>Me gusta comer estrictamente de todo. Bebo alcohol raramente y no tomo drogas. </p>
+
+					<p>Me gustan los animales de compañía. No tengo y soy alérgica.</p>
+
+					<p><strong>Sus aficiones:</strong> escribir, leer, y hacer mis propios vestidos con restos de cortinas. Tengo una máquina de coser, aviso.</p>
+
+					<p><strong>María, cuando sale...</strong> me gusta ponerme del revés. Antes he dicho que no me drogaba ni bebía, pero es mentira. En realidad en cuanto puedo me enchufo al frasco, le tiro a los palomos y me pongo ciega ciega.</p>
+
+					<p><strong>¿La música?</strong> escucho de todo, pero me gusta especialmente REM y Paul Mc Cartney. Sobretodo lentas para poder bailar pegada, que eso si es bailar. También me gusta Franz Ferdinand pero prefiero The Strokes.</p>
+
+					<p><strong>De cine...</strong> mis películas favoritas son las de acción. Soy muy fan de Bruce Willis. Todo lo que toca ese tío se convierte en oro. Qué forma de llenar la pantalla, ¡pardiez!</p>
 		  		</div>
 
 		  		<div class="tab-pane" id="busca">
@@ -57,38 +62,27 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
-		  			<% 3.times do %>
+		  			<% 5.times do %>
 						<%= render '/shared/user/celes-item' %>
-						<hr>
 						<% end %>
-
-						<%= render '/shared/user/pagination' %>
 		  		</div>
 
 		  		<div class="tab-pane" id="notas">
-		  			<h4>Tus notas de María González <span>(tranquilo, ella no las verá)</span></h4>
+		  			<h4>Tus notas de María González <span>(tranquilo, él/ella no las verá)</span></h4>
 		  			<hr>
-		  			<% 3.times do %>
-		  				<div class="nota-item">
-		  					<div class="erase">X</div>
-		  					<div class="info">05/11/2013 - 22:36h</div>
-		  					<p>Es buena personam generoso, atractivo, simpáticoy además le gusta mucho recoger animalicos atropellados en la autopista. Y lo hace sin animo de lucro porque luego no vende sus peles. Les da un entierro digno.</p>	
-		  				</div>
-		  				<hr>
+		  			<% 5.times do %>
+		  				<%= render '/shared/user/nota-item' %>
 		  			<% end %>
 
 		  			<div class="new-nota">
 		  				<form>
-		  					<textarea rows="4" class="span8" placeholder="Nueva nota"></textarea>
+		  					<textarea placeholder="Nueva nota">Nunca me contesta. ¿Será por mi aliento insecticida? Y, sobretodo... ¿cómo lo habrá olido por internet?</textarea>
 		  					<div class="pull-right controls">
-		  						<%= link_to "Cancelar", "" %> <button type="submit" class="btn">Añadir nota</button>
+		  						<button type="submit" class="btn btn-info">Añadir nota</button>
 		  					</div>
 		  				</form>
-		  				<div class="clearfix"></div>
 		  			</div>
-		  			
-		  			<%= render '/shared/user/pagination' %>
-		  
+		  					  
 		  		</div>
 				</div>
 			</div>

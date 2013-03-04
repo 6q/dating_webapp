@@ -744,8 +744,21 @@ section.chat{
       margin:10px;
     }
 
+    #como {
+      h4 {
+        font-weight:normal;
+        line-height:1.4em;
+      }
+    }
+
     #dicen{
       @extend .celestinos;
+    }
+
+    .pagination {
+        span.pages {
+          float:none;
+        }
     }
 
     #notas{
@@ -754,20 +767,31 @@ section.chat{
         font-weight: normal;
         font-size: 0.9em;
       }
-      .nota-item{
-        .erase{
-          position: absolute;
-          right:10px;
+      .nota-item {
+
+        margin-bottom:20px;
+        border-bottom:#e0e0e0 1px solid;
+
+        .heading {
+          @include clearfix;
+          margin-bottom:10px;
+
+          small {
+            color:#666;
+            font-size:.8em;
+          }  
         }
+        
       }
+
       .new-nota {
-        background-color: gray;
         textarea{
-          padding-right: 45px;
-          margin:10px 0 10px 20px;
+          width:665px;
+          height:100px;
+          margin-bottom:20px;
         }
         .controls{
-          margin: 0 20px 20px 0;
+          margin-bottom:20px;
         }
       }
     }

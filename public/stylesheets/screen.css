@@ -8055,23 +8055,37 @@ section.chat .sidebar ul li {
 .user-profile .profile-tabs .tab-pane {
   margin: 10px;
 }
+.user-profile .profile-tabs #como h4 {
+  font-weight: normal;
+  line-height: 1.4em;
+}
+.user-profile .profile-tabs .pagination span.pages {
+  float: none;
+}
 .user-profile .profile-tabs #notas h4 span {
   font-weight: normal;
   font-size: 0.9em;
 }
-.user-profile .profile-tabs #notas .nota-item .erase {
-  position: absolute;
-  right: 10px;
+.user-profile .profile-tabs #notas .nota-item {
+  margin-bottom: 20px;
+  border-bottom: #e0e0e0 1px solid;
 }
-.user-profile .profile-tabs #notas .new-nota {
-  background-color: gray;
+.user-profile .profile-tabs #notas .nota-item .heading {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 10px;
+}
+.user-profile .profile-tabs #notas .nota-item .heading small {
+  color: #666;
+  font-size: .8em;
 }
 .user-profile .profile-tabs #notas .new-nota textarea {
-  padding-right: 45px;
-  margin: 10px 0 10px 20px;
+  width: 665px;
+  height: 100px;
+  margin-bottom: 20px;
 }
 .user-profile .profile-tabs #notas .new-nota .controls {
-  margin: 0 20px 20px 0;
+  margin-bottom: 20px;
 }
 
 /* search */
