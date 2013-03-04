@@ -659,21 +659,71 @@ section.chat{
         }
       }
     }
-    a{text-decoration: underline;}
+    a{
+      text-decoration: underline;
+    }
   }
   .small{
     font-size: .8em;
   }
 
   article.action-links{
-    width:100%;
-    margin: 20px 0 20px -10px;
-    padding: 0 5px;
-    display: inline-block;
-    li{
-      float: left;
-      margin-left: 50px;
-      
+
+    background:$link-color;
+    padding:20px;
+    margin:10px 0;
+    margin-left:-10px;
+
+    a {
+      color:#fff;
+      line-height:30px;
+    }
+
+    i {
+      background:url(images/sprite.png) left top no-repeat;
+      display:block;
+      float:left;
+      width:30px;
+      height:30px;
+      margin-right:5px;
+    }
+
+    ul {
+      margin:0;
+      padding:0;
+
+      li {
+        float:left;
+        margin:0 25px;
+
+
+        &.message {
+          i {
+            background-position:4px -156px;
+          }
+          
+        }
+
+        &.chat {
+          i {
+            background-position:-25px -156px;  
+          }
+          
+        }
+
+        &.like {
+          i {
+            background-position:-57px -156px;
+          }
+        }
+
+        &.block {
+          i {
+            background-position:-86px -156px;
+          }
+        }
+
+      }
     }
   }
 

@@ -8002,14 +8002,42 @@ section.chat .sidebar ul li {
   font-size: .8em;
 }
 .user-profile article.action-links {
-  width: 100%;
-  margin: 20px 0 20px -10px;
-  padding: 0 5px;
-  display: inline-block;
+  background: #5caae8;
+  padding: 20px;
+  margin: 10px 0;
+  margin-left: -10px;
 }
-.user-profile article.action-links li {
+.user-profile article.action-links a {
+  color: #fff;
+  line-height: 30px;
+}
+.user-profile article.action-links i {
+  background: url(images/sprite.png) left top no-repeat;
+  display: block;
   float: left;
-  margin-left: 50px;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.user-profile article.action-links ul {
+  margin: 0;
+  padding: 0;
+}
+.user-profile article.action-links ul li {
+  float: left;
+  margin: 0 25px;
+}
+.user-profile article.action-links ul li.message i {
+  background-position: 4px -156px;
+}
+.user-profile article.action-links ul li.chat i {
+  background-position: -25px -156px;
+}
+.user-profile article.action-links ul li.like i {
+  background-position: -57px -156px;
+}
+.user-profile article.action-links ul li.block i {
+  background-position: -86px -156px;
 }
 .user-profile .profile-tabs {
   margin: 0;
