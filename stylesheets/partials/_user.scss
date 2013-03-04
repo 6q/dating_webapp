@@ -1048,6 +1048,13 @@ section.messages{
       margin-bottom:25px;
       line-height:1em;
     }
+
+    .advanced {
+      font-size:.8em;
+      strong {
+        font-size:1.2em;
+      }
+    }
     
     input[type=checkbox] {
       display: none;
@@ -1072,16 +1079,19 @@ section.messages{
   }
 
   .blocked{
-    padding-bottom: 20px;
-    .table{
-      margin-left:385px;
-      display: block;
+    
+    td, th {
+      text-align:center;
     }
+
   }
 
-  .button{
-    margin: 30px auto 30px auto;
+.button{
+    border-top:#e0e0e0 1px solid;
     text-align: center;
+    padding-top:20px;
+    margin-top:20px;
+    margin-bottom:20px;
   }
 
 }

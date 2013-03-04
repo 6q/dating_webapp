@@ -8287,6 +8287,12 @@ section.chat .sidebar ul li {
   margin-bottom: 25px;
   line-height: 1em;
 }
+.settings .col .advanced {
+  font-size: .8em;
+}
+.settings .col .advanced strong {
+  font-size: 1.2em;
+}
 .settings .col input[type=checkbox] {
   display: none;
 }
@@ -8305,16 +8311,15 @@ section.chat .sidebar ul li {
   -moz-transition: background-position 0.3s ease-in-out;
   background-position: 0px 0;
 }
-.settings .blocked {
-  padding-bottom: 20px;
-}
-.settings .blocked .table {
-  margin-left: 385px;
-  display: block;
+.settings .blocked td, .settings .blocked th {
+  text-align: center;
 }
 .settings .button {
-  margin: 30px auto 30px auto;
+  border-top: #e0e0e0 1px solid;
   text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .modal .modal-header {

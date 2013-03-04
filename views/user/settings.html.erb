@@ -22,60 +22,65 @@
 							</div>
 						</div>
 						
-						<div class="control-group clearfix">
-							<div class="span3 right"><strong>Permitir que cualquiera pueda chatear conmigo</strong></div>
-							<div class="checkbox">
-	  							<input id="2" name="2" type="checkbox"/>
-	  							<label for="2">Check-me</label>
-							</div>
-						</div>
+						<!-- begin advanced settings, only for level3 users -->
+						<div class="advanced chat-options">
 
-						<div class="control-group clearfix">
-							<div class="span3 right">Sólo usuarios de mi área (menos de 50km)</div>
-							<div class="checkbox">
-	  							<input id="3" name="3" type="checkbox" />
-	  							<label for="3">Check-me</label>
+							<div class="control-group clearfix">
+								<div class="span3 right"><strong>Permitir que cualquiera pueda chatear conmigo</strong></div>
+								<div class="checkbox">
+		  							<input id="2" name="2" type="checkbox"/>
+		  							<label for="2">Check-me</label>
+								</div>
 							</div>
-						</div>
 
-						<div class="control-group clearfix">
-							<div class="span3 right">Sólo perfiles que conicidan con mis preferencias</div>
-							<div class="checkbox">
-	  							<input id="4" name="4" type="checkbox" />
-	  							<label for="4">Check-me</label>
+							<div class="control-group clearfix">
+								<div class="span3 right">Sólo usuarios de mi área (menos de 50km)</div>
+								<div class="checkbox">
+		  							<input id="3" name="3" type="checkbox" />
+		  							<label for="3">Check-me</label>
+								</div>
 							</div>
-						</div>
 
-						<div class="control-group clearfix">
-							<div class="span3 right">Sólo perfiles que estén en mis favoritos</div>
-							<div class="checkbox">
-	  							<input id="5" name="5" type="checkbox"/>
-	  							<label for="5">Check-me</label>
+							<div class="control-group clearfix">
+								<div class="span3 right">Sólo perfiles que conicidan con mis preferencias</div>
+								<div class="checkbox">
+		  							<input id="4" name="4" type="checkbox" />
+		  							<label for="4">Check-me</label>
+								</div>
 							</div>
-						</div>
 
-						<div class="control-group clearfix">
-							<div class="span3 right">Sólo perfiles que estén en mis favoritos y yo en los suyos</div>
-							<div class="checkbox">
-	  							<input id="6" name="6" type="checkbox"/>
-	  							<label for="6">Check-me</label>
+							<div class="control-group clearfix">
+								<div class="span3 right">Sólo perfiles que estén en mis favoritos</div>
+								<div class="checkbox">
+		  							<input id="5" name="5" type="checkbox"/>
+		  							<label for="5">Check-me</label>
+								</div>
 							</div>
-						</div>
 
-						<div class="control-group clearfix">
-							<div class="span3 right">Sólo a perfiles con los que haya mantenido una conversación previa (estén o no en favoritos)</div>
-							<div class="checkbox">
-	  							<input id="7" name="7" type="checkbox"/>
-	  							<label for="7">Check-me</label>
+							<div class="control-group clearfix">
+								<div class="span3 right">Sólo perfiles que estén en mis favoritos y yo en los suyos</div>
+								<div class="checkbox">
+		  							<input id="6" name="6" type="checkbox"/>
+		  							<label for="6">Check-me</label>
+								</div>
 							</div>
-						</div>
 
-						<div class="control-group clearfix">
-							<div class="span3 right">Sólo usuarios a los que haya valorado el perfil</div>
-							<div class="checkbox">
-	  							<input id="8" name="8" type="checkbox"/>
-	  							<label for="8">Check-me</label>
+							<div class="control-group clearfix">
+								<div class="span3 right">Sólo a perfiles con los que haya mantenido una conversación previa (estén o no en favoritos)</div>
+								<div class="checkbox">
+		  							<input id="7" name="7" type="checkbox"/>
+		  							<label for="7">Check-me</label>
+								</div>
 							</div>
+
+							<div class="control-group clearfix">
+								<div class="span3 right">Sólo usuarios a los que haya valorado el perfil</div>
+								<div class="checkbox">
+		  							<input id="8" name="8" type="checkbox"/>
+		  							<label for="8">Check-me</label>
+								</div>
+							</div>
+
 						</div>
 
 					</form>
@@ -155,6 +160,9 @@
 				</div>
 
 			</article>
+				<div class="button">
+					<button class="btn btn-large btn-info" type="button">Guardar Configuración</button>
+				</div>
 		</div>
 	</section>
 
@@ -173,25 +181,29 @@
 				<h4>Ususarios bloqueados</h4>
 				<p>Has bloqueado estos ususarios. ¿Has cambiado de opinión?</p>
 
-				<div class="table">
-					<div class="span1 text-center">No le veo</div>
-					<div class="span1 text-center">No me ve</div>
-				</div>
+					<table border="0" cellpadding="5" cellspacing="0" align="center">
+						<tr>
+							<th></th>
+							<th>No le veo</th>
+							<th>No me ve</th>
+						</tr>
 
-				<% 4.times.each do %>
-				<div class="offset1">
-					<div class="span4"><i class="icon-remove"></i> <%= link_to "Maria", "user-profile" %> 24 años, Barcelona</div>
-					<div class="span1 align-center"><input type="checkbox"></div>
-					<div class="span1 align-center"><input type="checkbox"></div>
-				</div>
-				<% end %>
+						<% 10.times.each do %>
+						<tr>
+							<td width="350" style="text-align:left"><%= link_to "Maria", "user-profile" %> 24 años, L'Hospitalet de Llobregat</td>
+							<td width="100"><input type="checkbox"></td>
+							<td width="100"><input type="checkbox"></td>
+						</tr>
 
+						<% end %>
+
+					</table>
+					<div class="button">
+						<button class="btn btn-large btn-info" type="button">Guardar Configuración</button>
+					</div>
 			</article>
 		</div>
 	</section>
 	
-	<div class="button">
-		<button class="btn btn-large btn-info" type="button">Guardar Configuración</button>
-	</div>
 
 </section>
