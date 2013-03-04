@@ -89,4 +89,11 @@ $(document).ready(function(){
     $('.msg-reply-dialog .reply-form, .msg-reply-dialog .pic img').toggle();
   });
 
+  $('#nice-couple li a').hover(function(){
+    $(this).parent().parent().find('li a').addClass('active');
+    $(this).parent().parent().find('li:gt('+$(this).parent().index()+') a').removeClass('active');
+  },function(){
+    $(this).parent().parent().find('li a').removeClass('active');
+  });
+
 });

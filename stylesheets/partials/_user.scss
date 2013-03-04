@@ -835,17 +835,16 @@ section.chat{
           display:block;
           width:16px;
           height:16px;
-          margin:0px 2px;
+          padding:2px;
           background:url(images/sprite.png) -373px -136px no-repeat;
           text-indent:-999em;
-          &:hover {
-            background-position:-357px -136px;
+          &:hover, &.active {
+            background-position:-355px -136px;
           }
         }
       }
     }
   }
-
 }
 
 
