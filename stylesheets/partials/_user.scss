@@ -663,6 +663,37 @@ section.chat{
   
 }
 
+#activity-proposal {
+
+  p {
+    margin:0;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+
+    li {
+      a {
+        display:block;
+        float:left;
+        width:60px;
+        height:60px;
+        background:url(images/sprite-activities.png) top left no-repeat;
+        font-size:.8em;
+        text-align:center;
+        color:#666;
+        padding-top:60px;
+        margin:0px 15px;
+
+        &:first-child {
+          margin-left:0px;
+        }
+      }
+    }
+  }
+}
+
 /* user-profile */
 
 .user-profile{

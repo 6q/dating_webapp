@@ -1,0 +1,25 @@
+<!-- Modal -->
+<div id="activity-proposal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Proponer una actividad</h3>
+    <p>Selecciona una propuesta para compartir...</p>
+  </div>
+  <div class="modal-body">
+
+    <ul>
+      <% (1..7).each do %>
+      <li><a href="#">Una cerveza</a></li>
+      <% end %>
+    </ul>
+
+    <div class="reply">
+      <textarea>OLA KE ASE BEBE SERVESA O KE ASE</textarea>
+    </div>
+    
+  </div>
+  <div class="modal-footer">
+    <%= link_to 'Cancelar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <button class="btn btn-info">Proponer</button>
+  </div>
+</div>
