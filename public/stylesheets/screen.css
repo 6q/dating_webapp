@@ -2056,7 +2056,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('../images/glyphicons-halflings.png?1362309786');
+  background-image: url('../images/glyphicons-halflings.png?1361954983');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -7850,7 +7850,7 @@ section.chat .sidebar ul li {
   height: 21px;
   background: url(images/sprite.png) -355px -83px no-repeat;
   display: block;
-  float: left;
+  float: right;
   margin-left: 10px;
   text-indent: -999em;
   overflow: hidden;

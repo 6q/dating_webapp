@@ -1,3 +1,5 @@
+<%= @tab %>
+
 <div class="msg-item">
 	<div class="clearfix">
 		<div class="pic"><a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
@@ -8,10 +10,10 @@
 			</div>
 		<div class="reply">
 			<%= link_to 'Eliminar', '#delete-confirm', 'data-toggle' => 'modal', :class => 'delete' %>
-			<%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' %>
+			<%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
 		</div>
 	</div>
-	<% if rand(25...50) > 25 %>
+	<% if rand(1...50) > 25 %>
 		<%= render '/shared/user/msg-item-proposal' %>
 	<% end %>
 </div>

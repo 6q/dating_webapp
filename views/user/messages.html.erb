@@ -11,7 +11,7 @@
 	<hr class="thin">
 
 	<div class="tabs">
-		<ul class="nav nav-tabs" id="myTab">
+		<ul class="nav nav-tabs" id="messages-tab">
   		  <li class="active"><a href="#recibidos">Recibidos (2)</a></li>
 		  <li><a href="#enviados">Enviados</a></li>
 		  <li><a href="#eliminados">Eliminados</a></li>
@@ -26,6 +26,7 @@
 
 			  <!-- begin tabs -->
 			  <div class="tab-pane active" id="recibidos">
+			  	<% @tab = 'received-messages' %>
 			  	<% 10.times do  %>
 			  		<%= render '/shared/user/msg-item' %>
 			  	<% end %>
@@ -33,6 +34,7 @@
 			  </div>
 
 			  <div class="tab-pane" id="enviados">
+			  	<% @tab = 'sent-messages' %>
 			  	<% 10.times do %>
 			  		<%= render '/shared/user/msg-item' %>
 			  	<% end %>
@@ -40,6 +42,7 @@
 			  </div>
 			  
 			  <div class="tab-pane" id="eliminados">
+			  	<% @tab = 'deleted-messages' %>
 			  	<% 10.times do %>
 			  		<%= render '/shared/user/msg-item' %>
 			  	<% end %>
@@ -52,8 +55,5 @@
 	</div>
 
 <script type="text/javascript">
-	$('#myTab a').click(function (e) {
-  		e.preventDefault();
-  			$(this).tab('show');
-		})
+
 </script>

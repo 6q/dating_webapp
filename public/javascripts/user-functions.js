@@ -46,6 +46,11 @@ $(document).ready(function(){
   	e.preventDefault();
   });
 
+  $('#messages-tab a').click(function (e) {
+      e.preventDefault();
+        $(this).tab('show');
+    });
+
   //$('#user-block').modal('show');
 
 });
