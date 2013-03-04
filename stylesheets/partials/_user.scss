@@ -9,9 +9,6 @@ li{
   text-align: right;
 }
 
-
-
-
 /* user */
 
 .user {
@@ -207,51 +204,10 @@ section.list {
       }
 
       &.actions {
-        margin-bottom:10px;
-        li {
-          display:block;
-          width:30px;
-          height:30px;
-          float:left;
-          margin:5px!important;
-          a {
-            display:block;
-            float:left;
-            width:30px;
-            height:30px;
-            overflow:hidden;
-            text-indent:-999em;
-            background:url(images/sprite.png) left top no-repeat;
-          }
-
-            &.message {
-              a {
-                background-position:4px -156px;
-              }
-              
-            }
-
-            &.chat {
-              a {
-                background-position:-25px -156px;  
-              }
-              
-            }
-
-            &.like {
-              a {
-                background-position:-57px -156px;
-              }
-            }
-
-            &.block {
-              a {
-                background-position:-86px -156px;
-              }
-            }
-        }
+          @include user-actions;
       }
-    }
+
+    }    
 
     header {
 
