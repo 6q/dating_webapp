@@ -8148,21 +8148,9 @@ section.chat .sidebar ul li {
     }
     */
 }
-.celestinos h4, .profile h4, .user-profile .profile-tabs #dicen h4 {
-  margin: 0 0 0 2%;
-  padding: 13px 0 5px 0;
-  color: #5caae8;
-  font-weight: normal;
-  float: left;
-}
-.celestinos h4 span, .profile h4 span, .user-profile .profile-tabs #dicen h4 span {
-  font-weight: normal;
-  color: #333333;
-  font-size: .9em;
-}
-.celestinos .mejora, .profile .mejora, .user-profile .profile-tabs #dicen .mejora {
-  float: right;
-  margin: 12px 20px 0 0;
+.celestinos .boxed .boxed-inner header h1 span, .profile .boxed .boxed-inner header h1 span, .user-profile .profile-tabs #dicen .boxed .boxed-inner header h1 span {
+  font-size: .6em;
+  color: #666;
 }
 .celestinos p, .profile p, .user-profile .profile-tabs #dicen p {
   margin: 0;

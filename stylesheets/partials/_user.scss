@@ -842,22 +842,13 @@ section.messages{
 .celestinos{
   @extend section.list;
 
-  h4{
-    margin: 0 0 0 2%;
-    padding:13px 0 5px 0;
-    color: $link-color;
-    font-weight: normal;
-    float: left;
-    span{
-      font-weight: normal;
-      color: $text-color;
-      font-size: .9em;
+  .boxed .boxed-inner header h1 {
+    span {
+      font-size:.6em;
+      color:#666;
     }
   }
-  .mejora{
-    float:right;
-    margin: 12px 20px 0 0;
-  }
+
   p {
     margin:0;
     span{color: $link-color;}
