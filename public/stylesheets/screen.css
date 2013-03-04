@@ -7820,6 +7820,7 @@ section.chat .sidebar ul li {
 }
 .msg-item .info {
   background: #fff;
+  margin-left: 75px;
 }
 .msg-item .info .msg-data {
   font-size: .85em;
@@ -7831,6 +7832,13 @@ section.chat .sidebar ul li {
   font-size: 1.2em;
   font-weight: bold;
 }
+.msg-item .info .msg-date {
+  position: absolute;
+  right: 10px;
+  color: #666;
+  font-size: .8em;
+  top: 10px;
+}
 .msg-item .info .msg {
   padding: 0em 0.5em;
   line-height: 1em;
@@ -7838,6 +7846,9 @@ section.chat .sidebar ul li {
 .msg-item .info .msg a {
   font-size: 1em;
   color: #333;
+}
+.msg-item .info .msg.clear {
+  clear: both;
 }
 .msg-item .reply {
   width: 65px;

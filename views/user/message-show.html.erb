@@ -22,7 +22,20 @@
 	<div class="boxed">
 		<div class="boxed-inner">
 
-			message body
+			<div class="msg-item">
+				<div class="clearfix">
+					<div class="pic"><a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
+					<div class="info">
+							<p class="msg-data"><%= link_to "Judit", "#" %> 21 años, Barcelona</p>
+							<p class="msg-date">8/12/2012 - 22:36h</p>
+							<p class="msg"><%= link_to 'Hola Jamelga, estas tremenda bla bla bla bla', '/user/message-show' %></p>
+					</div>
+				</div>
+				<% if rand(1...50) > 25 %>
+					<%= render '/shared/user/msg-item-proposal' %>
+				<% end %>
+			</div>
+
 
 		</div>
 	</div>

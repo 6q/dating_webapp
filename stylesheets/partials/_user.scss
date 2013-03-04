@@ -477,6 +477,7 @@ section.chat{
 
   .info {
     background:#fff;
+    margin-left:75px;
 
     .msg-data {
       font-size:.85em;
@@ -490,12 +491,24 @@ section.chat{
       }
     }
 
+    .msg-date {
+      position:absolute;
+      right:10px;
+      color:#666;
+      font-size:.8em;
+      top:10px;
+    }
+
     .msg {
       padding:0em .5em;
       line-height:1em;
       a {
         font-size:1em;
         color:#333;
+      }
+
+      &.clear {
+        clear:both;
       }
     }
 
