@@ -477,7 +477,7 @@ section.chat{
 
   .info {
     background:#fff;
-    margin-left:75px;
+    margin-left:80px;
 
     .msg-data {
       font-size:.85em;
@@ -511,6 +511,60 @@ section.chat{
         clear:both;
       }
     }
+
+  }
+
+  .msg-reply {
+    @include clearfix;
+    background:#f2f2f2;
+    border-top:#e0e0e0 1px dashed;
+    border-bottom:#e0e0e0 1px dashed;
+    padding:10px;
+    margin:10px 0;
+
+    .msg-date {
+      font-size:.8em;
+      color:#666;
+    }
+
+    p {
+      margin-left:75px;
+    }
+  }
+
+  .msg-origin {
+    @extend .msg-reply;
+    background:#fff;
+    border:none;
+  }
+
+
+  .msg-reply-dialog {
+    @include clearfix;
+    border-top:#e0e0e0 1px dashed;
+    padding:10px;
+    background:#f2f2f2;
+
+    .pic img {
+      display:none;
+    }
+
+    .msg-actions {
+      margin-left:75px;
+    }
+
+    .reply-form {
+
+      display:none;
+
+      textarea {
+        width:585px;
+        margin:10px 0;
+        height:80px;
+      }  
+    }
+
+    
 
   }
 

@@ -62,4 +62,9 @@ $(document).ready(function(){
       window.location.hash = e.target.hash.replace("#", "#" + prefix);
   });
 
+  $('.msg-reply-dialog .action-reply').click(function(e){
+    e.preventDefault();
+    $('.msg-reply-dialog .reply-form, .msg-reply-dialog .pic img').toggle();
+  });
+
 });

@@ -28,12 +28,47 @@
 					<div class="info">
 							<p class="msg-data"><%= link_to "Judit", "#" %> 21 años, Barcelona</p>
 							<p class="msg-date">8/12/2012 - 22:36h</p>
-							<p class="msg"><%= link_to 'Hola Jamelga, estas tremenda bla bla bla bla', '/user/message-show' %></p>
+							<div class="msg">
+								<p>Hola, tu perfil me parece super interesante.</p>
+								<p>He pensado que podríamos quedar y ver el atardecer en algún lago con cisnes. Me gustan mucho los cisnes, ¿y a ti?</p>
+							</div>
+					</div>
+					<div class="conversation">
+							<div class="msg-reply">
+								<div class="pic">
+									<a href="/user/user-profile"><img src="/users/placeholder-user.jpg" width="60" height ="60"></a>
+								</div>
+								<p class="msg-date">8/12/2012 - 22:36h</p>
+								<p>Hola! Me parece una idea excelente. Me encantan los cisnes, de hecho desde que soy pequeño los colecciono. Creo que fue preciamente por los cisnes por lo que me hice taxidermista.</p>
+							</div>
+
+							<div class="msg-origin">
+								<div class="pic">
+									<a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a>
+								</div>
+								<p class="msg-date">8/12/2012 - 22:36h</p>
+								<p>¡Taxidermista! Qué profesión tan interesante. Mi gato murió la semana pasada y no me atreví a enterrarlo. Lo tengo en el congelador. ¿Podrías disecarlo por mí?</p>
+							</div>
+
+							<div class="msg-reply-dialog clearfix">
+
+								<div class="pic">
+									<a href="/user/user-profile"><img src="/users/placeholder-user.jpg" width="60" height ="60"></a>
+								</div>
+
+								<div class="msg-actions">
+									<a href="#" class="action-reply">Responder</a> - <a href="">Proponer actividad</a> - <%= link_to 'Bloquear', '#user-block', 'data-toggle' => 'modal' %>
+									<%= link_to 'Eliminar hilo', '#delete-confirm', 'data-toggle' => 'modal', :class => 'pull-right' %>
+								</div>
+
+								<div class="reply-form">								
+									<textarea>Por supuesto. Yo por ti disecaba hasta la luna, nena.</textarea>
+									<button class="btn btn-info pull-right">Responder</button>
+								</div>
+							</div>
+
 					</div>
 				</div>
-				<% if rand(1...50) > 25 %>
-					<%= render '/shared/user/msg-item-proposal' %>
-				<% end %>
 			</div>
 
 

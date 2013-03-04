@@ -7820,7 +7820,7 @@ section.chat .sidebar ul li {
 }
 .msg-item .info {
   background: #fff;
-  margin-left: 75px;
+  margin-left: 80px;
 }
 .msg-item .info .msg-data {
   font-size: .85em;
@@ -7849,6 +7849,47 @@ section.chat .sidebar ul li {
 }
 .msg-item .info .msg.clear {
   clear: both;
+}
+.msg-item .msg-reply, .msg-item .msg-origin {
+  overflow: hidden;
+  *zoom: 1;
+  background: #f2f2f2;
+  border-top: #e0e0e0 1px dashed;
+  border-bottom: #e0e0e0 1px dashed;
+  padding: 10px;
+  margin: 10px 0;
+}
+.msg-item .msg-reply .msg-date, .msg-item .msg-origin .msg-date {
+  font-size: .8em;
+  color: #666;
+}
+.msg-item .msg-reply p, .msg-item .msg-origin p {
+  margin-left: 75px;
+}
+.msg-item .msg-origin {
+  background: #fff;
+  border: none;
+}
+.msg-item .msg-reply-dialog {
+  overflow: hidden;
+  *zoom: 1;
+  border-top: #e0e0e0 1px dashed;
+  padding: 10px;
+  background: #f2f2f2;
+}
+.msg-item .msg-reply-dialog .pic img {
+  display: none;
+}
+.msg-item .msg-reply-dialog .msg-actions {
+  margin-left: 75px;
+}
+.msg-item .msg-reply-dialog .reply-form {
+  display: none;
+}
+.msg-item .msg-reply-dialog .reply-form textarea {
+  width: 585px;
+  margin: 10px 0;
+  height: 80px;
 }
 .msg-item .reply {
   width: 65px;
