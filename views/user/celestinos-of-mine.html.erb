@@ -44,7 +44,6 @@
 
 			  <!-- begin tabs -->
 			  <div class="tab-pane active" id="confirmados">
-			  	<h4>Tus Celestin@s</h4>
 					<% 5.times do %>
 						<%= render '/shared/user/celes-item' %>
 					<% end %>
@@ -53,20 +52,10 @@
 			  </div>
 
 			  <div class="tab-pane" id="confirmar">
-			  	<h4>Celestin@s por confirmar</h4>
-					<div class="clearfix"></div>
 					
-			  	<% 3.times do %>
-					<%= render '/shared/user/celes-item' %>
-
-					<div class="choose">
-						<p>¿Aceptar?</p>
-						<i class="icon-ok"></i>
-						<i class="icon-remove"></i>
-					</div>
-
-					<div class="clearfix"></div>
-					<hr>
+					<% @type = 'por-confirmar' %>
+			  		<% 10.times do %>
+						<%= render '/shared/user/celes-item' %>
 					<% end %>
 
 			  	<%= render '/shared/user/pagination' %>

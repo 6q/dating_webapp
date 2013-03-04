@@ -8155,6 +8155,9 @@ section.chat .sidebar ul li {
   font-size: .6em;
   color: #666;
 }
+.celestinos .boxed .boxed-inner .celes-item, .profile .boxed .boxed-inner .celes-item, .user-profile .profile-tabs #dicen .boxed .boxed-inner .celes-item {
+  margin: 10px;
+}
 .celestinos p, .profile p, .user-profile .profile-tabs #dicen p {
   margin: 0;
 }
@@ -8197,17 +8200,11 @@ section.chat .sidebar ul li {
 .celestinos .celes-item .relationship, .profile .celes-item .relationship, .user-profile .profile-tabs #dicen .celes-item .relationship {
   margin-right: 10px;
 }
-.celestinos #confirmar .celes-item, .profile #confirmar .celes-item, .user-profile .profile-tabs #dicen #confirmar .celes-item {
-  float: left;
-  width: 570px;
-}
 .celestinos .choose, .profile .choose, .user-profile .profile-tabs #dicen .choose {
-  background-color: lightgray;
-  float: right;
-  width: 100px;
-  margin-top: 17px;
-  padding: 20px 0;
+  border-top: #e0e0e0 1px dashed;
   text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 .celestinos .white-box, .profile .white-box, .user-profile .profile-tabs #dicen .white-box {
   text-align: center;

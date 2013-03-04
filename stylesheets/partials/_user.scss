@@ -846,12 +846,19 @@ section.messages{
 .celestinos {
   @extend section.list;
 
-  .boxed .boxed-inner header h1 {
-    span {
-      font-size:.6em;
-      color:#666;
+  .boxed .boxed-inner {
+    header h1 {
+      span {
+        font-size:.6em;
+        color:#666;
+      }
     }
-  }
+
+    .celes-item {
+      margin:10px;
+    }
+
+  } 
 
   p {
     margin:0;
@@ -902,23 +909,17 @@ section.messages{
     .relationship {
       margin-right: 10px;
     }
-
     
   }
 
-  #confirmar{
-    .celes-item{
-      float: left;
-      width: 570px;
-    }
-  }
   .choose{
-    background-color: lightgray;
-    float: right;
-    width: 100px;
-    margin-top: 17px;
-    padding: 20px 0;
-    text-align: center;
+    border-top:#e0e0e0 1px dashed;
+    text-align:center;
+    margin-top:10px;
+    padding-top:10px;
+    a {
+
+    }
   }
   
   .white-box{
