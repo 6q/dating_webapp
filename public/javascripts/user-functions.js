@@ -67,6 +67,16 @@ $(document).ready(function(){
     $('.nav-tabs a[href="#mejora"]').click();
   });
 
+  $('#color-switcher .picker a').click(function(e){
+    e.preventDefault();
+    $('#color-switcher .leaf').toggle();
+  });
+
+
+$('#color-switcher .leaf a').click(function(e){
+    e.preventDefault();
+    $('#color-switcher .leaf').toggle();
+  });
 
   var hash = document.location.hash;
   var prefix = "tab_";
