@@ -952,28 +952,39 @@ section.messages{
     display: inline-block;
     width:80%;
     margin: 20px 0 20px 10%; 
+
     ul{
+      @include clearfix;
       margin:20px 0;
-      display: inline-block;
+      margin-left:10px;
+
       li{
-        width: 90px;
+        width: 42px;
+        height:56px;
         float: left;
-        margin-left: 40px;
+        margin:0px 45px;
+        padding-top:50px;
         text-align: center;
+        background:url(images/sprite-hearts.jpg) left top no-repeat;
       }
     }
 
-    .red-heart{
-      color:red;
+
+
+    .red-heart {
+      color:#e61c25;
     }
     .violet-heart{
-      color:violet;
+      background-position:-42px 0;
+      color:#815ca2;
     }
     .green-heart{
-      color:green;
+      background-position:-84px 0;
+      color:#8bc457;
     }
     .yellow-heart{
-      color:yellow;
+      background-position:-126px 0;
+      color:#fcc009;
     }
     .btns{
       margin:10px auto;

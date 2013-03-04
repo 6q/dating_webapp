@@ -2076,7 +2076,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url('../images/glyphicons-halflings-white.png');
+  background-image: url('../images/glyphicons-halflings-white.png?1362422503');
 }
 
 .icon-glass {
@@ -8236,26 +8236,34 @@ section.chat .sidebar ul li {
   margin: 20px 0 20px 10%;
 }
 .celestinos .celes-box ul, .profile .celes-box ul, .user-profile .profile-tabs #dicen .celes-box ul {
+  overflow: hidden;
+  *zoom: 1;
   margin: 20px 0;
-  display: inline-block;
+  margin-left: 10px;
 }
 .celestinos .celes-box ul li, .profile .celes-box ul li, .user-profile .profile-tabs #dicen .celes-box ul li {
-  width: 90px;
+  width: 42px;
+  height: 56px;
   float: left;
-  margin-left: 40px;
+  margin: 0px 45px;
+  padding-top: 50px;
   text-align: center;
+  background: url(images/sprite-hearts.jpg) left top no-repeat;
 }
 .celestinos .celes-box .red-heart, .profile .celes-box .red-heart, .user-profile .profile-tabs #dicen .celes-box .red-heart {
-  color: red;
+  color: #e61c25;
 }
 .celestinos .celes-box .violet-heart, .profile .celes-box .violet-heart, .user-profile .profile-tabs #dicen .celes-box .violet-heart {
-  color: violet;
+  background-position: -42px 0;
+  color: #815ca2;
 }
 .celestinos .celes-box .green-heart, .profile .celes-box .green-heart, .user-profile .profile-tabs #dicen .celes-box .green-heart {
-  color: green;
+  background-position: -84px 0;
+  color: #8bc457;
 }
 .celestinos .celes-box .yellow-heart, .profile .celes-box .yellow-heart, .user-profile .profile-tabs #dicen .celes-box .yellow-heart {
-  color: yellow;
+  background-position: -126px 0;
+  color: #fcc009;
 }
 .celestinos .celes-box .btns, .profile .celes-box .btns, .user-profile .profile-tabs #dicen .celes-box .btns {
   margin: 10px auto;
