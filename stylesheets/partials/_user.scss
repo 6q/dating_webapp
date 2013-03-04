@@ -796,6 +796,56 @@ section.chat{
       }
     }
   }
+
+  #nice-couple {
+    position:absolute;
+    z-index:999;
+    left:150px;
+    top:20px;
+    background:#fff;
+    background:rgba(255,255,255,.8);
+    border-radius:5px;
+    width:130px;
+    padding:10px 0;
+
+    p {
+      font-size:.7em;
+      text-align:center;
+    }
+
+    i {
+      display:block;
+      background: url(images/sprite.png) -432px -76px no-repeat;
+      width:35px;
+      height:35px;
+      margin:0px auto;
+      margin-bottom:10px;
+    }
+
+    ul {
+
+      @include clearfix;
+    width:100px;      
+    margin:0 auto;
+    padding:0;
+
+      li {
+        float:left;
+        a {
+          display:block;
+          width:16px;
+          height:16px;
+          margin:0px 2px;
+          background:url(images/sprite.png) -373px -136px no-repeat;
+          text-indent:-999em;
+          &:hover {
+            background-position:-357px -136px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 
