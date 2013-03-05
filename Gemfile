@@ -1,5 +1,6 @@
 source :rubygems
 
+ruby '1.9.3'
 gem 'serve', '1.5.1'
 
 # Use edge instead:
