@@ -6836,8 +6836,7 @@ header[role="banner"] {
   /* random background here in default */
   padding-top: 60px;
   position: relative;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 header[role="banner"] h1 {
   width: 298px;
@@ -6846,6 +6845,7 @@ header[role="banner"] h1 {
   padding: 0;
   padding-left: 50px;
   float: left;
+  margin-top: -10px;
 }
 header[role="banner"] h1 a {
   background: url("images/sprite.png") left top no-repeat;
@@ -6959,7 +6959,6 @@ section[role="main"] {
   padding-bottom: 30px;
 }
 section[role="main"] header.bg {
-  margin-top: -10px;
   margin-bottom: 20px;
 }
 section[role="main"] header.bg h1 {
