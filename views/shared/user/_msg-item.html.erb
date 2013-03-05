@@ -17,7 +17,7 @@
 	<% if boolean_param('activities').present? %>
 			<%= render '/shared/user/msg-item-proposal' %>
 	<% else %>
-		<% if rand(1...50) > 25 %>
+		<% if rand(1...50).to_i > 25 %>
 				<%= render '/shared/user/msg-item-proposal' %>
 		<% end %>
 	<% end %>
