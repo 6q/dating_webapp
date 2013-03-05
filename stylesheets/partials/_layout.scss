@@ -68,6 +68,8 @@ hr.thin {
       padding:10px;
       color:#333;
 
+      text-align:justify;
+
       p:last-child {
         margin-bottom:0;
       }
@@ -274,6 +276,7 @@ header[role="banner"]{
 section[role="main"] {
 
   padding-bottom:30px;
+  margin-top:10px;
 
   header.bg {
 

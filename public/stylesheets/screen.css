@@ -6702,6 +6702,9 @@ fieldset#access .actions .clearfix {
   margin-left: 180px;
 }
 
+.register-form {
+  text-align: justify;
+}
 .register-form fieldset {
   margin: 0;
 }
@@ -6769,6 +6772,7 @@ hr.thin {
 .box article .article-body {
   padding: 10px;
   color: #333;
+  text-align: justify;
 }
 .box article .article-body p:last-child {
   margin-bottom: 0;
@@ -6962,6 +6966,7 @@ header[role="banner"] nav[role="navigation"] ul li a:hover, header[role="banner"
 
 section[role="main"] {
   padding-bottom: 30px;
+  margin-top: 10px;
 }
 section[role="main"] header.bg {
   margin-bottom: 20px;
@@ -7065,6 +7070,9 @@ body.home header[role="banner"] {
 }
 #in-love header {
   cursor: pointer;
+}
+#in-love h2 {
+  font-size: 1.4em;
 }
 #in-love h2 a {
   font-size: .7em;
