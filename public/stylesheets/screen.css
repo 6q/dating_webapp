@@ -7244,7 +7244,7 @@ ul.miniSlider li.active {
   margin: 0;
 }
 .public-user-list ul li a {
-  color: #000;
+  color: #5caae8;
 }
 .public-user-list ul li a:hover {
   text-decoration: none;
@@ -7335,235 +7335,6 @@ aside#main-sidebar ul li a span {
   margin-left: 5px;
   border-radius: 20px;
   font-size: .8em;
-}
-
-#home-highlights h1 {
-  font-size: 120%;
-  margin: 0;
-  background: url(images/sprite.png) -431px -76px no-repeat;
-  padding-left: 45px;
-}
-#home-highlights header {
-  margin-bottom: 15px;
-}
-
-section.user-home {
-  /* MESSAGES */
-  /* ARTICLES */
-  /* related-list */
-}
-section.user-home h4 {
-  color: #5caae8;
-}
-section.user-home section#last-messages {
-  margin-left: -10px;
-}
-section.user-home section#related-list ul {
-  margin: 0;
-  padding: 0;
-  padding-top: 5px;
-}
-section.user-home section#related-list li {
-  list-style: none;
-  float: left;
-  margin: 0px 5px;
-}
-section.user-home section#related-list li.online img {
-  padding: 3px;
-  background: #8ccc8c;
-  width: 54px;
-  height: 54px;
-}
-section.user-home section#related-list h4 {
-  text-align: right;
-  margin: 10px 0;
-  margin-left: 15px;
-  padding: 0;
-  min-height: 40px;
-  padding-top: 10px;
-  width: 100px;
-  line-height: 1em;
-  color: #5caae8;
-  float: left;
-  border-right: #5caae8 1px solid;
-  margin-right: 10px;
-  padding-right: 10px;
-}
-section.user-home .button {
-  margin: 40px 0;
-  text-align: center;
-}
-section.user-home .list-header {
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-
-/* direct-search */
-section.home-users {
-  margin-left: -10px;
-}
-section.home-users h4 {
-  margin: 0;
-}
-section.home-users .user-list {
-  margin-left: -17px!important;
-}
-section.home-users .user-list li {
-  margin-left: 16px!important;
-}
-section.home-users .user-list li li {
-  margin: 0!important;
-}
-
-section.direct-search h4 {
-  color: #5caae8;
-  border-right: #5caae8 1px solid;
-  padding-right: 20px;
-  padding-top: 10px;
-  margin: 0px 15px;
-  margin-top: 10px;
-  width: 90px;
-  height: 140px;
-  margin-bottom: 10px;
-  text-align: right;
-  float: left;
-  background: url(images/cupido.png) 10px 70px no-repeat;
-}
-section.direct-search .searchform {
-  float: left;
-  margin-top: 10px;
-  position: relative;
-}
-section.direct-search .searchform form {
-  overflow: hidden;
-  *zoom: 1;
-  margin: 0;
-}
-section.direct-search .searchform label {
-  font-size: .9em;
-  margin-right: 10px;
-  width: 160px;
-  display: inline-block;
-  float: left;
-  margin-top: .3em;
-}
-section.direct-search .searchform label span {
-  color: #5caae8;
-}
-section.direct-search .searchform .sliders label {
-  margin-top: .5em;
-}
-section.direct-search .searchform .control-group {
-  overflow: hidden;
-  *zoom: 1;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-section.direct-search .searchform .controls {
-  width: 270px;
-  margin: 0;
-  float: left;
-}
-section.direct-search .searchform .controls input.span3, section.direct-search .searchform .controls input.span1 {
-  margin-left: 0;
-}
-section.direct-search .searchform .controls input.span1 {
-  margin-left: 0px;
-}
-section.direct-search .searchform .controls input.span3 {
-  width: 190px;
-}
-section.direct-search .searchform fieldset {
-  margin: 0;
-  padding: 0;
-}
-section.direct-search .searchform fieldset.span6 {
-  margin: 0;
-}
-section.direct-search .searchform fieldset.form-options {
-  padding-top: 9px;
-  overflow: hidden;
-  *zoom: 1;
-  width: 95px;
-  position: relative;
-}
-section.direct-search .searchform fieldset.form-options button {
-  font-size: 1em;
-  margin-top: 50px;
-}
-
-.blog-sidebar ul {
-  margin-bottom: 40px;
-}
-
-#box-blog {
-  margin-top: 35px;
-}
-#box-blog h2.category-title {
-  font-size: 1.5em;
-  margin: 0;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-#box-blog article {
-  margin-bottom: 20px;
-  background: #f2f2f2;
-}
-#box-blog article .addthis_toolbox {
-  float: right;
-}
-#box-blog article img {
-  width: 210px;
-  height: 148px;
-  border: #cccccc 5px solid;
-}
-#box-blog article.post img {
-  width: 700px;
-  height: 350px;
-  border: none;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  display: block;
-}
-#box-blog article.post header h1 {
-  font-size: 1.2em;
-  margin: 0;
-  margin-top: -5px;
-  margin-bottom: 10px;
-}
-#box-blog article small {
-  color: #999;
-  font-size: .7em;
-}
-#box-blog article .post-data {
-  background: #fff;
-  padding: 10px;
-}
-#box-blog article h1 {
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin-top: 0;
-}
-#box-blog article h1 a {
-  color: #000;
-}
-#box-blog article h1 a:hover {
-  text-decoration: none;
-}
-#box-blog article p {
-  font-size: .9em;
-  line-height: 1.6em;
-}
-#box-blog article footer {
-  background: none;
-  padding: 0;
-  border-top: #cccccc 1px solid;
-  padding-top: 20px;
-  margin-top: 40px;
-}
-#box-blog article footer .post-tags {
-  float: left;
-  font-size: 1.1em;
 }
 
 /* common */
@@ -7684,14 +7455,14 @@ li {
 .user #in-love article p {
   display: none;
 }
-.user section.list header, .user section.user-home header, .user section.chat header, .user .user-profile .profile-tabs #notas header, .user .celestinos header, .user .profile header, .user .user-profile .profile-tabs #dicen header {
+.user section.list header, .user section.chat header, .user .user-profile .profile-tabs #notas header, .user .celestinos header, .user .profile header, .user .user-profile .profile-tabs #dicen header, .user section.user-home header {
   overflow: hidden;
   *zoom: 1;
   border-bottom: #cccccc 1px solid;
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
-.user section.list header h1, .user section.user-home header h1, .user section.chat header h1, .user .user-profile .profile-tabs #notas header h1, .user .celestinos header h1, .user .profile header h1, .user .user-profile .profile-tabs #dicen header h1 {
+.user section.list header h1, .user section.chat header h1, .user .user-profile .profile-tabs #notas header h1, .user .celestinos header h1, .user .profile header h1, .user .user-profile .profile-tabs #dicen header h1, .user section.user-home header h1 {
   float: left;
   margin: 0;
   margin-top: 5px;
@@ -7700,43 +7471,43 @@ li {
   font-weight: normal;
   line-height: 1.2em;
 }
-.user section.list header form, .user section.user-home header form, .user section.chat header form, .user .user-profile .profile-tabs #notas header form, .user .celestinos header form, .user .profile header form, .user .user-profile .profile-tabs #dicen header form {
+.user section.list header form, .user section.chat header form, .user .user-profile .profile-tabs #notas header form, .user .celestinos header form, .user .profile header form, .user .user-profile .profile-tabs #dicen header form, .user section.user-home header form {
   margin: 0;
 }
-.user section.list header .sort, .user section.user-home header .sort, .user section.chat header .sort, .user .user-profile .profile-tabs #notas header .sort, .user .celestinos header .sort, .user .profile header .sort, .user .user-profile .profile-tabs #dicen header .sort {
+.user section.list header .sort, .user section.chat header .sort, .user .user-profile .profile-tabs #notas header .sort, .user .celestinos header .sort, .user .profile header .sort, .user .user-profile .profile-tabs #dicen header .sort, .user section.user-home header .sort {
   float: right;
 }
-.user section.list header .sort select, .user section.user-home header .sort select, .user section.chat header .sort select, .user .user-profile .profile-tabs #notas header .sort select, .user .celestinos header .sort select, .user .profile header .sort select, .user .user-profile .profile-tabs #dicen header .sort select {
+.user section.list header .sort select, .user section.chat header .sort select, .user .user-profile .profile-tabs #notas header .sort select, .user .celestinos header .sort select, .user .profile header .sort select, .user .user-profile .profile-tabs #dicen header .sort select, .user section.user-home header .sort select {
   font-size: .8em;
 }
-.user section.list .user-list, .user section.user-home .user-list, .user section.chat .user-list, .user .user-profile .profile-tabs #notas .user-list, .user .celestinos .user-list, .user .profile .user-list, .user .user-profile .profile-tabs #dicen .user-list {
+.user section.list .user-list, .user section.chat .user-list, .user .user-profile .profile-tabs #notas .user-list, .user .celestinos .user-list, .user .profile .user-list, .user .user-profile .profile-tabs #dicen .user-list, .user section.user-home .user-list {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: -12px;
 }
-.user section.list .user-list li, .user section.user-home .user-list li, .user section.chat .user-list li, .user .user-profile .profile-tabs #notas .user-list li, .user .celestinos .user-list li, .user .profile .user-list li, .user .user-profile .profile-tabs #dicen .user-list li {
+.user section.list .user-list li, .user section.chat .user-list li, .user .user-profile .profile-tabs #notas .user-list li, .user .celestinos .user-list li, .user .profile .user-list li, .user .user-profile .profile-tabs #dicen .user-list li, .user section.user-home .user-list li {
   width: 165px;
   float: left;
   margin-left: 13px;
   margin-bottom: 13px;
 }
-.user section.list .user-list li li, .user section.user-home .user-list li li, .user section.chat .user-list li li, .user .user-profile .profile-tabs #notas .user-list li li, .user .celestinos .user-list li li, .user .profile .user-list li li, .user .user-profile .profile-tabs #dicen .user-list li li {
+.user section.list .user-list li li, .user section.chat .user-list li li, .user .user-profile .profile-tabs #notas .user-list li li, .user .celestinos .user-list li li, .user .profile .user-list li li, .user .user-profile .profile-tabs #dicen .user-list li li, .user section.user-home .user-list li li {
   float: none;
   width: auto;
   margin: 0;
 }
-.user section.list .pagination, .user section.user-home .pagination, .user section.chat .pagination, .user .user-profile .profile-tabs #notas .pagination, .user .celestinos .pagination, .user .profile .pagination, .user .user-profile .profile-tabs #dicen .pagination {
+.user section.list .pagination, .user section.chat .pagination, .user .user-profile .profile-tabs #notas .pagination, .user .celestinos .pagination, .user .profile .pagination, .user .user-profile .profile-tabs #dicen .pagination, .user section.user-home .pagination {
   overflow: hidden;
   *zoom: 1;
   font-size: .8em;
   color: #999;
 }
-.user section.list .pagination span.pages, .user section.user-home .pagination span.pages, .user section.chat .pagination span.pages, .user .user-profile .profile-tabs #notas .pagination span.pages, .user .celestinos .pagination span.pages, .user .profile .pagination span.pages, .user .user-profile .profile-tabs #dicen .pagination span.pages {
+.user section.list .pagination span.pages, .user section.chat .pagination span.pages, .user .user-profile .profile-tabs #notas .pagination span.pages, .user .celestinos .pagination span.pages, .user .profile .pagination span.pages, .user .user-profile .profile-tabs #dicen .pagination span.pages, .user section.user-home .pagination span.pages {
   display: block;
   float: right;
 }
-.user section.list .pagination span.pages a.prev, .user section.user-home .pagination span.pages a.prev, .user section.chat .pagination span.pages a.prev, .user .user-profile .profile-tabs #notas .pagination span.pages a.prev, .user .celestinos .pagination span.pages a.prev, .user .profile .pagination span.pages a.prev, .user .user-profile .profile-tabs #dicen .pagination span.pages a.prev, .user section.list .pagination span.pages a.next, .user section.user-home .pagination span.pages a.next, .user section.chat .pagination span.pages a.next, .user .user-profile .profile-tabs #notas .pagination span.pages a.next, .user .celestinos .pagination span.pages a.next, .user .profile .pagination span.pages a.next, .user .user-profile .profile-tabs #dicen .pagination span.pages a.next {
+.user section.list .pagination span.pages a.prev, .user section.chat .pagination span.pages a.prev, .user .user-profile .profile-tabs #notas .pagination span.pages a.prev, .user .celestinos .pagination span.pages a.prev, .user .profile .pagination span.pages a.prev, .user .user-profile .profile-tabs #dicen .pagination span.pages a.prev, .user section.user-home .pagination span.pages a.prev, .user section.list .pagination span.pages a.next, .user section.chat .pagination span.pages a.next, .user .user-profile .profile-tabs #notas .pagination span.pages a.next, .user .celestinos .pagination span.pages a.next, .user .profile .pagination span.pages a.next, .user .user-profile .profile-tabs #dicen .pagination span.pages a.next, .user section.user-home .pagination span.pages a.next {
   background: #5caae8;
   display: inline-block;
   border-radius: 5px;
@@ -7745,10 +7516,10 @@ li {
   text-decoration: none;
   margin: 0 5px;
 }
-.user section.list .pagination span.pages a.prev:hover, .user section.user-home .pagination span.pages a.prev:hover, .user section.chat .pagination span.pages a.prev:hover, .user .user-profile .profile-tabs #notas .pagination span.pages a.prev:hover, .user .celestinos .pagination span.pages a.prev:hover, .user .profile .pagination span.pages a.prev:hover, .user .user-profile .profile-tabs #dicen .pagination span.pages a.prev:hover, .user section.list .pagination span.pages a.next:hover, .user section.user-home .pagination span.pages a.next:hover, .user section.chat .pagination span.pages a.next:hover, .user .user-profile .profile-tabs #notas .pagination span.pages a.next:hover, .user .celestinos .pagination span.pages a.next:hover, .user .profile .pagination span.pages a.next:hover, .user .user-profile .profile-tabs #dicen .pagination span.pages a.next:hover {
+.user section.list .pagination span.pages a.prev:hover, .user section.chat .pagination span.pages a.prev:hover, .user .user-profile .profile-tabs #notas .pagination span.pages a.prev:hover, .user .celestinos .pagination span.pages a.prev:hover, .user .profile .pagination span.pages a.prev:hover, .user .user-profile .profile-tabs #dicen .pagination span.pages a.prev:hover, .user section.user-home .pagination span.pages a.prev:hover, .user section.list .pagination span.pages a.next:hover, .user section.chat .pagination span.pages a.next:hover, .user .user-profile .profile-tabs #notas .pagination span.pages a.next:hover, .user .celestinos .pagination span.pages a.next:hover, .user .profile .pagination span.pages a.next:hover, .user .user-profile .profile-tabs #dicen .pagination span.pages a.next:hover, .user section.user-home .pagination span.pages a.next:hover {
   background: #005580;
 }
-.user section.list .pagination span.pages a.current, .user section.user-home .pagination span.pages a.current, .user section.chat .pagination span.pages a.current, .user .user-profile .profile-tabs #notas .pagination span.pages a.current, .user .celestinos .pagination span.pages a.current, .user .profile .pagination span.pages a.current, .user .user-profile .profile-tabs #dicen .pagination span.pages a.current {
+.user section.list .pagination span.pages a.current, .user section.chat .pagination span.pages a.current, .user .user-profile .profile-tabs #notas .pagination span.pages a.current, .user .celestinos .pagination span.pages a.current, .user .profile .pagination span.pages a.current, .user .user-profile .profile-tabs #dicen .pagination span.pages a.current, .user section.user-home .pagination span.pages a.current {
   font-size: 1.1em;
   font-weight: bold;
   color: #666;
@@ -8457,6 +8228,249 @@ li {
   padding-top: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+#home-highlights h1 {
+  font-size: 120%;
+  margin: 0;
+  background: url(images/sprite.png) -431px -76px no-repeat;
+  padding-left: 45px;
+}
+#home-highlights header {
+  margin-bottom: 15px;
+}
+
+section.user-home {
+  /* MESSAGES */
+  /* ARTICLES */
+  /* related-list */
+}
+section.user-home h4 {
+  color: #5caae8;
+}
+section.user-home section#last-messages {
+  margin-left: -10px;
+}
+section.user-home section#related-list ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+section.user-home section#related-list li {
+  list-style: none;
+  float: left;
+  margin: 0px 5px;
+}
+section.user-home section#related-list li.online img {
+  padding: 3px;
+  background: #8ccc8c;
+  width: 54px;
+  height: 54px;
+}
+section.user-home section#related-list h4 {
+  text-align: right;
+  margin: 10px 0;
+  margin-left: 15px;
+  padding: 0;
+  min-height: 40px;
+  padding-top: 10px;
+  width: 100px;
+  line-height: 1em;
+  color: #5caae8;
+  float: left;
+  border-right: #5caae8 1px solid;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+section.user-home .button {
+  margin: 40px 0;
+  text-align: center;
+}
+section.user-home .list-header {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+section.user-home .user-list .user-card .actions li {
+  display: block;
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 5px!important;
+}
+section.user-home .user-list .user-card header {
+  border: none;
+}
+section.user-home .user-list .user-card header h1 {
+  font-size: .8em;
+  color: #000;
+}
+
+/* direct-search */
+section.home-users {
+  margin-left: -10px;
+}
+section.home-users h4 {
+  margin: 0;
+}
+section.home-users .user-list {
+  margin-left: -17px!important;
+}
+section.home-users .user-list li {
+  margin-left: 16px!important;
+}
+section.home-users .user-list li li {
+  margin: 0!important;
+}
+
+section.direct-search h4 {
+  color: #5caae8;
+  border-right: #5caae8 1px solid;
+  padding-right: 20px;
+  padding-top: 10px;
+  margin: 0px 15px;
+  margin-top: 10px;
+  width: 90px;
+  height: 140px;
+  margin-bottom: 10px;
+  text-align: right;
+  float: left;
+  background: url(images/cupido.png) 10px 70px no-repeat;
+}
+section.direct-search .searchform {
+  float: left;
+  margin-top: 10px;
+  position: relative;
+}
+section.direct-search .searchform form {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0;
+}
+section.direct-search .searchform label {
+  font-size: .9em;
+  margin-right: 10px;
+  width: 160px;
+  display: inline-block;
+  float: left;
+  margin-top: .3em;
+}
+section.direct-search .searchform label span {
+  color: #5caae8;
+}
+section.direct-search .searchform .sliders label {
+  margin-top: .5em;
+}
+section.direct-search .searchform .control-group {
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+section.direct-search .searchform .controls {
+  width: 270px;
+  margin: 0;
+  float: left;
+}
+section.direct-search .searchform .controls input.span3, section.direct-search .searchform .controls input.span1 {
+  margin-left: 0;
+}
+section.direct-search .searchform .controls input.span1 {
+  margin-left: 0px;
+}
+section.direct-search .searchform .controls input.span3 {
+  width: 190px;
+}
+section.direct-search .searchform fieldset {
+  margin: 0;
+  padding: 0;
+}
+section.direct-search .searchform fieldset.span6 {
+  margin: 0;
+}
+section.direct-search .searchform fieldset.form-options {
+  padding-top: 9px;
+  overflow: hidden;
+  *zoom: 1;
+  width: 95px;
+  position: relative;
+}
+section.direct-search .searchform fieldset.form-options button {
+  font-size: 1em;
+  margin-top: 50px;
+}
+
+.blog-sidebar ul {
+  margin-bottom: 40px;
+}
+
+#box-blog {
+  margin-top: 35px;
+}
+#box-blog h2.category-title {
+  font-size: 1.5em;
+  margin: 0;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+#box-blog article {
+  margin-bottom: 20px;
+  background: #f2f2f2;
+}
+#box-blog article .addthis_toolbox {
+  float: right;
+}
+#box-blog article img {
+  width: 210px;
+  height: 148px;
+  border: #cccccc 5px solid;
+}
+#box-blog article.post img {
+  width: 700px;
+  height: 350px;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: block;
+}
+#box-blog article.post header h1 {
+  font-size: 1.2em;
+  margin: 0;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+#box-blog article small {
+  color: #999;
+  font-size: .7em;
+}
+#box-blog article .post-data {
+  background: #fff;
+  padding: 10px;
+}
+#box-blog article h1 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+#box-blog article h1 a {
+  color: #000;
+}
+#box-blog article h1 a:hover {
+  text-decoration: none;
+}
+#box-blog article p {
+  font-size: .9em;
+  line-height: 1.6em;
+}
+#box-blog article footer {
+  background: none;
+  padding: 0;
+  border-top: #cccccc 1px solid;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+#box-blog article footer .post-tags {
+  float: left;
+  font-size: 1.1em;
 }
 
 .modal .modal-header {
