@@ -116,14 +116,15 @@ fieldset {
       input[type="checkbox"] {
         margin-right:10px;
         margin-top:3px;
-        float:left;
+        float:right;
       }
 
       label {
         font-weight:normal;
         display:block;
         font-size:.8em;
-        padding-left:30px;
+        padding-right:30px;
+        text-align:right;
       }
 
       .clearfix {
@@ -138,5 +139,11 @@ fieldset {
   margin-top:15px;
   .actions {
     margin-left:180px;
+  }
+}
+
+.register-form {
+  fieldset {
+    margin:0;
   }
 }
