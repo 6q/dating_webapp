@@ -1,14 +1,7 @@
-GIT
-  remote: git://github.com/rtomayko/tilt.git
-  revision: 9a474c5dd9c3d37ff441cfcfe65932fd795acb7a
-  branch: encodings
-  specs:
-    tilt (1.3.3)
-
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (3.2.11)
+    activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
     chunky_png (1.2.7)
@@ -19,26 +12,27 @@ GEM
     compass_twitter_bootstrap (2.2.2.2)
       compass
     fssm (0.2.10)
-    i18n (0.6.1)
-    multi_json (1.5.0)
-    rack (1.5.1)
+    i18n (0.6.4)
+    multi_json (1.6.1)
+    rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
     sass (3.2.5)
-    serve (1.5.1)
-      activesupport (~> 3.0)
+    serve (1.5.2)
+      activesupport (~> 3.2.12)
       i18n
-      rack (~> 1.2)
-      rack-test (~> 0.5)
-      tilt (~> 1.3)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+      tilt (~> 1.3.3)
       tzinfo
-    tzinfo (0.3.35)
+    tilt (1.3.5)
+    tzinfo (0.3.36)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   compass
   compass_twitter_bootstrap
-  serve (= 1.5.1)
-  tilt!
+  serve (= 1.5.2)

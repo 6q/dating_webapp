@@ -1,7 +1,7 @@
 source :rubygems
 
 ruby '1.9.3'
-gem 'serve', '1.5.1'
+gem 'serve', '1.5.2'
 
 # Use edge instead:
 # gem 'serve', :git => 'git://github.com/jlong/serve.git'
@@ -10,7 +10,7 @@ gem 'serve', '1.5.1'
 gem 'compass'
 gem 'compass_twitter_bootstrap'
 
-gem 'tilt', :git => 'git://github.com/rtomayko/tilt.git', :branch => 'encodings'
+
 
 # Markdown and Textile
 # gem 'rdiscount' # Markdown

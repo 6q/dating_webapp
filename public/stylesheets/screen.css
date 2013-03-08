@@ -2056,7 +2056,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('../images/glyphicons-halflings.png?1361954983');
+  background-image: url('../images/glyphicons-halflings.png?1362732065');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -2076,7 +2076,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url('../images/glyphicons-halflings-white.png?1362422503');
+  background-image: url('../images/glyphicons-halflings-white.png?1362732065');
 }
 
 .icon-glass {
@@ -6677,7 +6677,8 @@ fieldset#access label {
   font-weight: bold;
 }
 fieldset#access .actions button {
-  margin-left: 50px;
+  margin-left: 100px;
+  margin-top: 35px;
 }
 fieldset#access .actions input[type="checkbox"] {
   margin-right: 10px;
@@ -6845,7 +6846,7 @@ header[role="banner"] {
   /* random background here in default */
   padding-top: 60px;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 }
 header[role="banner"] h1 {
   width: 298px;
@@ -7052,8 +7053,8 @@ footer #legal {
   text-align: center;
   color: #a4a4a4;
   font-size: 90%;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 footer #legal a {
   color: #747474;
@@ -7073,9 +7074,6 @@ body.home header[role="banner"] {
 }
 #in-love h2 {
   font-size: 1.4em;
-}
-#in-love h2 a {
-  font-size: .7em;
 }
 #in-love a.fold {
   background: url(images/sprite.png) -429px -27px no-repeat;
@@ -7107,6 +7105,7 @@ body.home header[role="banner"] {
 #in-love article p {
   font-size: 90%;
   padding-top: 10px;
+  margin-bottom: 0px;
 }
 #in-love article img {
   margin-top: 10px;
