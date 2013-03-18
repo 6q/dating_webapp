@@ -260,11 +260,26 @@ aside {
 
   &.sidebar {
     margin-top:2.1em;
+
   }
 
   &#main-sidebar {
 
     font-size:.9em;
+
+
+    a {
+      em {
+        font-style:normal;
+        color:$online-color;
+      }
+    }
+
+    .highlight {
+      a {
+        color:#005580;
+      }
+    }
 
     #user-sidebar {
       img {

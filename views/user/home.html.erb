@@ -105,16 +105,12 @@
 	</section>
 
 	<section id="last-messages">
-		<h4>Últimas conversaciones</h4>
+		<h4>Últimas conversaciones <a href="/user/messages">(Ver todos los mensajes)</a></h4>
 
 		<% (1..5).each do %>
 			<%= render '/shared/user/msg-item' %>
 			<hr>
 		<% end %>
-
-		<div class="button">
-			<a href="/user/messages" class="btn btn-large btn-info">Ver todos los mensajes</a>
-		</div>
 
 	</section>
 </section>

@@ -37,6 +37,15 @@ section.user-home{
 
   section#last-messages {
     margin-left:-10px;
+
+    h4 {
+      @include clearfix;
+      a {
+        float:right;
+        font-size:.8em;
+      }
+    }
+
   }
 
 	/* ARTICLES */ 

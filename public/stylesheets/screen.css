@@ -7302,6 +7302,13 @@ aside.sidebar {
 aside#main-sidebar {
   font-size: .9em;
 }
+aside#main-sidebar a em {
+  font-style: normal;
+  color: #8ccc8c;
+}
+aside#main-sidebar .highlight a {
+  color: #005580;
+}
 aside#main-sidebar #user-sidebar img {
   padding: 4px;
   border: #e0e0e0 1px solid;
@@ -7389,6 +7396,14 @@ section.user-home .user-list li ul.pics li {
 }
 section.user-home section#last-messages {
   margin-left: -10px;
+}
+section.user-home section#last-messages h4 {
+  overflow: hidden;
+  *zoom: 1;
+}
+section.user-home section#last-messages h4 a {
+  float: right;
+  font-size: .8em;
 }
 section.user-home section#related-list ul {
   margin: 0;
