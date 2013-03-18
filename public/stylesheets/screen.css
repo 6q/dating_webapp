@@ -7383,36 +7383,54 @@ li {
 .user header[role="banner"] #header-actions a:hover {
   text-decoration: none;
 }
-.user header[role="banner"] #header-actions #color-switcher {
+.user header[role="banner"] #header-actions #header-preface {
   position: absolute;
-  right: 0;
   top: -40px;
+  right: 0;
+  width: 800px;
+  z-index: 999;
+}
+.user header[role="banner"] #header-actions #color-switcher, .user header[role="banner"] #header-actions #lang-switcher {
+  float: right;
+  width: 120px;
+  margin-left: 5px;
+}
+.user header[role="banner"] #header-actions #user-options {
+  position: absolute;
+  right: 260px;
+  top: 5px;
+  text-align: right;
+}
+.user header[role="banner"] #header-actions #lang-switcher .leaf a {
+  padding-left: 10px;
+}
+.user header[role="banner"] #header-actions .header-switcher {
   background: #000;
   z-index: 999;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.user header[role="banner"] #header-actions #color-switcher ul {
+.user header[role="banner"] #header-actions .header-switcher ul {
   margin: 0;
   padding: 0;
   padding: 5px;
 }
-.user header[role="banner"] #header-actions #color-switcher ul a {
+.user header[role="banner"] #header-actions .header-switcher ul a {
   text-decoration: none;
 }
-.user header[role="banner"] #header-actions #color-switcher ul li.picker i {
+.user header[role="banner"] #header-actions .header-switcher ul li.picker i {
   display: inline-block;
   width: 14px;
   height: 9px;
   margin-left: 5px;
   background: url(images/sprite.png) -359px -165px no-repeat;
 }
-.user header[role="banner"] #header-actions #color-switcher ul li.leaf {
+.user header[role="banner"] #header-actions .header-switcher ul li.leaf {
   display: none;
   margin: 5px 0;
   text-align: left;
 }
-.user header[role="banner"] #header-actions #color-switcher ul li.leaf img {
+.user header[role="banner"] #header-actions .header-switcher ul li.leaf img {
   margin-right: 10px;
   width: 28px;
   height: 28px;

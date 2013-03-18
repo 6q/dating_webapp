@@ -1,12 +1,26 @@
 <div id="header-actions">
-	<div id="color-switcher">
-		<ul>
-			<li class="picker"><a href="#">Cambiar color <i></i></a></li>
-			<% (1..5).each_with_index do |i| %>
-				<li class="leaf"><a href="#"><img src="/images/skin<%= i %>-thumb.jpg"> Fondo <%= i %></a></li>
-			<% end %>
-		</ul>
+
+	<div id="header-preface">
+		<div id="user-options"><%= link_to 'Cambiar configuración', '/user/settings/' %> | <%= link_to 'Editar mi perfil', '/user/profile/' %> | <%= link_to 'Desconectar', '/public/home' %></div>
+
+		<div id="color-switcher" class="header-switcher">
+			<ul>
+				<li class="picker"><a href="#">Cambiar color <i></i></a></li>
+				<% (1..5).each_with_index do |i| %>
+					<li class="leaf"><a href="#"><img src="/images/skin<%= i %>-thumb.jpg"> Fondo <%= i %></a></li>
+				<% end %>
+			</ul>
+		</div>
+
+		<div id="lang-switcher" class="header-switcher">
+			<ul>
+				<li class="picker"><a href="#">Cambiar idioma</a><i></i></li>
+				<li class="leaf"><a href="#">Castellano</a></li>
+			</ul>
+		</div>
+
 	</div>
-	<p class="user-count">Hay 2443 usuari@s conectados ahora mismo de los 115.000 registrados en Cellove</p>
-	<p class="user-info">Bienvenid@, Josep María | <strong>Estás disponible para chatear</strong> <%= link_to 'cambiar configuración', '/user/settings/' %> | <%= link_to 'Editar mi perfil', '/user/profile/' %> | <%= link_to 'Desconectar', '/public/home' %></p>
+
+	<p class="user-count">Somos 60.000 usuari@s. ¡Gracias por vuesra confianza!</p>
+	<p class="user-info">Bienvenid@, Josep María | <strong>Estás disponible para chatear</strong></p>
 </div>

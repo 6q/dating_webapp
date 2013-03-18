@@ -33,10 +33,38 @@ li{
         }
       }
 
-      #color-switcher {
+      #header-preface {
         position:absolute;
-        right:0;
         top:-40px;
+        right:0; 
+        width:800px;
+        z-index:999;
+      }
+
+
+      #color-switcher, #lang-switcher {
+        float:right;
+        width:120px;
+        margin-left:5px;
+      }
+
+      #user-options {
+        position:absolute;
+        right:260px;
+        top:5px;
+        text-align:right;
+      }
+
+      #lang-switcher {
+        .leaf {
+          a {
+            padding-left:10px;
+          }
+        }
+      }
+
+      .header-switcher {
+
         background:#000;
         z-index:999;
         border-bottom-right-radius:5px;

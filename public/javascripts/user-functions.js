@@ -67,15 +67,18 @@ $(document).ready(function(){
     $('.nav-tabs a[href="#mejora"]').click();
   });
 
-  $('#color-switcher .picker a').click(function(e){
+
+  // header switches
+
+  $('.header-switcher .picker a').click(function(e){
     e.preventDefault();
-    $('#color-switcher .leaf').toggle();
+    $(this).parent().parent().find('.leaf').toggle();
   });
 
 
-$('#color-switcher .leaf a').click(function(e){
+$('.header-switcher .leaf a').click(function(e){
     e.preventDefault();
-    $('#color-switcher .leaf').toggle();
+    $(this).parent().parent().find('.leaf').toggle();
   });
 
   var hash = document.location.hash;
