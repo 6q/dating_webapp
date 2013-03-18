@@ -298,11 +298,15 @@ aside {
           display:block;
           background:#F1F1F1;
           text-decoration:none;
+          position:relative;
           &:hover {
             background:#E5F2FB;
           }
 
           span {
+            position:absolute;
+            right:5px;
+            top:7px;
             background:$link_color;
             color:#fff;
             display:inline-block;
