@@ -7386,20 +7386,23 @@ section.user-home section#related-list ul {
 section.user-home section#related-list li {
   list-style: none;
   float: left;
-  margin: 0px 5px;
+  margin: 0px 7px;
 }
 section.user-home section#related-list li.online img {
   padding: 3px;
   background: #8ccc8c;
-  width: 54px;
-  height: 54px;
+  width: 74px;
+  height: 74px;
+}
+section.user-home section#related-list li img {
+  border-radius: 3px;
 }
 section.user-home section#related-list h4 {
   text-align: right;
-  margin: 10px 0;
+  margin: 5px 0;
   margin-left: 15px;
   padding: 0;
-  min-height: 40px;
+  min-height: 70px;
   padding-top: 10px;
   width: 100px;
   line-height: 1em;
