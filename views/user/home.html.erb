@@ -1,20 +1,6 @@
 <section class="user-home">
 
-	<section id="related-list">
-		<div class="boxed">
-			<div class="boxed-inner">
-				<h4>Afines cerca de ti...</h4>
-				<ul class="clearfix">
-						<li class="online"><a href="/user/user-profile/" data-toggle="tooltip" title="<strong>Maria Teresa</strong><br>Santa Coloma de Gramenet<br>24 años"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
-					<% (1..5).each do %>
-						<li><a href="/user/user-profile/" data-toggle="tooltip" title="<strong>Maria Teresa</strong><br>Santa Coloma de Gramenet<br>24 años"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
-					<% end %>
-				</ul>
-			</div>
-		</div>
-	</section>
-
-	<hr class="thin">
+	<%= render '/shared/user/related-list' %>
 
 	<section class="direct-search">
 		<div class="boxed">

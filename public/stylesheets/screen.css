@@ -7380,6 +7380,83 @@ aside#main-sidebar ul li a span {
   margin-bottom: 15px;
 }
 
+section#related-list ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+section#related-list li {
+  list-style: none;
+  float: left;
+  margin: 0px 7px;
+}
+section#related-list li .tooltip {
+  line-height: 1em;
+  color: #fff;
+}
+section#related-list li a {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+section#related-list li.online img {
+  padding: 3px;
+  background: #8ccc8c;
+  width: 74px;
+  height: 74px;
+}
+section#related-list li img {
+  border-radius: 3px;
+}
+section#related-list h4 {
+  text-align: right;
+  margin: 5px 0;
+  margin-left: 15px;
+  padding: 0;
+  min-height: 70px;
+  padding-top: 10px;
+  width: 100px;
+  line-height: 1em;
+  color: #5caae8;
+  float: left;
+  border-right: #5caae8 1px solid;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.button {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.list-header {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.user-list {
+  /*
+    .user-card {
+      .actions li {
+        display: block;
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin: 5px!important;
+      }
+
+      header {
+        border:none;
+        h1 {
+          font-size:.8em;
+          color:#000;
+        }
+      }
+
+    } 
+    */
+}
+
 section.user-home {
   /* MESSAGES */
   /* ARTICLES */
@@ -7404,79 +7481,6 @@ section.user-home section#last-messages h4 {
 section.user-home section#last-messages h4 a {
   float: right;
   font-size: .8em;
-}
-section.user-home section#related-list ul {
-  margin: 0;
-  padding: 0;
-  padding-top: 5px;
-}
-section.user-home section#related-list li {
-  list-style: none;
-  float: left;
-  margin: 0px 7px;
-}
-section.user-home section#related-list li .tooltip {
-  line-height: 1em;
-  color: #fff;
-}
-section.user-home section#related-list li a {
-  display: block;
-  width: 80px;
-  height: 80px;
-}
-section.user-home section#related-list li.online img {
-  padding: 3px;
-  background: #8ccc8c;
-  width: 74px;
-  height: 74px;
-}
-section.user-home section#related-list li img {
-  border-radius: 3px;
-}
-section.user-home section#related-list h4 {
-  text-align: right;
-  margin: 5px 0;
-  margin-left: 15px;
-  padding: 0;
-  min-height: 70px;
-  padding-top: 10px;
-  width: 100px;
-  line-height: 1em;
-  color: #5caae8;
-  float: left;
-  border-right: #5caae8 1px solid;
-  margin-right: 10px;
-  padding-right: 10px;
-}
-section.user-home .button {
-  margin: 40px 0;
-  text-align: center;
-}
-section.user-home .list-header {
-  margin-bottom: 10px;
-  margin-top: 20px;
-}
-section.user-home .user-list {
-  /*
-    .user-card {
-      .actions li {
-        display: block;
-        width: 30px;
-        height: 30px;
-        float: left;
-        margin: 5px!important;
-      }
-
-      header {
-        border:none;
-        h1 {
-          font-size:.8em;
-          color:#000;
-        }
-      }
-
-    } 
-    */
 }
 
 /* direct-search */
