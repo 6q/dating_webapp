@@ -35,7 +35,7 @@ li{
 
       #header-preface {
         position:absolute;
-        top:-40px;
+        top:-35px;
         right:0; 
         width:800px;
         z-index:999;
@@ -44,7 +44,7 @@ li{
 
       #color-switcher, #lang-switcher {
         float:right;
-        width:120px;
+        width:100px;
         margin-left:5px;
       }
 
@@ -65,6 +65,7 @@ li{
 
       .header-switcher {
 
+        text-align:center;
         background:#000;
         z-index:999;
         border-bottom-right-radius:5px;
@@ -112,6 +113,12 @@ li{
         }
 
       }
+
+
+      .user-count {
+        margin-top:10px;
+      }
+
     }
 
     nav[role="navigation"] {

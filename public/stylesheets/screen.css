@@ -7385,14 +7385,14 @@ li {
 }
 .user header[role="banner"] #header-actions #header-preface {
   position: absolute;
-  top: -40px;
+  top: -35px;
   right: 0;
   width: 800px;
   z-index: 999;
 }
 .user header[role="banner"] #header-actions #color-switcher, .user header[role="banner"] #header-actions #lang-switcher {
   float: right;
-  width: 120px;
+  width: 100px;
   margin-left: 5px;
 }
 .user header[role="banner"] #header-actions #user-options {
@@ -7405,6 +7405,7 @@ li {
   padding-left: 10px;
 }
 .user header[role="banner"] #header-actions .header-switcher {
+  text-align: center;
   background: #000;
   z-index: 999;
   border-bottom-right-radius: 5px;
@@ -7434,6 +7435,9 @@ li {
   margin-right: 10px;
   width: 28px;
   height: 28px;
+}
+.user header[role="banner"] #header-actions .user-count {
+  margin-top: 10px;
 }
 .user header[role="banner"] nav[role="navigation"] {
   font-size: 105%;
