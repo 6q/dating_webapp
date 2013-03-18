@@ -273,6 +273,26 @@ aside {
         background:#fff;
         width:210px;
       }
+
+      .progress {
+        margin-bottom:0;
+        margin-top:5px;
+        height:10px;
+        border-radius:10px;
+
+        .bar {
+          border-radius:10px;
+        }
+      }
+
+      li.profile {
+        .progress {
+          .bar {
+            background:#6cc36c;
+          }
+        }
+      }
+
     }
 
     header {
