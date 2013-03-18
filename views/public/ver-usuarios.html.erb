@@ -1,11 +1,11 @@
 <% @page = "ver-usuarios" %>
 <% @title = "Ver usuarios" %>
 
-<section class="list">
+<section class="list public-user-list">
 <div id="last-users" class="user-list">
 	<h3>Últimos usuarios en Cellove <%= link_to '¡Regístrate Gratis!', '/public/alta-usuario' %></h3>
 	<ul class="clearfix">
-		<% (1..5).each do %>
+		<% (1..7).each do %>
 		<li>
 			<%= render '/shared/user/user-card' %>
 		</li>
@@ -17,7 +17,7 @@
 <div id="top-users" class="user-list">
 	<h3>Usuarios más populares <%= link_to '¡Regístrate Gratis!', '/public/alta-usuario' %></h3>
 	<ul class="clearfix">
-		<% (1..5).each do %>
+		<% (1..7).each do %>
 		<li>
 			<%= render '/shared/user/user-card' %>
 		</li>
