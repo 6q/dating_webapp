@@ -7388,6 +7388,15 @@ section.user-home section#related-list li {
   float: left;
   margin: 0px 7px;
 }
+section.user-home section#related-list li .tooltip {
+  line-height: 1em;
+  color: #fff;
+}
+section.user-home section#related-list li a {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
 section.user-home section#related-list li.online img {
   padding: 3px;
   background: #8ccc8c;

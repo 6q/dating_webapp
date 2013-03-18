@@ -55,6 +55,24 @@ section.user-home{
 	  	float: left;
       margin: 0px 7px;
 
+      .tooltip {
+        line-height:1em;
+        color:#fff;
+
+        .tooltip-inner {
+        }
+
+
+
+
+      }
+
+      a {
+        display:block;
+        width:80px;
+        height:80px;
+      }
+
       &.online {
         img {
           padding:3px;

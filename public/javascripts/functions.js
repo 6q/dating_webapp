@@ -50,6 +50,11 @@ $(document).ready(function(){
     $("li:first-child", this).stop().animate({opacity:1},{queue:false,duration:500});
   });
 
+
+  $('#related-list a').tooltip({
+    html:true
+  });
+
 });
 
 
