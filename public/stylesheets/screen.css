@@ -8346,9 +8346,16 @@ li {
   overflow: hidden;
   *zoom: 1;
   background: #fff;
-  margin: 10px;
+  margin: 10px 0px;
   padding: 10px;
   border-bottom: #e0e0e0 1px solid;
+}
+.user .celestinos .celes-item img, .user .profile .celes-item img, .user .user-profile .profile-tabs #dicen .celes-item img {
+  border: #e0e0e0 1px solid;
+  float: left;
+  margin-right: 10px;
+  width: 95px;
+  height: 95px;
 }
 .user .celestinos .celes-item header, .user .profile .celes-item header, .user .user-profile .profile-tabs #dicen .celes-item header {
   border: none;

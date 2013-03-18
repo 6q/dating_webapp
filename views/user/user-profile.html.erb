@@ -17,7 +17,7 @@
 			<div class="photo">
 				<div class="pull-left">
 					<div id="gallery">
-						<a href="/users/large_1.jpg" rel="prettyPhoto[pp_gal]"><img src="/users/placeholder3.jpg" width="210"></a>
+						<a href="/users/large_1.jpg" rel="prettyPhoto[pp_gal]"><img src="/users/placeholder2.jpg" width="210"></a>
 						<div style="display:none">
 	    					<a href="/users/large_2.jpg" rel="prettyPhoto[pp_gal]"><img src="/users/placeholder2.jpg"></a>
 	    					<a href="/users/large_3.jpg" rel="prettyPhoto[pp_gal]"><img src="/users/placeholder3.jpg"></a>
@@ -29,7 +29,6 @@
 					<p class="small">Chica - 24 años - 1'72 altura</p>
 					<p class="small">Maria es soltera y sin hijos. Busca a un chico de entre 16 y 20 años para hacer amigos y que esté cerca de Sabadell, Barcelona</p>
 					<p>Tengo 36 años y vivo en Barcelona. Me gusta hacer monólogos, pero lodicen mis amigos. Me fustra poque es que hablo mucho.</p>
-					<p><%= link_to "Leer más", "" %></p>
 				</div>
 			</div>
 		</div>
@@ -43,7 +42,7 @@
   		<li class="active"><a href="#como">¿Cómo es?</a></li>
 		  <li><a href="#gustos">Sus gustos</a></li>
 		  <li><a href="#busca">Qué busca</a></li>
-		  <li><a href="#dicen">Qué dicen de ella</a></li>
+		  <li><a href="#dicen">Sus Celestin@s</a></li>
 		  <li class="last"><a href="#notas">Tus notas</a></li>
 		</ul>
 
@@ -80,6 +79,7 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
+		  			<% @foregin_user = true %>
 		  			<% 5.times do %>
 						<%= render '/shared/user/celes-item' %>
 						<% end %>
