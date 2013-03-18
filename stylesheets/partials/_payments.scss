@@ -12,6 +12,7 @@ section#pay {
     background:#fff;
     border-radius:5px;
     box-shadow:0px 5px 5px rgba(0,0,0,.2);
+    margin:0px 10px;
 
     ul {
       li {
@@ -39,6 +40,8 @@ section#pay {
       margin:0 auto;
     }
 
+    /*
+
     &.plan2 {
       font-size:1.2em;
       width:250px;
@@ -59,5 +62,6 @@ section#pay {
         padding:.5em .5em;
       }
     }
+    */
   }
 }
