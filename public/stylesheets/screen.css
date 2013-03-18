@@ -8082,23 +8082,54 @@ li {
   margin: 0;
 }
 .user #activity-proposal ul {
+  overflow: hidden;
+  *zoom: 1;
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
+}
+.user #activity-proposal ul li {
+  line-height: 1em;
 }
 .user #activity-proposal ul li a {
   display: block;
   float: left;
   width: 60px;
-  height: 60px;
+  height: 30px;
   background: url(images/sprite-activities.png) top left no-repeat;
   font-size: .8em;
   text-align: center;
   color: #666;
-  padding-top: 60px;
+  padding-top: 65px;
   margin: 0px 15px;
 }
 .user #activity-proposal ul li a:first-child {
   margin-left: 0px;
+}
+.user #activity-proposal ul li a:hover {
+  text-decoration: none;
+  color: #000;
+}
+.user #activity-proposal ul li.coffee a {
+  background-position: 0px 0;
+}
+.user #activity-proposal ul li.movie a {
+  background-position: -60px 0;
+}
+.user #activity-proposal ul li.drink a {
+  background-position: -120px 0;
+}
+.user #activity-proposal ul li.eat a {
+  background-position: -180px 0;
+}
+.user #activity-proposal ul li.sport a {
+  background-position: -240px 0;
+}
+.user #activity-proposal ul li.culture a {
+  background-position: -300px 0;
+}
+.user #activity-proposal ul li.heart a {
+  background-position: -360px 0;
 }
 .user .user-profile .photo .description {
   width: 460px;

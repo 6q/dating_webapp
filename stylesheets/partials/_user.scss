@@ -668,32 +668,55 @@ section.chat{
 
 #activity-proposal {
 
+
+
   p {
     margin:0;
   }
 
   ul {
+    @include clearfix;
     margin:0;
     padding:0;
+    margin-bottom:20px;
 
     li {
+      line-height: 1em;
       a {
         display:block;
         float:left;
         width:60px;
-        height:60px;
+        height:30px;
         background:url(images/sprite-activities.png) top left no-repeat;
         font-size:.8em;
         text-align:center;
         color:#666;
-        padding-top:60px;
+        padding-top:65px;
         margin:0px 15px;
 
         &:first-child {
           margin-left:0px;
         }
+
+        &:hover {
+          text-decoration:none;
+          color:#000;
+        }
       }
     }
+
+    $i: 0;
+    $activities:'coffee','movie','drink','eat','sport','culture','heart';
+    @each $a in $activities {
+      li.#{$a} {
+        a {
+          background-position: -60px*$i 0;
+          $i: $i+1;          
+        }
+
+      }
+    }
+
   }
 }
 

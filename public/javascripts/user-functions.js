@@ -96,6 +96,8 @@ $('.header-switcher .leaf a').click(function(e){
 
   });
 
+  //$('.activity').click();
+
 
   $('.msg-reply-dialog .action-reply').click(function(e){
     e.preventDefault();
