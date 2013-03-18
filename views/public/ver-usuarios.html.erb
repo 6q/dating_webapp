@@ -1,7 +1,8 @@
 <% @page = "ver-usuarios" %>
 <% @title = "Ver usuarios" %>
 
-<div id="last-users" class="public-user-list">
+<section class="list">
+<div id="last-users" class="user-list">
 	<h3>Últimos usuarios en Cellove <%= link_to '¡Regístrate Gratis!', '/public/alta-usuario' %></h3>
 	<ul class="clearfix">
 		<% (1..5).each do %>
@@ -13,7 +14,7 @@
 </div>
 
 
-<div id="top-users" class="public-user-list">
+<div id="top-users" class="user-list">
 	<h3>Usuarios más populares <%= link_to '¡Regístrate Gratis!', '/public/alta-usuario' %></h3>
 	<ul class="clearfix">
 		<% (1..5).each do %>
@@ -23,6 +24,9 @@
 		<% end %>
 	</ul>
 </div>
+
+</section>
+
 
 <script>
 	$(document).ready(function(e){

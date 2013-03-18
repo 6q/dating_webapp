@@ -27,14 +27,14 @@
 
 @mixin user-actions {
 
-  margin-bottom:10px;
+  padding-bottom:5px;
 
   li {
     display:block;
     width:30px;
     height:30px;
     float:left;
-    margin:5px!important;
+    margin:1px!important;
     
     a {
       display:block;

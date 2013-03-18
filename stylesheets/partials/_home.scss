@@ -21,6 +21,18 @@ section.user-home{
       color:$link-color;
     }
 
+    .user-list {
+      li {
+        margin-left:12px!important;
+
+        ul.pics {
+          li {
+            margin:0!important;
+          }
+        }
+      }
+    }
+
   /* MESSAGES */
 
   section#last-messages {
@@ -82,6 +94,7 @@ section.user-home{
 
   .user-list {
 
+  /*
     .user-card {
       .actions li {
         display: block;
@@ -100,10 +113,8 @@ section.user-home{
       }
 
     } 
+    */ 
   }
-
-  
-
 }
 
 	
@@ -116,6 +127,7 @@ section.home-users {
     margin:0;
   }
 
+/*
   .user-list {
     margin-left:-17px!important;
     li {
@@ -126,6 +138,7 @@ section.home-users {
       }
     }
   }
+  */
 }
 
 section.direct-search {
