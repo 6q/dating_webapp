@@ -1,3 +1,4 @@
+	<%= render '/shared/user/related-list' %>
 <section class="boxed">
 	<div class="boxed-inner">
 		<header>
@@ -20,10 +21,9 @@
 				<h3>¿Quieres mejorarlo?</h3>
 				<p>Tienes muchas formas de hacerlo:</p>
 				<ul>
-					<li>- <%= link_to "Completa tu perfil", "user-edit" %> al 100%</li>
-					<li>- <%= link_to "Invita a tus amigos", "hits" %> a formar parte de Cellove</li>
-					<li>- <%= link_to "Consigue Celestinos", "celestinos-more" %></li>
-					<li>- Interactua con <%= link_to	"otros usuarios", "#" %></li>
+					<li>- <%= link_to "Completa tu perfil", "/user/profile" %> al 100%</li>
+					<li>- <%= link_to "Invita a tus amigos", "/user/celestinos-of-mine#tab_mejora" %> a formar parte de Cellove</li>
+					<li>- <%= link_to "Consigue Celestinos", "/user/celestinos-of-mine" %></li>
 				</ul>
 				<p>Pero sobretodo, ven a menudo ;-)</p>
 			</article>
