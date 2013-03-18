@@ -5,7 +5,6 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -36,3 +35,12 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "unicorn", ">= 4.3.1"
+gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
+gem "bootstrap-sass", ">= 2.3.0.0"
+gem "hominid", ">= 3.0.5"
+gem "devise", ">= 2.2.3"
+gem "cancan", ">= 1.6.9"
+gem "rolify", ">= 3.2.0"
+gem "simple_form", ">= 2.1.0"
