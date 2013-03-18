@@ -38,7 +38,7 @@ $(document).ready(function(){
 	});
 
 	$('.user #in-love .fold').removeClass('active');
-  $('#in-love .fold').click();
+  //$('#in-love .fold').click();
 
 
 
