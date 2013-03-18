@@ -3,8 +3,9 @@
 		<h1>Hacemos buena pareja</h1>
 		<%= render '/shared/user/sorting' %>
 	</header>
+	<% @interactions = true %>
 	<ul class="user-list clearfix">
-		<% (1..20).each do %>
+		<% (1..15).each do %>
 		  <li><%= render '/shared/user/user-card' %></li>
 		<% end %>
 	</ul>

@@ -12,4 +12,16 @@
     <li class="like"><%= link_to 'Like', '/user/likes-of-mine/' %></li>
     <li class="block"><%= link_to 'Block', '#user-block', 'data-toggle' => 'modal' %></li>
   </ul>
+
+  <% if @interactions == true %>
+
+  <div class="interactions">
+    <div class="punctuations">
+      <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
+      <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
+    </div>
+    <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
+  </div>
+
+  <% end %>
 </article>

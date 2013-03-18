@@ -8621,6 +8621,44 @@ section.list .user-card header h1 a, section.user-home .user-card header h1 a, .
 section.list .user-card header h1 span, section.user-home .user-card header h1 span, .user section.chat .user-card header h1 span, .user .user-profile .profile-tabs #notas .user-card header h1 span, .user .celestinos .user-card header h1 span, .user .profile .user-card header h1 span, .user .user-profile .profile-tabs #dicen .user-card header h1 span {
   font-size: .9em;
 }
+section.list .interactions, section.user-home .interactions, .user section.chat .interactions, .user .user-profile .profile-tabs #notas .interactions, .user .celestinos .interactions, .user .profile .interactions, .user .user-profile .profile-tabs #dicen .interactions {
+  padding: 10px;
+  font-size: .8em;
+}
+section.list .interactions .punctuations, section.user-home .interactions .punctuations, .user section.chat .interactions .punctuations, .user .user-profile .profile-tabs #notas .interactions .punctuations, .user .celestinos .interactions .punctuations, .user .profile .interactions .punctuations, .user .user-profile .profile-tabs #dicen .interactions .punctuations {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 5px;
+}
+section.list .interactions .punctuations strong, section.user-home .interactions .punctuations strong, .user section.chat .interactions .punctuations strong, .user .user-profile .profile-tabs #notas .interactions .punctuations strong, .user .celestinos .interactions .punctuations strong, .user .profile .interactions .punctuations strong, .user .user-profile .profile-tabs #dicen .interactions .punctuations strong {
+  font-weight: normal;
+  display: block;
+  float: left;
+  font-size: .9em;
+}
+section.list .interactions .stars, section.user-home .interactions .stars, .user section.chat .interactions .stars, .user .user-profile .profile-tabs #notas .interactions .stars, .user .celestinos .interactions .stars, .user .profile .interactions .stars, .user .user-profile .profile-tabs #dicen .interactions .stars {
+  float: right;
+  background: url(images/sprite.png) 0 -200px no-repeat;
+  display: inline-block;
+  width: 60px;
+  text-indent: -999em;
+  overflow: hidden;
+}
+section.list .interactions .stars.stars-1, section.user-home .interactions .stars.stars-1, .user section.chat .interactions .stars.stars-1, .user .user-profile .profile-tabs #notas .interactions .stars.stars-1, .user .celestinos .interactions .stars.stars-1, .user .profile .interactions .stars.stars-1, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-1 {
+  background-position: 0 -200px;
+}
+section.list .interactions .stars.stars-2, section.user-home .interactions .stars.stars-2, .user section.chat .interactions .stars.stars-2, .user .user-profile .profile-tabs #notas .interactions .stars.stars-2, .user .celestinos .interactions .stars.stars-2, .user .profile .interactions .stars.stars-2, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-2 {
+  background-position: 0 -220px;
+}
+section.list .interactions .stars.stars-3, section.user-home .interactions .stars.stars-3, .user section.chat .interactions .stars.stars-3, .user .user-profile .profile-tabs #notas .interactions .stars.stars-3, .user .celestinos .interactions .stars.stars-3, .user .profile .interactions .stars.stars-3, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-3 {
+  background-position: 0 -240px;
+}
+section.list .interactions .stars.stars-4, section.user-home .interactions .stars.stars-4, .user section.chat .interactions .stars.stars-4, .user .user-profile .profile-tabs #notas .interactions .stars.stars-4, .user .celestinos .interactions .stars.stars-4, .user .profile .interactions .stars.stars-4, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-4 {
+  background-position: 0 -260px;
+}
+section.list .interactions .stars.stars-5, section.user-home .interactions .stars.stars-5, .user section.chat .interactions .stars.stars-5, .user .user-profile .profile-tabs #notas .interactions .stars.stars-5, .user .celestinos .interactions .stars.stars-5, .user .profile .interactions .stars.stars-5, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-5 {
+  background-position: 0 -280px;
+}
 
 .public-user-list h3 {
   margin-left: 10px;
