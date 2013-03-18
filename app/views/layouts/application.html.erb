@@ -7,22 +7,18 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <%= javascript_include_tag "application" %>
-    
-    <script src="/javascripts/jquery.flexslider-min.js"></script>
-    <script src="/javascripts/functions.js"></script>
-
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <% if @page == 'home' %>
       <style>
         body {
-          background:url('/stylesheets/images/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') left -25px no-repeat;
+          background:url('/assets/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') left -25px no-repeat;
         }
       </style>
       <% else %>
       <style>
         header[role="banner"] {
-          background:url('/stylesheets/images/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') top left no-repeat;
+          background:url('/assets/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') top left no-repeat;
         }
       </style>
     <% end %>
@@ -47,18 +43,10 @@
         <% if @sidebar %>
           <div class="row">
           <div class="span3">
-            <% if @isblog %>
-              <%#= render '/shared/public/blog-sidebar' %>
-            <% else %>
-              <%#= render '/shared/public/flat-sidebar' %>
-            <% end %>
+            <%= render 'shared/flat-sidebar' %>
           </div>
           <div class="span9">
-            <% if @isblog %>
-              <div id="box-blog">
-            <% else %>
-              <div class="box">
-            <% end %>
+            <div class="box">
               <div class="box-content">
                 <%= render 'layouts/messages' %>
                 <%= yield %>
@@ -71,8 +59,8 @@
         <% end %>
       </section>
     </div>
-    <%#= render '/shared/public/in-love' %>
-    <%#= render '/shared/public/footer' %>  
+    <%= render 'shared/in-love' %>
+    <%= render 'shared/footer' %>  
     </div>
   </body>
 </html>
