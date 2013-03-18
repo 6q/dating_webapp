@@ -12,11 +12,16 @@
 
   </div>
   <div class="modal-body">
-    <div class="center">
-      <p>¡Has aceptado la propuesta de Judith para tomar un café el próximo dia 15/01!</p>
-      <p>¡Pasadlo genial juntos!</p>
+    <p>¡Estás a un paso de aceptar la propuesta de Judith para <strong>tomar un café el próximo dia 15/01</strong>!</p>
+    <div class="reply">
+      <textarea>OLA GUAPA KE ASE</textarea>
     </div>
   </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success" data-dismiss="modal">Aceptar actividad</button>
+  </div>
+
 </div>
 
 
@@ -34,9 +39,13 @@
 
   </div>
   <div class="modal-body">
-    <div class="center">
-      <p>No has aceptado la propuesta de Judith para tomar un café el próximo dia 15/01.</p>
-      <p>A ver si la próxima vez la cosa funciona.</p>
+    <div>
+      <p><strong>Judith te ha propuesto tomar un café el próximo dia 15/01</strong>. 
+      <p>Vaya. Parece que NO vas a aceptar la actividad que te propone Judith. Esperamos que la próxima vez funcione.</p>
     </div>
   </div>
+    <div class="modal-footer">
+      <%= link_to 'Cancelar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+      <button class="btn btn-danger" data-dismiss="modal">Rechazar propuesta de actividad</button>
+    </div>
 </div>
