@@ -43,7 +43,7 @@ $online-color:#8CCC8C;
 $offline-color:#c00;
 
 @import "modules/all";
-@import "vendor/normalize";
+@import "normalize";
 
 html, body { background: $background-color; }
 body { @include base-font; }
