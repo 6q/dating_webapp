@@ -24,3 +24,5 @@ gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri
 gem 'compass_twitter_bootstrap'
 gem 'compass-rails'
 gem "geocoder", "~> 1.1.3"
+gem 'friendly_id'
+gem 'dragonfly'
