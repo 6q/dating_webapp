@@ -1,6 +1,6 @@
 #slider {
   height:420px;
-  background:url(images/bg-slider.png) center bottom no-repeat;
+  background:image-url('bg-slider.png') center bottom no-repeat;
   padding-bottom:40px;
 
   .flexslider {
@@ -172,7 +172,7 @@ header[role="banner"]{
     margin-top:-10px;
 
   a {
-    background:url('images/sprite.png') left top no-repeat;
+    background:image-url('sprite.png') left top no-repeat;
     text-indent:-999em;
     width:289px;
     height:120px;

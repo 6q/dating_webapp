@@ -1,25 +1,23 @@
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Login', new_user_session_path %>
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
+<% if user_signed_in? %>
+  <li>
     <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
-    <% if current_user.has_role? :admin %>
-      <li>
-      <%= link_to 'Admin', users_path %>
-      </li>
-    <% end %>
-  <% else %>
+  </li>
+  <% if current_user.has_role? :admin %>
     <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
+      <%= link_to 'Admin', users_path %>
     </li>
   <% end %>
-</ul>
+<% else %>
+  <div id="login-box">
+    <h4>Acceso usuarios</h4>
+    <small><%= link_to '¿Has olvidado tu contraseña?', new_user_password_path %></small>
+    <fieldset>
+      <%= simple_form_for('user', :url => user_session_path) do |f| %>
+          <%= f.input_field :email, :required => false, :autofocus => true, wrapper_html: {} %>
+          <%= f.input_field :password, :required => false %>
+          <%= f.button :submit, "Login", :class => 'btn btn-success' %>
+      <% end %>
+    </fieldset>
+    <p id="user-count"><strong>Somos 60.000 usuari@s</strong>. Gracias por vuesra confianza.</p>
+  </div>
+<% end %>

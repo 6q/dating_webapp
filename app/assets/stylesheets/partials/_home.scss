@@ -3,7 +3,7 @@
   h1 {
     font-size:120%;
     margin:0;
-    background:url(images/sprite.png) -431px -76px no-repeat;
+    background:image-url('sprite.png') -431px -76px no-repeat;
     padding-left:45px;
   }
 
@@ -188,7 +188,7 @@ section.direct-search {
     margin-bottom:10px;
     text-align:right;
     float:left;
-    background:url(images/cupido.png) 10px 70px no-repeat;
+    background:image-url('cupido.png') 10px 70px no-repeat;
   }
 
   .searchform {

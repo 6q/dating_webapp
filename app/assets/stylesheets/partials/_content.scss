@@ -8,7 +8,7 @@ a {
 }
 a.more {
   white-space: nowrap;
-  &:after { content: " »"; }
+  &:after { content: " \203A\203A"; }
 }
 
 .typography {

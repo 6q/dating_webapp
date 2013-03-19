@@ -91,7 +91,7 @@ li{
                 width:14px;
                 height:9px;
                 margin-left:5px;
-                background:url(images/sprite.png) -359px -165px no-repeat;  
+                background:image-url('sprite.png') -359px -165px no-repeat;  
               }
               
             }
@@ -150,7 +150,7 @@ li{
           }
           &.home {
             a {
-              background-image:url(images/sprite.png);
+              background-image:image-url('sprite.png');
               background-position:-304px -63px;
               background-repeat:no-repeat;
               text-indent:-999em;
@@ -517,7 +517,7 @@ section.chat{
     a {
       width:21px;
       height:21px;
-      background:url(images/sprite.png) -355px -83px no-repeat;  
+      background:image-url('sprite.png') -355px -83px no-repeat;  
       display:block;
       float:right;
       margin-left:10px;
@@ -655,7 +655,7 @@ section.chat{
         float:left;
         width:60px;
         height:30px;
-        background:url(images/sprite-activities.png) top left no-repeat;
+        background:image-url('sprite-activities.png') top left no-repeat;
         font-size:.8em;
         text-align:center;
         color:#666;
@@ -687,7 +687,7 @@ section.chat{
         float:left;
         width:60px;
         height:30px;
-        background:url(images/sprite-activities.png) top left no-repeat;
+        background:image-url('sprite-activities.png') top left no-repeat;
         font-size:.8em;
         text-align:center;
         color:#666;
@@ -760,7 +760,7 @@ section.chat{
     }
 
     i {
-      background:url(images/sprite.png) left top no-repeat;
+      background:image-url('sprite.png') left top no-repeat;
       display:block;
       float:left;
       width:30px;
@@ -896,7 +896,7 @@ section.chat{
 
     i {
       display:block;
-      background: url(images/sprite.png) -432px -76px no-repeat;
+      background: image-url('sprite.png') -432px -76px no-repeat;
       width:35px;
       height:35px;
       margin:0px auto;
@@ -917,7 +917,7 @@ section.chat{
           width:16px;
           height:16px;
           padding:2px;
-          background:url(images/sprite.png) -373px -136px no-repeat;
+          background:image-url('sprite.png') -373px -136px no-repeat;
           text-indent:-999em;
           &:hover, &.active {
             background-position:-355px -136px;
@@ -1133,7 +1133,7 @@ section.messages{
         margin:0px 45px;
         padding-top:50px;
         text-align: center;
-        background:url(images/sprite-hearts.jpg) left top no-repeat;
+        background:image-url('sprite-hearts.jpg') left top no-repeat;
       }
     }
 
@@ -1220,7 +1220,7 @@ section.messages{
       width: 68px;
       height: 21px;
       line-height: 21px;
-      background: transparent url(images/checkbox.png) no-repeat -39px 0;
+      background: transparent image-url('checkbox.png') no-repeat -39px 0;
       -webkit-transition: background-position 0.3s ease-in-out;
       -moz-transition: background-position 0.3s ease-in-out;
     }
@@ -1383,7 +1383,7 @@ section.list {
 
     .stars {
       float:right;
-      background:url(images/sprite.png) 0 -200px no-repeat;
+      background:image-url('sprite.png') 0 -200px no-repeat;
       display:inline-block;
       width:60px;
       text-indent:-999em;
