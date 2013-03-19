@@ -1,14 +1,17 @@
-<% if user_signed_in? %>
-  <li>
-    <%= link_to 'Edit account', edit_user_registration_path %>
-  </li>
-  <% if current_user.has_role? :admin %>
+<div id="login-box">
+  <% if user_signed_in? %>
     <li>
-      <%= link_to 'Admin', users_path %>
+      <%= link_to 'Edit account', edit_user_registration_path %>
     </li>
-  <% end %>
-<% else %>
-  <div id="login-box">
+    <li>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+    </li>
+    <% if current_user.has_role? :admin %>
+      <li>
+        <%= link_to 'Admin', users_path %>
+      </li>
+    <% end %>
+  <% else %>
     <h4>Acceso usuarios</h4>
     <small><%= link_to '¿Has olvidado tu contraseña?', new_user_password_path %></small>
     <fieldset>
@@ -19,5 +22,6 @@
       <% end %>
     </fieldset>
     <p id="user-count"><strong>Somos 60.000 usuari@s</strong>. Gracias por vuesra confianza.</p>
-  </div>
-<% end %>
+  <% end %>
+</div>
+
