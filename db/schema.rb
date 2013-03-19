@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130318205833) do
+ActiveRecord::Schema.define(:version => 20130319220541) do
+
+  create_table "provinces", :force => true do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "regions", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -23,6 +36,16 @@ ActiveRecord::Schema.define(:version => 20130318205833) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "towns", :force => true do |t|
+    t.string   "name"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.integer  "region_id"
+    t.integer  "province_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -38,6 +61,16 @@ ActiveRecord::Schema.define(:version => 20130318205833) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "surname"
+    t.string   "screen_name"
+    t.integer  "gender"
+    t.string   "orientation"
+    t.string   "marital_status"
+    t.date     "birth_date"
+    t.string   "zip_code"
+    t.integer  "town"
+    t.string   "country"
+    t.boolean  "newsletter_optin"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
