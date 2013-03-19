@@ -26,3 +26,5 @@ gem 'compass-rails'
 gem "geocoder", "~> 1.1.3"
 gem 'friendly_id'
 gem 'dragonfly'
+gem 'country_select'
+gem 'kaminari'

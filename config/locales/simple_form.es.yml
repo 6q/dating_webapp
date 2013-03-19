@@ -1,0 +1,48 @@
+es:
+  simple_form:
+    "yes": 'Sí'
+    "no": 'No'
+    required:
+      text: 'necesario'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Por favor, revisa los siguientes campos:"
+    labels:
+      password: 'Contraseña'
+      user:
+        name: 'Nombre'
+        address: 'Dirección'
+        website: 'Página web'
+        email: 'Email'
+        postcode: 'Código postal'
+        town_id: 'Población'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmar contraseña'
+
+      product:
+        name: 'Nombre'
+        description: 'Descripción'
+        category_id: 'Categoría'
+        town_id: 'Población'
+        postcode: 'Código Postal'
+        price: 'Precio/día'
+        price_week: 'Precio/semana'
+        price_weekend: 'Precio/fin de semana'
+        price_month: 'Precio/mes'
+        price_deposit: 'Depósito'
+        owner_comment: 'Comentario del propietario'
+        tag_list: 'Etiquetas'
+        owner_id: 'Propietario'
+        pay_method: 'Métodos de pago'
+        max_days: 'Máximo días'
+        min_days: 'Mínimo días'
+
+    hints:
+      username: 'Nombre de usuario para entrar'
+      password: 'No están permitidos los carácteres especiales'
+
+
+

@@ -3,6 +3,15 @@
   <%= f.error_notification %>
   <%= display_base_errors resource %>
   <%= f.input :name, :autofocus => true %>
+  <%= f.input :surname %>
+  <%= f.input :screen_name %>
+  <%= f.input :gender, collection: User::GENDER %>
+  <%= f.input :orientation, collection: User::ORIENTATION %>
+  <%= f.input :marital_status, collection: User::MARITAL_STATUS %>
+  <%= f.input :birth_date %>
+  <%= f.input :country %>
+  <%= f.input :zip_code %>
+  <%= f.input :town %>
   <%= f.input :email, :required => true %>
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
