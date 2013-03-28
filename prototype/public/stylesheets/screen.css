@@ -8037,15 +8037,15 @@ li {
 .user .profile .quien small {
   margin-top: 10px;
 }
-.user .profile .profile-tabs select, .user .profile .profile-tabs input, .user .profile .profile-tabs article {
+.user .profile .profile-tabs select, .user .profile .profile-tabs input, .user .profile .profile-tabs article, .user .profile .basic-tabs select, .user .profile .basic-tabs input, .user .profile .basic-tabs article {
   font-size: .9em;
 }
-.user .profile .profile-tabs textarea {
+.user .profile .profile-tabs textarea, .user .profile .basic-tabs textarea {
   width: 665px;
   height: 100px;
   margin: 20px 0;
 }
-.user .profile .profile-tabs hr {
+.user .profile .profile-tabs hr, .user .profile .basic-tabs hr {
   margin: 20px 0;
 }
 .user .profile em {
