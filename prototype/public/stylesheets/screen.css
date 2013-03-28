@@ -8463,6 +8463,9 @@ li {
 .user .celestinos .celes-box .btns .btn, .user .profile .celes-box .btns .btn, .user .user-profile .profile-tabs #dicen .celes-box .btns .btn {
   width: 250px;
 }
+.user .celestinos .your-celestines .celes-item, .user .profile .your-celestines .celes-item, .user .user-profile .profile-tabs #dicen .your-celestines .celes-item {
+  margin: 10px;
+}
 .user .settings .col {
   width: 335px;
   float: left;
