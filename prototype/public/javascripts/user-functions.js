@@ -105,8 +105,18 @@ $('.header-switcher .leaf a').click(function(e){
     $(this).parent().parent().find('li a').removeClass('active');
   });
 
-  // image gallery in user profile
+  // carousel
 
-  $("a[rel^='prettyPhoto']").prettyPhoto();
+      $('.jcarousel').jcarousel({
+        animation: 'slow'
+      });
+
+      $('.jcarousel-prev').click(function() {
+          $('.jcarousel').jcarousel('scroll', '-=5');
+      });
+
+      $('.jcarousel-next').click(function() {
+          $('.jcarousel').jcarousel('scroll', '+=5');
+      });
 
 });

@@ -722,30 +722,94 @@ section.chat{
 
 /* user-profile */
 
-.user-profile{
+.user-profile {
 
-  .photo{
-    .description{
-      width:460px;
-      margin: 0;
-      padding: 0 10px;
+  .user-detail-container {
 
-      h5{
-        font-size: 1.5em;
-        span{
-          font-size: .8em;
-          font-weight: normal;
+      position:relative;
+
+     .photo {
+        float:left;
+        margin-right:20px;
+        padding-right:5px;
+        background:#fff;
+      }
+
+      .description{
+          margin: 0;
+          padding: 0 10px;
+
+          h5{
+            font-size: 1.5em;
+            span{
+              font-size: .8em;
+              font-weight: normal;
+            }
+          }
+        }
+
+      .small{
+        font-size: .8em;
+      }
+
+    #user-profile-thumbs {
+
+      position:absolute;
+      bottom:0;
+      right:0;
+      width:487px;
+      background:#fff;
+      padding-top:10px;
+
+      .jcarousel {
+        position: relative;
+        overflow: hidden;
+        /* You need at least a height, adjust this to your needs */
+        height: 80px;
+        width:420px;
+        margin-left:30px;
+      }
+
+      .jcarousel ul {
+        width: 20000em;
+        position: absolute;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .jcarousel li {
+        float: left;
+        margin-right:5px;
+
+        img {
+          border-radius:3px;
         }
       }
     }
-    
-    a{
-      text-decoration: underline;
+
+    .jcarousel-prev, .jcarousel-next {
+      background:url(images/sprite.png) -134px -157px no-repeat;
+      display:block;
+      width:20px;
+      height:25px;
+      overflow:hidden;
+      text-indent:-999em;
+      position:absolute;
+      top:35px;
     }
+
+    .jcarousel-prev {
+      left:2px;
+    }
+
+    .jcarousel-next {
+      background-position:-154px -157px;
+      right:5px;
+    }
+
   }
-  .small{
-    font-size: .8em;
-  }
+
 
   article.action-links{
 

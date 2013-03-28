@@ -6783,7 +6783,7 @@ hr.thin {
   margin-left: -12px;
   background: #fff;
   border: #e0e0e0 1px solid;
-  padding: 5px;
+  padding: 4px;
 }
 .boxed .boxed-inner {
   overflow: hidden;
@@ -8144,23 +8144,75 @@ li {
 .user #activity-proposal ul li.heart a {
   background-position: -360px 0;
 }
-.user .user-profile .photo .description {
-  width: 460px;
+.user .user-profile .user-detail-container {
+  position: relative;
+}
+.user .user-profile .user-detail-container .photo {
+  float: left;
+  margin-right: 20px;
+  padding-right: 5px;
+  background: #fff;
+}
+.user .user-profile .user-detail-container .description {
   margin: 0;
   padding: 0 10px;
 }
-.user .user-profile .photo .description h5 {
+.user .user-profile .user-detail-container .description h5 {
   font-size: 1.5em;
 }
-.user .user-profile .photo .description h5 span {
+.user .user-profile .user-detail-container .description h5 span {
   font-size: .8em;
   font-weight: normal;
 }
-.user .user-profile .photo a {
-  text-decoration: underline;
-}
-.user .user-profile .small {
+.user .user-profile .user-detail-container .small {
   font-size: .8em;
+}
+.user .user-profile .user-detail-container #user-profile-thumbs {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 487px;
+  background: #fff;
+  padding-top: 10px;
+}
+.user .user-profile .user-detail-container #user-profile-thumbs .jcarousel {
+  position: relative;
+  overflow: hidden;
+  /* You need at least a height, adjust this to your needs */
+  height: 80px;
+  width: 420px;
+  margin-left: 30px;
+}
+.user .user-profile .user-detail-container #user-profile-thumbs .jcarousel ul {
+  width: 20000em;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.user .user-profile .user-detail-container #user-profile-thumbs .jcarousel li {
+  float: left;
+  margin-right: 5px;
+}
+.user .user-profile .user-detail-container #user-profile-thumbs .jcarousel li img {
+  border-radius: 3px;
+}
+.user .user-profile .user-detail-container .jcarousel-prev, .user .user-profile .user-detail-container .jcarousel-next {
+  background: url(images/sprite.png) -134px -157px no-repeat;
+  display: block;
+  width: 20px;
+  height: 25px;
+  overflow: hidden;
+  text-indent: -999em;
+  position: absolute;
+  top: 35px;
+}
+.user .user-profile .user-detail-container .jcarousel-prev {
+  left: 2px;
+}
+.user .user-profile .user-detail-container .jcarousel-next {
+  background-position: -154px -157px;
+  right: 5px;
 }
 .user .user-profile article.action-links {
   background: #5caae8;
