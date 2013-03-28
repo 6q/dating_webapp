@@ -391,3 +391,10 @@ footer {
     }
   }
 }
+
+.headless {
+  header {
+    border:none!important;
+    margin-bottom:0!important;
+  }
+}

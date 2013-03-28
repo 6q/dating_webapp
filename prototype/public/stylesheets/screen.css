@@ -7060,6 +7060,11 @@ footer #legal a {
   color: #747474;
 }
 
+.headless header {
+  border: none!important;
+  margin-bottom: 0!important;
+}
+
 body.home header[role="banner"] {
   background: none;
 }
