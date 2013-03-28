@@ -3,6 +3,7 @@
   position:fixed;
   bottom:10px;
   right:10px;
+  z-index:999;
 
   .notification {
     background:#fff;
@@ -10,6 +11,7 @@
     margin-top:5px;
     border-bottom-right-radius:3px;
     border-bottom-left-radius:3px;
+    box-shadow:0px 0px 4px rgba(0,0,0,.5);
 
     header {
       @include clearfix;
