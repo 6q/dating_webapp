@@ -2056,7 +2056,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('../images/glyphicons-halflings.png?1361954983');
+  background-image: url('../images/glyphicons-halflings.png?1364488972');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -2076,7 +2076,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url('../images/glyphicons-halflings-white.png?1362422503');
+  background-image: url('../images/glyphicons-halflings-white.png?1364488972');
 }
 
 .icon-glass {
@@ -8796,6 +8796,63 @@ section.list .interactions .stars.stars-5, section.user-home .interactions .star
 .modal .modal-footer .activity {
   position: absolute;
   top: 1em;
+}
+
+#notifications {
+  width: 220px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+#notifications .notification {
+  background: #fff;
+  width: 220px;
+  margin-top: 5px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+#notifications .notification header {
+  overflow: hidden;
+  *zoom: 1;
+  background: #5caae8;
+  padding: 5px;
+}
+#notifications .notification header h1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1em;
+  float: left;
+}
+#notifications .notification header a {
+  background: url(images/sprite.png) -323px -110px no-repeat;
+  width: 13px;
+  height: 14px;
+  display: block;
+  float: right;
+  text-indent: -999em;
+  overflow: hidden;
+}
+#notifications .notification .container img {
+  float: left;
+  border-radius: 3px;
+  margin: 5px;
+  margin-right: 10px;
+  display: block;
+}
+#notifications .notification .container strong {
+  display: block;
+  margin-top: 5px;
+}
+#notifications .notification .container span {
+  font-size: .9em;
+}
+#notifications .notification .container .status {
+  display: block;
+  margin-top: 5px;
+  color: #fe6600;
 }
 
 section#pay fieldset {
