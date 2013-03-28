@@ -8691,6 +8691,39 @@ section.list .interactions .stars.stars-5, section.user-home .interactions .star
   margin-left: 4px;
 }
 
+#user-pictures {
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#user-pictures h2 {
+  font-size: 1em;
+  padding: 0;
+  color: #5caae8;
+  font-weight: normal;
+}
+#user-pictures .pic-container {
+  width: 600px;
+  margin-left: 40px;
+}
+#user-pictures ul {
+  width: 600px;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0;
+  margin: 0;
+}
+#user-pictures ul li {
+  width: 80px;
+  height: 80px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: #e5e5e5;
+}
+
 .blog-sidebar ul {
   margin-bottom: 40px;
 }
