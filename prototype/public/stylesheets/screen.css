@@ -7060,6 +7060,10 @@ footer #legal a {
   color: #747474;
 }
 
+.celestinos #attributes .offset1, .user .profile #attributes .offset1, .user .user-profile .profile-tabs #dicen #attributes .offset1 {
+  margin-left: 50px;
+}
+
 .headless header {
   border: none!important;
   margin-bottom: 0!important;
