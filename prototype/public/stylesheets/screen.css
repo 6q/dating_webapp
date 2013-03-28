@@ -8425,6 +8425,8 @@ li {
   display: inline-block;
   width: 80%;
   margin: 20px 0 20px 10%;
+  border-radius: 5px;
+  padding-bottom: 10px;
 }
 .user .celestinos .celes-box ul, .user .profile .celes-box ul, .user .user-profile .profile-tabs #dicen .celes-box ul {
   overflow: hidden;

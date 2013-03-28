@@ -1120,6 +1120,8 @@ section.messages{
     display: inline-block;
     width:80%;
     margin: 20px 0 20px 10%; 
+    border-radius:5px;
+    padding-bottom:10px;
 
     ul{
       @include clearfix;
