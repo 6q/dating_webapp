@@ -7060,7 +7060,7 @@ footer #legal a {
   color: #747474;
 }
 
-.celestinos #attributes .offset1, .user .profile #attributes .offset1, .user .user-profile .profile-tabs #dicen #attributes .offset1 {
+.celestinos #attributes .offset1, .user .profile #attributes .offset1, .user .user-profile .tabs-container #dicen #attributes .offset1 {
   margin-left: 50px;
 }
 
@@ -7730,14 +7730,14 @@ li {
 .user #in-love article p {
   display: none;
 }
-.user section.list header, .user section.user-home header, .user section.chat header, .user .user-profile .profile-tabs #notas header, .user .celestinos header, .user .profile header, .user .user-profile .profile-tabs #dicen header {
+.user section.list header, .user section.user-home header, .user section.chat header, .user .user-profile .tabs-container #notas header, .user .celestinos header, .user .profile header, .user .user-profile .tabs-container #dicen header {
   overflow: hidden;
   *zoom: 1;
   border-bottom: #cccccc 1px solid;
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
-.user section.list header h1, .user section.user-home header h1, .user section.chat header h1, .user .user-profile .profile-tabs #notas header h1, .user .celestinos header h1, .user .profile header h1, .user .user-profile .profile-tabs #dicen header h1 {
+.user section.list header h1, .user section.user-home header h1, .user section.chat header h1, .user .user-profile .tabs-container #notas header h1, .user .celestinos header h1, .user .profile header h1, .user .user-profile .tabs-container #dicen header h1 {
   float: left;
   margin: 0;
   margin-top: 5px;
@@ -7746,26 +7746,26 @@ li {
   font-weight: normal;
   line-height: 1.2em;
 }
-.user section.list header form, .user section.user-home header form, .user section.chat header form, .user .user-profile .profile-tabs #notas header form, .user .celestinos header form, .user .profile header form, .user .user-profile .profile-tabs #dicen header form {
+.user section.list header form, .user section.user-home header form, .user section.chat header form, .user .user-profile .tabs-container #notas header form, .user .celestinos header form, .user .profile header form, .user .user-profile .tabs-container #dicen header form {
   margin: 0;
 }
-.user section.list header .sort, .user section.user-home header .sort, .user section.chat header .sort, .user .user-profile .profile-tabs #notas header .sort, .user .celestinos header .sort, .user .profile header .sort, .user .user-profile .profile-tabs #dicen header .sort {
+.user section.list header .sort, .user section.user-home header .sort, .user section.chat header .sort, .user .user-profile .tabs-container #notas header .sort, .user .celestinos header .sort, .user .profile header .sort, .user .user-profile .tabs-container #dicen header .sort {
   float: right;
 }
-.user section.list header .sort select, .user section.user-home header .sort select, .user section.chat header .sort select, .user .user-profile .profile-tabs #notas header .sort select, .user .celestinos header .sort select, .user .profile header .sort select, .user .user-profile .profile-tabs #dicen header .sort select {
+.user section.list header .sort select, .user section.user-home header .sort select, .user section.chat header .sort select, .user .user-profile .tabs-container #notas header .sort select, .user .celestinos header .sort select, .user .profile header .sort select, .user .user-profile .tabs-container #dicen header .sort select {
   font-size: .8em;
 }
-.user section.list .pagination, .user section.user-home .pagination, .user section.chat .pagination, .user .user-profile .profile-tabs #notas .pagination, .user .celestinos .pagination, .user .profile .pagination, .user .user-profile .profile-tabs #dicen .pagination {
+.user section.list .pagination, .user section.user-home .pagination, .user section.chat .pagination, .user .user-profile .tabs-container #notas .pagination, .user .celestinos .pagination, .user .profile .pagination, .user .user-profile .tabs-container #dicen .pagination {
   overflow: hidden;
   *zoom: 1;
   font-size: .8em;
   color: #999;
 }
-.user section.list .pagination span.pages, .user section.user-home .pagination span.pages, .user section.chat .pagination span.pages, .user .user-profile .profile-tabs #notas .pagination span.pages, .user .celestinos .pagination span.pages, .user .profile .pagination span.pages, .user .user-profile .profile-tabs #dicen .pagination span.pages {
+.user section.list .pagination span.pages, .user section.user-home .pagination span.pages, .user section.chat .pagination span.pages, .user .user-profile .tabs-container #notas .pagination span.pages, .user .celestinos .pagination span.pages, .user .profile .pagination span.pages, .user .user-profile .tabs-container #dicen .pagination span.pages {
   display: block;
   float: right;
 }
-.user section.list .pagination span.pages a.prev, .user section.user-home .pagination span.pages a.prev, .user section.chat .pagination span.pages a.prev, .user .user-profile .profile-tabs #notas .pagination span.pages a.prev, .user .celestinos .pagination span.pages a.prev, .user .profile .pagination span.pages a.prev, .user .user-profile .profile-tabs #dicen .pagination span.pages a.prev, .user section.list .pagination span.pages a.next, .user section.user-home .pagination span.pages a.next, .user section.chat .pagination span.pages a.next, .user .user-profile .profile-tabs #notas .pagination span.pages a.next, .user .celestinos .pagination span.pages a.next, .user .profile .pagination span.pages a.next, .user .user-profile .profile-tabs #dicen .pagination span.pages a.next {
+.user section.list .pagination span.pages a.prev, .user section.user-home .pagination span.pages a.prev, .user section.chat .pagination span.pages a.prev, .user .user-profile .tabs-container #notas .pagination span.pages a.prev, .user .celestinos .pagination span.pages a.prev, .user .profile .pagination span.pages a.prev, .user .user-profile .tabs-container #dicen .pagination span.pages a.prev, .user section.list .pagination span.pages a.next, .user section.user-home .pagination span.pages a.next, .user section.chat .pagination span.pages a.next, .user .user-profile .tabs-container #notas .pagination span.pages a.next, .user .celestinos .pagination span.pages a.next, .user .profile .pagination span.pages a.next, .user .user-profile .tabs-container #dicen .pagination span.pages a.next {
   background: #5caae8;
   display: inline-block;
   border-radius: 5px;
@@ -7774,10 +7774,10 @@ li {
   text-decoration: none;
   margin: 0 5px;
 }
-.user section.list .pagination span.pages a.prev:hover, .user section.user-home .pagination span.pages a.prev:hover, .user section.chat .pagination span.pages a.prev:hover, .user .user-profile .profile-tabs #notas .pagination span.pages a.prev:hover, .user .celestinos .pagination span.pages a.prev:hover, .user .profile .pagination span.pages a.prev:hover, .user .user-profile .profile-tabs #dicen .pagination span.pages a.prev:hover, .user section.list .pagination span.pages a.next:hover, .user section.user-home .pagination span.pages a.next:hover, .user section.chat .pagination span.pages a.next:hover, .user .user-profile .profile-tabs #notas .pagination span.pages a.next:hover, .user .celestinos .pagination span.pages a.next:hover, .user .profile .pagination span.pages a.next:hover, .user .user-profile .profile-tabs #dicen .pagination span.pages a.next:hover {
+.user section.list .pagination span.pages a.prev:hover, .user section.user-home .pagination span.pages a.prev:hover, .user section.chat .pagination span.pages a.prev:hover, .user .user-profile .tabs-container #notas .pagination span.pages a.prev:hover, .user .celestinos .pagination span.pages a.prev:hover, .user .profile .pagination span.pages a.prev:hover, .user .user-profile .tabs-container #dicen .pagination span.pages a.prev:hover, .user section.list .pagination span.pages a.next:hover, .user section.user-home .pagination span.pages a.next:hover, .user section.chat .pagination span.pages a.next:hover, .user .user-profile .tabs-container #notas .pagination span.pages a.next:hover, .user .celestinos .pagination span.pages a.next:hover, .user .profile .pagination span.pages a.next:hover, .user .user-profile .tabs-container #dicen .pagination span.pages a.next:hover {
   background: #005580;
 }
-.user section.list .pagination span.pages a.current, .user section.user-home .pagination span.pages a.current, .user section.chat .pagination span.pages a.current, .user .user-profile .profile-tabs #notas .pagination span.pages a.current, .user .celestinos .pagination span.pages a.current, .user .profile .pagination span.pages a.current, .user .user-profile .profile-tabs #dicen .pagination span.pages a.current {
+.user section.list .pagination span.pages a.current, .user section.user-home .pagination span.pages a.current, .user section.chat .pagination span.pages a.current, .user .user-profile .tabs-container #notas .pagination span.pages a.current, .user .celestinos .pagination span.pages a.current, .user .profile .pagination span.pages a.current, .user .user-profile .tabs-container #dicen .pagination span.pages a.current {
   font-size: 1.1em;
   font-weight: bold;
   color: #666;
@@ -8037,15 +8037,15 @@ li {
 .user .profile .quien small {
   margin-top: 10px;
 }
-.user .profile .profile-tabs select, .user .profile .profile-tabs input, .user .profile .profile-tabs article, .user .profile .basic-tabs select, .user .profile .basic-tabs input, .user .profile .basic-tabs article {
+.user .profile .tabs-container select, .user .profile .tabs-container input, .user .profile .tabs-container article {
   font-size: .9em;
 }
-.user .profile .profile-tabs textarea, .user .profile .basic-tabs textarea {
+.user .profile .tabs-container textarea {
   width: 665px;
   height: 100px;
   margin: 20px 0;
 }
-.user .profile .profile-tabs hr, .user .profile .basic-tabs hr {
+.user .profile .tabs-container hr {
   margin: 20px 0;
 }
 .user .profile em {
@@ -8252,52 +8252,58 @@ li {
 .user .user-profile article.action-links ul li.block i {
   background-position: -86px -156px;
 }
-.user .user-profile .profile-tabs {
+.user .user-profile .tabs-container {
   margin: 0;
 }
-.user .user-profile .profile-tabs .nav {
+.user .user-profile .tabs-container .attributes-col-2 {
+  margin-left: 40px;
+}
+.user .user-profile .tabs-container.basic-tabs {
+  margin-bottom: 40px;
+}
+.user .user-profile .tabs-container .nav {
   margin-bottom: 0px;
 }
-.user .user-profile .profile-tabs .nav-tabs {
+.user .user-profile .tabs-container .nav-tabs {
   border: none;
 }
-.user .user-profile .profile-tabs .nav-tabs .last {
+.user .user-profile .tabs-container .nav-tabs .last {
   float: right;
   margin-right: 30px;
 }
-.user .user-profile .profile-tabs .tab-pane {
+.user .user-profile .tabs-container .tab-pane {
   margin: 10px;
 }
-.user .user-profile .profile-tabs #como h4 {
+.user .user-profile .tabs-container #como h4 {
   font-weight: normal;
   line-height: 1.4em;
 }
-.user .user-profile .profile-tabs .pagination span.pages {
+.user .user-profile .tabs-container .pagination span.pages {
   float: none;
 }
-.user .user-profile .profile-tabs #notas h4 span {
+.user .user-profile .tabs-container #notas h4 span {
   font-weight: normal;
   font-size: 0.9em;
 }
-.user .user-profile .profile-tabs #notas .nota-item {
+.user .user-profile .tabs-container #notas .nota-item {
   margin-bottom: 20px;
   border-bottom: #e0e0e0 1px solid;
 }
-.user .user-profile .profile-tabs #notas .nota-item .heading {
+.user .user-profile .tabs-container #notas .nota-item .heading {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 10px;
 }
-.user .user-profile .profile-tabs #notas .nota-item .heading small {
+.user .user-profile .tabs-container #notas .nota-item .heading small {
   color: #666;
   font-size: .8em;
 }
-.user .user-profile .profile-tabs #notas .new-nota textarea {
+.user .user-profile .tabs-container #notas .new-nota textarea {
   width: 665px;
   height: 100px;
   margin-bottom: 20px;
 }
-.user .user-profile .profile-tabs #notas .new-nota .controls {
+.user .user-profile .tabs-container #notas .new-nota .controls {
   margin-bottom: 20px;
 }
 .user .user-profile #nice-couple {
@@ -8387,23 +8393,23 @@ li {
   margin-bottom: -1px;
   margin-left: 10px;
 }
-.user .celestinos .boxed .boxed-inner header h1 span, .user .profile .boxed .boxed-inner header h1 span, .user .user-profile .profile-tabs #dicen .boxed .boxed-inner header h1 span {
+.user .celestinos .boxed .boxed-inner header h1 span, .user .profile .boxed .boxed-inner header h1 span, .user .user-profile .tabs-container #dicen .boxed .boxed-inner header h1 span {
   font-size: .6em;
   color: #666;
 }
-.user .celestinos .boxed .boxed-inner .celes-item, .user .profile .boxed .boxed-inner .celes-item, .user .user-profile .profile-tabs #dicen .boxed .boxed-inner .celes-item {
+.user .celestinos .boxed .boxed-inner .celes-item, .user .profile .boxed .boxed-inner .celes-item, .user .user-profile .tabs-container #dicen .boxed .boxed-inner .celes-item {
   margin: 10px;
 }
-.user .celestinos p, .user .profile p, .user .user-profile .profile-tabs #dicen p {
+.user .celestinos p, .user .profile p, .user .user-profile .tabs-container #dicen p {
   margin: 0;
 }
-.user .celestinos p span, .user .profile p span, .user .user-profile .profile-tabs #dicen p span {
+.user .celestinos p span, .user .profile p span, .user .user-profile .tabs-container #dicen p span {
   color: #5caae8;
 }
-.user .celestinos .indice .boxed-inner, .user .profile .indice .boxed-inner, .user .user-profile .profile-tabs #dicen .indice .boxed-inner {
+.user .celestinos .indice .boxed-inner, .user .profile .indice .boxed-inner, .user .user-profile .tabs-container #dicen .indice .boxed-inner {
   padding-bottom: 20px;
 }
-.user .celestinos .celes-item, .user .profile .celes-item, .user .user-profile .profile-tabs #dicen .celes-item {
+.user .celestinos .celes-item, .user .profile .celes-item, .user .user-profile .tabs-container #dicen .celes-item {
   overflow: hidden;
   *zoom: 1;
   background: #fff;
@@ -8411,45 +8417,45 @@ li {
   padding: 10px;
   border-bottom: #e0e0e0 1px solid;
 }
-.user .celestinos .celes-item img, .user .profile .celes-item img, .user .user-profile .profile-tabs #dicen .celes-item img {
+.user .celestinos .celes-item img, .user .profile .celes-item img, .user .user-profile .tabs-container #dicen .celes-item img {
   border: #e0e0e0 1px solid;
   float: left;
   margin-right: 10px;
   width: 95px;
   height: 95px;
 }
-.user .celestinos .celes-item header, .user .profile .celes-item header, .user .user-profile .profile-tabs #dicen .celes-item header {
+.user .celestinos .celes-item header, .user .profile .celes-item header, .user .user-profile .tabs-container #dicen .celes-item header {
   border: none;
   padding: 0;
   margin: 0;
   font-size: .8em;
 }
-.user .celestinos .celes-item header i, .user .profile .celes-item header i, .user .user-profile .profile-tabs #dicen .celes-item header i {
+.user .celestinos .celes-item header i, .user .profile .celes-item header i, .user .user-profile .tabs-container #dicen .celes-item header i {
   margin-right: 5px;
 }
-.user .celestinos .celes-item header span, .user .profile .celes-item header span, .user .user-profile .profile-tabs #dicen .celes-item header span {
+.user .celestinos .celes-item header span, .user .profile .celes-item header span, .user .user-profile .tabs-container #dicen .celes-item header span {
   display: inline-block;
   margin: 0px 10px;
 }
-.user .celestinos .celes-item header .date, .user .profile .celes-item header .date, .user .user-profile .profile-tabs #dicen .celes-item header .date {
+.user .celestinos .celes-item header .date, .user .profile .celes-item header .date, .user .user-profile .tabs-container #dicen .celes-item header .date {
   float: right;
   color: #666;
   font-size: .9em;
 }
-.user .celestinos .celes-item header a:first-child, .user .profile .celes-item header a:first-child, .user .user-profile .profile-tabs #dicen .celes-item header a:first-child {
+.user .celestinos .celes-item header a:first-child, .user .profile .celes-item header a:first-child, .user .user-profile .tabs-container #dicen .celes-item header a:first-child {
   font-size: 1.2em;
   font-weight: bold;
 }
-.user .celestinos .celes-item .relationship, .user .profile .celes-item .relationship, .user .user-profile .profile-tabs #dicen .celes-item .relationship {
+.user .celestinos .celes-item .relationship, .user .profile .celes-item .relationship, .user .user-profile .tabs-container #dicen .celes-item .relationship {
   margin-right: 10px;
 }
-.user .celestinos .choose, .user .profile .choose, .user .user-profile .profile-tabs #dicen .choose {
+.user .celestinos .choose, .user .profile .choose, .user .user-profile .tabs-container #dicen .choose {
   border-top: #e0e0e0 1px dashed;
   text-align: center;
   margin-top: 10px;
   padding-top: 10px;
 }
-.user .celestinos .white-box, .user .profile .white-box, .user .user-profile .profile-tabs #dicen .white-box {
+.user .celestinos .white-box, .user .profile .white-box, .user .user-profile .tabs-container #dicen .white-box {
   text-align: center;
   background-color: white;
   float: left;
@@ -8458,21 +8464,21 @@ li {
   margin: 20px 0 20px 4%;
   display: block;
 }
-.user .celestinos .white-box h4, .user .profile .white-box h4, .user .user-profile .profile-tabs #dicen .white-box h4 {
+.user .celestinos .white-box h4, .user .profile .white-box h4, .user .user-profile .tabs-container #dicen .white-box h4 {
   padding: 0px;
   margin: 15px 0;
   font-size: 16px;
   text-align: center;
   width: 100%;
 }
-.user .celestinos .white-box p, .user .profile .white-box p, .user .user-profile .profile-tabs #dicen .white-box p {
+.user .celestinos .white-box p, .user .profile .white-box p, .user .user-profile .tabs-container #dicen .white-box p {
   margin: 15px 0;
 }
-.user .celestinos .box-title, .user .profile .box-title, .user .user-profile .profile-tabs #dicen .box-title {
+.user .celestinos .box-title, .user .profile .box-title, .user .user-profile .tabs-container #dicen .box-title {
   text-align: center;
   font-size: 1.5em;
 }
-.user .celestinos .celes-box, .user .profile .celes-box, .user .user-profile .profile-tabs #dicen .celes-box {
+.user .celestinos .celes-box, .user .profile .celes-box, .user .user-profile .tabs-container #dicen .celes-box {
   background-color: white;
   display: inline-block;
   width: 80%;
@@ -8480,13 +8486,13 @@ li {
   border-radius: 5px;
   padding-bottom: 10px;
 }
-.user .celestinos .celes-box ul, .user .profile .celes-box ul, .user .user-profile .profile-tabs #dicen .celes-box ul {
+.user .celestinos .celes-box ul, .user .profile .celes-box ul, .user .user-profile .tabs-container #dicen .celes-box ul {
   overflow: hidden;
   *zoom: 1;
   margin: 20px 0;
   margin-left: 10px;
 }
-.user .celestinos .celes-box ul li, .user .profile .celes-box ul li, .user .user-profile .profile-tabs #dicen .celes-box ul li {
+.user .celestinos .celes-box ul li, .user .profile .celes-box ul li, .user .user-profile .tabs-container #dicen .celes-box ul li {
   width: 42px;
   height: 56px;
   float: left;
@@ -8495,29 +8501,29 @@ li {
   text-align: center;
   background: url(images/sprite-hearts.jpg) left top no-repeat;
 }
-.user .celestinos .celes-box .red-heart, .user .profile .celes-box .red-heart, .user .user-profile .profile-tabs #dicen .celes-box .red-heart {
+.user .celestinos .celes-box .red-heart, .user .profile .celes-box .red-heart, .user .user-profile .tabs-container #dicen .celes-box .red-heart {
   color: #e61c25;
 }
-.user .celestinos .celes-box .violet-heart, .user .profile .celes-box .violet-heart, .user .user-profile .profile-tabs #dicen .celes-box .violet-heart {
+.user .celestinos .celes-box .violet-heart, .user .profile .celes-box .violet-heart, .user .user-profile .tabs-container #dicen .celes-box .violet-heart {
   background-position: -42px 0;
   color: #815ca2;
 }
-.user .celestinos .celes-box .green-heart, .user .profile .celes-box .green-heart, .user .user-profile .profile-tabs #dicen .celes-box .green-heart {
+.user .celestinos .celes-box .green-heart, .user .profile .celes-box .green-heart, .user .user-profile .tabs-container #dicen .celes-box .green-heart {
   background-position: -84px 0;
   color: #8bc457;
 }
-.user .celestinos .celes-box .yellow-heart, .user .profile .celes-box .yellow-heart, .user .user-profile .profile-tabs #dicen .celes-box .yellow-heart {
+.user .celestinos .celes-box .yellow-heart, .user .profile .celes-box .yellow-heart, .user .user-profile .tabs-container #dicen .celes-box .yellow-heart {
   background-position: -126px 0;
   color: #fcc009;
 }
-.user .celestinos .celes-box .btns, .user .profile .celes-box .btns, .user .user-profile .profile-tabs #dicen .celes-box .btns {
+.user .celestinos .celes-box .btns, .user .profile .celes-box .btns, .user .user-profile .tabs-container #dicen .celes-box .btns {
   margin: 10px auto;
   text-align: center;
 }
-.user .celestinos .celes-box .btns .btn, .user .profile .celes-box .btns .btn, .user .user-profile .profile-tabs #dicen .celes-box .btns .btn {
+.user .celestinos .celes-box .btns .btn, .user .profile .celes-box .btns .btn, .user .user-profile .tabs-container #dicen .celes-box .btns .btn {
   width: 250px;
 }
-.user .celestinos .your-celestines .celes-item, .user .profile .your-celestines .celes-item, .user .user-profile .profile-tabs #dicen .your-celestines .celes-item {
+.user .celestinos .your-celestines .celes-item, .user .profile .your-celestines .celes-item, .user .user-profile .tabs-container #dicen .your-celestines .celes-item {
   margin: 10px;
 }
 .user .settings .col {
@@ -8583,43 +8589,43 @@ li {
   margin-bottom: 20px;
 }
 
-section.list .user-list, section.user-home .user-list, .user section.chat .user-list, .user .user-profile .profile-tabs #notas .user-list, .user .celestinos .user-list, .user .profile .user-list, .user .user-profile .profile-tabs #dicen .user-list {
+section.list .user-list, section.user-home .user-list, .user section.chat .user-list, .user .user-profile .tabs-container #notas .user-list, .user .celestinos .user-list, .user .profile .user-list, .user .user-profile .tabs-container #dicen .user-list {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: -12px;
 }
-section.list .user-list li, section.user-home .user-list li, .user section.chat .user-list li, .user .user-profile .profile-tabs #notas .user-list li, .user .celestinos .user-list li, .user .profile .user-list li, .user .user-profile .profile-tabs #dicen .user-list li {
+section.list .user-list li, section.user-home .user-list li, .user section.chat .user-list li, .user .user-profile .tabs-container #notas .user-list li, .user .celestinos .user-list li, .user .profile .user-list li, .user .user-profile .tabs-container #dicen .user-list li {
   width: 130px;
   border: #dbdbdb 1px solid;
   float: left;
   margin-left: 10px;
   margin-bottom: 10px;
 }
-section.list .user-list li li, section.user-home .user-list li li, .user section.chat .user-list li li, .user .user-profile .profile-tabs #notas .user-list li li, .user .celestinos .user-list li li, .user .profile .user-list li li, .user .user-profile .profile-tabs #dicen .user-list li li {
+section.list .user-list li li, section.user-home .user-list li li, .user section.chat .user-list li li, .user .user-profile .tabs-container #notas .user-list li li, .user .celestinos .user-list li li, .user .profile .user-list li li, .user .user-profile .tabs-container #dicen .user-list li li {
   float: none;
   width: auto;
   margin: 0;
   border: none;
 }
-section.list .user-card, section.user-home .user-card, .user section.chat .user-card, .user .user-profile .profile-tabs #notas .user-card, .user .celestinos .user-card, .user .profile .user-card, .user .user-profile .profile-tabs #dicen .user-card {
+section.list .user-card, section.user-home .user-card, .user section.chat .user-card, .user .user-profile .tabs-container #notas .user-card, .user .celestinos .user-card, .user .profile .user-card, .user .user-profile .tabs-container #dicen .user-card {
   background: #fff;
 }
-section.list .user-card.online .pics li, section.user-home .user-card.online .pics li, .user section.chat .user-card.online .pics li, .user .user-profile .profile-tabs #notas .user-card.online .pics li, .user .celestinos .user-card.online .pics li, .user .profile .user-card.online .pics li, .user .user-profile .profile-tabs #dicen .user-card.online .pics li {
+section.list .user-card.online .pics li, section.user-home .user-card.online .pics li, .user section.chat .user-card.online .pics li, .user .user-profile .tabs-container #notas .user-card.online .pics li, .user .celestinos .user-card.online .pics li, .user .profile .user-card.online .pics li, .user .user-profile .tabs-container #dicen .user-card.online .pics li {
   background: #8ccc8c;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-section.list .user-card ul, section.user-home .user-card ul, .user section.chat .user-card ul, .user .user-profile .profile-tabs #notas .user-card ul, .user .celestinos .user-card ul, .user .profile .user-card ul, .user .user-profile .profile-tabs #dicen .user-card ul {
+section.list .user-card ul, section.user-home .user-card ul, .user section.chat .user-card ul, .user .user-profile .tabs-container #notas .user-card ul, .user .celestinos .user-card ul, .user .profile .user-card ul, .user .user-profile .tabs-container #dicen .user-card ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-section.list .user-card ul li, section.user-home .user-card ul li, .user section.chat .user-card ul li, .user .user-profile .profile-tabs #notas .user-card ul li, .user .celestinos .user-card ul li, .user .profile .user-card ul li, .user .user-profile .profile-tabs #dicen .user-card ul li {
+section.list .user-card ul li, section.user-home .user-card ul li, .user section.chat .user-card ul li, .user .user-profile .tabs-container #notas .user-card ul li, .user .celestinos .user-card ul li, .user .profile .user-card ul li, .user .user-profile .tabs-container #dicen .user-card ul li {
   padding: 0;
   margin: 0;
 }
-section.list .user-card ul.pics, section.user-home .user-card ul.pics, .user section.chat .user-card ul.pics, .user .user-profile .profile-tabs #notas .user-card ul.pics, .user .celestinos .user-card ul.pics, .user .profile .user-card ul.pics, .user .user-profile .profile-tabs #dicen .user-card ul.pics {
+section.list .user-card ul.pics, section.user-home .user-card ul.pics, .user section.chat .user-card ul.pics, .user .user-profile .tabs-container #notas .user-card ul.pics, .user .celestinos .user-card ul.pics, .user .profile .user-card ul.pics, .user .user-profile .tabs-container #dicen .user-card ul.pics {
   position: relative;
   width: 124px;
   height: 131px;
@@ -8629,31 +8635,31 @@ section.list .user-card ul.pics, section.user-home .user-card ul.pics, .user sec
   margin: 0 auto;
   padding-top: 3px;
 }
-section.list .user-card ul.pics li, section.user-home .user-card ul.pics li, .user section.chat .user-card ul.pics li, .user .user-profile .profile-tabs #notas .user-card ul.pics li, .user .celestinos .user-card ul.pics li, .user .profile .user-card ul.pics li, .user .user-profile .profile-tabs #dicen .user-card ul.pics li {
+section.list .user-card ul.pics li, section.user-home .user-card ul.pics li, .user section.chat .user-card ul.pics li, .user .user-profile .tabs-container #notas .user-card ul.pics li, .user .celestinos .user-card ul.pics li, .user .profile .user-card ul.pics li, .user .user-profile .tabs-container #dicen .user-card ul.pics li {
   margin: 0;
   padding: 0;
   position: absolute;
   z-index: 1;
   padding-bottom: 5px;
 }
-section.list .user-card ul.pics li:first-child, section.user-home .user-card ul.pics li:first-child, .user section.chat .user-card ul.pics li:first-child, .user .user-profile .profile-tabs #notas .user-card ul.pics li:first-child, .user .celestinos .user-card ul.pics li:first-child, .user .profile .user-card ul.pics li:first-child, .user .user-profile .profile-tabs #dicen .user-card ul.pics li:first-child {
+section.list .user-card ul.pics li:first-child, section.user-home .user-card ul.pics li:first-child, .user section.chat .user-card ul.pics li:first-child, .user .user-profile .tabs-container #notas .user-card ul.pics li:first-child, .user .celestinos .user-card ul.pics li:first-child, .user .profile .user-card ul.pics li:first-child, .user .user-profile .tabs-container #dicen .user-card ul.pics li:first-child {
   z-index: 2;
 }
-section.list .user-card ul.pics li a img, section.user-home .user-card ul.pics li a img, .user section.chat .user-card ul.pics li a img, .user .user-profile .profile-tabs #notas .user-card ul.pics li a img, .user .celestinos .user-card ul.pics li a img, .user .profile .user-card ul.pics li a img, .user .user-profile .profile-tabs #dicen .user-card ul.pics li a img {
+section.list .user-card ul.pics li a img, section.user-home .user-card ul.pics li a img, .user section.chat .user-card ul.pics li a img, .user .user-profile .tabs-container #notas .user-card ul.pics li a img, .user .celestinos .user-card ul.pics li a img, .user .profile .user-card ul.pics li a img, .user .user-profile .tabs-container #dicen .user-card ul.pics li a img {
   width: 124px;
   height: 124px;
 }
-section.list .user-card ul.actions, section.user-home .user-card ul.actions, .user section.chat .user-card ul.actions, .user .user-profile .profile-tabs #notas .user-card ul.actions, .user .celestinos .user-card ul.actions, .user .profile .user-card ul.actions, .user .user-profile .profile-tabs #dicen .user-card ul.actions {
+section.list .user-card ul.actions, section.user-home .user-card ul.actions, .user section.chat .user-card ul.actions, .user .user-profile .tabs-container #notas .user-card ul.actions, .user .celestinos .user-card ul.actions, .user .profile .user-card ul.actions, .user .user-profile .tabs-container #dicen .user-card ul.actions {
   padding-bottom: 5px;
 }
-section.list .user-card ul.actions li, section.user-home .user-card ul.actions li, .user section.chat .user-card ul.actions li, .user .user-profile .profile-tabs #notas .user-card ul.actions li, .user .celestinos .user-card ul.actions li, .user .profile .user-card ul.actions li, .user .user-profile .profile-tabs #dicen .user-card ul.actions li {
+section.list .user-card ul.actions li, section.user-home .user-card ul.actions li, .user section.chat .user-card ul.actions li, .user .user-profile .tabs-container #notas .user-card ul.actions li, .user .celestinos .user-card ul.actions li, .user .profile .user-card ul.actions li, .user .user-profile .tabs-container #dicen .user-card ul.actions li {
   display: block;
   width: 30px;
   height: 30px;
   float: left;
   margin: 1px!important;
 }
-section.list .user-card ul.actions li a, section.user-home .user-card ul.actions li a, .user section.chat .user-card ul.actions li a, .user .user-profile .profile-tabs #notas .user-card ul.actions li a, .user .celestinos .user-card ul.actions li a, .user .profile .user-card ul.actions li a, .user .user-profile .profile-tabs #dicen .user-card ul.actions li a {
+section.list .user-card ul.actions li a, section.user-home .user-card ul.actions li a, .user section.chat .user-card ul.actions li a, .user .user-profile .tabs-container #notas .user-card ul.actions li a, .user .celestinos .user-card ul.actions li a, .user .profile .user-card ul.actions li a, .user .user-profile .tabs-container #dicen .user-card ul.actions li a {
   display: block;
   float: left;
   width: 30px;
@@ -8662,24 +8668,24 @@ section.list .user-card ul.actions li a, section.user-home .user-card ul.actions
   text-indent: -999em;
   background: url(images/sprite.png) left top no-repeat;
 }
-section.list .user-card ul.actions li.message a, section.user-home .user-card ul.actions li.message a, .user section.chat .user-card ul.actions li.message a, .user .user-profile .profile-tabs #notas .user-card ul.actions li.message a, .user .celestinos .user-card ul.actions li.message a, .user .profile .user-card ul.actions li.message a, .user .user-profile .profile-tabs #dicen .user-card ul.actions li.message a {
+section.list .user-card ul.actions li.message a, section.user-home .user-card ul.actions li.message a, .user section.chat .user-card ul.actions li.message a, .user .user-profile .tabs-container #notas .user-card ul.actions li.message a, .user .celestinos .user-card ul.actions li.message a, .user .profile .user-card ul.actions li.message a, .user .user-profile .tabs-container #dicen .user-card ul.actions li.message a {
   background-position: 4px -156px;
 }
-section.list .user-card ul.actions li.chat a, section.user-home .user-card ul.actions li.chat a, .user section.chat .user-card ul.actions li.chat a, .user .user-profile .profile-tabs #notas .user-card ul.actions li.chat a, .user .celestinos .user-card ul.actions li.chat a, .user .profile .user-card ul.actions li.chat a, .user .user-profile .profile-tabs #dicen .user-card ul.actions li.chat a {
+section.list .user-card ul.actions li.chat a, section.user-home .user-card ul.actions li.chat a, .user section.chat .user-card ul.actions li.chat a, .user .user-profile .tabs-container #notas .user-card ul.actions li.chat a, .user .celestinos .user-card ul.actions li.chat a, .user .profile .user-card ul.actions li.chat a, .user .user-profile .tabs-container #dicen .user-card ul.actions li.chat a {
   background-position: -25px -156px;
 }
-section.list .user-card ul.actions li.like a, section.user-home .user-card ul.actions li.like a, .user section.chat .user-card ul.actions li.like a, .user .user-profile .profile-tabs #notas .user-card ul.actions li.like a, .user .celestinos .user-card ul.actions li.like a, .user .profile .user-card ul.actions li.like a, .user .user-profile .profile-tabs #dicen .user-card ul.actions li.like a {
+section.list .user-card ul.actions li.like a, section.user-home .user-card ul.actions li.like a, .user section.chat .user-card ul.actions li.like a, .user .user-profile .tabs-container #notas .user-card ul.actions li.like a, .user .celestinos .user-card ul.actions li.like a, .user .profile .user-card ul.actions li.like a, .user .user-profile .tabs-container #dicen .user-card ul.actions li.like a {
   background-position: -57px -156px;
 }
-section.list .user-card ul.actions li.block a, section.user-home .user-card ul.actions li.block a, .user section.chat .user-card ul.actions li.block a, .user .user-profile .profile-tabs #notas .user-card ul.actions li.block a, .user .celestinos .user-card ul.actions li.block a, .user .profile .user-card ul.actions li.block a, .user .user-profile .profile-tabs #dicen .user-card ul.actions li.block a {
+section.list .user-card ul.actions li.block a, section.user-home .user-card ul.actions li.block a, .user section.chat .user-card ul.actions li.block a, .user .user-profile .tabs-container #notas .user-card ul.actions li.block a, .user .celestinos .user-card ul.actions li.block a, .user .profile .user-card ul.actions li.block a, .user .user-profile .tabs-container #dicen .user-card ul.actions li.block a {
   background-position: -86px -156px;
 }
-section.list .user-card header, section.user-home .user-card header, .user section.chat .user-card header, .user .user-profile .profile-tabs #notas .user-card header, .user .celestinos .user-card header, .user .profile .user-card header, .user .user-profile .profile-tabs #dicen .user-card header {
+section.list .user-card header, section.user-home .user-card header, .user section.chat .user-card header, .user .user-profile .tabs-container #notas .user-card header, .user .celestinos .user-card header, .user .profile .user-card header, .user .user-profile .tabs-container #dicen .user-card header {
   padding: 10px;
   border: 0;
   margin: 0;
 }
-section.list .user-card header h1, section.user-home .user-card header h1, .user section.chat .user-card header h1, .user .user-profile .profile-tabs #notas .user-card header h1, .user .celestinos .user-card header h1, .user .profile .user-card header h1, .user .user-profile .profile-tabs #dicen .user-card header h1 {
+section.list .user-card header h1, section.user-home .user-card header h1, .user section.chat .user-card header h1, .user .user-profile .tabs-container #notas .user-card header h1, .user .celestinos .user-card header h1, .user .profile .user-card header h1, .user .user-profile .tabs-container #dicen .user-card header h1 {
   font-size: .8em;
   line-height: 1.2em;
   font-weight: normal;
@@ -8687,29 +8693,29 @@ section.list .user-card header h1, section.user-home .user-card header h1, .user
   padding: 0;
   color: #333;
 }
-section.list .user-card header h1 a, section.user-home .user-card header h1 a, .user section.chat .user-card header h1 a, .user .user-profile .profile-tabs #notas .user-card header h1 a, .user .celestinos .user-card header h1 a, .user .profile .user-card header h1 a, .user .user-profile .profile-tabs #dicen .user-card header h1 a {
+section.list .user-card header h1 a, section.user-home .user-card header h1 a, .user section.chat .user-card header h1 a, .user .user-profile .tabs-container #notas .user-card header h1 a, .user .celestinos .user-card header h1 a, .user .profile .user-card header h1 a, .user .user-profile .tabs-container #dicen .user-card header h1 a {
   font-weight: bold;
   font-size: 1.1em;
 }
-section.list .user-card header h1 span, section.user-home .user-card header h1 span, .user section.chat .user-card header h1 span, .user .user-profile .profile-tabs #notas .user-card header h1 span, .user .celestinos .user-card header h1 span, .user .profile .user-card header h1 span, .user .user-profile .profile-tabs #dicen .user-card header h1 span {
+section.list .user-card header h1 span, section.user-home .user-card header h1 span, .user section.chat .user-card header h1 span, .user .user-profile .tabs-container #notas .user-card header h1 span, .user .celestinos .user-card header h1 span, .user .profile .user-card header h1 span, .user .user-profile .tabs-container #dicen .user-card header h1 span {
   font-size: .9em;
 }
-section.list .interactions, section.user-home .interactions, .user section.chat .interactions, .user .user-profile .profile-tabs #notas .interactions, .user .celestinos .interactions, .user .profile .interactions, .user .user-profile .profile-tabs #dicen .interactions {
+section.list .interactions, section.user-home .interactions, .user section.chat .interactions, .user .user-profile .tabs-container #notas .interactions, .user .celestinos .interactions, .user .profile .interactions, .user .user-profile .tabs-container #dicen .interactions {
   padding: 10px;
   font-size: .8em;
 }
-section.list .interactions .punctuations, section.user-home .interactions .punctuations, .user section.chat .interactions .punctuations, .user .user-profile .profile-tabs #notas .interactions .punctuations, .user .celestinos .interactions .punctuations, .user .profile .interactions .punctuations, .user .user-profile .profile-tabs #dicen .interactions .punctuations {
+section.list .interactions .punctuations, section.user-home .interactions .punctuations, .user section.chat .interactions .punctuations, .user .user-profile .tabs-container #notas .interactions .punctuations, .user .celestinos .interactions .punctuations, .user .profile .interactions .punctuations, .user .user-profile .tabs-container #dicen .interactions .punctuations {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 5px;
 }
-section.list .interactions .punctuations strong, section.user-home .interactions .punctuations strong, .user section.chat .interactions .punctuations strong, .user .user-profile .profile-tabs #notas .interactions .punctuations strong, .user .celestinos .interactions .punctuations strong, .user .profile .interactions .punctuations strong, .user .user-profile .profile-tabs #dicen .interactions .punctuations strong {
+section.list .interactions .punctuations strong, section.user-home .interactions .punctuations strong, .user section.chat .interactions .punctuations strong, .user .user-profile .tabs-container #notas .interactions .punctuations strong, .user .celestinos .interactions .punctuations strong, .user .profile .interactions .punctuations strong, .user .user-profile .tabs-container #dicen .interactions .punctuations strong {
   font-weight: normal;
   display: block;
   float: left;
   font-size: .9em;
 }
-section.list .interactions .stars, section.user-home .interactions .stars, .user section.chat .interactions .stars, .user .user-profile .profile-tabs #notas .interactions .stars, .user .celestinos .interactions .stars, .user .profile .interactions .stars, .user .user-profile .profile-tabs #dicen .interactions .stars {
+section.list .interactions .stars, section.user-home .interactions .stars, .user section.chat .interactions .stars, .user .user-profile .tabs-container #notas .interactions .stars, .user .celestinos .interactions .stars, .user .profile .interactions .stars, .user .user-profile .tabs-container #dicen .interactions .stars {
   float: right;
   background: url(images/sprite.png) 0 -200px no-repeat;
   display: inline-block;
@@ -8717,19 +8723,19 @@ section.list .interactions .stars, section.user-home .interactions .stars, .user
   text-indent: -999em;
   overflow: hidden;
 }
-section.list .interactions .stars.stars-1, section.user-home .interactions .stars.stars-1, .user section.chat .interactions .stars.stars-1, .user .user-profile .profile-tabs #notas .interactions .stars.stars-1, .user .celestinos .interactions .stars.stars-1, .user .profile .interactions .stars.stars-1, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-1 {
+section.list .interactions .stars.stars-1, section.user-home .interactions .stars.stars-1, .user section.chat .interactions .stars.stars-1, .user .user-profile .tabs-container #notas .interactions .stars.stars-1, .user .celestinos .interactions .stars.stars-1, .user .profile .interactions .stars.stars-1, .user .user-profile .tabs-container #dicen .interactions .stars.stars-1 {
   background-position: 0 -200px;
 }
-section.list .interactions .stars.stars-2, section.user-home .interactions .stars.stars-2, .user section.chat .interactions .stars.stars-2, .user .user-profile .profile-tabs #notas .interactions .stars.stars-2, .user .celestinos .interactions .stars.stars-2, .user .profile .interactions .stars.stars-2, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-2 {
+section.list .interactions .stars.stars-2, section.user-home .interactions .stars.stars-2, .user section.chat .interactions .stars.stars-2, .user .user-profile .tabs-container #notas .interactions .stars.stars-2, .user .celestinos .interactions .stars.stars-2, .user .profile .interactions .stars.stars-2, .user .user-profile .tabs-container #dicen .interactions .stars.stars-2 {
   background-position: 0 -220px;
 }
-section.list .interactions .stars.stars-3, section.user-home .interactions .stars.stars-3, .user section.chat .interactions .stars.stars-3, .user .user-profile .profile-tabs #notas .interactions .stars.stars-3, .user .celestinos .interactions .stars.stars-3, .user .profile .interactions .stars.stars-3, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-3 {
+section.list .interactions .stars.stars-3, section.user-home .interactions .stars.stars-3, .user section.chat .interactions .stars.stars-3, .user .user-profile .tabs-container #notas .interactions .stars.stars-3, .user .celestinos .interactions .stars.stars-3, .user .profile .interactions .stars.stars-3, .user .user-profile .tabs-container #dicen .interactions .stars.stars-3 {
   background-position: 0 -240px;
 }
-section.list .interactions .stars.stars-4, section.user-home .interactions .stars.stars-4, .user section.chat .interactions .stars.stars-4, .user .user-profile .profile-tabs #notas .interactions .stars.stars-4, .user .celestinos .interactions .stars.stars-4, .user .profile .interactions .stars.stars-4, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-4 {
+section.list .interactions .stars.stars-4, section.user-home .interactions .stars.stars-4, .user section.chat .interactions .stars.stars-4, .user .user-profile .tabs-container #notas .interactions .stars.stars-4, .user .celestinos .interactions .stars.stars-4, .user .profile .interactions .stars.stars-4, .user .user-profile .tabs-container #dicen .interactions .stars.stars-4 {
   background-position: 0 -260px;
 }
-section.list .interactions .stars.stars-5, section.user-home .interactions .stars.stars-5, .user section.chat .interactions .stars.stars-5, .user .user-profile .profile-tabs #notas .interactions .stars.stars-5, .user .celestinos .interactions .stars.stars-5, .user .profile .interactions .stars.stars-5, .user .user-profile .profile-tabs #dicen .interactions .stars.stars-5 {
+section.list .interactions .stars.stars-5, section.user-home .interactions .stars.stars-5, .user section.chat .interactions .stars.stars-5, .user .user-profile .tabs-container #notas .interactions .stars.stars-5, .user .celestinos .interactions .stars.stars-5, .user .profile .interactions .stars.stars-5, .user .user-profile .tabs-container #dicen .interactions .stars.stars-5 {
   background-position: 0 -280px;
 }
 

@@ -54,11 +54,12 @@
 
 	<%= render '/shared/user/profile-action-links' %>
 
-<article class="basic-tabs">
+<article class="basic-tabs tabs-container">
 		
 		<ul class="nav nav-tabs" id="basic-tabs">
   		<li class="active"><a href="#desc">Descripción</a></li>
 		  <li><a href="#dicen">Sus Celestin@s</a></li>
+		  <li><a href="#atributos">Sus Atributos</a></li>
 		  <li class="last"><a href="#notas">Tus notas</a></li>
 		</ul>
 
@@ -75,6 +76,26 @@
 		  			<% 5.times do %>
 						<%= render '/shared/user/celes-item' %>
 						<% end %>
+		  		</div>
+
+		  		<div class="tab-pane" id="atributos">
+							<div class="span4">
+								<% (1..12).each do %>
+									<h5>Amable</h5>
+									<div class="progress">
+										<div class="bar" style="width:35%"></div>
+									</div>
+								<% end %>
+							</div>
+
+							<div class="span4 offset1 attributes-col-2">
+									<% (1..12).each do %>
+										<h5>Amable</h5>
+										<div class="progress">
+											<div class="bar" style="width:35%"></div>
+										</div>
+									<% end %>
+							</div>
 		  		</div>
 
 		  		<div class="tab-pane" id="notas">
@@ -100,14 +121,12 @@
 	</article>
 
 
-	<article class="profile-tabs">
+	<article class="profile-tabs tabs-container">
 		
 		<ul class="nav nav-tabs" id="myTab">
   		<li class="active"><a href="#como">¿Cómo es?</a></li>
 		  <li><a href="#gustos">Sus gustos</a></li>
 		  <li><a href="#busca">Qué busca</a></li>
-		  <li><a href="#dicen">Sus Celestin@s</a></li>
-		  <li class="last"><a href="#notas">Tus notas</a></li>
 		</ul>
 
 		<div class="boxed">
@@ -115,12 +134,10 @@
 				<div class="tab-content">
 
 		  		<div class="tab-pane active" id="como">
-		  			
-					<h4>Tengo 36 años y vivo en Barcelona. Me gusta hacer monólogos, pero lodicen mis amigos. Me fustra poque es que hablo mucho, muy rápido y muy seguido.</h4>
-					<p>Me considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
-					<p>Mido 1'75m y peso 65kg. Tengo los ojos de color marrón y mi complexión es fuerte.</p>
-					<p>Mi nivel de estudios es diplomado y hablo castellano fluido. Trabajo en el sector salud y mi nivel de ingresos es inimaginable.</p>
-					<p>Soy cristiana y me lo tomo muy en serio.</p>
+						<p>Me considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+						<p>Mido 1'75m y peso 65kg. Tengo los ojos de color marrón y mi complexión es fuerte.</p>
+						<p>Mi nivel de estudios es diplomado y hablo castellano fluido. Trabajo en el sector salud y mi nivel de ingresos es inimaginable.</p>
+						<p>Soy cristiana y me lo tomo muy en serio.</p>
 		  		</div>
 
 		  		<div class="tab-pane" id="gustos">

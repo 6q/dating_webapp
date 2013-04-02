@@ -592,7 +592,7 @@ section.chat{
     }
   }
 
-  .profile-tabs, .basic-tabs {
+  .tabs-container {
     select, input, article {
       font-size:.9em;
     }
@@ -810,7 +810,6 @@ section.chat{
 
   }
 
-
   article.action-links{
 
     background:$link-color;
@@ -871,9 +870,17 @@ section.chat{
     }
   }
 
-  .profile-tabs {
+  .tabs-container {
 
     margin: 0;
+    
+    .attributes-col-2 {
+      margin-left:40px;
+    }
+
+    &.basic-tabs {
+      margin-bottom:40px;
+    }
 
     .nav{margin-bottom: 0px;}
     
