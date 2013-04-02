@@ -1,4 +1,4 @@
-Cellove
+# Cellove
 ========================
 
 This application was generated with the rails_apps_composer gem:
@@ -16,4 +16,13 @@ Preferences:
 
 ________________________
 
-License
+# Deploy static site to Heroku
+
+Install latest Git from homebrew
+
+	brew update
+	brew install git
+
+Deploy:
+
+	git subtree push --prefix prototype
