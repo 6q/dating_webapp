@@ -119,4 +119,17 @@ $('.header-switcher .leaf a').click(function(e){
           $('.jcarousel').jcarousel('scroll', '+=5');
       });
 
+  // tabs
+
+  $('.nav-tabs a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+  })
+
+  // fancybox
+
+  $("a.grouped_elements").fancybox( {
+      titleShow :false
+  });
+
 });
