@@ -8731,6 +8731,12 @@ section.list .user-card header h1 a, section.user-home .user-card header h1 a, .
 section.list .user-card header h1 span, section.user-home .user-card header h1 span, .user section.chat .user-card header h1 span, .user .user-profile .tabs-container #notas .user-card header h1 span, .user .celestinos .user-card header h1 span, .user .profile .user-card header h1 span, .user .user-profile .tabs-container #dicen .user-card header h1 span {
   font-size: .9em;
 }
+section.list .user-card header small, section.user-home .user-card header small, .user section.chat .user-card header small, .user .user-profile .tabs-container #notas .user-card header small, .user .celestinos .user-card header small, .user .profile .user-card header small, .user .user-profile .tabs-container #dicen .user-card header small {
+  color: #5caae8;
+  font-size: .7em;
+  display: block;
+  margin-top: -5px;
+}
 section.list .interactions, section.user-home .interactions, .user section.chat .interactions, .user .user-profile .tabs-container #notas .interactions, .user .celestinos .interactions, .user .profile .interactions, .user .user-profile .tabs-container #dicen .interactions {
   padding: 10px;
   font-size: .8em;

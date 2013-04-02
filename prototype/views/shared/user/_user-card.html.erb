@@ -4,6 +4,9 @@
     <li><a href="/user/user-profile"><img src="/users/placeholder2.jpg"></a></li>
   </ul>
   <header>
+    <% if @timestamp == true %>
+    <small>Hace 2 horas</small>
+    <% end %>
     <h1><%= link_to 'Maria Teresa', '/user/user-profile' %><br><span>Santa Coloma de...</span><br>24 años</h1>
   </header>
   <ul class="actions clearfix">

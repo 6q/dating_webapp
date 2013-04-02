@@ -4,6 +4,7 @@
 		<%= render '/shared/user/sorting' %>
 	</header>
 	<% @interactions = true %>
+	<% @timestamp = true %>
 	<ul class="user-list clearfix">
 		<% (1..15).each do %>
 		  <li><%= render '/shared/user/user-card' %></li>
