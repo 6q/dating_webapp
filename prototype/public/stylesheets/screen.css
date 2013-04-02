@@ -8433,18 +8433,49 @@ li {
 .user .celestinos .celes-item header i, .user .profile .celes-item header i, .user .user-profile .tabs-container #dicen .celes-item header i {
   margin-right: 5px;
 }
+.user .celestinos .celes-item header i.heart, .user .profile .celes-item header i.heart, .user .user-profile .tabs-container #dicen .celes-item header i.heart {
+  width: 14px;
+  height: 14px;
+  display: block;
+  float: left;
+  margin-top: 5px;
+}
 .user .celestinos .celes-item header span, .user .profile .celes-item header span, .user .user-profile .tabs-container #dicen .celes-item header span {
   display: inline-block;
   margin: 0px 10px;
 }
 .user .celestinos .celes-item header .date, .user .profile .celes-item header .date, .user .user-profile .tabs-container #dicen .celes-item header .date {
   float: right;
-  color: #666;
+  color: #666!important;
   font-size: .9em;
 }
 .user .celestinos .celes-item header a:first-child, .user .profile .celes-item header a:first-child, .user .user-profile .tabs-container #dicen .celes-item header a:first-child {
   font-size: 1.2em;
   font-weight: bold;
+}
+.user .celestinos .celes-item.heart-ex header span, .user .profile .celes-item.heart-ex header span, .user .user-profile .tabs-container #dicen .celes-item.heart-ex header span {
+  color: #f00;
+}
+.user .celestinos .celes-item.heart-ex header i, .user .profile .celes-item.heart-ex header i, .user .user-profile .tabs-container #dicen .celes-item.heart-ex header i {
+  background: url(images/sprite.png) 0px -308px no-repeat;
+}
+.user .celestinos .celes-item.heart-special header span, .user .profile .celes-item.heart-special header span, .user .user-profile .tabs-container #dicen .celes-item.heart-special header span {
+  color: #8059a3;
+}
+.user .celestinos .celes-item.heart-special header i, .user .profile .celes-item.heart-special header i, .user .user-profile .tabs-container #dicen .celes-item.heart-special header i {
+  background: url(images/sprite.png) -14px -308px no-repeat;
+}
+.user .celestinos .celes-item.heart-friend header span, .user .profile .celes-item.heart-friend header span, .user .user-profile .tabs-container #dicen .celes-item.heart-friend header span {
+  color: #9ccd62;
+}
+.user .celestinos .celes-item.heart-friend header i, .user .profile .celes-item.heart-friend header i, .user .user-profile .tabs-container #dicen .celes-item.heart-friend header i {
+  background: url(images/sprite.png) -27px -308px no-repeat;
+}
+.user .celestinos .celes-item.heart-family header span, .user .profile .celes-item.heart-family header span, .user .user-profile .tabs-container #dicen .celes-item.heart-family header span {
+  color: #fcb600;
+}
+.user .celestinos .celes-item.heart-family header i, .user .profile .celes-item.heart-family header i, .user .user-profile .tabs-container #dicen .celes-item.heart-family header i {
+  background: url(images/sprite.png) -42px -308px no-repeat;
 }
 .user .celestinos .celes-item .relationship, .user .profile .celes-item .relationship, .user .user-profile .tabs-container #dicen .celes-item .relationship {
   margin-right: 10px;
