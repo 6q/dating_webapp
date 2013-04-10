@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   GENDER = ['male', 'female']
-  ORIENTATION = ['straight', 'homo', 'bi']
-  MARITAL_STATUS = ['casado', 'soltero', 'viudo']
+  ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
+  MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
   
   rolify
   # Include default devise modules. Others available are:
@@ -12,5 +12,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status, :birth_date, :country, :zip_code, :town, :town_id, :newsletter_optin
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status, :birth_date, :country, :zip_code, :town, :town_id, :newsletter_optin, :terms_and_conditions
+
+  #virtual attributes
+  attr_accessor :terms_and_conditions
 end
