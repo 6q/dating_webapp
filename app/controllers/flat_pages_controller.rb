@@ -24,5 +24,8 @@ class FlatPagesController < ApplicationController
     c.deliver
     redirect_to new_contact_form_path
   end
+
+  def media_press
+  end
 end
 
