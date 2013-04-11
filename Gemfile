@@ -28,6 +28,7 @@ gem 'dragonfly'
 gem 'country_select'
 gem 'kaminari'
 gem 'turbolinks'
+gem 'mail_form'
 
 group :test do
   gem 'faker'

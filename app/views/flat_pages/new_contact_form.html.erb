@@ -1,0 +1,52 @@
+<% title = "Contacta" %>
+<% content_for(:title) {title} %>
+<article>
+
+  <header class="bg clearfix">
+    <h1>&nbsp;<br><%= title %><br>&nbsp;</h1>
+    <%= image_tag 'teaser-contact.jpg' %>
+  </header>
+
+  <div class="article-body">
+
+    <div class="row">
+      <div class="span6">
+        <h3>Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad.</h3>
+      </div>
+
+      <div class="span6">
+        <%= simple_form_for @contact_form, url: contact_form_path do |f| %>
+          <%= f.input :name %>
+          <%= f.input :surname %>
+          <%= f.input :email %>
+          <%= f.input :message %>
+          <%= f.button :submit, input_html: {class: 'btn btn-info btn-large'} %>
+        <% end %>
+        <form>
+          <fieldset id="contact" class="clearfix form-horizontal">
+            <p>Si tienes cualquier duda o pregunta sobre Cellove, su funcionamiento o, simplemente quieres ponerte en contacto con nosotr@s, hazlo a través del siguiente formulario:</p>           
+            <div class="control-group">
+              <label class="control-label">Nombre:</label>
+              <div class="controls"><input type="text"></div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Apellidos:</label>
+              <div class="controls"><input type="text"></div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Email:</label>
+              <div class="controls"><input type="email"></div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Tus comentarios:</label>
+              <div class="controls"><textarea></textarea></div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-info btn-large">Enviar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</article>

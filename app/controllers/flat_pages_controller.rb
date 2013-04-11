@@ -14,5 +14,14 @@ class FlatPagesController < ApplicationController
 
   def usage
   end
+
+  def new_contact_form
+    @contact_form = ContactForm.new
+  end
+
+  def contact_form
+    c = ContactForm.new(params[:contact_form])
+    c.deliver
+  end
 end
 

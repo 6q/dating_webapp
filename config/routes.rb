@@ -12,4 +12,6 @@ Cellove::Application.routes.draw do
   get 'politica-de-privacidad' => 'flat_pages#privacy_policy', as: :privacy_policy
   get 'consejos-de-uso' => 'flat_pages#usage', as: :usage
   get 'robots.txt' => 'flat_pages#robots'
+  get 'contacta' => 'flat_pages#new_contact_form', as: :new_contact_form
+  post 'contact' => 'flat_pages#contact_form', as: :contact_form
 end
