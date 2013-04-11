@@ -22,6 +22,7 @@ class FlatPagesController < ApplicationController
   def contact_form
     c = ContactForm.new(params[:contact_form])
     c.deliver
+    redirect_to new_contact_form_path
   end
 end
 
