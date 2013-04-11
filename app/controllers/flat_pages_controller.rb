@@ -1,6 +1,18 @@
 class FlatPagesController < ApplicationController
-  def page_with_no_layout
-    flat_page = "flat_pages/#{params[:id].gsub('-', '_')}"
-    render :template => flat_page, :layout => 'landing'
+  def legal
+  end
+
+  def what
+    @sidebar = true
+  end
+
+  def privacy_policy
+  end
+
+  def terms_conditions
+  end
+
+  def usage
   end
 end
+

@@ -5,39 +5,38 @@
               <h4>Sobre Cellove</h4>
               <ul>
                 <li><%= link_to '¿Qué es?', '/public/que-es' %></li>
+		<li><%= link_to '¿Cómo funciona?', '/public/como-funciona' %></li>
                 <li><%= link_to '¿Cómo consigo popularidad?', '/public/consigue-popularidad' %></li>
                 <li><%= link_to 'Celestin@s', '/public/celestinos' %></li>
               </ul>
             </div>
 
             <div class="span3">
-              <h4>Anuncio TV</h4>
+              <h4>Anuncios TV</h4>
               <ul>
-                <li><%= link_to '¿Te vienes al concierto?', '/public/blog-post' %></li>
-                <li><%= link_to 'Lorem ipsum dolor, ¿te vienes al concierto?', '/public/blog-post' %></li>
-                <li><%= link_to 'Esto es otro spot de TV para que los usuarios se apunten', '/public/blog-post' %></li>
-              </ul>
-            </div>
-
-            <div class="span3">
-              <h4>Blog Cellove</h4>
-              <ul>
-                <li><%= link_to 'Lorem ipsum noticia del blog destacada en la home', '/public/blog-post' %></li>
-                <li><%= link_to 'Novedad mundial lorem ipsum noticia', '/public/blog-post' %></li>
-                <li><%= link_to 'Récord de usuarios registrados en un día', '/public/blog-post' %></li>
+                <li><%= link_to 'Encuentra pareja', '/public/anuncio-tv' %></li>
+                <li><%= link_to 'Solteros exigentes', '/public/anuncio-tv-2' %></li>
+                <li><%= link_to 'Amor en línea', '/public/anuncio-tv-3' %></li>
+		<li><%= link_to 'Ashley Madison', '/public/anuncio-tv-4' %></li>
               </ul>
             </div>
 
             <div class="span3">
               <h4>Legal y conducta</h4>
               <ul>
-                <li><%= link_to 'Consejos de uso', '/public/consejos-de-uso' %></li>
-                <li><%= link_to 'Condiciones generales', '/public/condiciones-generales' %></li>
+                <li><%= link_to 'Consejos de uso', usage_path %></li>
+                <li><%= link_to 'Términos y condiciones', terms_conditions_path %></li>
+                <li><%= link_to 'Política de Privacidad', privacy_policy_path %></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <h4>Cellove © <%= Time.now.year %></h4>
+              <ul>
+                <li><%= link_to 'Contacto', '/public/contacta' %></li>
+                <li><%= link_to 'Media & prensa', '/public/media-prensa' %></li>
               </ul>
             </div>
           </nav>
-          <div id="legal" class="span12">
-            <small>© 2013 Cellove - <%= link_to 'Términos y condiciones', '/public/terms-and-conditions' %> - <%= link_to 'Política de Privacidad', '/public/politica-de-privacidad' %> - <%= link_to 'Contacta', '/public/contacta' %>
-          </div>
         </div>
       </footer>
