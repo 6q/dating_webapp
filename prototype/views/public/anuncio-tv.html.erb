@@ -1,10 +1,15 @@
-<% @title = "Quiero recomendar" %>
-	<header class="bg clearfix">
-		<h1>Anuncios<br>cellove<br>en TV</h1>
-			<ul class="miniSlider">
-				<li class="item active"><img src="/images/teaser-celestino.jpg"></li>
-				<li class="item"><img src="/images/teaser-celestino2.jpg"></li>
-			</ul>
+<% @page = "anuncio-tv" %>
+<% @title = "Encuentra tu nueva pareja en Cellove" %>
+<% @sidebar = true %>
+<% @videos = true %>
+<article>
+
+	<header>
+		<h1><%= @title %></h1>
 	</header>
-		
-	<h2>Próximamente</h2>
+
+	<div class="article-body">
+		<iframe width="665" height="315" src="http://www.youtube.com/embed/quUELBxmSOI" frameborder="0" allowfullscreen></iframe>
+
+	</div>
+</article>
