@@ -35,5 +35,16 @@ class FlatPagesController < ApplicationController
 
     render "tv_spot_#{id}"
   end
+
+  def how_it_works
+  end
+
+  def raise_popularity
+    @sidebar = true
+  end
+
+  def matchmakers
+    @sidebar = true
+  end
 end
 

@@ -8,6 +8,9 @@ Cellove::Application.routes.draw do
   
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what
+  get 'como-funciona' => 'flat_pages#how_it_works', as: :how_it_works
+  get 'consigue-popularidad' => 'flat_pages#raise_popularity', as: :raise_popularity
+  get 'celestinos' => 'flat_pages#matchmakers', as: :matchmakers
   get 'terms-and-conditions' => 'flat_pages#terms_conditions', as: :terms_conditions
   get 'politica-de-privacidad' => 'flat_pages#privacy_policy', as: :privacy_policy
   get 'consejos-de-uso' => 'flat_pages#usage', as: :usage
