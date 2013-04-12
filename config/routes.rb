@@ -15,4 +15,5 @@ Cellove::Application.routes.draw do
   get 'contacta' => 'flat_pages#new_contact_form', as: :new_contact_form
   post 'contact' => 'flat_pages#contact_form', as: :contact_form
   get 'media-prensa' => 'flat_pages#media_press', as: :media_press
+  get 'anuncio-tv/:id' => 'flat_pages#tv_spot', as: :tv_spot
 end

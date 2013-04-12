@@ -27,5 +27,13 @@ class FlatPagesController < ApplicationController
 
   def media_press
   end
+
+  def tv_spot
+    @sidebar = true
+    @videos = true
+    id = params[:id]
+
+    render "tv_spot_#{id}"
+  end
 end
 

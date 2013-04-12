@@ -1,10 +1,27 @@
-<aside class="sidebar">
-	<ul>
-		<li<%= ' class="active"' if @page == 'que-es' %>><%= link_to '¿Qué es?', '/public/que-es' %></li>
-		<li<%= ' class="active"' if @page == 'consigue-popularidad' %>><%= link_to '¿Cómo consigo más popularidad?', '/public/consigue-popularidad' %></li>
-		<li<%= ' class="active"' if @page == 'celestinos' %>><%= link_to 'Celestin@s', '/public/celestinos' %></li>
-		<li<%= ' class="active"' if @page == 'consejos-de-uso' %>><%= link_to 'Consejos de uso', '/public/consejos-de-uso' %></li>
-		<li<%= ' class="active"' if @page == 'condiciones-generales' %>><%= link_to 'Condiciones generales', '/public/condiciones-generales' %></li>
-		<li<%= ' class="active"' if @page == 'sobre-cellove' %>><%= link_to 'Sobre Cellove.com', '/public/sobre-cellove' %></li>
-	</ul>
-</aside>
+<% if @videos %>
+  <aside class="sidebar">
+    <h2>Anuncios TV</h2>
+    <ul>
+      <li<%= ' class="active"' if @page == 'anuncio-tv' %>><%= link_to 'Encuentra tu nueva pareja', tv_spot_path(1) %></li>
+      <li<%= ' class="active"' if @page == 'anuncio-tv-2' %>><%= link_to 'Solteros exigentes', tv_spot_path(2) %></li>
+      <li<%= ' class="active"' if @page == 'anuncio-tv-3' %>><%= link_to 'Amor en línea', tv_spot_path(3) %></li>
+      <li<%= ' class="active"' if @page == 'anuncio-tv-4' %>><%= link_to 'Solteros exigentes', tv_spot_path(4) %></li>
+
+
+    </ul>
+
+  </aside>
+<% else %>
+  <aside class="sidebar">
+    <h2>Sobre Cellove</h2>
+    <ul>
+      <li<%= ' class="active"' if @page == 'que-es' %>><%= link_to '¿Qué es?', '/public/que-es' %></li>
+      <li<%= ' class="active"' if @page == 'como-funciona' %>><%= link_to '¿Cómo funciona?', '/public/como-funciona' %></li>
+      <li<%= ' class="active"' if @page == 'consigue-popularidad' %>><%= link_to '¿Cómo consigo más popularidad?', '/public/consigue-popularidad' %></li>
+      <li<%= ' class="active"' if @page == 'celestinos' %>><%= link_to 'Celestin@s', '/public/celestinos' %></li>
+
+
+    </ul>
+
+  </aside>
+<% end %>
