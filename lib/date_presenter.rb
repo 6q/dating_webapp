@@ -1,13 +1,23 @@
 module DatePresenter
   def present_date(attr_name)
-    %w(day month year).each do |f|
-      partial_name = :"#{attr_name}_#{f}"
+    components = %w(day month year)
+    components.each do |c|
+      partial_name = :"#{attr_name}_#{c}"
       attr_writer partial_name
       attr_accessible partial_name
 
       define_method(partial_name) do
-        date = self[attr_name]
-        date.send(f) if date
+        date = self.send(attr_name)
+        date && date.send(c) || self.instance_variable_get("@#{partial_name}")
+      end
+    end
+
+    before_validation do
+      day = self.send("#{attr_name}_day")
+      month = self.send("#{attr_name}_month")
+      year = self.send("#{attr_name}_year")
+      if day && month && year
+        self.send("#{attr_name}=", Date.civil(year, month, day))
       end
     end
   end
