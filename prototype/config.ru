@@ -32,6 +32,11 @@ end
 use Rack::ShowStatus      # Nice looking 404s and other messages
 use Rack::ShowExceptions  # Nice looking errors
 
+
+
+
+
+
 # Rack Application
 if ENV['SERVER_SOFTWARE'] =~ /passenger/i
   # Passendger only needs the adapter
@@ -43,3 +48,5 @@ else
     Rack::Directory.new(root + '/public')
   ])
 end
+
+

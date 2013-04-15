@@ -8,7 +8,6 @@ group :assets do
 end
 gem 'jquery-rails'
 gem "unicorn", ">= 4.3.1"
-gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "hominid", ">= 3.0.5"
 gem "devise", ">= 2.2.3"
@@ -26,3 +25,17 @@ gem 'dragonfly'
 gem 'country_select'
 gem 'kaminari'
 gem 'turbolinks'
+gem 'mail_form'
+
+group :test do
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'minitest-focus'
+  gem 'minitest-reporters'
+  gem 'minitest-spec-rails'
+end
+
+group :test, :development do
+  gem 'factory_girl_rails', '>= 4.2.0'
+  gem 'commands'
+end

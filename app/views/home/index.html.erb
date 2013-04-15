@@ -35,8 +35,8 @@
       <h1>Registro Usuario Gratis</h1>
     </header>
     <p>Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!</p>
-    <p><%= link_to 'Regístrate GRATIS', '/public/alta-usuario' %> ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!</p>
-    <%= link_to 'Registro Usuario Gratis', '/public/alta-usuario', class: 'more'  %>
+    <p><%= link_to 'Regístrate GRATIS', new_user_registration_path %> ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!</p>
+    <%= link_to 'Registro Usuario Gratis', new_user_registration_path, class: 'more'  %>
   </article>
   <article class="span4">
     <header>
@@ -44,14 +44,14 @@
     </header>
     <p>¿Quieres recomendar a un amig@, exnovi@ o familiar?</p>
     <p>Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste.</p>
-    <%= link_to 'Registro Celestin@', '/public/alta-usuario', class: 'more' %>
+    <%= link_to 'Registro Celestin@', new_user_registration_path, class: 'more' %>
   </article>
   <article class="span4">
     <header>
       <h1>¿Cómo funciona?</h1>
     </header>
-    <p>Es muy fácil y efectivo. <%= link_to 'Regístrate', '/public/alta-usuario' %> para encontrar personas afines por edad, gustos, estilo de vida...</p>
+    <p>Es muy fácil y efectivo. <%= link_to 'Regístrate', new_user_registration_path %> para encontrar personas afines por edad, gustos, estilo de vida...</p>
     <p>Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas.</p>
-    <%= link_to 'Leer más', '/public/como-funciona', class: 'more'  %>
+    <%= link_to 'Leer más', how_it_works_path, class: 'more'  %>
   </article>
 </div>
