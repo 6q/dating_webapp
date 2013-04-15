@@ -9,6 +9,13 @@
     <%= javascript_include_tag "application" %>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Cellove" %>">
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %>">
     <% if @page == 'home' %>
       <style>
         body {
@@ -22,13 +29,6 @@
         }
       </style>
     <% end %>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Cellove" %>">
-    <%= csrf_meta_tags %>
-    <%= yield(:head) %>
-  </head>
-  <body class="<%= controller_name %> <%= action_name %>">
     <header role="banner" class="clearfix">
       <div class="container">
         <%= render 'layouts/header-login' %>
@@ -39,7 +39,6 @@
       </div>
     </header>
     <div class="container">
-      <%= render 'shared/messages' %>
       <section role="main">
         <% if @sidebar %>
           <div class="row">
