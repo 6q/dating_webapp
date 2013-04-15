@@ -35,6 +35,11 @@ group :test do
   gem 'minitest-spec-rails'
 end
 
+group :development do
+  gem "guard-rails"
+  gem "rb-fsevent"
+end
+
 group :test, :development do
   gem 'factory_girl_rails', '>= 4.2.0'
   gem 'commands'
