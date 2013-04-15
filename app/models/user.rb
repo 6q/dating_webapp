@@ -1,24 +1,13 @@
-module DatePresenter
-  def present(attr_name)
-    %w(day month year).each do |f|
-      partial_name = :"#{attr_name}_#{f}"
-      attr_writer partial_name
-      attr_accessible partial_name
-
-      define_method(name) do
-        date = self[:name]
-        date.send(f) if date
-      end
-    end
-  end
-end
+require 'date_presenter'
 
 class User < ActiveRecord::Base
-  include DatePresenter
   GENDER = ['male', 'female']
   ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
-  
+
+  extend DatePresenter
+  present_date :birth_date
+
   rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
