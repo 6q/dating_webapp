@@ -1,3 +1,8 @@
+//The same variables used by the twitter bootstrap error mixin
+$errorText:               #b94a48 !default;
+$errorBackground:         #f2dede !default;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
+
 fieldset {
   border:0;
   padding:0;
@@ -8,6 +13,10 @@ fieldset {
 
   label {
     font-size:100%;
+  }
+
+  .field_with_errors {
+    @include ctb-formFieldState($errorText, $errorText, $errorBackground)
   }
 
   legend {
