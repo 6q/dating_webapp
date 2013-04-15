@@ -1,20 +1,114 @@
-<h2>Sign up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-  <%= f.error_notification %>
-  <%= display_base_errors resource %>
-  <%= f.input :name, :autofocus => true %>
-  <%= f.input :surname %>
-  <%= f.input :screen_name %>
-  <%= f.input :gender, collection: User::GENDER %>
-  <%= f.input :orientation, collection: User::ORIENTATION %>
-  <%= f.input :marital_status, collection: User::MARITAL_STATUS %>
-  <%= f.input :birth_date %>
-  <%= f.input :country %>
-  <%= f.input :zip_code %>
-  <%= f.input :town %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :required => true %>
-  <%= f.input :password_confirmation, :required => true %>
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
+<header class="bg clearfix">
+	<h1>Alta<br>Usuari@<br>Gratis</h1>
+	<ul class="miniSlider">
+		<li class="item active"><img src="/images/teaser-user.jpg"></li>
+		<li class="item"><img src="/images/teaser-user2.jpg"></li>
+	</ul>
+</header>
+
+<%= form_for(@user, path: registration_path(@user)) do |f| %>
+	<div class="row">
+		<div class="span4">
+			<fieldset id="name" class="clearfix">
+				<legend>¿Quién eres?</legend>
+        <p>
+          <%= f.label :name, "Me llamo" %>
+          <%= f.text_field :name, placeholder: "Nombre", class: "span3"%>
+          <%= f.text_field :surname, placeholder: "Apellidos", class: "span3"%>
+        </p>
+        <p>
+          <%=f.label :screen_name, "Mi nick para mostrar" %>
+          <%=f.text_field :screen_name, placeholder: "Nick para mostrar", class: "span3"%> *
+        </p>
+				<small class="span3">* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.</small>
+			</fieldset>
+		</div>
+
+		<div class="span8">
+			<p>Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu.</p>
+			<p>Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas.</p> 
+			<p>Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes. </p>
+		</div>
+	</div>
+
+	<fieldset id="orientation" class="form-inline">
+		<div class="control-group">
+      <%= f.label :gender, "Soy" %>
+      <%= f.select :gender, collection: gender_options, prompt: "..." %>
+      <%= f.label :orientation, "," %>
+      <%= f.select :orientation, collection: orientation_options, prompt: "..." %>
+      <%= f.label :marital_status, "y" %>
+      <%= f.select :marital_status, collection: marital_status_options, prompt: "..." %>.
+		</div>
+
+		<div class="control-group">
+      <%= f.label :birth_date_day, "Nací el" %>
+      <%= f.text_field :"birth_date_day", class: "span1", placeholder: Date.today.day %>
+      <%= f.label :birth_date_month, "del" %>
+      <%= f.text_field :birth_date_month, class: "span1", placeholder: Date.today.month %>
+      <%= f.label :birth_date_year, "de" %>
+      <%= f.text_field :birth_date_year, class: "span1", placeholder: Date.today.year %>
+      <%= f.label :country, "y vivo en" %>
+      <%= f.select :country, country_options %>
+		</div>
+		<div class="control-group">
+      <%= f.label :zip_code, "Mi codigo postal es el" %>
+      <%= f.text_field :zip_code, class: "span2" %>
+      <%= f.label :city, "de" %>
+      <%= f.select :town, %w(Barcelona Cervera) %>
+		</div>
+	</fieldset>
+
+	<fieldset id="photo" class="clearfix form-inline">
+		<legend>¿Cómo eres?</legend>
+		<div class="row">
+			<div class="span6">
+				<label class="control-label photo">Sube tu foto</label> <input type="file" class="span4">
+			</div>
+			<div class="span6">
+				<input type="checkbox"> <label>¡Subir imagen más adelante!*</label>
+				<small>* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s.</small>
+			</div>
+		</div>
+	</fieldset>
+	
+	<fieldset id="access" class="clearfix form-horizontal">
+		<legend>Datos de acceso a Cellove</legend>
+		<div class="row">
+			<div class="span6">
+				<div class="control-group">
+					<label class="control-label">Email</label><input type="email" class="span3">
+				</div>
+				<div class="control-group">
+					<label class="control-label">Confirmar email</label><input type="email" class="span3">
+				</div>
+			</div>
+			<div class="span6">
+				<div class="control-group">
+					<label class="control-label">Contraseña</label><input type="password" class="span3">
+				</div>
+				<div class="control-group">
+					<label class="control-label">Confirmar contraseña</label><input type="password" class="span3">
+				</div>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="row">
+				<div class="span6 center">
+					<div class="clearfix">
+						<input type="checkbox">
+						<label>Certifico que soy mayor de edad y que he leído y acepto los <%= link_to 'Consejos de uso', '/public/consejos-de-uso' %>, las <%= link_to 'Condiciones generales', '/public/condiciones-generales' %> y la <%= link_to 'Política de privacidad', '/public/politica-de-privacidad' %> del sitio y los servicios descritos</label>
+					</div>
+					<div class="clearfix">
+						<input type="checkbox">
+						<label>Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.</label>
+					</div>
+				</div>
+				<div class="span6">
+					<button class="btn btn-info btn-large">¡Registrarme Gratis!</button>
+				</div>
+			</div>
+			
+		</div>
+	</fieldset>
 <% end %>
-<%= render "devise/shared/links" %>
