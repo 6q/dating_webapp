@@ -11,17 +11,17 @@
 </header>
 
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'register-form' }) do |f| %>
-  <%= f.error_notification %>
+  <%# <%= f.error_notification %1> %>
   <%= display_base_errors resource %>
   <div class="row">
     <div class="span4">
       <fieldset id="name" class="clearfix">
         <legend>¿Quién eres?</legend>
         <p>Me llamo<br>
-        <%= f.input :name, :autofocus => true %>
-        <%= f.input :surname %>
+        <%= f.text_field :name, :autofocus => true, placeholder: t('simple_form.labels.user.name') %>
+        <%= f.text_field :surname, placeholder: t('simple_form.labels.user.surname') %>
         <p>
-        <%= f.input :screen_name, input_html: {placeholder: t('simple_form.labels.user.screen_name')}%>
+        <%= f.text_field :screen_name, placeholder: t('simple_form.labels.user.screen_name') %>
         <small class="span3">* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.</small>
       </fieldset>
     </div>
@@ -34,19 +34,29 @@
   </div>
  <fieldset id="orientation" class="form-inline">
     <div class="control-group">
-      <label>Soy</label>
-      <%= f.input_field :gender, collection: User::GENDER.map {|e| [t(e), e]} %>
-      <%= f.input_field :orientation, collection: User::ORIENTATION.map {|e| [t(e), e]} %>
-      <label>y </label>
-      <%= f.input_field :marital_status, collection: User::MARITAL_STATUS.map {|e| [t(e), e]} %>
+      <%= f.label :gender, "Soy" %>
+      <%= f.select :gender, gender_options  %>
+      <%= f.label :gender, "," %>
+      <%= f.select :orientation, orientation_options  %>
+      <%= f.label :marital_status, "y" %>
+      <%= f.select :marital_status, marital_status_options  %>
+      .
     </div>
     <div class="control-group">
-      <label>Nací el</label><%= f.input_field :birth_date %>
-      <label>y vivo en</label><%= f.input_field :country %>
+      <%= f.label :birth_date_day, "Nací el" %>
+      <%= f.text_field :birth_date_day, placeholder: Date.today.day, class: "span1" %>
+      <%= f.label :birth_date_month, "de" %>
+      <%= f.text_field :birth_date_month, placeholder: Date.today.month, class: "span1" %>
+      <%= f.label :birth_date_year, "de" %>
+      <%= f.text_field :birth_date_year, placeholder: Date.today.year, class: "span1" %>
+      <%= f.label :country, "y vivo en" %>
+      <%= f.select :country, country_options %>
     </div>
     <div class="control-group">
-      <label>Mi código postal es el</label><%= f.input_field :zip_code %>
-      <label>de</label><%= f.input_field :town %>
+      <%= f.label :zip_code, "Mi codigo postal es el" %>
+      <%= f.text_field :zip_code, class: "span1" %>
+      <%= f.label :town, "de" %>
+      <%= f.text_field :town %>
     </div>
   </fieldset>
   <fieldset id="photo" class="clearfix form-inline">
@@ -56,7 +66,8 @@
         <label class="control-label photo">Sube tu foto</label> <input type="file" class="span4">
       </div>
       <div class="span6">
-        <input type="checkbox"> <label>¡Subir imagen más adelante!*</label>
+        <%= f.check_box :image_not_uploaded %>
+        <%= f.label :image_not_uploaded, "!Subir image más adelante!" %>
         <small>* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s.</small>
       </div>
     </div>
@@ -65,27 +76,40 @@
     <legend>Datos de acceso a Cellove</legend>
     <div class="row">
       <div class="span6">
-        <%= f.input :email, :required => true %>
+        <div class="control-group">
+          <%= f.label :email, "Email", class: 'control-label' %>
+          <%= f.email_field :email %>
+        </div>
+        <div class="control-group">
+          <%= f.label :email_confirmation, "Confirmar email", class: 'control-label' %>
+          <%= f.email_field :email_confirmation %>
+        </div>
       </div>
       <div class="span6">
-        <%= f.input :password, :required => true %>
-        <%= f.input :password_confirmation, :required => true %>
+        <div class="control-group">
+          <%= f.label :password, "Contraseña", class: "control-label" %>
+          <%= f.password_field :password %>
+        </div>
+        <div class="control-group">
+          <%= f.label :password_confirmation, "Confirmar contraseña", class: "control-label" %>
+          <%= f.password_field :password_confirmation %>
+        </div>
       </div>
     </div>
     <div class="actions">
       <div class="row">
         <div class="span6 center">
           <div class="clearfix">
+            <%= f.check_box :terms_and_conditions %>
             <label>Certifico que soy mayor de edad y que he leído y acepto los <%= link_to 'Consejos de uso', '/public/consejos-de-uso' %>, las <%= link_to 'Condiciones generales', '/public/condiciones-generales' %> y la <%= link_to 'Política de privacidad', '/public/politica-de-privacidad' %> del sitio y los servicios descritos</label>
-            <%= f.input_field :terms_and_conditions, :as => :boolean, :required => true %>
           </div>
           <div class="clearfix">
+            <%= f.check_box :newsletter_optin %>
             <label>Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.</label>
-            <%= f.input_field :newsletter_optin, :as => :boolean, :required => true %>
           </div>
         </div>
         <div class="span6">
-          <%= f.button :submit, t(:sign_up), :class => 'btn btn-info btn-large' %>
+          <%= f.submit t(:sign_up), :class => 'btn btn-info btn-large' %>
         </div>
       </div>
     </div>

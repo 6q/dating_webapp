@@ -1,23 +1,15 @@
 #encoding: utf-8
 module RegistrationsHelper
   def gender_options
-    [
-      ['un chico', 'male'],
-      ['una chica', 'female']
-    ]
+    User::GENDER.map {|e| [t(e), e]}
   end
 
   def orientation_options
-    ['heterosexual', 'homosexual']
+    User::ORIENTATION.map {|e| [t(e), e]}
   end
 
   def marital_status_options
-    [
-      ['solter@', 'single'],
-      ['viendo a alguien', 'relation'],
-      ['en una relación estable', 'stable_relation'],
-      ['casado@', 'married']
-    ]
+    User::MARITAL_STATUS.map {|e| [t(e), e]}
   end
 
   def country_options
