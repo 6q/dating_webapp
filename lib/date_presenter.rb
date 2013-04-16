@@ -16,7 +16,7 @@ module DatePresenter
       day = self.send("#{attr_name}_day")
       month = self.send("#{attr_name}_month")
       year = self.send("#{attr_name}_year")
-      if day && month && year
+      if day.present? && month.present? && year.present?
         self.send("#{attr_name}=", Date.civil(year, month, day))
       end
     end
