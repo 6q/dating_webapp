@@ -33,7 +33,9 @@ class User < ActiveRecord::Base
   validates_presence_of :email, :password
   validates_presence_of :email_confirmation, :password_confirmation
   validates_presence_of :zip_code, :town
-  validates_acceptance_of :terms_and_conditions, :newsletter_optin
+  validates :newsletter_optin, acceptance: {accept: true}    #activerecord converts the 1 to boolean based on the column datatype
+  validates :terms_and_conditions, acceptance: {accept: "1"} #it's virtual so it doesn't convert anything
+
 
   validates_minimum_age_of :birth_date, presence: true, minimum_age: true
 end
