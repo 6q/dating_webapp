@@ -1,0 +1,93 @@
+<%= content_for :title do %>
+  Quiero encontrar
+<% end %>
+
+<header class="bg clearfix">
+  <h1>Alta<br>Celestin@<br>Gratis</h1>
+  <ul class="miniSlider">
+    <li class="item active"><%= image_tag 'teaser-user.jpg' %></li>
+    <li class="item"><%= image_tag 'teaser-user2.jpg' %></li>
+  </ul>
+</header>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'register-form' }) do |f| %>
+  <%# <%= f.error_notification %1> %>
+  <%= display_base_errors resource %>
+  <div class="row">
+    <div class="span4">
+      <fieldset id="name" class="clearfix">
+        <legend>¿Quién eres?</legend>
+        <p>Me llamo<br>
+        <%= f.text_field :name, :autofocus => true, placeholder: t('simple_form.labels.user.name') %>
+        <%= f.text_field :surname, placeholder: t('simple_form.labels.user.surname') %>
+        <p>
+        <%= f.text_field :screen_name, placeholder: t('simple_form.labels.user.screen_name') %>
+        <small class="span3">* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.</small>
+      </fieldset>
+    </div>
+
+    <div class="span8">
+			<p>Si quieres ayudar a un amig@, exnovi@ o familiar a encontrar a esa persona especial, ¡estás en el lugar adecuado!</p>
+			<p>Con nuestro servicio Celestin@ completamente gratuito podrás hacerlo, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad, lo cual hará que nuestro sistema de presentación de usuari@s sea más útil y potente para éste. </p>
+			<p>El objetivo de nuesrta herramienta Celestin@ es facilitar y hacer más accesible nuestro potente sistema para encontrar a esa persona especial, por ejemplo a usuari@s poco experimentados, con prejuicios o que simplemente no conozcan o no se atrevan a utilizar una plataforma de contactos, hoy en día muy extendida y utilizada ya por mucha gente.</p>
+			<p>El registro como Celestin@ es muy fácil y rápido, en segundos estarás recomendando y el destinatario recibirá un e-mail para que pueda confirmar su registro gratuito como usuario en cellove, a partir de aquí ya contará con tu soporte y podrá acceder a todos los usuari@s y funciones que desee. </p>
+    </div>
+  </div>
+
+  <fieldset id="photo" class="clearfix form-inline">
+    <legend>¿Cómo eres?</legend>
+    <div class="row">
+      <div class="span6">
+        <label class="control-label photo">Sube tu foto</label> <input type="file" class="span4">
+      </div>
+      <div class="span6">
+        <%= f.check_box :image_not_uploaded %>
+        <%= f.label :image_not_uploaded, "!Subir image más adelante!" %>
+        <small>* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s.</small>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset id="access" class="clearfix form-horizontal">
+    <legend>Datos de acceso a Cellove</legend>
+    <div class="row">
+      <div class="span6">
+        <div class="control-group">
+          <%= f.label :email, "Email", class: 'control-label' %>
+          <%= f.email_field :email %>
+        </div>
+        <div class="control-group">
+          <%= f.label :email_confirmation, "Confirmar email", class: 'control-label' %>
+          <%= f.email_field :email_confirmation %>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="control-group">
+          <%= f.label :password, "Contraseña", class: "control-label" %>
+          <%= f.password_field :password %>
+        </div>
+        <div class="control-group">
+          <%= f.label :password_confirmation, "Confirmar contraseña", class: "control-label" %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="row">
+        <div class="span6 center">
+          <div class="clearfix">
+            <%= f.check_box :terms_and_conditions %>
+            <label>Certifico que soy mayor de edad y que he leído y acepto los <%= link_to 'Consejos de uso', '/public/consejos-de-uso' %>, las <%= link_to 'Condiciones generales', '/public/condiciones-generales' %> y la <%= link_to 'Política de privacidad', '/public/politica-de-privacidad' %> del sitio y los servicios descritos</label>
+          </div>
+          <div class="clearfix">
+            <%= f.check_box :newsletter_optin %>
+            <label>Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.</label>
+          </div>
+        </div>
+        <div class="span6">
+          <%= f.submit t(:sign_up), :class => 'btn btn-info btn-large' %>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+<% end %>

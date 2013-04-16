@@ -3,7 +3,14 @@ Cellove::Application.routes.draw do
     root :to => 'home#index'
   end
   root :to => "home#index"
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'user_registrations'
+  }
+
+  devise_for :matchmakers, class_name: "User", controllers: {
+    registrations: 'matchmaker_registrations'
+  }
+
   resources :users
   
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
