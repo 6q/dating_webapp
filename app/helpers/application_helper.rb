@@ -12,4 +12,8 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def active_if_current(url)
+    current_page?(url) ? 'active' : ''
+  end
+
 end

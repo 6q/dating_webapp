@@ -10,6 +10,9 @@ es:
   married: 'casado'
   sign_up: '¡Registrarme Gratis!'
 
+  menu:
+    user_register: "Registro Gratis"
+
   errors:
     messages:
       under_age: "Tienes que ser mayor de edad"

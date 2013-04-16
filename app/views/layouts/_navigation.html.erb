@@ -1,8 +1,16 @@
 <nav role="navigation">
   <ul class="clearfix">
-    <li><%= link_to '<span>Registro Gratis</span>'.html_safe, new_user_registration_path %></li>
-    <li><%= link_to 'Celestin@s', new_user_registration_path %></li>
-    <li><%= link_to 'Ver usuarios', users_path %></li>
-    <li><%= link_to 'TV', tv_spot_path(1) %></li>
+    <li class="<%= active_if_current(new_user_registration_path) %>">
+      <%= link_to t('menu.user_register'), new_user_registration_path %>
+    </li>
+    <li class="<%= active_if_current(new_matchmaker_registration_path) %>">
+      <%= link_to 'Celestin@s', new_matchmaker_registration_path %>
+    </li>
+    <li class="<%= active_if_current(users_path) %>">
+      <%= link_to 'Ver usuarios', users_path %>
+    </li>
+    <li class="<%= active_if_current(tv_spot_path(1)) %>">
+      <%= link_to 'TV', tv_spot_path(1) %>
+    </li>
   </ul>
 </nav>
