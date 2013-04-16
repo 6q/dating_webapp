@@ -30,8 +30,9 @@ class User < ActiveRecord::Base
     :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions
 
   validates_presence_of :name, :surname, :gender, :orientation, :screen_name
-  validates_presence_of :email, :password
-  validates_presence_of :email_confirmation, :password_confirmation
+  validates :email, presence: true
+  validates :email, confirmation: true, on: :create
+  validates :password, presence: true, confirmation: true, on: :create
   validates_presence_of :zip_code, :town
   validates :newsletter_optin, acceptance: {accept: true}    #activerecord converts the 1 to boolean based on the column datatype
   validates :terms_and_conditions, acceptance: {accept: "1"} #it's virtual so it doesn't convert anything
