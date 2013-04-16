@@ -9,3 +9,7 @@ es:
   engaged: 'en una relación estable'
   married: 'casado'
   sign_up: '¡Registrarme Gratis!'
+
+  errors:
+    messages:
+      under_age: "Tienes que ser mayor de edad"

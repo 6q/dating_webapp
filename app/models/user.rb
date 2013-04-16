@@ -1,10 +1,12 @@
 require 'date_presenter'
+require 'minimum_age_validator'
 
 class User < ActiveRecord::Base
   GENDER = ['male', 'female']
   ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
 
+  extend MinimumAgeValidatorHelper
   extend DatePresenter
   present_date :birth_date
 
@@ -30,7 +32,8 @@ class User < ActiveRecord::Base
   validates_presence_of :name, :surname, :gender, :orientation, :screen_name
   validates_presence_of :email, :password
   validates_presence_of :email_confirmation, :password_confirmation
-  validates_presence_of :birth_date_day, :birth_date_month, :birth_date_year
   validates_presence_of :zip_code, :town
   validates_acceptance_of :terms_and_conditions, :newsletter_optin
+
+  validates_minimum_age_of :birth_date, presence: true, minimum_age: true
 end
