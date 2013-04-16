@@ -6537,6 +6537,7 @@ a.more:after {
 }
 .typography p, .content p, section[role=main] > article p {
   margin: 1em 0;
+  text-align: justify;
 }
 .typography ul, .content ul, section[role=main] > article ul, .typography ol, .content ol, section[role=main] > article ol, .typography dl, .content dl, section[role=main] > article dl {
   margin-top: 1em;
@@ -6936,6 +6937,9 @@ header[role="banner"] nav[role="navigation"] {
   background: -ms-linear-gradient(top, #363636 0%, #242625 100%);
   background: linear-gradient(to bottom, #363636 0%, #242625 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$softColor', endColorstr='$darkColor',GradientType=0 );
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 header[role="banner"] nav[role="navigation"] ul {
   list-style: none;
@@ -6950,10 +6954,7 @@ header[role="banner"] nav[role="navigation"] ul li a {
   float: left;
   padding: 1em 1.4em;
   color: #fff;
-  border-left: #353535 1px solid;
-  border-right: #242625 1px solid;
-  border-top: #3f3f3f 1px solid;
-  border-bottom: #3f3f3f 1px solid;
+
   text-decoration: none;
 }
 header[role="banner"] nav[role="navigation"] ul li a span {
@@ -6963,6 +6964,9 @@ header[role="banner"] nav[role="navigation"] ul li a:hover, header[role="banner"
   background: #000;
   border-color: #000;
   text-decoration: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 section[role="main"] {
@@ -6981,6 +6985,8 @@ section[role="main"] header.bg h1 {
   width: 245px;
   min-height: 120px;
   float: left;
+  text-align: right;
+  color: #fff;
 }
 section[role="main"] article ul.miniSlider {
   padding: 0;
@@ -7001,6 +7007,8 @@ section[role="main"] a.more {
   padding: 0.5em 1em;
   text-decoration: none;
   margin-top: 20px;
+  text-align: center;
+  width: 200px;
 }
 
 .contacta .article-body h3 {
@@ -9054,4 +9062,15 @@ section#pay .payment .call {
 }
 section#pay .payment button {
   margin: 0 auto;
+}
+
+#consejos {
+  color: #005580;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  text-align: right;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  padding-right:20px;
+  border-bottom: 5px solid #fff;
 }

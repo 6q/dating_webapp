@@ -16,7 +16,7 @@
   }
 
   a.fold {
-    background:image-url('sprite.png') -429px -27px no-repeat;
+    background:url(images/sprite.png) -429px -27px no-repeat;
     display:block;
     width:36px;
     height:35px;
@@ -42,7 +42,7 @@
 
 
       i {
-        background:image-url('sprite.png') 0px -120px no-repeat;
+        background:url(images/sprite.png) 0px -120px no-repeat;
         padding-left:25px;
         color:#000;
         text-decoration:none;
