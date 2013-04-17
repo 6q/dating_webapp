@@ -52,7 +52,70 @@
     p {
       font-size:90%;
       padding-top:10px;
+      margin-bottom:0px;
+      text-align: justify;
+    }
+
+    img {
+      margin-top:10px;
+      display:block;
+      width:220px;
+      height:90px;
+    }
+  }
+}
+
+.media-prensa {
+
+  padding:20px 0;
+
+  header {
+  }
+
+  h2 {
+
+    font-size:1.4em;
+
+
+  }
+
+  a.fold {
+    display:block;
+    width:36px;
+    height:35px;
+    position:absolute;
+    right:0;
+    top:10px;
+    overflow:hidden;
+    text-indent:-999em;
+
+    &.active {
+      background-position:-392px -27px;
+    }
+  }
+
+  article {
+
+    h1 {
+      font-size:120% !important;
+      margin:0;
+      font-weight:normal;
+      padding-bottom:5px;
+      border-bottom:#e0e0e0 1px solid;
+
+
+      i {
+        padding-left:25px;
+        color:#000;
+        text-decoration:none;
+      }
+    }
+
+    p {
+      font-size:90%;
+      padding-top:10px;
 	  margin-bottom:0px;
+      text-align: justify;
     }
 
     img {

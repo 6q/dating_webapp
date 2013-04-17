@@ -77,6 +77,10 @@ hr.thin {
   }
 }
 
+.article-body {
+  text-align:justify;
+}
+
 .boxed {
   margin-left:-12px;
   background:#fff;
@@ -235,7 +239,9 @@ header[role="banner"]{
 
     margin-top:62px;
     font-size:110%;
-
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     float:right;
     @include gradient(#363636,#242625);
 
@@ -259,8 +265,20 @@ header[role="banner"]{
             border-color:#000;
             text-decoration:none;
           }
-        }
 
+          span {
+            color:#5cabe8;
+          }
+
+          &:hover, &.active {
+            background:#000;
+            border-color:#000;
+            text-decoration:none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+          }
+        }
 
         color:#fff;
 
@@ -290,6 +308,8 @@ section[role="main"] {
         width:245px;
         min-height:120px;
         float:left;
+        text-align:right;
+        color:#fff;
     }
   }
 
