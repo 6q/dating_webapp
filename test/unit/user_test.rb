@@ -1,7 +1,28 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def messages(errors)
+    errors.full_messages.join
+  end
+
+  test 'performs validations when creating a regular user' do
+    u = FactoryGirl.build(:regular_user)
+    assert u.valid?, messages(u.errors)
+    u.password_confirmation = ""
+    refute u.valid?
+    u.password = "password"
+    u.password_confirmation = "password"
+    assert u.valid?, messages(u.errors)
+    u.email_confirmation = ""
+    refute u.valid?
+    u.email_confirmation = u.email
+    assert u.valid?, messages(u.errors)
+    u.newsletter_optin = false
+    assert u.valid?, messages(u.errors)
+  end
+
+  test 'performs validations when creating a matchmaker' do
+    u = FactoryGirl.build(:matchmaker)
+    assert u.valid?, messages(u.errors)
+  end
 end
