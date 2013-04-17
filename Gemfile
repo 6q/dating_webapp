@@ -31,8 +31,7 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
   gem 'minitest-focus'
-  gem 'minitest-reporters'
-  gem 'minitest-spec-rails'
+  gem 'minitest-rails'
 end
 
 group :development do
