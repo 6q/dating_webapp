@@ -29,14 +29,18 @@ class User < ActiveRecord::Base
     :birth_date, :country, :zip_code, :town, :town_id,
     :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions
 
-  validates_presence_of :name, :surname, :gender, :orientation, :screen_name
+  regular_user = lambda {|user| user.has_role?(:regular_user) }
+
+  validates_presence_of :name, :surname
   validates :email, presence: true
   validates :email, confirmation: true, on: :create
   validates :password, presence: true, confirmation: true, on: :create
-  validates_presence_of :zip_code, :town
-  validates :newsletter_optin, acceptance: {accept: true}    #activerecord converts the 1 to boolean based on the column datatype
   validates :terms_and_conditions, acceptance: {accept: "1"} #it's virtual so it doesn't convert anything
 
+  #Validations only performed on regular users, not matchmakers
+  validates_presence_of :gender, :orientation, :screen_name, if: regular_user
+  validates_presence_of :zip_code, :town, if: regular_user
+  validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year, if: regular_user
 
-  validates_minimum_age_of :birth_date, presence: true, minimum_age: true
+  validates :birth_date, presence: true, minimum_age: true, if: regular_user
 end
