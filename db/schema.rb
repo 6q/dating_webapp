@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130319220541) do
+ActiveRecord::Schema.define(:version => 20130417093348) do
 
   create_table "provinces", :force => true do |t|
     t.string   "name"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20130319220541) do
     t.string   "marital_status"
     t.date     "birth_date"
     t.string   "zip_code"
-    t.integer  "town"
+    t.string   "town"
     t.string   "country"
     t.boolean  "newsletter_optin"
   end
