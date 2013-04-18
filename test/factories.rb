@@ -26,7 +26,7 @@ FactoryGirl.define do
     end
 
     factory :regular_user, traits: [:basic_data, :complementary_data]
-    factory :regular_user_optin, traits: [:basic_data, :complementary_data]
+    factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data]
     factory :matchmaker, traits: [:basic_data]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data]
   end
