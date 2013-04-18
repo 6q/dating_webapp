@@ -16,5 +16,5 @@
 //= require jquery.flexslider-min
 //= require functions
 //= require turbolinks
-//= require user-functions
+//= require user_functions
 //= require_tree .
