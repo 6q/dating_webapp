@@ -23,3 +23,7 @@ def create_towns
 end
 
 create_towns
+
+(1..60).each do
+  FactoryGirl.create(:regular_user)
+end
