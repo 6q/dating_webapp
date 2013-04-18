@@ -12,6 +12,7 @@ Cellove::Application.routes.draw do
   }
 
   resources :users
+  get '/dashboard', to: "dashboard#show", as: :dashboard
   
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what

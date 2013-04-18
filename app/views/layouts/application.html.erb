@@ -1,34 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title><%=  yield(:title) + " | " if content_for?(:title) %>Cellove.com</title>
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <%= javascript_include_tag "application" %>
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Cellove" %>">
-    <%= csrf_meta_tags %>
-    <%= yield(:head) %>
+    <%= render partial: "layouts/common_head" %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <% if @page == 'home' %>
-      <style>
-        body {
-          background:url('/assets/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') left -25px no-repeat;
-        }
-      </style>
-      <% else %>
-      <style>
-        header[role="banner"] {
-          background:url('/assets/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') top left no-repeat;
-        }
-      </style>
-    <% end %>
+    <%= render partial: "layouts/changing_background" %>
     <header role="banner" class="clearfix">
       <div class="container">
         <%= render 'layouts/header-login' %>
