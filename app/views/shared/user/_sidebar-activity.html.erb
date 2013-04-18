@@ -7,6 +7,6 @@
 		<li><%= link_to 'Les he gustado', '/user/likes' %></li>
 		<li><%= link_to 'Hacemos buena pareja', '/user/nice-couple' %></li>
 		<li><%= link_to 'Mensajes', '/user/messages' %></li>
-		<li><%= link_to 'Actividades <span>9</span>', '/user/messages?activities=true' %></li>
+		<li><%= link_to 'Actividades <span>9</span>'.html_safe, '/user/messages?activities=true' %></li>
 	</ul>
 </section>
