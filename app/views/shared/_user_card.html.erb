@@ -1,0 +1,29 @@
+<li>
+<article class="user-card online">
+<ul class="pics">
+  <li><%= link_to image_tag('placeholder1.jpg'), user_path(user) %></li>
+  <li><%= link_to image_tag('placeholder2.jpg'), user_path(user) %></li>
+</ul>
+<header>
+<% if @timestamp == true %>
+  <small><%= time_ago_in_words(user.created_at) %></small>
+<% end %>
+<h1><%= link_to user.name, user_path(user) %><br><span><%= user.town %></span><br><%= Date.today.year - user.birth_date.year %> años </h1>
+</header>
+<ul class="actions clearfix">
+  <%= user_action_links %>
+</ul>
+
+<% if @interactions == true %>
+
+  <div class="interactions">
+    <div class="punctuations">
+      <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
+      <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
+    </div>
+    <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
+  </div>
+
+<% end %>
+</article>
+</li>

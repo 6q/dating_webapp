@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   after_validation :geocode
 
   def location
-    [postal_code, town, country].compact.join(',')
+    [postal_code, town, country].compact.join(', ')
   end
 
   def age(dob = self.birth_date)
