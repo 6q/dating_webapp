@@ -14,9 +14,9 @@
     </header>
     <ul class="actions clearfix">
       <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>
-      <li class="chat"><%= link_to 'Chat', '/user/chat/' %></li>
-      <li class="like"><%= link_to 'Like', '/user/likes-of-mine/' %></li>
-      <li class="block"><%= link_to 'Block', '#user-block', 'data-toggle' => 'modal' %></li>
+      <li class="chat"><%= link_to 'Chat', user_chat_path(user) %></li>
+      <li class="like"><%= link_to 'Like', user_like_path(user), method: :post %></li>
+      <li class="block"><%= link_to 'Block', user_block_path(user), "data-toggle" => "moda", method: :post %></li>
     </ul>
 
     <% if @interactions == true %>
