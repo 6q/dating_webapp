@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
 
   extend MinimumAgeValidatorHelper
-  extend DatePresenter
+  extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
   present_date :birth_date
 
   rolify
