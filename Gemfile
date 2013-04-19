@@ -26,6 +26,7 @@ gem 'country_select'
 gem 'kaminari'
 gem 'turbolinks'
 gem 'mail_form'
+gem 'rails-i18n'
 
 group :test do
   gem 'faker'
