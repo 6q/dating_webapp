@@ -12,7 +12,7 @@ FactoryGirl.define do
     trait :complementary_data do
       town{ Faker::Address.city }
       country{ Faker::Address.country }
-      zip_code{ Faker::Address.zip_code }
+      postal_code{ Faker::Address.zip_code }
       screen_name{ [name, surname].join.underscore }
       marital_status{ User::MARITAL_STATUS.sample }
       orientation{ User::ORIENTATION.sample }

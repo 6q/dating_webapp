@@ -25,4 +25,11 @@ class UserTest < ActiveSupport::TestCase
     u = FactoryGirl.build(:matchmaker)
     assert u.valid?, messages(u.errors)
   end
+
+  test 'geocode user' do
+    u = FactoryGirl.create(:regular_user, postal_code: '08008', town: 'Barcelona', country: 'Spain')
+    u.longitude
+    assert_equal Geocoder.coordinates(u.location), [u.latitude, u.longitude]
+  end
+
 end
