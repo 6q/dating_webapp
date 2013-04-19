@@ -1,5 +1,6 @@
-require 'date_presenter'
-require 'minimum_age_validator'
+require_dependency 'date_presenter'
+require_dependency 'minimum_age_validator'
+require_dependency 'user_retrieval'
 
 class User < ActiveRecord::Base
   GENDER = ['male', 'female']
@@ -8,6 +9,7 @@ class User < ActiveRecord::Base
 
   extend MinimumAgeValidatorHelper
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
+  include UserRetrieval
   present_date :birth_date
 
   rolify
@@ -43,4 +45,9 @@ class User < ActiveRecord::Base
   validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year, if: regular_user
 
   validates :birth_date, presence: true, minimum_age: true, if: regular_user
+
+  def age(dob = self.birth_date)
+    now = Time.now.utc.to_date
+    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  end
 end
