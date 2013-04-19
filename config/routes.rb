@@ -11,7 +11,13 @@ Cellove::Application.routes.draw do
     registrations: 'matchmaker_registrations'
   }
 
-  resources :users
+  resources :users do
+    resource :chat, only: :show
+    post 'like', to: "relations_controller#like"
+    post 'block', to: "relations_controller#block"
+    resource :rating
+  end
+  get '/dashboard', to: "dashboard#show", as: :dashboard
   
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what

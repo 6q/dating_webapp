@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%= render partial: "layouts/common_head" %>
+  </head>
+  <body class="user">
+    <%= render partial: "layouts/changing_background" %>
+    <header role="banner" class="clearfix">
+      <div class="container">
+        <%= render '/shared/user/header-actions' %>
+        <h1><a href="/user/home">Cellove</a></h1>
+        <h2>Ponle alas al amor</h2>
+        <%= render '/shared/user/main-nav' %>
+      </div>
+    </header>
+    <div class="container">
+      <section role="main">
+        <div class="row">
+          <div class="span3">
+            <%= render partial: 'shared/user/sidebar' %>
+
+            <h1 id="consejos">Consejos</h1>
+
+            <div id="caixarandom">
+              <p>‘Pon el máximo de información sobre ti’</p>
+              <p>‘Sé activo’</p>
+              <p>‘Muéstrate tal como eres’</p>
+              <p>‘Mejora tu Índice Cellove’</p>
+              <p>‘Utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</p>
+            </div>
+          </div>
+
+          <div class="span9">
+            <%= yield %>
+          </div>
+        </section>
+      </div>
+      <%= render partial: 'shared/in_love' %>
+      <%= render partial: 'shared/footer' %>
+    </div>
+
+    <%= render partial: 'shared/user/modals' %>
+    <%= render partial: 'shared/user/notifications' %>
+
+  </body>
+</html>

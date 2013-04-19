@@ -1,0 +1,13 @@
+<% if @page == 'home' %>
+  <style>
+    body {
+      background:url('/assets/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') left -25px no-repeat;
+    }
+  </style>
+<% else %>
+  <style>
+    header[role="banner"] {
+      background:url('/assets/bg/main-bg<%= Random.rand(5) + 1 %>.jpg') top left no-repeat;
+    }
+  </style>
+<% end %>

@@ -6,7 +6,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.1.0'
 gem "unicorn", ">= 4.3.1"
 gem "bootstrap-sass", ">= 2.3.0.0"
 gem "hominid", ">= 3.0.5"
@@ -26,6 +26,7 @@ gem 'country_select'
 gem 'kaminari'
 gem 'turbolinks'
 gem 'mail_form'
+gem 'rails-i18n'
 
 group :test do
   gem 'faker'

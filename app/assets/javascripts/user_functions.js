@@ -1,3 +1,6 @@
+//= require jquery.slider.min
+//= require jquery.prettyPhoto
+
 $(document).ready(function(){
 
   // search sliders
@@ -13,8 +16,7 @@ $(document).ready(function(){
       dimension: '&nbsp;años',
       scale: ['|','|','|','|','|','|','|','|'],
       onstatechange: function(){
-        console.log($("#years").val().split(';')[0]);
-        $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
+        // $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
       }
     });
 

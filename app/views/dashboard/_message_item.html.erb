@@ -1,0 +1,26 @@
+<%# @tab %>
+
+<div class="msg-item">
+	<div class="clearfix">
+		<div class="pic"><a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
+			<div class="info">
+				<p class="msg-data">8/12/2012 - <%= link_to "Judit", "/user/user-profile" %> 21 años, Barcelona</p>
+			
+			<p class="msg"><%= link_to 'Hola Jamelga, estas tremenda bla bla bla bla', '/user/message-show' %></p>
+			</div>
+		<div class="reply">
+			<%= link_to 'Eliminar', '#delete-confirm', 'data-toggle' => 'modal', :class => 'delete' %>
+			<%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
+		</div>
+	</div>
+
+	<% if defined?(@activities) %>
+    <%= render partial: "message_item_proposal"%>
+	<% else %>
+		<% if rand(1...50).to_i > 25 %>
+      <%= render partial: "message_item_proposal"%>
+		<% end %>
+	<% end %>
+
+	
+</div>
