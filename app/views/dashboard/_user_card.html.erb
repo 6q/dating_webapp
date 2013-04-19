@@ -1,30 +1,34 @@
-<article class="user-card online">
-  <ul class="pics">
-    <li><a href="/user/user-profile"><img src="/users/placeholder1.jpg"></a></li>
-    <li><a href="/user/user-profile"><img src="/users/placeholder2.jpg"></a></li>
-  </ul>
-  <header>
-    <% if @timestamp == true %>
-    <small>Hace 2 horas</small>
+<li>
+  <article class="user-card online">
+    <ul class="pics">
+      <li><%= link_to profile_pic(user), user %></li>
+      <li><%= link_to profile_pic(user), user %></li>
+    </ul>
+    <header>
+      <small><%= user.last_sign_in_at ? time_ago_in_words(user.last_sign_in_at) : "" %></small>
+      <h1><%= link_to user.name, user %>
+      <br>
+      <span><%= truncate(user.town, length: 20) %></span>
+      <br><%= "#{user.age} #{t("datetime.prompts.year")}" %>
+  </h1>
+    </header>
+    <ul class="actions clearfix">
+      <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>
+      <li class="chat"><%= link_to 'Chat', '/user/chat/' %></li>
+      <li class="like"><%= link_to 'Like', '/user/likes-of-mine/' %></li>
+      <li class="block"><%= link_to 'Block', '#user-block', 'data-toggle' => 'modal' %></li>
+    </ul>
+
+    <% if @interactions == true %>
+
+      <div class="interactions">
+        <div class="punctuations">
+          <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
+          <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
+        </div>
+        <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
+      </div>
+
     <% end %>
-    <h1><%= link_to 'Maria Teresa', '/user/user-profile' %><br><span>Santa Coloma de...</span><br>24 años</h1>
-  </header>
-  <ul class="actions clearfix">
-    <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>
-    <li class="chat"><%= link_to 'Chat', '/user/chat/' %></li>
-    <li class="like"><%= link_to 'Like', '/user/likes-of-mine/' %></li>
-    <li class="block"><%= link_to 'Block', '#user-block', 'data-toggle' => 'modal' %></li>
-  </ul>
-
-  <% if @interactions == true %>
-
-  <div class="interactions">
-    <div class="punctuations">
-      <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
-      <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
-    </div>
-    <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
-  </div>
-
-  <% end %>
-</article>
+  </article>
+</li>

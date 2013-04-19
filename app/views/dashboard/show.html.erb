@@ -11,9 +11,7 @@
 			<div class="pull-right">En un radio de 50 km > <%= link_to "Cambiar radio", "#" %> | <%= link_to "Ver más", "#" %></div>
 		</div>
 		<ul class="user-list clearfix">
-			<% (1..5).each do %>
-		  		<li><%= render partial: "user_card" %></li>
-			<% end %>
+      <%= render partial: "user_card", collection: current_user.new_users_near_me, as: "user" %>
 		</ul>
 	</section>
 
@@ -23,9 +21,7 @@
 			<div class="pull-right">En un radio de 50 km > <%= link_to "Cambiar radio", "#" %> | <%= link_to "Ver más", "#" %></div>
 		</div>
 		<ul class="user-list clearfix">
-			<% (1..5).each do %>
-		  		<li><%= render partial: "user_card" %></li>
-			<% end %>
+      <%= render partial: "user_card", collection: current_user.best_rated_near_me, as: "user" %>
 		</ul>
 	</section>
 
@@ -35,9 +31,7 @@
 			<div class="pull-right">En un radio de 50 km > <%= link_to "Cambiar radio", "#" %> | <%= link_to "Ver más", "#" %></div>
 		</div>
 		<ul class="user-list clearfix">
-			<% (1..5).each do %>
-		  		<li><%= render partial: "user_card"%></li>
-			<% end %>
+      <%= render partial: "user_card", collection: current_user.best_suited_near_me, as: "user" %>
 		</ul>
 	</section>
 
