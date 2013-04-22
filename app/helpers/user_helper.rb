@@ -1,7 +1,16 @@
 module UserHelper
-  def profile_pic(user)
+  def profile_pic(user, options = {width: 80, height: 80})
     #TODO: Implement
-    image_tag("placeholder-user.jpg")
+    if user.pictures.any?
+      size = "#{options[:width]}x#{options[:height]}"
+      image_tag(user.pictures.first.image.thumb(size).url)
+    else
+      image_tag("placeholder-user.jpg")
+    end
+  end
+
+  def online?(user)
+    rand > 0.5000
   end
 
   def user_action_links

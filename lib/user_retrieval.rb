@@ -11,8 +11,8 @@ module UserRetrieval
     5.times.map{ self.class.all.sample }
   end
 
-  def best_suited_near_me
+  def best_suited_near_me(how_many = 5)
     #TODO: Implement
-    5.times.map{ self.class.all.sample }
+    how_many.times.map{ self.class.all.sample }
   end
 end
