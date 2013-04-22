@@ -27,6 +27,7 @@ gem 'kaminari'
 gem 'turbolinks'
 gem 'mail_form'
 gem 'rails-i18n'
+gem 'strong_parameters'
 
 group :test do
   gem 'faker'
