@@ -16,7 +16,7 @@ Cellove::Application.routes.draw do
     post 'like', to: "relations_controller#like"
     post 'block', to: "relations_controller#block"
     resource :rating
-    get 'view_users', on: :collection
+    get 'view', on: :collection
   end
   get '/dashboard', to: "dashboard#show", as: :dashboard
   
