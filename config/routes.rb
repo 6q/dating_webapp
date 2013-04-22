@@ -7,9 +7,12 @@ Cellove::Application.routes.draw do
     registrations: 'user_registrations'
   }
 
+
   devise_for :matchmakers, class_name: "User", controllers: {
     registrations: 'matchmaker_registrations'
   }
+
+  resource :profile, :controller=>'user_profile'
 
   resources :users do
     resource :chat, only: :show

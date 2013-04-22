@@ -36,6 +36,21 @@
 
 	<form class="form-horizontal">
 
+	<%= simple_form_for @user do |u| %>
+		<div class="boxed-inner">
+			<fieldset>
+				<header>
+					<h1>Datos de acceso a Cellove</h1>
+					<br>
+					<p>Modifica aquí tus datos de acceso a Cellove</p>
+				</header>
+			</fieldset>
+
+		</div>
+
+	<% end %>
+
+
 	<section class="boxed">
 		<div class="boxed-inner">
 			<fieldset>
@@ -525,10 +540,10 @@
 
 									
 									<% (1..3).each do %>
-									celes item
+									<%= render '/shared/user/celes-item' %>
 									<hr>
 									<% end %>
-									
+									<%= render '/shared/user/celes-item' %>
 									<hr class="thin">
 									<div class="center"><a href="/user/celestinos-of-mine#tab_mejora" class="btn btn-info btn-large">¡Consigue más puntos!</a></div>
 							  </div>
@@ -550,17 +565,6 @@
 
 
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
-  <%= f.error_notification %>
-  <%= display_base_errors resource %>
-  <%= f.input :name, :autofocus => true %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-  <%= f.input :password_confirmation, :required => false %>
-  <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-  <%= f.button :submit, 'Update', :class => 'btn-primary' %>
-<% end %>
-<h3>Cancel my account</h3>
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
-<%= link_to "Back", :back %>
+
+
+
