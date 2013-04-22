@@ -31,6 +31,6 @@ class UsersController < ApplicationController
   end
 
   def view_users
-    @users = User.last(7)
+    @users = User.with_role(:user).last(7)
   end
 end

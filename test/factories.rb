@@ -25,9 +25,27 @@ FactoryGirl.define do
       newsletter_optin true
     end
 
-    factory :regular_user, traits: [:basic_data, :complementary_data]
-    factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data]
-    factory :matchmaker, traits: [:basic_data]
-    factory :matchmaker_optin, traits: [:basic_data, :optional_data]
+    trait :user_role do
+      after(:create) do |user|
+        user.add_role :user
+      end
+    end
+    
+    trait :matchmaker_role do
+      after(:create) do |user|
+        user.add_role :matchmaker
+      end
+    end
+
+    trait :admin_role do
+      after(:create) do |user|
+        user.add_role :admin
+      end
+    end
+
+    factory :regular_user, traits: [:basic_data, :complementary_data, :user_role]
+    factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data, :user_role]
+    factory :matchmaker, traits: [:basic_data, :matchmaker_role]
+    factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
   end
 end

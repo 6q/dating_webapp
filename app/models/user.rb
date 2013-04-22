@@ -57,4 +57,6 @@ class User < ActiveRecord::Base
     now = Time.now.utc.to_date
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
+
+  scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)
 end
