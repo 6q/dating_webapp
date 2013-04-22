@@ -10,7 +10,9 @@ class User < ActiveRecord::Base
   extend MinimumAgeValidatorHelper
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
   include UserRetrieval
-  present_date :birth_date
+
+  #relations
+  has_many :pictures, as: :attachable
 
   rolify
   # Include default devise modules. Others available are:
@@ -23,6 +25,7 @@ class User < ActiveRecord::Base
   attr_accessor :terms_and_conditions
   attr_accessor :image_not_uploaded
   attr_accessor :email_confirmation
+  present_date :birth_date
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
@@ -59,4 +62,9 @@ class User < ActiveRecord::Base
   end
 
   scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)
+
+  def full_name
+    [name, surname].join(" ")
+  end
+
 end
