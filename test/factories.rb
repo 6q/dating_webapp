@@ -43,9 +43,33 @@ FactoryGirl.define do
       end
     end
 
+    trait :picture do
+      after(:create) do |user, evaluator|
+        if user.gender == 'male'
+          FactoryGirl.create_list(:male_picture, evaluator.picture_count, attachable: user)
+        else
+          FactoryGirl.create_list(:female_picture, evaluator.picture_count, attachable: user)
+        end
+      end
+    end
+
+    ignore do
+      picture_count 1
+    end
+
     factory :regular_user, traits: [:basic_data, :complementary_data, :user_role]
     factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data, :user_role]
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
+    factory :matchmaker_with_picture, traits: [:basic_data, :picture, :matchmaker_role]
+    factory :regular_user_with_picture, traits: [:basic_data, :complementary_data, :picture, :user_role]
+  end
+
+  factory :male_picture, class: Picture do
+    image_url { FAKE_PICTURES::HEADSHOTS::MEN.sample }
+  end
+
+  factory :female_picture, class: Picture do
+    image_url { FAKE_PICTURES::HEADSHOTS::WOMEN.sample }
   end
 end
