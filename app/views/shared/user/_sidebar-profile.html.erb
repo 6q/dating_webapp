@@ -1,7 +1,7 @@
 <section id="user-sidebar">
-	<img src="/users/placeholder-user.jpg">
+  <%= profile_pic(current_user) %>
 	<header>
-		<h1>Josep María Vives</h1>
+    <h1><%= current_user.full_name %></h1>
 	</header>
 	<ul>
 		<li>
