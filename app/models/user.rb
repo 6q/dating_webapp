@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
   include UserRetrieval
 
+  acts_as_messageable
+  
   #relations
   has_many :pictures, as: :attachable
 
@@ -65,6 +67,10 @@ class User < ActiveRecord::Base
 
   def full_name
     [name, surname].join(" ")
+  end
+
+  def mailboxer_email(object)
+    email
   end
 
 end

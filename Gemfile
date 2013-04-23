@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'mail_form'
 gem 'rails-i18n'
 gem 'strong_parameters'
+gem 'mailboxer'
 
 group :test do
   gem 'faker'
