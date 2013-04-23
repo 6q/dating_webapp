@@ -64,7 +64,8 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
-    dragonfly (0.9.12)
+    dragonfly (0.9.14)
+      multi_json (~> 1.0)
       rack
     erubis (2.7.0)
     execjs (1.4.0)
@@ -217,7 +218,7 @@ DEPENDENCIES
   country_select
   database_cleaner
   devise (>= 2.2.3)
-  dragonfly
+  dragonfly (~> 0.9.14)
   factory_girl_rails (>= 4.2.0)
   faker
   figaro (>= 0.6.3)
