@@ -1,44 +1,23 @@
-<%= div_for(conversation, :class =>"#{ 'unread ' if conversation.is_unread?(@actor) }") do %>
+<%= div_for(conversation, :class =>"#{ 'unread ' if conversation.is_unread?(@actor) }msg-item") do %>
+  <div class="clearfix">
+    <div class="pic"><a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
+      <div class="info">
+        <p class="msg-data"><%= t('time.ago', :time => time_ago_in_words(conversation.updated_at)) %> - <%= link_to conversation.last_sender.name, conversation.last_sender %></p>
 
-  <div class="content_left">
-    <div class="avatar">
-      <% #image_tag(conversation.last_sender.logo.url(:small), :title => conversation.last_sender.name, :alt => conversation.last_sender.name) %>
-      <%= link_to conversation.last_sender.name, conversation.last_sender %>
-    </div>
+        <p class="msg"><%= link_to(truncate(conversation.subject, :length => 55), conversation_path(conversation.id, :box => @box, :page => params[:page])) %></p>
 
-    <header>
-      <h5>
-        <%= link_to truncate_name(conversation.last_sender.name), conversation.last_sender %>
-      </h5>
-      <div class="date">
-        <%= t('time.ago', :time => time_ago_in_words(conversation.updated_at)) %>
       </div>
-    </header>
-
-  </div>
-
-  <div class="content_right">
-
-    <div class="subject">
-      <%= link_to(truncate(conversation.subject, :length => 55), conversation_path(conversation.id,:box => @box,:page => params[:page])) %>
-    </div>
-
     <% unless @box.eql?'trash' %>
-      <div class="action">
-      
-        <%= link_to(image_tag('cancel.png', :alt => t('mailboxer.delete'), :title => t('mailboxer.delete')),
-                    conversation_path(conversation, :location => @box,
+      <div class="reply">
+        <%= link_to 'Eliminar', conversation_path(conversation, :location => @box,
                                                     :box => @box,
                                                     :page => params[:page]),
                                                     :confirm => t('mailboxer.delete_confirm',
-                                                                  :object => conversation.subject),
+                                                    :object => conversation.subject),
                                                     :method => :delete,
-                                                    :remote => true) %>
+                                                    :remote => true, :class => 'delete' %>
+        <%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
       </div>
     <% end %>
-
-    <div class="briefing">
-      <%= raw(truncate(strip_tags(conversation.last_message.body), :length => 50)) %>
-    </div>
   </div>
 <% end %>

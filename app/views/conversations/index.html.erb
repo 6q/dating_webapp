@@ -1,3 +1,49 @@
-<div class="conversations">
-  <%= render @conversations %>
-</div>
+<section class="messages">
+  <div class="boxed headless">
+    <div class="boxed-inner">
+      <header>
+        <h1 class="span3">Mensajes y actividades</h1>
+        <div class="pull-right">Estas usando el 35% de tu buzón. ¡<%= link_to "Ampliar mi capacidad", "/user/pay" %>!</div>
+      </header>
+    </div>
+  </div>
+    
+  <hr class="thin">
+
+  <div class="tabs">
+    <ul class="nav nav-tabs" id="messages-tab">
+        <li class="active"><a href="#recibidos">Recibidos (2)</a></li>
+      <li><a href="#enviados">Enviados</a></li>
+      <li><a href="#eliminados">Eliminados</a></li>
+    </ul>
+    <%= render '/shared/user/sorting' %>
+  </div>
+  
+  <div class="boxed">
+    <div class="boxed-inner">
+
+      <div class="tab-content">
+
+        <!-- begin tabs -->
+        <div class="tab-pane active" id="recibidos">
+          <% @tab = 'received-messages' %>
+
+          <%= render @conversations %>
+          <%= render '/shared/user/pagination' %>
+        </div>
+
+        <div class="tab-pane" id="enviados">
+          
+          <% @tab = 'sent-messages' %>
+          <%= render '/shared/user/pagination' %>
+        </div>
+        
+        <div class="tab-pane" id="eliminados">
+          
+          <% @tab = 'deleted-messages' %>
+          <%= render '/shared/user/pagination' %>
+        </div>
+        <!-- end tabs -->
+      </div>
+    </div>
+  </div>
