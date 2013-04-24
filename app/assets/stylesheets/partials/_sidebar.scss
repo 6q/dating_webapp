@@ -1,10 +1,4 @@
 #user-sidebar {
-  img {
-    padding:4px;
-    border:#e0e0e0 1px solid;
-    background:#fff;
-    width:210px;
-  }
 
   .progress {
     margin-bottom:0;
@@ -44,6 +38,12 @@
     }
 
     .profile_pic {
+      img {
+        padding:4px;
+        border:#e0e0e0 1px solid;
+        background:#fff;
+        width:210px;
+      }
     }
   }
 
