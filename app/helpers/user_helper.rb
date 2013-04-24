@@ -1,9 +1,10 @@
 module UserHelper
   def profile_pic(user, options = {width: 80, height: 80})
     #TODO: Implement
-    if user.pictures.any?
+    pp = user.profile_picture
+    if user.profile_picture
       size = "#{options[:width]}x#{options[:height]}"
-      image_tag(user.pictures.first.image.thumb(size).url)
+      image_tag(pp.image.thumb(size).url)
     else
       image_tag("placeholder-user.jpg")
     end

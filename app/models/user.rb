@@ -67,4 +67,8 @@ class User < ActiveRecord::Base
     [name, surname].join(" ")
   end
 
+  def profile_picture
+    self.pictures.where("main is true").limit(1).first || self.pictures.limit(1).first
+  end
+
 end
