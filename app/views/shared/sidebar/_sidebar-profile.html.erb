@@ -1,5 +1,11 @@
 <section id="user-sidebar">
-  <%= profile_pic(current_user) %>
+  <div class="profile_pic_wrapper">
+    <div class="icon_overlay">
+    </div>
+    <div class="profile_pic">
+      <%= profile_pic(current_user) %>
+    </div>
+  </div>
 	<header>
     <h1><%= current_user.full_name %></h1>
 	</header>
