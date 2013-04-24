@@ -7,7 +7,6 @@ module FAKE_PICTURES
       http://0.tqn.com/d/mensfashion/1/0/Y/G/1/handsome-guy-with-brushed-back-hair.jpg
       http://0.tqn.com/d/mensfashion/1/0/_/G/1/model-with-thick-brushed-back-hair.jpg
       http://www.fionaloh.com/wp-content/uploads/2013/03/dbeckham-hair-combed-back-hairstyle.jpg
-      http://i234.photobucket.com/albums/ee136/suwarnaadi/gaspard-ulliel-hairstyle3.jpg
       http://fc00.deviantart.net/fs29/f/2008/116/c/2/handsome_guy_by_minesermet.jpg
       http://www.teknikportal.com/image-uploads/erkek-avatarlari-0010.jpg
       http://static.thehollywoodgossip.com/images/gallery/happy-handsome.jpg
@@ -24,7 +23,6 @@ module FAKE_PICTURES
       http://s.huffpost.com/contributors/michaela-haas/headshot.jpg
       http://tctechcrunch2011.files.wordpress.com/2012/07/ja-headshot-2011-mark-liddell.jpeg
       http://sphotos-a.xx.fbcdn.net/hphotos-ash3/p480x480/544165_540881325933933_1346813584_n.jpg
-      http://s270.photobucket.com/user/xiahkixiri/media/miscy/kristen_bell_headshot-6088.jpg.html
       http://www.unbreakablewoman.com/images/contact/Mo-Headshot-2.jpg
       http://www.meav.com/images/B_W-Celtic-Woman-headshot.gif
     }.split.flatten

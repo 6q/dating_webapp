@@ -1,6 +1,6 @@
 Cellove::Application.routes.draw do
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'dashboard#show'
   end
   root :to => "home#index"
   devise_for :users, controllers: {
@@ -10,6 +10,8 @@ Cellove::Application.routes.draw do
   devise_for :matchmakers, class_name: "User", controllers: {
     registrations: 'matchmaker_registrations'
   }
+
+  resource :profile, only: [:show, :update]
 
   resources :users do
     resource :chat, only: :show
