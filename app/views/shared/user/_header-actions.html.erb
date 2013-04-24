@@ -3,7 +3,7 @@
 	<div id="header-preface">
     <div id="user-options">
       <%= link_to 'Cambiar configuración', '/user/settings/' %> | 
-      <%= link_to 'Editar mi perfil', '/user/profile/' %> | 
+      <%= link_to 'Editar mi perfil', profile_path %> | 
       <%= link_to 'Desconectar', destroy_user_session_path, method: :delete %>
     </div>
 

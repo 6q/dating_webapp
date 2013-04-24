@@ -11,6 +11,8 @@ Cellove::Application.routes.draw do
     registrations: 'matchmaker_registrations'
   }
 
+  resource :profile, only: [:show, :update]
+
   resources :users do
     resource :chat, only: :show
     post 'like', to: "relations_controller#like"
