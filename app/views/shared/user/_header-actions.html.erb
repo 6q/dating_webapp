@@ -1,13 +1,22 @@
 <div id="header-actions">
 
 	<div id="header-preface">
-		<div id="user-options"><%= link_to 'Cambiar configuración', '/user/settings/' %> | <%= link_to 'Editar mi perfil', '/user/profile/' %> | <%= link_to 'Desconectar', '/public/home' %></div>
+    <div id="user-options">
+      <%= link_to 'Cambiar configuración', '/user/settings/' %> | 
+      <%= link_to 'Editar mi perfil', '/user/profile/' %> | 
+      <%= link_to 'Desconectar', destroy_user_session_path, method: :delete %>
+    </div>
 
 		<div id="color-switcher" class="header-switcher">
 			<ul>
 				<li class="picker"><a href="#">Ponle color <i></i></a></li>
 				<% (1..5).each_with_index do |i| %>
-					<li class="leaf"><a href="#"><img src="/images/skin<%= i %>-thumb.jpg"> Fondo <%= i %></a></li>
+          <li class="leaf">
+            <a href="#">
+              <%= image_tag("skin#{i}-thumb.jpg") %>
+              Fondo <%= i %>
+            </a>
+          </li>
 				<% end %>
 			</ul>
 		</div>
