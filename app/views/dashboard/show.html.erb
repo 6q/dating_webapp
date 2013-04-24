@@ -39,7 +39,7 @@
 		<h4>Últimas conversaciones <a href="/user/messages">(Ver todos los mensajes)</a></h4>
 
 		<% (1..4).each do %>
-			<%= render partial: "message_item" %>
+      <%= render partial: "message_item", locals: {user: User.all.sample } %>
 			<hr>
 		<% end %>
 

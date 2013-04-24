@@ -1,8 +1,8 @@
 <li>
 <article class="user-card online">
 <ul class="pics">
-  <li><%= link_to image_tag('placeholder1.jpg'), user_path(user) %></li>
-  <li><%= link_to image_tag('placeholder2.jpg'), user_path(user) %></li>
+  <li><%= link_to profile_pic(user), user_path(user) %></li>
+  <li><%= link_to profile_pic(user), user_path(user) %></li>
 </ul>
 <header>
 <% if @timestamp == true %>
