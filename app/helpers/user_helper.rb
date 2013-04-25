@@ -21,4 +21,8 @@ module UserHelper
     html += '<li class="block">' + link_to('Block', '#user-block', 'data-toggle' => 'modal') + '</li>'
     html.html_safe
   end
+
+  def user_remaining_pictures(user = current_user)
+    User::PICTURE_LIMIT - user.pictures.count
+  end
 end

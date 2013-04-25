@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   GENDER = ['male', 'female']
   ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
+  PICTURE_LIMIT = 12
 
   extend MinimumAgeValidatorHelper
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
