@@ -5,11 +5,11 @@
 
     <div class="user-detail clearfix">
       <div class="pic">
-        <a href="/user/profile/"><img src="/users/placeholder2.jpg" width="60" height ="60"></a>
+        <%= link_to(profile_pic(user), user) %>
       </div>
-      <div class="data"><small>8/12/2012 - 22:35h</small><%= link_to "Judit", "/user/profile/" %>, 21 años - Barcelona</div>
-    </div> 
-
+      <div class="data"><small>8/12/2012 - 22:35h</small><%= link_to user.name, user %>, <%= user.age %> años - Barcelona</div>
+    </div>
+    <div>
   </div>
   <div class="modal-body">
     <div class="prevmsg">

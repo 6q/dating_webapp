@@ -1,0 +1,49 @@
+#user-sidebar {
+
+  .progress {
+    margin-bottom:0;
+    margin-top:5px;
+    height:10px;
+    border-radius:10px;
+
+    .bar {
+      border-radius:10px;
+    }
+  }
+
+  li.profile {
+    .progress {
+      .bar {
+        background:#6cc36c;
+      }
+    }
+  }
+
+  .profile_pic_wrapper {
+    position: relative;
+
+    .profile_pic_overlay {
+      position: absolute;
+      width: 100%;
+      display: none;
+      bottom: 10px;
+      text-align: center;
+    }
+
+    &:hover {
+      .profile_pic_overlay {
+        display: block;
+      }
+    }
+
+    .profile_pic {
+      img {
+        padding:4px;
+        border:#e0e0e0 1px solid;
+        background:#fff;
+        width:210px;
+      }
+    }
+  }
+
+}

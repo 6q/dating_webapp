@@ -1,7 +1,17 @@
 <section id="user-sidebar">
-	<img src="/users/placeholder-user.jpg">
+  <div class="profile_pic_wrapper">
+    <div class="profile_pic_overlay">
+      <button class="btn btn-info" type="submit">
+        <i class="icon-wrench icon-white"></i>
+        Cambia tu foto de perfil
+      </button>
+    </div>
+    <div class="profile_pic">
+      <%= profile_pic(current_user) %>
+    </div>
+  </div>
 	<header>
-		<h1>Josep María Vives</h1>
+    <h1><%= current_user.full_name %></h1>
 	</header>
 	<ul>
 		<li>

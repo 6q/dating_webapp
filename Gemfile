@@ -21,12 +21,15 @@ gem 'compass_twitter_bootstrap'
 gem 'compass-rails'
 gem "geocoder", "~> 1.1.3"
 gem 'friendly_id'
-gem 'dragonfly'
+gem 'dragonfly', '~>0.9.14'
 gem 'country_select'
 gem 'kaminari'
 gem 'turbolinks'
 gem 'mail_form'
 gem 'rails-i18n'
+gem 'strong_parameters'
+gem 'gettext_i18n_rails'
+gem 'gettext', '>=1.9.3', :require => false, :group => :development
 
 group :test do
   gem 'faker'

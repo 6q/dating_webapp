@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  skip_before_filter :authenticate_user!, only: :view
 
   def index
     @users = User.all
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def view_users
-    @users = User.last(7)
+  def view
+    @users = User.with_role(:user).last(7)
   end
 end
