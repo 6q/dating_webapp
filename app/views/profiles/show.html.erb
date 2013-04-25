@@ -8,14 +8,7 @@
 					Índice Cellove: 35/100 <%= link_to "¡Mejora tu índice!", "/user/celestinos-of-mine#tab_mejora" %> - Perfil 35% completado
 				</div>
 			</header>
-			<div id="user-pictures">
-				<h2>Tus fotos (4/12)</h2>
-
-				<div class="pic-container">
-					pics
-				</div>
-
-			</div>
+      <%= render partial: "pictures", locals: {user: @user} %>
 		</div>
 	</div>
 

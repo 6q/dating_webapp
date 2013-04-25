@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
   JOB = ['technology', 'medical', 'politics']
   SALARY = ['hight', 'medium', 'low']
 
+  PICTURE_LIMIT = 12
 
   extend MinimumAgeValidatorHelper
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date

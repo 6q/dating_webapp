@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   layout 'logged_in'
+
   def show
     @user = current_user
   end
