@@ -6,6 +6,26 @@ class User < ActiveRecord::Base
   GENDER = ['male', 'female']
   ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
+  PHYSICAL_DESC = ['sexy', 'ugly']
+  PHYSICAL_STYLE = ['bohemian', 'urban']
+  COMPLEXION = ['normal', 'athletic']
+  CHILD = ['I have', 'I have not']
+  CHILD_WANT = ["I don't want more", 'I want to adopt' ]
+  SMOKE =['I smoke', "I don't smoke"]
+  SMOKE_TOLERANCE = ['does not bother me', 'I hate it']
+  DIET = ["I'm vegan", 'I eat a lot of meat']
+  ALCOHOL = ['I drink alcohol', "I'm abstemious"]
+  DRUGS = ['take drugs', 'do not take drugs']
+  DRUGS_FREQUENCY = ['never', 'sometimes', 'always'] 
+  RELIGION = ['agnostic', "I'm religious"]
+  RELIGION_OPINION = ['dedicated practicant', 'non practicant']
+  ANIMAL_LIKE = ['I Hate', 'I love', 'I adopt']
+  ANIMAL_HAVE =["I haven't", 'I have one', 'I have many']
+  STUDY_LEVEL = ['basic', 'graduate']
+  LANGUAGE = ['advanced chinese', 'basic russian']
+  JOB = ['technology', 'medical', 'politics']
+  SALARY = ['hight', 'medium', 'low']
+
 
   extend MinimumAgeValidatorHelper
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
@@ -32,7 +52,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation,
     :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status,
     :birth_date, :country, :postal_code, :town, :town_id,
-    :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions
+    :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions, :physical_desc, :physical_style
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
 

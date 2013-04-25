@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424120445) do
+ActiveRecord::Schema.define(:version => 20130425115658) do
 
   create_table "pictures", :force => true do |t|
     t.string   "image_uid"
@@ -83,6 +83,27 @@ ActiveRecord::Schema.define(:version => 20130424120445) do
     t.boolean  "newsletter_optin"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "physical_style"
+    t.string   "physical_desc"
+    t.integer  "height"
+    t.integer  "weight"
+    t.string   "complexion"
+    t.string   "child"
+    t.string   "child_want"
+    t.string   "smoke"
+    t.string   "smoke_tolerance"
+    t.string   "diet"
+    t.string   "alcohol"
+    t.string   "drugs"
+    t.string   "drug_frequency"
+    t.string   "religion"
+    t.string   "religion_opinion"
+    t.string   "animal_like"
+    t.string   "animal_have"
+    t.string   "study_level"
+    t.string   "language"
+    t.string   "job"
+    t.string   "salary"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

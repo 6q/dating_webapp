@@ -10,6 +10,66 @@ es:
   married: 'casado'
   sign_up: '¡Registrarme Gratis!'
 
+  sexy: 'atractivo'
+  ugly: 'feo'
+
+  bohemian: 'bohemio'
+  urban: 'urbano'
+
+  normal: 'normal'
+  athletic: 'atlética'
+
+  I have: 'Tengo'
+  I have not: 'No tengo'
+
+  I don't want more: 'no quiero tener más'
+  I want to adopt: 'quiero adoptar'
+
+  I smoke: 'Fumo'
+  I don't smoke: 'No fumo'
+
+  does not bother me: 'no me molesta'
+  I hate it: 'me indigna el humo'
+
+  I'm vegan: 'soy vegano'
+  I eat a lot of meat: 'como mucha carne'
+
+  I drink alcohol: 'Bebo alcohol'
+  I'm abstemious: 'Soy abstemio'
+
+  take drugs: 'tomo drogas'
+  do not take drugs: 'no tomo drogas'
+
+  never: 'nunca'
+  sometimes: 'de vez en cuando'
+  always: 'siempre'
+
+  agnostic: 'agnóstico'
+  I'm religious: 'creiente'
+  dedicated practicant: 'me lo tomo muy en serio'
+  non practicant: 'no practicante'
+
+  I Hate: 'Tengo'
+  I love: 'Me gustan'
+  I adopt:  'Adopto'
+  I haven't: 'no tengo'
+  I have one: 'tengo uno'
+  I have many: 'tengo varios'
+
+  basic: 'básico'
+  graduate: 'universitario'
+
+  advanced chinese: 'Chino avanzado'
+  basic russian: 'Ruso básico'
+
+  technology: 'tecnología'
+  medical: 'médico'
+  politics: 'política'
+
+  hight: 'alto'
+  medium: 'medio'
+  low: 'bajo'
+
   menu:
     user_register: "Registro Gratis"
 
