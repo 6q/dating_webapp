@@ -8,7 +8,7 @@
       <% end %>
       <% user_remaining_pictures(user).times do %>
         <li>
-          <a href="#">
+          <a href="#upload_pic" class="upload_pic" data-toggle="modal">
             <span>
               <i class="icon icon-plus-sign"></i>
             </span>
@@ -17,5 +17,5 @@
       <% end %>
     </ul>
   </div>
-
+  <%= render partial: 'pictures/upload_dialog' %>
 </div>

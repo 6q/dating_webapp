@@ -3,16 +3,18 @@ Cellove::Application.routes.draw do
     root :to => 'dashboard#show'
   end
   root :to => "home#index"
+
   devise_for :users, controllers: {
     registrations: 'user_registrations'
   }
-
 
   devise_for :matchmakers, class_name: "User", controllers: {
     registrations: 'matchmaker_registrations'
   }
 
   resource :profile, only: [:show, :update]
+
+  resource :pictures, only: :create
 
   resources :users do
     resource :chat, only: :show
