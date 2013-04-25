@@ -3,17 +3,19 @@ class ConversationsController < ApplicationController
   before_filter :get_mailbox, :get_box
   before_filter :check_current_subject_in_conversation, :only => [:show, :update, :destroy]
 
+  layout "logged_in"
+  
   def index
-    if @box.eql? "inbox"
-      @conversations = @mailbox.inbox.page(params[:page]).per(9)
-    elsif @box.eql? "sentbox"
-      @conversations = @mailbox.sentbox.page(params[:page]).per(9)
-    else
-      @conversations = @mailbox.trash.page(params[:page]).per(9)
-    end
+#    if @box.eql? "inbox"
+      @conversations_inbox = @mailbox.inbox.page(params[:page]).per(9)
+#    elsif @box.eql? "sentbox"
+      @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(9)
+#    else
+      @conversations_trash = @mailbox.trash.page(params[:page]).per(9)
+#    end
 
     respond_to do |format|
-      format.html { render @conversations if request.xhr? }
+      format.html { render partial: 'conversations', locals: { conversations: @conversations_sentbox } if request.xhr? }
     end
   end
 
@@ -89,7 +91,7 @@ class ConversationsController < ApplicationController
 
   def get_box
     if params[:box].blank? or !["inbox","sentbox","trash"].include?params[:box]
-      params[:box] = 'sentbox'
+      params[:box] = 'inbox'
     end
 
     @box = params[:box]

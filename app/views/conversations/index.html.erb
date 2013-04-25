@@ -12,9 +12,9 @@
 
   <div class="tabs">
     <ul class="nav nav-tabs" id="messages-tab">
-        <li class="active"><a href="#recibidos">Recibidos (2)</a></li>
-      <li><a href="#enviados">Enviados</a></li>
-      <li><a href="#eliminados">Eliminados</a></li>
+      <li class="active"><a href="#inbox">Recibidos<%= " (#{@conversations_inbox.count})" if @conversations_inbox.count > 0 %></a></li>
+        <li><a href="#sentbox">Enviados<%= " (#{@conversations_sentbox.count})" if @conversations_sentbox.count > 0 %></a></li>
+        <li><a href="#trash">Eliminados<%= " (#{@conversations_trash.count})" if @conversations_trash.count > 0 %></a></li>
     </ul>
     <%= render '/shared/user/sorting' %>
   </div>
@@ -25,25 +25,27 @@
       <div class="tab-content">
 
         <!-- begin tabs -->
-        <div class="tab-pane active" id="recibidos">
-          <% @tab = 'received-messages' %>
-
-          <%= render @conversations %>
-          <%= render '/shared/user/pagination' %>
+        <div class="tab-pane<%= ' active' if @box.eql? 'inbox' %>" id="inbox">
+          <%= render partial: 'conversations', locals: {conversations: @conversations_inbox} %>
         </div>
 
-        <div class="tab-pane" id="enviados">
-          
-          <% @tab = 'sent-messages' %>
-          <%= render '/shared/user/pagination' %>
+        <div class="tab-pane<%= ' active' if @box.eql? 'sentbox' %>" id="sentbox">
+          <%= render partial: 'conversations', locals: {conversations: @conversations_sentbox} %>
         </div>
         
-        <div class="tab-pane" id="eliminados">
-          
-          <% @tab = 'deleted-messages' %>
-          <%= render '/shared/user/pagination' %>
+        <div class="tab-pane<%= ' active' if @box.eql? 'trash' %>" id="trash">
+          <%= render partial: 'conversations', locals: {conversations: @conversations_trash} %>
+          <%= render 'shared/user/pagination' %>
         </div>
         <!-- end tabs -->
       </div>
     </div>
   </div>
+  <script>
+    $(document).on('click', '#sentbox #paginator a', function() {
+      $.get(this.href, function(data) {
+        $('#sentbox').html(data);
+      });
+      return false;
+    });
+  </script>

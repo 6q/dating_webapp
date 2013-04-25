@@ -218,7 +218,7 @@ section.list {
     font-size:.8em;
     color:#999;
 
-    span.pages {
+    span.page {
       display:block;
       float:right;
 
@@ -390,7 +390,7 @@ section.chat{
       margin-bottom:5px;
     }
 
-    span.pages {
+    span.page {
       float:none;
     }
   }
@@ -837,7 +837,7 @@ section.chat{
     }
 
     .pagination {
-        span.pages {
+        span.page {
           float:none;
         }
     }

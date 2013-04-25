@@ -16,4 +16,9 @@ module ApplicationHelper
     current_page?(url) ? 'active' : ''
   end
 
+  def pager_total(paged_object)
+    html = '<span class="total">' + _('Mostrando mensajes ') + pager_total.current_page * pager_total.count - pager_total.count + 1 + _(' a ') + + pager_total.current_page * pager_total.count + _(' de ') + pager_total.total_count + '.</span>'
+
+    html.html_safe
+  end
 end
