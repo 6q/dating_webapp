@@ -12,20 +12,7 @@
 				<h2>Tus fotos (4/12)</h2>
 
 				<div class="pic-container">
-					<ul>
-						<li><img src="/users/placeholder-user.jpg" width="80" height="80"></li>
-						<li><img src="/users/placeholder-user.jpg" width="80" height="80"></li>
-						<li><img src="/users/placeholder-user.jpg" width="80" height="80"></li>
-						<li><img src="/users/placeholder-user.jpg" width="80" height="80"></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
+					pics
 				</div>
 
 			</div>
@@ -34,509 +21,88 @@
 
 	<hr class="thin">
 
-	<form class="form-horizontal">
-
-	<section class="boxed">
-		<div class="boxed-inner">
-			<fieldset>
-				<header>
-					<h1>Datos de acceso a Cellove</h1>
-					<br>
-					<p>Modifica aquí tus datos de acceso a Cellove</p>
-				</header>
-				<div>
-					<div class="span4 left">
-						<div class="control-group">
-							<label class="control-label">Email</label>
-							<div class="controls">
-								<input type="text" class="span2" placeholder="ola@kea.se">
+	
+	<%= form_for @user, :url => {:controller => "user_profile", :action => "update"} do |f| %>
+		<section class="boxed">
+			<div class="boxed-inner">
+				<fieldset>
+					<header>
+						<h1>Datos de acceso a Cellove</h1>
+						<br>
+						<p>Modifica aquí tus datos de acceso a Cellove</p>
+					</header>
+					<div>
+						<div class="span4 left">
+							<div class="control-group">
+								<%= f.label :email, 'Email', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.email_field :email, :class => 'span2' %>
+								</div>
+							</div>
+							<div class="control-group">
+								<%= f.label :email_confirmation, 'Confirmar Email', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.email_field :email_confirmation, :class => 'span2' %>
+								</div>
 							</div>
 						</div>
-						<div class="control-group">
-							<label class="control-label">Confirmar Email</span></label>
-							<div class="controls">
-								<input type="text" class="span2">
+						<div class="span4">
+							<div class="control-group">
+								<%= f.label :password, 'Contraseña', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.password_field :password, :class => 'span2' %>
+								</div>
 							</div>
+							<div class="control-group">
+								<%= f.label :password_confirmation, 'Confirmar contraseña', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.password_field :password_confirmation, :class => 'span2' %>
+								</div>
+							</div>
+						</div>
+						
+						<div class="center">
+							<%= f.submit 'Modificar datos de acceso', :class => 'btn btn-info' %>
+							<hr class="thin">
 						</div>
 					</div>
-					<div class="span4">
-						<div class="control-group">
-							<label class="control-label">Contraseña</label>
-							<div class="controls">
-								<input type="password" class="span2">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label">Confirmar contraseña</span></label>
-							<div class="controls">
-								<input type="password" class="span2">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="center">
-					<button class="btn btn-info">Modificar datos de acceso</button>
-					<hr class="thin">
-				</div>
-			</fieldset>
-		</div>
-	</section>
+				</fieldset>
+			</div>
+		</section>
+	<% end %>
 
 	<hr class="thin">
 
-	<section class="boxed">
-		<div class="boxed-inner">
-			<fieldset class="quien form-inline">
-				<header>
-					<h1>¿Quien eres?</h1>
-				</header>
+	<%= form_for @user do |user| %>
+		<section class="boxed">
+			<div class="boxed-inner">
+				<fieldset class="quien form-inline">
+					<header>
+						<h1>¿Quien eres?</h1>
+					</header>
 					<div class="span9">
-						Me llamo <input type="text" class="input-small" placeholder="Josep María"> <input type="text" class="input-small" placeholder="Vives"> pero quiero que mi nombre para mostrar sea <input type="text" class="input-small" placeholder="Matador69"> *
+						Me llamo 
+						<%= user.text_field :name, :class => 'input-small' %>
+						<%= user.text_field :surname, :class => 'input-small' %>
+						pero quiero que mi nombre para mostrar sea 
+						<%= user.text_field :screen_name, :class => 'input-small' %>
 						<small>* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.</small>
 					</div>
-			</fieldset>
-		</div>
-	</section>
-
-	<hr class="thin">
-		
-
-	<article class="profile-tabs">
-		<ul class="nav nav-tabs" id="myTab">
-		  <li class="active"><a href="#como">¿Cómo eres?</a></li>
-		  <li><a href="#gustos">Tus gustos</a></li>
-		  <li><a href="#buscas">Qué buscas</a></li>
-		  <li><a href="#dicen">Que dicen de ti</a></li>
-		</ul>
-		 
-			<div class="boxed">
-				<div class="boxed-inner">
-
-		<div class="tab-content">
-					<div class="tab-pane active" id="como">
-							  	<article class="form-inline">
-							  			<hr class="thin">
-											Soy
-											<select>
-					  							<option>chico</option>
-					  							<option>chica</option>
-											</select>
-											<select>
-					  							<option>hetero</option>
-					  							<option>gay</option>
-											</select>
-											y
-											<select class="span2">
-					  							<option>Estoy buscando</option>
-					  							<option>Estoy curioseando</option>
-											</select>,
-											<hr class="thin">
-											nací el <input class="input-mini" type="text" placeholder="dia">
-											<select>
-						  						<option>Enero</option>
-						  						<option>Febrero</option>
-						  						<option>Marzo</option>
-						  						<option>Abril</option>
-						  						<option>Mayo</option>
-						  						<option>Junio</option>
-						  						<option>Julio</option>
-						  						<option>Agosto</option>
-						  						<option>Septiembre</option>
-						  						<option>Octubre</option>
-						  						<option>Noviembre</option>
-						  						<option>Diciembre</option>
-											</select>
-											<input class="input-mini" type="text" placeholder="año">
-
-											<hr class="thin">
-						
-											Vivo en <input class="span2" type="text" placeholder="Población">,
-											<select class="span2">
-												<option>España</option>
-												<option>Costa Rica</option>
-											</select>
-											y mi código postal es el <input class="input-mini" type="text" placeholder="CP">.
-						
-							  			<hr>
-						
-							  			Soy 
-							  			<select>
-												<option>atractivo</option>
-												<option>feo</option>
-											</select>
-											y mi estilo es 
-											<select>
-												<option>bohemio</option>
-												<option>pijo</option>
-											</select>.
-											<hr class="thin">
-											Mido <input class="input-mini" type="text"> m. y peso <input class="input-mini" type="text"> kg.
-											
-											Mi complexión es 
-											<select>
-												<option>normal</option>
-												<option>atlética</option>
-											</select>.
-
-											<hr class="thin">
-						
-											<select class="span2">
-												<option>Tengo</option>
-												<option>No tengo</option>
-											</select> hijos, y
-											<select class="span3">
-												<option>no quiero tener más</option>
-												<option>quiero adoptar</option>
-											</select>
-											<hr>
-											<select class="span2">
-												<option>Fumo</option>
-												<option>No fumo</option>
-											</select>
-											y 
-											<select class="span3">
-												<option>no me molesta el humo</option>
-												<option>me indigna el humo</option>
-											</select>.
-											<hr>
-											</br>
-											
-											A la hora de comer,
-											<select class="span4">
-												<option>soy estrictamente vegetariano</option>
-												<option>como carne sin control</option>
-											</select>.
-											<hr class="thin">
-											<select>
-												<option>Bebo alcohol</option>
-												<option>Soy abstemio</option>
-											</select>
-											y
-											<select class="span2">
-												<option>tomo drogas</option>
-												<option>no tomo drogas</option>
-											</select>
-											<select>
-												<option>de vez en cuando</option>
-												<option>siempre</option>
-												<option>nunca</option>
-											</select>.
-
-											<hr>
-						
-											Soy
-											<select>
-												<option>agnóstico</option>
-												<option>creiente</option>
-											</select>
-											y
-											<select>
-												<option>me lo tomo muy en serio</option>
-												<option>no practicante</option>
-											</select>.
-
-											<hr>
-
-											<select>
-												<option>Me gustan</option>
-												<option>Adopto</option>
-												<option>Tolero</option>
-												<option>Odio</option>
-											</select>
-											los animales de compañia y
-											<select class="span2">
-												<option>tengo uno</option>
-												<option>tengo varios</option>
-												<option>no tengo</option>
-											</select>
-											<hr>
-						
-											Mi nivel de estudios es 
-											<select>
-												<option>módulo profesional</option>
-												<option>universitario</option>
-											</select>
-											y hablo
-											<select>
-												<option>Holandés - nivel alto</option>
-												<option>Ingés - nivel nativo</option>
-											</select>.
-											<hr class="thin">
-						
-											Me dedico a
-											<select>
-												<option>tecnología</option>
-												<option>política</option>
-												<option>estar en el paro</option>
-											</select>
-											con un nivel de ingresos
-											<select class="span2">
-												<option>bajo</option>
-												<option>medio</option>
-												<option>alto</option>
-											</select>.
-
-									</article>
-									<hr>
-									<article>
-										<h3>¿Cómo te describirias?</h3>
-										<p>¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!</br>
-											No desaproveches esta oportunidad...</p>
-											<textarea></textarea>
-										
-									</article>
-									<hr>
-									<article class="clearfix">
-										<h3>¿Cómo te consideras?</h3>
-										<p><em>Puntua de 1 a 5 cada una de estas características</em></p>
-										<div class="span1">
-											&nbsp;
-										</div>
-										<div class="span3 offset1">
-											<% (1..12).each do %>
-												<h5>Amable</h5>
-												<input id="points" type="slider" name="" value="3"/>
-											<% end %>
-										</div>
-										<div class="span1">
-											&nbsp;
-										</div>
-
-										<div class="span3">
-											<% (1..12).each do %>
-												<h5>Amable</h5>
-												<input id="points" type="slider" name="" value="3"/>
-											<% end %>
-										</div>
-									</article>
-									<hr>
-									<div class="center">
-										<button class="btn btn-info btn-large">Guardar cambios</button>
-										<hr class="thin">
-									</div>
-							  </div>
-
-
-
-							  <div class="tab-pane" id="gustos">
-							  	
-							  	<article>
-										<h3>Acerca de tus aficiones... ¿qué te gusta hacer?</h3>
-										<textarea rows="4"></textarea>
-								</article>
-								<hr>
-							  	<article>
-										<h3>Cuando sales, ¿qué haces?</h3>
-										<textarea rows="4"></textarea>
-								</article>
-								<hr>
-							  	<article>
-										<h3>¿Y la música? ¿Qué escuchas? ¿Bailas?</h3>
-										<textarea rows="4"></textarea>
-								</article>
-								<hr>
-							  	<article>
-										<h3>Sólo queda el cine. ¿Alguna película favorita? ¿Directores, tal vez?</h3>
-										<textarea rows="4"></textarea>
-								</article>
-								<hr>
-								
-								<div class="center">
-									<button class="btn btn-info btn-large">Guardar gustos</button>
-								</div>
-
-								<hr class="thin">
-
-							  </div>
-							  <div class="tab-pane" id="buscas">
-							  	<article class="form-inline">
-							  		<hr class="thin">
-											Busco a
-											<select class="span2">
-					  							<option>Un chico</option>
-					  							<option>una chica</option>
-											</select>
-											<select class="span2">
-					  							<option>hetero</option>
-					  							<option>gay</option>
-											</select>
-											y
-											<select>
-					  							<option>Que esté buscando a alguien</option>
-					  							<option>Que esté curioseando</option>
-											</select>
-											<hr class="thin">
-											de entre <input class="input-mini" type="text"> y <input class="input-mini" type="text"> años
-											
-											<hr class="thin">
-						
-											Que viva en <input class="span2" type="text" placeholder="población">,
-											<select class="span2">
-												<option>España</option>
-												<option>Colombia</option>
-											</select>
-											cerca del código postal <input class="input-mini" type="text" placeholder="CP">.
-						
-							  			<hr>
-						
-							  			Que sea
-							  				<select class="span2">
-												<option>atractivo</option>
-												<option>del montón</option>
-											</select>
-											y 
-											<select>
-												<option>bohemio</option>
-												<option>pijo</option>
-											</select>.
-											<hr>
-											De entre <input class="input-mini" type="text"> y <input class="input-mini" type="text">m. y pese entre <input class="input-mini" type="text"> y <input class="input-mini" type="text"> kg.,
-											<hr class="thin">
-											y de complexión
-											<select class="span2">
-												<option>normal</option>
-												<option>atlética</option>
-												<option>me da igual</option>
-											</select>.
-											<hr>
-											
-											Que 
-											<select>
-												<option>tenga hijos</option>
-												<option>no tenga hijos</option>
-											</select>
-											y 
-											<select>
-												<option>no quiera tener más</option>
-												<option>quiera adoptar</option>
-											</select>.
-											<hr>
-											Que
-											<select>
-												<option>sea fumador</option>
-												<option>no sea fumador</option>
-											</select>
-											y 
-											<select>
-												<option>le moleste el humo</option>
-												<option>le indigne el humo</option>
-											</select>.
-											<hr>
-											
-											A la hora de comer, que sea
-											<select class="span4">
-												<option>estrictamente vegetariano</option>
-												<option>coma carne sin control</option>
-											</select>.
-											<hr class="thin">
-											<select>
-												<option>Beba alcohol</option>
-												<option>Sea abstemio</option>
-											</select>
-											y
-											<select class="span2">
-												<option>tome drogas</option>
-												<option>no tome drogas</option>
-											</select>
-											<select>
-												<option>de vez en cuando</option>
-												<option>siempre</option>
-												<option>nunca</option>
-											</select>.
-
-											<hr>
-						
-											Que sea
-											<select>
-												<option>agnóstico</option>
-												<option>creiente</option>
-											</select>
-											y
-											<select>
-												<option>me se lo tome muy en serio</option>
-												<option>no practicante</option>
-											</select>.
-
-											<hr>
-											Que
-											<select>
-												<option>le gusten</option>
-												<option>Adopte</option>
-												<option>Tolere</option>
-												<option>diseque</option>
-												<option>Odie</option>
-											</select>
-											los animales de compañia y
-											<select class="span2">
-												<option>tenga uno</option>
-												<option>tenga varios</option>
-												<option>no tenga</option>
-											</select>
-											<hr>
-						
-											Con un nivel de estudios
-											<select>
-												<option>módulo profesional</option>
-												<option>universitario</option>
-											</select>
-											y hable
-											<select>
-												<option>Más de un idioma a un nivel alto</option>
-												<option>Más de dos idiomas a un nivel alto</option>
-											</select>.
-											<hr class="thin">
-						
-											Que se dedique a
-											<select>
-												<option>tecnología</option>
-												<option>política</option>
-												<option>estar en el paro</option>
-											</select>
-											con un nivel de ingresos
-											<select class="span2">
-												<option>bajo</option>
-												<option>medio</option>
-												<option>alto</option>
-											</select>.
-
-										</article>
-										<hr>
-										<div class="center">
-											<button class="btn btn-info btn-large">Guardar preferencias</button>
-										</div>
-										<hr class="thin">
-							  </div>
-
-							  <div class="tab-pane" id="dicen">
-							  	<div class="span4">
-										<% (1..12).each do %>
-											<h5>Amable</h5>
-											<input id="points" type="slider" name="" value="3"/>
-										<% end %>
-									</div>
-
-									<div class="span4">
-										<% (1..12).each do %>
-											<h5>Amable</h5>
-											<input id="points" type="slider" name="" value="3"/>
-										<% end %>
-									</div>
-									<div class="clearfix"></div>
-
-									
-									<% (1..3).each do %>
-									<%= render '/shared/user/celes-item' %>
-									<hr>
-									<% end %>
-									<%= render '/shared/user/celes-item' %>
-									<hr class="thin">
-									<div class="center"><a href="/user/celestinos-of-mine#tab_mejora" class="btn btn-info btn-large">¡Consigue más puntos!</a></div>
-							  </div>
-
-				</div>
+					<div class="center">
+							<%= user.submit 'Modificar datos personales', :class => 'btn btn-info' %>
+							<hr class="thin">
+						</div>
+				</fieldset>
 			</div>
-		</div>
-	</div>
+		</section>
+	<% end %>
+
+	<%= form_for @user do |user| %>
+	
+
+	<% end %>
+
+	
 </section>
 
 <script src="/javascripts/bootstrap.min.js"></script>
