@@ -1,4 +1,4 @@
-<%= render 'shared/user/modal_fast-reply' %>
+<%= render partial: 'shared/user/modal_fast-reply', locals: {user: User.all.sample} %>
 <%= render 'shared/user/modal_activity' %>
 <%= render 'shared/user/modal_delete-confirm' %>
 <%= render 'shared/user/modal_delete-celestino' %>
