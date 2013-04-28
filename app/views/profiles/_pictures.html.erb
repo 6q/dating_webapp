@@ -1,21 +1,6 @@
 <div id="user-pictures">
-  <h2>Tus fotos (<%= "#{user.pictures.count}/#{User::PICTURE_LIMIT}" %>)</h2>
-
-  <div class="pic-container">
-    <ul>
-      <% user.pictures.each do |pic| %>
-        <li><%= image_tag pic.image.thumb("80x").url %></li>
-      <% end %>
-      <% user_remaining_pictures(user).times do %>
-        <li>
-          <a href="#upload_pic" class="upload_pic" data-toggle="modal">
-            <span>
-              <i class="icon icon-plus-sign"></i>
-            </span>
-          </a>
-      </li>
-      <% end %>
-    </ul>
+  <div id="picture_gallery">
+    <%= render partial: 'pictures/picture_gallery', locals: {user: user} %>
   </div>
   <%= render partial: 'pictures/upload_dialog' %>
 </div>
