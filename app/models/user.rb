@@ -53,7 +53,11 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation,
     :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status,
     :birth_date, :country, :postal_code, :town, :town_id,
-    :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions, :physical_desc, :physical_style
+    :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions, 
+    :physical_desc, :physical_style, :height, :weight, :complexion, :child, :child_want, 
+    :smoke, :smoke_tolerance, :diet, :alcohol, :drugs, :drug_frequency, :religion, 
+    :religion_opinion, :animal_like, :animal_have, :study_level, :language, :job, :salary, 
+    :description, :hobbies, :party, :music, :cinema
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
 

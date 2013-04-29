@@ -21,5 +21,6 @@ class AddColumnToUser < ActiveRecord::Migration
     add_column :users, :language, :string
     add_column :users, :job, :string
     add_column :users, :salary, :string
+    add_column :users, :description, :string
   end
 end
