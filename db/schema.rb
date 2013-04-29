@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429083952) do
+ActiveRecord::Schema.define(:version => 20130429090234) do
 
   create_table "pictures", :force => true do |t|
     t.string   "image_uid"
@@ -109,6 +109,38 @@ ActiveRecord::Schema.define(:version => 20130429083952) do
     t.text     "party"
     t.text     "music"
     t.text     "cinema"
+    t.string   "lf_gender"
+    t.string   "lf_orientation"
+    t.string   "lf_marital_status"
+    t.string   "lf_age_between"
+    t.string   "lf_age_to"
+    t.string   "lf_city"
+    t.string   "lf_country"
+    t.string   "lf_postal_code"
+    t.string   "lf_physical_style"
+    t.string   "lf_physical_desc"
+    t.integer  "lf_height_between"
+    t.integer  "lf_height_to"
+    t.integer  "lf_weight_between"
+    t.integer  "lf_weight_to"
+    t.string   "lf_complexion"
+    t.string   "lf_child"
+    t.string   "lf_child_want"
+    t.string   "lf_smoke"
+    t.string   "lf_smoke_tolerance"
+    t.string   "lf_diet"
+    t.string   "lf_alcohol"
+    t.string   "lf_drugs"
+    t.string   "lf_drug_frequency"
+    t.string   "lf_religion"
+    t.string   "lf_religion_opinion"
+    t.string   "lf_animal_like"
+    t.string   "lf_animal_have"
+    t.string   "lf_study_level"
+    t.string   "lf_language"
+    t.string   "lf_job"
+    t.string   "lf_salary"
+    t.string   "lf_description"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -37,8 +37,8 @@ es:
   I drink alcohol: 'Bebo alcohol'
   I'm abstemious: 'Soy abstemio'
 
-  take drugs: 'tomo drogas'
-  do not take drugs: 'no tomo drogas'
+  I take drugs: 'tomo drogas'
+  I do not take drugs: 'no tomo drogas'
 
   never: 'nunca'
   sometimes: 'de vez en cuando'
@@ -46,7 +46,7 @@ es:
 
   agnostic: 'agnóstico'
   I'm religious: 'creiente'
-  dedicated practicant: 'me lo tomo muy en serio'
+  dedicated practicant: 'practicante'
   non practicant: 'no practicante'
 
   I Hate: 'Tengo'
@@ -69,6 +69,33 @@ es:
   hight: 'alto'
   medium: 'medio'
   low: 'bajo'
+
+  Having: 'tenga'
+  Not having: 'no tenga'
+  not want to have more: 'no quiera tener más'
+  want to adopt: 'quiera adoptar'
+
+  smoker: 'fume'
+  non-smoker: 'no fume'
+  bothers: 'le moleste'
+  hate the smoke: 'odie fumar'
+
+  strict vegan: 'vegetariano estricto'
+  no control meat eater: 'coma mucha carne'
+
+  alcohol drinker: 'beba alcohol'
+  abstemious: 'sea abstemio'
+
+  take drugs: 'tome drogas'
+  do not take drugs: 'no tome drogas'
+
+  hate: 'odie'
+  love: 'ame'
+  adopte: 'adopte'
+
+  not having: 'no tenga'
+  having one: 'tenga uno'
+  having many: 'tenga varios'
 
   menu:
     user_register: "Registro Gratis"

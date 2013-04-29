@@ -90,4 +90,43 @@ module RegistrationsHelper
   def salary_options
     User::SALARY.map {|e| [t(e), e]}
   end
+
+  def lf_child_options
+    User::LF_CHILD.map {|e| [t(e), e]}
+  end
+
+  def lf_child_want_options
+    User::LF_CHILD_WANT.map {|e| [t(e), e]}
+  end
+
+  def lf_smoke_options
+    User::LF_SMOKE.map {|e| [t(e), e]}
+  end
+
+  def lf_smoke_tolerance_options
+    User::LF_SMOKE_TOLERANCE.map {|e| [t(e), e]}
+  end
+
+  def lf_diet_options
+    User::LF_DIET.map {|e| [t(e), e]}
+  end
+
+  def lf_alcohol_options
+    User::LF_ALCOHOL.map {|e| [t(e), e]}
+  end
+
+  def lf_drugs_options
+    User::LF_DRUGS.map {|e| [t(e), e]}
+  end
+
+  def lf_animal_like_options
+    User::LF_ANIMAL_LIKE.map {|e| [t(e), e]}
+  end
+
+  def lf_animal_have_options
+    User::LF_ANIMAL_HAVE.map {|e| [t(e), e]}
+  end
+
+
+
 end

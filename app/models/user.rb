@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   SMOKE_TOLERANCE = ['does not bother me', 'I hate it']
   DIET = ["I'm vegan", 'I eat a lot of meat']
   ALCOHOL = ['I drink alcohol', "I'm abstemious"]
-  DRUGS = ['take drugs', 'do not take drugs']
+  DRUGS = ['I take drugs', 'I do not take drugs']
   DRUGS_FREQUENCY = ['never', 'sometimes', 'always'] 
   RELIGION = ['agnostic', "I'm religious"]
   RELIGION_OPINION = ['dedicated practicant', 'non practicant']
@@ -25,6 +25,16 @@ class User < ActiveRecord::Base
   LANGUAGE = ['advanced chinese', 'basic russian']
   JOB = ['technology', 'medical', 'politics']
   SALARY = ['hight', 'medium', 'low']
+  LF_CHILD = ['Having', 'Not having']
+  LF_CHILD_WANT = ['not want to have more', 'want to adopt']
+  LF_SMOKE = ['smoker', 'non-smoker']
+  LF_SMOKE_TOLERANCE = ['bothers', 'hate the smoke']
+  LF_DIET = ['strict vegan', 'no control meat eater']
+  LF_ALCOHOL = ['alcohol drinker', 'abstemious']
+  LF_DRUGS = ['take drugs', 'do not take drugs']
+  LF_ANIMAL_LIKE = ['hate', 'love', 'adopte']
+  LF_ANIMAL_HAVE = ['having one', 'not having', 'having many']
+
 
   PICTURE_LIMIT = 12
 
@@ -57,7 +67,12 @@ class User < ActiveRecord::Base
     :physical_desc, :physical_style, :height, :weight, :complexion, :child, :child_want, 
     :smoke, :smoke_tolerance, :diet, :alcohol, :drugs, :drug_frequency, :religion, 
     :religion_opinion, :animal_like, :animal_have, :study_level, :language, :job, :salary, 
-    :description, :hobbies, :party, :music, :cinema
+    :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation, 
+    :lf_marital_status, :lf_age_between, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
+    :lf_physical_desc, :lf_physical_style, :lf_height_between, :lf_weight_to, :lf_weight_between,
+    :lf_complexion, :lf_child, :lf_child_want, :lf_smoke, :lf_smoke_tolerance, :lf_diet, 
+    :lf_alcohol, :lf_drugs, :lf_drug_frequency, :lf_religion, :lf_religion_opinion, 
+    :lf_animal_like, :lf_animal_have, :lf_study_level, :lf_language, :lf_job, :lf_salary
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
 
