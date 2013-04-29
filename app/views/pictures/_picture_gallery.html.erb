@@ -3,10 +3,19 @@
 <div class="pic-container">
   <ul>
     <% user.pictures.each do |pic| %>
-      <li><%= image_tag pic.image.thumb("80x").url %></li>
+      <li>
+        <div class="overlay">
+          <%= link_to image_tag('cross.png'), pic, method: :delete %>
+        </div>
+        <span>
+          <%= link_to pic do%>
+            <%= image_tag pic.image.thumb("80x").url %>
+          <% end %>
+        </span>
+      </li>
     <% end %>
     <% user_remaining_pictures(user).times do %>
-      <li>
+      <li class="empty">
         <a href="#upload_pic" class="upload_pic" data-toggle="modal">
           <span>
             <i class="icon icon-plus-sign"></i>

@@ -111,4 +111,8 @@ class User < ActiveRecord::Base
     self.pictures.where("main is true").limit(1).first || self.pictures.limit(1).first
   end
 
+  def is_over_picture_limit?
+    self.pictures.count >= PICTURE_LIMIT
+  end
+
 end
