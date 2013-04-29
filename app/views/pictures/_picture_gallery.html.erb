@@ -5,7 +5,7 @@
     <% user.pictures.each do |pic| %>
       <li>
         <div class="overlay">
-          <%= link_to image_tag('cross.png'), pic, method: :delete %>
+          <%= link_to image_tag('cross.png'), pic, method: :delete, confirm: _("Estas de seguro que quieres borrar la foto") %>
         </div>
         <span>
           <%= link_to pic do%>
