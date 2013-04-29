@@ -6,7 +6,7 @@
 //= require jquery.fileupload
 
 $(document).ready(function(){
-  $('a.upload_pic').on('click', function (event) {
+  $(document).on('click', 'a.upload_pic', function (event) {
     $("#upload_picture_form").show();
   });
   $("#upload_picture_files").fileupload({
