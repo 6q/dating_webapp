@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  layout 'logged_in'
   before_filter :find_picture, only: [:show, :destroy]
 
   def create
