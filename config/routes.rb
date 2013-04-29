@@ -14,7 +14,7 @@ Cellove::Application.routes.draw do
 
   resource :profile, only: [:show, :update]
 
-  resources :pictures, only: [:create, :destroy, :show]
+  resources :pictures, only: [:create, :destroy, :show, :update]
 
   resources :users do
     resource :chat, only: :show

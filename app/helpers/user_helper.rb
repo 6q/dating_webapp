@@ -1,5 +1,5 @@
 module UserHelper
-  def profile_pic(user, options = {width: 80, height: 80})
+  def profile_pic(user, options = {width: 210})
     #TODO: Implement
     pp = user.profile_picture
     if user.profile_picture
