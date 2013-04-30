@@ -77,31 +77,6 @@ section#related-list{
   margin-top:20px;
 }
 
-.user-list {
-
-  /*
-  .user-card {
-    .actions li {
-      display: block;
-      width: 30px;
-      height: 30px;
-      float: left;
-      margin: 5px!important;
-    }
-
-    header {
-      border:none;
-      h1 {
-        font-size:.8em;
-        color:#000;
-      }
-    }
-
-  } 
-   */ 
-}
-
-
 section.user-home{
 
   @extend section.list;

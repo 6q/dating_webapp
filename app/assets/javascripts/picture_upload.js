@@ -22,18 +22,24 @@ $(document).ready(function () {
       $.post(data.result.update_path, {_method: "PUT", crop_data: cropData}, function (data) {
         modalObject.modal("hide");
         $("#picture_gallery").html(data.gallery_template);
+        bindUploads(); //rebind uploads
       });
     })
   }
 
-  $(document).on('click', 'a.upload_pic', function (event) {
-    $("#upload_picture_form").show();
-  });
-  $("#upload_picture_files").fileupload({
-    dataType: 'json',
-    acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-    done: showModalAndCrop,
-    fail: function(event, data) {
-    }
-  });
+  function bindUploads() {
+    $(".upload_pic_input").fileupload({
+      dataType: 'json',
+      url: '/pictures',
+      forceIframeTransport: true,
+      acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+      done: showModalAndCrop,
+      change: function (e, data) {
+        console.log(arguments);
+      }
+    });
+  }
+
+  bindUploads();
+
 });
