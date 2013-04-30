@@ -31,8 +31,7 @@ $(document).ready(function () {
     $(".upload_pic_input").fileupload({
       dataType: 'json',
       url: '/pictures',
-      forceIframeTransport: true,
-      acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+      acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
       done: showModalAndCrop,
       change: function (e, data) {
         console.log(arguments);
