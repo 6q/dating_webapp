@@ -31,6 +31,10 @@ $(document).ready(function () {
     $(".upload_pic_input").fileupload({
       dataType: 'json',
       url: '/pictures',
+      formData : [{
+        name : 'authenticity_token',
+        value : $('meta[name="csrf-token"]').attr('content')
+      }],
       acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
       done: showModalAndCrop,
       change: function (e, data) {
