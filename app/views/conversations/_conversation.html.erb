@@ -1,4 +1,4 @@
-<%= div_for(conversation, :class =>"#{ 'unread ' if conversation.is_unread?(@actor) }msg-item") do %>
+<%= div_for(conversation, :class =>"#{ 'unread ' if conversation.is_unread?(current_user) }msg-item") do %>
   <div class="clearfix">
     <div class="pic"><a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
       <div class="info">

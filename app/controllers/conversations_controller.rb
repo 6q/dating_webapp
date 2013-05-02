@@ -20,6 +20,10 @@ class ConversationsController < ApplicationController
   end
 
   def show
+    @conversations_inbox = @mailbox.inbox.page(params[:page]).per(9)
+    @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(9)
+    @conversations_trash = @mailbox.trash.page(params[:page]).per(9)
+    
     if @box.eql? 'trash'
       @receipts = @mailbox.receipts_for(@conversation).trash
     else
@@ -100,7 +104,7 @@ class ConversationsController < ApplicationController
   def check_current_subject_in_conversation
     @conversation = Conversation.find_by_id(params[:id])
 
-    if @conversation.nil? or !@conversation.is_participant?(@actor)
+    if @conversation.nil? or !@conversation.is_participant?(current_user)
       redirect_to conversations_path(:box => @box)
     return
     end

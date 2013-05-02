@@ -1,0 +1,67 @@
+<section class="messages">
+  <div class="boxed headless">
+    <div class="boxed-inner">
+      <header>
+        <h1 class="span3">Mensajes y actividades</h1>
+        <div class="pull-right">Estas usando el 35% de tu buzón. ¡<%= link_to "Ampliar mi capacidad", "/user/pay" %>!</div>
+      </header>
+    </div>
+  </div>
+    
+  <hr class="thin">
+
+  <div class="tabs">
+    <ul class="nav nav-tabs">
+        <li><a href="#inbox">Recibidos<%= " (#{@conversations_inbox.count})" if @conversations_inbox.count > 0 %></a></li>
+        <li><a href="#sentbox">Enviados<%= " (#{@conversations_sentbox.count})" if @conversations_sentbox.count > 0 %></a></li>
+        <li><a href="#trash">Eliminados<%= " (#{@conversations_trash.count})" if @conversations_trash.count > 0 %></a></li>
+    </ul>
+    <%= render '/shared/user/sorting' %>
+  </div>
+  
+  <div class="boxed">
+    <div class="boxed-inner">
+
+      <div class="msg-item">
+        <div class="clearfix">
+          <div class="conversation">
+            <% @receipts.each do |receipt| %>
+              <%= render partial: 'conversation_full', locals: { receipt: receipt } %>
+            <% end %>
+              <% if rand(1...50) > 25 %>
+
+              <div class="activity">
+                <i class="type">
+                  Tomar una cerveza
+                </i>
+                <p><strong>Judith</strong> the ha propuesto...</p>
+                <p>Bueno qué, ¿nos vamos de cañas picarón?</p>
+                <div class="actions right">
+                  <a class="btn btn-danger" href="#proposal-reject" data-toggle="modal"><i class="icon icon-remove icon-white"></i> Rechazar</a>
+                  <a class="btn btn-success" href="#proposal-accept" data-toggle="modal"><i class="icon icon-ok icon-white"></i> Aceptar</a>
+                </div>
+              </div>
+
+              <% end %>
+
+              <div class="msg-reply-dialog clearfix">
+
+                <div class="pic">
+                  <a href="/user/user-profile"><img src="/users/placeholder-user.jpg" width="60" height ="60"></a>
+                </div>
+
+                <div class="msg-actions">
+                  <a href="#" class="action-reply">Responder</a> - <%= link_to 'Proponer actividad', '#activity-proposal', 'data-toggle' => 'modal' %></a> - <%= link_to 'Bloquear', '#user-block', 'data-toggle' => 'modal' %>
+                  <%= link_to 'Eliminar hilo', '#delete-confirm', 'data-toggle' => 'modal', :class => 'pull-right' %>
+                </div>
+
+                <div class="reply-form">                  
+                  <textarea>Por supuesto. Yo por ti disecaba hasta la luna, nena.</textarea>
+                  <button class="btn btn-info pull-right">Responder</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

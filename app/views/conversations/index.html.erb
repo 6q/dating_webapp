@@ -42,10 +42,10 @@
     </div>
   </div>
   <script>
-    $(document).on('click', '#sentbox #paginator a', function() {
-      $.get(this.href, function(data) {
+    $(document).on('click', '#sentbox .pagination a', function(e) {
+      $.get(e.target.href, function(data) {
         $('#sentbox').html(data);
       });
-      return false;
+      return false; 
     });
   </script>
