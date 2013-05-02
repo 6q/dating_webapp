@@ -5,8 +5,10 @@
       <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>
-      <small><%= user.last_sign_in_at ? time_ago_in_words(user.last_sign_in_at) : "" %></small>
-      <h1><%= link_to user.name, user %>
+      <% if user.last_sign_in_at %>
+        <small><%= time_ago_in_words(user.last_sign_in_at) %></small>
+      <% end %>
+      <h1><%= link_to user.name, user %></h1>
       <br>
       <span><%= truncate(user.town, length: 20) %></span>
       <br><%= "#{user.age} #{t("datetime.prompts.year")}" %>
@@ -23,8 +25,8 @@
 
       <div class="interactions">
         <div class="punctuations">
-          <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
-          <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
+          <strong><%= _("Tu dices:") %></strong> <span class="stars stars-5">****</span>
+          <strong><%= _("Ha dicho:") %></strong> <span class="stars stars-3">****</span>
         </div>
         <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
       </div>
