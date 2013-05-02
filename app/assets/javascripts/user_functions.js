@@ -5,6 +5,17 @@ $(document).ready(function(){
 
   // search sliders
 
+  $( "#points-slider" ).slider({
+    range: "max",
+    min: 1,
+    max: 5,
+    value: 3,
+    slide: function( event, ui ) {
+      $( "#points" ).val( ui.value );
+    }
+  });
+  $( "#points" ).val( $( "#points-slider" ).slider( "value" ) );
+
   $("#years").slider({ 
       from: 18, 
       to: 80, 
@@ -36,7 +47,7 @@ $(document).ready(function(){
 
   jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;cm' });
   jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
-  jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
+  //jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
 
   // modal calls
 

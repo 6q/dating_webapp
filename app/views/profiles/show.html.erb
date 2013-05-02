@@ -206,9 +206,10 @@
 								&nbsp;
 							</div>
 							<div class="span3 offset1">
-								<% (1..12).each do %>
+								<% 12.times do %>
 									<h5>Amable</h5>
-									<input id="points" type="slider" name="" value="3"/>
+									<input type="text" id="points" />
+									<div id="points-slider"></div>
 								<% end %>
 							</div>
 							<div class="span1">
@@ -219,6 +220,8 @@
 								<% (1..12).each do %>
 									<h5>Amable</h5>
 									<input id="points" type="slider" name="" value="3"/>
+									<div id="points-slider"></div>
+									<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 								<% end %>
 							</div>
 						</article>
@@ -361,6 +364,32 @@
 						<% end %>
 						<hr class="thin">
 				  </div>
+
+				  <div class="tab-pane" id="dicen">
+				  	<div class="span4">
+							<% (1..12).each do %>
+								<h5>Amable</h5>
+								<input id="points" type="slider" name="" value="3"/>
+							<% end %>
+						</div>
+
+						<div class="span4">
+							<% (1..12).each do %>
+								<h5>Amable</h5>
+								<input id="points" type="slider" name="" value="3"/>
+							<% end %>
+						</div>
+						<div class="clearfix"></div>
+
+									
+						<% (1..3).each do %>
+						<%= render '/shared/user/celes-item' %>
+						<hr>
+						<% end %>
+						<%= render '/shared/user/celes-item' %>
+						<hr class="thin">
+						<div class="center"><a href="/user/celestinos-of-mine#tab_mejora" class="btn btn-info btn-large">¡Consigue más puntos!</a></div>
+					</div>
 
 				</div>
 			</div>
