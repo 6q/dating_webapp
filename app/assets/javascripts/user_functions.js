@@ -1,54 +1,29 @@
 //= require jquery.slider.min
 //= require jquery.prettyPhoto
 
-$(document).ready(function(){
+// create slider 
 
-  // sliders
-  $( "#points-slider" ).slider({
+function createSlider(id, min, max, value){
+  $(id).slider({
     range: "max",
-    min: 1,
-    max: 5,
-    value: 3,
+    min: min,
+    max: max,
+    value: value,
     slide: function( event, ui ) {
       //$( "#points" ).val( ui.value );
       $('.ui-slider-handle').html('<span>'+ui.value+'</span>');
     }
   });
-  $('.ui-slider-handle').html('<span>'+$( "#points-slider" ).slider( "value" )+'</span>');
-  
+  $('.ui-slider-handle').html('<span>'+$(id).slider( "value" )+'</span>');
+  $(id).parent().find('h5').after('<div class="pull-left legend">'+min+'</div><div class="pull-right legend">'+max+'</div><div class="clearfix"></div>');
+};
 
-  $("#years").slider({ 
-      from: 18, 
-      to: 80, 
-      step: 1, 
-      smooth: true, 
-      round: 0, 
-      dimension: "&nbsp;$", 
-      skin: "plastic", 
-      dimension: '&nbsp;años',
-      scale: ['|','|','|','|','|','|','|','|'],
-      onstatechange: function(){
-        // $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
-      }
-    });
 
-  $("#kms").slider({ 
-    from: 0, 
-    to: 500, 
-    step: 10, 
-    round: 1, 
-    skin: "plastic", 
-    dimension: '&nbsp;kms',
-    scale: ['|','|','|','|','|','|','|','|'],
-    onstatechange: function(){
-      $('#kms').parent().parent().find('label span').text($("#kms").val().split(';')[0] + 'kms');
-      //console.log($("#kms").val().split(';')[0]);
-    }
-  });
 
-  jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;cm' });
-  jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
-  //jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
+
+// document ready
+
+$(document).ready(function(){
 
   // modal calls
 
