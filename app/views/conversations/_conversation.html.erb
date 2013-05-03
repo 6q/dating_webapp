@@ -4,7 +4,7 @@
       <div class="info">
         <p class="msg-data"><%= time_ago_in_words(conversation.updated_at) %> - <%= link_to conversation.last_sender.name, conversation.last_sender %></p>
 
-        <p class="msg"><%= link_to(truncate(conversation.subject, :length => 55), conversation_path(conversation.id, :box => @box, :page => params[:page])) %></p>
+        <p class="msg"><%= link_to(truncate(conversation.last_message.body, :length => 55), conversation_path(conversation.id, :box => @box, :page => params[:page])) %></p>
 
       </div>
     <% unless @box.eql?'trash' %>
