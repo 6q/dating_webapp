@@ -1,4 +1,4 @@
-//= require jquery.slider.min
+//= require jquery.slider
 //= require jquery.prettyPhoto
 
 
