@@ -9,15 +9,10 @@
       </div>
     <% unless @box.eql?'trash' %>
       <div class="reply">
-        <%= link_to 'Eliminar', conversation_path(conversation, :location => @box,
-                                                    :box => @box,
-                                                    :page => params[:page]),
-                                                    :confirm => t('mailboxer.delete_confirm',
-                                                    :object => conversation.subject),
-                                                    :method => :delete,
-                                                    :remote => true, :class => 'delete' %>
+        <%= link_to _('Eliminar'), "#delete-confirm-#{conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'delete' %>
         <%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
       </div>
     <% end %>
   </div>
 <% end %>
+<%= render partial: 'modal_delete', locals: { conversation: conversation } %>
