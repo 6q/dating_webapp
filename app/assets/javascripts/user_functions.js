@@ -3,19 +3,18 @@
 
 $(document).ready(function(){
 
-  // sliders
+  // search sliders
+
   $( "#points-slider" ).slider({
     range: "max",
     min: 1,
     max: 5,
     value: 3,
     slide: function( event, ui ) {
-      //$( "#points" ).val( ui.value );
-      $('.ui-slider-handle').html('<span>'+ui.value+'</span>');
+      $( "#points" ).val( ui.value );
     }
   });
-  $('.ui-slider-handle').html('<span>'+$( "#points-slider" ).slider( "value" )+'</span>');
-  
+  $( "#points" ).val( $( "#points-slider" ).slider( "value" ) );
 
   $("#years").slider({ 
       from: 18, 
