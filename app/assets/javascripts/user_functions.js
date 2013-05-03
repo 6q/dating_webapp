@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   // search sliders
 
-  $( "#points-slider" ).slider({
+  $( "#points-slider" ).jslider({
     range: "max",
     min: 1,
     max: 5,
@@ -14,11 +14,11 @@ $(document).ready(function(){
       $( "#points" ).val( ui.value );
     }
   });
-  $( "#points" ).val( $( "#points-slider" ).slider( "value" ) );
+  $( "#points" ).val( $( "#points-slider" ).jslider( "value" ) );
 
-  $("#years").slider({ 
-      from: 18, 
-      to: 80, 
+  $("#years").jslider({ 
+      from: 18,
+      to: 99,
       step: 1, 
       smooth: true, 
       round: 0, 
@@ -31,7 +31,7 @@ $(document).ready(function(){
       }
     });
 
-  $("#kms").slider({ 
+  $("#kms").jslider({ 
     from: 0, 
     to: 500, 
     step: 10, 
@@ -45,8 +45,8 @@ $(document).ready(function(){
     }
   });
 
-  jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;cm' });
-  jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
+  jQuery("#altura").jslider({ from: 160, to: 220, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;cm' });
+  jQuery("#afinidad").jslider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
   //jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
 
   // modal calls
@@ -89,7 +89,7 @@ $(document).ready(function(){
   });
 
 
-$('.header-switcher .leaf a').click(function(e){
+  $('.header-switcher .leaf a').click(function(e){
     e.preventDefault();
     $(this).parent().parent().find('.leaf').toggle();
   });
