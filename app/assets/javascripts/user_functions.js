@@ -1,7 +1,6 @@
 //= require jquery.slider
 //= require jquery.prettyPhoto
 
-
 // create slider 
 
 function createSlider(id, min, max, value){
@@ -16,7 +15,7 @@ function createSlider(id, min, max, value){
     }
   });
   $('.ui-slider-handle').html('<span>'+$(id).slider( "value" )+'</span>');
-  $(id).before('<div class="pull-left legend">'+min+'</div><div class="pull-right legend">'+max+'</div><div class="clearfix"></div>');
+  $(id).parent().find('h5').after('<div class="pull-left legend">'+min+'</div><div class="pull-right legend">'+max+'</div><div class="clearfix"></div>');
 };
 
 
