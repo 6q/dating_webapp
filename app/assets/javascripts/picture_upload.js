@@ -1,7 +1,7 @@
 //= require jquery
 //= require jquery.iframe-transport
-//= require jquery-ui
 //= require jquery.Jcrop
+//= require jquery.ui.widget.js
 //= require jquery.form
 //= require jquery.fileupload
 
