@@ -5,10 +5,11 @@
     <h3>Proponer una actividad</h3>
     <div class="user-detail clearfix">
       <div class="pic">
-        <a href="/user/profile/"><img src="/users/placeholder2.jpg" width="60" height ="60"></a>
+        <%= link_to profile_pic(user, width: 60), user %>
       </div>
-      <div class="data"><small>8/12/2012 - 22:35h</small><%= link_to "Judit", "/user/profile/" %>, 21 años - Barcelona</div>
-
+      <div class="data"><small><%= user.last_sign_in_at %></small>
+        <%= link_to user.name, user %>, <%= "#{user.age} #{t("datetime.prompts.year")} - #{truncate(user.town, length: 20)}" %>
+      </div>
     </div> 
   </div>
   <div class="modal-body">
