@@ -1,6 +1,5 @@
 module UserHelper
-  def profile_pic(user, options = {width: 210})
-    #TODO: Implement
+  def profile_pic(user = current_user, options = {width: 210})
     pp = user.profile_picture
     if user.profile_picture
       size = "#{options[:width]}x#{options[:height]}"
@@ -11,6 +10,7 @@ module UserHelper
   end
 
   def online?(user)
+    #TODO: Implement
     rand > 0.5000
   end
 
