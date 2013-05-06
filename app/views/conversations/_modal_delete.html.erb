@@ -5,7 +5,7 @@
   </div>
   <div class="modal-body">
     <div class="center">
-      <% user = conversation.participants.reject{|i| i == current_user}.first %>
+      <% user = conversation.messages.map{ |m| m.sender }.uniq.reject{|i| i == current_user}.first %>
       <p>¿Seguro que deseas eliminar el mensaje de <strong><%= link_to user.name, user %></strong>?</p>
     </div>
   </div>

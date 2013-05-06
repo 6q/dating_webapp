@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :get_mailbox, :get_box, :get_actor
+  before_filter :get_mailbox, :get_box
 
   def index
     redirect_to conversations_path(:box => @box)
@@ -22,9 +22,8 @@ class MessagesController < ApplicationController
   # GET /messages/new.xml
   def new
     if params[:receiver].present?
-      @recipient = Actor.find_by_slug(params[:receiver])
+      @recipient = User.find(params[:receiver])
       return if @recipient.nil?
-      @recipient = nil if Actor.normalize(@recipient)==Actor.normalize(current_subject)
     end
   end
 
@@ -36,18 +35,12 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.xml
   def create
-    @recipients = 
-      if params[:_recipients].present?
-        @recipients = params[:_recipients].split(',').map{ |r| Actor.find(r) }
-      else
-        []
-      end
+    @recipient = User.find(params[:recipient]) if params[:recipient].present? 
 
-    @receipt = @actor.send_message(@recipients, params[:body], params[:subject])
+    @receipt = current_user.send_message(@recipient, params[:body], params[:subject])
     if (@receipt.errors.blank?)
       @conversation = @receipt.conversation
-      flash[:success]= t('mailboxer.sent')
-      redirect_to conversation_path(@conversation, :box => :sentbox)
+      flash[:success] = _('Mensaje enviado')
     else
       render :action => :new
     end
@@ -68,11 +61,7 @@ class MessagesController < ApplicationController
   private
 
   def get_mailbox
-    @mailbox = current_subject.mailbox
-  end
-
-  def get_actor
-    @actor = Actor.normalize(current_subject)
+    @mailbox = current_user.mailbox
   end
 
   def get_box

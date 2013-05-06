@@ -46,18 +46,18 @@
 
               <div class="msg-reply-dialog clearfix">
 
-                <div class="pic">
-                  <a href="/user/user-profile"><img src="/users/placeholder-user.jpg" width="60" height ="60"></a>
-                </div>
+                <div class="pic"><%= link_to image_tag('placeholder2.jpg', size: '60x60'), current_user %></div>
 
                 <div class="msg-actions">
-                  <a href="#" class="action-reply">Responder</a> - <%= link_to 'Proponer actividad', '#activity-proposal', 'data-toggle' => 'modal' %></a> - <%= link_to 'Bloquear', '#user-block', 'data-toggle' => 'modal' %>
-                  <%= link_to 'Eliminar hilo', '#delete-confirm', 'data-toggle' => 'modal', :class => 'pull-right' %>
+                  <%= link_to _('Responder'), '#', class: 'action-reply' %> - <%= link_to 'Proponer actividad', '#activity-proposal', 'data-toggle' => 'modal' %></a> - <%= link_to 'Bloquear', '#user-block', 'data-toggle' => 'modal' %>
+                  <%= link_to 'Eliminar hilo', "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
                 </div>
 
-                <div class="reply-form">                  
-                  <textarea>Por supuesto. Yo por ti disecaba hasta la luna, nena.</textarea>
-                  <button class="btn btn-info pull-right">Responder</button>
+                <div class="reply-form">
+                  <%= simple_form_for @conversation.messages.new, url: conversation_path(@conversation), method: :put do |f| %>
+                    <%= f.input_field :body %>
+                    <%= f.submit _('Responder'), class: 'btn btn-info pull-right' %>
+                  <% end %>
                 </div>
               </div>
           </div>

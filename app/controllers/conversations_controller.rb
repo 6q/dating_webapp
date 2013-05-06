@@ -47,13 +47,11 @@ class ConversationsController < ApplicationController
 
   def update
     if params[:untrash].present?
-    @conversation.untrash(@actor)
+      @conversation.untrash(current_user)
     end
 
-    if params[:reply_all].present?
-      last_receipt = @mailbox.receipts_for(@conversation).last
-      @receipt = @actor.reply_to_all(last_receipt, params[:body])
-    end
+    last_receipt = @mailbox.receipts_for(@conversation).last
+    @receipt = current_user.reply_to_sender(last_receipt, params[:message][:body])
 
     if @box.eql? 'trash'
       @receipts = @mailbox.receipts_for(@conversation).trash
@@ -62,7 +60,6 @@ class ConversationsController < ApplicationController
     end
     redirect_to :action => :show
     @receipts.mark_as_read
-
   end
 
   def destroy
