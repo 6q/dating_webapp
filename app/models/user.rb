@@ -44,6 +44,10 @@ class User < ActiveRecord::Base
 
   #relations
   has_many :pictures, as: :attachable
+  has_many :characteristics
+  has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
+
+  accepts_nested_attributes_for :characteristics
 
   rolify
   # Include default devise modules. Others available are:
@@ -72,7 +76,8 @@ class User < ActiveRecord::Base
     :lf_physical_desc, :lf_physical_style, :lf_height_between, :lf_weight_to, :lf_weight_between,
     :lf_complexion, :lf_child, :lf_child_want, :lf_smoke, :lf_smoke_tolerance, :lf_diet, 
     :lf_alcohol, :lf_drugs, :lf_drug_frequency, :lf_religion, :lf_religion_opinion, 
-    :lf_animal_like, :lf_animal_have, :lf_study_level, :lf_language, :lf_job, :lf_salary
+    :lf_animal_like, :lf_animal_have, :lf_study_level, :lf_language, :lf_job, :lf_salary,
+    :characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
 
@@ -116,3 +121,4 @@ class User < ActiveRecord::Base
   end
 
 end
+

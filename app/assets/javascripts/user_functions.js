@@ -13,6 +13,7 @@ function createSlider(id, min, max, value){
     slide: function( event, ui ) {
       //$( "#points" ).val( ui.value );
       $('.ui-slider-handle').html('<span>'+ui.value+'</span>');
+      $(id).parent().find('input').val(ui.value);
     }
   });
   $('.ui-slider-handle').html('<span>'+$(id).slider( "value" )+'</span>');

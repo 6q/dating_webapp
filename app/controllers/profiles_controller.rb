@@ -13,4 +13,6 @@ class ProfilesController < ApplicationController
       render 'show', :alert => "Unable to update user."
     end
   end
+
+
 end

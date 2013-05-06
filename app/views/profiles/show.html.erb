@@ -209,25 +209,92 @@
 							<div class="span1">
 								&nbsp;
 							</div>
-							<div class="span3 offset1 slider-ui">
-								<% 1.times do %>
-									<h5>Amable</h5>
-									<div id="points-slider"></div>
-								<% end %>
-							</div>
-							<script>createSlider('#points-slider', 1, 5, 2)</script>
-							<div class="span1">
-								&nbsp;
-							</div>
 
-							<div class="span3">
-								<% (1..12).each do %>
+								
+							<%= @control %>
+							<%= user.fields_for :characteristics do |my| %>
+								
+								<div class="span3 offset1 slider-ui pull-left">
+									<h5>Romántico</h5>
+									<%= my.text_field :romantic %>
+									<!--<div id="romantic"></div>
+									<script>createSlider('#romantic', 1, 5, <%= @user.my_characteristics.romantic %>)</script>-->
+
+									<h5>Aventurero</h5>
+									<%= my.text_field :adventurer %>
+
 									<h5>Amable</h5>
-									<input id="points" type="slider" name="" value="3"/>
-									<div id="points-slider"></div>
-									<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-								<% end %>
-							</div>
+									<%= my.text_field :friendly %>
+
+									<h5>Familiar</h5>
+									<%= my.text_field :familiar %>
+
+									<h5>Trabajadro</h5>
+									<%= my.text_field :hardWorking %>
+
+									<h5>Extrovertido</h5>
+									<%= my.text_field :extroverted %>
+
+									<h5>Generoso</h5>
+									<%= my.text_field :generous %>
+
+									<h5>Reservado</h5>
+									<%= my.text_field :reserved %>
+
+									<h5>Sociable</h5>
+									<%= my.text_field :sociable %>
+
+									<h5>Tranquilo</h5>
+									<%= my.text_field :quiet %>
+
+									<h5>Exigente</h5>
+									<%= my.text_field :demanding %>
+
+									<h5>Orgulloso</h5>
+									<%= my.text_field :prideful %>
+								</div>
+								
+
+								<div class="span1">
+									&nbsp;
+								</div>
+	
+								<div class="span3">
+									<h5>Solitario</h5>
+									<%= my.text_field :solitary %>
+	
+									<h5>Tenaz</h5>
+									<%= my.text_field :tenacious %>
+	
+									<h5>Atento</h5>
+									<%= my.text_field :attentive %>
+	
+									<h5>Bienhumorado</h5>
+									<%= my.text_field :goodHumored %>
+	
+									<h5>Espontáneo</h5>
+									<%= my.text_field :spontaneous %>
+	
+									<h5>Inquieto</h5>
+									<%= my.text_field :restless %>
+	
+									<h5>Sensible</h5>
+									<%= my.text_field :sensitive %>
+	
+									<h5>Tímido</h5>
+									<%= my.text_field :shy %>
+	
+									<h5>Posesivo</h5>
+									<%= my.text_field :possessive %>
+	
+									<h5>Celoso</h5>
+									<%= my.text_field :jealous %>
+	
+									<h5>Fiel</h5>
+									<%= my.text_field :faithful %>
+	
+								</div>
+							<% end %>
 						</article>
 						<hr>
 						<div class="center">
