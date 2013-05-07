@@ -1,0 +1,46 @@
+<!-- Modal -->
+<div id="activity-proposal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Proponer una actividad</h3>
+    <div class="user-detail clearfix">
+      <div class="pic"><%= link_to image_tag('placeholder2.jpg', size: '60x60'), user_path(sender(conversation)) %></div>
+      <div class="data"><%= link_to sender(conversation).name, sender(conversation) %></div>
+
+    </div> 
+  </div>
+  <%= simple_form_for Activity.new, url: activities_path do |f| %>
+    <div class="modal-body">
+
+      <p>Selecciona una propuesta para compartir...</p>
+      <br>
+      <ul>
+        <li class="coffee"><%= link_to _('Tomar un café'), '#' %></li>
+        <li class="movie"><%= link_to _('Ir al cine / espectáculo'), '#' %></li>
+        <li class="drink"><%= link_to _('Salir de copas'), '#' %></li>
+        <li class="eat"><%= link_to _('Ir a comer'), '#' %></li>
+        <li class="sport"><%= link_to _('Actividad deportiva'), '#' %></li>
+        <li class="culture"><%= link_to _('Actividad cultural'), '#' %></li>
+        <li class="heart"><%= link_to _('Conocerte de verdad'), '#' %></li>
+      </ul>
+      <%= f.input :activity_type %>
+      <div class="reply">
+        <textarea>OLA KE ASE BEBE SERVESA O KE ASE</textarea>
+      </div>
+      <br>
+      <div id="activity-date" class="form-inline">
+        <div class="control-group">
+          <label>¿Cuando?</label> <input type="text" class="input-small" placeholder="dd/mm/aaaa">
+          <label class="checkbox">
+            <input type="checkbox"> No quiero especificar cuando
+          </label>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <%= link_to 'Cancelar', '#fast-reply', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+      <button class="btn btn-info" data-dismiss="modal">Proponer</button>
+    </div>
+  <% end %>
+</div>

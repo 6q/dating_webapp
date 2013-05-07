@@ -1,4 +1,12 @@
 Cellove::Application.routes.draw do
+  get "activities/new"
+
+  get "activities/create"
+
+  get "activities/accept"
+
+  get "activities/reject"
+
   authenticated :user do
     root :to => 'dashboard#show'
   end
@@ -38,4 +46,5 @@ Cellove::Application.routes.draw do
 
   resources :messages
   resources :conversations
+  resources :activities
 end

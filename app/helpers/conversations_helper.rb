@@ -11,4 +11,8 @@ module ConversationsHelper
     options = {:length => NAME_MAX_LENGTH, :separator => ' '}.merge options
     h truncate(name, options)
   end
+  
+  def sender(conversation)
+    user = conversation.messages.map{ |m| m.sender }.uniq.reject{|i| i == current_user}.first
+  end
 end
