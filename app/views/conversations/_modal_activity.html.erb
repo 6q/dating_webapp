@@ -3,18 +3,14 @@
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3>Proponer una actividad</h3>
-    <div class="user-detail clearfix">
-      <div class="pic"><%= link_to image_tag('placeholder2.jpg', size: '60x60'), user_path(sender(conversation)) %></div>
-      <div class="data"><%= link_to sender(conversation).name, sender(conversation) %></div>
-
-    </div> 
+    <%= user_detail(conversation) %>
   </div>
-  <%= simple_form_for Activity.new, url: activities_path do |f| %>
+  <%= simple_form_for Activity.new, url: conversation_activities_path(conversation) do |f| %>
     <div class="modal-body">
 
       <p>Selecciona una propuesta para compartir...</p>
       <br>
-      <ul>
+      <ul id="activity-types">
         <li class="coffee"><%= link_to _('Tomar un café'), '#' %></li>
         <li class="movie"><%= link_to _('Ir al cine / espectáculo'), '#' %></li>
         <li class="drink"><%= link_to _('Salir de copas'), '#' %></li>
@@ -25,12 +21,12 @@
       </ul>
       <%= f.input :activity_type %>
       <div class="reply">
-        <textarea>OLA KE ASE BEBE SERVESA O KE ASE</textarea>
+        <%= f.input_field :body %>
       </div>
       <br>
       <div id="activity-date" class="form-inline">
         <div class="control-group">
-          <label>¿Cuando?</label> <input type="text" class="input-small" placeholder="dd/mm/aaaa">
+          <label><%= _('¿Cuando?') %></label> <%= f.input_field :date, as: :string, placeholder: 'dd/mm/aaaa', class: 'input-small' %>
           <label class="checkbox">
             <input type="checkbox"> No quiero especificar cuando
           </label>
@@ -40,7 +36,7 @@
     </div>
     <div class="modal-footer">
       <%= link_to 'Cancelar', '#fast-reply', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
-      <button class="btn btn-info" data-dismiss="modal">Proponer</button>
+      <%= f.submit _('Proponer'), class: 'btn btn-info' %>
     </div>
   <% end %>
 </div>

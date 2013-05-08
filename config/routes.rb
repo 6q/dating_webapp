@@ -1,12 +1,4 @@
 Cellove::Application.routes.draw do
-  get "activities/new"
-
-  get "activities/create"
-
-  get "activities/accept"
-
-  get "activities/reject"
-
   authenticated :user do
     root :to => 'dashboard#show'
   end
@@ -45,6 +37,13 @@ Cellove::Application.routes.draw do
   get 'anuncio-tv/:id' => 'flat_pages#tv_spot', as: :tv_spot
 
   resources :messages
-  resources :conversations
-  resources :activities
+  resources :conversations do 
+    resources :activities
+  end
+
+  resources :activities do
+    post 'accept'
+    post 'reject'
+  end
+
 end

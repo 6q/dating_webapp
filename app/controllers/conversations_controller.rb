@@ -42,7 +42,8 @@ class ConversationsController < ApplicationController
   end
 
   def create
-
+    @conversation.new_activity(params[:activity])
+    #binding.pry
   end
 
   def update

@@ -1,0 +1,35 @@
+<!-- Modal -->
+<div id="proposal-accept" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <%= user_detail(activity.conversation) %>
+  </div>
+  <div class="modal-body">
+    <p>¡Estás a un paso de aceptar la propuesta de <%= sender(activity.conversation).name %> para <strong><%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
+    <div class="reply">
+      <textarea>OLA GUAPA KE ASE</textarea>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <%= link_to _('Aceptar actividad'), activity_accept_path(activity), class: 'btn btn-success', method: :post %>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="proposal-reject" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <%= user_detail(activity.conversation) %>
+  </div>
+  <div class="modal-body">
+    <div>
+      <p><strong><%= sender(activity.conversation).name %> te ha propuesto <%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>.
+      <p>Vaya. Parece que NO vas a aceptar la actividad que te propone <%= sender(activity.conversation).name %>. Esperamos que la próxima vez funcione.</p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= link_to 'Cancelar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= link_to _('Rechazar propuesta de actividad'), activity_reject_path(activity), class: 'btn btn-danger', method: :post %>
+  </div>
+</div>
