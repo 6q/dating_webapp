@@ -51,6 +51,10 @@ class ConversationsController < ApplicationController
       @conversation.untrash(current_user)
     end
 
+    if params[:accept_activity]
+      @conversation.activity.status = :accepted
+    end
+
     last_receipt = @mailbox.receipts_for(@conversation).last
     @receipt = current_user.reply_to_sender(last_receipt, params[:message][:body])
 

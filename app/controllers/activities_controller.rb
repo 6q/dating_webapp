@@ -12,9 +12,6 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def accept
-  end
-
   def reject
   end
   

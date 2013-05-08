@@ -4,7 +4,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <%= user_detail(activity.conversation) %>
   </div>
-  <%= simple_form_for @conversation.messages.new, url: activity_accept_path(activity) do |f| %>
+  <%= simple_form_for @conversation.messages.new,url: conversation_path(activity.conversation, accept_activity: true), method: :put do |f| %>
     <div class="modal-body">
       <p>¡Estás a un paso de aceptar la propuesta de <%= sender(activity.conversation).name %> para <strong><%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
       <div class="reply">
