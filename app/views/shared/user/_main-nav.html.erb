@@ -2,8 +2,8 @@
   <ul class="clearfix">
     <li><%= link_to 'Visitas','/user/hits' %><span>2</span></li>
     <li><%= link_to '¡Les he gustado!','/user/likes' %></li>
-    <li><%= link_to 'Mensajes','/user/messages' %><span>5</span></li>
-    <li><%= link_to 'Actividades','/user/messages?activities=true' %><span>999</span></li>
+    <li><%= link_to 'Mensajes', conversations_path %><span><%= current_user.mailbox.conversations.count %></span></li>
+    <li><%= link_to 'Actividades', conversations_path %><span><%= current_user.mailbox.conversations.count %></span></li>
     <li><%= link_to 'Búsquedas','/user/search' %></li>
     <li><%= link_to 'Chat','/user/chat' %><span>10</span></li>
   </ul>
