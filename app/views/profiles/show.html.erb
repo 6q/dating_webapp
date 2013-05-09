@@ -209,49 +209,45 @@
 							<div class="span1">
 								&nbsp;
 							</div>
-
-								
-							<%= @control %>
+							
 							<%= user.fields_for :characteristics do |my| %>
 								
-								<div class="span3 offset1 slider-ui pull-left">
+								<div class="span3 offset1 pull-left">
 									<h5>Romántico</h5>
-									<%= my.text_field :romantic %>
-									<!--<div id="romantic"></div>
-									<script>createSlider('#romantic', 1, 5, <%= @user.my_characteristics.romantic %>)</script>-->
+									<%= my.text_field :romantic, :class =>"points" %>
 
 									<h5>Aventurero</h5>
-									<%= my.text_field :adventurer %>
+									<%= my.text_field :adventurer, :class =>"points" %>
 
 									<h5>Amable</h5>
-									<%= my.text_field :friendly %>
+									<%= my.text_field :friendly, :class =>"points" %>
 
 									<h5>Familiar</h5>
-									<%= my.text_field :familiar %>
+									<%= my.text_field :familiar, :class =>"points" %>
 
 									<h5>Trabajadro</h5>
-									<%= my.text_field :hardWorking %>
+									<%= my.text_field :hardWorking, :class =>"points" %>
 
 									<h5>Extrovertido</h5>
-									<%= my.text_field :extroverted %>
+									<%= my.text_field :extroverted, :class =>"points" %>
 
 									<h5>Generoso</h5>
-									<%= my.text_field :generous %>
+									<%= my.text_field :generous, :class =>"points" %>
 
 									<h5>Reservado</h5>
-									<%= my.text_field :reserved %>
+									<%= my.text_field :reserved, :class =>"points" %>
 
 									<h5>Sociable</h5>
-									<%= my.text_field :sociable %>
+									<%= my.text_field :sociable, :class =>"points" %>
 
 									<h5>Tranquilo</h5>
-									<%= my.text_field :quiet %>
+									<%= my.text_field :quiet, :class =>"points" %>
 
 									<h5>Exigente</h5>
-									<%= my.text_field :demanding %>
+									<%= my.text_field :demanding, :class =>"points" %>
 
 									<h5>Orgulloso</h5>
-									<%= my.text_field :prideful %>
+									<%= my.text_field :prideful, :class =>"points" %>
 								</div>
 								
 
@@ -261,40 +257,41 @@
 	
 								<div class="span3">
 									<h5>Solitario</h5>
-									<%= my.text_field :solitary %>
+									<%= my.text_field :solitary, :class =>"points" %>
 	
 									<h5>Tenaz</h5>
-									<%= my.text_field :tenacious %>
+									<%= my.text_field :tenacious, :class =>"points" %>
 	
 									<h5>Atento</h5>
-									<%= my.text_field :attentive %>
+									<%= my.text_field :attentive, :class =>"points" %>
 	
 									<h5>Bienhumorado</h5>
-									<%= my.text_field :goodHumored %>
+									<%= my.text_field :goodHumored, :class =>"points" %>
 	
 									<h5>Espontáneo</h5>
-									<%= my.text_field :spontaneous %>
+									<%= my.text_field :spontaneous, :class =>"points" %>
 	
 									<h5>Inquieto</h5>
-									<%= my.text_field :restless %>
+									<%= my.text_field :restless, :class =>"points" %>
 	
 									<h5>Sensible</h5>
-									<%= my.text_field :sensitive %>
+									<%= my.text_field :sensitive, :class =>"points" %>
 	
 									<h5>Tímido</h5>
-									<%= my.text_field :shy %>
+									<%= my.text_field :shy, :class =>"points" %>
 	
 									<h5>Posesivo</h5>
-									<%= my.text_field :possessive %>
+									<%= my.text_field :possessive, :class =>"points" %>
 	
 									<h5>Celoso</h5>
-									<%= my.text_field :jealous %>
+									<%= my.text_field :jealous, :class =>"points" %>
 	
 									<h5>Fiel</h5>
-									<%= my.text_field :faithful %>
+									<%= my.text_field :faithful, :class =>"points" %>
 	
 								</div>
 							<% end %>
+						
 						</article>
 						<hr>
 						<div class="center">

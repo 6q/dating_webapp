@@ -9,58 +9,6 @@ li{
   text-align: right;
 }
 
-.slider-ui{
-  .legend{
-    font-size: 9px;
-    line-height: 12px;
-    color: black;
-    opacity: .4;
-    white-space: nowrap;
-    margin-bottom: 6px;
-  }
-  .ui-slider-handle span{
-    font-size: 9px;
-    white-space: nowrap;
-    padding: 1px 2px 0;
-    position: absolute;
-    top: -15px;
-    left: 20%;
-    background: white;
-    line-height: 12px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px;
-  }
-  .ui-widget-content {
-    border: none;
-    background: image-url('images/jslider.plastic.png');
-  }
-  .ui-corner-all{
-    border-radius: 2px;
-  }
-  .ui-slider .ui-slider-range{
-    background: none;
-  }
-  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
-    background: image-url('images/jslider.plastic.png');
-    width: 13px;
-    height: 15px;
-    background-position: 0 -60px;
-    position: absolute;
-    left: 20%;
-    top: -4px;
-    margin-left: -6px;
-    cursor: pointer;
-    border: none;
-  }
-  .ui-state-default.ui-state-active{
-    background-position: -20px -60px;
-  }
-    
-
-}
-
 /* user */
 
 .user {
