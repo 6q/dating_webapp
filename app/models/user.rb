@@ -6,25 +6,40 @@ class User < ActiveRecord::Base
   GENDER = ['male', 'female']
   ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
-  PHYSICAL_DESC = ['sexy', 'ugly']
-  PHYSICAL_STYLE = ['bohemian', 'urban']
-  COMPLEXION = ['normal', 'athletic']
-  CHILD = ['I have', 'I have not']
-  CHILD_WANT = ["I don't want more", 'I want to adopt' ]
-  SMOKE =['I smoke', "I don't smoke"]
-  SMOKE_TOLERANCE = ['does not bother me', 'I hate it']
-  DIET = ["I'm vegan", 'I eat a lot of meat']
-  ALCOHOL = ['I drink alcohol', "I'm abstemious"]
-  DRUGS = ['I take drugs', 'I do not take drugs']
-  DRUGS_FREQUENCY = ['never', 'sometimes', 'always'] 
-  RELIGION = ['agnostic', "I'm religious"]
-  RELIGION_OPINION = ['dedicated practicant', 'non practicant']
-  ANIMAL_LIKE = ['I Hate', 'I love', 'I adopt']
-  ANIMAL_HAVE =["I haven't", 'I have one', 'I have many']
-  STUDY_LEVEL = ['basic', 'graduate']
-  LANGUAGE = ['advanced chinese', 'basic russian']
-  JOB = ['technology', 'medical', 'politics']
-  SALARY = ['hight', 'medium', 'low']
+  CHILD = ['I have children','I have no children','no children I have, and I do not have',
+    'I have no children, but I want','I have children, and do not want more',
+    'I have children, and want to have more','I do not like children']
+  HOUSE = ['alone','a couple','with my children', 'ocasionaly with my kids','occasionally with my children','accompanied']
+  PHYSICAL_DESC = ['normal', 'sexy', 'pretty', 'run of the mill']
+  PHYSICAL_STYLE = ['bohemian', 'classic','indie/casual','sport','formal','trendy','rocker']
+  EYES = ['brown','black','green','gray','coffee','blue']
+  HAIR = ['blond','redhead','gray','brown','black']
+  HAIR_STYLE = ['short','very short','large','shaved','hairless']
+  COMPLEXION = ['thin', 'normal', 'nice', 'athletic', 'strong', 'curvy', 'obese']
+  SMOKE =[ 'I smoke',"I don't smoke",'I hate smoke','I do not mind the smoke',
+    'I smoke but I would leave for my couple',"I'm a social smoker"]
+  RELIGION = ['agnostic', 'atheist', 'christian', 'jewish', 'catholic', 'muslim', 'hindu', 'buddhist']
+  ETHNICITY = ['Hispanic', 'Arab', 'Indian', 'European', 'African', 'Asian']
+  STUDY_LEVEL = ['school or less', 'high school graduate', 'professional module', 'graduate or higher']
+  JOB = ['artistic and creative jobs','banking, financial','administrative','computers and technology',
+    'construction','education','advertising, entertainment and media','executive and management',
+    'health','travel','legal services','military','employee','public employee / government','science',
+    'sales and marketing','transportation and Logistics','unemployed','retired','retired temporarily','I am studying']
+  DIET = ['vegetarian', 'vegan', 'japanese', 'mediterranean', 'italian', 'kosher', 'halal',
+    "I'm very obsessive with food",'I like everything', 'I adapt easily']
+  ALCOHOL = ['I like to drink only when I go out', 'do not drink', 'I drink occasionally', 
+    "I'm drinking", 'alcohol makes me sick']
+  WEDDING_OPINION = ['I would marry', 'I would not marry', 'I do not believe in marriage',
+    "I've been married and do not want to repeat", "I've been married and I want to repeat", 'marriage is a wonderful thing']
+  ANIMALS = ['I like pets', 'I do not like pets', 'I have pets', 'I have no pets', 'I have no pets and am allergic']
+  PARTY = ['I like going out', 'I not like to go out', 'I like to go to bars', 'I like going to the disco', 
+    'I like to go for a drink with friends', 'I love to party', 'I do not like the party']
+  MUSIC = ['I like music', "I don't like music"]
+  MUSIC_GENRE = ['pop', 'rock', 'classical', 'opera', 'heavy', 'a bit of everything']
+  CINEMA = ['I like going to the cinema', 'do not like going to the cinema']
+  CINEMA_FREQUENCY = ['only occasionally', 'often']
+  CINEMA_GENRE = ['romantic', 'dramas', 'comedies', 'police', 'terror']
+
   LF_CHILD = ['Having', 'Not having']
   LF_CHILD_WANT = ['not want to have more', 'want to adopt']
   LF_SMOKE = ['smoker', 'non-smoker']

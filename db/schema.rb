@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130502133053) do
+ActiveRecord::Schema.define(:version => 20130509094156) do
 
   create_table "characteristics", :force => true do |t|
     t.integer  "user_id"
@@ -119,23 +119,16 @@ ActiveRecord::Schema.define(:version => 20130502133053) do
     t.integer  "weight"
     t.string   "complexion"
     t.string   "child"
-    t.string   "child_want"
     t.string   "smoke"
-    t.string   "smoke_tolerance"
     t.string   "diet"
     t.string   "alcohol"
-    t.string   "drugs"
-    t.string   "drug_frequency"
     t.string   "religion"
-    t.string   "religion_opinion"
-    t.string   "animal_like"
-    t.string   "animal_have"
+    t.string   "animals"
     t.string   "study_level"
     t.string   "language"
     t.string   "job"
     t.string   "salary"
     t.string   "description"
-    t.text     "hobbies"
     t.text     "party"
     t.text     "music"
     t.text     "cinema"
@@ -171,6 +164,26 @@ ActiveRecord::Schema.define(:version => 20130502133053) do
     t.string   "lf_job"
     t.string   "lf_salary"
     t.string   "lf_description"
+    t.string   "house"
+    t.string   "eyes"
+    t.string   "hair"
+    t.string   "hair_style"
+    t.string   "citizenship"
+    t.string   "ethnicity"
+    t.string   "language_level"
+    t.string   "wedding_opinion"
+    t.string   "music_genre"
+    t.string   "cinema_frequency"
+    t.string   "cinema_genre"
+    t.string   "like_sport"
+    t.string   "like_read"
+    t.string   "like_cinema"
+    t.string   "like_quiet"
+    t.string   "like_walk"
+    t.string   "like_mountain"
+    t.string   "like_beach"
+    t.string   "like_family"
+    t.string   "like_friends"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

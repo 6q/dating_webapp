@@ -7,27 +7,26 @@ $(document).ready(function(){
 
   $(".points, #points2").slider({ from: 1, to: 5, round: 1, skin: "plastic" });
 
-  $("#years").slider({ 
+  $("#years").slider({
       from: 18,
       to: 99,
-      step: 1, 
-      smooth: true, 
-      round: 0, 
-      dimension: "&nbsp;$", 
-      skin: "plastic", 
-      dimension: '&nbsp;años',
+      step: 1,
+      smooth: true,
+      round: 0,
+      skin: "plastic",
+      dimension: "&nbsp;años",
       scale: ['|','|','|','|','|','|','|','|'],
       onstatechange: function(){
         // $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
       }
     });
 
-  $("#kms").slider({ 
-    from: 0, 
-    to: 500, 
-    step: 10, 
-    round: 1, 
-    skin: "plastic", 
+  $("#kms").slider({
+    from: 0,
+    to: 500,
+    step: 10,
+    round: 1,
+    skin: "plastic",
     dimension: '&nbsp;kms',
     scale: ['|','|','|','|','|','|','|','|'],
     onstatechange: function(){
@@ -36,7 +35,7 @@ $(document).ready(function(){
     }
   });
 
-  jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "plastic", dimension: '&nbsp;cm' });
+  jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, skin: "plastic", dimension: '&nbsp;cm' });
   jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
   //jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
 
@@ -47,7 +46,7 @@ $(document).ready(function(){
   });
 
   $('.block a').click(function(e){
-  	e.preventDefault();
+    e.preventDefault();
   });
 
   $('#messages-tab a').click(function (e) {
@@ -92,7 +91,7 @@ $(document).ready(function(){
       if(hash != '#tab_confirmados') {
         $('.indice').slideUp('fast');
       }
-  } 
+  }
 
   // Change hash for page-reload
   $('.nav-tabs a').on('shown', function (e) {
