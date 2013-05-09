@@ -3,13 +3,13 @@ require_dependency 'minimum_age_validator'
 require_dependency 'user_retrieval'
 
 class User < ActiveRecord::Base
-  GENDER = ['male', 'female']
+  GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
   ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
   CHILD = ['I have children','I have no children','no children I have, and I do not have',
     'I have no children, but I want','I have children, and do not want more',
     'I have children, and want to have more','I do not like children']
-  HOUSE = ['alone','a couple','with my children', 'ocasionaly with my kids','occasionally with my children','accompanied']
+  HOUSE = ['alone','a couple','with my kids','occasionally with my children','accompanied']
   PHYSICAL_DESC = ['normal', 'sexy', 'pretty', 'run of the mill']
   PHYSICAL_STYLE = ['bohemian', 'classic','indie/casual','sport','formal','trendy','rocker']
   EYES = ['brown','black','green','gray','coffee','blue']
@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
     'I smoke but I would leave for my couple',"I'm a social smoker"]
   RELIGION = ['agnostic', 'atheist', 'christian', 'jewish', 'catholic', 'muslim', 'hindu', 'buddhist']
   ETHNICITY = ['Hispanic', 'Arab', 'Indian', 'European', 'African', 'Asian']
-  STUDY_LEVEL = ['school or less', 'high school graduate', 'professional module', 'graduate or higher']
+  STUDY_LEVEL = ['school or less', 'high school','certified', 'professional module', 'graduate or higher']
   JOB = ['artistic and creative jobs','banking, financial','administrative','computers and technology',
     'construction','education','advertising, entertainment and media','executive and management',
     'health','travel','legal services','military','employee','public employee / government','science',
@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
     "I'm drinking", 'alcohol makes me sick']
   WEDDING_OPINION = ['I would marry', 'I would not marry', 'I do not believe in marriage',
     "I've been married and do not want to repeat", "I've been married and I want to repeat", 'marriage is a wonderful thing']
+  RELIGION_ACTIVITY = ['For me religion is essential in my life', 'I care little about religion', 'I do not care at all religion']
   ANIMALS = ['I like pets', 'I do not like pets', 'I have pets', 'I have no pets', 'I have no pets and am allergic']
   PARTY = ['I like going out', 'I not like to go out', 'I like to go to bars', 'I like going to the disco', 
     'I like to go for a drink with friends', 'I love to party', 'I do not like the party']

@@ -184,6 +184,7 @@ ActiveRecord::Schema.define(:version => 20130509094156) do
     t.string   "like_beach"
     t.string   "like_family"
     t.string   "like_friends"
+    t.string   "religion_activity"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

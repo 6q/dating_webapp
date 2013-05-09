@@ -20,6 +20,7 @@ class ChangeSomeUserColumns < ActiveRecord::Migration
 		add_column :users, :like_beach, :string
 		add_column :users, :like_family, :string
 		add_column :users, :like_friends, :string
+		add_column :users, :religion_activity, :string
 		rename_column :users, :animal_like, :animals
 		remove_column :users, :child_want
 		remove_column :users, :smoke_tolerance
@@ -51,7 +52,8 @@ class ChangeSomeUserColumns < ActiveRecord::Migration
 		remove_column :users, :like_beach
 		remove_column :users, :like_family
 		remove_column :users, :like_friends
-		rename_column :users, :animals, :animal_have
+		remove_column :users, :religion_activity
+		rename_column :users, :animals, :animal_like
 		add_column :users, :child_want, :string
 		add_column :users, :smoke_tolerance, :string
 		add_column :users, :religion_opinion, :string
