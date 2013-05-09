@@ -2,7 +2,7 @@ class MatchmakerRegistrationsController < Devise::RegistrationsController
   def create
     @user = User.new(params[:matchmaker])
 
-    if @user.save!
+    if @user.save
       @user.add_role :matchmaker
       if @user.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?

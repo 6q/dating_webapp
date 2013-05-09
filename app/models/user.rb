@@ -222,8 +222,12 @@ class User < ActiveRecord::Base
   end
 
   def age(dob = self.birth_date)
-    now = Time.now.utc.to_date
-    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+    if self.birth_date.nil?
+      0
+    else
+      now = Time.now.utc.to_date
+      now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+    end
   end
 
   scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)
