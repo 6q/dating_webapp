@@ -1,0 +1,67 @@
+<!-- Modal -->
+<div id="recommend-user" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>¡Conviértete en Celestin@!</h3>
+    <p>¿Quieres recomendar a alguien? ¡Cuéntanos cómo es!</p>
+  </div>
+  <div class="modal-body">
+
+    <h5>Sus datos</h5>
+
+  <div id="user-data" class="form-inline">
+      <div class="control-group">
+        <label>Su nombre</label> <input type="text" class="input-small" placeholder="Su nombre">
+        <label>Su Email</label> <input type="text" class="input-small" placeholder="Su Email">
+      </div>
+    </div>
+
+    <h5>¿Qué relación tenéis?</h5>
+    <br>
+      <ul>
+        <li class="red-heart">
+          <input type="radio" name="relationship">Ex pareja
+        </li>
+    
+        <li class="violet-heart">
+          <input type="radio" name="relationship">Amigo especial
+        </li>
+    
+        <li class="green-heart">
+          <input type="radio" name="relationship">Amigo
+        </li>
+    
+        <li class="yellow-heart">
+          <input type="radio" name="relationship">Familiar
+        </li>
+      </ul>
+
+    <div class="description">
+      <h5>¿Cómo le describirías?</h5>
+      <textarea>Es muy majo y muy flamenco.</textarea>
+    </div>
+    
+
+    <div class="attributes">
+      <h5>Sus atributos</h5>
+      <div class="row">
+      <div class="span3">
+      <% (1..6).each do %>
+         <h5>Amable</h5>
+         <input id="points" type="slider" name="" value="3"/>
+      <% end %>
+      </div>
+      <div class="span3">
+        <% (1..6).each do %>
+         <h5>Amable</h5>
+         <input id="points" type="slider" name="" value="3"/>
+        <% end %>
+      </div>
+      </div>
+
+  </div>
+  <div class="modal-footer">
+    <%= link_to 'Cancelar', '#fast-reply', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <button class="btn btn-info" data-dismiss="modal">Recomendar usuari@</button>
+  </div>
+</div>

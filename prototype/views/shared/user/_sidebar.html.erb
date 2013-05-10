@@ -1,3 +1,4 @@
+<% unless @current_page == 'profile-celestino' %>
 <aside id="main-sidebar">
 	<%= render '/shared/user/sidebar-profile' %>
 	<hr>
@@ -7,3 +8,9 @@
 	<!-- hr -->
 	<%# render '/shared/user/sidebar-messages' %>
 </aside>
+<% else %>
+<aside id="main-sidebar">
+	<%= render '/shared/user/sidebar-profile-celestino' %>
+	<hr>
+</aside>
+<% end %>
