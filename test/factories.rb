@@ -16,7 +16,7 @@ FactoryGirl.define do
       screen_name{ [name, surname].join.underscore }
       marital_status{ User::MARITAL_STATUS.sample }
       orientation{ User::ORIENTATION.sample }
-      gender{ User::GENDER.sample }
+      gender{ User::GENDER.keys.sample }
       birth_date{ Date.today << ((rand(10) + 18) * 12) }
       terms_and_conditions "1"
     end
