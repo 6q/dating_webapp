@@ -72,10 +72,9 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
-		  			<% @foregin_user = true %>
 		  			<% 5.times do %>
 						<%= render '/shared/user/celes-item' %>
-						<% end %>
+					<% end %>
 		  		</div>
 
 		  		<div class="tab-pane" id="atributos">
@@ -160,7 +159,7 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
-		  			<% @foregin_user = true %>
+		  			<% @can_delete_celestino = true %>
 		  			<% 5.times do %>
 						<%= render '/shared/user/celes-item' %>
 						<% end %>

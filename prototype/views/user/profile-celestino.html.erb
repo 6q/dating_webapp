@@ -1,11 +1,13 @@
 <%
-	@page = 'celestinos-i-want';
+	
+	@page = 'profile-celestino';
+
 %>
 
 <section class="celestinos boxed">
 	<div class="boxed-inner">
 		<header>
-			<h1>Quiero ser Celestin@ | <span>Realizar recomendación</span></h1>
+			<h1>Hola Celestin@ | <span>Realizar recomendación</span></h1>
 		</header>
 
 		<div class="box-title">Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?</div>
@@ -35,6 +37,7 @@
 
 		<div class="your-celestines">
 			<h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
+			<%= @can_delete_celestino.present? %>
 			<% 3.times do %>
 				<%= render '/shared/user/celes-item' %>
 			<% end %>
