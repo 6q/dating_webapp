@@ -6,4 +6,12 @@ class Activity < ActiveRecord::Base
   validate :activity_type, presence: true
 
   belongs_to :conversation
+
+  def rejected?
+    status == 'rejected'
+  end
+
+  def accepted?
+    status == 'accepted'
+  end
 end

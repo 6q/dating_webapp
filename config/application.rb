@@ -69,5 +69,10 @@ module Cellove
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Hacky way to maintain the concerning
+    config.to_prepare do
+      Conversation.send(:include, ActivityConversation)
+    end
   end
 end

@@ -2,11 +2,15 @@
   <i class="type">
     <%= activity.activity_type %>
   </i>
-  <p><strong><%= sender(activity.conversation).name %></strong> the ha propuesto...</p>
+  <p><strong><%= sender(activity.conversation).name %></strong> <%= _('te ha propuesto...') %></p>
   <p><%= activity.body %></p>
   <div class="actions right">
-    <a class="btn btn-danger" href="#proposal-reject" data-toggle="modal"><i class="icon icon-remove icon-white"></i> Rechazar</a>
-    <a class="btn btn-success" href="#proposal-accept" data-toggle="modal"><i class="icon icon-ok icon-white"></i> Aceptar</a>
+    <% if activity.rejected? %>
+      <%= _('Actividad rechazada') %>
+    <% else %>
+      <a class="btn btn-danger" href="#proposal-reject" data-toggle="modal"><i class="icon icon-remove icon-white"></i> <%= _('Rechazar') %></a>
+      <a class="btn btn-success" href="#proposal-accept" data-toggle="modal"><i class="icon icon-ok icon-white"></i> <%= _('Aceptar') %></a>
+    <% end %>
   </div>
 </div>
 <%= render partial: 'activities/modal_answer_proposal', locals: { activity: activity } %>

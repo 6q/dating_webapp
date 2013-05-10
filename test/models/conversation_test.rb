@@ -6,7 +6,7 @@ describe Conversation do
   end
 
   it "should not have an activity" do
-    assert_equal nil, @conversation.activity
+    @conversation.activity.must_equal nil
   end
 
 end

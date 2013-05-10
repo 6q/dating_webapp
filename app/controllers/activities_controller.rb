@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_filter :check_current_subject_in_conversation
+  before_filter :check_current_subject_in_conversation, only: [:new, :create]
 
   def new
   end
@@ -13,6 +13,12 @@ class ActivitiesController < ApplicationController
   end
 
   def reject
+    @activity = Activity.find(params[:activity_id])
+    @activity.status = :rejected
+
+    if @activity.save
+      redirect_to @activity.conversation
+    end
   end
   
   private
