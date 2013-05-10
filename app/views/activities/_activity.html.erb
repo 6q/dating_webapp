@@ -7,6 +7,8 @@
   <div class="actions right">
     <% if activity.rejected? %>
       <%= _('Actividad rechazada') %>
+    <% elsif activity.accepted? %>
+      <%= _('Actividad aceptada') %>
     <% else %>
       <a class="btn btn-danger" href="#proposal-reject" data-toggle="modal"><i class="icon icon-remove icon-white"></i> <%= _('Rechazar') %></a>
       <a class="btn btn-success" href="#proposal-accept" data-toggle="modal"><i class="icon icon-ok icon-white"></i> <%= _('Aceptar') %></a>

@@ -35,7 +35,7 @@
                 <div class="pic"><%= link_to image_tag('placeholder2.jpg', size: '60x60'), current_user %></div>
 
                 <div class="msg-actions">
-                  <%= link_to _('Responder'), '#', class: 'action-reply' %><%= ' - ' + link_to(_('Proponer actividad'), '#activity-proposal', 'data-toggle' => 'modal') unless @conversation.activity %> - <%= link_to 'Bloquear', '#user-block', 'data-toggle' => 'modal' %>
+                  <%= link_to _('Responder'), '#', class: 'action-reply' %><%= (' - ' + link_to(_('Proponer actividad'), '#activity-proposal', 'data-toggle' => 'modal')).html_safe unless @conversation.activity %> - <%= link_to 'Bloquear', '#user-block', 'data-toggle' => 'modal' %>
                   <%= link_to 'Eliminar hilo', "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
                 </div>
 

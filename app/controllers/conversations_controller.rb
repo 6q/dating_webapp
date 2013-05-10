@@ -52,7 +52,7 @@ class ConversationsController < ApplicationController
     end
 
     if params[:accept_activity]
-      @conversation.activity.status = :accepted
+      @conversation.activity.accept!
     end
 
     last_receipt = @mailbox.receipts_for(@conversation).last

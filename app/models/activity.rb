@@ -7,6 +7,14 @@ class Activity < ActiveRecord::Base
 
   belongs_to :conversation
 
+  def accept!
+    update_attribute(:status, :accepted)
+  end
+
+  def reject!
+    update_attribute(:status, :rejected)
+  end
+
   def rejected?
     status == 'rejected'
   end
