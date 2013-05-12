@@ -15,6 +15,7 @@ Cellove::Application.routes.draw do
   resource :profile, only: [:show, :update]
 
   resources :pictures, only: [:create, :destroy, :show, :update]
+  resources :recommendations, only: [:create, :destroy, :show, :update]
 
   resources :users do
     resource :chat, only: :show
@@ -24,7 +25,11 @@ Cellove::Application.routes.draw do
     get 'view', on: :collection
   end
   get '/dashboard', to: "dashboard#show", as: :dashboard
-  
+
+  scope "/user" do
+    get 'celestinos-i-want', to: 'users#be_matchmaker', as: :be_matchmaker
+  end
+
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what
   get 'como-funciona' => 'flat_pages#how_it_works', as: :how_it_works

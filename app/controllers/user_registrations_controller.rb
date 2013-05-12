@@ -3,6 +3,7 @@ class UserRegistrationsController < Devise::RegistrationsController
     @user = User.new(params[:user])
 
     if @user.save
+      current_user.move_to(@user) if current_user && current_user.has_role(:invited_user)?
       @user.add_role :regular_user
 
       Characteristic.create(user_id: @user.id, creator_id: @user.id)
@@ -14,7 +15,7 @@ class UserRegistrationsController < Devise::RegistrationsController
       else
         set_flash_message :notice, :"signed_up_but_#{@user.inactive_message}" if is_navigational_format?
         expire_session_data_after_sign_in!
-        respond_with @user, :location => after_inactive_sign_up_path_for(@useer)
+        respond_with @user, :location => after_inactive_sign_up_path_for(@user)
       end
     else
       clean_up_passwords @user

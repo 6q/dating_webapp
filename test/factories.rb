@@ -1,7 +1,7 @@
 require 'faker'
 
 FactoryGirl.define do
-  factory :_user do #_because I don't want it to be used directly
+  factory :_user do # '_' because I don't want it to be used directly
     trait :basic_data do
       name{ Faker::Name.first_name }
       surname{ Faker::Name.last_name }

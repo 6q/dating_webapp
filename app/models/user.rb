@@ -164,8 +164,12 @@ class User < ActiveRecord::Base
 
   #relations
   has_many :pictures, as: :attachable
-  has_many :characteristics
+  has_many :characteristics, class_name: 'Characteristic', foreign_key: 'user_id'
+  has_many :created_characterstics, class_name: 'Characteristic', foreign_key: 'creator_id'
+
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
+  has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
+  has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
 
   accepts_nested_attributes_for :characteristics
 
@@ -200,8 +204,10 @@ class User < ActiveRecord::Base
     :characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
+  invited_user = lambda {|user| user.has_role?(:invited_user) }
 
-  validates_presence_of :name, :surname
+  validates_presence_of :name
+  validates_presence_of :surname, unless: invited_user
   validates :email, presence: true
   validates :email, confirmation: true, on: :create
   validates :password, presence: true, confirmation: true, on: :create
@@ -228,6 +234,18 @@ class User < ActiveRecord::Base
       now = Time.now.utc.to_date
       now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
     end
+  end
+
+  def self.new_invitee(invitee)
+    new do |u|
+      u.email = invitee[:email]
+      u.name = invitee[:name]
+      u.add_role :invited_user
+    end
+  end
+
+  def move_to(user)
+
   end
 
   scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)

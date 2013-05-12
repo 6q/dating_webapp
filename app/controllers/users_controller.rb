@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
-  
+
   def update
     authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @user = User.find(params[:id])
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       redirect_to users_path, :alert => "Unable to update user."
     end
   end
-    
+
   def destroy
     authorize! :destroy, @user, :message => 'Not authorized as an administrator.'
     user = User.find(params[:id])
@@ -32,5 +32,11 @@ class UsersController < ApplicationController
 
   def view
     @users = User.with_role(:user).last(7)
+  end
+
+  def be_matchmaker
+    @recommendation = Recommendation.new
+    @characteristic = Characteristic.new
+    render 'be_matchmaker', layout: "logged_in"
   end
 end
