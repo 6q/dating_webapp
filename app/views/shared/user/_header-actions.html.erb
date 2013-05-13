@@ -2,8 +2,12 @@
 
 	<div id="header-preface">
     <div id="user-options">
-      <%= link_to 'Cambiar configuración', '/user/settings/' %> | 
-      <%= link_to 'Editar mi perfil', profile_path %> | 
+      <% if current_user.has_role? :matchmaker %>
+        <%= link_to 'Conviértete en usuari@', matchmaker_become_user_path %> |
+      <% else %>
+        <%= link_to 'Cambiar configuración', '/user/settings/' %> | 
+        <%= link_to 'Editar mi perfil', profile_path %> |
+      <% end %>
       <%= link_to 'Desconectar', destroy_user_session_path, method: :delete %>
     </div>
 
