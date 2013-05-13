@@ -1,15 +1,16 @@
 #encoding: utf-8
 module RegistrationsHelper
   def gender_options
-    User::GENDER.map {|k,v| [v,k]}
+    #User::GENDER.map {|k,v| [v,k]}
+    User::GENDER.map {|k,v| [_(k),k]}
   end
 
   def orientation_options
-    User::ORIENTATION.map {|k,v| [v,k]}
+    User::ORIENTATION.map {|k,v| [_(k),k]}
   end
 
   def marital_status_options
-    User::MARITAL_STATUS.map {|k,v| [v,k]}
+    User::MARITAL_STATUS.map {|k,v| [_(k),k]}
   end
 
   def country_options
