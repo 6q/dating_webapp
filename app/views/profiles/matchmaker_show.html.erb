@@ -117,7 +117,7 @@
         <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
         <% @can_delete_celestino.present? %>
         <% current_user.recommendations.each do |rec| %>
-          <%= render '/shared/user/celes-item', recommendation: rec %>
+          <%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
         <% end %>
       </div>
     </div>
