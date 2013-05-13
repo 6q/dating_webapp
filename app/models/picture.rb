@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: pictures
+#
+#  id              :integer          not null, primary key
+#  image_uid       :string(255)
+#  image_name      :string(255)
+#  attachable_id   :integer
+#  attachable_type :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  main            :boolean          default(FALSE)
+#
+
 class Picture < ActiveRecord::Base
   belongs_to :attachable, polymorphic: true
 

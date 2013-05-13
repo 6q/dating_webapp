@@ -35,9 +35,11 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
   gem 'minitest-focus'
-  gem 'minitest-rails'
   gem 'minitest-reporters'
 end
+
+
+gem 'minitest-rails', group: [:test, :development]
 
 group :development do
   gem "guard-rails"

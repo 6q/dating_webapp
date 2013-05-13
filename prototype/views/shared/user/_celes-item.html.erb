@@ -30,7 +30,7 @@
 	<img src="/images/avatar1.png">
 	
 	<header>
-			<%= link_to "Maria", "/user/user-profile" %> <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", "#delete-celestino", 'data-toggle' => 'modal' unless @foregin_user.present? %><span class="date">05/11/2012 - 22:36h</span>
+			<%= link_to "Maria", "/user/user-profile" %> <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", "#delete-celestino", 'data-toggle' => 'modal' if @can_delete_celestino.present? %><span class="date">05/11/2012 - 22:36h</span>
 	</header>
 
 	<p>Es buena persona, generoso, simpático y además le gusta mucho recoger animalitos atropellados en la autopista. Y lo hace sin ánimo de lucro porque luego no vende sus pieles. Les da un entierro digno.</p>

@@ -12,6 +12,16 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+
+# 
+# FYI - If you get an error:
+# could not connect to server: No such file or directory
+# Is the server running locally and accepting
+# connections on Unix domain socket "/var/pgsql_socket/.s.PGSQL.5432"?
+#
+# Then add the following to your .bash_profile (or equivalent): export PGHOST=localhost
+#
+
 development:
   adapter: postgresql
   encoding: unicode

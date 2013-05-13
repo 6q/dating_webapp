@@ -1,6 +1,6 @@
 class MatchmakerRegistrationsController < Devise::RegistrationsController
   def create
-    @user = user.new(params[:user])
+    @user = User.new(params[:matchmaker])
 
     if @user.save
       @user.add_role :matchmaker

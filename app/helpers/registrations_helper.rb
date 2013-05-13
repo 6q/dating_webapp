@@ -80,7 +80,7 @@ module RegistrationsHelper
     User::WEDDING_OPINION.map {|k,v| [v,k]}
   end
 
-  def religion_activity
+  def religion_activity_options
     User::RELIGION_ACTIVITY.map {|k,v| [v,k]}
   end
 

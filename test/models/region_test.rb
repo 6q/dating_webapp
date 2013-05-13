@@ -8,6 +8,10 @@
 #  updated_at :datetime         not null
 #
 
-class Region < ActiveRecord::Base
-  attr_accessible :name
+require 'test_helper'
+
+class RegionTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end

@@ -1,11 +1,117 @@
 # encoding: utf-8
 
+# == Schema Information
+#
+# Table name: users
+#
+#  id                     :integer          not null, primary key
+#  email                  :string(255)      default(""), not null
+#  encrypted_password     :string(255)      default(""), not null
+#  reset_password_token   :string(255)
+#  reset_password_sent_at :datetime
+#  remember_created_at    :datetime
+#  sign_in_count          :integer          default(0)
+#  current_sign_in_at     :datetime
+#  last_sign_in_at        :datetime
+#  current_sign_in_ip     :string(255)
+#  last_sign_in_ip        :string(255)
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  name                   :string(255)
+#  surname                :string(255)
+#  screen_name            :string(255)
+#  gender                 :string(255)
+#  orientation            :string(255)
+#  marital_status         :string(255)
+#  birth_date             :date
+#  postal_code            :string(255)
+#  town                   :string(255)
+#  country                :string(255)
+#  newsletter_optin       :boolean
+#  latitude               :float
+#  longitude              :float
+#  physical_style         :string(255)
+#  physical_desc          :string(255)
+#  height                 :integer
+#  weight                 :integer
+#  complexion             :string(255)
+#  child                  :string(255)
+#  smoke                  :string(255)
+#  diet                   :string(255)
+#  alcohol                :string(255)
+#  religion               :string(255)
+#  animals                :string(255)
+#  study_level            :string(255)
+#  language               :string(255)
+#  job                    :string(255)
+#  salary                 :string(255)
+#  description            :string(255)
+#  party                  :text
+#  music                  :text
+#  cinema                 :text
+#  lf_gender              :string(255)
+#  lf_orientation         :string(255)
+#  lf_marital_status      :string(255)
+#  lf_age_between         :string(255)
+#  lf_age_to              :string(255)
+#  lf_city                :string(255)
+#  lf_country             :string(255)
+#  lf_postal_code         :string(255)
+#  lf_physical_style      :string(255)
+#  lf_physical_desc       :string(255)
+#  lf_height_between      :integer
+#  lf_height_to           :integer
+#  lf_weight_between      :integer
+#  lf_weight_to           :integer
+#  lf_complexion          :string(255)
+#  lf_child               :string(255)
+#  lf_child_want          :string(255)
+#  lf_smoke               :string(255)
+#  lf_smoke_tolerance     :string(255)
+#  lf_diet                :string(255)
+#  lf_alcohol             :string(255)
+#  lf_drugs               :string(255)
+#  lf_drug_frequency      :string(255)
+#  lf_religion            :string(255)
+#  lf_religion_opinion    :string(255)
+#  lf_animal_like         :string(255)
+#  lf_animal_have         :string(255)
+#  lf_study_level         :string(255)
+#  lf_language            :string(255)
+#  lf_job                 :string(255)
+#  lf_salary              :string(255)
+#  lf_description         :string(255)
+#  house                  :string(255)
+#  eyes                   :string(255)
+#  hair                   :string(255)
+#  hair_style             :string(255)
+#  citizenship            :string(255)
+#  ethnicity              :string(255)
+#  language_level         :string(255)
+#  wedding_opinion        :string(255)
+#  music_genre            :string(255)
+#  cinema_frequency       :string(255)
+#  cinema_genre           :string(255)
+#  like_sport             :string(255)
+#  like_read              :string(255)
+#  like_cinema            :string(255)
+#  like_quiet             :string(255)
+#  like_walk              :string(255)
+#  like_mountain          :string(255)
+#  like_beach             :string(255)
+#  like_family            :string(255)
+#  like_friends           :string(255)
+#  religion_activity      :string(255)
+#
+
+
+
 require_dependency 'date_presenter'
 require_dependency 'minimum_age_validator'
 require_dependency 'user_retrieval'
 
 class User < ActiveRecord::Base
-  GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
+  GENDER = {'male' => _('hombre'), 'female' => _('mujer')}
   ORIENTATION = {'heterosexual' => _('heterosexual'), 'homosexual' => _('homosexual'), 'bisexual' => _('bisexual')}
   MARITAL_STATUS = {'single' => _('solter@'),'engaged' => _('ocupad@'), 'separated' => _('separad@'), 'divorced' => _('divorciad@'),
     'married' => _('casad@'), 'widowed' => _('viud@')}
@@ -21,14 +127,14 @@ class User < ActiveRecord::Base
   HAIR = {'blond' => _('rubio'),'redhead' => _('pelirrojo'),'gray' => _('gris'),'brown' => _('marrón'),'black' => _('negro')}
   HAIR_STYLE = {'short' => _('corto'),'very short' => _('muy corto'),'large' => _('largo'),'shaved' => _('afeitado'),
     'hairless' => _('sin pelo')}
-  COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bien'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
+  COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bueno'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
     'curvy' => _('con curvas'), 'obese' => _('obeso')}
   SMOKE = {'smoker' => 'fumo', 'non-smoker' => 'no fumo', 'smoker-hater' => 'soy antitabaco','not-mind-smoke' => _('no me molesta el humo'),
     'smoke-leave-couple' => _('fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
     'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
-  ETHNICITY = {'hispanic' => _('hispano'), 'arab' => _('árabe'), 'indian' => _('indio'), 'european' => _('europeo'), 
-    'african' => _('africano'), 'asian' => _('asiático') }
+  ETHNICITY = {'hispanic' => _('hispana'), 'arab' => _('árabe'), 'indian' => _('india'), 'european' => _('europea'), 
+    'african' => _('africana'), 'asian' => _('asiática') }
   STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 
     'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
   JOB = {'artistic' => _('trabajos artísticos y creativos '),'banking' => _('banca, financiero'),'administrative' => _('adminsitrativo'),
@@ -46,7 +152,7 @@ class User < ActiveRecord::Base
   WEDDING_OPINION = {'would-marry' => _('Me gustaría casarme'), 'would-not-marry' => _('no me gustaría casarme'), 
     'not-believe' => _('no creo en el matrimonio'), 'married-no-repeat'=> _('ya he estado casado y no quiero repetir'),
     'married-repeat' => _('ya he estado casado y quiero repetir'), 'wonderful' => _('el matrimonio es algo maravilloso')}
-  RELIGION_ACTIVITY = {'essential' => _('Para mi la religión es esencial en mi vida'),
+  RELIGION_ACTIVITY = {'essential' => _('para mi la religión es esencial en mi vida'),
     'care-little' => _('me importa poco la religión'), 'not-care' => _('no me importa en absoluto la religión')}
   ANIMALS = {'like-pets' => _('Me gustan los animales de compañía'), 'not-like-pets' => _('no me gustan los animales de compañía'),
     'have-pets' => _('tengo animales de compañía'), 'no-pets' => _('no tengo animales de compañía'),
@@ -105,8 +211,9 @@ class User < ActiveRecord::Base
     :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status,
     :birth_date, :country, :postal_code, :town, :town_id,
     :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions, 
-    :physical_desc, :physical_style, :height, :weight, :complexion, :child, :child_want, 
-    :smoke, :smoke_tolerance, :diet, :alcohol, :drugs, :drug_frequency, :religion, 
+    :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house, 
+    :eyes, :hair, :hair_style, :religion_activity, :citizenship, :ethnicity, :language_level,
+    :smoke, :diet, :alcohol, :drugs, :drug_frequency, :religion, 
     :religion_opinion, :animal_like, :animal_have, :study_level, :language, :job, :salary, 
     :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation, 
     :lf_marital_status, :lf_age_between, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
@@ -139,8 +246,12 @@ class User < ActiveRecord::Base
   end
 
   def age(dob = self.birth_date)
-    now = Time.now.utc.to_date
-    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+    if self.birth_date.nil?
+      0
+    else
+      now = Time.now.utc.to_date
+      now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+    end
   end
 
   scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)
