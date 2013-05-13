@@ -28,19 +28,16 @@
             <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
           <% end %>
           <%= render '/shared/user/pagination' %>
-
         </div>
 
         <div class="tab-pane" id="confirmar">
           <% @type = 'por-confirmar' %>
-          
+
           <% current_user.unconfirmed_recommenders.each do |rec| %>
             <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
           <% end %>
-
           <%= render '/shared/user/pagination' %>
         </div>
-        
 
         <div class="tab-pane" id="attributes">
             <div class="span4">

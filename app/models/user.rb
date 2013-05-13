@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # == Schema Information
 #
 # Table name: users
@@ -102,6 +104,8 @@
 #  religion_activity      :string(255)
 #
 
+
+
 require_dependency 'date_presenter'
 require_dependency 'minimum_age_validator'
 require_dependency 'user_retrieval'
@@ -156,7 +160,6 @@ class User < ActiveRecord::Base
   LF_ANIMAL_LIKE = ['hate', 'love', 'adopte']
   LF_ANIMAL_HAVE = ['having one', 'not having', 'having many']
 
-
   PICTURE_LIMIT = 12
 
   extend MinimumAgeValidatorHelper
@@ -193,8 +196,9 @@ class User < ActiveRecord::Base
     :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status,
     :birth_date, :country, :postal_code, :town, :town_id,
     :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions, 
-    :physical_desc, :physical_style, :height, :weight, :complexion, :child, :child_want, 
-    :smoke, :smoke_tolerance, :diet, :alcohol, :drugs, :drug_frequency, :religion, 
+    :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house, 
+    :eyes, :hair, :hair_style, :religion_activity, :citizenship, :ethnicity, :language_level,
+    :smoke, :diet, :alcohol, :drugs, :drug_frequency, :religion, 
     :religion_opinion, :animal_like, :animal_have, :study_level, :language, :job, :salary, 
     :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation, 
     :lf_marital_status, :lf_age_between, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
