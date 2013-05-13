@@ -115,7 +115,7 @@
       				<%= user.select :gender, gender_options  %>
       				<%= user.select :orientation, orientation_options  %>
       				<%= user.label :marital_status, "y" %>
-      				<%= user.select :marital_status, marital_status_options,	{}, { :class => 'span2' } %>
+      				<%= user.select :marital_status, marital_status_options,{}, { :class => 'span2' } %>
       				,
 							<hr class="thin">
 							<%= user.label :birth_date, "Nací el" %>
@@ -134,7 +134,7 @@
 							<hr>
 							<div>
 							<%= user.label :physical_desc, 'Me considero:' %>
-							<%= user.select :physical_desc, {foo: :bar, 'hombre' => 'kk'} %>
+							<%= user.select :physical_desc, smoke_options %>
 							</div>
 							<%= user.label :marital_status, "Estoy:" %>
       				<%= user.select :marital_status, marital_status_options %>
