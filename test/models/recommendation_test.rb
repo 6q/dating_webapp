@@ -3,7 +3,9 @@ require "test_helper"
 describe Recommendation do
 
   it "must be valid" do
-    recommendation = create(:recommendation)
+    recommendation = build(:recommendation)
+    recommendation.user_id = 1
+    recommendation.creator_id = 2
     recommendation.valid?.must_equal true
   end
 
@@ -13,7 +15,9 @@ describe Recommendation do
   end
 
   it "performs validations when creating a recommendation" do
-    r = create(:recommendation)
+    r = build(:recommendation)
+    r.user_id = 1
+    r.creator_id = 2
     assert r.valid?.must_equal true
     r.relationship = ''
     refute r.valid?

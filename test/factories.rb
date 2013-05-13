@@ -61,11 +61,11 @@ FactoryGirl.define do
     #end
 
     trait :with_recommendations do
-      recommendations { [create(:recommendation)] }
+      recommendations { [create(:recommendation, user_id: 1, creator_id: 2)] }
     end
 
     trait :with_recommenders do
-      recommenders { [create(:recommendation)] }
+      recommenders { [create(:recommendation, user_id: 1, creator_id: 2)] }
     end
 
     ignore do
@@ -84,14 +84,37 @@ FactoryGirl.define do
   end
 
   factory :recommendation do
-    user_id 1
-    creator_id 2
     relationship 1
     description "A very kind and handsome guy."
 
     factory :invalid_recommendation do
       relationship nil
     end
+  end
+
+  factory :characteristic do
+    romantic 3
+    friendly 3
+    familiar 3
+    hardWorking 3
+    extroverted 3
+    generous 3
+    reserved 3
+    sociable 3
+    quiet 3
+    demanding 3
+    prideful 3
+    solitary 3
+    tenacious 3
+    attentive 3
+    goodHumored 3
+    spontaneous 3
+    restless 3
+    sensitive 3
+    shy 3
+    possessive 3
+    jealous 3
+    faithful 3
   end
 
   factory :male_picture, class: Picture do

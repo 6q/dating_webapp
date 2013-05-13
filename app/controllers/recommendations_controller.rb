@@ -4,12 +4,12 @@ class RecommendationsController < ApplicationController
   EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
 
   def create
-    @recommendation = current_user.recommendations.build(params[:recommendation])
-
     if params[:user] &&
         params[:user][:name] && 
         params[:user][:email] && 
         params[:user][:email] =~ EMAIL_REGEX
+      @recommendation = current_user.recommendations.build(params[:recommendation])
+
       # We've got a valid name and email. Now look for the current user by email address
       user = User.where("email = ?", params[:user][:email]).first
       if user.nil?
@@ -27,11 +27,13 @@ class RecommendationsController < ApplicationController
         redirect_to be_matchmaker_path
       else
         flash[:error] = :"Incorrect or missing data"
+        @recommendation = Recommendation.new(params[:recommendation])
         @characteristic = Characteristic.new(params[:characteristic])
         render 'users/be_matchmaker'
       end
     else
       flash[:error] = :"Incorrect or missing data"
+      @recommendation = Recommendation.new(params[:recommendation])
       @characteristic = Characteristic.new(params[:characteristic])
       render 'users/be_matchmaker'
     end

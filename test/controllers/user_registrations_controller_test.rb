@@ -50,7 +50,7 @@ describe UserRegistrationsController do
     end
   end
 
-  describe "as an authenticated matchmaker" do
+  describe "as a matchmaker" do
     before(:each) do
       @user = create(:matchmaker)
       @controller = UserRegistrationsController.new
@@ -67,13 +67,11 @@ describe UserRegistrationsController do
 
     it "PUT #update with valid attributes should update the matchmaker account to a regular user account" do
       put :update, id: @user, user: attributes_for(:matchmaker,
-        name: 'John', surname: 'Doe', town: 'Barcelona', country: 'Spain',
-        postal_code: '08009', marital_status: 'single', orientation: 'heterosexual',
-        gender: 'male', birth_date: Date.today << ((rand(10) + 18) * 12))
+        town: 'Barcelona', country: 'Spain', postal_code: '08009',
+        marital_status: 'single', orientation: 'heterosexual', gender: 'male',
+        birth_date: Date.today << ((rand(10) + 18) * 12))
 
       @user.reload
-      @user.name.must_equal 'John'
-      @user.surname.must_equal 'Doe'
       @user.postal_code.must_equal '08009'
       @user.town.must_equal 'Barcelona'
       @user.country.must_equal 'Spain'
