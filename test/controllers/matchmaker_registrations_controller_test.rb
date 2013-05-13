@@ -1,20 +1,25 @@
 require 'test_helper'
 
-class MatchmakerRegistrationsControllerTest < ActionController::TestCase
-  
-  # describe "guest access POST #create" do
-  #   test "should create a new matchmaker account" do
-  #     assert_difference('User.count') do
-  #       post :create, matchmaker: create(:matchmaker)
-  #     end
-  #     assert_redirected_to after_sign_up_path_for(assigns(:matchmaker))
-  #     #assert_equal :signed_up, flash[:notice]
-  #   end
-  # end
+describe MatchmakerRegistrationsController do
+  include Devise::TestHelpers
 
-  # describe "matchmaker access POST #create" do
-  #   test "should skip creation of new matchmaker account" do
-  #   end
-  # end
+  before :each do
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+  end
+
+  describe "as an unauthenticated user" do
+
+    it "POST #create should create a new matchmaker" do
+      assert_difference 'User.count', 1 do
+        post :create, matchmaker: attributes_for(:matchmaker)
+      end
+      assigns(:user).must_be_instance_of(User)
+      assigns(:user).has_role?(:matchmaker).must_equal true
+
+      assert_response 302
+      assert_redirected_to @controller.after_sign_up_path_for(assigns(:user))
+    end
+
+  end
 
 end

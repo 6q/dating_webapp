@@ -2,6 +2,12 @@ class MatchmakerRegistrationsController < Devise::RegistrationsController
   skip_before_filter :matchmaker_user
   before_filter :require_no_authentication
 
+  # Overrode this method to be able to test controller ~.~
+  # See test/controllers/matchmaker_registrations_controller_test.rb
+  def after_sign_up_path_for(resource)
+    super(resource)
+  end
+
   def create
     @user = User.new(params[:matchmaker])
 

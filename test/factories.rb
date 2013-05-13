@@ -14,9 +14,9 @@ FactoryGirl.define do
       town{ Faker::Address.city }
       country{ Faker::Address.country }
       postal_code{ Faker::Address.zip_code }
-      marital_status{ User::MARITAL_STATUS.sample }
-      orientation{ User::ORIENTATION.sample }
-      gender{ User::GENDER.sample }
+      marital_status{ User::MARITAL_STATUS.keys.sample }
+      orientation{ User::ORIENTATION.keys.sample }
+      gender{ User::GENDER.keys.sample }
       birth_date{ Date.today << ((rand(10) + 18) * 12) }
       terms_and_conditions "1"
     end

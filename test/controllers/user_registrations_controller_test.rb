@@ -8,15 +8,15 @@ describe UserRegistrationsController do
   end
 
   describe "as an unauthenticated user" do
-    before :each do
-      @controller = UserRegistrationsController.new
-    end
-
     it "POST #create should create a new user" do
       assert_difference 'User.count', 1 do
         post :create, user: attributes_for(:regular_user)
       end
       assigns(:user).must_be_instance_of(User)
+      assigns(:user).has_role?(:regular_user).must_equal true
+      assigns(:user).my_characteristics.user_id.must_equal assigns(:user).id
+      assigns(:user).my_characteristics.creator_id.must_equal assigns(:user).id
+
       assert_response 302
       assert_redirected_to @controller.after_sign_up_path_for(assigns(:user))
     end
@@ -29,7 +29,7 @@ describe UserRegistrationsController do
     end
   end
 
-  describe "as an authenticated regular user" do
+  describe "as a regular user" do
     before(:each) do
       @user = create(:regular_user)
       sign_in @user
@@ -53,7 +53,6 @@ describe UserRegistrationsController do
   describe "as a matchmaker" do
     before(:each) do
       @user = create(:matchmaker)
-      @controller = UserRegistrationsController.new
       sign_in @user
     end
 

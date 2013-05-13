@@ -16,6 +16,7 @@ describe RecommendationsController do
       assert_redirected_to new_user_session_path
     end
   end
+  
   describe "as a matchmaker" do
     before(:each) do
       @user = create(:regular_user)
