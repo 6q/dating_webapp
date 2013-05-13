@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511085801) do
+ActiveRecord::Schema.define(:version => 20130513111251) do
 
   create_table "characteristics", :force => true do |t|
     t.integer  "user_id"
@@ -65,8 +65,9 @@ ActiveRecord::Schema.define(:version => 20130511085801) do
     t.integer  "creator_id"
     t.integer  "relationship"
     t.text     "description"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "confirmed",    :default => false
   end
 
   create_table "regions", :force => true do |t|

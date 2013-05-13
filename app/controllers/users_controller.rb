@@ -44,4 +44,7 @@ class UsersController < ApplicationController
 
   def matchmaker_become_user
   end
+
+  def my_matchmakers
+  end
 end

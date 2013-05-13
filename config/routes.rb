@@ -29,6 +29,7 @@ Cellove::Application.routes.draw do
   scope "/user" do
     get 'celestinos-i-want',        to: 'users#be_matchmaker',                    as: :be_matchmaker
     get 'celestino-become-user',    to: 'users#matchmaker_become_user',           as: :matchmaker_become_user
+    get 'celestinos-of-mine',       to: 'users#my_matchmakers',                   as: :my_matchmakers
   end
 
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal

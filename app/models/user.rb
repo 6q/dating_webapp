@@ -259,5 +259,13 @@ class User < ActiveRecord::Base
     self.pictures.count >= PICTURE_LIMIT
   end
 
+  def confirmed_recommenders
+    self.recommenders.where("confirmed = true")
+  end
+
+  def unconfirmed_recommenders
+    self.recommenders.where("confirmed = false")    
+  end
+
 end
 

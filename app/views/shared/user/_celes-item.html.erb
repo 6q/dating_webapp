@@ -29,7 +29,12 @@
   <div class="clearfix">
     <%= image_tag "avatar1.png" %>
     <header>
-        <%= link_to recommendation.user.name, user_path(recommendation.user) %> <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", "#delete-celestino", 'data-toggle' => 'modal' unless @foregin_user.present? %><span class="date"><%= recommendation.updated_at %></span>
+      <% if is_creator %>
+        <%= link_to recommendation.user.name, user_path(recommendation.user) %>
+      <% else %>
+        <%= link_to recommendation.creator.name, user_path(recommendation.creator) %>
+      <% end %>
+      <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", "#delete-celestino", 'data-toggle' => 'modal' unless @foregin_user.present? %><span class="date"><%= recommendation.updated_at %></span>
     </header>
 
     <p><%= recommendation.description %></p>
