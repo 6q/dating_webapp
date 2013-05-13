@@ -5,6 +5,7 @@ FactoryGirl.define do
     trait :basic_data do
       name{ Faker::Name.first_name }
       surname{ Faker::Name.last_name }
+      screen_name{ [name, surname].join.underscore }
       email{ Faker::Internet.email }
       password "V3RYS3CUR3"
     end
@@ -13,7 +14,6 @@ FactoryGirl.define do
       town{ Faker::Address.city }
       country{ Faker::Address.country }
       postal_code{ Faker::Address.zip_code }
-      screen_name{ [name, surname].join.underscore }
       marital_status{ User::MARITAL_STATUS.sample }
       orientation{ User::ORIENTATION.sample }
       gender{ User::GENDER.sample }
