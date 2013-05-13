@@ -1,4 +1,5 @@
 class RecommendationsController < ApplicationController
+  skip_before_filter :matchmaker_user
   layout 'logged_in'
   EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
 
@@ -20,7 +21,7 @@ class RecommendationsController < ApplicationController
 
       @recommendation.user_id = user.id
       if @recommendation.save
-        @characteristic = user.characteristics.create(params[:characteristic])
+        @characteristic = user.characteristics.build(params[:characteristic])
         @characteristic.creator_id = current_user.id
         @characteristic.save
         redirect_to be_matchmaker_path

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
+  skip_before_filter :matchmaker_user, only: [:be_matchmaker, :matchmaker_become_user]
 
   def index
     @users = User.all
@@ -34,9 +35,13 @@ class UsersController < ApplicationController
     @users = User.with_role(:user).last(7)
   end
 
+  # Matchmaker routes
   def be_matchmaker
     @recommendation = Recommendation.new
     @characteristic = Characteristic.new
     render 'be_matchmaker', layout: "logged_in"
+  end
+
+  def matchmaker_become_user
   end
 end

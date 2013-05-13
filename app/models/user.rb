@@ -107,7 +107,8 @@ require_dependency 'minimum_age_validator'
 require_dependency 'user_retrieval'
 
 class User < ActiveRecord::Base
-  GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
+  #GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
+  GENDER = ['male', 'female']
   ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
   MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
   CHILD = ['I have children','I have no children','no children I have, and I do not have',
@@ -242,10 +243,6 @@ class User < ActiveRecord::Base
       u.name = invitee[:name]
       u.add_role :invited_user
     end
-  end
-
-  def move_to(user)
-
   end
 
   scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)

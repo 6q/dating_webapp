@@ -1,4 +1,7 @@
 class MatchmakerRegistrationsController < Devise::RegistrationsController
+  skip_before_filter :matchmaker_user
+  before_filter :require_no_authentication
+
   def create
     @user = User.new(params[:matchmaker])
 

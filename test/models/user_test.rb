@@ -136,4 +136,18 @@ class UserTest < ActiveSupport::TestCase
     assert_equal Geocoder.coordinates(u.location), [u.latitude, u.longitude]
   end
 
+  test 'matchmaker with recommendations' do
+    u = create(:matchmaker_with_recommendations)
+    assert u.recommendations.nil?.must_equal false
+    assert u.recommendations.count.must_equal 1
+    assert u.recommendations[0].creator_id.must_equal u.id
+  end
+
+  test 'regular user with recommenders' do
+    u = create(:regular_user_with_recommenders)
+    assert u.recommenders.nil?.must_equal false
+    assert u.recommenders.count.must_equal 1
+    assert u.recommenders[0].user_id.must_equal u.id
+  end
+
 end

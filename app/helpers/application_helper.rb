@@ -16,4 +16,8 @@ module ApplicationHelper
     current_page?(url) ? 'active' : ''
   end
 
+  def matchmaker_user
+    redirect_to(matchmaker_become_user_path) if (current_user && current_user.has_role?(:matchmaker))
+  end
+
 end

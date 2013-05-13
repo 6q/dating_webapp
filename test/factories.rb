@@ -16,7 +16,7 @@ FactoryGirl.define do
       screen_name{ [name, surname].join.underscore }
       marital_status{ User::MARITAL_STATUS.sample }
       orientation{ User::ORIENTATION.sample }
-      gender{ User::GENDER.keys.sample }
+      gender{ User::GENDER.sample }
       birth_date{ Date.today << ((rand(10) + 18) * 12) }
       terms_and_conditions "1"
     end
@@ -53,16 +53,45 @@ FactoryGirl.define do
       end
     end
 
+    # This trait does not work for some reason.
+    #trait :has_recommendations do
+    #  after(:create) do |user, evaluator|
+    #    create_list(:recommendation, evaluator.recommendations_count, user: user)
+    #  end
+    #end
+
+    trait :with_recommendations do
+      recommendations { [create(:recommendation)] }
+    end
+
+    trait :with_recommenders do
+      recommenders { [create(:recommendation)] }
+    end
+
     ignore do
       picture_count 1
+      recommendations_count 1
     end
 
     factory :regular_user, traits: [:basic_data, :complementary_data, :user_role]
     factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data, :user_role]
+    factory :regular_user_with_recommenders, traits: [:basic_data, :complementary_data, :user_role, :with_recommenders]
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
     factory :matchmaker_with_picture, traits: [:basic_data, :picture, :matchmaker_role]
+    factory :matchmaker_with_recommendations, traits: [:basic_data, :matchmaker_role, :with_recommendations]
     factory :regular_user_with_picture, traits: [:basic_data, :complementary_data, :picture, :user_role]
+  end
+
+  factory :recommendation do
+    user_id 1
+    creator_id 2
+    relationship 1
+    description "A very kind and handsome guy."
+
+    factory :invalid_recommendation do
+      relationship nil
+    end
   end
 
   factory :male_picture, class: Picture do

@@ -27,7 +27,8 @@ Cellove::Application.routes.draw do
   get '/dashboard', to: "dashboard#show", as: :dashboard
 
   scope "/user" do
-    get 'celestinos-i-want', to: 'users#be_matchmaker', as: :be_matchmaker
+    get 'celestinos-i-want',        to: 'users#be_matchmaker',                    as: :be_matchmaker
+    get 'celestino-become-user',    to: 'users#matchmaker_become_user',           as: :matchmaker_become_user
   end
 
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
