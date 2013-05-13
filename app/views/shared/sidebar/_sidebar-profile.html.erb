@@ -13,22 +13,24 @@
 	<header>
     <h1><%= current_user.full_name %></h1>
 	</header>
-	<ul>
-		<li>
-      <a href="/user/cellove-index">Índice Cellove (35/100)
-        <div class="progress">
-          <div class="bar" style="width:35%"></div>
-        </div>
-      </a>
-    </li>
-		<li class="profile">
-      <a href="/user/profile">
-        Tu perfil (63% completo)
-        <div class="progress">
-          <div class="bar" style="width:63%"></div>
-        </div>
-      </a>
-    </li>
-		<li><%= link_to 'Te gustan (269)', '/user/likes-of-mine' %></li>
-	</ul>
+  <% if !current_user.has_role?(:matchmaker) %>
+  	<ul>
+  		<li>
+        <a href="/user/cellove-index">Índice Cellove (35/100)
+          <div class="progress">
+            <div class="bar" style="width:35%"></div>
+          </div>
+        </a>
+      </li>
+  		<li class="profile">
+        <a href="/user/profile">
+          Tu perfil (63% completo)
+          <div class="progress">
+            <div class="bar" style="width:63%"></div>
+          </div>
+        </a>
+      </li>
+  		<li><%= link_to 'Te gustan (269)', '/user/likes-of-mine' %></li>
+  	</ul>
+  <% end %>
 </section>

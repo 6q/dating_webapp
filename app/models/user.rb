@@ -111,54 +111,72 @@ require_dependency 'minimum_age_validator'
 require_dependency 'user_retrieval'
 
 class User < ActiveRecord::Base
-  #GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
-  GENDER = ['male', 'female']
-  ORIENTATION = ['heterosexual', 'homosexual', 'bisexual']
-  MARITAL_STATUS = ['single', 'dating', 'engaged', 'married', 'widowed']
-  CHILD = ['I have children','I have no children','no children I have, and I do not have',
-    'I have no children, but I want','I have children, and do not want more',
-    'I have children, and want to have more','I do not like children']
-  HOUSE = ['alone','a couple','with my kids','occasionally with my children','accompanied']
-  PHYSICAL_DESC = ['normal', 'sexy', 'pretty', 'run of the mill']
-  PHYSICAL_STYLE = ['bohemian', 'classic','indie/casual','sport','formal','trendy','rocker']
-  EYES = ['brown','black','green','gray','coffee','blue']
-  HAIR = ['blond','redhead','gray','brown','black']
-  HAIR_STYLE = ['short','very short','large','shaved','hairless']
-  COMPLEXION = ['thin', 'normal', 'nice', 'athletic', 'strong', 'curvy', 'obese']
-  SMOKE =[ 'I smoke',"I don't smoke",'I hate smoke','I do not mind the smoke',
-    'I smoke but I would leave for my couple',"I'm a social smoker"]
-  RELIGION = ['agnostic', 'atheist', 'christian', 'jewish', 'catholic', 'muslim', 'hindu', 'buddhist']
-  ETHNICITY = ['Hispanic', 'Arab', 'Indian', 'European', 'African', 'Asian']
-  STUDY_LEVEL = ['school or less', 'high school','certified', 'professional module', 'graduate or higher']
-  JOB = ['artistic and creative jobs','banking, financial','administrative','computers and technology',
-    'construction','education','advertising, entertainment and media','executive and management',
-    'health','travel','legal services','military','employee','public employee / government','science',
-    'sales and marketing','transportation and Logistics','unemployed','retired','retired temporarily','I am studying']
-  DIET = ['vegetarian', 'vegan', 'japanese', 'mediterranean', 'italian', 'kosher', 'halal',
-    "I'm very obsessive with food",'I like everything', 'I adapt easily']
-  ALCOHOL = ['I like to drink only when I go out', 'do not drink', 'I drink occasionally', 
-    "I'm drinking", 'alcohol makes me sick']
-  WEDDING_OPINION = ['I would marry', 'I would not marry', 'I do not believe in marriage',
-    "I've been married and do not want to repeat", "I've been married and I want to repeat", 'marriage is a wonderful thing']
-  RELIGION_ACTIVITY = ['For me religion is essential in my life', 'I care little about religion', 'I do not care at all religion']
-  ANIMALS = ['I like pets', 'I do not like pets', 'I have pets', 'I have no pets', 'I have no pets and am allergic']
-  PARTY = ['I like going out', 'I not like to go out', 'I like to go to bars', 'I like going to the disco', 
-    'I like to go for a drink with friends', 'I love to party', 'I do not like the party']
-  MUSIC = ['I like music', "I don't like music"]
-  MUSIC_GENRE = ['pop', 'rock', 'classical', 'opera', 'heavy', 'a bit of everything']
-  CINEMA = ['I like going to the cinema', 'do not like going to the cinema']
-  CINEMA_FREQUENCY = ['only occasionally', 'often']
-  CINEMA_GENRE = ['romantic', 'dramas', 'comedies', 'police', 'terror']
+  GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
+  ORIENTATION = {'heterosexual' => _('heterosexual'), 'homosexual' => _('homosexual'), 'bisexual' => _('bisexual')}
+  MARITAL_STATUS = {'single' => _('solter@'),'engaged' => _('ocupad@'), 'separated' => _('separad@'), 'divorced' => _('divorciad@'),
+    'married' => _('casad@'), 'widowed' => _('viud@')}
+  CHILD = { 'have-children' => _('tengo hijos'),'no-children' => _('no tengo hijos'),'no-want-children' => _('no tengo hijos, y no quiero tener'),
+    'no-kids-i-want' => _('no tengo hijos, pero quiero tener'),'have-children-no-want-more' => _('si tengo hijos, y no quiero tener mas '),
+    'have-children-want-more' => _('si tengo hijos, y quiero tener mas '),'no-like-kids' => _('no me gustan los niños')}
+  HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con mis hijos'),
+    'occasionally-with-children' => _('ocasionalmente con mis hijos'),'accompanied' => _('acompañad@')}
+  PHYSICAL_DESC = {'normal' => _('normal'), 'sexy' => _('atractiv@'), 'pretty' => _('guap@'), 'of-the-mill' => _('del montón')}
+  PHYSICAL_STYLE = {'bohemian' => _('bohemio'), 'classic' => _('clásico'),'indie/casual' => _('indie/casual'),
+    'sport' => _('deportivo'),'formal' => _('formal'), 'trendy' => _('a la moda'),'rocker' => _('rockero'), 'preppy' => _('pijo')}
+  EYES = {'brown' => _('marrón'),'black' => _('negro'),'green' => _('verde'),'gray' => _('gris'),'coffee' => _('café'),'blue' => _('azul')}
+  HAIR = {'blond' => _('rubio'),'redhead' => _('pelirrojo'),'gray' => _('gris'),'brown' => _('marrón'),'black' => _('negro')}
+  HAIR_STYLE = {'short' => _('corto'),'very short' => _('muy corto'),'large' => _('largo'),'shaved' => _('afeitado'),
+    'hairless' => _('sin pelo')}
+  COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bien'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
+    'curvy' => _('con curvas'), 'obese' => _('obeso')}
+  SMOKE = {'smoker' => 'fumo', 'non-smoker' => 'no fumo', 'smoker-hater' => 'soy antitabaco','not-mind-smoke' => _('no me molesta el humo'),
+    'smoke-leave-couple' => _('fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('soy fumador social')}
+  RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
+    'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
+  ETHNICITY = {'hispanic' => _('hispano'), 'arab' => _('árabe'), 'indian' => _('indio'), 'european' => _('europeo'), 
+    'african' => _('africano'), 'asian' => _('asiático') }
+  STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 
+    'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
+  JOB = {'artistic' => _('trabajos artísticos y creativos '),'banking' => _('banca, financiero'),'administrative' => _('adminsitrativo'),
+    'technology' => _('ordenadores y tecnología'),'construction' => _('construcción'),'education' => _('educación'),
+    'advertising' => _('publicidad, entretenimiento y medios'),'management' => _('ejecutivo y gestión '),'health'=> _('salud'),
+    'travel' => _('viajes'),'legal' => _('servicios legales'),'military' => _('militar'),'employee' => _('empleado'),
+    'public-employee' => _('empleado público / gobierno'),'science' => _('ciencia'), 'sales' => _('ventas y márketing'),
+    'transportation' => _('transporte y logística '),'unemployed' => _('desempleado'),'retired' => _('jubilado'),
+    'retired-temporarily' => _('retirado temporalmente'),'studying' => _('estoy estudiando')}
+  DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'),
+    'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('soy muy maniátic@ con la comida'),
+    'like-all' => _('me gusta todo'), 'adapt' => _('me adapto fácilmente')}
+  ALCOHOL = {'when-go-out' => _('Me gusta beber solo cuando salgo'), 'not-drink' => _('no bebo alcohol'),
+    'occasionally' => _('bebo ocasionalmente'), 'drinker' => _('soy bebedor'), 'meke-me-sick' => _('el alcohol no me sienta bien')}
+  WEDDING_OPINION = {'would-marry' => _('Me gustaría casarme'), 'would-not-marry' => _('no me gustaría casarme'), 
+    'not-believe' => _('no creo en el matrimonio'), 'married-no-repeat'=> _('ya he estado casado y no quiero repetir'),
+    'married-repeat' => _('ya he estado casado y quiero repetir'), 'wonderful' => _('el matrimonio es algo maravilloso')}
+  RELIGION_ACTIVITY = {'essential' => _('Para mi la religión es esencial en mi vida'),
+    'care-little' => _('me importa poco la religión'), 'not-care' => _('no me importa en absoluto la religión')}
+  ANIMALS = {'like-pets' => _('Me gustan los animales de compañía'), 'not-like-pets' => _('no me gustan los animales de compañía'),
+    'have-pets' => _('tengo animales de compañía'), 'no-pets' => _('no tengo animales de compañía'),
+    'allergic' => _('no tengo animales de compañía y soy alérgico')}
+  PARTY = {'like-out' => _('Me gusta mucho salir'), 'not-like-out' => _('no me gusta salir'), 'like-bars' => _('me gusta ir de bares'),
+    'like-disco' => _('me gusta ir a la discoteca'), 'like-drink-friends' => _('me gusta ir a tomar algo con amigos'),
+    'love-party' => _('me encanta la fiesta'), 'not-like-party' => _('no me gusta nada la fiesta')}
+  MUSIC = {'like-music' => _('Me gusta la música'), 'no-like-music' => _('no me gusta la música')}
+  MUSIC_GENRE = {'pop' => _('pop'), 'rock' => _('rock'), 'classical' => _('clásica'), 'opera' => _('ópera'), 'heavy' => _('heavy'),
+    'everything' => _('de todo un poco')}
+  CINEMA = {'like-cinema' => _('Me gusta ir al cine'), 'not-like-cinema' => _('no me gusta ir al cine')}
+  CINEMA_FREQUENCY = {'occasionally' => _('solo ocasionalemnete'), 'often' => _('muy a menudo')}
+  CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
+    'terror' => _('terror')}
 
-  LF_CHILD = ['Having', 'Not having']
-  LF_CHILD_WANT = ['not want to have more', 'want to adopt']
-  LF_SMOKE = ['smoker', 'non-smoker']
-  LF_SMOKE_TOLERANCE = ['bothers', 'hate the smoke']
-  LF_DIET = ['strict vegan', 'no control meat eater']
-  LF_ALCOHOL = ['alcohol drinker', 'abstemious']
-  LF_DRUGS = ['take drugs', 'do not take drugs']
-  LF_ANIMAL_LIKE = ['hate', 'love', 'adopte']
-  LF_ANIMAL_HAVE = ['having one', 'not having', 'having many']
+  LF_CHILD = {'having' => _('tengo'), 'not having' => _('no tengo')}
+  LF_CHILD_WANT = {'no-more' => _('no quiero más'), 'adopt' => _('quiero adoptar')}
+  LF_SMOKE = {'smoker' => _('fumador'), 'non-smoker' => _('no fumador')}
+  LF_SMOKE_TOLERANCE = {'bothers' => _('no me importa'), 'hate the smoke' => _('odio el humo')}
+  LF_DIET = {'vegan' => _('vegan'), 'meat-eater' => _('meat-eater')}
+  LF_ALCOHOL = {'alcohol-drinker' => _('bebo alcohol'), 'abstemious' => _('abstemio')}
+  LF_DRUGS = {'take-drugs' => _('tome drogas'), 'not-take-drugs' => _('no tome drogas')}
+  LF_ANIMAL_LIKE = {'hate' => _('odio'), 'love' => _('me gustan'), 'adopte' => _('adopto')}
+  LF_ANIMAL_HAVE = {'one' => _('uno'), 'not-having' => _('no tengo'), 'many' => _('muchos')}
 
   PICTURE_LIMIT = 12
 

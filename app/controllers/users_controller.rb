@@ -43,6 +43,7 @@ class UsersController < ApplicationController
   end
 
   def matchmaker_become_user
+    render 'matchmaker_become_user', layout: "logged_in"
   end
 
   def my_matchmakers
