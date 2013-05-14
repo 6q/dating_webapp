@@ -1,5 +1,6 @@
 class RecommendationsController < ApplicationController
-  skip_before_filter :matchmaker_user
+  skip_before_filter :matchmaker_user, only: [:create]
+  before_filter :correct_user, only: [:accept, :deny]
   layout 'logged_in'
   EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
 
@@ -37,7 +38,22 @@ class RecommendationsController < ApplicationController
       @characteristic = Characteristic.new(params[:characteristic])
       render 'users/be_matchmaker'
     end
-
   end
+
+  def accept
+    @recommendation.confirmed = true
+    @recommendation.save
+  end
+
+  def deny
+    @recommendation.denied = true
+    @recommendation.save
+  end
+
+  private
+    def correct_user
+      @recommendation = Recommendation.find(params[:id])
+      redirect_to root_path unless @recommendation.user_id == current_user.id
+    end
   
 end

@@ -15,12 +15,15 @@ Cellove::Application.routes.draw do
   resource :profile, only: [:show, :update]
 
   resources :pictures, only: [:create, :destroy, :show, :update]
-  resources :recommendations, only: [:create, :destroy, :show, :update]
+  resources :recommendations, only: [:create, :destroy, :show, :update] do
+    post '/:id/accept',  to: 'recommendations#accept'
+    post '/:id/deny',    to: 'recommendations#deny'
+  end
 
   resources :users do
     resource :chat, only: :show
-    post 'like', to: "relations_controller#like"
-    post 'block', to: "relations_controller#block"
+    post 'like', to: "relationships#like"
+    post 'block', to: "relationships#block"
     resource :rating
     get 'view', on: :collection
   end

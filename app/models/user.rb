@@ -274,7 +274,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)
+  scope :popular, where('users.created_at < ?', Time.now).with_role(:regular_user).limit(7)
 
   def full_name
     [name, surname].join(" ")
@@ -293,7 +293,7 @@ class User < ActiveRecord::Base
   end
 
   def unconfirmed_recommenders
-    self.recommenders.where("confirmed = false")    
+    self.recommenders.where("confirmed = false")
   end
 
 end

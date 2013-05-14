@@ -10,6 +10,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  confirmed    :boolean          default(FALSE)
+#  denied       :boolean          default(FALSE)
 #
 
 class Recommendation < ActiveRecord::Base
