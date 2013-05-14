@@ -49,8 +49,8 @@ class UserTest < ActiveSupport::TestCase
   test 'invited user' do
     u = build(:invited_user)
     u.must_be_instance_of User
-    u.surname.must_be nil
-    u.email.wont_be nil
+    u.surname.must_equal nil
+    u.email.wont_equal nil
   end
 
 end
