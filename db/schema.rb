@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130513111251) do
+ActiveRecord::Schema.define(:version => 20130514084216) do
 
   create_table "characteristics", :force => true do |t|
     t.integer  "user_id"
@@ -195,6 +195,7 @@ ActiveRecord::Schema.define(:version => 20130513111251) do
     t.string   "like_family"
     t.string   "like_friends"
     t.string   "religion_activity"
+    t.string   "invitation_code"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

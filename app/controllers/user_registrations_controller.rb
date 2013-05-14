@@ -9,8 +9,19 @@ class UserRegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    @user = User.new(params[:user])
-    register_user
+    if params[:user] && params[:user][:invitation_code]
+      # User was invited, probably by a celestino
+      @user = User.where('invitation_code = ?', params[:user][:invitation_code]).first
+      params[:user].delete :invitation_code
+      @user.assign_attributes(params[:user])
+      register_user
+      if @user.has_role?(:regular_user)
+        @user.remove_role :invited_user
+      end
+    else
+      @user = User.new(params[:user])
+      register_user
+    end
   end
 
   def update

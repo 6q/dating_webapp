@@ -1,5 +1,4 @@
 # encoding: utf-8
-
 # == Schema Information
 #
 # Table name: users
@@ -102,6 +101,7 @@
 #  like_family            :string(255)
 #  like_friends           :string(255)
 #  religion_activity      :string(255)
+#  invitation_code        :string(255)
 #
 
 
@@ -259,10 +259,17 @@ class User < ActiveRecord::Base
     end
   end
 
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
+  end
+
   def self.new_invitee(invitee)
     new do |u|
       u.email = invitee[:email]
       u.name = invitee[:name]
+      u.generate_token(:invitation_code)
       u.add_role :invited_user
     end
   end
