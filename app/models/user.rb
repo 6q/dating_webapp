@@ -301,7 +301,7 @@ class User < ActiveRecord::Base
     if self.confirmed_recommenders.length > 0
       total = 0
       recommendations.each do |rec|
-        c = rec.user.characteristics.where('user_id = ? and creator_id = ?', rec.user_id, rec.creator_id).last
+        c = rec.characteristic
         if c 
           total += c.send(characteristic.to_sym)
         end
