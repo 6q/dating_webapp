@@ -67,4 +67,10 @@ describe User do
     u.full_name.must_equal 'Philip De Smedt'
   end
 
+  test 'confirmed_recommenders returns the right recommendations' do
+  end
+
+  test 'unconfirmed_recommenders returns the right recommendations' do
+  end
+
 end

@@ -296,5 +296,24 @@ class User < ActiveRecord::Base
     self.recommenders.where("confirmed = false and denied = false")
   end
 
+  def avg_characteristic(characteristic = 'romantic')
+    recommendations = self.confirmed_recommenders
+    if self.confirmed_recommenders.length > 0
+      total = 0
+      recommendations.each do |rec|
+        c = rec.user.characteristics.where('user_id = ? and creator_id = ?', rec.user_id, rec.creator_id).last
+        if c 
+          total += c.send(characteristic.to_sym)
+        end
+      end
+      # Absolute average (as in a number between 1 and 5)
+      avg_absolute = total/self.confirmed_recommenders.length
+      # Return the avg in percent
+      (avg_absolute/5.0)*100
+    else
+      100
+    end
+  end
+
 end
 
