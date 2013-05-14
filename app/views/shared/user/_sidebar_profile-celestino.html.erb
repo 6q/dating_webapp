@@ -1,0 +1,21 @@
+<!-- celestino data! -->
+<section id="user-sidebar">
+  <div class="profile_pic_wrapper">
+    <div class="profile_pic_overlay">
+      <button class="btn btn-info" type="submit">
+        <i class="icon-wrench icon-white"></i>
+        Cambia tu foto de perfil
+      </button>
+    </div>
+    <div class="profile_pic">
+      <%= profile_pic(current_user) %>
+    </div>
+  </div>
+  <header>
+    <h1>@Celestino:<br><%= current_user.full_name %></h1>
+  </header>
+  <ul>
+    <li><%= link_to 'Mi perfil de Celestin@', profile_path %></li>
+    <li class="highlight"><%= link_to '¡Conviértete en usuari@!', matchmaker_become_user_path %></li>
+  </ul>
+</section>
