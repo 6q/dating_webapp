@@ -20,6 +20,9 @@ class Recommendation < ActiveRecord::Base
   # (using user_id and creator_id)
   # Assuming there can only be one [user_id, creator_id] tuple in Characteristic
 
+  has_one :characteristic, dependent: :destroy
+  accepts_nested_attributes_for :characteristic
+
   belongs_to :creator, class_name: "User", foreign_key: :creator_id
   belongs_to :user, class_name: "User", foreign_key: :user_id
 

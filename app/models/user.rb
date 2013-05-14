@@ -311,7 +311,7 @@ class User < ActiveRecord::Base
       # Return the avg in percent
       (avg_absolute/5.0)*100
     else
-      100
+      33
     end
   end
 
