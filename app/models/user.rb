@@ -192,6 +192,8 @@ class User < ActiveRecord::Base
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
   has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
   has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
+  has_many :likes, class_name: 'Like', foreign_key: 'user_id'
+  has_many :likers, class_name: 'Like', foreign_key: 'creator_id'
 
   accepts_nested_attributes_for :characteristics
 
