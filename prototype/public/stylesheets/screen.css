@@ -2056,7 +2056,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('../images/glyphicons-halflings.png?1365581781');
+  background-image: url('../images/glyphicons-halflings.png?1368113400');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -2076,7 +2076,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url('../images/glyphicons-halflings-white.png?1365581781');
+  background-image: url('../images/glyphicons-halflings-white.png?1368113400');
 }
 
 .icon-glass {
@@ -6537,7 +6537,6 @@ a.more:after {
 }
 .typography p, .content p, section[role=main] > article p {
   margin: 1em 0;
-  text-align: justify;
 }
 .typography ul, .content ul, section[role=main] > article ul, .typography ol, .content ol, section[role=main] > article ol, .typography dl, .content dl, section[role=main] > article dl {
   margin-top: 1em;
@@ -6780,6 +6779,10 @@ hr.thin {
   margin-bottom: 0;
 }
 
+.article-body {
+  text-align: justify;
+}
+
 .boxed {
   margin-left: -12px;
   background: #fff;
@@ -6928,6 +6931,9 @@ header[role="banner"] #login-box #user-count {
 header[role="banner"] nav[role="navigation"] {
   margin-top: 62px;
   font-size: 110%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   float: right;
   background: #242625;
   background: -moz-linear-gradient(top, #363636 0%, #242625 100%);
@@ -6937,9 +6943,6 @@ header[role="banner"] nav[role="navigation"] {
   background: -ms-linear-gradient(top, #363636 0%, #242625 100%);
   background: linear-gradient(to bottom, #363636 0%, #242625 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$softColor', endColorstr='$darkColor',GradientType=0 );
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
 }
 header[role="banner"] nav[role="navigation"] ul {
   list-style: none;
@@ -6954,7 +6957,6 @@ header[role="banner"] nav[role="navigation"] ul li a {
   float: left;
   padding: 1em 1.4em;
   color: #fff;
-
   text-decoration: none;
 }
 header[role="banner"] nav[role="navigation"] ul li a span {
@@ -7007,8 +7009,6 @@ section[role="main"] a.more {
   padding: 0.5em 1em;
   text-decoration: none;
   margin-top: 20px;
-  text-align: center;
-  width: 200px;
 }
 
 .contacta .article-body h3 {
@@ -7123,8 +7123,53 @@ body.home header[role="banner"] {
   font-size: 90%;
   padding-top: 10px;
   margin-bottom: 0px;
+  text-align: justify;
 }
 #in-love article img {
+  margin-top: 10px;
+  display: block;
+  width: 220px;
+  height: 90px;
+}
+
+.media-prensa {
+  padding: 20px 0;
+}
+.media-prensa h2 {
+  font-size: 1.4em;
+}
+.media-prensa a.fold {
+  display: block;
+  width: 36px;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  overflow: hidden;
+  text-indent: -999em;
+}
+.media-prensa a.fold.active {
+  background-position: -392px -27px;
+}
+.media-prensa article h1 {
+  font-size: 120% !important;
+  margin: 0;
+  font-weight: normal;
+  padding-bottom: 5px;
+  border-bottom: #e0e0e0 1px solid;
+}
+.media-prensa article h1 i {
+  padding-left: 25px;
+  color: #000;
+  text-decoration: none;
+}
+.media-prensa article p {
+  font-size: 90%;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  text-align: justify;
+}
+.media-prensa article img {
   margin-top: 10px;
   display: block;
   width: 220px;
@@ -9062,15 +9107,4 @@ section#pay .payment .call {
 }
 section#pay .payment button {
   margin: 0 auto;
-}
-
-#consejos {
-  color: #005580;
-  font-size: 1.1em;
-  line-height: 1.5em;
-  text-align: right;
-  margin-top: 50px;
-  padding-bottom: 10px;
-  padding-right:20px;
-  border-bottom: 5px solid #fff;
 }
