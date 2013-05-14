@@ -17,26 +17,25 @@
       </div>
 
       <h5>¿Qué relación tenéis?</h5>
-      <br>
       <ul>
         <li class="red-heart">
-          <%= f.radio_button :relationship, 1, checked: true %> 
-          <%= f.label :relationship, 'Ex Pareja', value: 1 %>
+          <%= f.radio_button :relationship, 1, checked: true %>
+          <%= f.label :relationship, 'Ex Pareja', value: 1, class: 'radio' %>
         </li>
     
         <li class="violet-heart">
           <%= f.radio_button :relationship, 2 %>
-          <%= f.label :relationship, "Amigo Especial", value: 2 %>
+          <%= f.label :relationship, "Amigo Especial", value: 2, class: 'radio' %>
         </li>
     
         <li class="green-heart">
           <%= f.radio_button :relationship, 3 %>
-          <%= f.label :relationship, "Amigo", value: 3 %>
+          <%= f.label :relationship, "Amigo", value: 3, class: 'radio' %>
         </li>
     
         <li class="yellow-heart">
           <%= f.radio_button :relationship, 4 %>
-          <%= f.label :relationship, "Familiar", value: 4 %>
+          <%= f.label :relationship, "Familiar", value: 4, class: 'radio' %>
         </li>
       </ul>
 
