@@ -101,6 +101,7 @@ describe RecommendationsController do
       assigns(:recommendation).must_be_instance_of(Recommendation)
       assigns(:recommendation).user_id.must_equal @matchmaker.id
       assigns(:recommendation).creator_id.must_equal @user.id
+      assigns(:recommendation).characteristic.recommendation_id.must_equal assigns(:recommendation).id
 
       @matchmaker.recommenders.length.must_equal 1
       @user.recommendations.length.must_equal 1
