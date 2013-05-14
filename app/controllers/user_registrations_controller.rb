@@ -13,10 +13,18 @@ class UserRegistrationsController < Devise::RegistrationsController
       # User was invited, probably by a celestino
       @user = User.where('invitation_code = ?', params[:user][:invitation_code]).first
       params[:user].delete :invitation_code
-      @user.assign_attributes(params[:user])
-      register_user
-      if @user.has_role?(:regular_user)
-        @user.remove_role :invited_user
+      if @user
+        @user.assign_attributes(params[:user])
+        register_user
+        if @user.has_role?(:regular_user)
+          @user.remove_role :invited_user
+        end
+      else
+        # Someone probably maliciously tried adding an invitation code to the URL.
+        # We could not find a user related to this invitation code,
+        # so just create a new one.
+        @user = User.new(params[:user])
+        register_user
       end
     else
       @user = User.new(params[:user])

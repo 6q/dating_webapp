@@ -29,6 +29,38 @@ describe UserRegistrationsController do
     end
   end
 
+  describe "as an unauthenticated invited user" do
+    before :each do
+      @user = build(:invited_user, invitation_code: 'invite123')
+      @user.save(validate: false)
+    end
+
+    it "POST #create should create a new user" do
+      @user.has_role?(:invited_user).must_equal true
+
+      assert_difference 'User.count', 0 do
+        post :create, user: attributes_for(:regular_user, email: @user.email, invitation_code: 'invite123')
+      end
+
+      @user.reload
+      @user.must_be_instance_of(User)
+      @user.has_role?(:regular_user).must_equal true
+      @user.has_role?(:invited_user).must_equal false
+      @user.my_characteristics.user_id.must_equal assigns(:user).id
+      @user.my_characteristics.creator_id.must_equal assigns(:user).id
+
+      assert_response 302
+      assert_redirected_to @controller.after_sign_up_path_for(assigns(:user))
+    end
+
+    it "PUT #update should redirect to the root path" do
+      @user = create(:regular_user)
+      put :update, id: @user, user: attributes_for(:regular_user, name: 'John', surname: 'Doe')
+      assert_response 302
+      assert_redirected_to new_user_session_path
+    end
+  end
+
   describe "as a regular user" do
     before(:each) do
       @user = create(:regular_user)

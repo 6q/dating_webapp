@@ -25,6 +25,11 @@ FactoryGirl.define do
       newsletter_optin true
     end
 
+    trait :invited_data do
+      name{ Faker::Name.first_name }
+      email{ Faker::Internet.email }
+    end
+
     trait :user_role do
       after(:create) do |user|
         user.add_role :user
@@ -40,6 +45,12 @@ FactoryGirl.define do
     trait :admin_role do
       after(:create) do |user|
         user.add_role :admin
+      end
+    end
+
+    trait :invited_role do
+      after(:build) do |user|
+        user.add_role :invited_user
       end
     end
 
@@ -76,6 +87,7 @@ FactoryGirl.define do
     factory :regular_user, traits: [:basic_data, :complementary_data, :user_role]
     factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data, :user_role]
     factory :regular_user_with_recommenders, traits: [:basic_data, :complementary_data, :user_role, :with_recommenders]
+    factory :invited_user, traits: [:invited_data, :invited_role]
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
     factory :matchmaker_with_picture, traits: [:basic_data, :picture, :matchmaker_role]
