@@ -16,10 +16,10 @@ class Activity < ActiveRecord::Base
   end
 
   def rejected?
-    status == 'rejected'
+    status.to_sym == :rejected
   end
 
   def accepted?
-    status == 'accepted'
+    status.to_sym == :accepted
   end
 end

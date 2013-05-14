@@ -42,8 +42,7 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @conversation.new_activity(params[:activity])
-    #binding.pry
+
   end
 
   def update
@@ -52,7 +51,7 @@ class ConversationsController < ApplicationController
     end
 
     if params[:accept_activity]
-      @conversation.activity.accept!
+      @conversation.activity.accept! if @conversation.activity
     end
 
     last_receipt = @mailbox.receipts_for(@conversation).last

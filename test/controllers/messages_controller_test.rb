@@ -1,7 +1,11 @@
 require "test_helper"
 
 describe MessagesController do
-  # it "must be a real test" do
-  #   flunk "Need real tests"
-  # end
+  include Devise::TestHelpers
+
+  before do
+    @user = FactoryGirl.create(:regular_user)
+    sign_in @user
+  end
+
 end
