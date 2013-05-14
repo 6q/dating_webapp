@@ -18,22 +18,22 @@ describe Recommendation do
     r = build(:recommendation)
     r.user_id = 1
     r.creator_id = 2
-    assert r.valid?.must_equal true
+    r.valid?.must_equal true
     r.relationship = ''
-    refute r.valid?
+    r.valid?.must_equal false
     r.relationship = 1
-    assert r.valid?.must_equal true
+    r.valid?.must_equal true
     r.description = ''
-    refute r.valid?
+    r.valid?.must_equal false
     r.description = 'A description'
-    assert r.valid?.must_equal true
+    r.valid?.must_equal true
     r.user_id = nil
-    refute r.valid?
+    r.valid?.must_equal false
     r.user_id = 1
-    assert r.valid?.must_equal true
+    r.valid?.must_equal true
     r.creator_id = nil    
-    refute r.valid?
+    r.valid?.must_equal false
     r.creator_id = 2
-    assert r.valid?.must_equal true
+    r.valid?.must_equal true
   end
 end
