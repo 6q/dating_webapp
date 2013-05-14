@@ -24,4 +24,5 @@ class Recommendation < ActiveRecord::Base
   belongs_to :user, class_name: "User", foreign_key: :user_id
 
   validates_presence_of :relationship, :description, :user_id, :creator_id
+  validates :user_id, uniqueness: { scope: :creator_id }
 end

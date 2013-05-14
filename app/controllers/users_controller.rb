@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
-  skip_before_filter :matchmaker_user, only: [:be_matchmaker, :matchmaker_become_user]
+  skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
 
   def index
     @users = User.all

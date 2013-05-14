@@ -25,18 +25,20 @@ class RecommendationsController < ApplicationController
         @characteristic = user.characteristics.build(params[:characteristic])
         @characteristic.creator_id = current_user.id
         @characteristic.save
-        redirect_to be_matchmaker_path
+        redirect_to profile_path
       else
         flash[:error] = :"Incorrect or missing data"
-        @recommendation = Recommendation.new(params[:recommendation])
-        @characteristic = Characteristic.new(params[:characteristic])
-        render 'users/be_matchmaker'
+        #@recommendation = Recommendation.new(params[:recommendation])
+        #@characteristic = Characteristic.new(params[:characteristic])
+        #render 'users/be_matchmaker'
+        redirect_to profile_path
       end
     else
       flash[:error] = :"Incorrect or missing data"
-      @recommendation = Recommendation.new(params[:recommendation])
-      @characteristic = Characteristic.new(params[:characteristic])
-      render 'users/be_matchmaker'
+      #@recommendation = Recommendation.new(params[:recommendation])
+      #@characteristic = Characteristic.new(params[:characteristic])
+      #render 'users/be_matchmaker'
+      redirect_to profile_path
     end
   end
 
