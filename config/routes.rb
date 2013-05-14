@@ -15,9 +15,9 @@ Cellove::Application.routes.draw do
   resource :profile, only: [:show, :update]
 
   resources :pictures, only: [:create, :destroy, :show, :update]
-  resources :recommendations, only: [:create, :destroy, :show, :update] do
-    post '/:id/accept',  to: 'recommendations#accept'
-    post '/:id/deny',    to: 'recommendations#deny'
+  resources :recommendations, only: [:create] do
+    get 'accept',  to: 'recommendations#accept'
+    get 'deny',    to: 'recommendations#deny'
   end
 
   resources :users do

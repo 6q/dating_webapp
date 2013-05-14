@@ -41,18 +41,26 @@ class RecommendationsController < ApplicationController
   end
 
   def accept
-    @recommendation.confirmed = true
-    @recommendation.save
+    # @recommendation is found in correct_user filter
+    if @recommendation
+      @recommendation.confirmed = true
+      @recommendation.save
+    end
+    redirect_to my_matchmakers_path
   end
 
   def deny
-    @recommendation.denied = true
-    @recommendation.save
+    # @recommendation is found in correct_user filter
+    if @recommendation
+      @recommendation.denied = true
+      @recommendation.save
+    end
+    redirect_to my_matchmakers_path
   end
 
   private
     def correct_user
-      @recommendation = Recommendation.find(params[:id])
+      @recommendation = Recommendation.find(params[:recommendation_id])
       redirect_to root_path unless @recommendation.user_id == current_user.id
     end
   

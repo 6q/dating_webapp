@@ -34,7 +34,7 @@
       <% else %>
         <%= link_to recommendation.creator.name, user_path(recommendation.creator) %>
       <% end %>
-      <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", "#delete-celestino", 'data-toggle' => 'modal' unless @foregin_user.present? %><span class="date"><%= recommendation.updated_at %></span>
+      <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", recommendation_deny_path(recommendation.id), 'data-toggle' => 'modal' unless recommendation.user_id != current_user.id %><span class="date"><%= recommendation.updated_at %></span>
     </header>
 
     <p><%= recommendation.description %></p>
@@ -42,8 +42,8 @@
 
   <% if (@type == 'por-confirmar') %>
   <div class="choose">
-    <a href="#" class="btn btn-success"><i class="icon-ok icon-white"></i> Aceptar</a>
-    <a hreg="#" class="btn btn-danger"><i class="icon-remove icon-white"></i> Rechazar</a>
+    <%= link_to '<i class="icon-ok icon-white"></i> Aceptar'.html_safe, recommendation_accept_path(recommendation.id), class: 'btn btn-success' %>
+    <%= link_to '<i class="icon-remove icon-white"></i> Rechazar'.html_safe, recommendation_deny_path(recommendation.id), class: 'btn btn-danger' %>
   </div>  
   <% end %>
 </article>

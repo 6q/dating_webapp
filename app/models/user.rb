@@ -289,11 +289,11 @@ class User < ActiveRecord::Base
   end
 
   def confirmed_recommenders
-    self.recommenders.where("confirmed = true")
+    self.recommenders.where("confirmed = true and denied = false")
   end
 
   def unconfirmed_recommenders
-    self.recommenders.where("confirmed = false")
+    self.recommenders.where("confirmed = false and denied = false")
   end
 
 end
