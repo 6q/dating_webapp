@@ -1,9 +1,6 @@
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
-  def messages(errors)
-    errors.full_messages.join
-  end
+describe User do
 
   test 'performs validations when creating a regular user' do
     u = FactoryGirl.build(:regular_user)
@@ -51,6 +48,23 @@ class UserTest < ActiveSupport::TestCase
     u.must_be_instance_of User
     u.surname.must_equal nil
     u.email.wont_equal nil
+  end
+
+  # Class method tests
+  test 'location should be correct' do
+    u = create(:regular_user, postal_code: '08009', town: 'Barcelona', country: 'Spain')
+    u.location.must_equal '08009, Barcelona, Spain'
+  end
+
+  test 'age should be correct' do
+    u = create(:regular_user, birth_date_day: Date.today.day,
+      birth_date_month: Date.today.month, birth_date_year: '1988')
+    u.age.must_equal 25
+  end
+
+  test 'full name should be correct' do
+    u = create(:regular_user, name: 'Philip', surname: 'De Smedt')
+    u.full_name.must_equal 'Philip De Smedt'
   end
 
 end

@@ -246,6 +246,15 @@ class User < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode
 
+  def self.new_invitee(invitee)
+    new do |u|
+      u.email = invitee[:email]
+      u.name = invitee[:name]
+      u.generate_token(:invitation_code)
+      u.add_role :invited_user
+    end
+  end
+  
   def location
     [postal_code, town, country].compact.join(', ')
   end
@@ -263,15 +272,6 @@ class User < ActiveRecord::Base
     begin
       self[column] = SecureRandom.urlsafe_base64
     end while User.exists?(column => self[column])
-  end
-
-  def self.new_invitee(invitee)
-    new do |u|
-      u.email = invitee[:email]
-      u.name = invitee[:name]
-      u.generate_token(:invitation_code)
-      u.add_role :invited_user
-    end
   end
 
   scope :popular, where('users.created_at < ?', Time.now).with_role(:regular_user).limit(7)
