@@ -7,11 +7,25 @@ describe RecommendationsController do
     @request.env['devise.mapping'] = Devise.mappings[:user]
   end
 
-  describe "as an authenticated user" do
+  describe "as an unauthenticated user" do
     it "POST #create should redirect to the user sign in path" do
       assert_difference 'Recommendation.count', 0 do
         post :create, recommendation: attributes_for(:recommendation)
       end
+      assert_response 302
+      assert_redirected_to new_user_session_path
+    end
+
+    it "GET #accept should redirect to the user sign in path" do
+      get :accept, recommendation_id: 1
+
+      assert_response 302
+      assert_redirected_to new_user_session_path
+    end
+
+    it "GET #deny should redirect to the user sign in path" do
+      get :deny, recommendation_id: 1
+
       assert_response 302
       assert_redirected_to new_user_session_path
     end
@@ -72,7 +86,11 @@ describe RecommendationsController do
       sign_in @user
     end
 
+    # shared_examples_for 'create recommendation' do
+    # end
+
     it "POST #create with valid data should create a new recommendation" do
+      #it_behaves_like 'create recommendation'
       assert_difference 'Recommendation.count', 1 do
         post :create, {
           recommendation: attributes_for(:recommendation),
@@ -109,5 +127,20 @@ describe RecommendationsController do
       assert_response 200
       assert_template("users/be_matchmaker")
     end
+
+    # it "GET #accept should accept the recommendation" do
+    #   sign_in @matchmaker
+    #   @recommendation = @matchmaker.recommendations.build(attributes_for(:recommendation))
+    #   @recommendation.user_id = @user.id
+    #   @recommendation.save
+
+    #   @recommendation.must_be_instance_of(Recommendation)
+    #   @recommendation.user_id.must_equal @user.id
+    #   @recommendation.creator_id.must_equal @matchmaker.id
+
+    #   sign_in @user
+    #   get :accept, recommendation_id: @recommendation.id
+    #   @recommendation.confirmed.must_equal true 
+    # end
   end
 end
