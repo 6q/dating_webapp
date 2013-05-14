@@ -58,10 +58,10 @@ describe RecommendationsController do
       assigns(:characteristic).creator_id.must_equal @matchmaker.id
 
       assert_response 302
-      assert_redirected_to be_matchmaker_path
+      assert_redirected_to profile_path
     end
 
-    it "POST #create with invalid user email should (re-)render the be_matchmaker page" do
+    it "POST #create with invalid user email should redirect to the profile page" do
       assert_difference 'Recommendation.count', 0 do
         post :create, {
           recommendation: attributes_for(:recommendation),
@@ -73,8 +73,8 @@ describe RecommendationsController do
       @matchmaker.recommendations.length.must_equal 0
       @user.recommenders.length.must_equal 0
 
-      assert_response 200
-      assert_template("users/be_matchmaker")
+      assert_response 302
+      assert_redirected_to profile_path
     end
   end
 
@@ -109,10 +109,10 @@ describe RecommendationsController do
       assigns(:characteristic).user_id.must_equal @matchmaker.id
 
       assert_response 302
-      assert_redirected_to be_matchmaker_path
+      assert_redirected_to profile_path
     end
 
-    it "POST #create with invalid user email should (re-)render the be_matchmaker page" do
+    it "POST #create with invalid user email should redirect the profile page" do
       assert_difference 'Recommendation.count', 0 do
         post :create, {
           recommendation: attributes_for(:recommendation),
@@ -124,8 +124,8 @@ describe RecommendationsController do
       @matchmaker.recommenders.length.must_equal 0
       @user.recommendations.length.must_equal 0
 
-      assert_response 200
-      assert_template("users/be_matchmaker")
+      assert_response 302
+      assert_redirected_to profile_path
     end
 
     # it "GET #accept should accept the recommendation" do
