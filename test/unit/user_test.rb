@@ -31,5 +31,4 @@ class UserTest < ActiveSupport::TestCase
     u.longitude
     assert_equal Geocoder.coordinates(u.location), [u.latitude, u.longitude]
   end
-
 end

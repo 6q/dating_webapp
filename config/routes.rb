@@ -41,8 +41,7 @@ Cellove::Application.routes.draw do
     resources :activities
   end
 
-  resources :activities do
-    post 'accept'
+  resources :activities, only: [:new, :create] do
     post 'reject'
   end
 

@@ -3,28 +3,19 @@
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 
-    <div class="user-detail clearfix">
-      <div class="pic">
-        <a href="/user/profile/"><img src="/users/placeholder2.jpg" width="60" height ="60"></a>
+    <%= user_detail(user) %>
+  </div>
+  <%= simple_form_for Message.new, url: messages_path do |f| %>
+    <div class="modal-body">
+      <div class="reply">
+        <%= f.input_field :body %>
+        <%= hidden_field_tag :recipient, user.id %>
       </div>
-      <div class="data"><small>8/12/2012 - 22:35h</small><%= link_to "Judit", "/user/profile/" %>, 21 años - Barcelona</div>
-    </div> 
-
-    kkkkk
-  </div>
-  <div class="modal-body">
-    <div class="prevmsg">
-      <p>Hola, ¿como estás? Me gusta tu corte de pelo y por la longitud de tu nariz diría que vas bien calzado. Me llama o ke ase?</p>
     </div>
-
-    <div class="reply">
-      <textarea>OLA GUAPA KE ASE</textarea>
+    <div class="modal-footer">
+      <%= link_to 'Proponer actividad', '#activity-proposal', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true', :class => 'activity' %>
+      <%= link_to 'Cerrar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+      <%= f.submit _('Enviar'), class: 'btn btn-info' %>
     </div>
-
-  </div>
-  <div class="modal-footer">
-    <%= link_to 'Proponer actividad', '#activity-proposal', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true', :class => 'activity' %>
-    <%= link_to 'Cerrar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
-    <button class="btn btn-info" data-dismiss="modal">Enviar</button>
-  </div>
+  <% end %>
 </div>

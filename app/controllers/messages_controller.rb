@@ -37,10 +37,11 @@ class MessagesController < ApplicationController
   def create
     @recipient = User.find(params[:recipient]) if params[:recipient].present? 
 
-    @receipt = current_user.send_message(@recipient, params[:body], params[:subject])
+    @receipt = current_user.send_message(@recipient, params[:message][:body], params[:message][:body][0..10])
     if (@receipt.errors.blank?)
       @conversation = @receipt.conversation
       flash[:success] = _('Mensaje enviado')
+      redirect_to @conversation
     else
       render :action => :new
     end
