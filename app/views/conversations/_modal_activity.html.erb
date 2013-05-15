@@ -3,7 +3,7 @@
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3>Proponer una actividad</h3>
-    <%= user_detail(conversation) %>
+    <%= user_detail(sender_or_recipient(conversation)) %>
   </div>
   <%= simple_form_for Activity.new, url: conversation_activities_path(conversation) do |f| %>
     <div class="modal-body">

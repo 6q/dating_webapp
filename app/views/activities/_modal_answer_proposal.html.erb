@@ -2,11 +2,11 @@
 <div id="proposal-accept" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <%= user_detail(activity.conversation) %>
+    <%= user_detail(sender_or_recipient(activity.conversation)) %>
   </div>
   <%= simple_form_for @conversation.messages.new, url: conversation_path(activity.conversation, accept_activity: true), method: :put do |f| %>
     <div class="modal-body">
-      <p>¡Estás a un paso de aceptar la propuesta de <%= sender(activity.conversation).name %> para <strong><%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
+      <p>¡Estás a un paso de aceptar la propuesta de <%= sender_or_recipient(activity.conversation).name %> para <strong><%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
       <div class="reply">
         <%= f.input_field :body %>
       </div>
@@ -21,12 +21,12 @@
 <div id="proposal-reject" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <%= user_detail(activity.conversation) %>
+    <%= user_detail(sender_or_recipient(activity.conversation)) %>
   </div>
   <div class="modal-body">
     <div>
-      <p><strong><%= sender(activity.conversation).name %> te ha propuesto <%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>.
-      <p>Vaya. Parece que NO vas a aceptar la actividad que te propone <%= sender(activity.conversation).name %>. Esperamos que la próxima vez funcione.</p>
+      <p><strong><%= sender_or_recipient(activity.conversation).name %> te ha propuesto <%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>.
+      <p>Vaya. Parece que NO vas a aceptar la actividad que te propone <%= sender_or_recipient(activity.conversation).name %>. Esperamos que la próxima vez funcione.</p>
     </div>
   </div>
   <div class="modal-footer">

@@ -21,4 +21,13 @@ module UserHelper
     html += '<li class="block">' + link_to('Block', '#user-block', 'data-toggle' => 'modal') + '</li>'
     html.html_safe
   end
+  
+  def user_detail(user)
+    html = '<div class="user-detail clearfix">'
+    html += '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
+    html += '<div class="data">' + link_to(user.name, user) + '</div>'
+    html += '</div>'
+
+    html.html_safe
+  end
 end
