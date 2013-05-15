@@ -1,3 +1,4 @@
+#encoding: utf-8
 module UserHelper
   def profile_pic(user, options = {width: 80, height: 80})
     #TODO: Implement
@@ -25,7 +26,7 @@ module UserHelper
   def user_detail(user)
     html = '<div class="user-detail clearfix">'
     html += '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
-    html += '<div class="data">' + link_to(user.name, user) + '</div>'
+    html += '<div class="data">' + link_to(user.name, user) + ', ' + n_('Años', 'Años', user.age) + ' - ' +  user.town + '</div>'
     html += '</div>'
 
     html.html_safe

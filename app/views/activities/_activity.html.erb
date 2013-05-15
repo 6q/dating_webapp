@@ -1,5 +1,5 @@
 <div class="activity">
-  <i class="type">
+  <i class="type <%= activity.activity_type %>">
     <%= Activity::ACTIVITY_TYPE[activity.activity_type] %>
   </i>
   <p><strong><%= sender_or_recipient(activity.conversation).name %></strong> <%= _('te ha propuesto...') %></p>
