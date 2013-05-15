@@ -10,9 +10,11 @@
     <% unless @box.eql?'trash' %>
       <div class="reply">
         <%= link_to _('Eliminar'), "#delete-confirm-#{conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'delete' %>
-        <%= link_to 'Responder', '#fast-reply', 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
+        <%= link_to 'Responder', "#fast-reply-#{conversation.id.to_s}", 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
       </div>
     <% end %>
   </div>
 <% end %>
 <%= render partial: 'conversations/modal_delete', locals: { conversation: conversation } %>
+<%= render partial: 'shared/modal_reply_conversation', locals: { conversation: conversation } %>
+<%= render partial: 'conversations/modal_activity', locals: { conversation: conversation } %>
