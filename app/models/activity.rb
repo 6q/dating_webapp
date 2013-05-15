@@ -1,7 +1,15 @@
+#encoding: utf-8
 class Activity < ActiveRecord::Base
   attr_accessible :activity_type, :conversation_id, :status, :body, :date
 
-  ACTIVIY_TYPE = %w{cofee movie drink sport culture heart}
+  ACTIVITY_TYPE = {
+    coffee: _('Tomar un café'),
+    movie: _('Ir al cine / espectáculo'),
+    drink: _('Salir de copas'),
+    sport: _('Actividad deportiva'),
+    culture: _('Actividad cultural'),
+    heart: _('Conocerte de verdad')
+  }
 
   validate :activity_type, presence: true
 
@@ -16,10 +24,10 @@ class Activity < ActiveRecord::Base
   end
 
   def rejected?
-    status.to_sym == :rejected
+    status.to_sym == :rejected if status
   end
 
   def accepted?
-    status.to_sym == :accepted
+    status.to_sym == :accepted if status
   end
 end

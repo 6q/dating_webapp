@@ -11,15 +11,11 @@
       <p>Selecciona una propuesta para compartir...</p>
       <br>
       <ul id="activity-types">
-        <li class="coffee"><%= link_to _('Tomar un café'), '#' %></li>
-        <li class="movie"><%= link_to _('Ir al cine / espectáculo'), '#' %></li>
-        <li class="drink"><%= link_to _('Salir de copas'), '#' %></li>
-        <li class="eat"><%= link_to _('Ir a comer'), '#' %></li>
-        <li class="sport"><%= link_to _('Actividad deportiva'), '#' %></li>
-        <li class="culture"><%= link_to _('Actividad cultural'), '#' %></li>
-        <li class="heart"><%= link_to _('Conocerte de verdad'), '#' %></li>
+        <% Activity::ACTIVITY_TYPE.each do |k, v| %>
+          <li class="<%= k %>"><%= link_to v, '#' %></li>
+        <% end %>
       </ul>
-      <%= f.input :activity_type %>
+      <%= f.input :activity_type, as: :hidden %>
       <div class="reply">
         <%= f.input_field :body %>
       </div>

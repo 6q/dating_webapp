@@ -77,7 +77,6 @@ FactoryGirl.define do
     activity_type :cofee
     body 'Activity body'
     date Date.today + 20.days
-    status :accepted
   end
   
 end
