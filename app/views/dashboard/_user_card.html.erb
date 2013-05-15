@@ -18,7 +18,7 @@
       <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>
       <li class="chat"><%= link_to 'Chat', user_chat_path(user) %></li>
       <li class="like"><%= link_to 'Like', user_like_path(user), :method => :post %></li>
-      <li class="block"><%= link_to 'Block', user_block_path(user), "data-toggle" => "modal", method: :post %></li>
+      <li class="block"><%= link_to 'Block', user_block_path(user), "data-toggle" => "modal", :method => :post %></li>
     </ul>
 
     <% if @interactions == true %>
@@ -28,7 +28,7 @@
           <strong><%= _("Tu dices:") %></strong> <span class="stars stars-5">****</span>
           <strong><%= _("Ha dicho:") %></strong> <span class="stars stars-3">****</span>
         </div>
-        <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
+        <%= link_to 'Proponer actividad','#activity-proposal', 'data-toggle' => 'modal' %>
       </div>
 
     <% end %>

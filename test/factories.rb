@@ -79,6 +79,14 @@ FactoryGirl.define do
       recommenders { [create(:recommendation, user_id: 1, creator_id: 2)] }
     end
 
+    trait :with_likers do
+      likers { [create(:like, user_id: 1, creator_id: 2)] }
+    end
+
+    trait :with_likes do
+      likes { [create(:like, user_id: 1, creator_id: 2)] }
+    end
+
     ignore do
       picture_count 1
       recommendations_count 1
@@ -88,6 +96,9 @@ FactoryGirl.define do
     factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data, :user_role]
     factory :regular_user_with_recommenders, traits: [:basic_data, :complementary_data, :user_role, :with_recommenders]
     factory :invited_user, traits: [:invited_data, :invited_role]
+    factory :regular_user_with_likers, traits: [:basic_data, :complementary_data, :user_role, :with_likers]
+    factory :regular_user_with_likes, traits: [:basic_data, :complementary_data, :user_role, :with_likes]
+
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
     factory :matchmaker_with_picture, traits: [:basic_data, :picture, :matchmaker_role]
@@ -102,6 +113,9 @@ FactoryGirl.define do
     factory :invalid_recommendation do
       relationship nil
     end
+  end
+
+  factory :like do
   end
 
   factory :characteristic do

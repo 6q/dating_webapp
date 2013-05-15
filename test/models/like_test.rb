@@ -8,4 +8,5 @@ describe Like do
   it "must be valid" do
     @like.valid?.must_equal true
   end
+
 end
