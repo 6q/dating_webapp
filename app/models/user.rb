@@ -129,8 +129,8 @@ class User < ActiveRecord::Base
     'hairless' => _('sin pelo')}
   COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bueno'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
     'curvy' => _('con curvas'), 'obese' => _('obeso')}
-  SMOKE = {'smoker' => 'fumo', 'non-smoker' => 'no fumo', 'smoker-hater' => 'soy antitabaco','not-mind-smoke' => _('no me molesta el humo'),
-    'smoke-leave-couple' => _('fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('soy fumador social')}
+  SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'),
+    'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
     'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
   ETHNICITY = {'hispanic' => _('hispana'), 'arab' => _('árabe'), 'indian' => _('india'), 'european' => _('europea'), 
@@ -147,19 +147,19 @@ class User < ActiveRecord::Base
   DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'),
     'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('soy muy maniátic@ con la comida'),
     'like-all' => _('me gusta todo'), 'adapt' => _('me adapto fácilmente')}
-  ALCOHOL = {'when-go-out' => _('Me gusta beber solo cuando salgo'), 'not-drink' => _('no bebo alcohol'),
+  ALCOHOL = {'when-go-out' => _('me gusta beber solo cuando salgo'), 'not-drink' => _('no bebo alcohol'),
     'occasionally' => _('bebo ocasionalmente'), 'drinker' => _('soy bebedor'), 'meke-me-sick' => _('el alcohol no me sienta bien')}
-  WEDDING_OPINION = {'would-marry' => _('Me gustaría casarme'), 'would-not-marry' => _('no me gustaría casarme'), 
-    'not-believe' => _('no creo en el matrimonio'), 'married-no-repeat'=> _('ya he estado casado y no quiero repetir'),
-    'married-repeat' => _('ya he estado casado y quiero repetir'), 'wonderful' => _('el matrimonio es algo maravilloso')}
+  WEDDING_OPINION = {'would-marry' => _('Me gustaría casarme'), 'would-not-marry' => _('No me gustaría casarme'), 
+    'not-believe' => _('No creo en el matrimonio'), 'married-no-repeat'=> _('Ya he estado casado y no quiero repetir'),
+    'married-repeat' => _('Ya he estado casado y quiero repetir'), 'wonderful' => _('El matrimonio es algo maravilloso')}
   RELIGION_ACTIVITY = {'essential' => _('para mi la religión es esencial en mi vida'),
     'care-little' => _('me importa poco la religión'), 'not-care' => _('no me importa en absoluto la religión')}
-  ANIMALS = {'like-pets' => _('Me gustan los animales de compañía'), 'not-like-pets' => _('no me gustan los animales de compañía'),
-    'have-pets' => _('tengo animales de compañía'), 'no-pets' => _('no tengo animales de compañía'),
-    'allergic' => _('no tengo animales de compañía y soy alérgico')}
-  PARTY = {'like-out' => _('Me gusta mucho salir'), 'not-like-out' => _('no me gusta salir'), 'like-bars' => _('me gusta ir de bares'),
-    'like-disco' => _('me gusta ir a la discoteca'), 'like-drink-friends' => _('me gusta ir a tomar algo con amigos'),
-    'love-party' => _('me encanta la fiesta'), 'not-like-party' => _('no me gusta nada la fiesta')}
+  ANIMALS = {'like-pets' => _('Me gustan los animales de compañía'), 'not-like-pets' => _('No me gustan los animales de compañía'),
+    'have-pets' => _('Tengo animales de compañía'), 'no-pets' => _('No tengo animales de compañía'),
+    'allergic' => _('No tengo animales de compañía y soy alérgico')}
+  PARTY = {'like-out' => _('Me gusta mucho salir'), 'not-like-out' => _('No me gusta salir'), 'like-bars' => _('Me gusta ir de bares'),
+    'like-disco' => _('Me gusta ir a la discoteca'), 'like-drink-friends' => _('Me gusta ir a tomar algo con amigos'),
+    'love-party' => _('Me encanta la fiesta'), 'not-like-party' => _('No me gusta nada la fiesta')}
   MUSIC = {'like-music' => _('Me gusta la música'), 'no-like-music' => _('no me gusta la música')}
   MUSIC_GENRE = {'pop' => _('pop'), 'rock' => _('rock'), 'classical' => _('clásica'), 'opera' => _('ópera'), 'heavy' => _('heavy'),
     'everything' => _('de todo un poco')}

@@ -293,8 +293,74 @@
 						
 					</div>
 
-					<div class="tab-pane" id="gustos">	  
-						form
+					<div class="tab-pane" id="gustos">	
+						<article class="form-inline">  
+						<%= form_for @user, :url => profile_path do |user| %>	
+							<hr class="thin">
+							<h5>Dieta</h5>
+							<%= user.label :diet, 'Me gusta la comida' %>
+							<%= user.select :diet, diet_options %>
+							<hr>
+							<h5>Hábitos</h5>
+							<%= user.select :smoke, smoke_options,{}, {:class => 'span3'} %> y 
+							<%= user.select :alcohol, alcohol_options %>
+							<hr>
+							<h5>Matrimonio</h5>
+							<%= user.select :wedding_opinion, wedding_opinion_options, {}, {:class => 'span4'} %>
+							<hr>
+							<h5>Animales</h5>
+							<%= user.select :animals, animals_options, {}, {:class => 'span4'} %>
+							<hr>
+							<h5>Ocio</h5>
+							<%= user.select :party, party_options, {}, {:class => 'span4'} %>
+							<hr class="thin">
+							<%= user.select :music, music_options, {}, {:class => 'span3'} %>
+							<%= user.label :music_genre, ', me gusta el' %>
+							<%= user.select :music_genre, music_genre_options, {}, {:class => 'span2'} %>
+							<hr class="thin">
+							<%= user.select :cinema, cinema_options, {}, {:class => 'span3'} %>
+							<%= user.select :cinema_frequency, cinema_frequency_options, {}, {:class => 'span2'} %>
+							<%= user.label :cinema_genre, ', me gustan las peliculas' %>
+							<%= user.select :cinema_genre, cinema_genre_options, {}, {:class => 'span2'} %>
+							<hr class="thin">
+							Mis aficiones en tiempo libre son:
+							
+							<div class="row">
+								<div class="span9">
+									<%= user.check_box :like_sport %>
+									<%= user.label :like_sport,'Deporte' %>
+									<%= user.check_box :like_read %>
+									<%= user.label :like_read,'Lectura' %>
+									<%= user.check_box :like_cinema %>
+									<%= user.label :like_cinema,'Cine' %>
+									<%= user.check_box :like_quiet %>
+									<%= user.label :like_quiet,'Estar tranquilo en casa' %>
+									<%= user.check_box :like_walk %>
+									<%= user.label :like_walk,'Pasear' %>
+									<%= user.check_box :like_mountain %>
+									<%= user.label :like_mountain,'Montaña' %>
+									<%= user.check_box :like_beach %>
+									<%= user.label :like_beach,'Playa' %>
+									<%= user.check_box :like_family %>
+									<%= user.label :like_family,'Estar con la familia' %>
+									<%= user.check_box :like_friends %>
+									<%= user.label :like_friends,'Estar con mis amigos' %>
+								</div>
+								<div class="span4">
+									
+								</div>
+							</div>
+
+							
+							<hr class="thin">
+
+							
+						</article>
+								
+						<div class="center">
+							<button class="btn btn-info btn-large">Guardar gustos</button>
+						</div>
+						<% end %>
 
 						<hr class="thin">
 				  </div>
