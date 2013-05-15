@@ -18,7 +18,11 @@
       <section role="main">
         <div class="row">
           <div class="span3">
-            <%= render partial: 'shared/sidebar' %>
+            <% if current_user.has_role?(:regular_user) %>
+              <%= render partial: 'shared/sidebar' %>
+            <% else %>
+              <%= render '/shared/sidebar_matchmaker' %>
+            <% end %>
 
             <h1 id="consejos">Consejos</h1>
 

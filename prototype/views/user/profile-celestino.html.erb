@@ -1,48 +1,120 @@
-<%
-	
-	@page = 'profile-celestino';
+<% @current_page = 'profile-celestino'; %>
 
-%>
+<section class="celestinos">
+	<div class="boxed headless">
+		<div class="boxed-inner">
+			<header>
+				<h1>¡Hola Celestin@!</h1>
+			</header>
+		</div>
+	</div>
+	<hr class="thin">
 
-<section class="celestinos boxed">
-	<div class="boxed-inner">
-		<header>
-			<h1>Hola Celestin@ | <span>Realizar recomendación</span></h1>
-		</header>
+	<div class="boxed">
+		<div class="boxed-inner">
+			<article>
+				<header>
+					<h1>Datos de acceso a Cellove</h1>
+				</header>
+				<div class="clearfix">
+					<div class="span4 left">
+						<div class="control-group">
+							<label class="control-label">Email</label>
+							<div class="controls">
+								<input type="text" class="span2" placeholder="ola@kea.se">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Confirmar Email</span></label>
+							<div class="controls">
+								<input type="text" class="span2">
+							</div>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="control-group">
+							<label class="control-label">Contraseña</label>
+							<div class="controls">
+								<input type="password" class="span2">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Confirmar contraseña</span></label>
+							<div class="controls">
+								<input type="password" class="span2">
+							</div>
+						</div>
+					</div>
+				</div>
 
-		<div class="box-title">Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?</div>
-		<div class="celes-box">
-			<ul>
-				<li class="red-heart">
-					Ex pareja
-				</li>
-		
-				<li class="violet-heart">
-					Amigo especial
-				</li>
-		
-				<li class="green-heart">
-					Amigo
-				</li>
-		
-				<li class="yellow-heart">
-					Familiar
-				</li>
-			</ul>
-			<div class="btns">
-				<button class="btn btn-medium btn-info" type="button">Recomendar usuari@ registrad@</button>
-				<button class="btn btn-medium btn-info" type="button">Recomendar usuari@ nuev@</button>
+				<hr>
+
+				<div class="clearfix">
+					<div class="span8">
+						<div class="form-inline">
+							Me llamo <input type="text" class="input-small" placeholder="Josep María"> <input type="text" class="input-small" placeholder="Vives"> pero quiero que mi nombre para mostrar sea <input type="text" class="input-small" placeholder="Matador69"> *
+							<small>* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.</small>
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="center">
+					<button class="btn btn-info">Modificar datos de acceso</button>
+					<hr class="thin">
+				</div>
+
+			</article>
+		</div>
+	</div>
+
+	<hr class="thin">
+
+	<div class="boxed">
+		<div class="boxed-inner">
+
+			<article>
+				<header>
+					<h1>Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?</h1>
+				</header>
+			</article>
+
+			<div class="celes-box">
+				<ul>
+					<li class="red-heart">
+						Ex pareja
+					</li>
+			
+					<li class="violet-heart">
+						Amigo especial
+					</li>
+			
+					<li class="green-heart">
+						Amigo
+					</li>
+			
+					<li class="yellow-heart">
+						Familiar
+					</li>
+				</ul>
+				<div class="btns">
+					<%
+						# Yes. Both buttons perform the same action. Don't ask. ^__^
+					%>
+					<a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ registrad@</a>
+					<a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ nuev@</a>
+				</div>
+			</div>
+
+			<div class="your-celestines">
+				<h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
+				<% @can_delete_celestino.present? %>
+				<% 3.times do %>
+					<%= render '/shared/user/celes-item' %>
+				<% end %>
 			</div>
 		</div>
-
-		<div class="your-celestines">
-			<h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
-			<%= @can_delete_celestino.present? %>
-			<% 3.times do %>
-				<%= render '/shared/user/celes-item' %>
-			<% end %>
-		</div>
-		<hr class="thin">
 	</div>
 
 </section>

@@ -9,6 +9,12 @@ li{
   text-align: right;
 }
 
+.btn-celestino-user {
+  text-transform: uppercase;
+  margin-left: 100px;
+  margin-top: 35px;
+}
+
 /* user */
 
 .user {
@@ -1053,6 +1059,14 @@ section.messages{
 
       i {
         margin-right:5px;
+
+        &.heart {
+          width:14px;
+          height:14px;
+          display:block;
+          float:left;
+          margin-top:5px;
+        }
       }
 
       span {
@@ -1072,7 +1086,50 @@ section.messages{
       }
     }
     
+    &.heart-ex {
+        header {
+          span {
+            color:#f00;
+          }
+          i {
+            background:image-url('sprite-2.png') 0px -308px no-repeat;
+          }
+        }
+      }
 
+      &.heart-special {
+        header {
+          span {
+            color:#8059a3;
+          }
+          i {
+            background:image-url('sprite-2.png') -14px -308px no-repeat;
+          }
+        }
+      }
+
+      &.heart-friend {
+        header {
+          span {
+            color:#9ccd62;
+          }
+          i {
+            background:image-url('sprite-2.png') -27px -308px no-repeat;
+          }
+        }
+      }
+
+      &.heart-family {
+        header {
+          span {
+            color:#fcb600;
+          }
+          i {
+            background:image-url('sprite-2.png') -42px -308px no-repeat;
+          }
+        }
+      }
+      
     .relationship {
       margin-right: 10px;
     }

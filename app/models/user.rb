@@ -1,5 +1,4 @@
 # encoding: utf-8
-
 # == Schema Information
 #
 # Table name: users
@@ -102,6 +101,7 @@
 #  like_family            :string(255)
 #  like_friends           :string(255)
 #  religion_activity      :string(255)
+#  invitation_code        :string(255)
 #
 
 
@@ -111,7 +111,7 @@ require_dependency 'minimum_age_validator'
 require_dependency 'user_retrieval'
 
 class User < ActiveRecord::Base
-  GENDER = {'male' => _('hombre'), 'female' => _('mujer')}
+  GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
   ORIENTATION = {'heterosexual' => _('heterosexual'), 'homosexual' => _('homosexual'), 'bisexual' => _('bisexual')}
   MARITAL_STATUS = {'single' => _('solter@'),'engaged' => _('ocupad@'), 'separated' => _('separad@'), 'divorced' => _('divorciad@'),
     'married' => _('casad@'), 'widowed' => _('viud@')}
@@ -127,14 +127,14 @@ class User < ActiveRecord::Base
   HAIR = {'blond' => _('rubio'),'redhead' => _('pelirrojo'),'gray' => _('gris'),'brown' => _('marrón'),'black' => _('negro')}
   HAIR_STYLE = {'short' => _('corto'),'very short' => _('muy corto'),'large' => _('largo'),'shaved' => _('afeitado'),
     'hairless' => _('sin pelo')}
-  COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bueno'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
+  COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bien'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
     'curvy' => _('con curvas'), 'obese' => _('obeso')}
   SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'),
     'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
     'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
-  ETHNICITY = {'hispanic' => _('hispana'), 'arab' => _('árabe'), 'indian' => _('india'), 'european' => _('europea'), 
-    'african' => _('africana'), 'asian' => _('asiática') }
+  ETHNICITY = {'hispanic' => _('hispano'), 'arab' => _('árabe'), 'indian' => _('indio'), 'european' => _('europeo'), 
+    'african' => _('africano'), 'asian' => _('asiático') }
   STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 
     'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
   JOB = {'artistic' => _('trabajos artísticos y creativos '),'banking' => _('banca, financiero'),'administrative' => _('adminsitrativo'),
@@ -178,7 +178,6 @@ class User < ActiveRecord::Base
   LF_ANIMAL_LIKE = {'hate' => _('odio'), 'love' => _('me gustan'), 'adopte' => _('adopto')}
   LF_ANIMAL_HAVE = {'one' => _('uno'), 'not-having' => _('no tengo'), 'many' => _('muchos')}
 
-
   PICTURE_LIMIT = 12
 
   extend MinimumAgeValidatorHelper
@@ -187,8 +186,12 @@ class User < ActiveRecord::Base
 
   #relations
   has_many :pictures, as: :attachable
-  has_many :characteristics
+  has_many :characteristics, class_name: 'Characteristic', foreign_key: 'user_id'
+  has_many :created_characterstics, class_name: 'Characteristic', foreign_key: 'creator_id'
+
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
+  has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
+  has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
 
   accepts_nested_attributes_for :characteristics
 
@@ -224,8 +227,10 @@ class User < ActiveRecord::Base
     :characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
+  invited_user = lambda {|user| user.has_role?(:invited_user) }
 
-  validates_presence_of :name, :surname
+  validates_presence_of :name
+  validates_presence_of :surname, unless: invited_user
   validates :email, presence: true
   validates :email, confirmation: true, on: :create
   validates :password, presence: true, confirmation: true, on: :create
@@ -241,6 +246,15 @@ class User < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode
 
+  def self.new_invitee(invitee)
+    new do |u|
+      u.email = invitee[:email]
+      u.name = invitee[:name]
+      u.generate_token(:invitation_code)
+      u.add_role :invited_user
+    end
+  end
+  
   def location
     [postal_code, town, country].compact.join(', ')
   end
@@ -254,7 +268,13 @@ class User < ActiveRecord::Base
     end
   end
 
-  scope :popular, where('users.created_at < ?', Time.now).with_role(:user).limit(7)
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
+  end
+
+  scope :popular, where('users.created_at < ?', Time.now).with_role(:regular_user).limit(7)
 
   def full_name
     [name, surname].join(" ")
@@ -266,6 +286,33 @@ class User < ActiveRecord::Base
 
   def is_over_picture_limit?
     self.pictures.count >= PICTURE_LIMIT
+  end
+
+  def confirmed_recommenders
+    self.recommenders.where("confirmed = true and denied = false")
+  end
+
+  def unconfirmed_recommenders
+    self.recommenders.where("confirmed = false and denied = false")
+  end
+
+  def avg_characteristic(characteristic = 'romantic')
+    recommendations = self.confirmed_recommenders
+    if self.confirmed_recommenders.length > 0
+      total = 0
+      recommendations.each do |rec|
+        c = rec.characteristic
+        if c 
+          total += c.send(characteristic.to_sym)
+        end
+      end
+      # Absolute average (as in a number between 1 and 5)
+      avg_absolute = total/self.confirmed_recommenders.length
+      # Return the avg in percent
+      (avg_absolute/5.0)*100
+    else
+      33
+    end
   end
 
 end

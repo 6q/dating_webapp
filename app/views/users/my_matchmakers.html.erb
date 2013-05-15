@@ -1,0 +1,187 @@
+<section class="celestinos">
+  <article class="boxed headless">
+    <div class="boxed-inner">
+      <header>
+        <h1>Mis Celestin@s | <span>Tu índice es del 40% y tienes 2 Celestin@s.</span></h1>
+        <%= link_to "¡Mejora tu índice Cellove!" , "#mejora", :class => 'pull-right' %>
+      </header>
+    </div>
+  </article>
+
+  <hr class="thin"> 
+
+  <ul class="nav nav-tabs" id="celestinos-tab">
+    <li class="active"><a href="#confirmados">Confirmados</a></li>
+    <li><a href="#confirmar">Por confirmar</a></li>
+    <li><a href="#attributes">Atributos</a></li>
+    <li><a href="#mejora">Mejora tu índice Cellove</a></li>
+  </ul>
+  
+  <div class="boxed">
+    <div class="boxed-inner">
+      <div class="tab-content">
+        <!-- begin tabs -->
+        <div class="tab-pane active" id="confirmados">
+          <% current_user.confirmed_recommenders.each do |rec| %>
+            <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
+          <% end %>
+          <%= render '/shared/user/pagination' %>
+        </div>
+
+        <div class="tab-pane" id="confirmar">
+          <% @type = 'por-confirmar' %>
+
+          <% current_user.unconfirmed_recommenders.each do |rec| %>
+            <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
+          <% end %>
+          <%= render '/shared/user/pagination' %>
+        </div>
+
+        <div class="tab-pane" id="attributes">
+            <div class="span4">
+              <h5>Romantic</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('romantic') %>%"></div>
+              </div>
+
+              <h5>Adventurer</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('adventurer') %>%"></div>
+              </div>
+
+              <h5>Friendly</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('friendly') %>%"></div>
+              </div>
+
+              <h5>Familiar</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('familiar') %>%"></div>
+              </div>
+
+              <h5>Hard working</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('hardWorking') %>%"></div>
+              </div>
+
+              <h5>Extroverted</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('extroverted') %>%"></div>
+              </div>
+
+              <h5>Generous</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('generous') %>%"></div>
+              </div>
+
+              <h5>Reserved</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('reserved') %>%"></div>
+              </div>
+
+              <h5>Sociable</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('sociable') %>%"></div>
+              </div>
+
+              <h5>Quiet</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('quiet') %>%"></div>
+              </div>
+
+              <h5>Demanding</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('demanding') %>%"></div>
+              </div>
+
+              <h5>Prideful</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('prideful') %>%"></div>
+              </div>
+            </div>
+
+            <div class="span4 offset1">
+              <h5>Solitary</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('solitary') %>%"></div>
+              </div>
+
+              <h5>Tenacious</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('tenacious') %>%"></div>
+              </div>
+
+              <h5>Attentive</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('attentive') %>%"></div>
+              </div>
+
+              <h5>Good humored</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('goodHumored') %>%"></div>
+              </div>
+
+              <h5>Spontaneous</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('spontaneous') %>%"></div>
+              </div>
+
+              <h5>Restless</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('restless') %>%"></div>
+              </div>
+
+              <h5>Sensitive</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('sensitive') %>%"></div>
+              </div>
+
+              <h5>Shy</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('shy') %>%"></div>
+              </div>
+
+              <h5>Possessive</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('possessive') %>%"></div>
+              </div>
+
+              <h5>Jealous</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('jealous') %>%"></div>
+              </div>
+
+              <h5>Faithful</h5>
+              <div class="progress">
+                <div class="bar" style="width:<%= current_user.avg_characteristic('faithful') %>%"></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="mejora">
+          <div class="clearfix">
+            <div class="white-box">
+              <h4>¿Quieres aumentar tu indice Cellove?</h4>
+              <p>Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos.</p>
+              <form class="form-inline">
+                <input type="text" class="input-medium" placeholder="Email">
+                <button type="submit" class="btn btn-info">OK</button>
+              </form>
+            </div>
+      
+            <div class="white-box">
+              <h4>¿Quieres proponer un Celestin@?</h4>
+              <p>Propón un nuevo celesti@ para que te recomiende y gana más puntos.</p>
+              <form class="form-inline">
+                <input type="text" class="input-medium" placeholder="Email">
+                <button type="submit" class="btn btn-info">OK</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- end tabs -->
+      </div>
+
+    </div>
+  </div>
+</section>

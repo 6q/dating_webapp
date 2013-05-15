@@ -11,73 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509094156) do
-
-  create_table "activities", :force => true do |t|
-    t.string   "activity_type"
-    t.string   "status"
-    t.integer  "conversation_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-    t.text     "body"
-    t.date     "date"
-  end
+ActiveRecord::Schema.define(:version => 20130514162746) do
 
   create_table "characteristics", :force => true do |t|
     t.integer  "user_id"
     t.integer  "creator_id"
-    t.integer  "romantic",    :default => 3, :null => false
-    t.integer  "adventurer",  :default => 3, :null => false
-    t.integer  "friendly",    :default => 3, :null => false
-    t.integer  "familiar",    :default => 3, :null => false
-    t.integer  "hardWorking", :default => 3, :null => false
-    t.integer  "extroverted", :default => 3, :null => false
-    t.integer  "generous",    :default => 3, :null => false
-    t.integer  "reserved",    :default => 3, :null => false
-    t.integer  "sociable",    :default => 3, :null => false
-    t.integer  "quiet",       :default => 3, :null => false
-    t.integer  "demanding",   :default => 3, :null => false
-    t.integer  "prideful",    :default => 3, :null => false
-    t.integer  "solitary",    :default => 3, :null => false
-    t.integer  "tenacious",   :default => 3, :null => false
-    t.integer  "attentive",   :default => 3, :null => false
-    t.integer  "goodHumored", :default => 3, :null => false
-    t.integer  "spontaneous", :default => 3, :null => false
-    t.integer  "restless",    :default => 3, :null => false
-    t.integer  "sensitive",   :default => 3, :null => false
-    t.integer  "shy",         :default => 3, :null => false
-    t.integer  "possessive",  :default => 3, :null => false
-    t.integer  "jealous",     :default => 3, :null => false
-    t.integer  "faithful",    :default => 3, :null => false
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.integer  "romantic",          :default => 3, :null => false
+    t.integer  "adventurer",        :default => 3, :null => false
+    t.integer  "friendly",          :default => 3, :null => false
+    t.integer  "familiar",          :default => 3, :null => false
+    t.integer  "hardWorking",       :default => 3, :null => false
+    t.integer  "extroverted",       :default => 3, :null => false
+    t.integer  "generous",          :default => 3, :null => false
+    t.integer  "reserved",          :default => 3, :null => false
+    t.integer  "sociable",          :default => 3, :null => false
+    t.integer  "quiet",             :default => 3, :null => false
+    t.integer  "demanding",         :default => 3, :null => false
+    t.integer  "prideful",          :default => 3, :null => false
+    t.integer  "solitary",          :default => 3, :null => false
+    t.integer  "tenacious",         :default => 3, :null => false
+    t.integer  "attentive",         :default => 3, :null => false
+    t.integer  "goodHumored",       :default => 3, :null => false
+    t.integer  "spontaneous",       :default => 3, :null => false
+    t.integer  "restless",          :default => 3, :null => false
+    t.integer  "sensitive",         :default => 3, :null => false
+    t.integer  "shy",               :default => 3, :null => false
+    t.integer  "possessive",        :default => 3, :null => false
+    t.integer  "jealous",           :default => 3, :null => false
+    t.integer  "faithful",          :default => 3, :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.integer  "recommendation_id"
   end
-
-  create_table "conversations", :force => true do |t|
-    t.string   "subject",    :default => ""
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-  end
-
-  create_table "notifications", :force => true do |t|
-    t.string   "type"
-    t.text     "body"
-    t.string   "subject",              :default => ""
-    t.integer  "sender_id"
-    t.string   "sender_type"
-    t.integer  "conversation_id"
-    t.boolean  "draft",                :default => false
-    t.datetime "updated_at",                              :null => false
-    t.datetime "created_at",                              :null => false
-    t.integer  "notified_object_id"
-    t.string   "notified_object_type"
-    t.string   "notification_code"
-    t.string   "attachment"
-    t.boolean  "global",               :default => false
-    t.datetime "expires"
-  end
-
-  add_index "notifications", ["conversation_id"], :name => "index_notifications_on_conversation_id"
 
   create_table "pictures", :force => true do |t|
     t.string   "image_uid"
@@ -96,19 +61,16 @@ ActiveRecord::Schema.define(:version => 20130509094156) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "receipts", :force => true do |t|
-    t.integer  "receiver_id"
-    t.string   "receiver_type"
-    t.integer  "notification_id",                                  :null => false
-    t.boolean  "is_read",                       :default => false
-    t.boolean  "trashed",                       :default => false
-    t.boolean  "deleted",                       :default => false
-    t.string   "mailbox_type",    :limit => 25
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
+  create_table "recommendations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "creator_id"
+    t.integer  "relationship"
+    t.text     "description"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "confirmed",    :default => false
+    t.boolean  "denied",       :default => false
   end
-
-  add_index "receipts", ["notification_id"], :name => "index_receipts_on_notification_id"
 
   create_table "regions", :force => true do |t|
     t.string   "name"
@@ -235,6 +197,7 @@ ActiveRecord::Schema.define(:version => 20130509094156) do
     t.string   "like_family"
     t.string   "like_friends"
     t.string   "religion_activity"
+    t.string   "invitation_code"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

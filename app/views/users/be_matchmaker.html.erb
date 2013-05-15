@@ -1,0 +1,46 @@
+<section class="celestinos boxed">
+  <div class="boxed-inner">
+    <header>
+      <h1>Quiero ser Celestin@ | <span>Realizar recomendación</span></h1>
+    </header>
+
+    <div class="box-title">Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?</div>
+    <div class="celes-box">
+      <ul>
+        <li class="red-heart">
+          Ex pareja
+        </li>
+    
+        <li class="violet-heart">
+          Amigo especial
+        </li>
+    
+        <li class="green-heart">
+          Amigo
+        </li>
+    
+        <li class="yellow-heart">
+          Familiar
+        </li>
+      </ul>
+      <div class="btns">
+        <%
+          # Yes. Both buttons perform the same action. Don't ask. ^__^
+        %>
+        <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ registrad@</a>
+        <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ nuev@</a>
+      </div>
+    </div>
+
+    <div class="your-celestines">
+      <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
+      <% current_user.recommendations.each do |rec| %>
+        <%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
+      <% end %>
+    </div>
+    <hr class="thin">
+  </div>
+
+</section>
+
+<%= render '/shared/user/modal_recommend-user' %>

@@ -15,16 +15,26 @@ Cellove::Application.routes.draw do
   resource :profile, only: [:show, :update]
 
   resources :pictures, only: [:create, :destroy, :show, :update]
+  resources :recommendations, only: [:create] do
+    get 'accept',  to: 'recommendations#accept'
+    get 'deny',    to: 'recommendations#deny'
+  end
 
   resources :users do
     resource :chat, only: :show
-    post 'like', to: "relations_controller#like"
-    post 'block', to: "relations_controller#block"
+    post 'like', to: "relationships#like"
+    post 'block', to: "relationships#block"
     resource :rating
     get 'view', on: :collection
   end
   get '/dashboard', to: "dashboard#show", as: :dashboard
-  
+
+  scope "/user" do
+    get 'celestinos-i-want',        to: 'users#be_matchmaker',                    as: :be_matchmaker
+    get 'celestino-become-user',    to: 'users#matchmaker_become_user',           as: :matchmaker_become_user
+    get 'celestinos-of-mine',       to: 'users#my_matchmakers',                   as: :my_matchmakers
+  end
+
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what
   get 'como-funciona' => 'flat_pages#how_it_works', as: :how_it_works

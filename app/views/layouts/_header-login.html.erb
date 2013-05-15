@@ -1,8 +1,14 @@
 <div id="login-box">
   <% if user_signed_in? %>
-    <li>
-      <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
+    <% if current_user.has_role? :matchmaker %>
+      <li>
+        <%= link_to 'Become a user', matchmaker_become_user_path %>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to 'Edit account', edit_user_registration_path %>
+      </li>
+    <% end %>
     <li>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
     </li>
