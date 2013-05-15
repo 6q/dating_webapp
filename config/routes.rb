@@ -16,16 +16,16 @@ Cellove::Application.routes.draw do
 
   resources :pictures, only: [:create, :destroy, :show, :update]
   resources :recommendations, only: [:create] do
-    get 'accept',  to: 'recommendations#accept'
-    get 'deny',    to: 'recommendations#deny'
+    post 'accept',  to: 'recommendations#accept'
+    post 'deny',    to: 'recommendations#deny'
   end
 
   resources :users do
     resource :chat, only: :show
-    post 'like', to: "relationships#like"
-    post 'block', to: "relationships#block"
+    post 'like',      to: "relationships#like"
+    post 'block',     to: "relationships#block"
     resource :rating
-    get 'view', on: :collection
+    get 'view',       on: :collection
   end
   get '/dashboard', to: "dashboard#show", as: :dashboard
 

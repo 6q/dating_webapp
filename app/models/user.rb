@@ -192,8 +192,11 @@ class User < ActiveRecord::Base
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
   has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
   has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
-  has_many :likes, class_name: 'Like', foreign_key: 'user_id'
-  has_many :likers, class_name: 'Like', foreign_key: 'creator_id'
+
+  # user.likers will return people that have liked 'user'
+  has_many :likers, class_name: 'Like', foreign_key: 'user_id'
+  # user.likes will return people who 'user' has liked
+  has_many :likes, class_name: 'Like', foreign_key: 'creator_id'
 
   accepts_nested_attributes_for :characteristics
 
@@ -315,6 +318,14 @@ class User < ActiveRecord::Base
     else
       33
     end
+  end
+
+  def people_who_like_me
+    self.likers.map { |l| l.creator }
+  end
+
+  def people_i_like
+    self.likes.map { |l| l.user }
   end
 
 end

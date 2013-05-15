@@ -42,8 +42,8 @@
 
   <% if (@type == 'por-confirmar') %>
   <div class="choose">
-    <%= link_to '<i class="icon-ok icon-white"></i> Aceptar'.html_safe, recommendation_accept_path(recommendation.id), class: 'btn btn-success' %>
-    <%= link_to '<i class="icon-remove icon-white"></i> Rechazar'.html_safe, recommendation_deny_path(recommendation.id), class: 'btn btn-danger' %>
+    <%= link_to '<i class="icon-ok icon-white"></i> Aceptar'.html_safe, recommendation_accept_path(recommendation.id), class: 'btn btn-success', :method => :post %>
+    <%= link_to '<i class="icon-remove icon-white"></i> Rechazar'.html_safe, recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
   </div>  
   <% end %>
 </article>
