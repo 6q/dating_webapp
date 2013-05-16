@@ -1,4 +1,6 @@
 Cellove::Application.routes.draw do
+  match '/rate' => 'rater#create', :as => 'rate'
+
   authenticated :user do
     root :to => 'dashboard#show'
   end

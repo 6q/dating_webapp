@@ -64,17 +64,10 @@
 #  lf_weight_to           :integer
 #  lf_complexion          :string(255)
 #  lf_child               :string(255)
-#  lf_child_want          :string(255)
 #  lf_smoke               :string(255)
-#  lf_smoke_tolerance     :string(255)
 #  lf_diet                :string(255)
 #  lf_alcohol             :string(255)
-#  lf_drugs               :string(255)
-#  lf_drug_frequency      :string(255)
 #  lf_religion            :string(255)
-#  lf_religion_opinion    :string(255)
-#  lf_animal_like         :string(255)
-#  lf_animal_have         :string(255)
 #  lf_study_level         :string(255)
 #  lf_language            :string(255)
 #  lf_job                 :string(255)
@@ -102,6 +95,25 @@
 #  like_friends           :string(255)
 #  religion_activity      :string(255)
 #  invitation_code        :string(255)
+#  lf_house               :string(255)
+#  lf_hair                :string(255)
+#  lf_hair_style          :string(255)
+#  lf_eyes                :string(255)
+#  lf_like_sport          :string(255)
+#  lf_like_read           :string(255)
+#  lf_like_cinema         :string(255)
+#  lf_like_quiet          :string(255)
+#  lf_like_walk           :string(255)
+#  lf_like_mountain       :string(255)
+#  lf_like_beach          :string(255)
+#  lf_like_family         :string(255)
+#  lf_like_friends        :string(255)
+#  lf_religion_activity   :string(255)
+#  lf_citizenship         :string(255)
+#  lf_ethnicity           :string(255)
+#  lf_animals             :string(255)
+#  lf_party               :string(255)
+#  lf_language_level      :string(255)
 #
 
 
@@ -209,6 +221,9 @@ class User < ActiveRecord::Base
 
   has_many :user_visits
   has_many :visitors, through: :user_visits, source: :visitor
+
+  letsrate_rater
+  letsrate_rateable "match"
 
   accepts_nested_attributes_for :characteristics
 

@@ -111,6 +111,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.8.0)
+    letsrate (1.0.8)
     listen (0.7.3)
     locale (2.0.8)
     lumberjack (1.0.3)
@@ -238,6 +239,7 @@ DEPENDENCIES
   hominid (>= 3.0.5)
   jquery-rails
   kaminari
+  letsrate
   mail_form
   minitest-focus
   minitest-rails
