@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514162746) do
+ActiveRecord::Schema.define(:version => 20130515155451) do
 
   create_table "characteristics", :force => true do |t|
     t.integer  "user_id"
@@ -160,17 +160,10 @@ ActiveRecord::Schema.define(:version => 20130514162746) do
     t.integer  "lf_weight_to"
     t.string   "lf_complexion"
     t.string   "lf_child"
-    t.string   "lf_child_want"
     t.string   "lf_smoke"
-    t.string   "lf_smoke_tolerance"
     t.string   "lf_diet"
     t.string   "lf_alcohol"
-    t.string   "lf_drugs"
-    t.string   "lf_drug_frequency"
     t.string   "lf_religion"
-    t.string   "lf_religion_opinion"
-    t.string   "lf_animal_like"
-    t.string   "lf_animal_have"
     t.string   "lf_study_level"
     t.string   "lf_language"
     t.string   "lf_job"
@@ -198,6 +191,25 @@ ActiveRecord::Schema.define(:version => 20130514162746) do
     t.string   "like_friends"
     t.string   "religion_activity"
     t.string   "invitation_code"
+    t.string   "lf_house"
+    t.string   "lf_hair"
+    t.string   "lf_hair_style"
+    t.string   "lf_eyes"
+    t.string   "lf_like_sport"
+    t.string   "lf_like_read"
+    t.string   "lf_like_cinema"
+    t.string   "lf_like_quiet"
+    t.string   "lf_like_walk"
+    t.string   "lf_like_mountain"
+    t.string   "lf_like_beach"
+    t.string   "lf_like_family"
+    t.string   "lf_like_friends"
+    t.string   "lf_religion_activity"
+    t.string   "lf_citizenship"
+    t.string   "lf_ethnicity"
+    t.string   "lf_animals"
+    t.string   "lf_party"
+    t.string   "lf_language_level"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

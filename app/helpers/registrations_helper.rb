@@ -113,21 +113,20 @@ module RegistrationsHelper
   end
 
 
+  def lf_house_options
+    User::LF_HOUSE.map {|k,v| [v,k]}
+  end
 
   def lf_child_options
     User::LF_CHILD.map {|k,v| [v,k]}
-  end
-
-  def lf_child_want_options
-    User::LF_CHILD_WANT.map {|k,v| [v,k]}
   end
 
   def lf_smoke_options
     User::LF_SMOKE.map {|k,v| [v,k]}
   end
 
-  def lf_smoke_tolerance_options
-    User::LF_SMOKE_TOLERANCE.map {|k,v| [v,k]}
+  def lf_party_options
+    User::LF_PARTY.map {|k,v| [v,k]}
   end
 
   def lf_diet_options
@@ -138,17 +137,14 @@ module RegistrationsHelper
     User::LF_ALCOHOL.map {|k,v| [v,k]}
   end
 
-  def lf_drugs_options
-    User::LF_DRUGS.map {|k,v| [v,k]}
+  def lf_religion_activity_options
+    User::LF_RELIGION_ACTIVITY.map {|k,v| [v,k]}
   end
 
-  def lf_animal_like_options
-    User::LF_ANIMAL_LIKE.map {|k,v| [v,k]}
+  def lf_animals_options
+    User::LF_ANIMALS.map {|k,v| [v,k]}
   end
 
-  def lf_animal_have_options
-    User::LF_ANIMAL_HAVE.map {|k,v| [v,k]}
-  end
 
 
 

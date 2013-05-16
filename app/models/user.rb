@@ -133,8 +133,8 @@ class User < ActiveRecord::Base
     'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
     'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
-  ETHNICITY = {'hispanic' => _('hispano'), 'arab' => _('árabe'), 'indian' => _('indio'), 'european' => _('europeo'), 
-    'african' => _('africano'), 'asian' => _('asiático') }
+  ETHNICITY = {'hispanic' => _('hispana'), 'arab' => _('árabe'), 'indian' => _('india'), 'european' => _('europea'), 
+    'african' => _('africana'), 'asian' => _('asiática') }
   STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 
     'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
   JOB = {'artistic' => _('trabajos artísticos y creativos '),'banking' => _('banca, financiero'),'administrative' => _('adminsitrativo'),
@@ -168,15 +168,24 @@ class User < ActiveRecord::Base
   CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
     'terror' => _('terror')}
 
-  LF_CHILD = {'having' => _('tengo'), 'not having' => _('no tengo')}
-  LF_CHILD_WANT = {'no-more' => _('no quiero más'), 'adopt' => _('quiero adoptar')}
-  LF_SMOKE = {'smoker' => _('fumador'), 'non-smoker' => _('no fumador')}
-  LF_SMOKE_TOLERANCE = {'bothers' => _('no me importa'), 'hate the smoke' => _('odio el humo')}
-  LF_DIET = {'vegan' => _('vegan'), 'meat-eater' => _('meat-eater')}
-  LF_ALCOHOL = {'alcohol-drinker' => _('bebo alcohol'), 'abstemious' => _('abstemio')}
-  LF_DRUGS = {'take-drugs' => _('tome drogas'), 'not-take-drugs' => _('no tome drogas')}
-  LF_ANIMAL_LIKE = {'hate' => _('odio'), 'love' => _('me gustan'), 'adopte' => _('adopto')}
-  LF_ANIMAL_HAVE = {'one' => _('uno'), 'not-having' => _('no tengo'), 'many' => _('muchos')}
+  LF_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
+    'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@')}
+  LF_SMOKE = {'smoker' => 'fume', 'non-smoker' => 'no fume', 'smoker-hater' => 'sea antitabaco','not-mind-smoke' => _('no le moleste el humo'),
+    'smoke-leave-couple' => _('fume pero lo dejaría por su pareja'), 'social-smoker' => _('sea fumador social')}
+  LF_ALCOHOL = {'when-go-out' => _('le guste beber solo cuando salga'), 'not-drink' => _('no beba alcohol'),
+    'occasionally' => _('beba ocasionalmente'), 'drinker' => _('sea bebedor'), 'meke-me-sick' => _('el alcohol no le sienta bien')}
+  LF_PARTY = {'like-out' => _('le guste mucho salir'), 'not-like-out' => _('no le guste salir'), 'like-bars' => _('le guste ir de bares'),
+    'like-disco' => _('le guste ir a la discoteca'), 'like-drink-friends' => _('le guste ir a tomar algo con amigos'),
+    'love-party' => _('le encante la fiesta'), 'not-like-party' => _('no le guste nada la fiesta')}
+  LF_DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'),
+    'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('sea muy maniátic@ con la comida'),
+    'like-all' => _('le guste todo'), 'adapt' => _('se adapte fácilmente')}
+  LF_RELIGION_ACTIVITY = {'essential' => _('la religión sea esencial en su vida'),
+    'care-little' => _('le importe poco la religión'), 'not-care' => _('no le importe en absoluto la religión')}
+  LF_ANIMALS = {'like-pets' => _('le gusten los animales de compañía'), 'not-like-pets' => _('no le gusten los animales de compañía'),
+    'have-pets' => _('tenga animales de compañía'), 'no-pets' => _('no tenga animales de compañía'),
+    'allergic' => _('no tenga animales de compañía y sea alérgic@')}
+
 
   PICTURE_LIMIT = 12
 
