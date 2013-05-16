@@ -87,6 +87,10 @@ FactoryGirl.define do
       likes { [create(:like, user_id: 1, creator_id: 2)] }
     end
 
+    trait :with_visitors do
+      user_visits { [create(:user_visit, user_id: 1, visitor_id: 2)] }
+    end
+
     ignore do
       picture_count 1
       recommendations_count 1
@@ -98,6 +102,7 @@ FactoryGirl.define do
     factory :invited_user, traits: [:invited_data, :invited_role]
     factory :regular_user_with_likers, traits: [:basic_data, :complementary_data, :user_role, :with_likers]
     factory :regular_user_with_likes, traits: [:basic_data, :complementary_data, :user_role, :with_likes]
+    factory :regular_user_with_visitors, traits: [:basic_data, :complementary_data, :user_role, :with_visitors]
 
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
@@ -116,6 +121,10 @@ FactoryGirl.define do
   end
 
   factory :like do
+  end
+
+  factory :user_visit do
+    visited_at Time.now
   end
 
   factory :characteristic do

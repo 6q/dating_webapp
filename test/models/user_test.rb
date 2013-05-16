@@ -66,6 +66,15 @@ describe User do
     u.likers[0].class.must_equal Like
   end
 
+  it 'must have a user_visits collection' do
+    u = create(:regular_user_with_visitors)
+    u.must_respond_to :visitors
+    u.must_respond_to :user_visits
+    u.user_visits.class.must_equal Array
+    u.user_visits.size.must_be :>=, 1
+    u.user_visits[0].class.must_equal UserVisit
+  end
+
   # Class method tests
   it 'must have a correct location' do
     u = create(:regular_user, postal_code: '08009', town: 'Barcelona', country: 'Spain')
@@ -88,6 +97,34 @@ describe User do
   end
 
   it 'unconfirmed_recommenders returns the right recommendations' do
+  end
+
+  it 'must save the correct visitor' do
+    @user = create(:regular_user)
+    @visitor = create(:regular_user)
+    @visitor.visited(@user)
+
+    @user.user_visits.class.must_equal Array
+    @user.visitors.class.must_equal Array
+    @user.visitors.length.must_be :>=, 1
+    @user.visitors[0].class.must_equal User
+
+    @user.user_visits[0].visited_at.class.must_equal ActiveSupport::TimeWithZone
+    @user.user_visits[0].visitor_id.must_equal @visitor.id
+    @user.user_visits[0].user_id.must_equal @user.id
+
+    @user.visitors[0].id.must_equal @visitor.id
+  end
+
+  it 'must update the visited time' do
+    @user = create(:regular_user)
+    @visitor = create(:regular_user)
+    @visitor.visited(@user)
+    time = @user.user_visits[0].visited_at
+    @visitor.visited(@user)
+    @user.user_visits[0].visited_at.must_be :>=, time
+    
+    @user.visitors.length.must_equal 1
   end
 
 end

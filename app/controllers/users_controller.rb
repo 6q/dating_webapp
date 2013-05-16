@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
 
+  after_filter :user_visit, only: [:show]
+
   def index
     @users = User.all
   end
@@ -58,4 +60,11 @@ class UsersController < ApplicationController
   def likes_of_mine
     render 'likes_of_mine', layout: "logged_in"
   end
+
+  private
+    def user_visit
+      if @user && current_user != @user
+        current_user.visited(@user)
+      end
+    end
 end

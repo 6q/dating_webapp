@@ -198,6 +198,9 @@ class User < ActiveRecord::Base
   # user.likes will return people who 'user' has liked
   has_many :likes, class_name: 'Like', foreign_key: 'creator_id'
 
+  has_many :user_visits
+  has_many :visitors, through: :user_visits, source: :visitor
+
   accepts_nested_attributes_for :characteristics
 
   rolify
@@ -328,6 +331,21 @@ class User < ActiveRecord::Base
 
   def people_i_like
     self.likes.map { |l| l.user }
+  end
+
+  # Saves a new record in the UserVisit table,
+  # where the current user visits the 'user' passed as a parameter.
+  # If a tuple (user_id, visitor_id) already exists in UserVisit,
+  # the visited_at attribute is updated
+  def visited(user)
+    visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
+    if visit
+      visit.update_attributes({ visited_at: Time.now })
+    else
+      visit = user.user_visits.build({ visited_at: Time.now })
+      visit.visitor_id = self.id
+      visit.save
+    end
   end
 
 end

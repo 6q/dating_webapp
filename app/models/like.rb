@@ -15,4 +15,5 @@ class Like < ActiveRecord::Base
   belongs_to :user, class_name: "User", foreign_key: :user_id
 
   validates :user_id, uniqueness: { scope: :creator_id }
+  validates_presence_of :user_id, :creator_id
 end
