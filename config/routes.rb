@@ -48,4 +48,14 @@ Cellove::Application.routes.draw do
   post 'contact' => 'flat_pages#contact_form', as: :contact_form
   get 'media-prensa' => 'flat_pages#media_press', as: :media_press
   get 'anuncio-tv/:id' => 'flat_pages#tv_spot', as: :tv_spot
+
+  resources :messages
+  resources :conversations do 
+    resources :activities
+  end
+
+  resources :activities, only: [:new, :create] do
+    post 'reject'
+  end
+
 end

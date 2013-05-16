@@ -188,3 +188,6 @@ es:
   errors:
     messages:
       under_age: "Tienes que ser mayor de edad"
+
+  mailboxer:
+    delete_confirm: '¿Seguro que deseas eliminar el mensaje?'
