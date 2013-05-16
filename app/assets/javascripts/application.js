@@ -18,3 +18,5 @@
 //= require turbolinks
 //= require user_functions
 //= require_tree .
+
+

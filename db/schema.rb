@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515155451) do
+ActiveRecord::Schema.define(:version => 20130516134631) do
 
   create_table "characteristics", :force => true do |t|
     t.integer  "user_id"
@@ -127,8 +127,8 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.float    "longitude"
     t.string   "physical_style"
     t.string   "physical_desc"
-    t.integer  "height"
-    t.integer  "weight"
+    t.decimal  "height"
+    t.decimal  "weight"
     t.string   "complexion"
     t.string   "child"
     t.string   "smoke"
@@ -154,10 +154,10 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.string   "lf_postal_code"
     t.string   "lf_physical_style"
     t.string   "lf_physical_desc"
-    t.integer  "lf_height_between"
-    t.integer  "lf_height_to"
-    t.integer  "lf_weight_between"
-    t.integer  "lf_weight_to"
+    t.decimal  "lf_height_between"
+    t.decimal  "lf_height_to"
+    t.decimal  "lf_weight_between"
+    t.decimal  "lf_weight_to"
     t.string   "lf_complexion"
     t.string   "lf_child"
     t.string   "lf_smoke"
@@ -168,7 +168,6 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.string   "lf_language"
     t.string   "lf_job"
     t.string   "lf_salary"
-    t.string   "lf_description"
     t.string   "house"
     t.string   "eyes"
     t.string   "hair"
