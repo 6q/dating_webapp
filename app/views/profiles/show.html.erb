@@ -290,6 +290,7 @@
 							<button type="submit" class="btn btn-info btn-large">Guardar cambios</button>
 							<hr class="thin">
 						</div>
+						<% end %>
 						
 					</div>
 
@@ -399,8 +400,11 @@
 								<%= user.label :lf_age_between, 'de entre' %>
 								<%= user.text_field :lf_age_between, :class => 'input-mini' %>
 								<%= user.label :lf_age_to, 'y' %>
-								<%= user.text_field :lf_age_to, :class => 'input-mini' %>años
+								<%= user.text_field :lf_age_to, :class => 'input-mini' %>
 								años.
+								<hr class="thin">
+								<%= user.label :lf_child, 'Que ' %>
+								<%= user.select :lf_child, lf_child_options %>
       					<hr class="thin">
       					<%= user.label :lf_house, 'Que viva' %>
       					<%= user.select :lf_house, lf_house_options, {}, :class => 'span3' %>
@@ -523,7 +527,7 @@
 								<%= user.label :lf_salary, 'con ganancias anuales de' %>
 								<%= user.text_field :lf_salary, :class =>'span1' %>€
 								
-							<% end %>
+							
 
 						</article>
 						<hr>
@@ -649,8 +653,8 @@
 						<hr>
 									
 						<% current_user.recommendations.each do |rec| %>
-       			 <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
-      			<% end %>
+							<%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
+						<% end %>
 						<hr class="thin">
 						<div class="center"><a href="/user/celestinos-of-mine#tab_mejora" class="btn btn-info btn-large">¡Consigue más puntos!</a></div>
 					</div>
