@@ -36,6 +36,7 @@ Cellove::Application.routes.draw do
 
     get 'likes',                    to: 'users#likes',                            as: :user_likes
     get 'likes-of-mine',            to: 'users#likes_of_mine',                    as: :user_likes_of_mine
+    get 'hits',                     to: 'users#hits',                             as: :user_hits
   end
 
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal

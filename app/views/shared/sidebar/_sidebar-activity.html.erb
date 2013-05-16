@@ -3,7 +3,11 @@
 		<h1>Actividad reciente</h1>
 	</header>
 	<ul>
-		<li><%= link_to 'Me han visitado <span>2</span>'.html_safe, '/user/hits' %></li>
+		<%
+			number_of_visits = current_user.number_of_visitors_since_last_login
+			visit_str = ('<span>' + number_of_visits.to_s + '</span>').html_safe unless number_of_visits == 0
+		%>
+		<li><%= link_to ('Me han visitado' + (!visit_str.nil? ? visit_str : '')).html_safe, user_hits_path %></li>
 		<li><%= link_to 'Les he gustado', user_likes_path %></li>
 		<li><%= link_to 'Hacemos buena pareja', '/user/nice-couple' %></li>
 		<li><%= link_to 'Mensajes', '/user/messages' %></li>

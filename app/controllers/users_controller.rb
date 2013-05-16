@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
 
   after_filter :user_visit, only: [:show]
+  before_filter :set_visit_seen, only: [:hits]
 
   def index
     @users = User.all
@@ -49,7 +50,7 @@ class UsersController < ApplicationController
   end
 
   def my_matchmakers
-    render 'my_matchmakers', layout: "logged_in"    
+    render 'my_matchmakers', layout: "logged_in"
   end
 
   # Interaction routes
@@ -61,10 +62,18 @@ class UsersController < ApplicationController
     render 'likes_of_mine', layout: "logged_in"
   end
 
+  def hits
+    render 'hits', layout: "logged_in"
+  end
+
   private
     def user_visit
       if @user && current_user != @user
         current_user.visited(@user)
       end
+    end
+
+    def set_visit_seen
+      current_user.set_all_visits_seen
     end
 end

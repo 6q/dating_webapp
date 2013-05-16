@@ -8,10 +8,11 @@
 #  visited_at :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  seen       :boolean          default(FALSE)
 #
 
 class UserVisit < ActiveRecord::Base
-  attr_accessible :visited_at
+  attr_accessible :visited_at, :seen
 
   belongs_to :user
   belongs_to :visitor, :foreign_key => 'visitor_id', :class_name => 'User'

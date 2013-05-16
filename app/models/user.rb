@@ -340,10 +340,22 @@ class User < ActiveRecord::Base
   def visited(user)
     visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
     if visit
-      visit.update_attributes({ visited_at: Time.now })
+      visit.update_attributes({ visited_at: Time.now, seen: false })
     else
       visit = user.user_visits.build({ visited_at: Time.now })
       visit.visitor_id = self.id
+      visit.save
+    end
+  end
+
+  def number_of_visitors_since_last_login
+    UserVisit.count(:conditions => "user_id = " + self.id.to_s + " AND seen = false")
+  end
+
+  def set_all_visits_seen
+    visits = UserVisit.where("user_id = ? AND seen = false", self.id)
+    visits.each do |visit|
+      visit.seen = true
       visit.save
     end
   end
