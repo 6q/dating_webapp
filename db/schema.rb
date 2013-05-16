@@ -131,6 +131,20 @@ ActiveRecord::Schema.define(:version => 20130516104951029) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "user_blocks", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "blocked_user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "user_hides", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "hidden_user_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "user_visits", :force => true do |t|
     t.integer  "user_id"
     t.integer  "visitor_id"

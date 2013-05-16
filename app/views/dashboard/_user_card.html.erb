@@ -18,11 +18,11 @@
       <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>
       <li class="chat"><%= link_to 'Chat', user_chat_path(user) %></li>
       <li class="like"><%= link_to 'Like', user_like_path(user), :method => :post %></li>
-      <li class="block"><%= link_to 'Block', user_block_path(user), "data-toggle" => "modal", :method => :post %></li>
+      <% block_modal_id = '#user-block-' + user.id.to_s %>
+      <li class="block"><%= link_to 'Block', block_modal_id, "data-toggle" => "modal" %></li>
     </ul>
 
     <% if @interactions == true %>
-
       <div class="interactions">
         <div class="punctuations">
           <strong><%= _("Tu dices:") %></strong> <span class="stars stars-5">****</span>
@@ -30,7 +30,8 @@
         </div>
         <%= link_to 'Proponer actividad','#activity-proposal', 'data-toggle' => 'modal' %>
       </div>
-
     <% end %>
   </article>
 </li>
+
+<%= render 'shared/user/modal_user-block', user: user %>

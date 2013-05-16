@@ -222,6 +222,13 @@ class User < ActiveRecord::Base
   has_many :user_visits
   has_many :visitors, through: :user_visits, source: :visitor
 
+  # Useful for search later on
+  scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
+  has_many :user_blocks
+  scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
+  has_many :user_hides
+  #default_scope includes(:user_hides).where(:user_hides => { :user_id => nil })
+
   letsrate_rater
   letsrate_rateable "match"
 

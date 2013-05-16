@@ -82,11 +82,10 @@ describe User do
   end
 
   # This test randomly fails. WTF?
-  # it 'must have a correct calculated age' do
-  #   u = create(:regular_user, birth_date_day: Date.today.day,
-  #     birth_date_month: Date.today.month, birth_date_year: '1988')
-  #   u.age.must_equal 25
-  # end
+  it 'must have a correct calculated age' do
+    u = create(:regular_user, birth_date: 25.years.ago)
+    u.age.must_equal 25
+  end
 
   it 'full name should be correct' do
     u = create(:regular_user, name: 'Philip', surname: 'De Smedt')

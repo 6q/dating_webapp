@@ -24,8 +24,8 @@ Cellove::Application.routes.draw do
 
   resources :users do
     resource :chat, only: :show
-    post 'like',      to: "relationships#like"
-    post 'block',     to: "relationships#block"
+    post 'like',              to: "relationships#like"
+    post 'block_hide',        to: "relationships#block_hide"
     resource :rating
     get 'view',       on: :collection
   end
