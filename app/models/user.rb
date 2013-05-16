@@ -129,12 +129,12 @@ class User < ActiveRecord::Base
     'hairless' => _('sin pelo')}
   COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bien'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
     'curvy' => _('con curvas'), 'obese' => _('obeso')}
-  SMOKE = {'smoker' => 'fumo', 'non-smoker' => 'no fumo', 'smoker-hater' => 'soy antitabaco','not-mind-smoke' => _('no me molesta el humo'),
-    'smoke-leave-couple' => _('fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('soy fumador social')}
+  SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'),
+    'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
     'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
-  ETHNICITY = {'hispanic' => _('hispano'), 'arab' => _('árabe'), 'indian' => _('indio'), 'european' => _('europeo'), 
-    'african' => _('africano'), 'asian' => _('asiático') }
+  ETHNICITY = {'hispanic' => _('hispana'), 'arab' => _('árabe'), 'indian' => _('india'), 'european' => _('europea'), 
+    'african' => _('africana'), 'asian' => _('asiática') }
   STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 
     'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
   JOB = {'artistic' => _('trabajos artísticos y creativos '),'banking' => _('banca, financiero'),'administrative' => _('adminsitrativo'),
@@ -147,19 +147,19 @@ class User < ActiveRecord::Base
   DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'),
     'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('soy muy maniátic@ con la comida'),
     'like-all' => _('me gusta todo'), 'adapt' => _('me adapto fácilmente')}
-  ALCOHOL = {'when-go-out' => _('Me gusta beber solo cuando salgo'), 'not-drink' => _('no bebo alcohol'),
+  ALCOHOL = {'when-go-out' => _('me gusta beber solo cuando salgo'), 'not-drink' => _('no bebo alcohol'),
     'occasionally' => _('bebo ocasionalmente'), 'drinker' => _('soy bebedor'), 'meke-me-sick' => _('el alcohol no me sienta bien')}
-  WEDDING_OPINION = {'would-marry' => _('Me gustaría casarme'), 'would-not-marry' => _('no me gustaría casarme'), 
-    'not-believe' => _('no creo en el matrimonio'), 'married-no-repeat'=> _('ya he estado casado y no quiero repetir'),
-    'married-repeat' => _('ya he estado casado y quiero repetir'), 'wonderful' => _('el matrimonio es algo maravilloso')}
-  RELIGION_ACTIVITY = {'essential' => _('Para mi la religión es esencial en mi vida'),
+  WEDDING_OPINION = {'would-marry' => _('Me gustaría casarme'), 'would-not-marry' => _('No me gustaría casarme'), 
+    'not-believe' => _('No creo en el matrimonio'), 'married-no-repeat'=> _('Ya he estado casado y no quiero repetir'),
+    'married-repeat' => _('Ya he estado casado y quiero repetir'), 'wonderful' => _('El matrimonio es algo maravilloso')}
+  RELIGION_ACTIVITY = {'essential' => _('para mi la religión es esencial en mi vida'),
     'care-little' => _('me importa poco la religión'), 'not-care' => _('no me importa en absoluto la religión')}
-  ANIMALS = {'like-pets' => _('Me gustan los animales de compañía'), 'not-like-pets' => _('no me gustan los animales de compañía'),
-    'have-pets' => _('tengo animales de compañía'), 'no-pets' => _('no tengo animales de compañía'),
-    'allergic' => _('no tengo animales de compañía y soy alérgico')}
-  PARTY = {'like-out' => _('Me gusta mucho salir'), 'not-like-out' => _('no me gusta salir'), 'like-bars' => _('me gusta ir de bares'),
-    'like-disco' => _('me gusta ir a la discoteca'), 'like-drink-friends' => _('me gusta ir a tomar algo con amigos'),
-    'love-party' => _('me encanta la fiesta'), 'not-like-party' => _('no me gusta nada la fiesta')}
+  ANIMALS = {'like-pets' => _('Me gustan los animales de compañía'), 'not-like-pets' => _('No me gustan los animales de compañía'),
+    'have-pets' => _('Tengo animales de compañía'), 'no-pets' => _('No tengo animales de compañía'),
+    'allergic' => _('No tengo animales de compañía y soy alérgico')}
+  PARTY = {'like-out' => _('Me gusta mucho salir'), 'not-like-out' => _('No me gusta salir'), 'like-bars' => _('Me gusta ir de bares'),
+    'like-disco' => _('Me gusta ir a la discoteca'), 'like-drink-friends' => _('Me gusta ir a tomar algo con amigos'),
+    'love-party' => _('Me encanta la fiesta'), 'not-like-party' => _('No me gusta nada la fiesta')}
   MUSIC = {'like-music' => _('Me gusta la música'), 'no-like-music' => _('no me gusta la música')}
   MUSIC_GENRE = {'pop' => _('pop'), 'rock' => _('rock'), 'classical' => _('clásica'), 'opera' => _('ópera'), 'heavy' => _('heavy'),
     'everything' => _('de todo un poco')}
@@ -168,15 +168,27 @@ class User < ActiveRecord::Base
   CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
     'terror' => _('terror')}
 
-  LF_CHILD = {'having' => _('tengo'), 'not having' => _('no tengo')}
-  LF_CHILD_WANT = {'no-more' => _('no quiero más'), 'adopt' => _('quiero adoptar')}
-  LF_SMOKE = {'smoker' => _('fumador'), 'non-smoker' => _('no fumador')}
-  LF_SMOKE_TOLERANCE = {'bothers' => _('no me importa'), 'hate the smoke' => _('odio el humo')}
-  LF_DIET = {'vegan' => _('vegan'), 'meat-eater' => _('meat-eater')}
-  LF_ALCOHOL = {'alcohol-drinker' => _('bebo alcohol'), 'abstemious' => _('abstemio')}
-  LF_DRUGS = {'take-drugs' => _('tome drogas'), 'not-take-drugs' => _('no tome drogas')}
-  LF_ANIMAL_LIKE = {'hate' => _('odio'), 'love' => _('me gustan'), 'adopte' => _('adopto')}
-  LF_ANIMAL_HAVE = {'one' => _('uno'), 'not-having' => _('no tengo'), 'many' => _('muchos')}
+  LF_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
+    'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@')}
+  LF_SMOKE = {'smoker' => 'fume', 'non-smoker' => 'no fume', 'smoker-hater' => 'sea antitabaco','not-mind-smoke' => _('no le moleste el humo'),
+    'smoke-leave-couple' => _('fume pero lo dejaría por su pareja'), 'social-smoker' => _('sea fumador social')}
+  LF_ALCOHOL = {'when-go-out' => _('le guste beber solo cuando salga'), 'not-drink' => _('no beba alcohol'),
+    'occasionally' => _('beba ocasionalmente'), 'drinker' => _('sea bebedor'), 'meke-me-sick' => _('el alcohol no le sienta bien')}
+  LF_PARTY = {'like-out' => _('le guste mucho salir'), 'not-like-out' => _('no le guste salir'), 'like-bars' => _('le guste ir de bares'),
+    'like-disco' => _('le guste ir a la discoteca'), 'like-drink-friends' => _('le guste ir a tomar algo con amigos'),
+    'love-party' => _('le encante la fiesta'), 'not-like-party' => _('no le guste nada la fiesta')}
+  LF_DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'),
+    'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('sea muy maniátic@ con la comida'),
+    'like-all' => _('le guste todo'), 'adapt' => _('se adapte fácilmente')}
+  LF_RELIGION_ACTIVITY = {'essential' => _('la religión sea esencial en su vida'),
+    'care-little' => _('le importe poco la religión'), 'not-care' => _('no le importe en absoluto la religión')}
+  LF_ANIMALS = {'like-pets' => _('le gusten los animales de compañía'), 'not-like-pets' => _('no le gusten los animales de compañía'),
+    'have-pets' => _('tenga animales de compañía'), 'no-pets' => _('no tenga animales de compañía'),
+    'allergic' => _('no tenga animales de compañía y sea alérgic@')}
+  LF_CHILD = { 'have-children' => _('tenga hijos'),'no-children' => _('no tenga hijos'),'no-want-children' => _('no tenga hijos, y no quiera tener'),
+    'no-kids-i-want' => _('no tenga hijos, pero quiera tener'),'have-children-no-want-more' => _('tenga hijos, y no quiera tener mas '),
+    'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
+
 
   PICTURE_LIMIT = 12
 
@@ -218,14 +230,18 @@ class User < ActiveRecord::Base
     :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions, 
     :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house, 
     :eyes, :hair, :hair_style, :religion_activity, :citizenship, :ethnicity, :language_level,
-    :smoke, :diet, :alcohol, :drugs, :drug_frequency, :religion, 
-    :religion_opinion, :animal_like, :animal_have, :study_level, :language, :job, :salary, 
+    :smoke, :diet, :alcohol, :drugs, :drug_frequency, :religion, :religion_opinion, 
+    :study_level, :language, :job, :salary, :wedding_opinion, :animals, :music_genre, 
+    :cinema_frequency, :cinema_genre, :like_sport, :like_read, :like_cinema, :like_walk, 
+    :like_beach, :like_mountain, :like_quiet, :like_family, :like_friends,
     :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation, 
     :lf_marital_status, :lf_age_between, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
     :lf_physical_desc, :lf_physical_style, :lf_height_between, :lf_weight_to, :lf_weight_between,
-    :lf_complexion, :lf_child, :lf_child_want, :lf_smoke, :lf_smoke_tolerance, :lf_diet, 
-    :lf_alcohol, :lf_drugs, :lf_drug_frequency, :lf_religion, :lf_religion_opinion, 
-    :lf_animal_like, :lf_animal_have, :lf_study_level, :lf_language, :lf_job, :lf_salary,
+    :lf_complexion, :lf_child, :lf_smoke, :lf_diet, :lf_alcohol, :lf_drugs, :lf_religion, 
+    :lf_study_level, :lf_language, :lf_job, :lf_salary,:lf_house, :lf_hair, :lf_hair_style, 
+    :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals, 
+    :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
+    :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level,
     :characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
