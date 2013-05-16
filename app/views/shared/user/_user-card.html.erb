@@ -1,19 +1,19 @@
 <article class="user-card online">
   <ul class="pics">
-    <li><a href="/user/user-profile"><img src="/users/placeholder1.jpg"></a></li>
-    <li><a href="/user/user-profile"><img src="/users/placeholder2.jpg"></a></li>
+    <li><%= link_to user.profile_picture, user_path(user) %></li>
+    <li><%= link_to user.profile_picture, user_path(user) %></li>
   </ul>
   <header>
     <% if @timestamp == true %>
-    <small>Hace 2 horas</small>
+      <small>#TODO: MAKE DYNAMIC -- Hace 2 horas</small>
     <% end %>
-    <h1><%= link_to 'Maria Teresa', '/user/user-profile' %><br><span>Santa Coloma de...</span><br>24 años</h1>
+    <h1><%= link_to user.full_name, user_path(user) %><br><span><%= user.town %></span><br><%= user.age %> años</h1>
   </header>
   <ul class="actions clearfix">
     <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>
     <li class="chat"><%= link_to 'Chat', '/user/chat/' %></li>
-    <li class="like"><%= link_to 'Like', '/user/likes-of-mine/' %></li>
-    <li class="block"><%= link_to 'Block', '#user-block', 'data-toggle' => 'modal' %></li>
+    <li class="like"><%= link_to 'Like', user_like_path(user), :method => :post %></li>
+    <li class="block"><%= link_to 'Block', user_block_path(user), 'data-toggle' => 'modal', :method => :post %></li>
   </ul>
 
   <% if @interactions == true %>

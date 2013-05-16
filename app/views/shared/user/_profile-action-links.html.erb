@@ -2,7 +2,7 @@
 	<ul class="clearfix">
 		<li class="message"><%= link_to '<i></i>Enviar mensaje'.html_safe, '#fast-reply', 'data-toggle' => 'modal' %></li>
     	<li class="chat"><%= link_to '<i></i>Chatear', '/user/chat/'.html_safe %></li>
-    	<li class="like"><%= link_to '<i></i>¡Me gusta!'.html_safe, '/user/likes-of-mine/' %></li>
+    	<li class="like"><%= link_to '<i></i>¡Me gusta!'.html_safe, user_likes_of_mine_path %></li>
     	<li class="block"><%= link_to '<i></i>Bloquear', '#user-block'.html_safe, 'data-toggle' => 'modal' %></li>
 	</ul>
 </article>

@@ -49,4 +49,13 @@ class UsersController < ApplicationController
   def my_matchmakers
     render 'my_matchmakers', layout: "logged_in"    
   end
+
+  # Interaction routes
+  def likes
+    render 'likes', layout: "logged_in"
+  end
+
+  def likes_of_mine
+    render 'likes_of_mine', layout: "logged_in"
+  end
 end

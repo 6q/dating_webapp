@@ -29,6 +29,6 @@
         </div>
       </a>
     </li>
-		<li><%= link_to 'Te gustan (269)', '/user/likes-of-mine' %></li>
+		<li><%= link_to 'Te gustan (' + current_user.people_i_like.length.to_s + ')', user_likes_of_mine_path %></li>
 	</ul>
 </section>
