@@ -646,13 +646,11 @@
 							<% end %>
 						</div>
 						<div class="clearfix"></div>
-
-									
-						<% (1..3).each do %>
-							/shared/user/celes-item
 						<hr>
-						<% end %>
-							/shared/user/celes-item
+									
+						<% current_user.recommendations.each do |rec| %>
+       			 <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
+      			<% end %>
 						<hr class="thin">
 						<div class="center"><a href="/user/celestinos-of-mine#tab_mejora" class="btn btn-info btn-large">¡Consigue más puntos!</a></div>
 					</div>
