@@ -398,15 +398,13 @@ class User < ActiveRecord::Base
   def blocked_and_hidden_users
     users = []
     self.blocked_users.each do |user|
-      u = user
-      u.blocked = true
-      u.hidden = true if self.hidden_users.include?(user)
-      users.push(u)
+      user.blocked = true
+      user.hidden = true if self.hidden_users.include?(user)
+      users.push(user)
     end
     self.hidden_users.each do |user|
-      u = user
-      u.hidden = true
-      users.push(u) if !users.include?(user)
+      user.hidden = true
+      users.push(user) if !users.include?(user)
     end
     return users
   end

@@ -17,7 +17,7 @@ FactoryGirl.define do
       marital_status{ User::MARITAL_STATUS.keys.sample }
       orientation{ User::ORIENTATION.keys.sample }
       gender{ User::GENDER.keys.sample }
-      birth_date{ Date.today << ((rand(10) + 18) * 12) }
+      birth_date{ Date.today << ((rand(10) + 19) * 12) }
       terms_and_conditions "1"
     end
 

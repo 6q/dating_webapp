@@ -100,7 +100,7 @@ describe UserRegistrationsController do
       put :update, id: @user, user: attributes_for(:matchmaker,
         town: 'Barcelona', country: 'Spain', postal_code: '08009',
         marital_status: 'single', orientation: 'heterosexual', gender: 'male',
-        birth_date: Date.today)
+        birth_date: Date.today << 12*19)
 
       @user.reload
       @user.postal_code.must_equal '08009'
