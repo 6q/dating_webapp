@@ -1,4 +1,18 @@
 #encoding: utf-8
+# == Schema Information
+#
+# Table name: activities
+#
+#  id              :integer          not null, primary key
+#  activity_type   :string(255)
+#  status          :string(255)
+#  conversation_id :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  body            :text
+#  date            :date
+#
+
 class Activity < ActiveRecord::Base
   attr_accessible :activity_type, :conversation_id, :status, :body, :date
 

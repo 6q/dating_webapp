@@ -54,17 +54,17 @@ ActiveRecord::Schema.define(:version => 20130516104951029) do
     t.integer  "recommendation_id"
   end
 
+  create_table "conversations", :force => true do |t|
+    t.string   "subject",    :default => ""
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
   create_table "likes", :force => true do |t|
     t.integer  "user_id"
     t.integer  "creator_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "conversations", :force => true do |t|
-    t.string   "subject",    :default => ""
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
   end
 
   create_table "notifications", :force => true do |t|
