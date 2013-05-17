@@ -23,12 +23,12 @@
     <%= form_for(current_user, url: user_block_hide_path(user), :method => :post) do |f| %>
       <fieldset>
         <%= fields_for user_hide do |f1| %>
-          <%= f1.check_box :hidden_user_id, checked: is_hidden, id: 'user[hidden_user_'+user.id.to_s+']' %>
-          <%= f1.label :hidden_user_id, "No quiero verla más", class: 'checkbox inline', for: 'user[hidden_user_'+user.id.to_s+']' %>
+          <%= f1.check_box :hidden_user, checked: is_hidden, id: 'user[hidden_user_'+user.id.to_s+']' %>
+          <%= f1.label :hidden_user, "No quiero verla más", class: 'checkbox inline', for: 'user[hidden_user_'+user.id.to_s+']' %>
         <% end %>
         <%= fields_for user_block do |f2| %>
-          <%= f2.check_box :blocked_user_id, checked: is_blocked, id: 'user[blocked_user_'+user.id.to_s+']' %>
-          <%= f2.label :blocked_user_id, "No quiero que me vea más", class: 'checkbox inline', for: 'user[blocked_user_'+user.id.to_s+']' %>
+          <%= f2.check_box :blocked_user, checked: is_blocked, id: 'user[blocked_user_'+user.id.to_s+']' %>
+          <%= f2.label :blocked_user, "No quiero que me vea más", class: 'checkbox inline', for: 'user[blocked_user_'+user.id.to_s+']' %>
         <% end %>
       </fieldset>
   </div>

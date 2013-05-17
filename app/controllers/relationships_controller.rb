@@ -12,8 +12,8 @@ class RelationshipsController < ApplicationController
   end
 
   def block_hide
-    user_block = params[:user_block][:blocked_user_id]
-    user_hide = params[:user_hide][:hidden_user_id]
+    user_block = params[:user_block][:blocked_user]
+    user_hide = params[:user_hide][:hidden_user]
     user = User.find(params[:user_id])
 
     if user
@@ -33,7 +33,31 @@ class RelationshipsController < ApplicationController
           user_hidden.delete
         end
       end
-      redirect_to dashboard_path
     end
+    redirect_to dashboard_path
+  end
+
+  def block_hide_settings
+    params[:user].each do |user|
+      logger.debug user
+      if user[1]["hidden_user"] == "1"
+        current_user.user_hides.create({ hidden_user_id: user[0] })
+      else
+        user_hidden = current_user.user_hides.where("hidden_user_id = ?", user[0]).first
+        if !user_hidden.nil?
+          user_hidden.delete
+        end
+      end
+
+      if user[1]["blocked_user"] == "1"
+        current_user.user_blocks.create({ blocked_user_id: user[0] })
+      else
+        user_blocked = current_user.user_blocks.where("blocked_user_id = ?", user[0]).first
+        if !user_blocked.nil?
+          user_blocked.delete
+        end
+      end
+    end
+    redirect_to settings_path
   end
 end

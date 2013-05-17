@@ -38,6 +38,10 @@ class UsersController < ApplicationController
     @users = User.with_role(:user).last(7)
   end
 
+  def settings
+    render 'settings', layout: "logged_in"
+  end
+
   # Matchmaker routes
   def be_matchmaker
     @recommendation = Recommendation.new

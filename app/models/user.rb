@@ -225,8 +225,10 @@ class User < ActiveRecord::Base
   # Useful for search later on
   scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
   has_many :user_blocks
+  has_many :blocked_users, through: :user_blocks, source: :blocked_user
   scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
   has_many :user_hides
+  has_many :hidden_users, through: :user_hides, source: :hidden_user
   #default_scope includes(:user_hides).where(:user_hides => { :user_id => nil })
 
   letsrate_rater
@@ -245,6 +247,8 @@ class User < ActiveRecord::Base
   attr_accessor :terms_and_conditions
   attr_accessor :image_not_uploaded
   attr_accessor :email_confirmation
+  attr_accessor :blocked
+  attr_accessor :hidden
   present_date :birth_date
 
   # Setup accessible (or protected) attributes for your model
@@ -389,6 +393,22 @@ class User < ActiveRecord::Base
       visit.seen = true
       visit.save
     end
+  end
+
+  def blocked_and_hidden_users
+    users = []
+    self.blocked_users.each do |user|
+      u = user
+      u.blocked = true
+      u.hidden = true if self.hidden_users.include?(user)
+      users.push(u)
+    end
+    self.hidden_users.each do |user|
+      u = user
+      u.hidden = true
+      users.push(u) if !users.include?(user)
+    end
+    return users
   end
 
 end
