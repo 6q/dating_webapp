@@ -17,4 +17,5 @@ class UserHide < ActiveRecord::Base
   belongs_to :user, class_name: 'User', foreign_key: 'user_id'
   belongs_to :hidden_user, class_name: 'User', foreign_key: 'hidden_user_id'
 
+  validates :user_id, uniqueness: { scope: :hidden_user_id }
 end
