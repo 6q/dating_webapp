@@ -39,7 +39,6 @@ class RelationshipsController < ApplicationController
 
   def block_hide_settings
     params[:user].each do |user|
-      logger.debug user
       if user[1]["hidden_user"] == "1"
         current_user.user_hides.create({ hidden_user_id: user[0] })
       else
