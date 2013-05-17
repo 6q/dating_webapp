@@ -75,13 +75,28 @@ describe User do
     u.user_visits[0].class.must_equal UserVisit
   end
 
+  it 'must have a user_blocks collection' do
+    u = create(:regular_user_with_blocks)
+    u.must_respond_to :user_blocks
+    u.user_blocks.class.must_equal Array
+    u.user_blocks.size.must_be :>=, 1
+    u.user_blocks[0].class.must_equal UserBlock
+  end
+
+  it 'must have a user_hides collection' do
+    u = create(:regular_user_with_hides)
+    u.must_respond_to :user_hides
+    u.user_hides.class.must_equal Array
+    u.user_hides.size.must_be :>=, 1
+    u.user_hides[0].class.must_equal UserHide
+  end
+
   # Class method tests
   it 'must have a correct location' do
     u = create(:regular_user, postal_code: '08009', town: 'Barcelona', country: 'Spain')
     u.location.must_equal '08009, Barcelona, Spain'
   end
 
-  # This test randomly fails. WTF?
   it 'must have a correct calculated age' do
     u = create(:regular_user, birth_date: 25.years.ago)
     u.age.must_equal 25

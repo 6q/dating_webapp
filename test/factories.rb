@@ -64,13 +64,6 @@ FactoryGirl.define do
       end
     end
 
-    # This trait does not work for some reason.
-    #trait :has_recommendations do
-    #  after(:create) do |user, evaluator|
-    #    create_list(:recommendation, evaluator.recommendations_count, user: user)
-    #  end
-    #end
-
     trait :with_recommendations do
       recommendations { [create(:recommendation, user_id: 1, creator_id: 2)] }
     end
@@ -91,6 +84,14 @@ FactoryGirl.define do
       user_visits { [create(:user_visit, user_id: 1, visitor_id: 2)] }
     end
 
+    trait :with_user_blocks do
+      user_blocks { [create(:user_block, user_id: 1, blocked_user_id: 2)] }
+    end
+
+    trait :with_user_hides do
+      user_hides { [create(:user_hide, user_id: 1, hidden_user_id: 2)] }
+    end
+
     ignore do
       picture_count 1
       recommendations_count 1
@@ -103,6 +104,8 @@ FactoryGirl.define do
     factory :regular_user_with_likers, traits: [:basic_data, :complementary_data, :user_role, :with_likers]
     factory :regular_user_with_likes, traits: [:basic_data, :complementary_data, :user_role, :with_likes]
     factory :regular_user_with_visitors, traits: [:basic_data, :complementary_data, :user_role, :with_visitors]
+    factory :regular_user_with_blocks, traits: [:basic_data, :complementary_data, :user_role, :with_user_blocks]
+    factory :regular_user_with_hides, traits: [:basic_data, :complementary_data, :user_role, :with_user_hides]
 
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
@@ -125,6 +128,12 @@ FactoryGirl.define do
 
   factory :user_visit do
     visited_at Time.now
+  end
+
+  factory :user_block do
+  end
+
+  factory :user_hide do
   end
 
   factory :characteristic do
