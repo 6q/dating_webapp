@@ -1,0 +1,56 @@
+<section class="messages">
+  <div class="boxed headless">
+    <div class="boxed-inner">
+      <header>
+        <h1 class="span3">Mensajes y actividades</h1>
+        <div class="pull-right">Estas usando el 35% de tu buzón. ¡<%= link_to "Ampliar mi capacidad", "/user/pay" %>!</div>
+      </header>
+    </div>
+  </div>
+    
+  <hr class="thin">
+
+  <div class="tabs">
+    <ul class="nav nav-tabs">
+        <li><a href="#inbox">Recibidos<%= " (#{@conversations_inbox.count})" if @conversations_inbox.count > 0 %></a></li>
+        <li><a href="#sentbox">Enviados<%= " (#{@conversations_sentbox.count})" if @conversations_sentbox.count > 0 %></a></li>
+        <li><a href="#trash">Eliminados<%= " (#{@conversations_trash.count})" if @conversations_trash.count > 0 %></a></li>
+    </ul>
+    <%= render '/shared/user/sorting' %>
+  </div>
+  
+  <div class="boxed">
+    <div class="boxed-inner">
+
+      <div class="msg-item">
+        <div class="clearfix">
+          <div class="conversation">
+            <% @receipts.each do |receipt| %>
+              <%= render partial: 'conversation_full', locals: { receipt: receipt } %>
+            <% end %>
+            <%= render @conversation.activity if @conversation.activity %>
+
+              <div class="msg-reply-dialog clearfix">
+
+                <div class="pic"><%= link_to image_tag('placeholder2.jpg', size: '60x60'), current_user %></div>
+
+                <div class="msg-actions">
+                  <%= link_to _('Responder'), '#', class: 'action-reply' %><%= (' - ' + link_to(_('Proponer actividad'), '#activity-proposal', 'data-toggle' => 'modal')).html_safe unless @conversation.activity %> - <%= link_to 'Bloquear', '#user-block', 'data-toggle' => 'modal' %>
+                  <%= link_to 'Eliminar hilo', "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
+                </div>
+
+                <div class="reply-form">
+                  <%= simple_form_for @conversation.messages.new, url: conversation_path(@conversation), method: :put do |f| %>
+                    <%= f.input_field :body %>
+                    <%= f.submit _('Responder'), class: 'btn btn-info pull-right' %>
+                  <% end %>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+<%= render partial: 'modal_delete', locals: { conversation: @conversation } %>
+<%= render partial: 'modal_activity', locals: { conversation: @conversation } %>

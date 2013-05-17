@@ -197,6 +197,9 @@ class User < ActiveRecord::Base
   LF_ANIMALS = {'like-pets' => _('le gusten los animales de compañía'), 'not-like-pets' => _('no le gusten los animales de compañía'),
     'have-pets' => _('tenga animales de compañía'), 'no-pets' => _('no tenga animales de compañía'),
     'allergic' => _('no tenga animales de compañía y sea alérgic@')}
+  LF_CHILD = { 'have-children' => _('tenga hijos'),'no-children' => _('no tenga hijos'),'no-want-children' => _('no tenga hijos, y no quiera tener'),
+    'no-kids-i-want' => _('no tenga hijos, pero quiera tener'),'have-children-no-want-more' => _('tenga hijos, y no quiera tener mas '),
+    'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
 
 
   PICTURE_LIMIT = 12
@@ -205,6 +208,8 @@ class User < ActiveRecord::Base
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
   include UserRetrieval
 
+  acts_as_messageable
+  
   #relations
   has_many :pictures, as: :attachable
   has_many :characteristics, class_name: 'Characteristic', foreign_key: 'user_id'
@@ -266,9 +271,11 @@ class User < ActiveRecord::Base
     :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation, 
     :lf_marital_status, :lf_age_between, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
     :lf_physical_desc, :lf_physical_style, :lf_height_between, :lf_weight_to, :lf_weight_between,
-    :lf_complexion, :lf_child, :lf_child_want, :lf_smoke, :lf_smoke_tolerance, :lf_diet, 
-    :lf_alcohol, :lf_drugs, :lf_drug_frequency, :lf_religion, :lf_religion_opinion, 
-    :lf_animal_like, :lf_animal_have, :lf_study_level, :lf_language, :lf_job, :lf_salary,
+    :lf_complexion, :lf_child, :lf_smoke, :lf_diet, :lf_alcohol, :lf_drugs, :lf_religion, 
+    :lf_study_level, :lf_language, :lf_job, :lf_salary,:lf_house, :lf_hair, :lf_hair_style, 
+    :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals, 
+    :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
+    :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level,
     :characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
@@ -323,6 +330,10 @@ class User < ActiveRecord::Base
 
   def full_name
     [name, surname].join(" ")
+  end
+
+  def mailboxer_email(object)
+    email
   end
 
   def profile_picture

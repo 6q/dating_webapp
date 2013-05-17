@@ -16,7 +16,6 @@ gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.1.0"
 gem "quiet_assets", ">= 1.0.2", :group => :development
 gem "figaro", ">= 0.6.3"
-gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
 gem 'compass_twitter_bootstrap'
 gem 'compass-rails'
 gem "geocoder", "~> 1.1.3"
@@ -28,6 +27,7 @@ gem 'turbolinks'
 gem 'mail_form'
 gem 'rails-i18n'
 gem 'strong_parameters'
+gem 'mailboxer'
 gem 'gettext_i18n_rails'
 gem 'gettext', '>=1.9.3', :require => false, :group => :development
 gem 'letsrate'
@@ -38,7 +38,6 @@ group :test do
   gem 'minitest-focus'
   gem 'minitest-reporters'
 end
-
 
 gem 'minitest-rails', group: [:test, :development]
 

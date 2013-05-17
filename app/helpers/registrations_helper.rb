@@ -145,6 +145,10 @@ module RegistrationsHelper
     User::LF_ANIMALS.map {|k,v| [v,k]}
   end
 
+  def lf_child_options
+    User::LF_CHILD.map {|k,v| [v,k]}
+  end
+
 
 
 

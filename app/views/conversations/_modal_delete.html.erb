@@ -1,0 +1,15 @@
+<!-- Modal -->
+<div id="delete-confirm-<%= conversation.id.to_s %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body">
+    <div class="center">
+      <p>¿Seguro que deseas eliminar el mensaje de <strong><%= link_to sender_or_recipient(conversation).name, sender_or_recipient(conversation) %></strong>?</p>
+    </div>
+  </div>
+  <div class="modal-footer center">
+    <%= link_to 'No, me lo he pensado mejor', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= link_to _('Eliminar conversación'), conversation_path(conversation), method: :delete, class: 'btn btn-danger'  %>
+  </div>
+</div>

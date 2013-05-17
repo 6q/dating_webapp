@@ -24,5 +24,11 @@ end
 create_towns
 
 (1..60).each do
-  FactoryGirl.create(:regular_user)
+  u = FactoryGirl.create(:regular_user)
+  receipt = u.send_message(user, Faker::Lorem.paragraphs.join("\n"), Faker::Lorem.sentence)
+  user.reply_to_sender(receipt, Faker::Lorem.paragraph)
 end
+
+user.mailbox.inbox.sample(5).each { |c| c.move_to_trash(user) }
+user.mailbox.sentbox.sample(5).each { |c| c.move_to_trash(user) }
+

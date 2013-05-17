@@ -20,4 +20,9 @@ module ApplicationHelper
     redirect_to(matchmaker_become_user_path) if (current_user && current_user.has_role?(:matchmaker))
   end
 
+  def pager_total(paged_object)
+    html = '<span class="total">' + _('Mostrando mensajes ') + (paged_object.current_page * paged_object.count - paged_object.count + 1).to_s + _(' a ') + (paged_object.current_page * paged_object.count).to_s + _(' de ') + paged_object.total_count.to_s + '.</span>'
+
+    html.html_safe
+  end
 end

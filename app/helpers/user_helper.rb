@@ -1,3 +1,4 @@
+#encoding: utf-8
 module UserHelper
   def profile_pic(user = current_user, options = {width: 210})
     pp = user.profile_picture
@@ -24,5 +25,14 @@ module UserHelper
 
   def user_remaining_pictures(user = current_user)
     User::PICTURE_LIMIT - user.pictures.count
+  end
+
+  def user_detail(user)
+    html = '<div class="user-detail clearfix">'
+    html += '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
+    html += '<div class="data">' + link_to(user.name, user) + ', ' + n_('Años', 'Años', user.age) + ' - ' +  user.town + '</div>'
+    html += '</div>'
+
+    html.html_safe
   end
 end

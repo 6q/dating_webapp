@@ -168,4 +168,11 @@ FactoryGirl.define do
   factory :female_picture, class: Picture do
     image_url { FAKE_PICTURES::HEADSHOTS::WOMEN.sample }
   end
+
+  factory :activity do
+    activity_type :cofee
+    body 'Activity body'
+    date Date.today + 20.days
+  end
+  
 end
