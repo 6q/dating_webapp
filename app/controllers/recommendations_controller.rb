@@ -27,16 +27,17 @@ class RecommendationsController < ApplicationController
         @characteristic.user_id = user.id
         @characteristic.creator_id = current_user.id
         @characteristic.save
+        flash[:success] = _('Recommendación enviado')
         redirect_to profile_path
       else
-        flash[:error] = :"Incorrect or missing data"
+        flash[:error] = _('Datos incorrectos o faltantes')
         #@recommendation = Recommendation.new(params[:recommendation])
         #@characteristic = Characteristic.new(params[:characteristic])
         #render 'users/be_matchmaker'
         redirect_to profile_path
       end
     else
-      flash[:error] = :"Incorrect or missing data"
+      flash[:error] = _('Datos incorrectos o faltantes')
       #@recommendation = Recommendation.new(params[:recommendation])
       #@characteristic = Characteristic.new(params[:characteristic])
       #render 'users/be_matchmaker'
@@ -49,6 +50,7 @@ class RecommendationsController < ApplicationController
     if @recommendation
       @recommendation.confirmed = true
       @recommendation.save
+      flash[:success] = _('Recommendación acceptado')
     end
     redirect_to my_matchmakers_path
   end
@@ -58,6 +60,7 @@ class RecommendationsController < ApplicationController
     if @recommendation
       @recommendation.denied = true
       @recommendation.save
+      flash[:success] = _('Recommendación negado')
     end
     redirect_to my_matchmakers_path
   end
