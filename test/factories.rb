@@ -92,6 +92,10 @@ FactoryGirl.define do
       user_hides { [create(:user_hide, user_id: 1, hidden_user_id: 2)] }
     end
 
+    trait :with_ratings do
+      ratings_given { [create(:rate, rater_id: 1, rateable_id: 2)] }
+    end
+
     ignore do
       picture_count 1
       recommendations_count 1
@@ -106,6 +110,7 @@ FactoryGirl.define do
     factory :regular_user_with_visitors, traits: [:basic_data, :complementary_data, :user_role, :with_visitors]
     factory :regular_user_with_blocks, traits: [:basic_data, :complementary_data, :user_role, :with_user_blocks]
     factory :regular_user_with_hides, traits: [:basic_data, :complementary_data, :user_role, :with_user_hides]
+    factory :regular_user_with_ratings, traits: [:basic_data, :complementary_data, :user_role, :with_ratings]
 
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
@@ -134,6 +139,10 @@ FactoryGirl.define do
   end
 
   factory :user_hide do
+  end
+
+  factory :rate do
+    stars 5
   end
 
   factory :characteristic do

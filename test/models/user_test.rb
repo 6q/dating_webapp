@@ -91,6 +91,14 @@ describe User do
     u.user_hides[0].class.must_equal UserHide
   end
 
+  it 'must have a ratings_given collection' do
+    u = create(:regular_user_with_ratings)
+    u.must_respond_to :ratings_given
+    u.ratings_given.class.must_equal Array
+    u.ratings_given.size.must_be :>=, 1
+    u.ratings_given[0].class.must_equal Rate
+  end
+
   # Class method tests
   it 'must have a correct location' do
     u = create(:regular_user, postal_code: '08009', town: 'Barcelona', country: 'Spain')
