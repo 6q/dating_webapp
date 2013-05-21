@@ -28,9 +28,14 @@ module UserHelper
   end
 
   def user_detail(user)
+    if !user.has_role(:regular_user)
+      return ""
+    end
     html = '<div class="user-detail clearfix">'
     html += '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
-    html += '<div class="data">' + link_to(user.name, user) + ', ' + n_('Años', 'Años', user.age) + ' - ' +  user.town + '</div>'
+    html += '<div class="data">' + link_to(user.name, user) + ', ' + n_('Años', 'Años', user.age) + ' - ' 
+    html += user.town if user.town
+    html += '</div>'
     html += '</div>'
 
     html.html_safe

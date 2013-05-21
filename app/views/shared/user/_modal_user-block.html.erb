@@ -4,13 +4,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3>¿Deseas bloquear a este usuario?</h3>
 
-    <div class="user-detail clearfix">
-      <div class="pic">
-        <%= link_to profile_pic(user), user_path(user), width: 60, height: 60 %>
-      </div>
-      <div class="data"><small>8/12/2012 - 22:35h</small><%= link_to user.name, user_path(user) %>, <%= user.age %> años - <%= user.town %></div>
-    </div>
-
+    <%= user_detail(user) %>
   </div>
   <div class="modal-body">
     <p>Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a <%= user.name %>, desde tu apartado de configuración.</p>
