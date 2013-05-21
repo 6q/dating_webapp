@@ -28,20 +28,20 @@ class RecommendationsController < ApplicationController
         @characteristic.creator_id = current_user.id
         @characteristic.save
         flash[:success] = _('Recommendación enviado')
-        redirect_to profile_path
+        redirect_to be_matchmaker_path
       else
         flash[:error] = _('Datos incorrectos o faltantes')
         #@recommendation = Recommendation.new(params[:recommendation])
         #@characteristic = Characteristic.new(params[:characteristic])
         #render 'users/be_matchmaker'
-        redirect_to profile_path
+        redirect_to be_matchmaker_path
       end
     else
       flash[:error] = _('Datos incorrectos o faltantes')
       #@recommendation = Recommendation.new(params[:recommendation])
       #@characteristic = Characteristic.new(params[:characteristic])
       #render 'users/be_matchmaker'
-      redirect_to profile_path
+      redirect_to be_matchmaker_path
     end
   end
 
