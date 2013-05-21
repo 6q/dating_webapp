@@ -29,10 +29,15 @@ module UserHelper
 
   def user_detail(user)
     html = '<div class="user-detail clearfix">'
-    html += '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
+    html += user_link_with_picture(user) 
     html += '<div class="data">' + link_to(user.name, user) + ', ' + n_('Años', 'Años', user.age) + ' - ' +  user.town + '</div>'
     html += '</div>'
 
+    html.html_safe
+  end
+  
+  def user_link_with_picture(user)
+    html = '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
     html.html_safe
   end
 end

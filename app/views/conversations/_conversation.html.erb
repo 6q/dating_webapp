@@ -1,12 +1,12 @@
 <%= div_for(conversation, :class =>"#{ 'unread ' if conversation.is_unread?(current_user) }msg-item") do %>
   <div class="clearfix">
-    <div class="pic"><a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="60" height ="60"></a></div>
-      <div class="info">
-        <p class="msg-data"><%= time_ago_in_words(conversation.updated_at) %> - <%= link_to conversation.last_sender.name, conversation.last_sender %></p>
+    <%= user_link_with_picture(sender_or_recipient(conversation)) %>
+    <div class="info">
+      <p class="msg-data"><%= time_ago_in_words(conversation.updated_at) %> - <%= link_to conversation.last_sender.name, conversation.last_sender %></p>
 
-        <p class="msg"><%= link_to(truncate(conversation.last_message.body, :length => 55), conversation_path(conversation.id, :box => @box, :page => params[:page])) %></p>
+      <p class="msg"><%= link_to(truncate(conversation.last_message.body, :length => 55), conversation_path(conversation.id, :box => @box, :page => params[:page])) %></p>
 
-      </div>
+    </div>
     <% unless @box.eql?'trash' %>
       <div class="reply">
         <%= link_to _('Eliminar'), "#delete-confirm-#{conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'delete' %>

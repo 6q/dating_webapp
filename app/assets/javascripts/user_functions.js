@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   $(".points, #points2").slider({ from: 1, to: 5, round: 1, skin: "plastic" });
 
-  $("#years").slider({
+  $("#years").jslider({
       from: 18,
       to: 99,
       step: 1,
@@ -17,7 +17,7 @@ $(document).ready(function(){
       dimension: "&nbsp;años",
       scale: ['|','|','|','|','|','|','|','|'],
       onstatechange: function(){
-        // $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
+        $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
       }
     });
 

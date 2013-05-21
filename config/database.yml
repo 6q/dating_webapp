@@ -22,13 +22,22 @@
 # Then add the following to your .bash_profile (or equivalent): export PGHOST=localhost
 #
 
+#development:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: cellove_development
+#  pool: 5
+#  template: template0
+#  host: localhost
+
 development:
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   database: cellove_development
   pool: 5
-  template: template0
-  host: localhost
+  user: root
+  host: 127.0.0.1
+
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
