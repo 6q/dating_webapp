@@ -20,8 +20,8 @@
   <% if @interactions == true %>
     <div class="interactions">
       <div class="punctuations">
-        <strong>Tu dices:</strong> <%= rating_for user %>
-        <strong>Ha dicho:</strong> <%= rating_for current_user %>
+        <strong>Tu dices:</strong> <%= stars_for(user, current_user) %>
+        <strong>Ha dicho:</strong> <%= stars_for(current_user, user) %>
       </div>
       <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
     </div>

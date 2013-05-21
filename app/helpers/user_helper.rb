@@ -41,20 +41,36 @@ module UserHelper
     html.html_safe
   end
 
-  def rating_for(rateable_obj, options={})
+  def rating_for(rateable_obj, rater_obj = nil, options = {})
     star = options[:star] || 5
     disable_after_rate = options[:disable_after_rate] || false
-    readonly = false
+    readonly = options[:read_only] || false
     if disable_after_rate
       readonly = current_user.present? ? !rateable_obj.can_rate?(current_user.id) : true
     end
 
+    rating = current_user.rating(rateable_obj.id)
+    if !rater_obj.nil?
+      rating = rater_obj.rating(rateable_obj.id)
+    end
+
     content_tag :div, '', :class => "star",
-                "data-rating" => current_user.rating(rateable_obj.id),
+                "data-rating" => rating,
                 "data-id" => rateable_obj.id,
                 "data-classname" => rateable_obj.class.name,
                 "data-disable-after-rate" => disable_after_rate,
                 "data-readonly" => readonly,
                 "data-star-count" => star
+  end
+
+  def stars_for(rateable_obj, rater_obj = nil)
+    rating = current_user.rating(rateable_obj.id).to_i
+    if !rater_obj.nil?
+      rating = rater_obj.rating(rateable_obj.id).to_i
+    end
+    html = '<span class="stars stars-'+rating.to_s+'">'
+    rating.times{ html += '*' }
+    html += '</span>'
+    html.html_safe
   end
 end
