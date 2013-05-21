@@ -421,6 +421,7 @@ class User < ActiveRecord::Base
     return users
   end
 
+  # Rating
   def can_rate?(user_id)
     return true if (user_id != self.id)
     return false
@@ -436,9 +437,9 @@ class User < ActiveRecord::Base
           r.stars = stars
           r.rateable_id = user_id
           r.rater_id = self.id
-          r.save!          
+          r.save!
         end
-      end    
+      end
     end
   end
 

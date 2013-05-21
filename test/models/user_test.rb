@@ -107,13 +107,38 @@ describe User do
     u.full_name.must_equal 'Philip De Smedt'
   end
 
-  it 'confirmed_recommenders returns the right recommendations' do
+  it 'must return the confirmed recommendations' do
+    @user = create(:regular_user)
+    @creator = create(:regular_user)
+    recommendation = @creator.recommendations.build(attributes_for(:recommendation))
+    recommendation.user_id = @user.id
+    recommendation.confirmed = true
+    recommendation.save
+
+    @user.confirmed_recommenders.class.must_equal ActiveRecord::Relation
+    @user.confirmed_recommenders.length.must_be :>=, 1
+    @user.confirmed_recommenders[0].class.must_equal Recommendation
+    @user.confirmed_recommenders[0].confirmed.must_equal true
+    @user.confirmed_recommenders[0].denied.must_equal false
   end
 
-  it 'unconfirmed_recommenders returns the right recommendations' do
+  it 'must returns the unconfirmed recommendations' do
+    @user = create(:regular_user)
+    @creator = create(:regular_user)
+    recommendation = @creator.recommendations.build(attributes_for(:recommendation))
+    recommendation.user_id = @user.id
+    recommendation.save
+
+    @user.confirmed_recommenders.length.must_be :<=, 0
+    @user.unconfirmed_recommenders.class.must_equal ActiveRecord::Relation
+    @user.unconfirmed_recommenders.length.must_be :>=, 1
+
+    @user.unconfirmed_recommenders[0].class.must_equal Recommendation
+    @user.unconfirmed_recommenders[0].confirmed.must_equal false
+    @user.unconfirmed_recommenders[0].denied.must_equal false
   end
 
-  it 'must save the correct visitor' do
+  it 'must visit the user\'s profile' do
     @user = create(:regular_user)
     @visitor = create(:regular_user)
     @visitor.visited(@user)
@@ -139,6 +164,40 @@ describe User do
     @user.user_visits[0].visited_at.must_be :>=, time
     
     @user.visitors.length.must_equal 1
+  end
+
+  it 'must rate the user with 4 stars' do
+    @user = create(:regular_user)
+    @rated_user = create(:regular_user)
+    @user.rate(4, @rated_user.id)
+
+    @user.ratings_given.class.must_equal Array
+    @user.ratings_given.length.must_be :>=, 1
+    @user.ratings_given[0].class.must_equal Rate
+    @user.ratings_given[0].stars.must_equal 4.0
+    @user.rating(@rated_user.id).must_equal 4.0
+  end
+
+  it 'must have raters' do
+    @user = create(:regular_user)
+    @rated_user = create(:regular_user)
+    @user.rate(4, @rated_user.id)
+
+    @rated_user.raters.class.must_equal Array
+    @rated_user.raters.length.must_be :>=, 1
+    @rated_user.raters[0].class.must_equal User
+    @rated_user.raters[0].id.must_equal @user.id
+  end
+
+  it 'must return the nice couples' do
+    @user = create(:regular_user)
+    @rated_user = create(:regular_user)
+    @user.rate(4, @rated_user.id)
+    @rated_user.rate(5, @user.id)
+
+    @user.nice_couple.class.must_equal Array
+    @user.nice_couple[0].class.must_equal User
+    @user.nice_couple[0].id.must_equal @rated_user.id
   end
 
 end
