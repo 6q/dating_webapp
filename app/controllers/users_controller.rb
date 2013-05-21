@@ -82,7 +82,7 @@ class UsersController < ApplicationController
     def user_visit
       if @user && current_user != @user
         current_user.visited(@user)
-        current_user.add_to_cellove_index(User::CELLOVE_USER_VISIT)
+        @user.add_to_cellove_index(User::CELLOVE_USER_VISIT)
       end
     end
 

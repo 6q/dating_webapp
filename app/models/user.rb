@@ -481,6 +481,11 @@ class User < ActiveRecord::Base
     users
   end
 
+  # Are current_user and user a nice couple? I.e. did they rate each other the same?
+  def is_nice_couple?(user)
+    return true
+  end
+
   # Cellove methods
   def add_to_cellove_index(points)
     self.cellove_index += points
@@ -489,8 +494,13 @@ class User < ActiveRecord::Base
 
   def cellove_percentage
     max = User.maximum("cellove_index")
-    return (self.cellove_index/max.to_f)*100.0 if self.cellove_index != 0
+    return ((self.cellove_index/max.to_f)*100.0).to_i if self.cellove_index != 0
     return 0
+  end
+
+  # Is this the first message we send to the recipient?
+  def is_first_message?(recipient)
+    return true
   end
 
 end

@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :get_mailbox, :get_box
+  after_filter :add_to_cellove_index, only: [:create]
 
   def index
     redirect_to conversations_path(:box => @box)
@@ -60,17 +61,22 @@ class MessagesController < ApplicationController
   end
 
   private
-
-  def get_mailbox
-    @mailbox = current_user.mailbox
-  end
-
-  def get_box
-    if params[:box].blank? or !["inbox","sentbox","trash"].include?params[:box]
-      @box = "inbox"
-    return
+    def get_mailbox
+      @mailbox = current_user.mailbox
     end
-    @box = params[:box]
-  end
+
+    def get_box
+      if params[:box].blank? or !["inbox","sentbox","trash"].include?(params[:box])
+        @box = "inbox"
+        return
+      end
+      @box = params[:box]
+    end
+
+    def add_to_cellove_index
+      if current_user.is_first_message?(@recipient)
+        @recipient.add_to_cellove_index(User::CELLOVE_FIRST_MESSAGE)
+      end
+    end
 
 end

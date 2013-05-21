@@ -1,6 +1,7 @@
 class RecommendationsController < ApplicationController
   skip_before_filter :matchmaker_user, only: [:create]
   before_filter :correct_user, only: [:accept, :deny]
+  after_filter :add_to_cellove_index, only: [:accept]
   layout 'logged_in'
   EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
 
@@ -69,6 +70,21 @@ class RecommendationsController < ApplicationController
     def correct_user
       @recommendation = Recommendation.find(params[:recommendation_id])
       redirect_to root_path unless @recommendation.user_id == current_user.id
+    end
+
+    def add_to_cellove_index
+      case @recommendation.relationship
+      when 1 # Ex Pareja
+        current_user.add_to_cellove_index(User::CELLOVE_CELESTINO_EX_PARTNER)
+      when 2
+        current_user.add_to_cellove_index(User::CELLOVE_CELESTINO_SPECIAL_FRIEND)
+      when 3
+        current_user.add_to_cellove_index(User::CELLOVE_CELESTINO_FRIEND)
+      when 4
+        current_user.add_to_cellove_index(User::CELLOVE_CELESTINO_FAMILY)
+      else
+        # BEUP. Wrong.
+      end
     end
   
 end
