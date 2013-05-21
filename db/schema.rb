@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130516104951029) do
+ActiveRecord::Schema.define(:version => 20130521150450) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -308,12 +308,13 @@ ActiveRecord::Schema.define(:version => 20130516104951029) do
     t.string   "lf_animals"
     t.string   "lf_party"
     t.string   "lf_language_level"
-    t.integer  "cellove_index"
+    t.integer  "cellove_index",          :default => 0
   end
 
+  add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
   add_index "users", ["created_at"], :name => "index_users_on_created_at"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["invitation_code"], :name => "index_users_on_invitation_code"
+  add_index "users", ["invitation_code"], :name => "index_users_on_invitation_code", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "users_roles", :id => false, :force => true do |t|

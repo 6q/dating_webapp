@@ -41,6 +41,8 @@ Cellove::Application.routes.draw do
     get 'likes',                    to: 'users#likes',                            as: :user_likes
     get 'likes-of-mine',            to: 'users#likes_of_mine',                    as: :user_likes_of_mine
     get 'hits',                     to: 'users#hits',                             as: :user_hits
+
+    get 'cellove-index',            to: 'users#cellove_index',                    as: :cellove_index
   end
   post '/rate' => 'rater#create', :as => 'rate'
 

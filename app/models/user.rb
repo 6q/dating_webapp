@@ -114,7 +114,7 @@
 #  lf_animals             :string(255)
 #  lf_party               :string(255)
 #  lf_language_level      :string(255)
-#  cellove_index          :integer
+#  cellove_index          :integer          default(0)
 #
 
 
@@ -481,8 +481,16 @@ class User < ActiveRecord::Base
     users
   end
 
+  # Cellove methods
   def add_to_cellove_index(points)
-    self.cellove_index += 0
+    self.cellove_index += points
+    self.save
+  end
+
+  def cellove_percentage
+    max = User.maximum("cellove_index")
+    return (self.cellove_index/max.to_f)*100.0 if self.cellove_index != 0
+    return 0
   end
 
 end

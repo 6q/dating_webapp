@@ -74,10 +74,15 @@ class UsersController < ApplicationController
     render 'hits', layout: "logged_in"
   end
 
+  def cellove_index
+    render 'cellove_index', layout: "logged_in"
+  end
+
   private
     def user_visit
       if @user && current_user != @user
         current_user.visited(@user)
+        current_user.add_to_cellove_index(User::CELLOVE_USER_VISIT)
       end
     end
 
