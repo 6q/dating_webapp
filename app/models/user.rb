@@ -236,8 +236,9 @@ class User < ActiveRecord::Base
   has_many :hidden_users, through: :user_hides, source: :hidden_user
   #default_scope includes(:user_hides).where(:user_hides => { :user_id => nil })
 
-  letsrate_rater
-  letsrate_rateable "match"
+  has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id 
+  has_many :rates, :class_name => "Rate", :foreign_key => :rateable_id, :dependent => :destroy
+  has_many :raters, :through => :rates, :source => :rater  
 
   accepts_nested_attributes_for :characteristics
 
@@ -418,6 +419,50 @@ class User < ActiveRecord::Base
       users.push(user) if !users.include?(user)
     end
     return users
+  end
+
+  def can_rate?(user_id)
+    return true if (user_id != self.id)
+    return false
+  end
+
+  def rate(stars, user_id)
+    if can_rate? user_id
+      rate = self.ratings_given.where("rateable_id = ?", user_id).first
+      if rate
+        rate.update_attributes(stars: stars)
+      else
+        self.rates.build do |r|
+          r.stars = stars
+          r.rateable_id = user_id
+          r.rater_id = self.id
+          r.save!          
+        end
+      end    
+    end
+  end
+
+  def rating(user_id)
+    rate = self.ratings_given.where("rateable_id = ?", user_id).first
+    if rate
+      return rate.stars
+    else
+      0
+    end
+  end
+
+  # Intersection of people who I rated and people who rated me
+  def nice_couple
+    users = []
+    self.rates.each do |rate|
+      # If we find a rater that's also present in the collection of ratings we've given
+      if self.ratings_given.any?{ |r| r.rateable_id == rate.rater_id }
+        user = User.find(rate.rater_id)
+        # Include user if not already included
+        users.push(user) if (!users.include?(user) && user != self)
+      end
+    end
+    users
   end
 
 end

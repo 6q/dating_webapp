@@ -42,6 +42,10 @@ class UsersController < ApplicationController
     render 'settings', layout: "logged_in"
   end
 
+  def nice_couple
+    render 'nice_couple', layout: "logged_in"
+  end
+
   # Matchmaker routes
   def be_matchmaker
     @recommendation = Recommendation.new

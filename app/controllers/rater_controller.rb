@@ -1,19 +1,14 @@
-class RaterController < ApplicationController 
-  
-  def create                                  
+class RaterController < ApplicationController
+
+  def create
     if current_user.present?
-      obj = eval "#{params[:klass]}.find(#{params[:id]})"     
-      if params[:dimension].present?
-        obj.rate params[:score].to_i, current_user.id, "#{params[:dimension]}"       
-      else
-        obj.rate params[:score].to_i, current_user.id 
-      end
-      
-      render :json => true 
+      user = User.find(params[:id])
+      current_user.rate params[:score].to_i, user.id
+
+      render :json => true
     else
-      render :json => false        
+      render :json => false
     end
-  end                                        
-  
-  
+  end
+
 end

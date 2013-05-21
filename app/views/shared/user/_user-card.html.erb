@@ -1,7 +1,7 @@
 <article class="user-card online">
   <ul class="pics">
-    <li><%= link_to user.profile_picture, user_path(user) %></li>
-    <li><%= link_to user.profile_picture, user_path(user) %></li>
+    <li><%= link_to(image_tag('placeholder2.jpg', size: '60x60'), user) %></li>
+    <li><%= link_to(image_tag('placeholder2.jpg', size: '60x60'), user) %></li>
   </ul>
   <header>
     <% if @timestamp == true %>
@@ -20,8 +20,8 @@
   <% if @interactions == true %>
     <div class="interactions">
       <div class="punctuations">
-        <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
-        <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
+        <strong>Tu dices:</strong> <%= rating_for user %>
+        <strong>Ha dicho:</strong> <%= rating_for current_user %>
       </div>
       <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
     </div>

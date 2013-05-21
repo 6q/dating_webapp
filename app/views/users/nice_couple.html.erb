@@ -1,0 +1,16 @@
+<section class="list">
+  <header>
+    <h1>Hacemos buena pareja</h1>
+    <%= render '/shared/user/sorting' %>
+  </header>
+  <% @interactions = true %>
+  <% @timestamp = true %>
+  <ul class="user-list clearfix">
+    <% current_user.nice_couple.each do |user| %>
+      <li><%= render '/shared/user/user-card', user: user %></li>
+    <% end %>
+  </ul>
+
+  <%= render '/shared/user/pagination' %>
+
+</section>
