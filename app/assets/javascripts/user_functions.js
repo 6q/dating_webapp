@@ -2,14 +2,16 @@
 //= require jquery.prettyPhoto
 //= require jquery.auderoFlashingText.min.js
 
-$(document).ready(function(){
-  
-  // Consejos
-  $("#caixarandom").auderoFlashingText({
-    fadeOut: 1500,
-    duration: 2000,
-    selection: "ascending"
-  });
+//$("#caixarandom").auderoFlashingText("stop");
+
+$(document).ready(function() {
+  if (!$("#caixarandom").auderoFlashingText("isRunning")) {
+    $("#caixarandom").auderoFlashingText({
+      fadeOut: 1500,
+      duration: 2000,
+      selection: "ascending"
+    });
+  }
 
   // search sliders
 
