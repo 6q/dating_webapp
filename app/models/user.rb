@@ -129,7 +129,7 @@ class User < ActiveRecord::Base
     'hairless' => _('sin pelo')}
   COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bien'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
     'curvy' => _('con curvas'), 'obese' => _('obeso')}
-  SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'),
+  SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'), 
     'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
     'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
@@ -341,5 +341,24 @@ class User < ActiveRecord::Base
     end
   end
 
+  def online?
+    updated_at > 5.minutes.ago
+  end
+
+  ransacker :smoker, :formatter => proc { |v| v.split } do |parent|
+    parent.table[:smoke]
+  end
+
+  def self.is_smoker
+    %w{smoker smoke-leave-couple social-smoker}
+  end
+
+  ransacker :children, :formatter => proc { |v| v.split } do |parent|
+    parent.table[:child]
+  end
+
+  def self.have_children
+    %w{children have-children-want-more have-children-no-want-more}
+  end
 end
 

@@ -7,17 +7,9 @@
       <h1>Encuentra personas afines a tí</h1>
     </header>
 
+    
+    <form class="span9 form-horizontal">
     <%= search_form_for @search, class: 'span9 form-horizontal' do |f| %>
-      <%= f.hidden_field :years_gteq  %>
-      <%= f.hidden_field :years_lteq  %>
-      <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] } %>
-      <%= f.label :postal_code_cont %>
-      <%= f.text_field :postal_code_cont, placeholder: 'CP' %>
-      <%= f.label :complexion_eq %>
-      <%= f.select :complexion_eq, User::COMPLEXION %>
-      <%= f.submit %>
-    <% end %>
-  <form class="span9 form-horizontal">
 
     <div class="row">
       <div class="span8">
@@ -26,14 +18,18 @@
           <label class="control-label">Edad</label>
           <div class="span6">
             <input id="years" type="slider" name="" value="18;80"/>
+            <%= f.hidden_field :years_gteq  %>
+            <%= f.hidden_field :years_lteq  %>
           </div>
         </div>
 
         <div class="row search-location">
           <div class="span8">
             <div class="control-group">
-              <label class="control-label">Localidad</label><input type="text" class="location" placeholder="Localidad">
-              <label class="control-label zip">Código postal</label><input type="text" class="span1" placeholder="CP">
+              <%= f.label :town_eq, _('Localidad'), class: 'control-label' %>
+              <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, class: 'location' %>
+              <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
+              <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
             </div>
           </div>
         </div>
@@ -50,6 +46,8 @@
               <label class="control-label">Altura</label>
               <div class="controls">
                 <input id="altura" type="slider" name="" value="170;190"/>
+                <%= f.hidden_field :height_gteq  %>
+                <%= f.hidden_field :height_lteq  %>
               </div>
             </div>
             <div class="control-group">
@@ -96,7 +94,14 @@
             <input type="checkbox">Con hijos
           </label>        
       </div>
-      </form>
+      <%= f.label :complexion_eq %>
+      <%= f.select :complexion_eq, User::COMPLEXION %>
+      <%= f.check_box :pictures_main_eq %>
+      <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago %>
+      <%= f.check_box :smoker_in, {}, User.is_smoker %>
+      <%= f.check_box :children_in, {}, User.have_children %>
+      <%= f.submit %>
+    <% end %>
     </div>
   </div>
 </section>
