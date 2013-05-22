@@ -442,18 +442,31 @@ class User < ActiveRecord::Base
     return false
   end
 
-  def rate(stars, user_id)
-    if can_rate? user_id
-      rate = self.ratings_given.where("rateable_id = ?", user_id).first
+  def rate(stars, user)
+    if can_rate? user.id
+      rate = self.ratings_given.where("rateable_id = ?", user.id).first
       if rate
         rate.update_attributes(stars: stars)
       else
         self.rates.build do |r|
           r.stars = stars
-          r.rateable_id = user_id
+          r.rateable_id = user.id
           r.rater_id = self.id
           r.save!
         end
+      end
+
+      if stars == 3
+        user.add_to_cellove_index(User::CELLOVE_3_STARS)
+      elsif stars == 4
+        user.add_to_cellove_index(User::CELLOVE_4_STARS)
+      elsif stars == 5
+        user.add_to_cellove_index(User::CELLOVE_5_STARS)
+      end
+
+      if self.is_nice_couple?(user)
+        user.add_to_cellove_index(User::CELLOVE_COMMON_STARS)
+        self.add_to_cellove_index(User::CELLOVE_COMMON_STARS)
       end
     end
   end
@@ -481,9 +494,12 @@ class User < ActiveRecord::Base
     users
   end
 
-  # Are current_user and user a nice couple? I.e. did they rate each other the same?
+  # Are current_user and user a nice couple?
   def is_nice_couple?(user)
-    return true
+    have_rated = self.ratings_given.any?{ |r| r.rateable_id == user.id }
+    was_rated = self.rates.any?{ |r| r.rater_id == user.id }
+    return true if have_rated && was_rated
+    return false
   end
 
   # Cellove methods
@@ -499,8 +515,18 @@ class User < ActiveRecord::Base
   end
 
   # Is this the first message we send to the recipient?
-  def is_first_message?(recipient)
-    return true
+  def is_first_message_with?(recipient)
+    number_of_receipts = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id) }.flatten.length
+    return true if number_of_receipts == 1 # Only 1 receipt, so first message was sent
+    return false
+  end
+
+  # Is this the first activity proposal we send to the recipient?
+  # TODO
+  def is_first_activity_proposal_with?(recipient)
+    number_of_activities = 0
+    return true if number_of_activities == 1 # 1 proposal, so this was the first
+    return false
   end
 
 end

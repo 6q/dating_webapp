@@ -74,7 +74,7 @@ class MessagesController < ApplicationController
     end
 
     def add_to_cellove_index
-      if current_user.is_first_message?(@recipient)
+      if current_user.is_first_message_with?(@recipient)
         @recipient.add_to_cellove_index(User::CELLOVE_FIRST_MESSAGE)
       end
     end

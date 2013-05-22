@@ -72,6 +72,7 @@ class RecommendationsController < ApplicationController
       redirect_to root_path unless @recommendation.user_id == current_user.id
     end
 
+    # Callback for accept method
     def add_to_cellove_index
       case @recommendation.relationship
       when 1 # Ex Pareja
