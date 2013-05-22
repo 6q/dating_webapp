@@ -3,7 +3,7 @@
 //= require jquery.auderoFlashingText.min.js
 
 $(document).ready(function(){
-
+  
   // Consejos
   $("#caixarandom").auderoFlashingText({
     fadeOut: 1500,

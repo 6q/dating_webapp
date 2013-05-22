@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery.flexslider-min
-//= require functions
+//= require jquery.turbolinks
 //= require turbolinks
 //= require user_functions
 //= require_tree .
