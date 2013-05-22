@@ -18,6 +18,8 @@ $(document).ready(function(){
       scale: ['|','|','|','|','|','|','|','|'],
       onstatechange: function(){
         // $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
+        $('#q_years_lteq').val($("#years").val().split(';')[0]);
+        $('#q_years_gteq').val($("#years").val().split(';')[1]);
       }
     });
 

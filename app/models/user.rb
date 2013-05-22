@@ -277,6 +277,10 @@ class User < ActiveRecord::Base
     [postal_code, town, country].compact.join(', ')
   end
 
+  ransacker :years, :formatter => proc { |age| age.to_i.years.ago } do |parent|
+    parent.table[:birth_date]
+  end
+  
   def age(dob = self.birth_date)
     if self.birth_date.nil?
       0

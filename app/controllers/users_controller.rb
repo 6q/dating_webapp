@@ -2,8 +2,11 @@ class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
 
+  layout "logged_in"
+  
   def index
-    @users = User.all
+    @search = User.search(params[:q])
+    @users = @search.result.page(params[:page])
   end
 
   def show

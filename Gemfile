@@ -30,6 +30,7 @@ gem 'strong_parameters'
 gem 'mailboxer'
 gem 'gettext_i18n_rails'
 gem 'gettext', '>=1.9.3', :require => false, :group => :development
+gem 'ransack'
 
 group :test do
   gem 'faker'
