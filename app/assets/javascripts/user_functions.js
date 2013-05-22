@@ -9,7 +9,7 @@ $(document).ready(function(){
 
   $("#years").slider({
       from: 18,
-      to: 99,
+      to: 80,
       step: 1,
       smooth: true,
       round: 0,
@@ -18,8 +18,9 @@ $(document).ready(function(){
       scale: ['|','|','|','|','|','|','|','|'],
       onstatechange: function(){
         // $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
-        $('#q_years_lteq').val($("#years").val().split(';')[0]);
-        $('#q_years_gteq').val($("#years").val().split(';')[1]);
+        var years = $("#years").val().split(';');
+        $('#q_years_lteq').val(years[0]);
+        $('#q_years_gteq').val(years[1]);
       }
     });
 
@@ -37,7 +38,20 @@ $(document).ready(function(){
     }
   });
 
-  jQuery("#altura").slider({ from: 160, to: 220, step: 5, smooth: true, round: 0, skin: "plastic", dimension: '&nbsp;cm' });
+  jQuery("#altura").slider({ 
+    from: 160,
+    to: 220,
+    step: 5,
+    smooth: true,
+    round: 0,
+    skin: "plastic",
+    dimension: '&nbsp;cm',
+    onstatechange: function() {
+      var height = $('#altura').val().split(';');
+      $('#q_height_lteq').val(height[0]);
+      $('#q_height_gteq').val(height[1]);
+    }
+  });
   jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
   //jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
 

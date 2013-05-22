@@ -10,7 +10,6 @@
     
     <form class="span9 form-horizontal">
     <%= search_form_for @search, class: 'span9 form-horizontal' do |f| %>
-
     <div class="row">
       <div class="span8">
 
@@ -51,9 +50,9 @@
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label">Palabra clave</label>
+              <%= f.label :description_cont, _('Palabra clave'), class: 'control-label' %>
               <div class="controls">
-                <input type="text" class="">
+                <%= f.text_field :description_cont %>
               </div>
             </div>
           </div>
@@ -66,14 +65,11 @@
               </div>
             </div>
             <div class="control-group fit">
-              <label class="control-label">Complexión</label>
-              <select>
-                <option>atlética</option>
-                <option>curvas</option>
-              </select>
+              <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
+              <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] } %>
             </div>
             <div class="right">
-              <button type="submit" class="btn btn-info">Buscar</button>
+              <%= f.submit _('Buscar'), class: 'btn btn-info' %>
             </div>
           </div>
 
@@ -83,24 +79,18 @@
       <div>
         <label class="checkbox">
             <input type="checkbox">Con foto
+            <%= f.check_box :pictures_main_eq %><%= _('Con foto') %>
           </label>
           <label class="checkbox">
-            <input type="checkbox">Online
+            <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago %><%= _('Online') %>
           </label>
           <label class="checkbox">
-            <input type="checkbox">Fumador
+            <%= f.check_box :smoker_in, {}, User.is_smoker %><%= _('Fumador') %>
           </label>
           <label class="checkbox">
-            <input type="checkbox">Con hijos
-          </label>        
+            <%= f.check_box :children_in, {}, User.have_children %><%= _('Con hijos') %>
+          </label>
       </div>
-      <%= f.label :complexion_eq %>
-      <%= f.select :complexion_eq, User::COMPLEXION %>
-      <%= f.check_box :pictures_main_eq %>
-      <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago %>
-      <%= f.check_box :smoker_in, {}, User.is_smoker %>
-      <%= f.check_box :children_in, {}, User.have_children %>
-      <%= f.submit %>
     <% end %>
     </div>
   </div>
