@@ -522,9 +522,18 @@ class User < ActiveRecord::Base
   end
 
   # Is this the first activity proposal we send to the recipient?
-  # TODO
   def is_first_activity_proposal_with?(recipient)
     number_of_activities = 0
+    receipts = self.mailbox.conversations.map { |c| c.receipts.where(receiver_id: recipient.id) }.flatten
+    from_recipient = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id) }.flatten
+    receipts.concat(from_recipient)
+
+    receipts.each do |receipt|
+      notification = Notification.find(receipt.notification_id)
+      conversation = Conversation.find(notification.conversation_id)
+      number_of_activities += 1 if !conversation.activity.nil?
+    end
+
     return true if number_of_activities == 1 # 1 proposal, so this was the first
     return false
   end

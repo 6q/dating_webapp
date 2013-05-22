@@ -34,7 +34,7 @@ class ActivitiesController < ApplicationController
 
     def add_to_cellove_index
       if current_user.is_first_activity_proposal_with?(@recipient)
-        @recipient.add_to_cellove_index(User::CELLOVE_FIRST_MESSAGE)
+        @recipient.add_to_cellove_index(User::CELLOVE_FIRST_ACTIVITY)
       end
     end
 
