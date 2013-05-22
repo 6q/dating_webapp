@@ -22,7 +22,7 @@
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
 						<p class="small"><%= "#{User::GENDER[@user.gender]} - #{@user.age} años - #{@user.height} altura" %></p>
 						<p class="small"><%= "#{@user.name} es #{User::MARITAL_STATUS[@user.marital_status]} y #{User::CHILD[@user.child]}. Busca
-							#{User::GENDER[@user.lf_gender].downcase} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para NUEVA y que esté cerca de #{@user.town}" %>
+							#{User::GENDER[@user.lf_gender].downcase} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para NUEVO CAMPO y que esté cerca de #{@user.town}" %>
 						</p>
 				</div>
 
@@ -74,9 +74,9 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
-		  			<% 5.times do %>
+		  			
 						/shared/user/celes-item
-					<% end %>
+					
 		  		</div>
 
 		  		<div class="tab-pane" id="atributos">
