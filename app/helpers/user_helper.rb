@@ -6,7 +6,7 @@ module UserHelper
       size = "#{options[:width]}x#{options[:height]}"
       image_tag(pp.image.thumb(size).url)
     else
-      image_tag("placeholder-user.jpg")
+      image_tag("placeholder-#{user.gender}-#{Random.rand(1..3)}.jpg")
     end
   end
 

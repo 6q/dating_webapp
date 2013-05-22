@@ -5,11 +5,12 @@ class PicturesController < ApplicationController
 
   def create
     if current_user.is_over_picture_limit?
-      render json: {error: 'Ya has alcanzado tu limite de fotos'}, status: 403
+      render json: {error: _('Ya has alcanzado tu limite de fotos')}, status: 403
     else
       @picture = Picture.new(image: params["picture"])
       @picture.image = @picture.image.thumb("500x500").tempfile
       @picture.attachable = current_user
+      @picture.main = true if current_user.pictures.empty?
       if @picture.save
         render json: {
           crop_template: render_to_string(partial: 'pictures/picture_crop', locals: {picture: @picture}),
