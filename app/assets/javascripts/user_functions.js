@@ -1,7 +1,15 @@
 //= require jquery.slider
 //= require jquery.prettyPhoto
+//= require jquery.auderoFlashingText.min.js
 
 $(document).ready(function(){
+
+  // Consejos
+  $("#caixarandom").auderoFlashingText({
+    fadeOut: 1500,
+    duration: 2000,
+    selection: "ascending"
+  });
 
   // search sliders
 
