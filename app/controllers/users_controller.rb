@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   layout "logged_in"
   
   def index
+    nearbys = current_user.nearbys(params[:distance]).map(&:id)
+    nearbys = [0] if nearbys.empty?
+
+    params[:q].merge(id_in: nearbys) if params[:q]
     @search = User.search(params[:q])
     @users = @search.result.page(params[:page])
   end

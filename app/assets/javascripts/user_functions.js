@@ -24,7 +24,7 @@ $(document).ready(function(){
       }
     });
 
-  $("#kms").slider({
+  $("#distance").slider({
     from: 0,
     to: 500,
     step: 10,
@@ -33,8 +33,7 @@ $(document).ready(function(){
     dimension: '&nbsp;kms',
     scale: ['|','|','|','|','|','|','|','|'],
     onstatechange: function(){
-      $('#kms').parent().parent().find('label span').text($("#kms").val().split(';')[0] + 'kms');
-      //console.log($("#kms").val().split(';')[0]);
+      $('#distance').parent().parent().find('label span').text($("#distance").val().split(';')[0] + 'kms');
     }
   });
 

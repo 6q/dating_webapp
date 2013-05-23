@@ -38,7 +38,7 @@
             <div class="control-group slider">
               <label class="control-label">Distancia</label>
               <div class="controls">
-                <input id="kms" type="slider" name="" value="20"/>
+                <%= text_field_tag :distance, (params[:distance] || '500'), type: 'slider' %>
               </div>
             </div>
             <div class="control-group slider">
@@ -109,7 +109,6 @@
       <%= sort_link(@search, :name, "Nombre") %>
       <%= form_tag users_path(foo: true), id: 'sorteee', method: :get do |f| %>
         <%= select_tag "q[s]", options_for_select([['Nombre ascendente', 'name asc']]) %>
-        <%= hidden_field_tag :q, params[:q].to_query %>
         <%= submit_tag %>
       <% end %>
     </div>
@@ -117,7 +116,9 @@
   <ul class="user-list clearfix">
     <%= render @users %>
   </ul>
-
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
   <%= paginate @users %>
 
 </section>
