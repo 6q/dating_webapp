@@ -104,7 +104,14 @@
       <h1>Resultados de la búsqueda</h1>
     </div>
     <div class="pull-right">
+      Sort:
       <%= render '/shared/user/sorting' %>
+      <%= sort_link(@search, :name, "Nombre") %>
+      <%= form_tag users_path(foo: true), id: 'sorteee', method: :get do |f| %>
+        <%= select_tag "q[s]", options_for_select([['Nombre ascendente', 'name asc']]) %>
+        <%= hidden_field_tag :q, params[:q].to_query %>
+        <%= submit_tag %>
+      <% end %>
     </div>
   </header>
   <ul class="user-list clearfix">
