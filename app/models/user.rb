@@ -253,7 +253,9 @@ class User < ActiveRecord::Base
 
   has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id 
   has_many :rates, :class_name => "Rate", :foreign_key => :rateable_id, :dependent => :destroy
-  has_many :raters, :through => :rates, :source => :rater  
+  has_many :raters, :through => :rates, :source => :rater
+
+  has_many :notifications, :class_name => "CelloveNotification", :foreign_key => :receiver_id
 
   accepts_nested_attributes_for :characteristics
 
@@ -403,10 +405,13 @@ class User < ActiveRecord::Base
     visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
     if visit
       visit.update_attributes({ visited_at: Time.now, seen: false })
+      user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
     else
       visit = user.user_visits.build({ visited_at: Time.now })
       visit.visitor_id = self.id
-      visit.save
+      if visit.save
+        user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
+      end
     end
   end
 

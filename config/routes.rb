@@ -69,4 +69,6 @@ Cellove::Application.routes.draw do
     post 'reject'
   end
 
+  get 'notifications',                 to: 'notifications#notifications',          as: :notifications
+
 end

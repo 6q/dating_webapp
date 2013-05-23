@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521150450) do
+ActiveRecord::Schema.define(:version => 20130523094032) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(:version => 20130521150450) do
     t.datetime "updated_at",      :null => false
     t.text     "body"
     t.date     "date"
+  end
+
+  create_table "cellove_notifications", :force => true do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.integer  "notifiable_id"
+    t.string   "notifiable_type"
+    t.boolean  "seen",            :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "characteristics", :force => true do |t|
