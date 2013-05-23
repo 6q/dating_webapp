@@ -22,10 +22,17 @@ module Cellove
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
-    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += %W(
+      #{config.root}/lib
+      #{config.root}/app/controllers/concerns
+      #{config.root}/app/models/concerns
+      #{config.root}/app/jobs
+    )
 
     config.to_prepare do
       Devise::SessionsController.skip_before_filter :matchmaker_user
+      # Hacky way to maintain the concerning
+      Conversation.send(:include, ActivityConversation)
     end
 
     # Only load the plugins named here, in the order given (default is alphabetical).

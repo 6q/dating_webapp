@@ -223,7 +223,7 @@ section.list {
     font-size:.8em;
     color:#999;
 
-    span.pages {
+    span.page {
       display:block;
       float:right;
 
@@ -395,7 +395,7 @@ section.chat{
       margin-bottom:5px;
     }
 
-    span.pages {
+    span.page {
       float:none;
     }
   }
@@ -660,17 +660,25 @@ section.chat{
     @include clearfix;
     .type {
       font-style:normal;
-        display:block;
-        float:left;
-        width:60px;
-        height:30px;
-        background:image-url('sprite-activities.png') top left no-repeat;
-        font-size:.8em;
-        text-align:center;
-        color:#666;
-        padding-top:70px;
-        margin:0px 15px;
-        line-height:1em;
+      display:block;
+      float:left;
+      width:60px;
+      height:30px;
+      background:image-url('sprite-activities.png') top left no-repeat;
+      font-size:.8em;
+      text-align:center;
+      color:#666;
+      padding-top:70px;
+      margin:0px 15px;
+      line-height:1em;
+      $i: 0;
+      $activities:'coffee','movie','drink','eat','sport','culture','heart';
+      @each $a in $activities {
+        &.#{$a} {
+          background-position: -60px*$i 0;
+          $i: $i+1;          
+        }
+      }
     }
   }
 }
@@ -917,7 +925,7 @@ section.chat{
     }
 
     .pagination {
-        span.pages {
+        span.page {
           float:none;
         }
     }

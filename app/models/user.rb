@@ -64,17 +64,10 @@
 #  lf_weight_to           :integer
 #  lf_complexion          :string(255)
 #  lf_child               :string(255)
-#  lf_child_want          :string(255)
 #  lf_smoke               :string(255)
-#  lf_smoke_tolerance     :string(255)
 #  lf_diet                :string(255)
 #  lf_alcohol             :string(255)
-#  lf_drugs               :string(255)
-#  lf_drug_frequency      :string(255)
 #  lf_religion            :string(255)
-#  lf_religion_opinion    :string(255)
-#  lf_animal_like         :string(255)
-#  lf_animal_have         :string(255)
 #  lf_study_level         :string(255)
 #  lf_language            :string(255)
 #  lf_job                 :string(255)
@@ -102,6 +95,26 @@
 #  like_friends           :string(255)
 #  religion_activity      :string(255)
 #  invitation_code        :string(255)
+#  lf_house               :string(255)
+#  lf_hair                :string(255)
+#  lf_hair_style          :string(255)
+#  lf_eyes                :string(255)
+#  lf_like_sport          :string(255)
+#  lf_like_read           :string(255)
+#  lf_like_cinema         :string(255)
+#  lf_like_quiet          :string(255)
+#  lf_like_walk           :string(255)
+#  lf_like_mountain       :string(255)
+#  lf_like_beach          :string(255)
+#  lf_like_family         :string(255)
+#  lf_like_friends        :string(255)
+#  lf_religion_activity   :string(255)
+#  lf_citizenship         :string(255)
+#  lf_ethnicity           :string(255)
+#  lf_animals             :string(255)
+#  lf_party               :string(255)
+#  lf_language_level      :string(255)
+#  cellove_index          :integer          default(0)
 #
 
 
@@ -191,6 +204,20 @@ class User < ActiveRecord::Base
     'no-kids-i-want' => _('no tenga hijos, pero quiera tener'),'have-children-no-want-more' => _('tenga hijos, y no quiera tener mas '),
     'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
 
+  # Points for the Cellove index
+  CELLOVE_USER_VISIT = 1
+  CELLOVE_LIKE = 1
+  CELLOVE_FIRST_MESSAGE = 3
+  CELLOVE_FIRST_ACTIVITY_PROPOSAL = 3
+  CELLOVE_3_STARS = 1
+  CELLOVE_4_STARS = 2
+  CELLOVE_5_STARS = 3
+  CELLOVE_COMMON_STARS = 3
+  CELLOVE_RECOMMENDED_USER = 5
+  CELLOVE_CELESTINO_FAMILY = 5
+  CELLOVE_CELESTINO_FRIEND = 6
+  CELLOVE_CELESTINO_SPECIAL_FRIEND = 8
+  CELLOVE_CELESTINO_EX_PARTNER = 10
 
   PICTURE_LIMIT = 12
 
@@ -198,6 +225,8 @@ class User < ActiveRecord::Base
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
   include UserRetrieval
 
+  acts_as_messageable
+  
   #relations
   has_many :pictures, as: :attachable
   has_many :characteristics, class_name: 'Characteristic', foreign_key: 'user_id'
@@ -206,6 +235,27 @@ class User < ActiveRecord::Base
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
   has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
   has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
+
+  # user.likers will return people that have liked 'user'
+  has_many :likers, class_name: 'Like', foreign_key: 'user_id'
+  # user.likes will return people who 'user' has liked
+  has_many :likes, class_name: 'Like', foreign_key: 'creator_id'
+
+  has_many :user_visits
+  has_many :visitors, through: :user_visits, source: :visitor
+
+  # Useful for search later on
+  scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
+  has_many :user_blocks
+  has_many :blocked_users, through: :user_blocks, source: :blocked_user
+  scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
+  has_many :user_hides
+  has_many :hidden_users, through: :user_hides, source: :hidden_user
+  #default_scope includes(:user_hides).where(:user_hides => { :user_id => nil })
+
+  has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id 
+  has_many :rates, :class_name => "Rate", :foreign_key => :rateable_id, :dependent => :destroy
+  has_many :raters, :through => :rates, :source => :rater  
 
   accepts_nested_attributes_for :characteristics
 
@@ -220,6 +270,8 @@ class User < ActiveRecord::Base
   attr_accessor :terms_and_conditions
   attr_accessor :image_not_uploaded
   attr_accessor :email_confirmation
+  attr_accessor :blocked
+  attr_accessor :hidden
   present_date :birth_date
 
   # Setup accessible (or protected) attributes for your model
@@ -298,6 +350,10 @@ class User < ActiveRecord::Base
     [name, surname].join(" ")
   end
 
+  def mailboxer_email(object)
+    email
+  end
+
   def profile_picture
     self.pictures.where("main is true").limit(1).first || self.pictures.limit(1).first
   end
@@ -333,6 +389,156 @@ class User < ActiveRecord::Base
     end
   end
 
+  def people_who_like_me
+    self.likers.map { |l| l.creator }
+  end
+
+  def people_i_like
+    self.likes.map { |l| l.user }
+  end
+
+  # Saves a new record in the UserVisit table,
+  # where the current user visits the 'user' passed as a parameter.
+  # If a tuple (user_id, visitor_id) already exists in UserVisit,
+  # the visited_at attribute is updated
+  def visited(user)
+    visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
+    if visit
+      visit.update_attributes({ visited_at: Time.now, seen: false })
+    else
+      visit = user.user_visits.build({ visited_at: Time.now })
+      visit.visitor_id = self.id
+      visit.save
+    end
+  end
+
+  def number_of_visitors_since_last_login
+    UserVisit.count(:conditions => "user_id = " + self.id.to_s + " AND seen = false")
+  end
+
+  def set_all_visits_seen
+    visits = UserVisit.where("user_id = ? AND seen = false", self.id)
+    visits.each do |visit|
+      visit.seen = true
+      visit.save
+    end
+  end
+
+  def blocked_and_hidden_users
+    users = []
+    self.blocked_users.each do |user|
+      user.blocked = true
+      user.hidden = true if self.hidden_users.include?(user)
+      users.push(user)
+    end
+    self.hidden_users.each do |user|
+      user.hidden = true
+      users.push(user) if !users.include?(user)
+    end
+    return users
+  end
+
+  # Rating
+  def can_rate?(user_id)
+    return true if (user_id != self.id)
+    return false
+  end
+
+  def rate(stars, user)
+    if can_rate? user.id
+      rate = self.ratings_given.where("rateable_id = ?", user.id).first
+      if rate
+        rate.update_attributes(stars: stars)
+      else
+        self.rates.build do |r|
+          r.stars = stars
+          r.rateable_id = user.id
+          r.rater_id = self.id
+          r.save!
+        end
+      end
+
+      if stars == 3
+        user.add_to_cellove_index(User::CELLOVE_3_STARS)
+      elsif stars == 4
+        user.add_to_cellove_index(User::CELLOVE_4_STARS)
+      elsif stars == 5
+        user.add_to_cellove_index(User::CELLOVE_5_STARS)
+      end
+
+      if self.is_nice_couple?(user)
+        user.add_to_cellove_index(User::CELLOVE_COMMON_STARS)
+        self.add_to_cellove_index(User::CELLOVE_COMMON_STARS)
+      end
+    end
+  end
+
+  def rating(user_id)
+    rate = self.ratings_given.where("rateable_id = ?", user_id).first
+    if rate
+      return rate.stars
+    else
+      0
+    end
+  end
+
+  # Intersection of people who I rated and people who rated me
+  def nice_couple
+    users = []
+    self.rates.each do |rate|
+      # If we find a rater that's also present in the collection of ratings we've given
+      if self.ratings_given.any?{ |r| r.rateable_id == rate.rater_id }
+        user = User.find(rate.rater_id)
+        # Include user if not already included
+        users.push(user) if (!users.include?(user) && user != self)
+      end
+    end
+    users
+  end
+
+  # Are current_user and user a nice couple?
+  def is_nice_couple?(user)
+    have_rated = self.ratings_given.any?{ |r| r.rateable_id == user.id }
+    was_rated = self.rates.any?{ |r| r.rater_id == user.id }
+    return true if have_rated && was_rated
+    return false
+  end
+
+  # Cellove methods
+  def add_to_cellove_index(points)
+    self.cellove_index += points
+    self.save
+  end
+
+  def cellove_percentage
+    max = User.maximum("cellove_index")
+    return ((self.cellove_index/max.to_f)*100.0).to_i if self.cellove_index != 0
+    return 0
+  end
+
+  # Is this the first message we send to the recipient?
+  def is_first_message_with?(recipient)
+    number_of_receipts = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id) }.flatten.length
+    return true if number_of_receipts == 1 # Only 1 receipt, so first message was sent
+    return false
+  end
+
+  # Is this the first activity proposal we send to the recipient?
+  def is_first_activity_proposal_with?(recipient)
+    number_of_activities = 0
+    receipts = self.mailbox.conversations.map { |c| c.receipts.where(receiver_id: recipient.id) }.flatten
+    from_recipient = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id) }.flatten
+    receipts.concat(from_recipient)
+
+    receipts.each do |receipt|
+      notification = Notification.find(receipt.notification_id)
+      conversation = Conversation.find(notification.conversation_id)
+      number_of_activities += 1 if !conversation.activity.nil?
+    end
+
+    return true if number_of_activities == 1 # 1 proposal, so this was the first
+    return false
+  end
 
 end
 

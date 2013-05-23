@@ -3,6 +3,7 @@ module UserRetrieval
 
   def new_users_near_me
     #TODO: Implement
+    logger.debug self.name
     5.times.map{ self.class.all.sample }
   end
 

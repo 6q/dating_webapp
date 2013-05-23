@@ -1,4 +1,5 @@
 Cellove::Application.routes.draw do
+
   authenticated :user do
     root :to => 'dashboard#show'
   end
@@ -16,24 +17,34 @@ Cellove::Application.routes.draw do
 
   resources :pictures, only: [:create, :destroy, :show, :update]
   resources :recommendations, only: [:create] do
-    get 'accept',  to: 'recommendations#accept'
-    get 'deny',    to: 'recommendations#deny'
+    post 'accept',  to: 'recommendations#accept'
+    post 'deny',    to: 'recommendations#deny'
   end
 
   resources :users do
     resource :chat, only: :show
-    post 'like', to: "relationships#like"
-    post 'block', to: "relationships#block"
-    resource :rating
-    get 'view', on: :collection
+    post 'like',                    to: 'relationships#like'
+    post 'block_hide',              to: 'relationships#block_hide'
+    post 'block_hide_settings',     to: 'relationships#block_hide_settings'
+    get 'view',                     on: :collection
   end
   get '/dashboard', to: "dashboard#show", as: :dashboard
 
   scope "/user" do
+    get 'settings',                 to: 'users#settings'
+
     get 'celestinos-i-want',        to: 'users#be_matchmaker',                    as: :be_matchmaker
     get 'celestino-become-user',    to: 'users#matchmaker_become_user',           as: :matchmaker_become_user
     get 'celestinos-of-mine',       to: 'users#my_matchmakers',                   as: :my_matchmakers
+    get 'nice-couple',              to: 'users#nice_couple',                      as: :nice_couple
+
+    get 'likes',                    to: 'users#likes',                            as: :user_likes
+    get 'likes-of-mine',            to: 'users#likes_of_mine',                    as: :user_likes_of_mine
+    get 'hits',                     to: 'users#hits',                             as: :user_hits
+
+    get 'cellove-index',            to: 'users#cellove_index',                    as: :cellove_index
   end
+  post '/rate' => 'rater#create', :as => 'rate'
 
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what
@@ -48,4 +59,14 @@ Cellove::Application.routes.draw do
   post 'contact' => 'flat_pages#contact_form', as: :contact_form
   get 'media-prensa' => 'flat_pages#media_press', as: :media_press
   get 'anuncio-tv/:id' => 'flat_pages#tv_spot', as: :tv_spot
+
+  resources :messages
+  resources :conversations do 
+    resources :activities
+  end
+
+  resources :activities, only: [:new, :create] do
+    post 'reject'
+  end
+
 end
