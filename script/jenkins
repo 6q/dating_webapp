@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+bundle install --deployment
+bundle exec rake db:create RAILS_ENV=test
+bundle exec rake db:schema:load RAILS_ENV=test
+bundle exec rake test RAILS_ENV=test
