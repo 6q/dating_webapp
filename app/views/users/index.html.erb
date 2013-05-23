@@ -1,4 +1,4 @@
-<%= render 'shared/user/related-list' %>
+<%= render 'shared/related_list' %>
 
 <section class="search boxed">
 
@@ -26,7 +26,7 @@
           <div class="span8">
             <div class="control-group">
               <%= f.label :town_eq, _('Localidad'), class: 'control-label' %>
-              <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: true, selected: @search.town_eq, class: 'location' %>
+              <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: _('Localidad...'), selected: @search.town_eq, class: 'location' %>
               <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
               <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
             </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="control-group fit">
               <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
-              <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: true, selected: @search.complexion_eq %>
+              <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: _('Complexión...'), selected: @search.complexion_eq %>
             </div>
             <div class="right">
               <%= f.submit _('Buscar'), class: 'btn btn-info' %>
