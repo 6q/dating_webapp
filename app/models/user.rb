@@ -235,6 +235,7 @@ class User < ActiveRecord::Base
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
   has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
   has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
+  has_many :notes
 
   # user.likers will return people that have liked 'user'
   has_many :likers, class_name: 'Like', foreign_key: 'user_id'
@@ -539,6 +540,11 @@ class User < ActiveRecord::Base
     return true if number_of_activities == 1 # 1 proposal, so this was the first
     return false
   end
+
+  def my_notes(user)
+    self.notes.where(evaluated_id: user.id)
+  end
+
 
 end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130523092918) do
+ActiveRecord::Schema.define(:version => 20130523103827) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -65,6 +65,14 @@ ActiveRecord::Schema.define(:version => 20130523092918) do
     t.integer  "creator_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "notes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "evaluated_id"
+    t.text     "content"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "notifications", :force => true do |t|

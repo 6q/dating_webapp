@@ -103,17 +103,19 @@
 		  		<div class="tab-pane" id="notas">
 		  			<h4>Tus notas de María González <span>(tranquilo, él/ella no las verá)</span></h4>
 		  			<hr>
-		  			<% 5.times do %>
-		  				/shared/user/nota-item
+		  			<% current_user.my_notes(@user).each do |note| %>
+		  				<%= render '/shared/user/nota-item', note: note %>
 		  			<% end %>
 
 		  			<div class="new-nota">
-		  				<form>
-		  					<textarea placeholder="Nueva nota">Nunca me contesta. ¿Será por mi aliento insecticida? Y, sobretodo... ¿cómo lo habrá olido por internet?</textarea>
+		  				<%= form_for :note, :url => '/notes' do |n| %>
+		  					<%= n.text_area :content, :placeholder => 'Nueva nota' %>
+		  					<%= n.hidden_field :user_id, :value => current_user.id %>
+		  					<%= n.hidden_field :evaluated_id, :value => @user.id %>
 		  					<div class="pull-right controls">
 		  						<button type="submit" class="btn btn-info">Añadir nota</button>
 		  					</div>
-		  				</form>
+		  				<% end %>
 		  			</div>
 		  					  
 		  		</div>
