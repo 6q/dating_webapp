@@ -16,6 +16,7 @@ class UserVisit < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :visitor, :foreign_key => 'visitor_id', :class_name => 'User'
+  has_many :notifications, :as => :notifiable
 
   validates :user_id, uniqueness: { scope: :visitor_id }
   validates_presence_of :user_id, :visitor_id, :visited_at

@@ -20,6 +20,7 @@ class Recommendation < ActiveRecord::Base
   # (using user_id and creator_id)
   # Assuming there can only be one [user_id, creator_id] tuple in Characteristic
 
+  has_many :notifications, :as => :notifiable
   has_one :characteristic, dependent: :destroy
   accepts_nested_attributes_for :characteristic
 
@@ -28,4 +29,9 @@ class Recommendation < ActiveRecord::Base
 
   validates_presence_of :relationship, :description, :user_id, :creator_id
   validates :user_id, uniqueness: { scope: :creator_id }
+
+  after_create do |recommendation|
+    user = User.find(user_id)
+    user.notifications.create({ sender_id: creator_id, notifiable_id: recommendation.id, notifiable_type: 'matchmaker' })
+  end
 end

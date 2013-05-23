@@ -17,7 +17,7 @@ class CelloveNotification < ActiveRecord::Base
 
   NOTIFICATION_TYPE = {
     like: _('¡Le gusta!'),
-    visit: _('¡Visitado!'),
+    visit: _('¡Nuevo visitante!'),
     message: _('¡Nuevo mensaje!'),
     couple: _('¡Buena pareja!'),
     matchmaker: _('¡Nuevo celestino!')

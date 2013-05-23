@@ -74,6 +74,7 @@ class MessagesController < ApplicationController
     end
 
     def add_to_cellove_index
+      @recipient.notifications.create({ sender_id: current_user.id, notifiable_id: @receipt.conversation.id, notifiable_type: 'message' })
       if current_user.is_first_message_with?(@recipient)
         @recipient.add_to_cellove_index(User::CELLOVE_FIRST_MESSAGE)
       end

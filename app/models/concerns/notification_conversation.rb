@@ -1,12 +1,12 @@
-module ActivityConversation
+module NotificationConversation
   extend ActiveSupport::Concern
 
   included do
-    has_one :activity
-    after_commit do |conversation|
+    after_create do |notification|
+      conversation = Conversation.find(notification.conversation_id)
       m = Message.where(conversation_id: conversation.id).first
       sender = conversation.messages.first.sender
-      recipient = m.recipients.where("id != ?", sender.id).first
+      recipient = conversation.messages.map{ |m| m.recipients }.flatten.uniq.reject{|i| i == sender}.first
       recipient.notifications.create({ sender_id: sender.id, notifiable_id: conversation.id, notifiable_type: 'message' })
     end
   end
