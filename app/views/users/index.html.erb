@@ -16,7 +16,7 @@
         <div class="control-group slider">
           <label class="control-label">Edad</label>
           <div class="span6">
-            <input id="years" type="slider" name="" value="18;80"/>
+            <input id="years" type="slider" name="" value="<%= @search.years_lteq || '18' %>;<%= @search.years_gteq || '80' %>"/>
             <%= f.hidden_field :years_gteq  %>
             <%= f.hidden_field :years_lteq  %>
           </div>
@@ -26,7 +26,7 @@
           <div class="span8">
             <div class="control-group">
               <%= f.label :town_eq, _('Localidad'), class: 'control-label' %>
-              <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, class: 'location' %>
+              <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: true, selected: @search.town_eq, class: 'location' %>
               <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
               <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
             </div>
@@ -44,7 +44,7 @@
             <div class="control-group slider">
               <label class="control-label">Altura</label>
               <div class="controls">
-                <input id="altura" type="slider" name="" value="170;190"/>
+                <input id="altura" type="slider" name="" value="<%= @search.height_gteq || '170' %>;<%= @search.height_lteq || '190' %>"/>
                 <%= f.hidden_field :height_gteq  %>
                 <%= f.hidden_field :height_lteq  %>
               </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="control-group fit">
               <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
-              <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] } %>
+              <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: true, selected: @search.complexion_eq %>
             </div>
             <div class="right">
               <%= f.submit _('Buscar'), class: 'btn btn-info' %>
@@ -78,17 +78,16 @@
 
       <div>
         <label class="checkbox">
-            <input type="checkbox">Con foto
-            <%= f.check_box :pictures_main_eq %><%= _('Con foto') %>
+            <%= f.check_box :pictures_main_eq, {}, 1, '' %><%= _('Con foto') %>
           </label>
           <label class="checkbox">
-            <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago %><%= _('Online') %>
+            <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %><%= _('Online') %>
           </label>
           <label class="checkbox">
-            <%= f.check_box :smoker_in, {}, User.is_smoker %><%= _('Fumador') %>
+            <%= f.check_box :smoker_in, {}, User.is_smoker, '' %><%= _('Fumador') %>
           </label>
           <label class="checkbox">
-            <%= f.check_box :children_in, {}, User.have_children %><%= _('Con hijos') %>
+            <%= f.check_box :children_in, {}, User.have_children, '' %><%= _('Con hijos') %>
           </label>
       </div>
     <% end %>

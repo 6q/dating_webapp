@@ -48,8 +48,8 @@ $(document).ready(function(){
     dimension: '&nbsp;cm',
     onstatechange: function() {
       var height = $('#altura').val().split(';');
-      $('#q_height_lteq').val(height[0]);
-      $('#q_height_gteq').val(height[1]);
+      $('#q_height_gteq').val(height[0]);
+      $('#q_height_lteq').val(height[1]);
     }
   });
   jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
