@@ -241,7 +241,7 @@ class User < ActiveRecord::Base
     :lf_study_level, :lf_language, :lf_job, :lf_salary,:lf_house, :lf_hair, :lf_hair_style, 
     :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals, 
     :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
-    :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to,
+    :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to, :lf_relationship,
     :characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
