@@ -28,6 +28,14 @@ class Activity < ActiveRecord::Base
   validate :activity_type, presence: true
 
   belongs_to :conversation
+  after_create do |activity|
+    conversation = activity.conversation
+    current_user = conversation.recipients[0]
+    recipient = User.find(conversation.receipts.where("receiver_id != ?", current_user.id).first.receiver_id)
+    if current_user.is_first_activity_proposal_with?(recipient)
+      recipient.add_to_cellove_index(User::CELLOVE_FIRST_ACTIVITY_PROPOSAL)
+    end
+  end 
 
   def accept!
     update_attribute(:status, :accepted)

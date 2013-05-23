@@ -1,5 +1,4 @@
 class RelationshipsController < ApplicationController
-  after_filter :add_to_cellove_index, only: [:like]
 
   def like
     @user = User.find(params[:user_id])
@@ -62,8 +61,4 @@ class RelationshipsController < ApplicationController
     redirect_to settings_path
   end
 
-  private
-    def add_to_cellove_index
-      @user.add_to_cellove_index(User::CELLOVE_LIKE)
-    end
 end

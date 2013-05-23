@@ -16,4 +16,9 @@ class Like < ActiveRecord::Base
 
   validates :user_id, uniqueness: { scope: :creator_id }
   validates_presence_of :user_id, :creator_id
+
+  after_create do |like|
+    user = User.find(like.user_id)
+    user.add_to_cellove_index(User::CELLOVE_LIKE)
+  end
 end

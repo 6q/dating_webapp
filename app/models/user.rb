@@ -210,7 +210,7 @@ class User < ActiveRecord::Base
   CELLOVE_3_STARS = 1
   CELLOVE_4_STARS = 2
   CELLOVE_5_STARS = 3
-  CELLOVE_COMMON_STARS = 3
+  CELLOVE_IS_NICE_COUPLE = 3
   CELLOVE_RECOMMENDED_USER = 5
   CELLOVE_CELESTINO_FAMILY = 5
   CELLOVE_CELESTINO_FRIEND = 6
@@ -465,8 +465,8 @@ class User < ActiveRecord::Base
       end
 
       if self.is_nice_couple?(user)
-        user.add_to_cellove_index(User::CELLOVE_COMMON_STARS)
-        self.add_to_cellove_index(User::CELLOVE_COMMON_STARS)
+        user.add_to_cellove_index(User::CELLOVE_IS_NICE_COUPLE)
+        self.add_to_cellove_index(User::CELLOVE_IS_NICE_COUPLE)
       end
     end
   end
@@ -524,8 +524,8 @@ class User < ActiveRecord::Base
   # Is this the first activity proposal we send to the recipient?
   def is_first_activity_proposal_with?(recipient)
     number_of_activities = 0
-    receipts = self.mailbox.conversations.map { |c| c.receipts.where(receiver_id: recipient.id) }.flatten
-    from_recipient = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id) }.flatten
+    receipts = self.mailbox.conversations.map { |c| c.receipts.where(receiver_id: recipient.id, mailbox_type: "inbox") }.flatten
+    from_recipient = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id, mailbox_type: "inbox") }.flatten
     receipts.concat(from_recipient)
 
     receipts.each do |receipt|

@@ -23,7 +23,6 @@ class RecommendationsController < ApplicationController
 
       @recommendation.user_id = user.id
       if @recommendation.save
-        #@characteristic = user.characteristics.build(params[:characteristic])
         @characteristic = @recommendation.build_characteristic(params[:characteristic])
         @characteristic.user_id = user.id
         @characteristic.creator_id = current_user.id
