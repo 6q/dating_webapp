@@ -181,6 +181,8 @@ class User < ActiveRecord::Base
   CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
     'terror' => _('terror')}
 
+  LF_RELATIONSHIP = {'friends' => _('hacer nuevas amistades'), 'fun' => _('salir y pasarlo bien'), 
+    'couple' => _('establecer una relación estable'), 'marry' => _('casarme')}
   LF_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
     'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@')}
   LF_SMOKE = {'smoker' => 'fume', 'non-smoker' => 'no fume', 'smoker-hater' => 'sea antitabaco','not-mind-smoke' => _('no le moleste el humo'),
@@ -293,7 +295,7 @@ class User < ActiveRecord::Base
     :lf_study_level, :lf_language, :lf_job, :lf_salary,:lf_house, :lf_hair, :lf_hair_style, 
     :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals, 
     :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
-    :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level,
+    :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_relationship,
     :characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
