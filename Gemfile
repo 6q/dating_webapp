@@ -32,7 +32,6 @@ gem 'gettext_i18n_rails'
 gem 'gettext', '>=1.9.3', :require => false, :group => :development
 
 group :test do
-  gem 'sqlite3'
   gem 'faker'
   gem 'database_cleaner'
   gem 'minitest-focus'
