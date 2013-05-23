@@ -113,6 +113,10 @@ module RegistrationsHelper
   end
 
 
+  def lf_relationship_options
+    User::LF_RELATIONSHIP.map {|k,v| [v,k]}
+  end
+
   def lf_house_options
     User::LF_HOUSE.map {|k,v| [v,k]}
   end
