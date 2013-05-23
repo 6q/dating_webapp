@@ -17,7 +17,10 @@ class CelloveNotification < ActiveRecord::Base
 
   NOTIFICATION_TYPE = {
     like: _('¡Le gusta!'),
-    visit: _('¡Visitado!')
+    visit: _('¡Visitado!'),
+    message: _('¡Nuevo mensaje!'),
+    couple: _('¡Buena pareja!'),
+    matchmaker: _('¡Nuevo celestino!')
   }
 
   belongs_to :notifiable, :polymorphic => true

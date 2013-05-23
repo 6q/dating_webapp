@@ -453,7 +453,7 @@ class User < ActiveRecord::Base
       if rate
         rate.update_attributes(stars: stars)
       else
-        self.rates.build do |r|
+        rate = self.rates.build do |r|
           r.stars = stars
           r.rateable_id = user.id
           r.rater_id = self.id
@@ -465,8 +465,10 @@ class User < ActiveRecord::Base
         user.add_to_cellove_index(User::CELLOVE_3_STARS)
       elsif stars == 4
         user.add_to_cellove_index(User::CELLOVE_4_STARS)
+        user.notifications.create({ sender_id: self.id, notifiable_id: rate.id, notifiable_type: 'couple' })
       elsif stars == 5
         user.add_to_cellove_index(User::CELLOVE_5_STARS)
+        user.notifications.create({ sender_id: self.id, notifiable_id: rate.id, notifiable_type: 'couple' })
       end
 
       if self.is_nice_couple?(user)

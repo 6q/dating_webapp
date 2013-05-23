@@ -28,4 +28,8 @@ class Recommendation < ActiveRecord::Base
 
   validates_presence_of :relationship, :description, :user_id, :creator_id
   validates :user_id, uniqueness: { scope: :creator_id }
+
+  after_create do |recommendation|
+    user.notifications.create({ sender_id: self.id, notifiable_id: @recommendation.id, notifiable_type: 'matchmaker' })
+  end
 end
