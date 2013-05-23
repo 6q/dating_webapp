@@ -4,7 +4,7 @@
 //= require jquery.tmpl.min.js
 
 $(document).ready(function() {
-  setTimeout(getNotifications, 5000);
+  setTimeout(getNotifications, 60000);
 
   function getNotifications () {
     var notification;
@@ -19,7 +19,7 @@ $(document).ready(function() {
     .fail(function(jqxhr, settings, exception) {
       // ERROR.
     });
-    setTimeout(getNotifications, 5000);
+    setTimeout(getNotifications, 60000);
   }
 
   $(document).on('click', '.notification-close', function() {
