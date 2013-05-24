@@ -7,7 +7,9 @@ module NotificationConversation
       m = Message.where(conversation_id: conversation.id).first
       sender = conversation.messages.first.sender
       recipient = conversation.messages.map{ |m| m.recipients }.flatten.uniq.reject{|i| i == sender}.first
-      recipient.notifications.create({ sender_id: sender.id, notifiable_id: conversation.id, notifiable_type: 'message' })
+      if sender && recipient
+        recipient.notifications.create({ sender_id: sender.id, notifiable_id: conversation.id, notifiable_type: 'message' })
+      end
     end
   end
 end

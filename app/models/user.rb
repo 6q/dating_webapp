@@ -365,11 +365,11 @@ class User < ActiveRecord::Base
   end
 
   def confirmed_recommenders
-    self.recommenders.where("confirmed = true and denied = false")
+    self.recommenders.where(confirmed: true, denied: false)
   end
 
   def unconfirmed_recommenders
-    self.recommenders.where("confirmed = false and denied = false")
+    self.recommenders.where(confirmed: false, denied: false)
   end
 
   def avg_characteristic(characteristic = 'romantic')
@@ -477,6 +477,8 @@ class User < ActiveRecord::Base
         user.add_to_cellove_index(User::CELLOVE_IS_NICE_COUPLE)
         self.add_to_cellove_index(User::CELLOVE_IS_NICE_COUPLE)
       end
+    else
+      false
     end
   end
 
