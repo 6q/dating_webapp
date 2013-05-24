@@ -443,6 +443,17 @@ class User < ActiveRecord::Base
     return users
   end
 
+  # Me gusta
+  def like(user)
+    like = self.likes.build({})
+    like.user_id = user.id
+    if like.save
+      return true
+    else
+      return false
+    end
+  end
+
   # Rating
   def can_rate?(user_id)
     return true if (user_id != self.id)

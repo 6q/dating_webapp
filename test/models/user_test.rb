@@ -174,6 +174,24 @@ describe User do
     @user.visitors.length.must_equal 1
   end
 
+  it 'must like the other user' do
+    @user = create(:regular_user)
+    @liked_user = create(:regular_user)
+    @user.like(@liked_user)
+
+    @liked_user.likers.class.must_equal Array
+    @liked_user.likers.length.must_be :>=, 1
+    @liked_user.likers[0].class.must_equal Like
+    @liked_user.likers[0].user_id.must_equal @liked_user.id
+    @liked_user.likers[0].creator_id.must_equal @user.id
+
+    @user.likes.class.must_equal Array
+    @user.likes.length.must_be :>=, 1
+    @user.likes[0].class.must_equal Like
+    @user.likes[0].user_id.must_equal @liked_user.id
+    @user.likes[0].creator_id.must_equal @user.id
+  end
+
   it 'must rate the user with 4 stars' do
     @user = create(:regular_user)
     @rated_user = create(:regular_user)
