@@ -197,6 +197,7 @@ describe User do
     @rated_user.raters[0].id.must_equal @user.id
   end
 
+  focus
   it 'must return the nice couples' do
     @user = create(:regular_user)
     @rated_user = create(:regular_user)

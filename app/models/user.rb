@@ -492,14 +492,25 @@ class User < ActiveRecord::Base
   end
 
   # Intersection of people who I rated and people who rated me
+  # def nice_couple
+  #   users = []
+  #   self.rates.each do |rate|
+  #     # If we find a rater that's also present in the collection of ratings we've given
+  #     if self.ratings_given.any?{ |r| r.rateable_id == rate.rater_id }
+  #       user = User.find(rate.rater_id)
+  #       puts user.inspect
+  #       # Include user if not already included
+  #       users.push(user) if (!users.include?(user) && user != self)
+  #     end
+  #   end
+  #   users
+  # end
+
   def nice_couple
     users = []
-    self.rates.each do |rate|
-      # If we find a rater that's also present in the collection of ratings we've given
-      if self.ratings_given.any?{ |r| r.rateable_id == rate.rater_id }
-        user = User.find(rate.rater_id)
-        # Include user if not already included
-        users.push(user) if (!users.include?(user) && user != self)
+    self.raters.each do |rater|
+      if self.ratings_given.any?{ |r| r.rateable_id == rater.id }
+        users.push(rater) if (!users.include?(rater) && rater != self)
       end
     end
     users
