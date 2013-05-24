@@ -73,4 +73,34 @@ describe User do
   test 'unconfirmed_recommenders returns the right recommendations' do
   end
 
+  test 'should find users by age range' do
+    create(:regular_user, birth_date: Date.today - 18.years)
+    create(:regular_user, birth_date: Date.today - 21.years)
+    create(:regular_user, birth_date: Date.today - 22.years)
+
+    puts User.search(years_lteq: 18, years_gteq: 23).result.count.must_equal 3
+  end
+
+  test 'should find online users' do
+    offline_user = create(:regular_user, updated_at: Date.today.yesterday)
+    online_user = create(:regular_user)
+    online_user.touch
+
+    User.search(updated_at_gteq: 5.minutes.ago).result.count.must_equal 1
+    offline_user.online?.must_equal false
+    online_user.online?.must_equal true
+  end
+
+  test 'should find smoker users' do
+    u = create(:regular_user, smoke: :smoker)
+
+    User.search(smoke_in: ['smoker']).result.first.must_equal u
+  end
+
+  test 'should find users with children' do
+    u = create(:regular_user, child: :have_children_want_more)
+
+    User.search(children_in: ['have_children_want_more']).result.first.must_equal u
+    User.search(children_in: ['children']).result.first.must_be_nil
+  end
 end
