@@ -1,21 +1,11 @@
 class FlatPagesController < ApplicationController
   skip_before_filter :authenticate_user!
+  before_filter :set_sidebar, only: [:what, :raise_popularity, :matchmakers, :tv_spot]
 
-  def legal
-  end
-
-  def what
+  def set_sidebar
     @sidebar = true
   end
-
-  def privacy_policy
-  end
-
-  def terms_conditions
-  end
-
-  def usage
-  end
+  private :set_sidebar
 
   def new_contact_form
     @contact_form = ContactForm.new
@@ -27,26 +17,11 @@ class FlatPagesController < ApplicationController
     redirect_to new_contact_form_path
   end
 
-  def media_press
-  end
-
   def tv_spot
-    @sidebar = true
     @videos = true
     id = params[:id]
 
     render "tv_spot_#{id}"
-  end
-
-  def how_it_works
-  end
-
-  def raise_popularity
-    @sidebar = true
-  end
-
-  def matchmakers
-    @sidebar = true
   end
 end
 
