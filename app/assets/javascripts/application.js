@@ -16,4 +16,9 @@
 //= require jquery.flexslider-min
 //= require functions
 //= require user_functions
+//= require chosen.jquery.min
 //= require_tree .
+
+$(function() {
+  $('.location').chosen();
+});
