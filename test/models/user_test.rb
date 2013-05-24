@@ -146,8 +146,14 @@ describe User do
     @user.unconfirmed_recommenders[0].denied.must_equal false
   end
 
-  it 'must have a matchmaker recommendation' do
+  it 'must have a matchmaker notification' do
     # TODO
+    # Not unit-testable atm? Code in controller
+  end
+
+  it 'must have a message notification' do
+    # TODO
+    # Not unit-testable atm?
   end
 
   it 'must visit the user\'s profile' do
