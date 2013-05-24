@@ -177,7 +177,7 @@ describe User do
   it 'must rate the user with 4 stars' do
     @user = create(:regular_user)
     @rated_user = create(:regular_user)
-    @user.rate(4, @rated_user.id)
+    @user.rate(4, @rated_user)
 
     @user.ratings_given.class.must_equal Array
     @user.ratings_given.length.must_be :>=, 1
@@ -189,7 +189,7 @@ describe User do
   it 'must have raters' do
     @user = create(:regular_user)
     @rated_user = create(:regular_user)
-    @user.rate(4, @rated_user.id)
+    @user.rate(4, @rated_user)
 
     @rated_user.raters.class.must_equal Array
     @rated_user.raters.length.must_be :>=, 1
@@ -200,8 +200,8 @@ describe User do
   it 'must return the nice couples' do
     @user = create(:regular_user)
     @rated_user = create(:regular_user)
-    @user.rate(4, @rated_user.id)
-    @rated_user.rate(5, @user.id)
+    @user.rate(4, @rated_user)
+    @rated_user.rate(5, @user)
 
     @user.nice_couple.class.must_equal Array
     @user.nice_couple[0].class.must_equal User

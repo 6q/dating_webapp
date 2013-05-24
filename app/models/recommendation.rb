@@ -31,7 +31,11 @@ class Recommendation < ActiveRecord::Base
   validates :user_id, uniqueness: { scope: :creator_id }
 
   after_create do |recommendation|
-    user = User.find(user_id)
-    user.notifications.create({ sender_id: creator_id, notifiable_id: recommendation.id, notifiable_type: 'matchmaker' })
+    begin
+      user = User.find(user_id)
+      user.notifications.create({ sender_id: creator_id, notifiable_id: recommendation.id, notifiable_type: 'matchmaker' })
+    rescue ActiveRecord::RecordNotFound
+      # User record was not found
+    end
   end
 end

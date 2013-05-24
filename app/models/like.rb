@@ -19,11 +19,15 @@ class Like < ActiveRecord::Base
   validates_presence_of :user_id, :creator_id
 
   after_create do |like|
-    # Add to cellove index
-    user = User.find(like.user_id)
-    user.add_to_cellove_index(User::CELLOVE_LIKE)
+    begin
+      # Add to cellove index
+      user = User.find(like.user_id)
+      user.add_to_cellove_index(User::CELLOVE_LIKE)
 
-    # Create notification
-    user.notifications.create({ sender_id: creator_id, notifiable_id: like.id, notifiable_type: 'like' })
+      # Create notification
+      user.notifications.create({ sender_id: creator_id, notifiable_id: like.id, notifiable_type: 'like' })
+    rescue ActiveRecord::RecordNotFound
+      # User record was not found
+    end
   end
 end
