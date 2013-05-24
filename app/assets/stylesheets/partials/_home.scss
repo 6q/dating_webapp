@@ -219,13 +219,19 @@ section.direct-search {
         width:95px;
         position:relative;
 
-        button {
+        input.btn {
           font-size:1em;
           margin-top:50px;
         }
 
+        
+
       }
 
+    }
+    
+    .location {
+      width: 190px;
     }
 
   }

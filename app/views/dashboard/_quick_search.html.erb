@@ -9,16 +9,14 @@
               <label>Edad <span></span></label>
               <div class="controls">
                 <input id="years" type="slider" name="" value="<%= @search.years_lteq || '18' %>;<%= @search.years_gteq || '80' %>"/>
-            <%= f.hidden_field :years_gteq  %>
-            <%= f.hidden_field :years_lteq  %>
+                <%= f.hidden_field :years_gteq  %>
+                <%= f.hidden_field :years_lteq  %>
               </div>
             </div>
             <div class="control-group">
               <label>Población y código postal</label>
               <div class="controls">
-                <%= f.label :town_eq, _('Localidad'), class: 'control-label' %>
-                <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: _('Localidad...'), selected: @search.town_eq, class: 'location' %>
-                <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
+                <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, { include_blank: _('Localidad...'), selected: @search.town_eq }, { class: 'location' } %>
                 <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
               </div>
             </div>
