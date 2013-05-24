@@ -146,6 +146,10 @@ describe User do
     @user.unconfirmed_recommenders[0].denied.must_equal false
   end
 
+  it 'must have a matchmaker recommendation' do
+    # TODO
+  end
+
   it 'must visit the user\'s profile' do
     @user = create(:regular_user)
     @visitor = create(:regular_user)
@@ -174,6 +178,19 @@ describe User do
     @user.visitors.length.must_equal 1
   end
 
+  it 'must have a visit notification' do
+    @user = create(:regular_user)
+    @visitor = create(:regular_user)
+    @visitor.visited(@user)
+
+    @user.notifications.class.must_equal Array
+    @user.notifications.length.must_be :>=, 1
+    @user.notifications[0].class.must_equal CelloveNotification
+    @user.notifications[0].notifiable_type.must_equal "visit"
+    @user.notifications[0].sender_id.must_equal @visitor.id
+    @user.notifications[0].receiver_id.must_equal @user.id
+  end
+
   it 'must like the other user' do
     @user = create(:regular_user)
     @liked_user = create(:regular_user)
@@ -190,6 +207,19 @@ describe User do
     @user.likes[0].class.must_equal Like
     @user.likes[0].user_id.must_equal @liked_user.id
     @user.likes[0].creator_id.must_equal @user.id
+  end
+
+  it 'must have a like notification' do
+    @user = create(:regular_user)
+    @liked_user = create(:regular_user)
+    @user.like(@liked_user)
+
+    @liked_user.notifications.class.must_equal Array
+    @liked_user.notifications.length.must_be :>=, 1
+    @liked_user.notifications[0].class.must_equal CelloveNotification
+    @liked_user.notifications[0].notifiable_type.must_equal "like"
+    @liked_user.notifications[0].sender_id.must_equal @user.id
+    @liked_user.notifications[0].receiver_id.must_equal @liked_user.id
   end
 
   it 'must rate the user with 4 stars' do
@@ -225,6 +255,27 @@ describe User do
     @user.nice_couple.length.must_be :>=, 1
     @user.nice_couple[0].class.must_equal User
     @user.nice_couple[0].id.must_equal @rated_user.id
+  end
+
+  it 'must have a nice couple notification' do
+    @user = create(:regular_user)
+    @rated_user = create(:regular_user)
+    @user.rate(4, @rated_user)
+    @rated_user.rate(5, @user)
+
+    @user.notifications.class.must_equal Array
+    @user.notifications.length.must_be :>=, 1
+    @user.notifications[0].class.must_equal CelloveNotification
+    @user.notifications[0].notifiable_type.must_equal "couple"
+    @user.notifications[0].sender_id.must_equal @rated_user.id
+    @user.notifications[0].receiver_id.must_equal @user.id
+
+    @rated_user.notifications.class.must_equal Array
+    @rated_user.notifications.length.must_be :>=, 1
+    @rated_user.notifications[0].class.must_equal CelloveNotification
+    @rated_user.notifications[0].notifiable_type.must_equal "couple"
+    @rated_user.notifications[0].sender_id.must_equal @user.id
+    @rated_user.notifications[0].receiver_id.must_equal @rated_user.id
   end
 
 end
