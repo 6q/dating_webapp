@@ -18,7 +18,7 @@
   <section id="best-rated" class="home-users">
     <div class="clearfix list-header">
       <h4 class="pull-left">Usuari@s con mejor puntuación</h4>
-      <div class="pull-right">En un radio de 50 km > <%= link_to "Cambiar radio", "#" %> | <%= link_to "Ver más", "#" %></div>
+      <div class="pull-right"><%= link_to "Ver más", "#" %></div>
     </div>
     <ul class="user-list clearfix">
       <%= render partial: "user_card", collection: current_user.best_rated_near_me, as: "user" %>
@@ -28,7 +28,7 @@
   <section id="near-most-visited" class="home-users">
     <div class="clearfix list-header">
       <h4 class="pull-left">Usuari@s que te pueden gustar</h4>
-      <div class="pull-right">En un radio de 50 km > <%= link_to "Cambiar radio", "#" %> | <%= link_to "Ver más", "#" %></div>
+      <div class="pull-right"><%= link_to "Ver más", "#" %></div>
     </div>
     <ul class="user-list clearfix">
       <%= render partial: "user_card", collection: current_user.best_suited_near_me, as: "user" %>
