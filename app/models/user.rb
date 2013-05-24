@@ -189,7 +189,6 @@ class User < ActiveRecord::Base
     'no-kids-i-want' => _('no tenga hijos, pero quiera tener'),'have-children-no-want-more' => _('tenga hijos, y no quiera tener mas '),
     'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
 
-
   PICTURE_LIMIT = 12
 
   extend MinimumAgeValidatorHelper
