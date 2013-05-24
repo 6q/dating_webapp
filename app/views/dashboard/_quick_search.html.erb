@@ -3,46 +3,49 @@
     <div class="boxed-inner">
       <h4>Búsqueda directa:</h4>
       <div class="searchform form-horizontal">
-        <form>
+        <%= search_form_for @search do |f| %>
           <fieldset class="span6">
             <div class="control-group sliders">
               <label>Edad <span></span></label>
               <div class="controls">
-                <input id="years" type="slider" name="" value="18;80"/>
+                <input id="years" type="slider" name="" value="<%= @search.years_lteq || '18' %>;<%= @search.years_gteq || '80' %>"/>
+            <%= f.hidden_field :years_gteq  %>
+            <%= f.hidden_field :years_lteq  %>
               </div>
             </div>
             <div class="control-group">
               <label>Población y código postal</label>
               <div class="controls">
-                <input type="text" placeholder="Población" class="span3">
-                <input type="text" placeholder="CP" class="span1">
+                <%= f.label :town_eq, _('Localidad'), class: 'control-label' %>
+                <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: _('Localidad...'), selected: @search.town_eq, class: 'location' %>
+                <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
+                <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
               </div>
             </div>
             <div class="control-group sliders">
               <label>Distancia <span></span></label>
               <div class="controls">
-                <input id="kms" type="slider" name="" value="20"/>
+                <%= text_field_tag :distance, (params[:distance] || '500'), type: 'slider' %>
               </div>
             </div>
             <div class="control-group">
               <label>Palabra clave</label>
               <div class="controls">
-                <input type="text">
+                <%= f.text_field :description_cont %>
               </div>
             </div>
           </fieldset>
 
           <fieldset class="form-options">
             <label class="checkbox">
-              <input type="checkbox">Con foto
+              <%= f.check_box :pictures_main_eq, {}, 1, '' %><%= _('Con foto') %>
             </label>
             <label class="checkbox">
-              <input type="checkbox">Online
+              <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %><%= _('Online') %>
             </label>
-            <button type="submit" class="btn btn-info">Buscar</button>
+            <%= f.submit _('Buscar'), class: 'btn btn-info' %>
           </fieldset>
-        </form>
-
+        <% end %>
       </div>
     </div>
   </div>
