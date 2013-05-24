@@ -1,30 +1,124 @@
-<h3>Users</h3>
-<div class="span8">
-<table class="table table-condensed">
-  <thead>
-    <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Registered</th>
-      <th>Role</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= link_to user.name, user %></td>
-      <td><%= user.email %></td>
-      <td><%= user.created_at.to_date %></td>
-      <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
-      <td>
-        <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
-        <%= render user %>
-      </td>
-      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-</div>
+<%= render 'shared/related_list' %>
+
+<section class="search boxed">
+
+  <div class="boxed-inner clearfix">
+    <header>
+      <h1>Encuentra personas afines a tí</h1>
+    </header>
+
+    
+    <form class="span9 form-horizontal">
+    <%= search_form_for @search, class: 'span9 form-horizontal' do |f| %>
+    <div class="row">
+      <div class="span8">
+
+        <div class="control-group slider">
+          <label class="control-label">Edad</label>
+          <div class="span6">
+            <input id="years" type="slider" name="" value="<%= @search.years_lteq || '18' %>;<%= @search.years_gteq || '80' %>"/>
+            <%= f.hidden_field :years_gteq  %>
+            <%= f.hidden_field :years_lteq  %>
+          </div>
+        </div>
+
+        <div class="row search-location">
+          <div class="span8">
+            <div class="control-group">
+              <%= f.label :town_eq, _('Localidad'), class: 'control-label' %>
+              <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: _('Localidad...'), selected: @search.town_eq, class: 'location' %>
+              <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
+              <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span4">
+            <div class="control-group slider">
+              <label class="control-label">Distancia</label>
+              <div class="controls">
+                <%= text_field_tag :distance, (params[:distance] || '500'), type: 'slider' %>
+              </div>
+            </div>
+            <div class="control-group slider">
+              <label class="control-label">Altura</label>
+              <div class="controls">
+                <input id="altura" type="slider" name="" value="<%= @search.height_gteq || '170' %>;<%= @search.height_lteq || '190' %>"/>
+                <%= f.hidden_field :height_gteq  %>
+                <%= f.hidden_field :height_lteq  %>
+              </div>
+            </div>
+            <div class="control-group">
+              <%= f.label :description_cont, _('Palabra clave'), class: 'control-label' %>
+              <div class="controls">
+                <%= f.text_field :description_cont %>
+              </div>
+            </div>
+          </div>
+
+          <div class="span4">
+            <div class="control-group slider">
+              <label class="control-label">Afinidad</label>
+              <div class="controls">
+                <input id="afinidad" type="slider" name="" value="70"/>
+              </div>
+            </div>
+            <div class="control-group fit">
+              <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
+              <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: _('Complexión...'), selected: @search.complexion_eq %>
+            </div>
+            <div class="right">
+              <%= f.submit _('Buscar'), class: 'btn btn-info' %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+        <label class="checkbox">
+            <%= f.check_box :pictures_main_eq, {}, 1, '' %><%= _('Con foto') %>
+          </label>
+          <label class="checkbox">
+            <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %><%= _('Online') %>
+          </label>
+          <label class="checkbox">
+            <%= f.check_box :smoker_in, {}, User.is_smoker, '' %><%= _('Fumador') %>
+          </label>
+          <label class="checkbox">
+            <%= f.check_box :children_in, {}, User.have_children, '' %><%= _('Con hijos') %>
+          </label>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</section>
+
+<hr class="thin">
+
+
+<section class="list">
+  <header>
+    <div class="pull-left">
+      <h1>Resultados de la búsqueda</h1>
+    </div>
+    <div class="pull-right">
+      Sort:
+      <%= render '/shared/user/sorting' %>
+      <%= sort_link(@search, :name, "Nombre") %>
+      <%= form_tag users_path(foo: true), id: 'sorteee', method: :get do |f| %>
+        <%= select_tag "q[s]", options_for_select([['Nombre ascendente', 'name asc']]) %>
+        <%= submit_tag %>
+      <% end %>
+    </div>
+  </header>
+  <ul class="user-list clearfix">
+    <%= render @users %>
+  </ul>
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
+  <%= paginate @users %>
+
+</section>

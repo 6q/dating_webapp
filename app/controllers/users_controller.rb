@@ -2,8 +2,15 @@ class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
 
+  layout "logged_in"
+  
   def index
-    @users = User.all
+    nearbys = current_user.nearbys(params[:distance]).map(&:id)
+    nearbys = [0] if nearbys.empty?
+
+    params[:q].merge(id_in: nearbys) if params[:q]
+    @search = User.search(params[:q])
+    @users = @search.result.page(params[:page])
   end
 
   def show

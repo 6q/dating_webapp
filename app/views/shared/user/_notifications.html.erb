@@ -5,7 +5,7 @@
       <a href="#">Cerrar</a>
     </header>
     <div class="container">
-      <a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="80" height="80"></a>
+      <%= link_to(image_tag('placeholder2.jpg', size: '60x60'), current_user) %>
       <span class="status">¡Hacéis buena pareja!</span>
       <strong><%= link_to 'Maria Teresa', '/user/user-profile' %></strong><span>Santa Coloma de...</span><br>24 años
     </div>
@@ -17,7 +17,7 @@
       <a href="#">Cerrar</a>
     </header>
     <div class="container">
-      <a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="80" height="80"></a>
+      <%= link_to(image_tag('placeholder2.jpg', size: '60x60'), current_user) %>
       <span class="status">¡Hacéis buena pareja!</span>
       <strong><%= link_to 'Maria Teresa', '/user/user-profile' %></strong><span>Santa Coloma de...</span><br>24 años
     </div>

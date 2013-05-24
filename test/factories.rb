@@ -12,13 +12,14 @@ FactoryGirl.define do
 
     trait :complementary_data do
       town{ Faker::Address.city }
-      country{ Faker::Address.country }
+      country "Spain"
       postal_code{ Faker::Address.zip_code }
       marital_status{ User::MARITAL_STATUS.keys.sample }
       orientation{ User::ORIENTATION.keys.sample }
       gender{ User::GENDER.keys.sample }
       birth_date{ Date.today << ((rand(10) + 18) * 12) }
       terms_and_conditions "1"
+      height { Random.rand(170..210) }
     end
 
     trait :optional_data do

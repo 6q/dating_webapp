@@ -1,10 +1,10 @@
 <section id="user-sidebar">
   <div class="profile_pic_wrapper">
     <div class="profile_pic_overlay">
-      <button class="btn btn-info" type="submit">
+      <%= link_to profile_path, class: 'btn btn-info' do %>
         <i class="icon-wrench icon-white"></i>
         Cambia tu foto de perfil
-      </button>
+      <% end %>
     </div>
     <div class="profile_pic">
       <%= profile_pic(current_user) %>

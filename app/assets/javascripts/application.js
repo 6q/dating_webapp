@@ -15,6 +15,10 @@
 //= require bootstrap
 //= require jquery.flexslider-min
 //= require functions
-//= require turbolinks
 //= require user_functions
+//= require chosen.jquery.min
 //= require_tree .
+
+$(function() {
+  $('.location').chosen();
+});

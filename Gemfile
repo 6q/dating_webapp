@@ -23,13 +23,14 @@ gem 'friendly_id'
 gem 'dragonfly', '~>0.9.14'
 gem 'country_select'
 gem 'kaminari'
-gem 'turbolinks'
+#gem 'turbolinks'
 gem 'mail_form'
 gem 'rails-i18n'
 gem 'strong_parameters'
 gem 'mailboxer'
 gem 'gettext_i18n_rails'
 gem 'gettext', '>=1.9.3', :require => false, :group => :development
+gem 'ransack'
 
 group :test do
   gem 'sqlite3'
