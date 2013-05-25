@@ -3,12 +3,12 @@
 	<div id="header-preface">
     <div id="user-options">
       <% if current_user.has_role? :matchmaker %>
-        <%= link_to 'Conviértete en usuari@', matchmaker_become_user_path %> |
+        <%= link_to _('Conviértete en usuari@'), matchmaker_become_user_path %> |
       <% else %>
-        <%= link_to 'Cambiar configuración', '/user/settings/' %> | 
+        <%= link_to _('Cambiar configuración'), '/user/settings/' %> | 
       <% end %>
-      <%= link_to 'Editar mi perfil', profile_path %> |
-      <%= link_to 'Desconectar', destroy_user_session_path, method: :delete %>
+      <%= link_to _('Editar mi perfil'), profile_path %> |
+      <%= link_to _('Desconectar'), destroy_user_session_path, method: :delete %>
     </div>
 
 		<div id="color-switcher" class="header-switcher">
@@ -27,7 +27,7 @@
 
 		<div id="lang-switcher" class="header-switcher">
 			<ul>
-				<li class="picker"><a href="#">Castellano</a><i></i></li>
+				<li class="picker"><a href="#">Castellano<i></i></a></li>
 				<li class="leaf"><a href="#">Català</a></li>
 			</ul>
 		</div>

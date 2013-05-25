@@ -1,0 +1,29 @@
+<article class="user-card online">
+  <ul class="pics">
+    <li><%= link_to(image_tag('placeholder2.jpg', size: '60x60'), user) %></li>
+    <li><%= link_to(image_tag('placeholder2.jpg', size: '60x60'), user) %></li>
+  </ul>
+  <header>
+    <% if @timestamp == true %>
+      <small>#TODO: MAKE DYNAMIC -- Hace 2 horas</small>
+    <% end %>
+    <h1><%= link_to user.full_name, user_path(user) %><br><span><%= user.town %></span><br><%= user.age %> años</h1>
+  </header>
+  <ul class="actions clearfix">
+    <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>
+    <li class="chat"><%= link_to 'Chat', '/user/chat/' %></li>
+    <li class="like"><%= link_to 'Like', user_like_path(user), :method => :post %></li>
+    <% block_modal_id = '#user-block-' + user.id.to_s %>
+    <li class="block"><%= link_to 'Block', block_modal_id, "data-toggle" => "modal" %></li>
+  </ul>
+
+  <% if @interactions == true %>
+    <div class="interactions">
+      <div class="punctuations">
+        <strong>Tu dices:</strong> <%= stars_for(user, current_user) %>
+        <strong>Ha dicho:</strong> <%= stars_for(current_user, user) %>
+      </div>
+      <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
+    </div>
+  <% end %>
+</article>

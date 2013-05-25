@@ -4,6 +4,9 @@ class UsersController < ApplicationController
 
   layout "logged_in"
   
+  after_filter :user_visit, only: [:show]
+  before_filter :set_visit_seen, only: [:hits]
+
   def index
     nearbys = current_user.nearbys(params[:distance]).map(&:id)
     nearbys = [0] if nearbys.empty?
@@ -42,18 +45,55 @@ class UsersController < ApplicationController
     @users = User.with_role(:user).last(7)
   end
 
+  def settings
+    render 'settings'
+  end
+
+  def nice_couple
+    render 'nice_couple'
+  end
+
   # Matchmaker routes
   def be_matchmaker
     @recommendation = Recommendation.new
     @characteristic = Characteristic.new
-    render 'be_matchmaker', layout: "logged_in"
+    render 'be_matchmaker'
   end
 
   def matchmaker_become_user
-    render 'matchmaker_become_user', layout: "logged_in"
+    render 'matchmaker_become_user'
   end
 
   def my_matchmakers
-    render 'my_matchmakers', layout: "logged_in"    
+    render 'my_matchmakers'
   end
+
+  # Interaction routes
+  def likes
+    render 'likes'
+  end
+
+  def likes_of_mine
+    render 'likes_of_mine'
+  end
+
+  def hits
+    render 'hits'
+  end
+
+  def cellove_index
+    render 'cellove_index'
+  end
+
+  private
+    def user_visit
+      if @user && current_user != @user
+        current_user.visited(@user)
+        @user.add_to_cellove_index(User::CELLOVE_USER_VISIT)
+      end
+    end
+
+    def set_visit_seen
+      current_user.set_all_visits_seen
+    end
 end

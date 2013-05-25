@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515155451) do
+ActiveRecord::Schema.define(:version => 20130523094032) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.datetime "updated_at",      :null => false
     t.text     "body"
     t.date     "date"
+  end
+
+  create_table "cellove_notifications", :force => true do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.integer  "notifiable_id"
+    t.string   "notifiable_type"
+    t.boolean  "seen",            :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "characteristics", :force => true do |t|
@@ -60,6 +70,13 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.datetime "updated_at",                 :null => false
   end
 
+  create_table "likes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "creator_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "notifications", :force => true do |t|
     t.string   "type"
     t.text     "body"
@@ -96,6 +113,17 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "rates", :force => true do |t|
+    t.integer  "rater_id"
+    t.integer  "rateable_id"
+    t.float    "stars",       :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "rates", ["rateable_id"], :name => "index_rates_on_rateable_id"
+  add_index "rates", ["rater_id"], :name => "index_rates_on_rater_id"
 
   create_table "receipts", :force => true do |t|
     t.integer  "receiver_id"
@@ -148,6 +176,36 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "user_blocks", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "blocked_user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "user_blocks", ["blocked_user_id"], :name => "index_user_blocks_on_blocked_user_id"
+
+  create_table "user_hides", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "hidden_user_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "user_hides", ["hidden_user_id"], :name => "index_user_hides_on_hidden_user_id"
+
+  create_table "user_visits", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "visitor_id"
+    t.datetime "visited_at"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "seen",       :default => false
+  end
+
+  add_index "user_visits", ["user_id"], :name => "index_user_visits_on_user_id"
+  add_index "user_visits", ["visitor_id"], :name => "index_user_visits_on_visitor_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -260,9 +318,14 @@ ActiveRecord::Schema.define(:version => 20130515155451) do
     t.string   "lf_animals"
     t.string   "lf_party"
     t.string   "lf_language_level"
+    t.integer  "cellove_index",          :default => 0
+    t.string   "lf_relationship"
   end
 
+  add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
+  add_index "users", ["created_at"], :name => "index_users_on_created_at"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["invitation_code"], :name => "index_users_on_invitation_code", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "users_roles", :id => false, :force => true do |t|

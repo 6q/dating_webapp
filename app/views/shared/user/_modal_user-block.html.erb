@@ -1,28 +1,35 @@
 <!-- Modal -->
-<div id="user-block" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="user-block-<%= user.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3>¿Deseas bloquear a este usuario?</h3>
 
-    <div class="user-detail clearfix">
-      <div class="pic">
-        <a href="/user/profile/"><img src="/users/placeholder2.jpg" width="60" height ="60"></a>
-      </div>
-      <div class="data"><small>8/12/2012 - 22:35h</small><%= link_to "Judit", "/user/profile/" %>, 21 años - Barcelona</div>
-    </div> 
-
+    <%= user_detail(user) %>
+    <%= rating_for user, current_user %>
   </div>
   <div class="modal-body">
-      <p>Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a ##Judit##, desde tu apartado de configuración.</p>
+    <p>Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a <%= user.name %>, desde tu apartado de configuración.</p>
 
+    <% user_block = UserBlock.find_by_user_id(current_user) || UserBlock.new({ user_id: current_user.id }) %>
+    <% user_hide = UserHide.find_by_user_id(current_user) || UserHide.new({ user_id: current_user.id }) %>
+    <% is_blocked = !current_user.user_blocks.where("blocked_user_id = ?", user.id).first.nil? %>
+    <% is_hidden = !current_user.user_hides.where("hidden_user_id = ?", user.id).first.nil? %>
+
+    <%= form_for(current_user, url: user_block_hide_path(user), :method => :post) do |f| %>
       <fieldset>
-            <label class="checkbox inline"><input type="checkbox">No quiero verla más</label>
-            <label class="checkbox inline"><input type="checkbox">No quiero que me vea más</label>
+        <%= fields_for user_hide do |f1| %>
+          <%= f1.check_box :hidden_user, checked: is_hidden, id: 'user[hidden_user_'+user.id.to_s+']' %>
+          <%= f1.label :hidden_user, "No quiero verla más", class: 'checkbox inline', for: 'user[hidden_user_'+user.id.to_s+']' %>
+        <% end %>
+        <%= fields_for user_block do |f2| %>
+          <%= f2.check_box :blocked_user, checked: is_blocked, id: 'user[blocked_user_'+user.id.to_s+']' %>
+          <%= f2.label :blocked_user, "No quiero que me vea más", class: 'checkbox inline', for: 'user[blocked_user_'+user.id.to_s+']' %>
+        <% end %>
       </fieldset>
-    
   </div>
   <div class="modal-footer">
     <%= link_to 'Cancelar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
-    <button class="btn btn-danger">BLOQUEAR</button>
+    <%= f.submit "BLOQUEAR", class: 'btn btn-danger' %>
   </div>
+  <% end %>
 </div>

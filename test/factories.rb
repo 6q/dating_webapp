@@ -17,7 +17,7 @@ FactoryGirl.define do
       marital_status{ User::MARITAL_STATUS.keys.sample }
       orientation{ User::ORIENTATION.keys.sample }
       gender{ User::GENDER.keys.sample }
-      birth_date{ Date.today << ((rand(10) + 18) * 12) }
+      birth_date{ Date.today << ((rand(10) + 19) * 12) }
       terms_and_conditions "1"
       height { Random.rand(170..210) }
     end
@@ -65,19 +65,36 @@ FactoryGirl.define do
       end
     end
 
-    # This trait does not work for some reason.
-    #trait :has_recommendations do
-    #  after(:create) do |user, evaluator|
-    #    create_list(:recommendation, evaluator.recommendations_count, user: user)
-    #  end
-    #end
-
     trait :with_recommendations do
       recommendations { [create(:recommendation, user_id: 1, creator_id: 2)] }
     end
 
     trait :with_recommenders do
       recommenders { [create(:recommendation, user_id: 1, creator_id: 2)] }
+    end
+
+    trait :with_likers do
+      likers { [create(:like, user_id: 1, creator_id: 2)] }
+    end
+
+    trait :with_likes do
+      likes { [create(:like, user_id: 1, creator_id: 2)] }
+    end
+
+    trait :with_visitors do
+      user_visits { [create(:user_visit, user_id: 1, visitor_id: 2)] }
+    end
+
+    trait :with_user_blocks do
+      user_blocks { [create(:user_block, user_id: 1, blocked_user_id: 2)] }
+    end
+
+    trait :with_user_hides do
+      user_hides { [create(:user_hide, user_id: 1, hidden_user_id: 2)] }
+    end
+
+    trait :with_ratings do
+      ratings_given { [create(:rate, rater_id: 1, rateable_id: 2)] }
     end
 
     ignore do
@@ -89,6 +106,13 @@ FactoryGirl.define do
     factory :regular_user_optin, traits: [:basic_data, :complementary_data, :optional_data, :user_role]
     factory :regular_user_with_recommenders, traits: [:basic_data, :complementary_data, :user_role, :with_recommenders]
     factory :invited_user, traits: [:invited_data, :invited_role]
+    factory :regular_user_with_likers, traits: [:basic_data, :complementary_data, :user_role, :with_likers]
+    factory :regular_user_with_likes, traits: [:basic_data, :complementary_data, :user_role, :with_likes]
+    factory :regular_user_with_visitors, traits: [:basic_data, :complementary_data, :user_role, :with_visitors]
+    factory :regular_user_with_blocks, traits: [:basic_data, :complementary_data, :user_role, :with_user_blocks]
+    factory :regular_user_with_hides, traits: [:basic_data, :complementary_data, :user_role, :with_user_hides]
+    factory :regular_user_with_ratings, traits: [:basic_data, :complementary_data, :user_role, :with_ratings]
+
     factory :matchmaker, traits: [:basic_data, :matchmaker_role]
     factory :matchmaker_optin, traits: [:basic_data, :optional_data, :matchmaker_role]
     factory :matchmaker_with_picture, traits: [:basic_data, :picture, :matchmaker_role]
@@ -103,6 +127,23 @@ FactoryGirl.define do
     factory :invalid_recommendation do
       relationship nil
     end
+  end
+
+  factory :like do
+  end
+
+  factory :user_visit do
+    visited_at Time.now
+  end
+
+  factory :user_block do
+  end
+
+  factory :user_hide do
+  end
+
+  factory :rate do
+    stars 5
   end
 
   factory :characteristic do

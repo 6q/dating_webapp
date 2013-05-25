@@ -1,0 +1,14 @@
+<section class="list">
+  <header>
+    <h1>Te gustan</h1>
+    <%= render '/shared/user/sorting' %>
+  </header>
+  <ul class="user-list clearfix">
+    <% current_user.people_i_like.each do |user| %>
+      <li><%= render '/shared/user/user-card', user: user %></li>
+    <% end %>
+  </ul>
+
+  <%= render '/shared/user/pagination' %>
+
+</section>

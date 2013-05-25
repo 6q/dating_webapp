@@ -1,7 +1,38 @@
 //= require jquery.slider
 //= require jquery.prettyPhoto
+//= require jquery.auderoFlashingText.min.js
+//= require jquery.tmpl.min.js
 
-$(document).ready(function(){
+$(document).ready(function() {
+  setTimeout(getNotifications, 60000);
+
+  function getNotifications () {
+    var notification;
+    $.getScript("/notifications.json")
+    .done(function(notifications, textStatus) {
+      notifications = JSON.parse(notifications);
+      for (var i = 0; i < notifications.length; i++) {
+        notification = notifications[i];
+        $("body").find("#notificationTemplate").tmpl(notification).appendTo("#notifications");
+      }
+    })
+    .fail(function(jqxhr, settings, exception) {
+      // ERROR.
+    });
+    setTimeout(getNotifications, 60000);
+  }
+
+  $(document).on('click', '.notification-close', function() {
+    $(this).parent().parent().remove();
+  });
+
+  if (!$("#caixarandom").auderoFlashingText("isRunning")) {
+    $("#caixarandom").auderoFlashingText({
+      fadeOut: 1500,
+      duration: 2000,
+      selection: "ascending"
+    });
+  }
 
   // search sliders
 
@@ -65,9 +96,9 @@ $(document).ready(function(){
   });
 
   $('#messages-tab a').click(function (e) {
-      e.preventDefault();
-      $(this).tab('show');
-    });
+    e.preventDefault();
+    $(this).tab('show');
+  });
 
   $('#celestinos-tab a').click(function (e) {
       e.preventDefault();

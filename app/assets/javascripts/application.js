@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require jquery.flexslider-min
 //= require functions
+//= require jquery.flexslider-min
 //= require user_functions
 //= require chosen.jquery.min
 //= require_tree .
