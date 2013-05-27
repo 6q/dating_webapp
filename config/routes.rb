@@ -14,6 +14,8 @@ Cellove::Application.routes.draw do
   }
 
   resource :profile, only: [:show, :update]
+  
+  resources :notes, only: [:create, :destroy]
 
   resources :pictures, only: [:create, :destroy, :show, :update]
   resources :recommendations, only: [:create] do

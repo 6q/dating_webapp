@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130523094032) do
+ActiveRecord::Schema.define(:version => 20130523103827) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -75,6 +75,14 @@ ActiveRecord::Schema.define(:version => 20130523094032) do
     t.integer  "creator_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "notes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "evaluated_id"
+    t.text     "content"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "notifications", :force => true do |t|
@@ -235,8 +243,8 @@ ActiveRecord::Schema.define(:version => 20130523094032) do
     t.float    "longitude"
     t.string   "physical_style"
     t.string   "physical_desc"
-    t.integer  "height"
-    t.integer  "weight"
+    t.decimal  "height"
+    t.decimal  "weight"
     t.string   "complexion"
     t.string   "child"
     t.string   "smoke"
@@ -262,10 +270,10 @@ ActiveRecord::Schema.define(:version => 20130523094032) do
     t.string   "lf_postal_code"
     t.string   "lf_physical_style"
     t.string   "lf_physical_desc"
-    t.integer  "lf_height_between"
-    t.integer  "lf_height_to"
-    t.integer  "lf_weight_between"
-    t.integer  "lf_weight_to"
+    t.decimal  "lf_height_between"
+    t.decimal  "lf_height_to"
+    t.decimal  "lf_weight_between"
+    t.decimal  "lf_weight_to"
     t.string   "lf_complexion"
     t.string   "lf_child"
     t.string   "lf_smoke"
@@ -276,7 +284,6 @@ ActiveRecord::Schema.define(:version => 20130523094032) do
     t.string   "lf_language"
     t.string   "lf_job"
     t.string   "lf_salary"
-    t.string   "lf_description"
     t.string   "house"
     t.string   "eyes"
     t.string   "hair"

@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
+  
+  layout 'logged_in'
 
   layout "logged_in"
   
