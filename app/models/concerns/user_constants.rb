@@ -59,6 +59,8 @@ module UserConstants
   CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
     'terror' => _('terror')}
 
+  LF_RELATIONSHIP = {'friends' => _('hacer nuevas amistades'), 'fun' => _('salir y pasarlo bien'), 
+    'couple' => _('establecer una relación estable'), 'marry' => _('casarme')}
   LF_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
     'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@')}
   LF_SMOKE = {'smoker' => 'fume', 'non-smoker' => 'no fume', 'smoker-hater' => 'sea antitabaco','not-mind-smoke' => _('no le moleste el humo'),
@@ -79,7 +81,6 @@ module UserConstants
   LF_CHILD = { 'have-children' => _('tenga hijos'),'no-children' => _('no tenga hijos'),'no-want-children' => _('no tenga hijos, y no quiera tener'),
     'no-kids-i-want' => _('no tenga hijos, pero quiera tener'),'have-children-no-want-more' => _('tenga hijos, y no quiera tener mas '),
     'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
-
   PICTURE_LIMIT = 12
   DEFAULT_DISTANCE = 500
 
