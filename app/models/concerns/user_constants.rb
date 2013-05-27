@@ -81,6 +81,7 @@ module UserConstants
     'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
 
   PICTURE_LIMIT = 12
+  DEFAULT_DISTANCE = 500
 
   # Points for the Cellove index
   CELLOVE_USER_VISIT = 1
