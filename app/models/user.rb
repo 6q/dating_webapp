@@ -321,12 +321,20 @@ class User < ActiveRecord::Base
     %w{children have-children-want-more have-children-no-want-more}
   end
 
-  def people_who_like_me
-    self.likers.map { |l| l.creator }
+  def self.people_who_like_me(user)
+    #self.likers.map { |l| l.creator }
+    # Need an AR::Relation for the Search part of Ransack :\
+    user.likers.where(nil)
   end
 
-  def people_i_like
-    self.likes.map { |l| l.user }
+  def self.people_i_like(user)
+    #self.likes.map { |l| l.user }
+    # Need an AR::Relation for the Search part of Ransack :\
+    user.likes.where(nil)
+  end
+
+  def self.all_visitors(user)
+    user.visitors.where(nil)
   end
 
   # Saves a new record in the UserVisit table,
@@ -433,14 +441,15 @@ class User < ActiveRecord::Base
   end
 
   # Intersection of people who I rated and people who rated me
-  def nice_couple
+  def self.nice_couple(user)
     users = []
-    self.raters.each do |rater|
-      if self.ratings_given.any?{ |r| r.rateable_id == rater.id }
-        users.push(rater) if (!users.include?(rater) && rater != self)
-      end
-    end
-    users
+    User.joins(:rates)
+    # self.raters.each do |rater|
+    #   if self.ratings_given.any?{ |r| r.rateable_id == rater.id }
+    #     users.push(rater) if (!users.include?(rater) && rater != self)
+    #   end
+    # end
+    # users
   end
 
   # Are current_user and user a nice couple?

@@ -5,7 +5,7 @@
   </header>
   <ul class="user-list clearfix">
     <% @timestamp = true %>
-    <% current_user.people_who_like_me.each do |user| %>
+    <% @users.each do |user| %>
       <li><%= render '/shared/user/user-card', user: user %></li>
     <% end %>
   </ul>

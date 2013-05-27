@@ -70,7 +70,7 @@ class UsersController < ApplicationController
   end
 
   def nice_couple
-    @users = current_user.nice_couple
+    @users = User.nice_couple(current_user)
     render 'nice_couple'
   end
 
@@ -91,7 +91,8 @@ class UsersController < ApplicationController
 
   # Interaction routes
   def likes
-    @search = User.search(params[:q])
+    @search = User.people_who_like_me(current_user).search(params[:q])
+    @users = @search.result.page(params[:page])
     render 'likes'
   end
 
@@ -100,7 +101,8 @@ class UsersController < ApplicationController
   end
 
   def hits
-    @search = User.search(params[:q])
+    @search = User.all_visitors(current_user).search(params[:q])
+    @users = @search.result.page(params[:page])
     render 'hits'
   end
 

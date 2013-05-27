@@ -4,7 +4,7 @@
     <%= render '/shared/user/sorting' %>
   </header>
   <ul class="user-list clearfix">
-    <% current_user.visitors.each do |user| %>
+    <% @users.each do |user| %>
       <li><%= render '/shared/user/user-card', user: user %></li>
     <% end %>
   </ul>
