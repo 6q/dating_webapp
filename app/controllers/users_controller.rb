@@ -18,7 +18,16 @@ class UsersController < ApplicationController
       nearbys = [0] if nearbys.empty?
 
       params[:q] = params[:q].merge(id_in: nearbys) if params[:q]
-      @search = User.search(params[:q])
+      if params[:q][:s] == "recent_interaction asc"
+        params[:q].except!(:s)
+        @search = User.select("users.*, COUNT(notifications.id) AS notifications")
+                  .joins(:messages)
+                  .group("notifications.id, users.id")
+                  .order("notifications")
+                  .search(params[:q])
+      else
+        @search = User.search(params[:q])
+      end
       params[:q].except!(:id_in)
     end
     @users = @search.result.page(params[:page])
@@ -58,6 +67,7 @@ class UsersController < ApplicationController
   end
 
   def nice_couple
+    @search = User.search(params[:q])
     render 'nice_couple'
   end
 
@@ -78,6 +88,7 @@ class UsersController < ApplicationController
 
   # Interaction routes
   def likes
+    @search = User.search(params[:q])
     render 'likes'
   end
 
@@ -86,6 +97,7 @@ class UsersController < ApplicationController
   end
 
   def hits
+    @search = User.search(params[:q])
     render 'hits'
   end
 

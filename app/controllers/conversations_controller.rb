@@ -6,13 +6,10 @@ class ConversationsController < ApplicationController
   layout "logged_in"
   
   def index
-#    if @box.eql? "inbox"
-      @conversations_inbox = @mailbox.inbox.page(params[:page]).per(9)
-#    elsif @box.eql? "sentbox"
-      @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(9)
-#    else
-      @conversations_trash = @mailbox.trash.page(params[:page]).per(9)
-#    end
+    @conversations_inbox = @mailbox.inbox.page(params[:page]).per(9)
+    @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(9)
+    @conversations_trash = @mailbox.trash.page(params[:page]).per(9)
+    @search = User.search(params[:q])
 
     respond_to do |format|
       format.html { render partial: 'conversations', locals: { conversations: @conversations_sentbox } if request.xhr? }
@@ -23,6 +20,7 @@ class ConversationsController < ApplicationController
     @conversations_inbox = @mailbox.inbox.page(params[:page]).per(9)
     @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(9)
     @conversations_trash = @mailbox.trash.page(params[:page]).per(9)
+    @search = User.search(params[:q])
     
     if @box.eql? 'trash'
       @receipts = @mailbox.receipts_for(@conversation).trash
