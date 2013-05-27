@@ -20,8 +20,7 @@ class UsersController < ApplicationController
       params[:q] = params[:q].merge(id_in: nearbys) if params[:q]
       if params[:q][:s] == "recent_interaction asc"
         params[:q].except!(:s)
-        @search = User.interactions
-                      .search(params[:q])
+        @search = User.sort_interactions.search(params[:q])
       elsif params[:q][:s] == "prop_actividad asc"
         params[:q].except!(:s)       
       else
