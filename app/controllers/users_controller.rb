@@ -22,7 +22,12 @@ class UsersController < ApplicationController
         params[:q].except!(:s)
         @search = User.sort_interactions.search(params[:q])
       elsif params[:q][:s] == "prop_actividad asc"
-        params[:q].except!(:s)       
+        params[:q].except!(:s)
+        @search = User.select("users.*, count(notifications.id) AS activity_count")
+                      .joins(:messages => { :conversation => :activity })
+                      .group("users.id, notifications.id")
+                      .order("activity_count DESC")
+                      .search(params[:q])
       else
         @search = User.search(params[:q])
       end

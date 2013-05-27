@@ -130,7 +130,7 @@ class User < ActiveRecord::Base
   #scopes
   scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
   scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
-  scope :interactions, select("users.*, count(notifications.id) AS notifications_count")
+  scope :sort_interactions, select("users.*, count(notifications.id) AS notifications_count")
                       .joins(:messages)
                       .group("users.id, notifications.id")
                       .order("notifications_count DESC")
