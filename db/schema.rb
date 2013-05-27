@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130523094032) do
+ActiveRecord::Schema.define(:version => 20130523103827) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -75,6 +75,14 @@ ActiveRecord::Schema.define(:version => 20130523094032) do
     t.integer  "creator_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "notes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "evaluated_id"
+    t.text     "content"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "notifications", :force => true do |t|
@@ -318,8 +326,8 @@ ActiveRecord::Schema.define(:version => 20130523094032) do
     t.string   "lf_animals"
     t.string   "lf_party"
     t.string   "lf_language_level"
-    t.integer  "cellove_index",          :default => 0
     t.string   "lf_relationship"
+    t.integer  "cellove_index",          :default => 0
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"

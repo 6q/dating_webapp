@@ -11,8 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   private
-
-  def user_activity
-    current_user.try :touch
-  end
+    def user_activity
+      current_user.try :touch
+    end
 end
