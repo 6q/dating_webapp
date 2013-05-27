@@ -71,32 +71,144 @@
 				<div class="tab-content">
 
 		  		<div class="tab-pane active" id="desc">
-						<p><%= @user.description %></p>
+		  			<% if @user.description.nil? %>
+		  				<%= @user.name %> aún no ha introducido su descripción.
+		  			<% else %>
+							<p><%= @user.description %></p>
+						<% end %>
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
-						<% @user.recommendations.each do |rec| %>
-							<%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
-						<% end %>
+		  			<% if @user.recommendations.empty? %>
+		  				<%= @user.name %> aún no tiene ningún celestino. <%= link_to 'Quieres ser el primero?', be_matchmaker_path %>
+		  			<% else %>
+		  				<% @user.recommendations.each do |rec| %>
+								<%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
+							<% end %>
+		  			<% end %>
 		  		</div>
 
 		  		<div class="tab-pane" id="atributos">
 							<div class="span4">
-								<% (1..12).each do %>
-									<h5>Amable</h5>
-									<div class="progress">
-										<div class="bar" style="width:35%"></div>
-									</div>
-								<% end %>
+								<h5>Romántico</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.romantic*20}%" %>"></div>
+								</div>
+
+								<h5>Aventurero</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.adventurer*20}%" %>"></div>
+								</div>
+								
+								<h5>Amable</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.friendly*20}%" %>"></div>
+								</div>
+
+								<h5>Familiar</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.familiar*20}%" %>"></div>
+								</div>
+
+								<h5>Trabajador</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.hardWorking*20}%" %>"></div>
+								</div>
+
+								<h5>Extrovertido</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.extroverted*20}%" %>"></div>
+								</div>
+
+								<h5>Generoso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.generous*20}%" %>"></div>
+								</div>
+
+								<h5>Reservado</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.reserved*20}%" %>"></div>
+								</div>
+
+								<h5>Sociable</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.sociable*20}%" %>"></div>
+								</div>
+
+								<h5>Tranquilo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.quiet*20}%" %>"></div>
+								</div>
+
+								<h5>Exigente</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.demanding*20}%" %>"></div>
+								</div>
+
+								<h5>Orgulloso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.prideful*20}%" %>"></div>
+								</div>
+
 							</div>
 
+
+
 							<div class="span4 offset1 attributes-col-2">
-									<% (1..12).each do %>
-										<h5>Amable</h5>
-										<div class="progress">
-											<div class="bar" style="width:35%"></div>
-										</div>
-									<% end %>
+								<h5>Solitario</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.solitary*20}%" %>"></div>
+								</div>
+
+								<h5>Tenaz</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.tenacious*20}%" %>"></div>
+								</div>
+
+								<h5>Atento</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.attentive*20}%" %>"></div>
+								</div>
+
+								<h5>Bienhumorado</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.goodHumored*20}%" %>"></div>
+								</div>
+
+								<h5>Espontáneo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.spontaneous*20}%" %>"></div>
+								</div>
+
+								<h5>Inquieto</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.restless*20}%" %>"></div>
+								</div>
+
+								<h5>Sensible</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.sensitive*20}%" %>"></div>
+								</div>
+
+								<h5>Tímido</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.shy*20}%" %>"></div>
+								</div>
+
+								<h5>Posesivo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.possessive*20}%" %>"></div>
+								</div>
+
+								<h5>Celoso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.jealous*20}%" %>"></div>
+								</div>
+
+								<h5>Fiel</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.faithful*20}%" %>"></div>
+								</div>
 							</div>
 		  		</div>
 
