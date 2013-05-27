@@ -12,6 +12,7 @@
         <br>
         <span><%= truncate(user.town, length: 20) %></span>
         <br><%= "#{user.age} #{t("datetime.prompts.year")}" %>
+        <br><%= (current_user.distance_to user).round(2) %> km
       </h1>
     </header>
     <ul class="actions clearfix">

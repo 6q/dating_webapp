@@ -1,11 +1,16 @@
 <form class="sort">
 	<select>
 		<option>Ordenar por...</option>
-		<option>Online primero</option>
-    <option>Prop. Actividad primero</option>
-		<option>Más recientes primero</option>
-		<option>Más antiguos primero</option>
-		<option>Más cercanos primero</option>
-		<option>Interactuación reciente</option>
+		<option><%= sort_link(@search, :updated_at, "Online primero", default_order: :desc) %></option>
+    <option><%= sort_link(@search, :name, "Prop. Actividad primero") %></option>
+		<option><%= sort_link(@search, :created_at, "Más recientes primero") %></option>
+		<option><%= sort_link(@search, :created_at, "Más antiguos primero", default_order: :desc) %></option>
+		<option></option>
+		<option></option>
 	</select>
 </form>
+
+<div class="sort">
+  <%= sort_link(@search, :closest_users_first, "Más cercanos primero") %>
+  <%= sort_link(@search, :recent_interaction, "Interactuación reciente") %>
+</div>

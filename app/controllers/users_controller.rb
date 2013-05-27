@@ -8,10 +8,10 @@ class UsersController < ApplicationController
   before_filter :set_visit_seen, only: [:hits]
 
   def index
-    nearbys = current_user.nearbys(params[:distance]).map(&:id)
+    nearbys = current_user.nearbys(params[:distance], {:order => :distance, :units => :km}).map(&:id)
     nearbys = [0] if nearbys.empty?
 
-    params[:q].merge(id_in: nearbys) if params[:q]
+    params[:q] = params[:q].merge(id_in: nearbys) if params[:q]
     @search = User.search(params[:q])
     @users = @search.result.page(params[:page])
   end

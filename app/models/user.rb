@@ -311,6 +311,14 @@ class User < ActiveRecord::Base
     parent.table[:child]
   end
 
+  ransacker :closest_users_first do |r|
+    Arel::Nodes::SqlLiteral.new("distance")
+  end
+
+  ransacker :recent_interaction do |r|
+    Arel::Nodes::SqlLiteral.new("count(messages_id)")
+  end
+
   def self.have_children
     %w{children have-children-want-more have-children-no-want-more}
   end
