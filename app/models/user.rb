@@ -301,24 +301,16 @@ class User < ActiveRecord::Base
     end
   end
 
-  def online?
-    updated_at > 5.minutes.ago
-  end
-
-  ransacker :smoker, :formatter => proc { |v| v.split } do |parent|
-    parent.table[:smoke]
-  end
-
-  def self.is_smoker
-    %w{smoker smoke-leave-couple social-smoker}
-  end
-
-  ransacker :children, :formatter => proc { |v| v.split } do |parent|
-    parent.table[:child]
-  end
-
-  def self.have_children
-    %w{children have-children-want-more have-children-no-want-more}
+  # Intersection of people who I rated and people who rated me
+  def self.nice_couple(user)
+    users = []
+    User.joins(:rates)
+    # self.raters.each do |rater|
+    #   if self.ratings_given.any?{ |r| r.rateable_id == rater.id }
+    #     users.push(rater) if (!users.include?(rater) && rater != self)
+    #   end
+    # end
+    # users
   end
 
   def self.people_who_like_me(user)
@@ -335,50 +327,6 @@ class User < ActiveRecord::Base
 
   def self.all_visitors(user)
     user.visitors.where(nil)
-  end
-
-  # Saves a new record in the UserVisit table,
-  # where the current user visits the 'user' passed as a parameter.
-  # If a tuple (user_id, visitor_id) already exists in UserVisit,
-  # the visited_at attribute is updated
-  def visited(user)
-    visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
-    if visit
-      visit.update_attributes({ visited_at: Time.now, seen: false })
-      user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
-    else
-      visit = user.user_visits.build({ visited_at: Time.now })
-      visit.visitor_id = self.id
-      if visit.save
-        user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
-      end
-    end
-  end
-
-  def number_of_visitors_since_last_login
-    UserVisit.count(:conditions => "user_id = " + self.id.to_s + " AND seen = false")
-  end
-
-  def set_all_visits_seen
-    visits = UserVisit.where("user_id = ? AND seen = false", self.id)
-    visits.each do |visit|
-      visit.seen = true
-      visit.save
-    end
-  end
-
-  def blocked_and_hidden_users
-    users = []
-    self.blocked_users.each do |user|
-      user.blocked = true
-      user.hidden = true if self.hidden_users.include?(user)
-      users.push(user)
-    end
-    self.hidden_users.each do |user|
-      user.hidden = true
-      users.push(user) if !users.include?(user)
-    end
-    return users
   end
 
   # Me gusta
@@ -431,6 +379,70 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Saves a new record in the UserVisit table,
+  # where the current user visits the 'user' passed as a parameter.
+  # If a tuple (user_id, visitor_id) already exists in UserVisit,
+  # the visited_at attribute is updated
+  def visited(user)
+    visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
+    if visit
+      visit.update_attributes({ visited_at: Time.now, seen: false })
+      user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
+    else
+      visit = user.user_visits.build({ visited_at: Time.now })
+      visit.visitor_id = self.id
+      if visit.save
+        user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
+      end
+    end
+  end
+
+  def set_all_visits_seen
+    visits = UserVisit.where("user_id = ? AND seen = false", self.id)
+    visits.each do |visit|
+      visit.seen = true
+      visit.save
+    end
+  end
+
+  def online?
+    updated_at > 5.minutes.ago
+  end
+
+  ransacker :smoker, :formatter => proc { |v| v.split } do |parent|
+    parent.table[:smoke]
+  end
+
+  def self.is_smoker
+    %w{smoker smoke-leave-couple social-smoker}
+  end
+
+  ransacker :children, :formatter => proc { |v| v.split } do |parent|
+    parent.table[:child]
+  end
+
+  def self.have_children
+    %w{children have-children-want-more have-children-no-want-more}
+  end
+
+  def number_of_visitors_since_last_login
+    UserVisit.count(:conditions => "user_id = " + self.id.to_s + " AND seen = false")
+  end
+
+  def blocked_and_hidden_users
+    users = []
+    self.blocked_users.each do |user|
+      user.blocked = true
+      user.hidden = true if self.hidden_users.include?(user)
+      users.push(user)
+    end
+    self.hidden_users.each do |user|
+      user.hidden = true
+      users.push(user) if !users.include?(user)
+    end
+    return users
+  end
+
   def rating(user_id)
     rate = self.ratings_given.where("rateable_id = ?", user_id).first
     if rate
@@ -438,18 +450,6 @@ class User < ActiveRecord::Base
     else
       0
     end
-  end
-
-  # Intersection of people who I rated and people who rated me
-  def self.nice_couple(user)
-    users = []
-    User.joins(:rates)
-    # self.raters.each do |rater|
-    #   if self.ratings_given.any?{ |r| r.rateable_id == rater.id }
-    #     users.push(rater) if (!users.include?(rater) && rater != self)
-    #   end
-    # end
-    # users
   end
 
   # Are current_user and user a nice couple?

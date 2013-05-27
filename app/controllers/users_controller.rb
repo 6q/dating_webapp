@@ -97,6 +97,8 @@ class UsersController < ApplicationController
   end
 
   def likes_of_mine
+    @search = User.people_i_like(current_user).search(params[:q])
+    @users = @search.result.page(params[:page])
     render 'likes_of_mine'
   end
 
