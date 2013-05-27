@@ -127,6 +127,14 @@ class User < ActiveRecord::Base
 
   acts_as_messageable
   
+  #scopes
+  scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
+  scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
+  scope :interactions, select("users.*, count(notifications.id) AS notifications_count")
+                      .joins(:messages)
+                      .group("users.id, notifications.id")
+                      .order("notifications_count DESC")
+
   #relations
   has_many :pictures, as: :attachable
   has_many :characteristics, class_name: 'Characteristic', foreign_key: 'user_id'
@@ -144,11 +152,9 @@ class User < ActiveRecord::Base
   has_many :user_visits
   has_many :visitors, through: :user_visits, source: :visitor
 
-  # Useful for search later on
-  scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
   has_many :user_blocks
   has_many :blocked_users, through: :user_blocks, source: :blocked_user
-  scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
+
   has_many :user_hides
   has_many :hidden_users, through: :user_hides, source: :hidden_user
   #default_scope includes(:user_hides).where(:user_hides => { :user_id => nil })

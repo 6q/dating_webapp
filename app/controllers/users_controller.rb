@@ -20,13 +20,10 @@ class UsersController < ApplicationController
       params[:q] = params[:q].merge(id_in: nearbys) if params[:q]
       if params[:q][:s] == "recent_interaction asc"
         params[:q].except!(:s)
-        @search = User.select("users.*, count(notifications.id) AS notifications_count")
-                      .joins(:messages)
-                      .group("users.id, notifications.id")
-                      .order("notifications_count DESC")
+        @search = User.interactions
                       .search(params[:q])
       elsif params[:q][:s] == "prop_actividad asc"
-        params[:q].except!(:s)        
+        params[:q].except!(:s)       
       else
         @search = User.search(params[:q])
       end
