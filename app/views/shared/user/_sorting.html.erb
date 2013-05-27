@@ -1,9 +1,11 @@
-<ul class="sort" role="menu" aria-labelledby="dropdownMenu">
-  <li>Ordenar por...</li>
-  <li><%= sort_link(@search, :updated_at, "Online primero", default_order: :desc) %></li>
-  <li><%= sort_link(@search, :name, "Prop. Actividad primero") %></li>
-  <li><%= sort_link(@search, :created_at, "Más antiguos primero", default_order: :desc) %></li>
-  <li><%= sort_link(@search, :created_at, "Más recientes primero") %></li>
-  <li><%= sort_link(@search, :distance, "Más cercanos primero", { :distance => params[:distance] }) %></li>
-  <li><%= sort_link(@search, :recent_interaction, "Interactuación reciente") %></li>
-</ul>
+<% if @search %>
+  <ul class="sort" role="menu" aria-labelledby="dropdownMenu">
+    <li>Ordenar por...</li>
+    <li><%= sort_link(@search, :updated_at, "Online primero", default_order: :desc) %></li>
+    <li><%= sort_link(@search, :prop_actividad, "Prop. Actividad primero") %></li>
+    <li><%= sort_link(@search, :created_at, "Más antiguos primero", default_order: :desc) %></li>
+    <li><%= sort_link(@search, :created_at, "Más recientes primero") %></li>
+    <li><%= sort_link(@search, :distance, "Más cercanos primero", { :distance => params[:distance] }) %></li>
+    <li><%= sort_link(@search, :recent_interaction, "Interactuación reciente") %></li>
+  </ul>
+<% end %>

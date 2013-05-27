@@ -14,17 +14,19 @@ class UsersController < ApplicationController
       params[:q].except!(:s)
       @search = User.near(current_user, distance, { :units => :km, :sort => :distance }).search(params[:q])
     else
-      nearbys = current_user.nearbys(distance, { :units => :km }).map(&:id)
+      nearbys = current_user.nearbys(distance, { :units => :km }).pluck(:id)
       nearbys = [0] if nearbys.empty?
 
       params[:q] = params[:q].merge(id_in: nearbys) if params[:q]
       if params[:q][:s] == "recent_interaction asc"
         params[:q].except!(:s)
-        @search = User.select("users.*, COUNT(notifications.id) AS notifications")
-                  .joins(:messages)
-                  .group("notifications.id, users.id")
-                  .order("notifications")
-                  .search(params[:q])
+        @search = User.select("users.*, count(notifications.id) AS notifications_count")
+                      .joins(:messages)
+                      .group("users.id, notifications.id")
+                      .order("notifications_count DESC")
+                      .search(params[:q])
+      elsif params[:q][:s] == "prop_actividad asc"
+        params[:q].except!(:s)        
       else
         @search = User.search(params[:q])
       end
@@ -67,7 +69,7 @@ class UsersController < ApplicationController
   end
 
   def nice_couple
-    @search = User.search(params[:q])
+    @users = current_user.nice_couple
     render 'nice_couple'
   end
 
