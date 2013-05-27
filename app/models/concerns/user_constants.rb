@@ -81,4 +81,19 @@ module UserConstants
     'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
 
   PICTURE_LIMIT = 12
+
+  # Points for the Cellove index
+  CELLOVE_USER_VISIT = 1
+  CELLOVE_LIKE = 1
+  CELLOVE_FIRST_MESSAGE = 3
+  CELLOVE_FIRST_ACTIVITY_PROPOSAL = 3
+  CELLOVE_3_STARS = 1
+  CELLOVE_4_STARS = 2
+  CELLOVE_5_STARS = 3
+  CELLOVE_IS_NICE_COUPLE = 3
+  CELLOVE_RECOMMENDED_USER = 5
+  CELLOVE_CELESTINO_FAMILY = 5
+  CELLOVE_CELESTINO_FRIEND = 6
+  CELLOVE_CELESTINO_SPECIAL_FRIEND = 8
+  CELLOVE_CELESTINO_EX_PARTNER = 10
 end
