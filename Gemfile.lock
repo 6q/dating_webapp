@@ -115,6 +115,8 @@ GEM
       treetop (~> 1.4.8)
     mail_form (1.4.1)
       actionmailer (~> 3.0)
+    mail_view (1.0.3)
+      tilt
     mailboxer (0.10.2)
       carrierwave (>= 0.5.8)
       foreigner (>= 0.9.1)
@@ -242,6 +244,7 @@ DEPENDENCIES
   jquery-rails (~> 2.2.1)
   kaminari
   mail_form
+  mail_view (~> 1.0.3)
   mailboxer
   minitest-focus
   minitest-rails

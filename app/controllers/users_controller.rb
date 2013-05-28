@@ -89,6 +89,7 @@ class UsersController < ApplicationController
   end
 
   def my_matchmakers
+    
     render 'my_matchmakers'
   end
 

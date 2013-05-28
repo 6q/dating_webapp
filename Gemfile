@@ -45,6 +45,7 @@ gem 'minitest-rails', group: [:test, :development]
 group :development do
   gem "guard-rails"
   gem "rb-fsevent"
+  gem "mail_view", "~> 1.0.3"
 end
 
 group :test, :development do

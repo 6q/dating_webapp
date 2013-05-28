@@ -1,4 +1,7 @@
 Cellove::Application.routes.draw do
+  if Rails.env.development?
+    mount MailPreview => 'mail_view'
+  end
 
   authenticated :user do
     root :to => 'dashboard#show'
@@ -72,5 +75,6 @@ Cellove::Application.routes.draw do
   end
 
   get 'notifications',                 to: 'notifications#notifications',          as: :notifications
+  resources :invitations
 
 end
