@@ -5,7 +5,8 @@
   </div>
   <div class="modal-body">
     <div class="center">
-      <p>¿Seguro que deseas eliminar el mensaje de <strong><%= link_to sender_or_recipient(conversation).name, sender_or_recipient(conversation) %></strong>?</p>
+      <% s_or_r = sender_or_recipient(conversation) %>
+      <p>¿Seguro que deseas eliminar el mensaje de <strong><%= link_to s_or_r.name, s_or_r %></strong>?</p>
     </div>
   </div>
   <div class="modal-footer center">

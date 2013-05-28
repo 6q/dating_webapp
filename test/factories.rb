@@ -24,6 +24,7 @@ FactoryGirl.define do
 
     trait :optional_data do
       newsletter_optin true
+      my_characteristics { create(:characteristic, user_id: id, creator_id: id) }
     end
 
     trait :invited_data do

@@ -38,9 +38,9 @@ class Characteristic < ActiveRecord::Base
   belongs_to :user, class_name: "User", foreign_key: :user_id
   belongs_to :recommendation, class_name: "Recommendation", foreign_key: :recommendation_id
 
-  attr_accessible :user_id, :creator_id, :romantic, :adventurer, :friendly, 
-  	:familiar, :hardWorking, :extroverted, :generous, :reserved, :sociable, 
-  	:quiet, :demanding, :prideful, :solitary, :tenacious, :attentive, :goodHumored, 
+  attr_accessible :user_id, :creator_id, :romantic, :adventurer, :friendly,
+  	:familiar, :hardWorking, :extroverted, :generous, :reserved, :sociable,
+  	:quiet, :demanding, :prideful, :solitary, :tenacious, :attentive, :goodHumored,
   	:spontaneous, :restless, :sensitive, :shy, :possessive, :jealous, :faithful
 
   validates :user_id, uniqueness: { scope: :creator_id }

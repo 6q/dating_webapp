@@ -13,7 +13,7 @@ YAML.load(ENV['ROLES']).each do |role|
   puts 'role: ' << role
 end
 puts 'DEFAULT USERS'
-user = FactoryGirl.create(:regular_user, :admin_role, :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup)
+user = FactoryGirl.create(:regular_user_optin, :admin_role, :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup)
 puts 'user: ' << user.name
 
 def create_towns
@@ -24,7 +24,7 @@ end
 create_towns
 
 (1..60).each do
-  u = FactoryGirl.create(:regular_user)
+  u = FactoryGirl.create(:regular_user_optin)
   receipt = u.send_message(user, Faker::Lorem.paragraphs.join("\n"), Faker::Lorem.sentence)
   user.reply_to_sender(receipt, Faker::Lorem.paragraph)
 end

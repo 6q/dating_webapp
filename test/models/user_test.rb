@@ -257,10 +257,10 @@ describe User do
     @user.rate(4, @rated_user)
     @rated_user.rate(5, @user)
 
-    @user.nice_couple.class.must_equal Array
-    @user.nice_couple.length.must_be :>=, 1
-    @user.nice_couple[0].class.must_equal User
-    @user.nice_couple[0].id.must_equal @rated_user.id
+    User.nice_couple(@user).class.must_equal ActiveRecord::Relation
+    User.nice_couple(@user).length.must_be :>=, 1
+    User.nice_couple(@user)[0].class.must_equal User
+    User.nice_couple(@user)[0].id.must_equal @rated_user.id
   end
 
   it 'must have a nice couple notification' do
