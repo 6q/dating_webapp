@@ -41,6 +41,7 @@ module UserHelper
   
   def user_link_with_picture(user)
     html = '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
+    html.html_safe
   end
 
   def rating_for(rateable_obj, rater_obj = nil, options = {})
