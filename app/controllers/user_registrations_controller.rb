@@ -12,6 +12,7 @@ class UserRegistrationsController < Devise::RegistrationsController
     if params[:user] && params[:user][:invitation_code]
       # User was invited, probably by a celestino
       invitation_code = params[:user][:invitation_code]
+      params[:user].delete :invitation_code
       @user = User.where('invitation_code = ?', invitation_code).first
       if @user
         @user.assign_attributes(params[:user])
@@ -31,7 +32,6 @@ class UserRegistrationsController < Devise::RegistrationsController
           referring_user.add_to_cellove_index(User::CELLOVE_RECOMMENDED_USER)
           invitation.save
         end
-        params[:user].delete :invitation_code
         @user = User.new(params[:user])
         register_user
       end
