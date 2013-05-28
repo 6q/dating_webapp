@@ -21,9 +21,6 @@ class UserRegistrationsController < Devise::RegistrationsController
           @user.remove_role :invited_user
         end
       else
-        # Someone probably maliciously tried adding an invitation code to the URL.
-        # We could not find a user related to this invitation code,
-        # so just create a new one.
         invitation = Invitation.where("invitation_code = ?", invitation_code).first
         if !invitation.nil? && !invitation.accepted
           invitation.accepted = true
