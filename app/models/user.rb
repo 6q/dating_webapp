@@ -304,14 +304,7 @@ class User < ActiveRecord::Base
 
   # Intersection of people who I rated and people who rated me
   def self.nice_couple(user)
-    users = []
-    User.joins(:rates)
-    # self.raters.each do |rater|
-    #   if self.ratings_given.any?{ |r| r.rateable_id == rater.id }
-    #     users.push(rater) if (!users.include?(rater) && rater != self)
-    #   end
-    # end
-    # users
+    User.joins(:rates).joins(:ratings_given).where("users.id != ?", user.id)
   end
 
   def self.people_who_like_me(user)

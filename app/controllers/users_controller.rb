@@ -72,7 +72,8 @@ class UsersController < ApplicationController
   end
 
   def nice_couple
-    @users = User.nice_couple(current_user)
+    @search = User.nice_couple(current_user).search(params[:q])
+    @users = @search.result.page(params[:page])
     render 'nice_couple'
   end
 
