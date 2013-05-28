@@ -1,26 +1,16 @@
 <div id="notifications">
-  <article class="notification">
-    <header>
-      <h1>En este momento</h1>
-      <a href="#">Cerrar</a>
-    </header>
-    <div class="container">
-      <a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="80" height="80"></a>
-      <span class="status">¡Hacéis buena pareja!</span>
-      <strong><%= link_to 'Maria Teresa', '/user/user-profile' %></strong><span>Santa Coloma de...</span><br>24 años
-    </div>
-  </article>
-
-  <article class="notification">
-    <header>
-      <h1>En este momento</h1>
-      <a href="#">Cerrar</a>
-    </header>
-    <div class="container">
-      <a href="/user/user-profile"><img src="/users/placeholder2.jpg" width="80" height="80"></a>
-      <span class="status">¡Hacéis buena pareja!</span>
-      <strong><%= link_to 'Maria Teresa', '/user/user-profile' %></strong><span>Santa Coloma de...</span><br>24 años
-    </div>
-  </article>
-  
 </div>
+
+<script id="notificationTemplate" type="text/x-jquery-tmpl">
+  <article class="notification">
+    <header>
+      <h1>En este momento</h1>
+      <a href="#" class="notification-close" data-id="${id}">Cerrar</a>
+    </header>
+    <div class="container">
+      <a href="/users/${user_id}"><img src="${photo}" width="80" height="80"></a>
+      <span class="status">${status}</span>
+      <strong><a href="/users/${user_id}">${name}</a></strong><span>${town}</span><br>${age} años
+    </div>
+  </article>
+</script>

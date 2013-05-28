@@ -1,3 +1,329 @@
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<section class="user-profile">
+
+	<article class="boxed">
+		<div class="boxed-inner">
+			<div id="nice-couple">
+				<i></i>
+				<p>¿Hacéis buena pareja?</p>
+				<ul>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ul>
+			</div>
+
+			<div class="user-detail-container clearfix">
+				<div class="photo">
+						<a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><img src="/users/profile.jpg" width="210"></a>
+				</div>
+				<div class="description">
+						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
+						<p class="small"><%= "#{User::GENDER[@user.gender]} - #{@user.age} años - #{@user.height} altura" %></p>
+						<p class="small"><%= "#{@user.name} es #{User::MARITAL_STATUS[@user.marital_status]} y #{User::CHILD[@user.child]}. Busca
+							#{User::GENDER[@user.lf_gender]} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para 
+							#{User::LF_RELATIONSHIP[@user.lf_relationship]} y que esté cerca de #{@user.town}, #{@user.country}" %>
+						</p>
+				</div>
+
+					<div id="user-profile-thumbs">
+
+						<div class="jcarousel">
+							<ul>
+								<li><a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_2.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_3.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_2.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_3.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_2.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_3.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_2.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+								<li><a href="/users/large_3.jpg" class="grouped_elements" rel="group1"><img src="/users/placeholder2.jpg" width="80" height ="80"></a></li>
+							</ul>
+
+						</div>
+
+						<a href="#" class="jcarousel-prev">anterior</a>
+						<a href="#" class="jcarousel-next">siguiente</a>
+					</div>
+
+			</div>
+		</div>
+	</article>
+
+	<%= render '/shared/user/profile-action-links' %>
+
+<article class="basic-tabs tabs-container">
+		
+		<ul class="nav nav-tabs" id="basic-tabs">
+  		<li class="active"><a href="#desc">Descripción</a></li>
+		  <li><a href="#dicen">Sus Celestin@s</a></li>
+		  <li><a href="#atributos">Sus Atributos</a></li>
+		  <li class="last"><a href="#notas">Tus notas</a></li>
+		</ul>
+
+		<div class="boxed">
+			<div class="boxed-inner">
+				<div class="tab-content">
+
+		  		<div class="tab-pane active" id="desc">
+		  			<% if @user.description.nil? %>
+		  				<%= @user.name %> aún no ha introducido su descripción.
+		  			<% else %>
+							<p><%= @user.description %></p>
+						<% end %>
+		  		</div>
+
+		  		<div class="tab-pane" id="dicen">
+		  			<% if @user.recommendations.empty? %>
+		  				<%= @user.name %> aún no tiene ningún celestino. <%= link_to 'Quieres ser el primero?', be_matchmaker_path %>
+		  			<% else %>
+		  				<% @user.recommendations.each do |rec| %>
+								<%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
+							<% end %>
+		  			<% end %>
+		  		</div>
+
+		  		<div class="tab-pane" id="atributos">
+							<div class="span4">
+								<h5>Romántico</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.romantic*20}%" %>"></div>
+								</div>
+
+								<h5>Aventurero</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.adventurer*20}%" %>"></div>
+								</div>
+								
+								<h5>Amable</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.friendly*20}%" %>"></div>
+								</div>
+
+								<h5>Familiar</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.familiar*20}%" %>"></div>
+								</div>
+
+								<h5>Trabajador</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.hardWorking*20}%" %>"></div>
+								</div>
+
+								<h5>Extrovertido</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.extroverted*20}%" %>"></div>
+								</div>
+
+								<h5>Generoso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.generous*20}%" %>"></div>
+								</div>
+
+								<h5>Reservado</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.reserved*20}%" %>"></div>
+								</div>
+
+								<h5>Sociable</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.sociable*20}%" %>"></div>
+								</div>
+
+								<h5>Tranquilo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.quiet*20}%" %>"></div>
+								</div>
+
+								<h5>Exigente</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.demanding*20}%" %>"></div>
+								</div>
+
+								<h5>Orgulloso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.prideful*20}%" %>"></div>
+								</div>
+
+							</div>
+
+
+
+							<div class="span4 offset1 attributes-col-2">
+								<h5>Solitario</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.solitary*20}%" %>"></div>
+								</div>
+
+								<h5>Tenaz</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.tenacious*20}%" %>"></div>
+								</div>
+
+								<h5>Atento</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.attentive*20}%" %>"></div>
+								</div>
+
+								<h5>Bienhumorado</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.goodHumored*20}%" %>"></div>
+								</div>
+
+								<h5>Espontáneo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.spontaneous*20}%" %>"></div>
+								</div>
+
+								<h5>Inquieto</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.restless*20}%" %>"></div>
+								</div>
+
+								<h5>Sensible</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.sensitive*20}%" %>"></div>
+								</div>
+
+								<h5>Tímido</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.shy*20}%" %>"></div>
+								</div>
+
+								<h5>Posesivo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.possessive*20}%" %>"></div>
+								</div>
+
+								<h5>Celoso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.jealous*20}%" %>"></div>
+								</div>
+
+								<h5>Fiel</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.my_characteristics.faithful*20}%" %>"></div>
+								</div>
+							</div>
+		  		</div>
+
+		  		<div class="tab-pane" id="notas">
+		  			<h4>Tus notas de María González <span>(tranquilo, él/ella no las verá)</span></h4>
+		  			<hr>
+		  			<% current_user.my_notes(@user).each do |note| %>
+		  				<%= render '/shared/user/nota-item', note: note %>
+		  			<% end %>
+
+		  			<div class="new-nota">
+		  				<%= form_for :note, :url => '/notes' do |n| %>
+		  					<%= n.text_area :content, :placeholder => 'Nueva nota' %>
+		  					<%= n.hidden_field :user_id, :value => current_user.id %>
+		  					<%= n.hidden_field :evaluated_id, :value => @user.id %>
+		  					<div class="pull-right controls">
+		  						<button type="submit" class="btn btn-info">Añadir nota</button>
+		  					</div>
+		  				<% end %>
+		  			</div>
+		  					  
+		  		</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+	<article class="profile-tabs tabs-container">
+		
+		<ul class="nav nav-tabs" id="myTab">
+  		<li class="active"><a href="#como">¿Cómo es?</a></li>
+		  <li><a href="#gustos">Sus gustos</a></li>
+		  <li><a href="#busca">Qué busca</a></li>
+		</ul>
+
+		<div class="boxed">
+			<div class="boxed-inner">
+				<div class="tab-content">
+
+		  		<div class="tab-pane active" id="como">
+						<p>Me considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
+						<p>Mido 1'75m y peso 65kg. Tengo los ojos de color marrón y mi complexión es fuerte.</p>
+						<p>Mi nivel de estudios es diplomado y hablo castellano fluido. Trabajo en el sector salud y mi nivel de ingresos es inimaginable.</p>
+						<p>Soy cristiana y me lo tomo muy en serio.</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="gustos">
+					<p>Me gusta comer estrictamente de todo. Bebo alcohol raramente y no tomo drogas. </p>
+
+					<p>Me gustan los animales de compañía. No tengo y soy alérgica.</p>
+
+					<p><strong>Sus aficiones:</strong> escribir, leer, y hacer mis propios vestidos con restos de cortinas. Tengo una máquina de coser, aviso.</p>
+
+					<p><strong>María, cuando sale...</strong> me gusta ponerme del revés. Antes he dicho que no me drogaba ni bebía, pero es mentira. En realidad en cuanto puedo me enchufo al frasco, le tiro a los palomos y me pongo ciega ciega.</p>
+
+					<p><strong>¿La música?</strong> escucho de todo, pero me gusta especialmente REM y Paul Mc Cartney. Sobretodo lentas para poder bailar pegada, que eso si es bailar. También me gusta Franz Ferdinand pero prefiero The Strokes.</p>
+
+					<p><strong>De cine...</strong> mis películas favoritas son las de acción. Soy muy fan de Bruce Willis. Todo lo que toca ese tío se convierte en oro. Qué forma de llenar la pantalla, ¡pardiez!</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="busca">
+		  			<p>A alguien atractivo, de estilo bohemio que sea más alto que yo y que pese igual que yo.</p>
+		  			<p>Si puede ser, con los ojos de color marrón y de complexión fuerte. Me gustaría que tuviera hijos y que deseara tener más.</p>
+		  		</div>
+
+		  		<div class="tab-pane" id="dicen">
+		  			<% @can_delete_celestino = true %>
+		  			<% 5.times do %>
+							/shared/user/celes-item
+						<% end %>
+		  		</div>
+
+		  		<div class="tab-pane" id="notas">
+		  			<h4>Tus notas de María González <span>(tranquilo, él/ella no las verá)</span></h4>
+		  			<hr>
+		  			<% 5.times do %>
+							/shared/user/nota-item
+		  			<% end %>
+
+		  			<div class="new-nota">
+		  				<form>
+		  					<textarea placeholder="Nueva nota">Nunca me contesta. ¿Será por mi aliento insecticida? Y, sobretodo... ¿cómo lo habrá olido por internet?</textarea>
+		  					<div class="pull-right controls">
+		  						<button type="submit" class="btn btn-info">Añadir nota</button>
+		  					</div>
+		  				</form>
+		  			</div>
+		  					  
+		  		</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<%= render '/shared/user/profile-action-links' %>
+
+</section>
+
+<script type="text/javascript">
+	// tabs
+  $('.nav-tabs a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+  })
+  // carousel
+  	$('.jcarousel').jcarousel({
+  	  animation: 'slow'
+  	});
+
+  	$('.jcarousel-prev').click(function() {
+  	    $('.jcarousel').jcarousel('scroll', '-=5');
+  	});
+
+  	$('.jcarousel-next').click(function() {
+  	    $('.jcarousel').jcarousel('scroll', '+=5');
+  	});
+</script>

@@ -5,7 +5,7 @@
 			<header>
 				<h1 class="span3">Tu perfil</h1>
 				<div class="pull-right">
-					Índice Cellove: 35/100 <%= link_to "¡Mejora tu índice!", "/user/celestinos-of-mine#tab_mejora" %> - Perfil 35% completado
+					<%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to "¡Mejora tu índice!", "/user/celestinos-of-mine#tab_mejora" %> - Perfil 35% completado
 				</div>
 			</header>
       <div id="user-pictures">
@@ -19,7 +19,7 @@
 	<hr class="thin">
 
 	
-	<%= form_for @user, :url => profile_path do |f| %>
+	<%= form_for @user, :url => profile_path, :html => {:class => "form-horizontal"} do |f| %>
 		<section class="boxed">
 			<div class="boxed-inner">
 				<fieldset>
@@ -217,7 +217,7 @@
 									<h5>Familiar</h5>
 									<%= my.text_field :familiar, :class =>"points" %>
 
-									<h5>Trabajadro</h5>
+									<h5>Trabajador</h5>
 									<%= my.text_field :hardWorking, :class =>"points" %>
 
 									<h5>Extrovertido</h5>
@@ -401,7 +401,10 @@
 								<%= user.text_field :lf_age_between, :class => 'input-mini' %>
 								<%= user.label :lf_age_to, 'y' %>
 								<%= user.text_field :lf_age_to, :class => 'input-mini' %>
-								años.
+								<%= user.label :lf_relationship, 'años. Para' %>
+								<%= user.select :lf_relationship, lf_relationship_options %>
+								<hr class="thin">
+
 								<hr class="thin">
 								<%= user.label :lf_child, 'Que ' %>
 								<%= user.select :lf_child, lf_child_options %>
@@ -424,7 +427,7 @@
 								<%= user.label :lf_height_between, 'Que mida entre' %>
 								<%= user.text_field :lf_height_between, :class => 'input-mini' %>
 								<%= user.label :lf_height_to, 'y' %>
-								<%= user.text_field :lf_weight_to, :class => 'input-mini' %>
+								<%= user.text_field :lf_height_to, :class => 'input-mini' %>
 								<%= user.label :lf_weight_between, 'm. y pese entre ' %>
 								<%= user.text_field :lf_weight_between, :class => 'input-mini' %>
 								<%= user.label :lf_weight_to, 'y' %>

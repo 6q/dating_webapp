@@ -17,14 +17,12 @@
   </ul>
 
   <% if @interactions == true %>
-
-  <div class="interactions">
-    <div class="punctuations">
-      <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
-      <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
+    <div class="interactions">
+      <div class="punctuations">
+        <strong>Tu dices:</strong> <span class="stars stars-5">****</span>
+        <strong>Ha dicho:</strong> <span class="stars stars-3">****</span>
+      </div>
+      <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
     </div>
-    <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
-  </div>
-
   <% end %>
 </article>

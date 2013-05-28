@@ -2,8 +2,8 @@
   <article class="boxed headless">
     <div class="boxed-inner">
       <header>
-        <h1>Mis Celestin@s | <span>Tu índice es del 40% y tienes 2 Celestin@s.</span></h1>
-        <%= link_to "¡Mejora tu índice Cellove!" , "#mejora", :class => 'pull-right' %>
+        <h1>Mis Celestin@s | <span>Tu índice es del <%= current_user.cellove_index %>% y tienes <%= current_user.recommenders.count.to_s %> Celestin@s.</span></h1>
+        <%= link_to _('¡Mejora tu índice Cellove!') , "#mejora", :class => 'pull-right' %>
       </header>
     </div>
   </article>

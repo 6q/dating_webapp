@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!
   before_filter :set_cookie
   before_filter :matchmaker_user
+  after_filter :user_activity
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -13,4 +14,10 @@ class ApplicationController < ActionController::Base
   def set_cookie
     cookies[:userid] = current_user.id if user_signed_in?
   end
+  private :set_cookie
+
+  def user_activity
+    current_user.try :touch
+  end
+  private :user_activity
 end

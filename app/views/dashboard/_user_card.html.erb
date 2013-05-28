@@ -8,30 +8,31 @@
       <% if user.last_sign_in_at %>
         <small><%= time_ago_in_words(user.last_sign_in_at) %></small>
       <% end %>
-      <h1><%= link_to user.name, user %></h1>
-      <br>
-      <span><%= truncate(user.town, length: 20) %></span>
-      <br><%= "#{user.age} #{t("datetime.prompts.year")}" %>
-  </h1>
+      <h1>
+        <%= link_to user.name, user %>
+        <br>
+        <span><%= truncate(user.town, length: 20) %></span>
+        <br><%= "#{user.age} #{t("datetime.prompts.year")}" %>
+      </h1>
     </header>
     <ul class="actions clearfix">
       <li class="message"><%= link_to 'Send Message', "#fast-reply-#{user.id}", 'data-toggle' => 'modal' %></li>
       <li class="chat"><%= link_to 'Chat', user_chat_path(user) %></li>
-      <li class="like"><%= link_to 'Like', user_like_path(user), method: :post %></li>
-      <li class="block"><%= link_to 'Block', user_block_path(user), "data-toggle" => "moda", method: :post %></li>
+      <li class="like"><%= link_to 'Like', user_like_path(user), :method => :post %></li>
+      <% block_modal_id = '#user-block-' + user.id.to_s %>
+      <li class="block"><%= link_to 'Block', block_modal_id, "data-toggle" => "modal" %></li>
     </ul>
-
     <% if @interactions == true %>
-
       <div class="interactions">
         <div class="punctuations">
           <strong><%= _("Tu dices:") %></strong> <span class="stars stars-5">****</span>
           <strong><%= _("Ha dicho:") %></strong> <span class="stars stars-3">****</span>
         </div>
-        <%= link_to 'Proponer actividad','#activity-proposal' ,'data-toggle' => 'modal' %>
+        <%= link_to 'Proponer actividad','#activity-proposal', 'data-toggle' => 'modal' %>
       </div>
-
     <% end %>
   </article>
 </li>
+
+<%= render 'shared/user/modal_user-block', user: user %>
 <%= render partial: 'shared/modal_new_message', locals: { user: user } %>

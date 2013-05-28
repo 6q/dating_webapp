@@ -33,6 +33,7 @@ module Cellove
       Devise::SessionsController.skip_before_filter :matchmaker_user
       # Hacky way to maintain the concerning
       Conversation.send(:include, ActivityConversation)
+      Notification.send(:include, NotificationConversation)
     end
 
     # Only load the plugins named here, in the order given (default is alphabetical).

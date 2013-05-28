@@ -58,7 +58,7 @@ describe RecommendationsController do
       assigns(:characteristic).creator_id.must_equal @matchmaker.id
 
       assert_response 302
-      assert_redirected_to profile_path
+      assert_redirected_to be_matchmaker_path
     end
 
     it "POST #create with invalid user email should redirect to the profile page" do
@@ -74,7 +74,7 @@ describe RecommendationsController do
       @user.recommenders.length.must_equal 0
 
       assert_response 302
-      assert_redirected_to profile_path
+      assert_redirected_to be_matchmaker_path
     end
   end
 
@@ -110,7 +110,7 @@ describe RecommendationsController do
       assigns(:characteristic).user_id.must_equal @matchmaker.id
 
       assert_response 302
-      assert_redirected_to profile_path
+      assert_redirected_to be_matchmaker_path
     end
 
     it "POST #create with invalid user email should redirect the profile page" do
@@ -126,7 +126,7 @@ describe RecommendationsController do
       @user.recommendations.length.must_equal 0
 
       assert_response 302
-      assert_redirected_to profile_path
+      assert_redirected_to be_matchmaker_path
     end
 
     # it "GET #accept should accept the recommendation" do

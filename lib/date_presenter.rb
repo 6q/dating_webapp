@@ -1,4 +1,6 @@
 module DatePresenter
+  extend ActiveSupport::Concern
+
   def present_date(attr_name)
     components = %w(day month year)
     components.each do |c|
