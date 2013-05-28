@@ -11,8 +11,8 @@ class UserRegistrationsController < Devise::RegistrationsController
   def create
     if params[:user] && params[:user][:invitation_code]
       # User was invited, probably by a celestino
-      @user = User.where('invitation_code = ?', params[:user][:invitation_code]).first
-      params[:user].delete :invitation_code
+      invitation_code = params[:user][:invitation_code]
+      @user = User.where('invitation_code = ?', invitation_code).first
       if @user
         @user.assign_attributes(params[:user])
         register_user
@@ -23,7 +23,7 @@ class UserRegistrationsController < Devise::RegistrationsController
         # Someone probably maliciously tried adding an invitation code to the URL.
         # We could not find a user related to this invitation code,
         # so just create a new one.
-        invitation = Invitation.where(invitation_code: params[:user][:invitation_code]).first
+        invitation = Invitation.where("invitation_code = ?", invitation_code).first
         if !invitation.nil? && !invitation.accepted
           invitation.accepted = true
           # Give referring user extra cellove points.
@@ -31,6 +31,7 @@ class UserRegistrationsController < Devise::RegistrationsController
           referring_user.add_to_cellove_index(User::CELLOVE_RECOMMENDED_USER)
           invitation.save
         end
+        params[:user].delete :invitation_code
         @user = User.new(params[:user])
         register_user
       end
