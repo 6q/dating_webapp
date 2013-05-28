@@ -89,7 +89,7 @@ class UsersController < ApplicationController
   end
 
   def my_matchmakers
-    
+    @invitation = Invitation.new
     render 'my_matchmakers'
   end
 

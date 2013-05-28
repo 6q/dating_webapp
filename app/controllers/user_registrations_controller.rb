@@ -23,6 +23,14 @@ class UserRegistrationsController < Devise::RegistrationsController
         # Someone probably maliciously tried adding an invitation code to the URL.
         # We could not find a user related to this invitation code,
         # so just create a new one.
+        invitation = Invitation.where(invitation_code: params[:user][:invitation_code]).first
+        if !invitation.nil? && !invitation.accepted
+          invitation.accepted = true
+          # Give referring user extra cellove points.
+          referring_user = invitation.user
+          referring_user.add_to_cellove_index(User::CELLOVE_RECOMMENDED_USER)
+          invitation.save
+        end
         @user = User.new(params[:user])
         register_user
       end

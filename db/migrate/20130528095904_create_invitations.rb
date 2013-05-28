@@ -5,6 +5,7 @@ class CreateInvitations < ActiveRecord::Migration
       t.string :invited_email
       t.boolean :accepted, default: false
       t.string :invitation_code
+      t.string :user_type
 
       t.timestamps
     end

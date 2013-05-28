@@ -163,19 +163,21 @@
             <div class="white-box">
               <h4>¿Quieres aumentar tu indice Cellove?</h4>
               <p>Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos.</p>
-              <form class="form-inline">
-                <input type="text" class="input-medium" placeholder="Email">
-                <button type="submit" class="btn btn-info">OK</button>
-              </form>
+              <%= form_for @invitation, class: 'form-inline' do |f| %>
+                <%= f.text_field :invited_email, class: 'input-medium', placeholder: 'Email' %>
+                <%= f.hidden_field 'user_type', value: 'regular_user' %>
+                <%= f.submit 'OK', class: 'btn btn-info' %>
+              <% end %>
             </div>
       
             <div class="white-box">
               <h4>¿Quieres proponer un Celestin@?</h4>
               <p>Propón un nuevo celestin@ para que te recomiende y gana más puntos.</p>
-              <form class="form-inline">
-                <input type="text" class="input-medium" placeholder="Email">
-                <button type="submit" class="btn btn-info">OK</button>
-              </form>
+              <%= form_for @invitation, class: 'form-inline' do |f| %>
+                <%= f.text_field :invited_email, class: 'input-medium', placeholder: 'Email' %>
+                <%= f.hidden_field 'user_type', value: 'celestino' %>
+                <%= f.submit 'OK', class: 'btn btn-info' %>
+              <% end %>
             </div>
           </div>
         </div>

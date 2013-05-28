@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20130528095904) do
     t.string   "invited_email"
     t.boolean  "accepted",        :default => false
     t.string   "invitation_code"
+    t.string   "user_type"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
   end
