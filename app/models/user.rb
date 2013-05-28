@@ -31,8 +31,8 @@
 #  longitude              :float
 #  physical_style         :string(255)
 #  physical_desc          :string(255)
-#  height                 :decimal
-#  weight                 :decimal
+#  height                 :decimal(, )
+#  weight                 :decimal(, )
 #  complexion             :string(255)
 #  child                  :string(255)
 #  smoke                  :string(255)
@@ -58,10 +58,10 @@
 #  lf_postal_code         :string(255)
 #  lf_physical_style      :string(255)
 #  lf_physical_desc       :string(255)
-#  lf_height_between      :integer
-#  lf_height_to           :integer
-#  lf_weight_between      :integer
-#  lf_weight_to           :integer
+#  lf_height_between      :decimal(, )
+#  lf_height_to           :decimal(, )
+#  lf_weight_between      :decimal(, )
+#  lf_weight_to           :decimal(, )
 #  lf_complexion          :string(255)
 #  lf_child               :string(255)
 #  lf_smoke               :string(255)
@@ -72,7 +72,6 @@
 #  lf_language            :string(255)
 #  lf_job                 :string(255)
 #  lf_salary              :string(255)
-#  lf_description         :string(255)
 #  house                  :string(255)
 #  eyes                   :string(255)
 #  hair                   :string(255)
@@ -115,6 +114,7 @@
 #  lf_party               :string(255)
 #  lf_language_level      :string(255)
 #  cellove_index          :integer          default(0)
+#  lf_relationship        :string(255)
 #
 
 require_dependency 'minimum_age_validator'
