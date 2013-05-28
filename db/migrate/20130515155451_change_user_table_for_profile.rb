@@ -1,18 +1,18 @@
 class ChangeUserTableForProfile < ActiveRecord::Migration
   def up
-    add_column :users, :lf_house, :string
-    add_column :users, :lf_hair, :string
-    add_column :users, :lf_hair_style, :string
-    add_column :users, :lf_eyes, :string
-    add_column :users, :lf_like_sport, :string
-    add_column :users, :lf_like_read, :string
-    add_column :users, :lf_like_cinema, :string
-    add_column :users, :lf_like_quiet, :text
-    add_column :users, :lf_like_walk, :text
-    add_column :users, :lf_like_mountain, :text
-    add_column :users, :lf_like_beach, :text
-    add_column :users, :lf_like_family, :text
-    add_column :users, :lf_like_friends, :text
+    add_column :users, :lf_house, :text
+    add_column :users, :lf_hair, :text
+    add_column :users, :lf_hair_style, :text
+    add_column :users, :lf_eyes, :text
+    add_column :users, :lf_like_sport, :boolean
+    add_column :users, :lf_like_read, :boolean
+    add_column :users, :lf_like_cinema, :boolean
+    add_column :users, :lf_like_quiet, :boolean
+    add_column :users, :lf_like_walk, :boolean
+    add_column :users, :lf_like_mountain, :boolean
+    add_column :users, :lf_like_beach, :boolean
+    add_column :users, :lf_like_family, :boolean
+    add_column :users, :lf_like_friends, :boolean
     add_column :users, :lf_religion_activity, :text
     add_column :users, :lf_citizenship, :text
     add_column :users, :lf_ethnicity, :text
