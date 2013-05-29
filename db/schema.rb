@@ -23,6 +23,196 @@ ActiveRecord::Schema.define(:version => 20130523103827) do
     t.date     "date"
   end
 
+  create_table "arrowchat", :force => true do |t|
+    t.string  "from",      :limit => 25,                    :null => false
+    t.string  "to",        :limit => 25,                    :null => false
+    t.text    "message",                                    :null => false
+    t.integer "sent",                                       :null => false
+    t.integer "read",                                       :null => false
+    t.boolean "user_read",               :default => false, :null => false
+    t.integer "direction",               :default => 0,     :null => false
+  end
+
+  add_index "arrowchat", ["from"], :name => "from"
+  add_index "arrowchat", ["read"], :name => "read"
+  add_index "arrowchat", ["to"], :name => "to"
+  add_index "arrowchat", ["user_read"], :name => "user_read"
+
+  create_table "arrowchat_admin", :force => true do |t|
+    t.string "username", :limit => 20, :null => false
+    t.string "password", :limit => 50, :null => false
+    t.string "email",    :limit => 50, :null => false
+  end
+
+  create_table "arrowchat_applications", :force => true do |t|
+    t.string  "name",             :limit => 100,                    :null => false
+    t.string  "folder",           :limit => 100,                    :null => false
+    t.string  "icon",             :limit => 100,                    :null => false
+    t.integer "width",                                              :null => false
+    t.integer "height",                                             :null => false
+    t.integer "bar_width"
+    t.string  "bar_name",         :limit => 100
+    t.boolean "dont_reload",                     :default => false
+    t.boolean "default_bookmark",                :default => true
+    t.boolean "show_to_guests",                  :default => true
+    t.string  "link"
+    t.string  "update_link"
+    t.string  "version",          :limit => 20
+    t.boolean "active",                          :default => true,  :null => false
+  end
+
+  create_table "arrowchat_banlist", :primary_key => "ban_id", :force => true do |t|
+    t.string "ban_userid", :limit => 25
+    t.string "ban_ip",     :limit => 50
+  end
+
+  create_table "arrowchat_chatroom_banlist", :id => false, :force => true do |t|
+    t.string  "user_id",     :limit => 25, :null => false
+    t.integer "chatroom_id",               :null => false
+    t.integer "ban_length",                :null => false
+    t.integer "ban_time",                  :null => false
+  end
+
+  add_index "arrowchat_chatroom_banlist", ["chatroom_id"], :name => "chatroom_id"
+  add_index "arrowchat_chatroom_banlist", ["user_id"], :name => "user_id"
+
+  create_table "arrowchat_chatroom_messages", :force => true do |t|
+    t.integer "chatroom_id",                                      :null => false
+    t.string  "user_id",        :limit => 25,                     :null => false
+    t.string  "username",       :limit => 100,                    :null => false
+    t.text    "message",                                          :null => false
+    t.boolean "global_message",                :default => false
+    t.integer "sent",                                             :null => false
+  end
+
+  add_index "arrowchat_chatroom_messages", ["chatroom_id"], :name => "chatroom_id"
+  add_index "arrowchat_chatroom_messages", ["sent"], :name => "sent"
+  add_index "arrowchat_chatroom_messages", ["user_id"], :name => "user_id"
+
+  create_table "arrowchat_chatroom_rooms", :force => true do |t|
+    t.string  "author_id",    :limit => 25,  :null => false
+    t.string  "name",         :limit => 100, :null => false
+    t.boolean "type",                        :null => false
+    t.string  "password",     :limit => 25
+    t.integer "length",                      :null => false
+    t.integer "session_time",                :null => false
+  end
+
+  add_index "arrowchat_chatroom_rooms", ["author_id"], :name => "author_id"
+  add_index "arrowchat_chatroom_rooms", ["session_time"], :name => "session_time"
+
+  create_table "arrowchat_chatroom_users", :primary_key => "user_id", :force => true do |t|
+    t.integer "chatroom_id",                                  :null => false
+    t.boolean "is_admin",                  :default => false, :null => false
+    t.boolean "is_mod",                    :default => false, :null => false
+    t.integer "block_chats",  :limit => 1, :default => 0,     :null => false
+    t.integer "session_time",                                 :null => false
+  end
+
+  add_index "arrowchat_chatroom_users", ["chatroom_id"], :name => "chatroom_id"
+  add_index "arrowchat_chatroom_users", ["is_admin"], :name => "is_admin"
+  add_index "arrowchat_chatroom_users", ["is_mod"], :name => "is_mod"
+  add_index "arrowchat_chatroom_users", ["session_time"], :name => "session_time"
+
+  create_table "arrowchat_config", :id => false, :force => true do |t|
+    t.string  "config_name",                     :null => false
+    t.text    "config_value"
+    t.boolean "is_dynamic",   :default => false, :null => false
+  end
+
+  add_index "arrowchat_config", ["config_name"], :name => "config_name", :unique => true
+
+  create_table "arrowchat_graph_log", :force => true do |t|
+    t.string  "date",               :limit => 30,                :null => false
+    t.integer "user_messages",                    :default => 0
+    t.integer "chat_room_messages",               :default => 0
+  end
+
+  add_index "arrowchat_graph_log", ["date"], :name => "date", :unique => true
+
+  create_table "arrowchat_notifications", :force => true do |t|
+    t.string  "to_id",       :limit => 25,                 :null => false
+    t.string  "author_id",   :limit => 25,                 :null => false
+    t.string  "author_name", :limit => 100,                :null => false
+    t.string  "misc1"
+    t.string  "misc2"
+    t.string  "misc3"
+    t.integer "type",                                      :null => false
+    t.integer "alert_read",                 :default => 0, :null => false
+    t.integer "user_read",                  :default => 0, :null => false
+    t.integer "alert_time",                                :null => false
+  end
+
+  add_index "arrowchat_notifications", ["alert_read"], :name => "alert_read"
+  add_index "arrowchat_notifications", ["alert_time"], :name => "alert_time"
+  add_index "arrowchat_notifications", ["to_id"], :name => "to_id"
+  add_index "arrowchat_notifications", ["user_read"], :name => "user_read"
+
+  create_table "arrowchat_notifications_markup", :force => true do |t|
+    t.string  "name",   :limit => 50, :null => false
+    t.integer "type",                 :null => false
+    t.text    "markup",               :null => false
+  end
+
+  create_table "arrowchat_smilies", :force => true do |t|
+    t.string "name", :limit => 20, :null => false
+    t.string "code", :limit => 10, :null => false
+  end
+
+  create_table "arrowchat_status", :primary_key => "userid", :force => true do |t|
+    t.string  "guest_name",           :limit => 50
+    t.text    "message"
+    t.string  "status",               :limit => 10
+    t.integer "theme"
+    t.integer "popout"
+    t.text    "typing"
+    t.boolean "hide_bar"
+    t.boolean "play_sound",                         :default => true
+    t.boolean "window_open"
+    t.boolean "only_names"
+    t.string  "chatroom_window",      :limit => 2,  :default => "-1",  :null => false
+    t.string  "chatroom_stay",        :limit => 2,  :default => "-1",  :null => false
+    t.boolean "chatroom_block_chats"
+    t.boolean "chatroom_sound"
+    t.boolean "announcement",                       :default => true,  :null => false
+    t.text    "unfocus_chat"
+    t.string  "focus_chat",           :limit => 20
+    t.text    "last_message"
+    t.text    "apps_bookmarks"
+    t.text    "apps_other"
+    t.integer "apps_open"
+    t.text    "apps_load"
+    t.text    "block_chats"
+    t.integer "session_time",                       :default => 0,     :null => false
+    t.boolean "is_admin",                           :default => false, :null => false
+    t.string  "hash_id",              :limit => 20, :default => "0",   :null => false
+  end
+
+  add_index "arrowchat_status", ["hash_id"], :name => "hash_id"
+  add_index "arrowchat_status", ["session_time"], :name => "session_time"
+
+  create_table "arrowchat_themes", :force => true do |t|
+    t.string  "folder",      :limit => 25,  :null => false
+    t.string  "name",        :limit => 100, :null => false
+    t.boolean "active",                     :null => false
+    t.string  "update_link"
+    t.string  "version",     :limit => 20
+    t.boolean "default",                    :null => false
+  end
+
+  create_table "arrowchat_trayicons", :force => true do |t|
+    t.string  "name",          :limit => 100,                   :null => false
+    t.string  "icon",          :limit => 100,                   :null => false
+    t.string  "location",                                       :null => false
+    t.string  "target",        :limit => 25
+    t.integer "width"
+    t.integer "height"
+    t.integer "tray_width"
+    t.string  "tray_name",     :limit => 100
+    t.integer "tray_location",                                  :null => false
+    t.boolean "active",                       :default => true, :null => false
+  end
+
   create_table "cellove_notifications", :force => true do |t|
     t.integer  "sender_id"
     t.integer  "receiver_id"

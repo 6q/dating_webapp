@@ -46,6 +46,8 @@ gem 'minitest-rails', group: [:test, :development]
 group :development do
   gem "guard-rails"
   gem "rb-fsevent"
+  gem 'rack-proxy', git: 'git://github.com/sportngin/rack-proxy.git'
+  gem "rack-reverse-proxy", :require => "rack/reverse_proxy", git: 'git://github.com/sportngin/rack-reverse-proxy.git'
 end
 
 group :test, :development do

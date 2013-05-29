@@ -1,3 +1,17 @@
+GIT
+  remote: git://github.com/sportngin/rack-proxy.git
+  revision: 2fc15874a150a847c5213104b3d7185f8a0492f0
+  specs:
+    rack-proxy (0.3.7)
+      rack
+
+GIT
+  remote: git://github.com/sportngin/rack-reverse-proxy.git
+  revision: cc90c0c6786b9395c05ed95af90bdf783fa6654e
+  specs:
+    rack-reverse-proxy (0.6.0)
+      rack (>= 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,7 +71,7 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
-    dragonfly (0.9.14)
+    dragonfly (0.9.15)
       multi_json (~> 1.0)
       rack
     erubis (2.7.0)
@@ -250,6 +264,8 @@ DEPENDENCIES
   mysql2
   pg
   quiet_assets (>= 1.0.2)
+  rack-proxy!
+  rack-reverse-proxy!
   rails (= 3.2.12)
   rails-i18n
   ransack
