@@ -19,7 +19,34 @@ class UserMailer < ActionMailer::Base
     mail(:to => email_address, :subject => user.name + " invites you to Cellove")
   end
 
-  def new_message(user)
+  # Email notifications
+  def receive_message(sender, recipient)
+    @sender = sender
+    @recipient = recipient
+    mail(:to => @recipient.email, :subject => "New message")
+  end
 
+  def profile_visit(visitor, visited)
+    @sender = sender
+    @recipient = recipient
+    mail(:to => @recipient.email, :subject => "New profile visit")
+  end
+
+  def like(sender, recipient)
+    @sender = sender
+    @recipient = recipient
+    mail(:to => @recipient.email, :subject => "New like")
+  end
+
+  def star_rating(sender, recipient)
+    @sender = sender
+    @recipient = recipient
+    mail(:to => @recipient.email, :subject => "New star rating")
+  end
+
+  def celestino_recommendation(sender, recipient)
+    @sender = sender
+    @recipient = recipient
+    mail(:to => @recipient.email, :subject => "New celestino recommendation")
   end
 end

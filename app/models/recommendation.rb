@@ -34,6 +34,7 @@ class Recommendation < ActiveRecord::Base
     begin
       user = User.find(user_id)
       user.notifications.create({ sender_id: creator_id, notifiable_id: recommendation.id, notifiable_type: 'matchmaker' })
+      self.creator.send_notification_email(:celestino_recommendation, user)
     rescue ActiveRecord::RecordNotFound
       # User record was not found
     end

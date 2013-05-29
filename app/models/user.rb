@@ -327,6 +327,7 @@ class User < ActiveRecord::Base
   end
 
   # Me gusta
+  # Where current_user likes the user passed as a parameter
   def like(user)
     like = self.likes.build({})
     like.user_id = user.id
@@ -335,6 +336,7 @@ class User < ActiveRecord::Base
     else
       return false
     end
+    send_notification_email(:like, user)
   end
 
   # Rating
@@ -361,10 +363,12 @@ class User < ActiveRecord::Base
         user.add_to_cellove_index(User::CELLOVE_3_STARS)
       elsif stars == 4
         user.add_to_cellove_index(User::CELLOVE_4_STARS)
-        user.notifications.create({ sender_id: self.id, notifiable_id: rate.id, notifiable_type: 'couple' })
       elsif stars == 5
         user.add_to_cellove_index(User::CELLOVE_5_STARS)
+      end
+      if stars == 4 || stars == 5
         user.notifications.create({ sender_id: self.id, notifiable_id: rate.id, notifiable_type: 'couple' })
+        send_notification_email(:star_rating, user)
       end
 
       if self.is_nice_couple?(user)
@@ -392,6 +396,7 @@ class User < ActiveRecord::Base
         user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
       end
     end
+    send_notification_email(:profile_visit, user)
   end
 
   def set_all_visits_seen
@@ -495,6 +500,16 @@ class User < ActiveRecord::Base
 
   def my_notes(user)
     self.notes.where(evaluated_id: user.id)
+  end
+
+  def send_notification_email(notification_type, recipient)
+    if recipient.online? &&
+        !recipient.general_settings.no_email_online &&
+        recipient.general_settings.send(notification_type.to_sym)
+      UserMailer.send(:notification_type, self, recipient).deliver
+    elsif recipient.general_settings.send(notification_type.to_sym)
+      UserMailer.send(:notification_type, self, recipient).deliver
+    end
   end
 
 end
