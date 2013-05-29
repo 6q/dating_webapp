@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
     <%= render partial: "layouts/common_head" %>
+    <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
   </head>
   <body class="user">
     <%= render partial: "layouts/changing_background" %>
@@ -47,4 +48,6 @@
     <%= render partial: 'shared/user/notifications' %>
 
   </body>
+  <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
+  <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script> 
 </html>

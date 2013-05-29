@@ -1,26 +1,26 @@
 class ChangeSomeUserColumns < ActiveRecord::Migration
 	def up
-		add_column :users, :house, :string
-		add_column :users, :eyes, :string
-		add_column :users, :hair, :string
-		add_column :users, :hair_style, :string
-		add_column :users, :citizenship, :string
-		add_column :users, :ethnicity, :string
-		add_column :users, :language_level, :string
-		add_column :users, :wedding_opinion, :string
-		add_column :users, :music_genre, :string
-		add_column :users, :cinema_frequency, :string
-		add_column :users, :cinema_genre, :string
-		add_column :users, :like_sport, :string
-		add_column :users, :like_read, :string
-		add_column :users, :like_cinema, :string
-		add_column :users, :like_quiet, :string
-		add_column :users, :like_walk, :string
-		add_column :users, :like_mountain, :string
-		add_column :users, :like_beach, :string
-		add_column :users, :like_family, :string
-		add_column :users, :like_friends, :string
-		add_column :users, :religion_activity, :string
+		add_column :users, :house, :text
+		add_column :users, :eyes, :text
+		add_column :users, :hair, :text
+		add_column :users, :hair_style, :text
+		add_column :users, :citizenship, :text
+		add_column :users, :ethnicity, :text
+		add_column :users, :language_level, :text
+		add_column :users, :wedding_opinion, :text
+		add_column :users, :music_genre, :text
+		add_column :users, :cinema_frequency, :text
+		add_column :users, :cinema_genre, :text
+		add_column :users, :like_sport, :boolean
+		add_column :users, :like_read, :boolean
+		add_column :users, :like_cinema, :boolean
+		add_column :users, :like_quiet, :boolean
+		add_column :users, :like_walk, :boolean
+		add_column :users, :like_mountain, :boolean
+		add_column :users, :like_beach, :boolean
+		add_column :users, :like_family, :boolean
+		add_column :users, :like_friends, :boolean
+		add_column :users, :religion_activity, :text
 		rename_column :users, :animal_like, :animals
 		remove_column :users, :child_want
 		remove_column :users, :smoke_tolerance

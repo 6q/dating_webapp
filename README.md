@@ -8,6 +8,12 @@ Development practices
 
   * Translations are possible with fast_gettext [https://github.com/grosser/fast_gettext]
 
+Requirements
+------------
+
+  For the chat to work you must use Arrowchat and set it up in apache server into your localhost machine.
+  The arrowchat software is stored in extras/arrowchat directory.
+
 Testing
 -------
 
