@@ -508,11 +508,15 @@ class User < ActiveRecord::Base
   end
 
   def send_notification_email(notification_type, recipient)
-    if recipient.online? &&
-        !recipient.general_settings.no_email_online &&
-        recipient.general_settings.send(notification_type.to_sym)
-      UserMailer.send(:notification_type, self, recipient).deliver
-    elsif recipient.general_settings.send(notification_type.to_sym)
+    settings = recipient.general_settings
+    send_mail = Proc.new { UserMailer.send(:notification_type, self, recipient).deliver }
+    if recipient.online? && !settings.no_email_online && settings.send(notification_type.to_sym)
+      # TODO: Check extra conditions
+      if settings.show_only_nearby
+        send_mail.call if nearbys(50).include?(recipient) 
+      end
+    elsif settings.send(notification_type.to_sym)
+      # TODO: Check extra conditions
       UserMailer.send(:notification_type, self, recipient).deliver
     end
   end
