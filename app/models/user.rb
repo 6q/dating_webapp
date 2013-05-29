@@ -236,6 +236,11 @@ class User < ActiveRecord::Base
       u.add_role :invited_user
     end
   end
+
+  # Get all user ids of the people for which I appear in their blocked list
+  def invisible_to_me
+    UserBlock.where(blocked_user_id: self.id).map{ |u| u.user_id }
+  end
   
   def location
     [postal_code, town, country].compact.join(', ')

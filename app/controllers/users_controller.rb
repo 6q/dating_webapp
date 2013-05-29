@@ -9,10 +9,11 @@ class UsersController < ApplicationController
 
   def index
     distance = params[:distance] || User::DEFAULT_DISTANCE
-    
+    hidden_user_ids = current_user.hidden_user_ids.concat(current_user.invisible_to_me)
+
     if params[:q][:s] == "distance asc"
       params[:q].except!(:s)
-      @search = User.near(current_user, distance, { :units => :km, :sort => :distance }).search(params[:q])
+      @search = User.where("users.id NOT IN (?)", hidden_user_ids).near(current_user, distance, { :units => :km, :sort => :distance }).search(params[:q])
     else
       nearbys = current_user.nearbys(distance, { :units => :km }).pluck(:id)
       nearbys = [0] if nearbys.empty?
@@ -20,16 +21,17 @@ class UsersController < ApplicationController
       params[:q] = params[:q].merge(id_in: nearbys) if params[:q]
       if params[:q][:s] == "recent_interaction asc"
         params[:q].except!(:s)
-        @search = User.sort_interactions.search(params[:q])
+        @search = User.sort_interactions.where("users.id NOT IN (?)", hidden_user_ids).search(params[:q])
       elsif params[:q][:s] == "prop_actividad asc"
         params[:q].except!(:s)
         @search = User.select("users.*, count(notifications.id) AS activity_count")
                       .joins(:messages => { :conversation => :activity })
                       .group("users.id, notifications.id")
                       .order("activity_count DESC")
+                      .where("users.id NOT IN (?)", hidden_user_ids)
                       .search(params[:q])
       else
-        @search = User.search(params[:q])
+        @search = User.where("users.id NOT IN (?)", hidden_user_ids).search(params[:q])
       end
       params[:q].except!(:id_in)
     end
