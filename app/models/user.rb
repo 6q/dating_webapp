@@ -140,7 +140,9 @@ class User < ActiveRecord::Base
   has_many :characteristics, class_name: 'Characteristic', foreign_key: 'user_id'
   has_many :created_characterstics, class_name: 'Characteristic', foreign_key: 'creator_id'
 
-  has_one :email_settings, class_name: 'EmailSetting', foreign_key: 'user_id'
+  has_one :general_settings, class_name: 'GeneralSetting', foreign_key: 'user_id'
+  accepts_nested_attributes_for :general_settings
+  
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
   has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
   has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'

@@ -7,169 +7,164 @@
         <h1>Configuración</h1>
         <div>Desde aquí podrás configurar tus parámetros en Cellove</div>
       </header>
+      <%= form_for(current_user, url: general_settings_path, :method => :put, class: 'form-inline') do |f| %>
+        <%= fields_for current_user.general_settings do |f1| %>
 
-      <article class="clearfix">
-        <div class="col">
-          <h5>Visibilidad</h5>
-          <p>¿Cómo de real quieres que sea el tiempo real?</p>
-          <form class="form-inline">
+          <article class="clearfix">
+            <div class="col">
+              <h5>Visibilidad</h5>
+              <p>¿Cómo de real quieres que sea el tiempo real?</p>
 
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Mostrar a los demás usuarios si estoy conectado</strong></div>
-              <div class="checkbox">
-                  <input id="1" name="0" type="checkbox" checked="checked"/>
-                  <label for="1">Mostrar a los demás usuarios si estoy conectado</label>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong>Mostrar a los demás usuarios si estoy conectado</strong></div>
+                <div class="checkbox">
+                  <%= f1.check_box :show_online %>
+                  <%= f1.label :show_online %>
+                </div>
+              </div>
+              
+              <!-- begin advanced settings, only for level3 users -->
+              <div class="advanced chat-options">
+
+                <div class="control-group clearfix">
+                  <div class="span3 right"><strong>Permitir que cualquiera pueda chatear conmigo</strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :allow_chat %>
+                    <%= f1.label :allow_chat %>
+                  </div>
+                </div>
+
+                <div class="control-group clearfix">
+                  <div class="span3 right">Sólo usuarios de mi área (menos de 50km)</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :show_only_nearby %>
+                    <%= f1.label :show_only_nearby %>
+                  </div>
+                </div>
+
+                <div class="control-group clearfix">
+                  <div class="span3 right">Sólo perfiles que conicidan con mis preferencias</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :show_only_matching_profiles %>
+                    <%= f1.label :show_only_matching_profiles %>
+                  </div>
+                </div>
+
+                <div class="control-group clearfix">
+                  <div class="span3 right">Sólo perfiles que me han gustado</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :show_only_people_who_like_me %>
+                    <%= f1.label :show_only_people_who_like_me %>
+                  </div>
+                </div>
+
+                <div class="control-group clearfix">
+                  <div class="span3 right">Sólo perfiles "hacemos buena pareja"</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :show_only_buena_pareja %>
+                    <%= f1.label :show_only_buena_pareja %>
+                  </div>
+                </div>
+
+                <div class="control-group clearfix">
+                  <div class="span3 right">Sólo a perfiles con los que haya mantenido una conversación previa</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :show_only_pm %>
+                    <%= f1.label :show_only_pm %>
+                  </div>
+                </div>
+
+                <div class="control-group clearfix">
+                  <div class="span3 right">Sólo usuarios a los que haya valorado el perfil</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :show_only_rated_me %>
+                    <%= f1.label :show_only_rated_me %>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <!-- begin advanced settings, only for level3 users -->
-            <div class="advanced chat-options">
-
+            <div class="col">
+              <h5>Notificaciones por email</h5>
+              <p>¿Que notificaciones quieres recibir?</p>
+              
               <div class="control-group clearfix">
-                <div class="span3 right"><strong>Permitir que cualquiera pueda chatear conmigo</strong></div>
-                <div class="checkbox">
-                    <input id="2" name="2" type="checkbox"/>
-                    <label for="2">Check-me</label>
+                <div class="span3 right"><strong>No enviar notificaciones si estoy online</strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :no_email_online %>
+                    <%= f1.label :no_email_online %>
+                  </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong>Cuando alguien visite mi perfil</strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :profile_visit %>
+                    <%= f1.label :profile_visit %>
                 </div>
               </div>
 
               <div class="control-group clearfix">
-                <div class="span3 right">Sólo usuarios de mi área (menos de 50km)</div>
-                <div class="checkbox">
-                    <input id="3" name="3" type="checkbox" />
-                    <label for="3">Check-me</label>
+                <div class="span3 right"><strong>Cuando reciba un nuevo mensaje</strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :receive_message %>
+                    <%= f1.label :receive_message %>
                 </div>
               </div>
 
               <div class="control-group clearfix">
-                <div class="span3 right">Sólo perfiles que conicidan con mis preferencias</div>
-                <div class="checkbox">
-                    <input id="4" name="4" type="checkbox" />
-                    <label for="4">Check-me</label>
+                <div class="span3 right"><strong>Cuando le guste a alguien </strong>(votaciones de 4 ó 5 estrellas)</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :star_rating %>
+                    <%= f1.label :star_rating %>
                 </div>
               </div>
 
               <div class="control-group clearfix">
-                <div class="span3 right">Sólo perfiles que me han gustado</div>
-                <div class="checkbox">
-                    <input id="5" name="5" type="checkbox"/>
-                    <label for="5">Check-me</label>
+                <div class="span3 right"><strong>Cuando alguien me añada a sus favoritos</strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :like %>
+                    <%= f1.label :like %>
                 </div>
               </div>
 
               <div class="control-group clearfix">
-                <div class="span3 right">Sólo perfiles "hacemos buena pareja"</div>
-                <div class="checkbox">
-                    <input id="6" name="6" type="checkbox"/>
-                    <label for="6">Check-me</label>
+                <div class="span3 right"><strong>Cuando un celestino me recomiende</strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :celestino_recommendation %>
+                    <%= f1.label :celestino_recommendation %>
                 </div>
               </div>
 
               <div class="control-group clearfix">
-                <div class="span3 right">Sólo a perfiles con los que haya mantenido una conversación previa</div>
-                <div class="checkbox">
-                    <input id="7" name="7" type="checkbox"/>
-                    <label for="7">Check-me</label>
+                <div class="span3 right"><strong>Quiero recibir la newsletter</strong> (noticias y novedades, quincenal)</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :newsletter %>
+                    <%= f1.label :newsletter %>
                 </div>
               </div>
 
               <div class="control-group clearfix">
-                <div class="span3 right">Sólo usuarios a los que haya valorado el perfil</div>
-                <div class="checkbox">
-                    <input id="8" name="8" type="checkbox"/>
-                    <label for="8">Check-me</label>
+                <div class="span3 right"><strong>Quiero recibir sugerencias por email</strong> (perfiles afines, semanal)</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :user_suggestions %>
+                    <%= f1.label :user_suggestions %>
                 </div>
               </div>
 
-            </div>
-
-          </form>
-        </div>
-        
-        <div class="col">
-          <h5>Notificaciones por email</h5>
-          <p>¿Que notificaciones quieres recibir?</p>
-          <form class="form-inline">
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>No enviar notificaciones si estoy online</strong></div>
-                <div class="checkbox">
-                  <input id="11" name="11" type="checkbox" checked="checked"/>
-                  <label for="11">Check-me</label>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong>Quiero recibir nuevos usuarios en mi zona</strong> (semanal)</div>
+                  <div class="checkbox">
+                    <%= f1.check_box :new_users_nearby %>
+                    <%= f1.label :new_users_nearby %>
+                </div>
               </div>
             </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Cuando alguien visite mi perfil</strong></div>
-                <div class="checkbox">
-                  <input id="11" name="11" type="checkbox" checked="checked"/>
-                  <label for="11">Check-me</label>
-              </div>
-            </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Cuando reciba un nuevo mensaje</strong></div>
-                <div class="checkbox">
-                  <input id="12" name="12" type="checkbox"/>
-                  <label for="12">Check-me</label>
-              </div>
-            </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Cuando le guste a alguien </strong>(votaciones de 4 ó 5 estrellas)</div>
-                <div class="checkbox">
-                  <input id="13" name="13" type="checkbox" />
-                  <label for="13">Check-me</label>
-              </div>
-            </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Cuando alguien me añada a sus favoritos</strong></div>
-                <div class="checkbox">
-                  <input id="14" name="14" type="checkbox" />
-                  <label for="14">Check-me</label>
-              </div>
-            </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Cuando un celestino me recomiende</strong></div>
-                <div class="checkbox">
-                  <input id="15" name="15" type="checkbox"/>
-                  <label for="15">Check-me</label>
-              </div>
-            </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Quiero recibir la newsletter</strong> (noticias y novedades, quincenal)</div>
-                <div class="checkbox">
-                  <input id="16" name="16" type="checkbox"/>
-                  <label for="16">Check-me</label>
-              </div>
-            </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Quiero recibir sugerencias por email</strong> (perfiles afines, semanal)</div>
-                <div class="checkbox">
-                  <input id="17" name="17" type="checkbox"/>
-                  <label for="17">Check-me</label>
-              </div>
-            </div>
-
-            <div class="control-group clearfix">
-              <div class="span3 right"><strong>Quiero recibir nuevos usuarios en mi zona</strong> (semanal)</div>
-                <div class="checkbox">
-                  <input id="18" name="18" type="checkbox"/>
-                  <label for="18">Check-me</label>
-              </div>
-            </div>
-
-          </form>
-        </div>
-
-      </article>
-        <div class="button">
-          <button class="btn btn-large btn-info" type="button">Guardar Configuración</button>
-        </div>
+          </article>
+          <div class="button">
+            <%= f.submit _('Guardar Configuración'), class: 'btn btn-large btn-info' %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </section>
 

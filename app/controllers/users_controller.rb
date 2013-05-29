@@ -114,6 +114,15 @@ class UsersController < ApplicationController
     render 'cellove_index'
   end
 
+  def general_settings
+    if current_user.general_settings.update_attributes(params[:general_setting])
+      flash[:success] = _('Configuración actualizado')
+    else
+      flash[:error] = _('Oops!')
+    end
+    redirect_to settings_path
+  end
+
   private
     def user_visit
       if @user && current_user != @user

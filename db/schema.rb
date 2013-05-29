@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529100110) do
+ActiveRecord::Schema.define(:version => 20130529115031) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -70,10 +70,10 @@ ActiveRecord::Schema.define(:version => 20130529100110) do
     t.datetime "updated_at",                 :null => false
   end
 
-  create_table "email_settings", :force => true do |t|
+  create_table "general_settings", :force => true do |t|
     t.integer  "user_id"
-    t.boolean  "no_email_online"
-    t.boolean  "profile_visit"
+    t.boolean  "no_email_online",              :default => true
+    t.boolean  "profile_visit",                :default => true
     t.boolean  "receive_message"
     t.boolean  "like"
     t.boolean  "star_rating"
@@ -81,8 +81,16 @@ ActiveRecord::Schema.define(:version => 20130529100110) do
     t.boolean  "newsletter"
     t.boolean  "user_suggestions"
     t.boolean  "new_users_nearby"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+    t.boolean  "show_online",                  :default => true
+    t.boolean  "allow_chat"
+    t.boolean  "show_only_nearby"
+    t.boolean  "show_only_matching_profiles"
+    t.boolean  "show_only_people_who_like_me"
+    t.boolean  "show_only_buena_pareja"
+    t.boolean  "show_only_pm"
+    t.boolean  "show_only_rated_me"
   end
 
   create_table "invitations", :force => true do |t|

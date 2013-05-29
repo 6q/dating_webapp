@@ -48,6 +48,8 @@ Cellove::Application.routes.draw do
     get 'hits',                     to: 'users#hits',                             as: :user_hits
 
     get 'cellove-index',            to: 'users#cellove_index',                    as: :cellove_index
+
+    put 'general_settings',         to: 'users#general_settings',                 as: :general_settings
   end
   post '/rate' => 'rater#create', :as => 'rate'
 
