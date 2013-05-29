@@ -18,4 +18,8 @@ class UserMailer < ActionMailer::Base
     @url = new_user_registration_url + '?invitation_code=' + invitation_code
     mail(:to => email_address, :subject => user.name + " invites you to Cellove")
   end
+
+  def new_message(user)
+
+  end
 end
