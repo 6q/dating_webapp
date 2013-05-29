@@ -128,7 +128,7 @@ class User < ActiveRecord::Base
   acts_as_messageable
   
   #scopes
-  #scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
+  scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil, :user_id => nil })
   scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
   scope :sort_interactions, select("users.*, count(notifications.id) AS notifications_count")
                       .joins(:messages)

@@ -3,8 +3,6 @@ class UsersController < ApplicationController
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
   
   layout 'logged_in'
-
-  layout "logged_in"
   
   after_filter :user_visit, only: [:show]
   before_filter :set_visit_seen, only: [:hits]
