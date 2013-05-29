@@ -122,14 +122,14 @@ require_dependency 'minimum_age_validator'
 class User < ActiveRecord::Base
   extend MinimumAgeValidatorHelper
   extend DatePresenter #allows us to use birth_date_(day|month|year) attrs for setting and getting date
-  include UserRetrieval
   include UserConstants
+  include UserRetrieval
 
   acts_as_messageable
   
   #scopes
+  #scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
   scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
-  scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil })
   scope :sort_interactions, select("users.*, count(notifications.id) AS notifications_count")
                       .joins(:messages)
                       .group("users.id, notifications.id")
@@ -158,7 +158,6 @@ class User < ActiveRecord::Base
 
   has_many :user_hides
   has_many :hidden_users, through: :user_hides, source: :hidden_user
-  #default_scope includes(:user_hides).where(:user_hides => { :user_id => nil })
 
   has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id 
   has_many :rates, :class_name => "Rate", :foreign_key => :rateable_id, :dependent => :destroy
@@ -494,6 +493,5 @@ class User < ActiveRecord::Base
   def my_notes(user)
     self.notes.where(evaluated_id: user.id)
   end
-
 
 end
