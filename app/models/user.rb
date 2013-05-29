@@ -507,17 +507,43 @@ class User < ActiveRecord::Base
     self.notes.where(evaluated_id: user.id)
   end
 
+  # TODO: Refactor to other class
   def send_notification_email(notification_type, recipient)
     settings = recipient.general_settings
     send_mail = Proc.new { UserMailer.send(:notification_type, self, recipient).deliver }
+    to_check = []
+    to_check.push(:show_only_nearby) if settings.show_only_nearby
+    to_check.push(:show_only_matching_profiles) if settings.show_only_matching_profiles
+    to_check.push(:show_only_people_who_like_me) if settings.show_only_people_who_like_me
+    to_check.push(:show_only_buena_pareja) if settings.show_only_buena_pareja
+    to_check.push(:show_only_pm) if settings.show_only_pm
+    to_check.push(:show_only_rated_me) if settings.show_only_rated_me
+    passed_checks = true
+
     if recipient.online? && !settings.no_email_online && settings.send(notification_type.to_sym)
-      # TODO: Check extra conditions
-      if settings.show_only_nearby
-        send_mail.call if nearbys(50).include?(recipient) 
+      to_check.each do |check|
+        case check
+        when :show_only_nearby
+          passed_checks = false if !nearbys(50).include?(recipient)
+        when :show_only_matching_profiles
+          # Not sure what this does :\
+        when :show_only_people_who_like_me
+          passed_checks = false if !self.likes.include?(recipient)
+        when :show_only_buena_pareja
+          passed_checks = false if !self.is_nice_couple?(recipient)
+        when :show_only_pm
+          passed_checks = false if false # TODO
+        when :show_only_rated_me
+          passed_checks = false if !recipient.raters.include?(self)
+        end
+      end
+      if passed_checks
+        send_mail.call
       end
     elsif settings.send(notification_type.to_sym)
-      # TODO: Check extra conditions
-      UserMailer.send(:notification_type, self, recipient).deliver
+      if passed_checks
+        send_mail.call
+      end
     end
   end
 
