@@ -509,18 +509,34 @@ class User < ActiveRecord::Base
 
   # TODO: Refactor to other class
   def send_notification_email(notification_type, recipient)
+    puts 'send_notification_email executing'
     settings = recipient.general_settings
-    send_mail = Proc.new { UserMailer.send(:notification_type, self, recipient).deliver }
-    to_check = []
-    to_check.push(:show_only_nearby) if settings.show_only_nearby
-    to_check.push(:show_only_matching_profiles) if settings.show_only_matching_profiles
-    to_check.push(:show_only_people_who_like_me) if settings.show_only_people_who_like_me
-    to_check.push(:show_only_buena_pareja) if settings.show_only_buena_pareja
-    to_check.push(:show_only_pm) if settings.show_only_pm
-    to_check.push(:show_only_rated_me) if settings.show_only_rated_me
-    passed_checks = true
+    send_mail = Proc.new { UserMailer.send(notification_type, self, recipient).deliver }
 
     if recipient.online? && !settings.no_email_online && settings.send(notification_type.to_sym)
+      if pass_checks(settings, recipient)
+        puts 'SENDING EMAIL TO ' + recipient.name
+        send_mail.call
+      end
+    elsif settings.send(notification_type.to_sym)
+      if pass_checks(settings, recipient)
+        puts 'SENDING EMAIL TO ' + recipient.name
+        send_mail.call
+      end
+    end
+  end
+
+  private
+    def pass_checks(settings, recipient)
+      to_check = []
+      to_check.push(:show_only_nearby) if settings.show_only_nearby
+      to_check.push(:show_only_matching_profiles) if settings.show_only_matching_profiles
+      to_check.push(:show_only_people_who_like_me) if settings.show_only_people_who_like_me
+      to_check.push(:show_only_buena_pareja) if settings.show_only_buena_pareja
+      to_check.push(:show_only_pm) if settings.show_only_pm
+      to_check.push(:show_only_rated_me) if settings.show_only_rated_me
+      passed_checks = true
+
       to_check.each do |check|
         case check
         when :show_only_nearby
@@ -537,14 +553,7 @@ class User < ActiveRecord::Base
           passed_checks = false if !recipient.raters.include?(self)
         end
       end
-      if passed_checks
-        send_mail.call
-      end
-    elsif settings.send(notification_type.to_sym)
-      if passed_checks
-        send_mail.call
-      end
+      return passed_checks
     end
-  end
 
 end
