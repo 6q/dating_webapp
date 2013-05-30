@@ -463,8 +463,7 @@ class User < ActiveRecord::Base
   def is_nice_couple?(user)
     have_rated = self.ratings_given.any?{ |r| r.rateable_id == user.id }
     was_rated = self.rates.any?{ |r| r.rater_id == user.id }
-    return true if have_rated && was_rated
-    return false
+    return have_rated && was_rated
   end
 
   # Cellove methods
@@ -479,11 +478,15 @@ class User < ActiveRecord::Base
     return 0
   end
 
+  def has_messages_with?(recipient)
+    number_of_receipts = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id) }.flatten.length
+    return number_of_receipts > 0
+  end
+
   # Is this the first message we send to the recipient?
   def is_first_message_with?(recipient)
     number_of_receipts = recipient.mailbox.conversations.map { |c| c.receipts.where(receiver_id: self.id) }.flatten.length
-    return true if number_of_receipts == 1 # Only 1 receipt, so first message was sent
-    return false
+    return number_of_receipts == 1 # Only 1 receipt, so first message was sent
   end
 
   # Is this the first activity proposal we send to the recipient?
@@ -499,8 +502,7 @@ class User < ActiveRecord::Base
       number_of_activities += 1 if !conversation.activity.nil?
     end
 
-    return true if number_of_activities == 1 # 1 proposal, so this was the first
-    return false
+    return number_of_activities == 1 # true if 1 proposal (this method is called AFTER creating the first prop)
   end
 
   def my_notes(user)
