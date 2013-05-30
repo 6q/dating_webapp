@@ -27,7 +27,7 @@ class SearchesController < ApplicationController
     search = Search.find(params[:id])
     # Construct search path
     if search.online?
-      updated_at_gteq = Time.now
+      updated_at_gteq = 2.minutes.ago
     end
     search_path = users_path(:q => {
       :years_lteq => search.years_lteq,
