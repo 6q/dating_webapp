@@ -14,6 +14,9 @@ Requirements
   For the chat to work you must use Arrowchat and set it up in apache server into your localhost machine.
   The arrowchat software is stored in extras/arrowchat directory.
 
+  Apache/PHP Setup on Mountain Lion: http://jason.pureconcepts.net/2012/10/install-apache-php-mysql-mac-os-x/
+  sudo apachectl start/stop/restart
+
 Testing
 -------
 
