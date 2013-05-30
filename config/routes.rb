@@ -28,7 +28,6 @@ Cellove::Application.routes.draw do
 
   resources :users do
     resource :chat, only: :show
-    resources :searches, only: [:create, :index, :destroy, :show]
     post 'like',                    to: 'relationships#like'
     post 'block_hide',              to: 'relationships#block_hide'
     post 'block_hide_settings',     to: 'relationships#block_hide_settings'
@@ -79,5 +78,6 @@ Cellove::Application.routes.draw do
 
   get 'notifications',                 to: 'notifications#notifications',          as: :notifications
   resources :invitations
+  resources :searches, only: [:create, :index, :destroy, :show]
 
 end

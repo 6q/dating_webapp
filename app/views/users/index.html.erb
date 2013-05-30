@@ -104,7 +104,7 @@
       <h1>Resultados de la búsqueda</h1>
     </div>
     <div class="pull-right">
-      <%= form_for(@cellove_search, url: user_searches_path(current_user)) do |f| %>
+      <%= form_for(@cellove_search, url: searches_path) do |f| %>
         <%= f.hidden_field :years_lteq, value: params[:q][:years_lteq] %>
         <%= f.hidden_field :years_gteq, value: params[:q][:years_gteq] %>
         <%= f.hidden_field :town_eq, value: params[:q][:town_eq] %>

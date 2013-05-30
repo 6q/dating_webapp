@@ -1,7 +1,6 @@
 class SearchesController < ApplicationController
 
   layout 'logged_in'
-  before_filter :correct_user, only: [:index, :destroy, :show]
 
   def create
     search = current_user.searches.build(params[:search])
@@ -50,9 +49,4 @@ class SearchesController < ApplicationController
     redirect_to search_path
   end
 
-  private
-    def correct_user
-      user = User.find(params[:user_id])
-      redirect_to root_path unless (current_user == user)
-    end
 end
