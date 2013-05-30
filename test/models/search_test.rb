@@ -9,4 +9,8 @@ describe Search do
   it "must be valid" do
     @search.valid?.must_equal true
   end
+
+  it "must construct the correct search path" do
+    
+  end
 end
