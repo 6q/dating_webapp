@@ -512,18 +512,15 @@ class User < ActiveRecord::Base
 
   # TODO: Refactor to other class
   def send_notification_email(notification_type, recipient)
-    puts 'send_notification_email executing'
     settings = recipient.general_settings
     send_mail = Proc.new { UserMailer.send(notification_type, self, recipient).deliver }
 
     if recipient.online? && !settings.no_email_online && settings.send(notification_type.to_sym)
       if pass_checks(settings, recipient)
-        puts 'SENDING EMAIL TO ' + recipient.name
         send_mail.call
       end
     elsif settings.send(notification_type.to_sym)
       if pass_checks(settings, recipient)
-        puts 'SENDING EMAIL TO ' + recipient.name
         send_mail.call
       end
     end
