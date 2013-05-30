@@ -23,6 +23,196 @@ ActiveRecord::Schema.define(:version => 20130530110607) do
     t.date     "date"
   end
 
+  create_table "arrowchat", :force => true do |t|
+    t.string  "from",      :limit => 25,                    :null => false
+    t.string  "to",        :limit => 25,                    :null => false
+    t.text    "message",                                    :null => false
+    t.integer "sent",                                       :null => false
+    t.integer "read",                                       :null => false
+    t.boolean "user_read",               :default => false, :null => false
+    t.integer "direction",               :default => 0,     :null => false
+  end
+
+  add_index "arrowchat", ["from"], :name => "from"
+  add_index "arrowchat", ["read"], :name => "read"
+  add_index "arrowchat", ["to"], :name => "to"
+  add_index "arrowchat", ["user_read"], :name => "user_read"
+
+  create_table "arrowchat_admin", :force => true do |t|
+    t.string "username", :limit => 20, :null => false
+    t.string "password", :limit => 50, :null => false
+    t.string "email",    :limit => 50, :null => false
+  end
+
+  create_table "arrowchat_applications", :force => true do |t|
+    t.string  "name",             :limit => 100,                    :null => false
+    t.string  "folder",           :limit => 100,                    :null => false
+    t.string  "icon",             :limit => 100,                    :null => false
+    t.integer "width",                                              :null => false
+    t.integer "height",                                             :null => false
+    t.integer "bar_width"
+    t.string  "bar_name",         :limit => 100
+    t.boolean "dont_reload",                     :default => false
+    t.boolean "default_bookmark",                :default => true
+    t.boolean "show_to_guests",                  :default => true
+    t.string  "link"
+    t.string  "update_link"
+    t.string  "version",          :limit => 20
+    t.boolean "active",                          :default => true,  :null => false
+  end
+
+  create_table "arrowchat_banlist", :primary_key => "ban_id", :force => true do |t|
+    t.string "ban_userid", :limit => 25
+    t.string "ban_ip",     :limit => 50
+  end
+
+  create_table "arrowchat_chatroom_banlist", :id => false, :force => true do |t|
+    t.string  "user_id",     :limit => 25, :null => false
+    t.integer "chatroom_id",               :null => false
+    t.integer "ban_length",                :null => false
+    t.integer "ban_time",                  :null => false
+  end
+
+  add_index "arrowchat_chatroom_banlist", ["chatroom_id"], :name => "chatroom_id"
+  add_index "arrowchat_chatroom_banlist", ["user_id"], :name => "user_id"
+
+  create_table "arrowchat_chatroom_messages", :force => true do |t|
+    t.integer "chatroom_id",                                      :null => false
+    t.string  "user_id",        :limit => 25,                     :null => false
+    t.string  "username",       :limit => 100,                    :null => false
+    t.text    "message",                                          :null => false
+    t.boolean "global_message",                :default => false
+    t.integer "sent",                                             :null => false
+  end
+
+  add_index "arrowchat_chatroom_messages", ["chatroom_id"], :name => "chatroom_id"
+  add_index "arrowchat_chatroom_messages", ["sent"], :name => "sent"
+  add_index "arrowchat_chatroom_messages", ["user_id"], :name => "user_id"
+
+  create_table "arrowchat_chatroom_rooms", :force => true do |t|
+    t.string  "author_id",    :limit => 25,  :null => false
+    t.string  "name",         :limit => 100, :null => false
+    t.boolean "type",                        :null => false
+    t.string  "password",     :limit => 25
+    t.integer "length",                      :null => false
+    t.integer "session_time",                :null => false
+  end
+
+  add_index "arrowchat_chatroom_rooms", ["author_id"], :name => "author_id"
+  add_index "arrowchat_chatroom_rooms", ["session_time"], :name => "session_time"
+
+  create_table "arrowchat_chatroom_users", :primary_key => "user_id", :force => true do |t|
+    t.integer "chatroom_id",                                  :null => false
+    t.boolean "is_admin",                  :default => false, :null => false
+    t.boolean "is_mod",                    :default => false, :null => false
+    t.integer "block_chats",  :limit => 1, :default => 0,     :null => false
+    t.integer "session_time",                                 :null => false
+  end
+
+  add_index "arrowchat_chatroom_users", ["chatroom_id"], :name => "chatroom_id"
+  add_index "arrowchat_chatroom_users", ["is_admin"], :name => "is_admin"
+  add_index "arrowchat_chatroom_users", ["is_mod"], :name => "is_mod"
+  add_index "arrowchat_chatroom_users", ["session_time"], :name => "session_time"
+
+  create_table "arrowchat_config", :id => false, :force => true do |t|
+    t.string  "config_name",                     :null => false
+    t.text    "config_value"
+    t.boolean "is_dynamic",   :default => false, :null => false
+  end
+
+  add_index "arrowchat_config", ["config_name"], :name => "config_name", :unique => true
+
+  create_table "arrowchat_graph_log", :force => true do |t|
+    t.string  "date",               :limit => 30,                :null => false
+    t.integer "user_messages",                    :default => 0
+    t.integer "chat_room_messages",               :default => 0
+  end
+
+  add_index "arrowchat_graph_log", ["date"], :name => "date", :unique => true
+
+  create_table "arrowchat_notifications", :force => true do |t|
+    t.string  "to_id",       :limit => 25,                 :null => false
+    t.string  "author_id",   :limit => 25,                 :null => false
+    t.string  "author_name", :limit => 100,                :null => false
+    t.string  "misc1"
+    t.string  "misc2"
+    t.string  "misc3"
+    t.integer "type",                                      :null => false
+    t.integer "alert_read",                 :default => 0, :null => false
+    t.integer "user_read",                  :default => 0, :null => false
+    t.integer "alert_time",                                :null => false
+  end
+
+  add_index "arrowchat_notifications", ["alert_read"], :name => "alert_read"
+  add_index "arrowchat_notifications", ["alert_time"], :name => "alert_time"
+  add_index "arrowchat_notifications", ["to_id"], :name => "to_id"
+  add_index "arrowchat_notifications", ["user_read"], :name => "user_read"
+
+  create_table "arrowchat_notifications_markup", :force => true do |t|
+    t.string  "name",   :limit => 50, :null => false
+    t.integer "type",                 :null => false
+    t.text    "markup",               :null => false
+  end
+
+  create_table "arrowchat_smilies", :force => true do |t|
+    t.string "name", :limit => 20, :null => false
+    t.string "code", :limit => 10, :null => false
+  end
+
+  create_table "arrowchat_status", :primary_key => "userid", :force => true do |t|
+    t.string  "guest_name",           :limit => 50
+    t.text    "message"
+    t.string  "status",               :limit => 10
+    t.integer "theme"
+    t.integer "popout"
+    t.text    "typing"
+    t.boolean "hide_bar"
+    t.boolean "play_sound",                         :default => true
+    t.boolean "window_open"
+    t.boolean "only_names"
+    t.string  "chatroom_window",      :limit => 2,  :default => "-1",  :null => false
+    t.string  "chatroom_stay",        :limit => 2,  :default => "-1",  :null => false
+    t.boolean "chatroom_block_chats"
+    t.boolean "chatroom_sound"
+    t.boolean "announcement",                       :default => true,  :null => false
+    t.text    "unfocus_chat"
+    t.string  "focus_chat",           :limit => 20
+    t.text    "last_message"
+    t.text    "apps_bookmarks"
+    t.text    "apps_other"
+    t.integer "apps_open"
+    t.text    "apps_load"
+    t.text    "block_chats"
+    t.integer "session_time",                       :default => 0,     :null => false
+    t.boolean "is_admin",                           :default => false, :null => false
+    t.string  "hash_id",              :limit => 20, :default => "0",   :null => false
+  end
+
+  add_index "arrowchat_status", ["hash_id"], :name => "hash_id"
+  add_index "arrowchat_status", ["session_time"], :name => "session_time"
+
+  create_table "arrowchat_themes", :force => true do |t|
+    t.string  "folder",      :limit => 25,  :null => false
+    t.string  "name",        :limit => 100, :null => false
+    t.boolean "active",                     :null => false
+    t.string  "update_link"
+    t.string  "version",     :limit => 20
+    t.boolean "default",                    :null => false
+  end
+
+  create_table "arrowchat_trayicons", :force => true do |t|
+    t.string  "name",          :limit => 100,                   :null => false
+    t.string  "icon",          :limit => 100,                   :null => false
+    t.string  "location",                                       :null => false
+    t.string  "target",        :limit => 25
+    t.integer "width"
+    t.integer "height"
+    t.integer "tray_width"
+    t.string  "tray_name",     :limit => 100
+    t.integer "tray_location",                                  :null => false
+    t.boolean "active",                       :default => true, :null => false
+  end
+
   create_table "cellove_notifications", :force => true do |t|
     t.integer  "sender_id"
     t.integer  "receiver_id"
@@ -270,18 +460,18 @@ ActiveRecord::Schema.define(:version => 20130530110607) do
   add_index "user_visits", ["visitor_id"], :name => "index_user_visits_on_visitor_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                                                 :default => "", :null => false
+    t.string   "encrypted_password",                                    :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
+    t.integer  "sign_in_count",                                         :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                                                            :null => false
+    t.datetime "updated_at",                                                            :null => false
     t.string   "name"
     t.string   "surname"
     t.string   "screen_name"
@@ -297,8 +487,8 @@ ActiveRecord::Schema.define(:version => 20130530110607) do
     t.float    "longitude"
     t.string   "physical_style"
     t.string   "physical_desc"
-    t.decimal  "height"
-    t.decimal  "weight"
+    t.decimal  "height",                 :precision => 10, :scale => 0
+    t.decimal  "weight",                 :precision => 10, :scale => 0
     t.string   "complexion"
     t.string   "child"
     t.string   "smoke"
@@ -324,10 +514,10 @@ ActiveRecord::Schema.define(:version => 20130530110607) do
     t.string   "lf_postal_code"
     t.string   "lf_physical_style"
     t.string   "lf_physical_desc"
-    t.decimal  "lf_height_between"
-    t.decimal  "lf_height_to"
-    t.decimal  "lf_weight_between"
-    t.decimal  "lf_weight_to"
+    t.decimal  "lf_height_between",      :precision => 10, :scale => 0
+    t.decimal  "lf_height_to",           :precision => 10, :scale => 0
+    t.decimal  "lf_weight_between",      :precision => 10, :scale => 0
+    t.decimal  "lf_weight_to",           :precision => 10, :scale => 0
     t.string   "lf_complexion"
     t.string   "lf_child"
     t.string   "lf_smoke"
@@ -338,48 +528,48 @@ ActiveRecord::Schema.define(:version => 20130530110607) do
     t.string   "lf_language"
     t.string   "lf_job"
     t.string   "lf_salary"
-    t.string   "house"
-    t.string   "eyes"
-    t.string   "hair"
-    t.string   "hair_style"
-    t.string   "citizenship"
-    t.string   "ethnicity"
-    t.string   "language_level"
-    t.string   "wedding_opinion"
-    t.string   "music_genre"
-    t.string   "cinema_frequency"
-    t.string   "cinema_genre"
-    t.string   "like_sport"
-    t.string   "like_read"
-    t.string   "like_cinema"
-    t.string   "like_quiet"
-    t.string   "like_walk"
-    t.string   "like_mountain"
-    t.string   "like_beach"
-    t.string   "like_family"
-    t.string   "like_friends"
-    t.string   "religion_activity"
+    t.text     "house"
+    t.text     "eyes"
+    t.text     "hair"
+    t.text     "hair_style"
+    t.text     "citizenship"
+    t.text     "ethnicity"
+    t.text     "language_level"
+    t.text     "wedding_opinion"
+    t.text     "music_genre"
+    t.text     "cinema_frequency"
+    t.text     "cinema_genre"
+    t.boolean  "like_sport"
+    t.boolean  "like_read"
+    t.boolean  "like_cinema"
+    t.boolean  "like_quiet"
+    t.boolean  "like_walk"
+    t.boolean  "like_mountain"
+    t.boolean  "like_beach"
+    t.boolean  "like_family"
+    t.boolean  "like_friends"
+    t.text     "religion_activity"
     t.string   "invitation_code"
-    t.string   "lf_house"
-    t.string   "lf_hair"
-    t.string   "lf_hair_style"
-    t.string   "lf_eyes"
-    t.string   "lf_like_sport"
-    t.string   "lf_like_read"
-    t.string   "lf_like_cinema"
-    t.string   "lf_like_quiet"
-    t.string   "lf_like_walk"
-    t.string   "lf_like_mountain"
-    t.string   "lf_like_beach"
-    t.string   "lf_like_family"
-    t.string   "lf_like_friends"
-    t.string   "lf_religion_activity"
-    t.string   "lf_citizenship"
-    t.string   "lf_ethnicity"
-    t.string   "lf_animals"
-    t.string   "lf_party"
-    t.string   "lf_language_level"
-    t.integer  "cellove_index",          :default => 0
+    t.text     "lf_house"
+    t.text     "lf_hair"
+    t.text     "lf_hair_style"
+    t.text     "lf_eyes"
+    t.boolean  "lf_like_sport"
+    t.boolean  "lf_like_read"
+    t.boolean  "lf_like_cinema"
+    t.boolean  "lf_like_quiet"
+    t.boolean  "lf_like_walk"
+    t.boolean  "lf_like_mountain"
+    t.boolean  "lf_like_beach"
+    t.boolean  "lf_like_family"
+    t.boolean  "lf_like_friends"
+    t.text     "lf_religion_activity"
+    t.text     "lf_citizenship"
+    t.text     "lf_ethnicity"
+    t.text     "lf_animals"
+    t.text     "lf_party"
+    t.text     "lf_language_level"
+    t.integer  "cellove_index",                                         :default => 0
     t.string   "lf_relationship"
   end
 

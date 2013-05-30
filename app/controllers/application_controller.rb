@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   before_filter :authenticate_user!
+  before_filter :set_cookie
   before_filter :matchmaker_user
   after_filter :user_activity
   protect_from_forgery
@@ -10,8 +11,13 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
-  private
-    def user_activity
-      current_user.try :touch
-    end
+  def set_cookie
+    cookies[:userid] = current_user.id if user_signed_in?
+  end
+  private :set_cookie
+
+  def user_activity
+    current_user.try :touch
+  end
+  private :user_activity
 end
