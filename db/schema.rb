@@ -223,8 +223,8 @@ ActiveRecord::Schema.define(:version => 20130530110607) do
     t.string   "children_in"
     t.integer  "height_lteq"
     t.integer  "height_gteq"
-    t.integer  "afinity"
-    t.string   "body_type"
+    t.integer  "afinity_eq"
+    t.string   "complexion_eq"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

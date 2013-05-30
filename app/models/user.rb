@@ -168,6 +168,7 @@ class User < ActiveRecord::Base
 
   has_many :notifications, :class_name => "CelloveNotification", :foreign_key => :receiver_id
   has_many :invitations, :class_name => "Invitation", :foreign_key => :invitor_id
+  has_many :searches
 
   accepts_nested_attributes_for :characteristics
 

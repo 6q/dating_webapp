@@ -15,8 +15,8 @@ class CreateSearches < ActiveRecord::Migration
       t.string :children_in
       t.integer :height_lteq
       t.integer :height_gteq
-      t.integer :afinity
-      t.string :body_type
+      t.integer :afinity_eq
+      t.string :complexion_eq
 
       t.timestamps
     end

@@ -17,15 +17,17 @@
 #  children_in      :string(255)
 #  height_lteq      :integer
 #  height_gteq      :integer
-#  afinity          :integer
-#  body_type        :string(255)
+#  afinity_eq       :integer
+#  complexion_eq    :string(255)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
 
 class Search < ActiveRecord::Base
-  attr_accessible :afinity, :body_type, :children_in, :description_cont,
+  attr_accessible :afinity_eq, :complexion_eq, :children_in, :description_cont,
                   :distance, :height_gteq, :height_lteq, :online,
                   :pictures_main_eq, :postal_code_cont, :smoker_in,
                   :sort, :town_eq, :user_id, :years_gteq, :years_lteq
+
+  belongs_to :user
 end

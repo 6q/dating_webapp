@@ -36,6 +36,7 @@ class UsersController < ApplicationController
       params[:q].except!(:id_in)
     end
     @users = @search.result.page(params[:page])
+    @cellove_search = current_user.searches.build({})
   end
 
   def show
