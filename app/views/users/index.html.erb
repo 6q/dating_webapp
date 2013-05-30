@@ -104,6 +104,7 @@
       <h1>Resultados de la búsqueda</h1>
     </div>
     <div class="pull-right">
+      <% online = params[:q][:updated_at_gteq] != "" %>
       <%= form_for(@cellove_search, url: searches_path) do |f| %>
         <%= f.hidden_field :years_lteq, value: params[:q][:years_lteq] %>
         <%= f.hidden_field :years_gteq, value: params[:q][:years_gteq] %>
@@ -113,7 +114,7 @@
         <%= f.hidden_field :pictures_main_eq, value: params[:q][:pictures_main_eq] %>
         <%= f.hidden_field :distance, value: params[:distance] %>
         <%= f.hidden_field :sort, value: params[:q][:s] %>
-        <%= f.hidden_field :online, value: params[:q][:updated_at_gteq] %>
+        <%= f.hidden_field :online, value: online %>
         <%= f.hidden_field :smoker_in, value: params[:q][:smoker_in] %>
         <%= f.hidden_field :children_in, value: params[:q][:children_in] %>
         <%= f.hidden_field :height_lteq, value: params[:q][:height_lteq] %>
