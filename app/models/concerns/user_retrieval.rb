@@ -13,7 +13,7 @@ module UserRetrieval
 
   def new_users_near_me
     hidden_user_ids = self.hidden_user_ids.concat(self.invisible_to_me)
-    nearbys(50).where("users.id NOT IN (?)", hidden_user_ids).limit(5)
+    nearbys(User::DEFAULT_NEARBY_DISTANCE).where("users.id NOT IN (?)", hidden_user_ids).limit(5)
   end
 
   # module ClassMethods

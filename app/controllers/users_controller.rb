@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   before_filter :set_visit_seen, only: [:hits]
 
   def index
-    distance = params[:distance] || User::DEFAULT_DISTANCE
+    distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
     hidden_user_ids = current_user.hidden_user_ids.concat(current_user.invisible_to_me)
 
     if params[:q][:s] == "distance asc"

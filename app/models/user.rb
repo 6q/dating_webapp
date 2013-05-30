@@ -542,7 +542,7 @@ class User < ActiveRecord::Base
       to_check.each do |check|
         case check
         when :show_only_nearby
-          passed_checks = false if !nearbys(50).include?(recipient)
+          passed_checks = false if !nearbys(User::DEFAULT_NEARBY_DISTANCE).include?(recipient)
         when :show_only_matching_profiles
           # Not sure what this does :\
         when :show_only_people_who_like_me
@@ -550,7 +550,7 @@ class User < ActiveRecord::Base
         when :show_only_buena_pareja
           passed_checks = false if !self.is_nice_couple?(recipient)
         when :show_only_pm
-          passed_checks = false if false # TODO
+          passed_checks = false if !self.has_messages_with?(recipient)
         when :show_only_rated_me
           passed_checks = false if !recipient.raters.include?(self)
         end
