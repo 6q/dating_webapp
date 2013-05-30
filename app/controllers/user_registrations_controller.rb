@@ -58,7 +58,7 @@ class UserRegistrationsController < Devise::RegistrationsController
       @user.add_role :regular_user
       if @user.save
         Characteristic.create(user_id: @user.id, creator_id: @user.id)
-        EmailSetting.create(user_id: @user.id)
+        GeneralSetting.create(user_id: @user.id)
 
         UserMailer.welcome_email(@user).deliver
         if @user.active_for_authentication?

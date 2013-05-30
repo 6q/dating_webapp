@@ -27,8 +27,8 @@ class UserMailer < ActionMailer::Base
   end
 
   def profile_visit(visitor, visited)
-    @sender = sender
-    @recipient = recipient
+    @sender = visitor
+    @recipient = visited
     mail(:to => @recipient.email, :subject => "New profile visit")
   end
 

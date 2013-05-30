@@ -25,6 +25,7 @@ FactoryGirl.define do
     trait :optional_data do
       newsletter_optin true
       my_characteristics { create(:characteristic, user_id: id, creator_id: id) }
+      general_settings { create(:general_setting, user_id: id) }
     end
 
     trait :invited_data do
@@ -170,6 +171,9 @@ FactoryGirl.define do
     possessive 3
     jealous 3
     faithful 3
+  end
+
+  factory :general_setting do
   end
 
   factory :male_picture, class: Picture do

@@ -4,10 +4,10 @@ describe ConversationsController do
   include Devise::TestHelpers
 
   before do
-    @user = FactoryGirl.create(:regular_user)
+    @user = FactoryGirl.create(:regular_user_optin)
     sign_in @user
 
-    @receiver = FactoryGirl.create(:regular_user)
+    @receiver = FactoryGirl.create(:regular_user_optin)
     @receipt = @user.send_message(@receiver, "Body", "A subject")
   end
 

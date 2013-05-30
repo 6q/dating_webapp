@@ -116,8 +116,8 @@ describe User do
   end
 
   it 'must return the confirmed recommendations' do
-    @user = create(:regular_user)
-    @creator = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @creator = create(:regular_user_optin)
     recommendation = @creator.recommendations.build(attributes_for(:recommendation))
     recommendation.user_id = @user.id
     recommendation.confirmed = true
@@ -131,8 +131,8 @@ describe User do
   end
 
   it 'must returns the unconfirmed recommendations' do
-    @user = create(:regular_user)
-    @creator = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @creator = create(:regular_user_optin)
     recommendation = @creator.recommendations.build(attributes_for(:recommendation))
     recommendation.user_id = @user.id
     recommendation.save
@@ -157,8 +157,8 @@ describe User do
   end
 
   it 'must visit the user\'s profile' do
-    @user = create(:regular_user)
-    @visitor = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @visitor = create(:regular_user_optin)
     @visitor.visited(@user)
 
     @user.user_visits.class.must_equal Array
@@ -174,8 +174,8 @@ describe User do
   end
 
   it 'must update the visited time' do
-    @user = create(:regular_user)
-    @visitor = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @visitor = create(:regular_user_optin)
     @visitor.visited(@user)
     time = @user.user_visits[0].visited_at
     @visitor.visited(@user)
@@ -185,8 +185,8 @@ describe User do
   end
 
   it 'must have a visit notification' do
-    @user = create(:regular_user)
-    @visitor = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @visitor = create(:regular_user_optin)
     @visitor.visited(@user)
 
     @user.notifications.class.must_equal Array
@@ -229,8 +229,8 @@ describe User do
   end
 
   it 'must rate the user with 4 stars' do
-    @user = create(:regular_user)
-    @rated_user = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @rated_user = create(:regular_user_optin)
     @user.rate(4, @rated_user)
 
     @user.ratings_given.class.must_equal Array
@@ -241,8 +241,8 @@ describe User do
   end
 
   it 'must have raters' do
-    @user = create(:regular_user)
-    @rated_user = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @rated_user = create(:regular_user_optin)
     @user.rate(4, @rated_user)
 
     @rated_user.raters.class.must_equal Array
@@ -252,8 +252,8 @@ describe User do
   end
 
   it 'must return the nice couples' do
-    @user = create(:regular_user)
-    @rated_user = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @rated_user = create(:regular_user_optin)
     @user.rate(4, @rated_user)
     @rated_user.rate(5, @user)
 
@@ -264,8 +264,8 @@ describe User do
   end
 
   it 'must have a nice couple notification' do
-    @user = create(:regular_user)
-    @rated_user = create(:regular_user)
+    @user = create(:regular_user_optin)
+    @rated_user = create(:regular_user_optin)
     @user.rate(4, @rated_user)
     @rated_user.rate(5, @user)
 

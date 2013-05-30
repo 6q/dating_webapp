@@ -1,5 +1,5 @@
 Cellove::Application.routes.draw do
-  if Rails.env.development?
+  if Rails.env.development? || Rails.env.test?
     mount MailPreview => 'mail_view'
   end
 

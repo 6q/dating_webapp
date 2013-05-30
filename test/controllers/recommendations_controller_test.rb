@@ -33,7 +33,7 @@ describe RecommendationsController do
   
   describe "as a matchmaker" do
     before(:each) do
-      @user = create(:regular_user)
+      @user = create(:regular_user_optin)
       @matchmaker = create(:matchmaker)
       @characteristic = create(:characteristic)
       sign_in @matchmaker
@@ -80,8 +80,8 @@ describe RecommendationsController do
 
   describe "as a regular user" do
     before(:each) do
-      @user = create(:regular_user)
-      @matchmaker = create(:matchmaker)
+      @user = create(:regular_user_optin)
+      @user_two = create(:regular_user_optin)
       @characteristic = create(:characteristic)
       sign_in @user
     end
@@ -94,20 +94,20 @@ describe RecommendationsController do
       assert_difference 'Recommendation.count', 1 do
         post :create, {
           recommendation: attributes_for(:recommendation),
-          user: { name: @matchmaker.name, email: @matchmaker.email },
+          user: { name: @user_two.name, email: @user_two.email },
           characteristic: attributes_for(:characteristic)
         }
       end
       assigns(:recommendation).must_be_instance_of(Recommendation)
-      assigns(:recommendation).user_id.must_equal @matchmaker.id
+      assigns(:recommendation).user_id.must_equal @user_two.id
       assigns(:recommendation).creator_id.must_equal @user.id
       assigns(:recommendation).characteristic.recommendation_id.must_equal assigns(:recommendation).id
 
-      @matchmaker.recommenders.length.must_equal 1
+      @user_two.recommenders.length.must_equal 1
       @user.recommendations.length.must_equal 1
 
       assigns(:characteristic).creator_id.must_equal @user.id
-      assigns(:characteristic).user_id.must_equal @matchmaker.id
+      assigns(:characteristic).user_id.must_equal @user_two.id
 
       assert_response 302
       assert_redirected_to be_matchmaker_path
@@ -122,7 +122,7 @@ describe RecommendationsController do
         }
       end
 
-      @matchmaker.recommenders.length.must_equal 0
+      @user_two.recommenders.length.must_equal 0
       @user.recommendations.length.must_equal 0
 
       assert_response 302
