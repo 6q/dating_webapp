@@ -28,7 +28,7 @@ module UserHelper
   end
 
   def user_detail(user)
-    if !user.has_role(:regular_user)
+    if !user.has_role?(:regular_user)
       return ""
     end
     html = '<div class="user-detail clearfix">'
