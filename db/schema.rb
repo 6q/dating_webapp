@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529115031) do
+ActiveRecord::Schema.define(:version => 20130530110607) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -207,6 +207,27 @@ ActiveRecord::Schema.define(:version => 20130529115031) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "searches", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "years_lteq"
+    t.integer  "years_gteq"
+    t.string   "town_eq"
+    t.string   "postal_code_cont"
+    t.string   "description_cont"
+    t.boolean  "pictures_main_eq"
+    t.integer  "distance"
+    t.string   "sort"
+    t.boolean  "online"
+    t.string   "smoker_in"
+    t.string   "children_in"
+    t.integer  "height_lteq"
+    t.integer  "height_gteq"
+    t.integer  "afinity"
+    t.string   "body_type"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "towns", :force => true do |t|
     t.string   "name"
