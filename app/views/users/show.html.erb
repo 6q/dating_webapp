@@ -71,7 +71,7 @@
 				<div class="tab-content">
 
 		  		<div class="tab-pane active" id="desc">
-		  			<% if @user.description.nil? %>
+		  			<% if @user.description.blank? %>
 		  				<%= @user.name %> aún no ha introducido su descripción.
 		  			<% else %>
 							<p><%= @user.description %></p>
@@ -250,10 +250,21 @@
 				<div class="tab-content">
 
 		  		<div class="tab-pane active" id="como">
-						<p>Me considero normal y de estilo clásico. No tengo hijos y no me gustan los niños. Fumo y soy antitabaco.</p>
-						<p>Mido 1'75m y peso 65kg. Tengo los ojos de color marrón y mi complexión es fuerte.</p>
-						<p>Mi nivel de estudios es diplomado y hablo castellano fluido. Trabajo en el sector salud y mi nivel de ingresos es inimaginable.</p>
-						<p>Soy cristiana y me lo tomo muy en serio.</p>
+		  			<div class="row">
+		  				<% 3.times do %>
+		  					<div class="key span3">
+		  						Exemple de dada:
+		  					</div>
+		  					<div class="valor span6">
+		  						<div class="txt">
+		  							Resposta a la primera pregunta
+		  						</div>
+		  					</div>
+		  				<% end %>
+		  					
+		  				
+		  			</div>
+						
 		  		</div>
 
 		  		<div class="tab-pane" id="gustos">

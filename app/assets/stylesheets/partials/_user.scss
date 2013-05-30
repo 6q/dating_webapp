@@ -964,6 +964,25 @@ section.chat{
         }
       }
     }
+    #como{
+      .key{
+        width:26%;
+        margin-left: 30px;
+        border-bottom: 1px #fff solid;
+        text-align: right;
+        padding: 10px 15px 10px 0;
+      }
+      .valor{
+        border-bottom: 1px solid #f1f1f1;
+        margin-left: 0px;
+        background-color: white;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+        .txt{
+          padding-left: 15px;
+        }
+      }
+    }
   }
 
   #nice-couple {
