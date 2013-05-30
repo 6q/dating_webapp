@@ -158,7 +158,9 @@
 							<%= user.select :hair, hair_options, {}, {:class=>'span2'} %>
 							<%= user.label :hair_style,' y ' %>
 							<%= user.select :hair_style, hair_style_options, {}, {:class=>'span2'} %>
-
+							<hr class="thin">
+							<%= user.label :physical_style, 'Mi estilo es' %>
+							<%= user.select :physical_style, physical_style_options %>
 							<hr>
 							<%= user.label :religion, 'Soy' %>
 							<%= user.select :religion, religion_options, {},{:class => 'span2'} %>

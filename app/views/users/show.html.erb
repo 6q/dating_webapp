@@ -251,16 +251,100 @@
 
 		  		<div class="tab-pane active" id="como">
 		  			<div class="row">
-		  				<% 3.times do %>
-		  					<div class="key span3">
-		  						Exemple de dada:
-		  					</div>
+		  				<div class="key span3">Orientación sexual:</div>
+		  				<div class="valor span6">
+		  					<div class="txt"><%= User::ORIENTATION[@user.orientation] %></div>
+		  				</div>
+		  				<div class="key span3">Estado civil:</div>
+		  				<div class="valor span6">
+		  					<div class="txt"><%= User::MARITAL_STATUS[@user.marital_status] %></div>
+		  				</div>
+		  				<% unless @user.child.nil? %>
+		  					<div class="key span3">Hijos:</div>
 		  					<div class="valor span6">
-		  						<div class="txt">
-		  							Resposta a la primera pregunta
-		  						</div>
+		  						<div class="txt"><%= User::CHILD[@user.child] %></div>
 		  					</div>
 		  				<% end %>
+		  				<% unless @user.house.nil? %>
+		  					<div class="key span3">Vive:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::HOUSE[@user.house] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.physical_desc.nil? %>
+		  					<div class="key span3">Físico:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::PHYSICAL_DESC[@user.physical_desc] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.height.nil? %>
+		  					<div class="key span3">Altura:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= "#{@user.height} m" %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.weight.nil? %>
+		  					<div class="key span3">Peso:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= "#{@user.weight} kg" %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.complexion.nil? %>
+		  					<div class="key span3">Cuerpo:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::COMPLEXION[@user.complexion] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.eyes.nil? %>
+		  					<div class="key span3">Ojos:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::EYES[@user.eyes] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.hair.nil? %>
+		  					<div class="key span3">Pelo:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::HAIR[@user.hair] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.hair_style.nil? %>
+		  					<div class="key span3">Peinado:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::HAIR_STYLE[@user.hair_style] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.physical_style.nil? %>
+		  					<div class="key span3">Estilo:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::PHYSICAL_STYLE[@user.physical_style] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.religion.nil? %>
+		  					<div class="key span3">Religion:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::RELIGION[@user.religion] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.religion_activity.nil? %>
+		  					<div class="key span3">Devoción religiosa:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::RELIGION_ACTIVITY[@user.religion_activity] %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.citizenship.nil? %>
+		  					<div class="key span3">Nacionalidad:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= @user.citizenship %></div>
+		  					</div>
+		  				<% end %>
+		  				<% unless @user.ethnicity.nil? %>
+		  					<div class="key span3">Étnia:</div>
+		  					<div class="valor span6">
+		  						<div class="txt"><%= User::ETHNICITY[@user.ethnicity] %></div>
+		  					</div>
+		  				<% end %>
+
+		  				
 		  					
 		  				
 		  			</div>
