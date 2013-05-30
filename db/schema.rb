@@ -315,8 +315,8 @@ ActiveRecord::Schema.define(:version => 20130523103827) do
     t.string   "lf_animals"
     t.string   "lf_party"
     t.string   "lf_language_level"
-    t.string   "lf_relationship"
     t.integer  "cellove_index",          :default => 0
+    t.string   "lf_relationship"
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
