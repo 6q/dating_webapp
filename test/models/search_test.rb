@@ -2,7 +2,8 @@ require "test_helper"
 
 describe Search do
   before do
-    @search = Search.new
+    @user = create(:regular_user)
+    @search = @user.searches.build(attributes_for(:search))
   end
 
   it "must be valid" do
