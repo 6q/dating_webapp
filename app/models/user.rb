@@ -31,8 +31,8 @@
 #  longitude              :float
 #  physical_style         :string(255)
 #  physical_desc          :string(255)
-#  height                 :decimal(, )
-#  weight                 :decimal(, )
+#  height                 :integer
+#  weight                 :integer
 #  complexion             :string(255)
 #  child                  :string(255)
 #  smoke                  :string(255)
@@ -58,10 +58,10 @@
 #  lf_postal_code         :string(255)
 #  lf_physical_style      :string(255)
 #  lf_physical_desc       :string(255)
-#  lf_height_between      :decimal(, )
-#  lf_height_to           :decimal(, )
-#  lf_weight_between      :decimal(, )
-#  lf_weight_to           :decimal(, )
+#  lf_height_between      :integer
+#  lf_height_to           :integer
+#  lf_weight_between      :integer
+#  lf_weight_to           :integer
 #  lf_complexion          :string(255)
 #  lf_child               :string(255)
 #  lf_smoke               :string(255)
@@ -72,47 +72,47 @@
 #  lf_language            :string(255)
 #  lf_job                 :string(255)
 #  lf_salary              :string(255)
-#  house                  :string(255)
-#  eyes                   :string(255)
-#  hair                   :string(255)
-#  hair_style             :string(255)
-#  citizenship            :string(255)
-#  ethnicity              :string(255)
-#  language_level         :string(255)
-#  wedding_opinion        :string(255)
-#  music_genre            :string(255)
-#  cinema_frequency       :string(255)
-#  cinema_genre           :string(255)
-#  like_sport             :string(255)
-#  like_read              :string(255)
-#  like_cinema            :string(255)
-#  like_quiet             :string(255)
-#  like_walk              :string(255)
-#  like_mountain          :string(255)
-#  like_beach             :string(255)
-#  like_family            :string(255)
-#  like_friends           :string(255)
-#  religion_activity      :string(255)
+#  house                  :text
+#  eyes                   :text
+#  hair                   :text
+#  hair_style             :text
+#  citizenship            :text
+#  ethnicity              :text
+#  language_level         :text
+#  wedding_opinion        :text
+#  music_genre            :text
+#  cinema_frequency       :text
+#  cinema_genre           :text
+#  like_sport             :boolean
+#  like_read              :boolean
+#  like_cinema            :boolean
+#  like_quiet             :boolean
+#  like_walk              :boolean
+#  like_mountain          :boolean
+#  like_beach             :boolean
+#  like_family            :boolean
+#  like_friends           :boolean
+#  religion_activity      :text
 #  invitation_code        :string(255)
-#  lf_house               :string(255)
-#  lf_hair                :string(255)
-#  lf_hair_style          :string(255)
-#  lf_eyes                :string(255)
-#  lf_like_sport          :string(255)
-#  lf_like_read           :string(255)
-#  lf_like_cinema         :string(255)
-#  lf_like_quiet          :string(255)
-#  lf_like_walk           :string(255)
-#  lf_like_mountain       :string(255)
-#  lf_like_beach          :string(255)
-#  lf_like_family         :string(255)
-#  lf_like_friends        :string(255)
-#  lf_religion_activity   :string(255)
-#  lf_citizenship         :string(255)
-#  lf_ethnicity           :string(255)
-#  lf_animals             :string(255)
-#  lf_party               :string(255)
-#  lf_language_level      :string(255)
+#  lf_house               :text
+#  lf_hair                :text
+#  lf_hair_style          :text
+#  lf_eyes                :text
+#  lf_like_sport          :boolean
+#  lf_like_read           :boolean
+#  lf_like_cinema         :boolean
+#  lf_like_quiet          :boolean
+#  lf_like_walk           :boolean
+#  lf_like_mountain       :boolean
+#  lf_like_beach          :boolean
+#  lf_like_family         :boolean
+#  lf_like_friends        :boolean
+#  lf_religion_activity   :text
+#  lf_citizenship         :text
+#  lf_ethnicity           :text
+#  lf_animals             :text
+#  lf_party               :text
+#  lf_language_level      :text
 #  cellove_index          :integer          default(0)
 #  lf_relationship        :string(255)
 #

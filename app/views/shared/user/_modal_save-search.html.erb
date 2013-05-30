@@ -1,0 +1,33 @@
+<!-- Modal -->
+<div id="save-search" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Guarda búsqueda</h3>
+  </div>
+  <div class="modal-body">
+    <% online = params[:q][:updated_at_gteq] != "" %>
+    <%= form_for(@cellove_search, url: searches_path) do |f| %>
+      <%= f.label :name, _('Nombre') %>
+      <%= f.text_field :name %>
+      <%= f.hidden_field :years_lteq, value: params[:q][:years_lteq] %>
+      <%= f.hidden_field :years_gteq, value: params[:q][:years_gteq] %>
+      <%= f.hidden_field :town_eq, value: params[:q][:town_eq] %>
+      <%= f.hidden_field :postal_code_cont, value: params[:q][:postal_code_cont] %>
+      <%= f.hidden_field :description_cont, value: params[:q][:description_cont] %>
+      <%= f.hidden_field :pictures_main_eq, value: params[:q][:pictures_main_eq] %>
+      <%= f.hidden_field :distance, value: params[:distance] %>
+      <%= f.hidden_field :sort, value: params[:q][:s] %>
+      <%= f.hidden_field :online, value: online %>
+      <%= f.hidden_field :smoker_in, value: params[:q][:smoker_in] %>
+      <%= f.hidden_field :children_in, value: params[:q][:children_in] %>
+      <%= f.hidden_field :height_lteq, value: params[:q][:height_lteq] %>
+      <%= f.hidden_field :height_gteq, value: params[:q][:height_gteq] %>
+      <%= f.hidden_field :afinity_eq, value: params[:q][:afinity_eq] %>
+      <%= f.hidden_field :complexion_eq, value: params[:q][:complexion_eq] %>
+  </div>
+  <div class="modal-footer">
+    <%= link_to 'Cancelar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= f.submit _('Guarda búsqueda'), class: 'btn btn-info' %>
+  </div>
+  <% end %>
+</div>

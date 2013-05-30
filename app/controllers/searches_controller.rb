@@ -9,7 +9,7 @@ class SearchesController < ApplicationController
     else
       flash[:error] = _('Oops!')
     end
-    redirect_to user_searches_path(current_user)
+    redirect_to searches_path
   end
 
   def index
@@ -20,7 +20,7 @@ class SearchesController < ApplicationController
     # Delete search.
     Search.find(params[:id]).destroy
     flash[:success] = _('Búsqueda borrado')
-    redirect_to user_searches_path(current_user)
+    redirect_to searches_path
   end
 
   def show

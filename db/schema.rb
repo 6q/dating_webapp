@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530110607) do
+ActiveRecord::Schema.define(:version => 20130530170649) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -417,6 +417,7 @@ ActiveRecord::Schema.define(:version => 20130530110607) do
     t.string   "complexion_eq"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "name"
   end
 
   create_table "towns", :force => true do |t|

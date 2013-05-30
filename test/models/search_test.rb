@@ -11,6 +11,6 @@ describe Search do
   end
 
   it "must construct the correct search path" do
-    
+    # Maybe a bit tedious to test, but okay.
   end
 end

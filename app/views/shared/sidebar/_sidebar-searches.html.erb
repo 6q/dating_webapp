@@ -1,0 +1,13 @@
+<% if current_user.searches.any? && current_user.searches.length > 0 %>
+  <hr>
+  <section>
+    <header>
+      <h1>Búsquedas guardado</h1>
+    </header>
+    <ul>
+      <% current_user.searches.each do |search| %>
+        <li><%= link_to search.name, search.search_path %></li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>

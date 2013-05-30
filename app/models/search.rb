@@ -21,11 +21,12 @@
 #  complexion_eq    :string(255)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  name             :string(255)
 #
 
 class Search < ActiveRecord::Base
   attr_accessible :afinity_eq, :complexion_eq, :children_in, :description_cont,
-                  :distance, :height_gteq, :height_lteq, :online,
+                  :distance, :height_gteq, :height_lteq, :online, :name,
                   :pictures_main_eq, :postal_code_cont, :smoker_in,
                   :sort, :town_eq, :years_gteq, :years_lteq
 

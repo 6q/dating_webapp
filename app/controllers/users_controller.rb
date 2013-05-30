@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def index
     distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
     hidden_user_ids = current_user.hidden_user_ids.concat(current_user.invisible_to_me)
+    hidden_user_ids = [current_user.id] if hidden_user_ids == []
 
     if params[:q][:s] == "distance asc"
       params[:q].except!(:s)
