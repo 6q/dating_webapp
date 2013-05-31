@@ -107,22 +107,20 @@ class UsersController < ApplicationController
   def likes
     @search = User.people_who_like_me(current_user).search(params[:q])
     @users = @search.result.page(params[:page])
-    render 'likes'
   end
 
   def likes_of_mine
     @search = User.people_i_like(current_user).search(params[:q])
     @users = @search.result.page(params[:page])
-    render 'likes_of_mine'
   end
 
   def hits
     @search = User.all_visitors(current_user).search(params[:q])
     @users = @search.result.page(params[:page])
-    render 'hits'
   end
 
   def cellove_index
+    #TODO
     render 'cellove_index'
   end
 
