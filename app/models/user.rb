@@ -245,7 +245,7 @@ class User < ActiveRecord::Base
 
   def get_all_invisible_to_me
     users = self.hidden_user_ids.concat(self.invisible_to_me)
-    if users = []
+    if users == []
       # Needed to fix MySQL bug where an '.. NOT IN (NULL)' query does not work
       return [self.id]
     else
