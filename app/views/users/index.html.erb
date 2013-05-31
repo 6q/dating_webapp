@@ -97,24 +97,24 @@
 
 <hr class="thin">
 
-<% if params[:q] %>
-  <section class="list">
-    <header>
-      <div class="pull-left">
-        <h1>Resultados de la búsqueda</h1>
-      </div>
-      <div class="pull-right">
+<section class="list">
+  <header>
+    <div class="pull-left">
+      <h1>Resultados de la búsqueda</h1>
+    </div>
+    <div class="pull-right">
+      <% if params[:q] %>
         <%= render '/shared/user/modal_save-search' %>
         <%= link_to _('Guarda búsqueda'), '#save-search', "data-toggle" => "modal", class: 'btn btn-info' %>
-        <%= render '/shared/user/sorting' %>
-      </div>
-    </header>
-    <ul class="user-list clearfix">
-      <%= render @users %>
-    </ul>
-    <div class="pagination">
-      <%= pager_total(@users) %>
+      <% end %>
+      <%= render '/shared/user/sorting' %>
     </div>
-    <%= paginate @users %>
-  </section>
-<% end %>
+  </header>
+  <ul class="user-list clearfix">
+    <%= render @users %>
+  </ul>
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
+  <%= paginate @users %>
+</section>

@@ -40,7 +40,7 @@ class UsersController < ApplicationController
       @search = User.search(params[:q])
     end
     if params[:q].nil?
-      @users = @search.result(:distinct => true).order('created_at DESC')
+      @users = @search.result(:distinct => true).order('created_at DESC').page(params[:page])
     else
       @users = @search.result.page(params[:page])
     end
