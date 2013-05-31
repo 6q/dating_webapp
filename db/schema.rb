@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130530170649) do
+ActiveRecord::Schema.define(:version => 20130531162639) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130530170649) do
     t.datetime "updated_at",      :null => false
     t.text     "body"
     t.date     "date"
+    t.integer  "sender_id"
   end
 
   create_table "arrowchat", :force => true do |t|

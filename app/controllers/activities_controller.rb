@@ -6,6 +6,7 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = @conversation.build_activity(params[:activity])
+    @activity.sender_id = current_user.id
 
     if @activity.save
       redirect_to @conversation

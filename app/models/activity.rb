@@ -11,6 +11,7 @@
 #  updated_at      :datetime         not null
 #  body            :text
 #  date            :date
+#  sender_id       :integer
 #
 
 class Activity < ActiveRecord::Base

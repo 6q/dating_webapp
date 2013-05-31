@@ -15,4 +15,8 @@ module ConversationsHelper
   def sender_or_recipient(conversation)
     user = conversation.messages.map{ |m| m.recipients }.flatten.uniq.reject{|i| i == current_user}.first
   end
+
+  def activity_creator(activity)
+    activity.conversation.recipients.reject{|u| u.id != activity.sender_id }.first
+  end
 end
