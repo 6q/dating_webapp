@@ -12,10 +12,12 @@ class UsersController < ApplicationController
     hidden_user_ids = current_user.hidden_user_ids.concat(current_user.invisible_to_me)
     hidden_user_ids = [current_user.id] if hidden_user_ids == []
 
-    if params[:q][:s] == "distance asc"
+    if params[:q] && params[:q][:s] == "distance asc"
       params[:q].except!(:s)
-      @search = User.where("users.id NOT IN (?)", hidden_user_ids).near(current_user, distance, { :units => :km, :sort => :distance }).search(params[:q])
-    else
+      @search = User.where("users.id NOT IN (?)", hidden_user_ids)
+                    .near(current_user, distance, { :units => :km, :sort => :distance })
+                    .search(params[:q])
+    elsif params[:q]
       nearbys = current_user.nearbys(distance, { :units => :km }).pluck(:id)
       nearbys = [0] if nearbys.empty?
 
@@ -35,9 +37,15 @@ class UsersController < ApplicationController
         @search = User.where("users.id NOT IN (?)", hidden_user_ids).search(params[:q])
       end
       params[:q].except!(:id_in)
+    else
+      @search = User.search(params[:q])
     end
-    @users = @search.result.page(params[:page])
-    @cellove_search = current_user.searches.build({})
+    if params[:q].nil?
+      @users = @search.result(:distinct => true).order('created_at DESC')
+    else
+      @users = @search.result.page(params[:page])
+    end
+    @cellove_search = Search.new
   end
 
   def show

@@ -12,10 +12,6 @@ class SearchesController < ApplicationController
     redirect_to searches_path
   end
 
-  def index
-    @searches = current_user.searches
-  end
-
   def destroy
     # Delete search.
     Search.find(params[:id]).destroy

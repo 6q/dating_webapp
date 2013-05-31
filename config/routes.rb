@@ -48,6 +48,7 @@ Cellove::Application.routes.draw do
     get 'hits',                     to: 'users#hits',                             as: :user_hits
 
     get 'cellove-index',            to: 'users#cellove_index',                    as: :cellove_index
+    get 'search',                   to: 'users#index',                            as: :search
 
     put 'general_settings',         to: 'users#general_settings',                 as: :general_settings
   end
@@ -78,6 +79,6 @@ Cellove::Application.routes.draw do
 
   get 'notifications',                 to: 'notifications#notifications',          as: :notifications
   resources :invitations
-  resources :searches, only: [:create, :index, :destroy, :show]
+  resources :searches, only: [:create, :destroy, :show]
 
 end
