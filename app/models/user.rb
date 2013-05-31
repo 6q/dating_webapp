@@ -242,6 +242,16 @@ class User < ActiveRecord::Base
   def invisible_to_me
     UserBlock.where(blocked_user_id: self.id).map{ |u| u.user_id }
   end
+
+  def get_all_invisible_to_me
+    users = self.hidden_user_ids.concat(self.invisible_to_me)
+    if users = []
+      # Needed to fix MySQL bug where an '.. NOT IN (NULL)' query does not work
+      return [self.id]
+    else
+      return users
+    end
+  end
   
   def location
     [postal_code, town, country].compact.join(', ')

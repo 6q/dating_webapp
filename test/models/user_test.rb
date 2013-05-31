@@ -99,7 +99,7 @@ describe User do
     u.ratings_given[0].class.must_equal Rate
   end
 
-  it 'must have a searches collection' do 
+  it 'must have a searches collection' do
     u = create(:regular_user_with_searches)
     u.must_respond_to :searches
     u.searches.class.must_equal Array
