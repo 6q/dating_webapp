@@ -13,9 +13,9 @@
 class Rate < ActiveRecord::Base
   belongs_to :rater, :class_name => "User"
   belongs_to :rateable
-  
+
   attr_accessible :stars
-  
+
   validates :rater_id, uniqueness: { scope: :rateable_id }
 
   def self.average_score_for_user(user)

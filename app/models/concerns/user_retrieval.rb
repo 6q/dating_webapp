@@ -2,16 +2,14 @@ module UserRetrieval
   extend ActiveSupport::Concern
 
   def best_rated_near_me
-    # nearby_users = nearbys(User::DEFAULT_NEARBY_DISTANCE)
-    # Rate.average_score_for_user
-    # TODO: Implement
-    5.times.map{ self.class.all.sample }
+    nearbys(User::DEFAULT_NEARBY_DISTANCE, :order => false).group('users.id').includes(:rates).order('AVG(rates.stars) DESC').limit(5)
   end
 
   def best_suited_near_me(how_many = 5)
     #TODO: Implement
     how_many.times.map{ self.class.all.sample }
   end
+
 
   def new_users_near_me
     hidden_user_ids = self.get_all_invisible_to_me
