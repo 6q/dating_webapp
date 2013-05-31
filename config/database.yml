@@ -7,15 +7,17 @@ development:
   host: 127.0.0.1
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: cellove_test
   pool: 5
-  timeout: 5000
+  user: root
+  host: 127.0.0.1
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: cellove_development
+  database: cellove_production
   pool: 5
   user: root
   host: 127.0.0.1
