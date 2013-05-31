@@ -3,12 +3,13 @@
     <h1>Me han visitado</h1>
     <%= render '/shared/user/sorting' %>
   </header>
-  <ul class="user-list clearfix">
-    <% @users.each do |user| %>
-      <li><%= render '/shared/user/user-card', user: user %></li>
-    <% end %>
-  </ul>
 
-  <%= render '/shared/user/pagination' %>
+  <ul class="user-list clearfix">
+    <%= render @users %>
+  </ul>
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
+  <%= paginate @users %>
 
 </section>
