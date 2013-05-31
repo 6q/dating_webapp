@@ -14,7 +14,7 @@ test:
   user: <%= ENV.fetch('CELLOVE_MYSQL_TEST_USER', 'root')%>
   host: 127.0.0.1
   password: <%= ENV.fetch('CELLOVE_MYSQL_TEST_PASS', '') %>
-    
+
 production:
   adapter: mysql2
   encoding: utf8
