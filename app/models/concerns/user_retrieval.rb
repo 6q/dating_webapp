@@ -2,7 +2,13 @@ module UserRetrieval
   extend ActiveSupport::Concern
 
   def best_rated_near_me
-    nearbys(User::DEFAULT_NEARBY_DISTANCE, :order => false).group('users.id').includes(:rates).order('AVG(rates.stars) DESC').limit(5)
+    hidden_user_ids = self.get_all_invisible_to_me
+    nearbys(User::DEFAULT_NEARBY_DISTANCE, :order => false)
+      .group('users.id')
+      .includes(:rates)
+      .order('AVG(rates.stars) DESC')
+      .where("users.id NOT IN (?)", hidden_user_ids)
+      .limit(5)
   end
 
   def best_suited_near_me(how_many = 5)
