@@ -17,4 +17,8 @@ class Rate < ActiveRecord::Base
   attr_accessible :stars
   
   validates :rater_id, uniqueness: { scope: :rateable_id }
+
+  def self.average_score_for_user(user)
+    where(rateable_id: user.id).average('stars')
+  end
 end

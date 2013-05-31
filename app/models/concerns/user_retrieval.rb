@@ -2,7 +2,9 @@ module UserRetrieval
   extend ActiveSupport::Concern
 
   def best_rated_near_me
-    #TODO: Implement
+    # nearby_users = nearbys(User::DEFAULT_NEARBY_DISTANCE)
+    # Rate.average_score_for_user
+    # TODO: Implement
     5.times.map{ self.class.all.sample }
   end
 
