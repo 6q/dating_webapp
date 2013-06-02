@@ -51,6 +51,6 @@ end
 group :test, :development do
   gem 'factory_girl_rails', '>= 4.2.0'
   gem 'commands'
-  gem 'rack-proxy', git: 'git://github.com/sportngin/rack-proxy.git'
-  gem "rack-reverse-proxy", :require => "rack/reverse_proxy", git: 'git://github.com/sportngin/rack-reverse-proxy.git'
+  #gem 'rack-proxy', git: 'git://github.com/sportngin/rack-proxy.git'
+  #gem "rack-reverse-proxy", :require => "rack/reverse_proxy", git: 'git://github.com/sportngin/rack-reverse-proxy.git'
 end
