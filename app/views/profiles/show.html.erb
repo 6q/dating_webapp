@@ -858,7 +858,7 @@
 								&nbsp;
 							</div>
 							
-							<%= user.fields_for :characteristics do |my| %>
+							<%= user.fields_for :my_characteristics do |my| %>
 								
 								<div class="span3 offset1 pull-left">
 									<h5>Romántico</h5>
@@ -1198,87 +1198,8 @@
 								&nbsp;
 							</div>
 							
-							<%= user.fields_for :characteristics do |my| %>
-								
-								<div class="span3 offset1 pull-left">
-									<h5>Romántico</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Aventurero</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Amable</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Familiar</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Trabajadro</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Extrovertido</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Generoso</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Reservado</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Sociable</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Tranquilo</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Exigente</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Orgulloso</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-								</div>
-								
-
-								<div class="span1">
-									&nbsp;
-								</div>
-	
-								<div class="span3">
-									<h5>Solitario</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Tenaz</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Atento</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Bienhumorado</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Espontáneo</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Inquieto</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Sensible</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Tímido</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Posesivo</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-	
-									<h5>Celoso</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-									<h5>Fiel</h5>
-									<%= text_field_tag 'test', '3',:class =>"points" %>
-
-								</div>
-							<% end %>
+							#TODO Characteristics that user are looking for
+							
 						
 						</article>
 						<hr>
@@ -1412,8 +1333,6 @@
 
 				  	</div>
 
-						
-					</div>
 						<hr>			
 						<% current_user.confirmed_recommenders.each do |rec| %>
 							<%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>

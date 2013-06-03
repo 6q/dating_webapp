@@ -171,7 +171,7 @@ class User < ActiveRecord::Base
   has_many :invitations, :class_name => "Invitation", :foreign_key => :invitor_id
   has_many :searches
 
-  accepts_nested_attributes_for :characteristics
+  accepts_nested_attributes_for :my_characteristics
 
   rolify
   # Include default devise modules. Others available are:

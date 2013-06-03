@@ -1,709 +1,709 @@
 <section class="user-profile">
 
-	<article class="boxed">
-		<div class="boxed-inner">
-			<div id="nice-couple">
-				<i></i>
-				<p>¿Hacéis buena pareja?</p>
-				<%= rating_for @user, current_user %>
-			</div>
+  <article class="boxed">
+    <div class="boxed-inner">
+      <div id="nice-couple">
+        <i></i>
+        <p>¿Hacéis buena pareja?</p>
+        <%= rating_for @user, current_user %>
+      </div>
 
-			<div class="user-detail-container clearfix">
-				<div class="photo">
-					<%= profile_pic(@user, { width: 210, height: 210 }) %>
-				</div>
-				<div class="description">
-						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
-						<p class="small"><%= "#{User::GENDER[@user.gender]} - #{@user.age} años - #{@user.height} altura" %></p>
-						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
-							<% if @user.child %>
-								<%= "y #{User::TP_CHILD[@user.child]}." %>
-							<% end %>
-							<% if @user.lf_gender %>
-								<%= "Busca #{User::GENDER[@user.lf_gender]} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para #{User::LF_RELATIONSHIP[@user.lf_relationship]} y que esté cerca de #{@user.town}, #{@user.country}" %>
-							<% end %>
-						</p>
-				</div>
+      <div class="user-detail-container clearfix">
+        <div class="photo">
+          <a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><%= profile_pic() %></a>
+        </div>
+        <div class="description">
+            <h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
+            <p class="small"><%= "#{User::GENDER[@user.gender]} - #{@user.age} años - #{@user.height} altura" %></p>
+            <p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
+              <% if @user.child %>
+                <%= "y #{User::TP_CHILD[@user.child]}." %>
+              <% end %>
+              <% if @user.lf_gender %>
+                <%= "Busca #{User::GENDER[@user.lf_gender]} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para #{User::LF_RELATIONSHIP[@user.lf_relationship]} y que esté cerca de #{@user.town}, #{@user.country}" %>
+              <% end %>
+            </p>
+        </div>
 
-					<div id="user-profile-thumbs">
-						<div class="jcarousel">
-							<ul>
-								<% @user.pictures.each do |pic| %>
-									<li>
-										<%= link_to pic.image.thumb("200x").url, class: 'grouped_elements', rel: 'group1' do %>
-											<%= image_tag(pic.image.thumb("80x").url) %>
-										<% end %>
-									</li>
-								<% end %>
-							</ul>
+          <div id="user-profile-thumbs">
+            <div class="jcarousel">
+              <ul>
+                <% @user.pictures.each do |pic| %>
+                  <li>
+                    <%= link_to pic.image.thumb("200x").url, class: 'grouped_elements', rel: 'group1' do %>
+                      <%= image_tag(pic.image.thumb("80x").url) %>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
 
-						</div>
+            </div>
 
-						<a href="#" class="jcarousel-prev">anterior</a>
-						<a href="#" class="jcarousel-next">siguiente</a>
-					</div>
+            <a href="#" class="jcarousel-prev">anterior</a>
+            <a href="#" class="jcarousel-next">siguiente</a>
+          </div>
 
-			</div>
-		</div>
-	</article>
+      </div>
+    </div>
+  </article>
 
-	<% unless @user == current_user %>
-		<%= render '/shared/user/profile-action-links' %>
-	<% end %>
+  <% unless @user == current_user %>
+    <%= render '/shared/user/profile-action-links' %>
+  <% end %>
 
 <article class="basic-tabs tabs-container">
-		
-		<ul class="nav nav-tabs" id="basic-tabs">
-  		<li class="active"><a href="#desc">Descripción</a></li>
-		  <li><a href="#dicen">Sus Celestin@s</a></li>
-		  <li><a href="#atributos">Sus Atributos</a></li>
-		  <li class="last"><a href="#notas">Tus notas</a></li>
-		</ul>
+    
+    <ul class="nav nav-tabs" id="basic-tabs">
+      <li class="active"><a href="#desc">Descripción</a></li>
+      <li><a href="#dicen">Sus Celestin@s</a></li>
+      <li><a href="#atributos">Sus Atributos</a></li>
+      <li class="last"><a href="#notas">Tus notas</a></li>
+    </ul>
 
-		<div class="boxed">
-			<div class="boxed-inner">
-				<div class="tab-content">
+    <div class="boxed">
+      <div class="boxed-inner">
+        <div class="tab-content">
 
-		  		<div class="tab-pane active" id="desc">
-		  			<% if @user.description.blank? %>
-		  				<%= @user.name %> aún no ha introducido su descripción.
-		  			<% else %>
-							<p><%= @user.description %></p>
-						<% end %>
-		  		</div>
+          <div class="tab-pane active" id="desc">
+            <% if @user.description.blank? %>
+              <%= @user.name %> aún no ha introducido su descripción.
+            <% else %>
+              <p><%= @user.description %></p>
+            <% end %>
+          </div>
 
-		  		<div class="tab-pane" id="dicen">
-		  			<% if @user.recommendations.empty? %>
-		  				<%= @user.name %> aún no tiene ningún celestino. <%= link_to 'Quieres ser el primero?', be_matchmaker_path %>
-		  			<% else %>
-		  				<% @user.recommendations.each do |rec| %>
-								<%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
-							<% end %>
-		  			<% end %>
-		  		</div>
+          <div class="tab-pane" id="dicen">
+            <% if @user.recommendations.empty? %>
+              <%= @user.name %> aún no tiene ningún celestino. <%= link_to 'Quieres ser el primero?', be_matchmaker_path %>
+            <% else %>
+              <% @user.recommendations.each do |rec| %>
+                <%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
+              <% end %>
+            <% end %>
+          </div>
 
-		  		<div class="tab-pane" id="atributos">
-							<div class="span4">
-								<h5>Romántico</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.romantic*20}%" %>"></div>
-								</div>
+          <div class="tab-pane" id="atributos">
+              <div class="span4">
+                <h5>Romántico</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.romantic*20}%" %>"></div>
+                </div>
 
-								<h5>Aventurero</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.adventurer*20}%" %>"></div>
-								</div>
-								
-								<h5>Amable</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.friendly*20}%" %>"></div>
-								</div>
+                <h5>Aventurero</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.adventurer*20}%" %>"></div>
+                </div>
+                
+                <h5>Amable</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.friendly*20}%" %>"></div>
+                </div>
 
-								<h5>Familiar</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.familiar*20}%" %>"></div>
-								</div>
+                <h5>Familiar</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.familiar*20}%" %>"></div>
+                </div>
 
-								<h5>Trabajador</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.hardWorking*20}%" %>"></div>
-								</div>
+                <h5>Trabajador</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.hardWorking*20}%" %>"></div>
+                </div>
 
-								<h5>Extrovertido</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.extroverted*20}%" %>"></div>
-								</div>
+                <h5>Extrovertido</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.extroverted*20}%" %>"></div>
+                </div>
 
-								<h5>Generoso</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.generous*20}%" %>"></div>
-								</div>
+                <h5>Generoso</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.generous*20}%" %>"></div>
+                </div>
 
-								<h5>Reservado</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.reserved*20}%" %>"></div>
-								</div>
+                <h5>Reservado</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.reserved*20}%" %>"></div>
+                </div>
 
-								<h5>Sociable</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.sociable*20}%" %>"></div>
-								</div>
+                <h5>Sociable</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.sociable*20}%" %>"></div>
+                </div>
 
-								<h5>Tranquilo</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.quiet*20}%" %>"></div>
-								</div>
+                <h5>Tranquilo</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.quiet*20}%" %>"></div>
+                </div>
 
-								<h5>Exigente</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.demanding*20}%" %>"></div>
-								</div>
+                <h5>Exigente</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.demanding*20}%" %>"></div>
+                </div>
 
-								<h5>Orgulloso</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.prideful*20}%" %>"></div>
-								</div>
+                <h5>Orgulloso</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.prideful*20}%" %>"></div>
+                </div>
 
-							</div>
-
-
-							<div class="span4 offset1 attributes-col-2">
-								<h5>Solitario</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.solitary*20}%" %>"></div>
-								</div>
-
-								<h5>Tenaz</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.tenacious*20}%" %>"></div>
-								</div>
-
-								<h5>Atento</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.attentive*20}%" %>"></div>
-								</div>
-
-								<h5>Bienhumorado</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.goodHumored*20}%" %>"></div>
-								</div>
-
-								<h5>Espontáneo</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.spontaneous*20}%" %>"></div>
-								</div>
-
-								<h5>Inquieto</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.restless*20}%" %>"></div>
-								</div>
-
-								<h5>Sensible</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.sensitive*20}%" %>"></div>
-								</div>
-
-								<h5>Tímido</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.shy*20}%" %>"></div>
-								</div>
-
-								<h5>Posesivo</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.possessive*20}%" %>"></div>
-								</div>
-
-								<h5>Celoso</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.jealous*20}%" %>"></div>
-								</div>
-
-								<h5>Fiel</h5>
-								<div class="progress">
-									<div class="bar" style="<%= "width: #{@user.my_characteristics.faithful*20}%" %>"></div>
-								</div>
-							</div>
-		  		</div>
-
-		  		<div class="tab-pane" id="notas">
-		  			<h4>Tus notas de María González <span>(tranquilo, él/ella no las verá)</span></h4>
-		  			<hr>
-		  			<% current_user.my_notes(@user).each do |note| %>
-		  				<%= render '/shared/user/nota-item', note: note %>
-		  			<% end %>
-
-		  			<div class="new-nota">
-		  				<%= form_for :note, :url => '/notes' do |n| %>
-		  					<%= n.text_area :content, :placeholder => 'Nueva nota' %>
-		  					<%= n.hidden_field :user_id, :value => current_user.id %>
-		  					<%= n.hidden_field :evaluated_id, :value => @user.id %>
-		  					<div class="pull-right controls">
-		  						<button type="submit" class="btn btn-info">Añadir nota</button>
-		  					</div>
-		  				<% end %>
-		  			</div>
-		  					  
-		  		</div>
-				</div>
-			</div>
-		</div>
-	</article>
+              </div>
 
 
-	<article class="profile-tabs tabs-container">
-		
-		<ul class="nav nav-tabs" id="myTab">
-  		<li class="active"><a href="#como">¿Cómo es?</a></li>
-		  <li><a href="#gustos">Sus gustos</a></li>
-		  <li><a href="#busca">Qué busca</a></li>
-		</ul>
+              <div class="span4 offset1 attributes-col-2">
+                <h5>Solitario</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.solitary*20}%" %>"></div>
+                </div>
 
-		<div class="boxed">
-			<div class="boxed-inner">
-				<div class="tab-content">
+                <h5>Tenaz</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.tenacious*20}%" %>"></div>
+                </div>
 
-		  		<div class="tab-pane active" id="como">
-		  			<div class="row">
-		  				<div class="key span3">Orientación sexual:</div>
-		  				<div class="valor span6">
-		  					<div class="txt"><%= User::ORIENTATION[@user.orientation] %></div>
-		  				</div>
-		  				<div class="key span3">Estado civil:</div>
-		  				<div class="valor span6">
-		  					<div class="txt"><%= User::MARITAL_STATUS[@user.marital_status] %></div>
-		  				</div>
-		  				<% if @user.child %>
-		  					<div class="key span3">Hijos:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_CHILD[@user.child] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.house %>
-		  					<div class="key span3">Vive:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_HOUSE[@user.house] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.physical_desc %>
-		  					<div class="key span3">Físico:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::PHYSICAL_DESC[@user.physical_desc] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.height %>
-		  					<div class="key span3">Altura:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= "#{@user.height} m" %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.weight %>
-		  					<div class="key span3">Peso:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= "#{@user.weight} kg" %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.complexion %>
-		  					<div class="key span3">Cuerpo:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::COMPLEXION[@user.complexion] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.eyes %>
-		  					<div class="key span3">Ojos:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::EYES[@user.eyes] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.hair %>
-		  					<div class="key span3">Pelo:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::HAIR[@user.hair] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.hair_style %>
-		  					<div class="key span3">Peinado:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::HAIR_STYLE[@user.hair_style] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.physical_style %>
-		  					<div class="key span3">Estilo:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::PHYSICAL_STYLE[@user.physical_style] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.religion %>
-		  					<div class="key span3">Religión:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::RELIGION[@user.religion] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.religion_activity %>
-		  					<div class="key span3">Devoción religiosa:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_RELIGION_ACTIVITY[@user.religion_activity] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.citizenship.blank? %>
-		  					<div class="key span3">Nacionalidad:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= @user.citizenship %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.ethnicity %>
-		  					<div class="key span3">Étnia:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::ETHNICITY[@user.ethnicity] %></div>
-		  					</div>
-		  				<% end %>	
-		  			</div>
-		  		</div>
+                <h5>Atento</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.attentive*20}%" %>"></div>
+                </div>
 
-		  		<div class="tab-pane" id="gustos">
-		  			<% gustos = 0%>
+                <h5>Bienhumorado</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.goodHumored*20}%" %>"></div>
+                </div>
 
-						<div class="row">
-		  				<% if @user.diet %>
-		  					<div class="key span3">Dieta:</div>
-		  					<% gustos = 1 %>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_DIET[@user.diet] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.smoke %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Tabaco:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_SMOKE[@user.smoke].downcase %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.alcohol %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Alcohol:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_ALCOHOL[@user.alcohol] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.wedding_opinion %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Matrimonio:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_WEDDING_OPINION[@user.wedding_opinion].downcase %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.animals %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Animales:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_ANIMALS[@user.animals].downcase %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.party %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Salir:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_PARTY[@user.party].downcase %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.music %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Música:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_MUSIC[@user.music].downcase %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.music_genre %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Género muscial preferido:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::MUSIC_GENRE[@user.music_genre] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.cinema %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Cine:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::TP_CINEMA[@user.cinema].downcase %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.cinema_frequency %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Frecuencia:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::CINEMA_FREQUENCY[@user.cinema_frequency] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.cinema_genre %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Género preferido:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::CINEMA_GENRE[@user.cinema_genre] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.like_sport.blank? or (@user.like_sport=='0' and @user.like_read=="0" and @user.like_cinema=="0" and @user.like_quiet=="0" and @user.like_walk=="0" and @user.like_mountain=="0" and @user.like_beach=="0" and @user.like_family=="0" and @user.like_friends=="0") %>
-		  					<% gustos = 1 %>
-		  					<div class="key span3">Le gusta:</div>
-		  					<div class="valor span6">
-		  						<div class="txt">
-		  							<%= "el deporte<br>".html_safe if @user.like_sport=="1" %>
-		  							<%= "la lectura<br>".html_safe if @user.like_read=="1" %>
-		  							<%= "el cine<br>".html_safe if @user.like_cinema=="1" %>
-		  							<%= "estar tranquil@ en casa<br>".html_safe if @user.like_quiet=="1" %>
-		  							<%= "pasear<br>".html_safe if @user.like_walk=="1" %>
-		  							<%= "la montaña<br>".html_safe if @user.like_mountain=="1" %>
-		  							<%= "la playa<br>".html_safe if @user.like_beach=="1" %>
-		  							<%= "estar con la familia<br>".html_safe if @user.like_family=="1" %>
-		  							<%= "estar con sus amigos<br>".html_safe if @user.like_friends=="1" %>
-		  						</div>
-		  					</div>
-		  				<% end %>	
-		  			</div>
+                <h5>Espontáneo</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.spontaneous*20}%" %>"></div>
+                </div>
 
-		  			<% if gustos == 0 %>
-		  				<%= "#{@user.name} aún no ha definido sus gustos." %>
-		  			<% end %>
+                <h5>Inquieto</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.restless*20}%" %>"></div>
+                </div>
 
-		  		</div>
+                <h5>Sensible</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.sensitive*20}%" %>"></div>
+                </div>
 
-		  		<div class="tab-pane" id="busca">
-		  			<div class="row">
-		  				<% busca = 0 %>
+                <h5>Tímido</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.shy*20}%" %>"></div>
+                </div>
 
-		  				<% if @user.lf_gender %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Busca:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::GENDER[@user.lf_gender].downcase %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_orientation %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Orientacion sexual:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::ORIENTATION[@user.lf_orientation] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_marital_status %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Estado civil:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::MARITAL_STATUS[@user.lf_marital_status] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_age_between.blank? or @user.lf_age_to.blank? %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Edad:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= "entre #{@user.lf_age_between} y #{@user.lf_age_to}" %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_relationship %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Relación:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_RELATIONSHIP[@user.lf_relationship] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_child %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Hijos:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_CHILD[@user.lf_child] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_house %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Viva:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_HOUSE[@user.lf_house] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_physical_desc %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Fisico:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::PHYSICAL_DESC[@user.lf_physical_desc] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_physical_style %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Estilo:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::PHYSICAL_STYLE[@user.lf_physical_style] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_height_between.blank? or @user.lf_height_to.blank? %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Altura:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= "entre #{@user.lf_height_between} y #{@user.lf_height_to}" %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_weight_between.blank? or @user.lf_weight_to.blank? %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Peso:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= "entre #{@user.lf_weight_between} y #{@user.lf_weight_to}" %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_complexion %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Complexión:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::COMPLEXION[@user.lf_complexion] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_eyes %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Ojos:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::EYES[@user.lf_eyes] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_hair %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Pelo:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::HAIR[@user.lf_hair] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_hair_style %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Peinado:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::HAIR_STYLE[@user.lf_hair_style] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_smoke %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Tabaco:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_SMOKE[@user.lf_smoke] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_alcohol %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Alcohol:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_ALCOHOL[@user.lf_alcohol] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_party %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Salir:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_PARTY[@user.lf_party] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_diet %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Dieta:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_DIET[@user.lf_diet] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_ethnicity %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Étnia:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::ETHNICITY[@user.lf_ethnicity] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_citizenship.blank? %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Nacionalidad:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= @user.lf_citizenship %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_religion %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Religión:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::RELIGION[@user.lf_religion] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_religion_activity %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Devoción religiosa:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_RELIGION_ACTIVITY[@user.lf_religion_activity] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_animals %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Animales:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::LF_ANIMALS[@user.lf_animals] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_like_sport.blank? or (@user.lf_like_sport=='0' and @user.lf_like_read=="0" and @user.lf_like_cinema=="0" and @user.lf_like_quiet=="0" and @user.lf_like_walk=="0" and @user.lf_like_mountain=="0" and @user.lf_like_beach=="0" and @user.lf_like_family=="0" and @user.lf_like_friends=="0")%>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Le guste:</div>
-		  					<div class="valor span6">
-		  						<div class="txt">
-		  							<%= "el deporte<br>".html_safe if @user.lf_like_sport=="1" %>
-		  							<%= "la lectura<br>".html_safe if @user.lf_like_read=="1" %>
-		  							<%= "el cine<br>".html_safe if @user.lf_like_cinema=="1" %>
-		  							<%= "estar tranquil@ en casa<br>".html_safe if @user.lf_like_quiet=="1" %>
-		  							<%= "pasear<br>".html_safe if @user.lf_like_walk=="1" %>
-		  							<%= "la montaña<br>".html_safe if @user.lf_like_mountain=="1" %>
-		  							<%= "la playa<br>".html_safe if @user.lf_like_beach=="1" %>
-		  							<%= "estar con la familia<br>".html_safe if @user.lf_like_family=="1" %>
-		  							<%= "estar con sus amigos<br>".html_safe if @user.lf_like_friends=="1" %>
-		  						</div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_study_level %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Estudios:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::STUDY_LEVEL[@user.lf_study_level] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_language.blank? %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Idiomas:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= @user.lf_language %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_language_level.blank? %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Nivel:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= @user.lf_language_level %></div>
-		  					</div>
-		  				<% end %>
-		  				<% if @user.lf_job %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Trabajo:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= User::JOB[@user.lf_job] %></div>
-		  					</div>
-		  				<% end %>
-		  				<% unless @user.lf_salary.blank? %>
-		  					<% busca = 1 %>
-		  					<div class="key span3">Ingresos anuales:</div>
-		  					<div class="valor span6">
-		  						<div class="txt"><%= @user.lf_salary %></div>
-		  					</div>
-		  				<% end %>
-		  			</div>
+                <h5>Posesivo</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.possessive*20}%" %>"></div>
+                </div>
 
-		  			<% if busca==0 %>
-		  				<%= "#{@user.name} aún no ha definido que busca" %>
-		  			<% end %>
+                <h5>Celoso</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.jealous*20}%" %>"></div>
+                </div>
 
-		  		</div>
+                <h5>Fiel</h5>
+                <div class="progress">
+                  <div class="bar" style="<%= "width: #{@user.my_characteristics.faithful*20}%" %>"></div>
+                </div>
+              </div>
+          </div>
 
-				</div>
-			</div>
-		</div>
-	</article>
+          <div class="tab-pane" id="notas">
+            <h4>Tus notas de María González <span>(tranquilo, él/ella no las verá)</span></h4>
+            <hr>
+            <% current_user.my_notes(@user).each do |note| %>
+              <%= render '/shared/user/nota-item', note: note %>
+            <% end %>
 
-	<% unless @user == current_user %>
-		<%= render '/shared/user/profile-action-links' %>
-	<% end %>
+            <div class="new-nota">
+              <%= form_for :note, :url => '/notes' do |n| %>
+                <%= n.text_area :content, :placeholder => 'Nueva nota' %>
+                <%= n.hidden_field :user_id, :value => current_user.id %>
+                <%= n.hidden_field :evaluated_id, :value => @user.id %>
+                <div class="pull-right controls">
+                  <button type="submit" class="btn btn-info">Añadir nota</button>
+                </div>
+              <% end %>
+            </div>
+                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <article class="profile-tabs tabs-container">
+    
+    <ul class="nav nav-tabs" id="myTab">
+      <li class="active"><a href="#como">¿Cómo es?</a></li>
+      <li><a href="#gustos">Sus gustos</a></li>
+      <li><a href="#busca">Qué busca</a></li>
+    </ul>
+
+    <div class="boxed">
+      <div class="boxed-inner">
+        <div class="tab-content">
+
+          <div class="tab-pane active" id="como">
+            <div class="row">
+              <div class="key span3">Orientación sexual:</div>
+              <div class="valor span6">
+                <div class="txt"><%= User::ORIENTATION[@user.orientation] %></div>
+              </div>
+              <div class="key span3">Estado civil:</div>
+              <div class="valor span6">
+                <div class="txt"><%= User::MARITAL_STATUS[@user.marital_status] %></div>
+              </div>
+              <% if @user.child %>
+                <div class="key span3">Hijos:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_CHILD[@user.child] %></div>
+                </div>
+              <% end %>
+              <% if @user.house %>
+                <div class="key span3">Vive:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_HOUSE[@user.house] %></div>
+                </div>
+              <% end %>
+              <% if @user.physical_desc %>
+                <div class="key span3">Físico:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::PHYSICAL_DESC[@user.physical_desc] %></div>
+                </div>
+              <% end %>
+              <% if @user.height %>
+                <div class="key span3">Altura:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= "#{@user.height} m" %></div>
+                </div>
+              <% end %>
+              <% if @user.weight %>
+                <div class="key span3">Peso:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= "#{@user.weight} kg" %></div>
+                </div>
+              <% end %>
+              <% if @user.complexion %>
+                <div class="key span3">Cuerpo:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::COMPLEXION[@user.complexion] %></div>
+                </div>
+              <% end %>
+              <% if @user.eyes %>
+                <div class="key span3">Ojos:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::EYES[@user.eyes] %></div>
+                </div>
+              <% end %>
+              <% if @user.hair %>
+                <div class="key span3">Pelo:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::HAIR[@user.hair] %></div>
+                </div>
+              <% end %>
+              <% if @user.hair_style %>
+                <div class="key span3">Peinado:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::HAIR_STYLE[@user.hair_style] %></div>
+                </div>
+              <% end %>
+              <% if @user.physical_style %>
+                <div class="key span3">Estilo:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::PHYSICAL_STYLE[@user.physical_style] %></div>
+                </div>
+              <% end %>
+              <% if @user.religion %>
+                <div class="key span3">Religión:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::RELIGION[@user.religion] %></div>
+                </div>
+              <% end %>
+              <% if @user.religion_activity %>
+                <div class="key span3">Devoción religiosa:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_RELIGION_ACTIVITY[@user.religion_activity] %></div>
+                </div>
+              <% end %>
+              <% unless @user.citizenship.blank? %>
+                <div class="key span3">Nacionalidad:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= @user.citizenship %></div>
+                </div>
+              <% end %>
+              <% if @user.ethnicity %>
+                <div class="key span3">Étnia:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::ETHNICITY[@user.ethnicity] %></div>
+                </div>
+              <% end %> 
+            </div>
+          </div>
+
+          <div class="tab-pane" id="gustos">
+            <% gustos = 0%>
+
+            <div class="row">
+              <% if @user.diet %>
+                <div class="key span3">Dieta:</div>
+                <% gustos = 1 %>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_DIET[@user.diet] %></div>
+                </div>
+              <% end %>
+              <% if @user.smoke %>
+                <% gustos = 1 %>
+                <div class="key span3">Tabaco:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_SMOKE[@user.smoke].downcase %></div>
+                </div>
+              <% end %>
+              <% if @user.alcohol %>
+                <% gustos = 1 %>
+                <div class="key span3">Alcohol:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_ALCOHOL[@user.alcohol] %></div>
+                </div>
+              <% end %>
+              <% if @user.wedding_opinion %>
+                <% gustos = 1 %>
+                <div class="key span3">Matrimonio:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_WEDDING_OPINION[@user.wedding_opinion].downcase %></div>
+                </div>
+              <% end %>
+              <% if @user.animals %>
+                <% gustos = 1 %>
+                <div class="key span3">Animales:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_ANIMALS[@user.animals].downcase %></div>
+                </div>
+              <% end %>
+              <% if @user.party %>
+                <% gustos = 1 %>
+                <div class="key span3">Salir:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_PARTY[@user.party].downcase %></div>
+                </div>
+              <% end %>
+              <% if @user.music %>
+                <% gustos = 1 %>
+                <div class="key span3">Música:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_MUSIC[@user.music].downcase %></div>
+                </div>
+              <% end %>
+              <% if @user.music_genre %>
+                <% gustos = 1 %>
+                <div class="key span3">Género muscial preferido:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::MUSIC_GENRE[@user.music_genre] %></div>
+                </div>
+              <% end %>
+              <% if @user.cinema %>
+                <% gustos = 1 %>
+                <div class="key span3">Cine:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::TP_CINEMA[@user.cinema].downcase %></div>
+                </div>
+              <% end %>
+              <% if @user.cinema_frequency %>
+                <% gustos = 1 %>
+                <div class="key span3">Frecuencia:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::CINEMA_FREQUENCY[@user.cinema_frequency] %></div>
+                </div>
+              <% end %>
+              <% if @user.cinema_genre %>
+                <% gustos = 1 %>
+                <div class="key span3">Género preferido:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::CINEMA_GENRE[@user.cinema_genre] %></div>
+                </div>
+              <% end %>
+              <% unless @user.like_sport.blank? or (@user.like_sport=='0' and @user.like_read=="0" and @user.like_cinema=="0" and @user.like_quiet=="0" and @user.like_walk=="0" and @user.like_mountain=="0" and @user.like_beach=="0" and @user.like_family=="0" and @user.like_friends=="0") %>
+                <% gustos = 1 %>
+                <div class="key span3">Le gusta:</div>
+                <div class="valor span6">
+                  <div class="txt">
+                    <%= "el deporte<br>".html_safe if @user.like_sport=="1" %>
+                    <%= "la lectura<br>".html_safe if @user.like_read=="1" %>
+                    <%= "el cine<br>".html_safe if @user.like_cinema=="1" %>
+                    <%= "estar tranquil@ en casa<br>".html_safe if @user.like_quiet=="1" %>
+                    <%= "pasear<br>".html_safe if @user.like_walk=="1" %>
+                    <%= "la montaña<br>".html_safe if @user.like_mountain=="1" %>
+                    <%= "la playa<br>".html_safe if @user.like_beach=="1" %>
+                    <%= "estar con la familia<br>".html_safe if @user.like_family=="1" %>
+                    <%= "estar con sus amigos<br>".html_safe if @user.like_friends=="1" %>
+                  </div>
+                </div>
+              <% end %> 
+            </div>
+
+            <% if gustos == 0 %>
+              <%= "#{@user.name} aún no ha definido sus gustos." %>
+            <% end %>
+
+          </div>
+
+          <div class="tab-pane" id="busca">
+            <div class="row">
+              <% busca = 0 %>
+
+              <% if @user.lf_gender %>
+                <% busca = 1 %>
+                <div class="key span3">Busca:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::GENDER[@user.lf_gender].downcase %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_orientation %>
+                <% busca = 1 %>
+                <div class="key span3">Orientacion sexual:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::ORIENTATION[@user.lf_orientation] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_marital_status %>
+                <% busca = 1 %>
+                <div class="key span3">Estado civil:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::MARITAL_STATUS[@user.lf_marital_status] %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_age_between.blank? or @user.lf_age_to.blank? %>
+                <% busca = 1 %>
+                <div class="key span3">Edad:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= "entre #{@user.lf_age_between} y #{@user.lf_age_to}" %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_relationship %>
+                <% busca = 1 %>
+                <div class="key span3">Relación:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_RELATIONSHIP[@user.lf_relationship] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_child %>
+                <% busca = 1 %>
+                <div class="key span3">Hijos:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_CHILD[@user.lf_child] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_house %>
+                <% busca = 1 %>
+                <div class="key span3">Viva:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_HOUSE[@user.lf_house] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_physical_desc %>
+                <% busca = 1 %>
+                <div class="key span3">Fisico:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::PHYSICAL_DESC[@user.lf_physical_desc] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_physical_style %>
+                <% busca = 1 %>
+                <div class="key span3">Estilo:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::PHYSICAL_STYLE[@user.lf_physical_style] %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_height_between.blank? or @user.lf_height_to.blank? %>
+                <% busca = 1 %>
+                <div class="key span3">Altura:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= "entre #{@user.lf_height_between} y #{@user.lf_height_to}" %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_weight_between.blank? or @user.lf_weight_to.blank? %>
+                <% busca = 1 %>
+                <div class="key span3">Peso:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= "entre #{@user.lf_weight_between} y #{@user.lf_weight_to}" %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_complexion %>
+                <% busca = 1 %>
+                <div class="key span3">Complexión:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::COMPLEXION[@user.lf_complexion] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_eyes %>
+                <% busca = 1 %>
+                <div class="key span3">Ojos:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::EYES[@user.lf_eyes] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_hair %>
+                <% busca = 1 %>
+                <div class="key span3">Pelo:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::HAIR[@user.lf_hair] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_hair_style %>
+                <% busca = 1 %>
+                <div class="key span3">Peinado:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::HAIR_STYLE[@user.lf_hair_style] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_smoke %>
+                <% busca = 1 %>
+                <div class="key span3">Tabaco:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_SMOKE[@user.lf_smoke] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_alcohol %>
+                <% busca = 1 %>
+                <div class="key span3">Alcohol:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_ALCOHOL[@user.lf_alcohol] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_party %>
+                <% busca = 1 %>
+                <div class="key span3">Salir:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_PARTY[@user.lf_party] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_diet %>
+                <% busca = 1 %>
+                <div class="key span3">Dieta:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_DIET[@user.lf_diet] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_ethnicity %>
+                <% busca = 1 %>
+                <div class="key span3">Étnia:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::ETHNICITY[@user.lf_ethnicity] %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_citizenship.blank? %>
+                <% busca = 1 %>
+                <div class="key span3">Nacionalidad:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= @user.lf_citizenship %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_religion %>
+                <% busca = 1 %>
+                <div class="key span3">Religión:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::RELIGION[@user.lf_religion] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_religion_activity %>
+                <% busca = 1 %>
+                <div class="key span3">Devoción religiosa:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_RELIGION_ACTIVITY[@user.lf_religion_activity] %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_animals %>
+                <% busca = 1 %>
+                <div class="key span3">Animales:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::LF_ANIMALS[@user.lf_animals] %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_like_sport.blank? or (@user.lf_like_sport=='0' and @user.lf_like_read=="0" and @user.lf_like_cinema=="0" and @user.lf_like_quiet=="0" and @user.lf_like_walk=="0" and @user.lf_like_mountain=="0" and @user.lf_like_beach=="0" and @user.lf_like_family=="0" and @user.lf_like_friends=="0")%>
+                <% busca = 1 %>
+                <div class="key span3">Le guste:</div>
+                <div class="valor span6">
+                  <div class="txt">
+                    <%= "el deporte<br>".html_safe if @user.lf_like_sport=="1" %>
+                    <%= "la lectura<br>".html_safe if @user.lf_like_read=="1" %>
+                    <%= "el cine<br>".html_safe if @user.lf_like_cinema=="1" %>
+                    <%= "estar tranquil@ en casa<br>".html_safe if @user.lf_like_quiet=="1" %>
+                    <%= "pasear<br>".html_safe if @user.lf_like_walk=="1" %>
+                    <%= "la montaña<br>".html_safe if @user.lf_like_mountain=="1" %>
+                    <%= "la playa<br>".html_safe if @user.lf_like_beach=="1" %>
+                    <%= "estar con la familia<br>".html_safe if @user.lf_like_family=="1" %>
+                    <%= "estar con sus amigos<br>".html_safe if @user.lf_like_friends=="1" %>
+                  </div>
+                </div>
+              <% end %>
+              <% if @user.lf_study_level %>
+                <% busca = 1 %>
+                <div class="key span3">Estudios:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::STUDY_LEVEL[@user.lf_study_level] %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_language.blank? %>
+                <% busca = 1 %>
+                <div class="key span3">Idiomas:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= @user.lf_language %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_language_level.blank? %>
+                <% busca = 1 %>
+                <div class="key span3">Nivel:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= @user.lf_language_level %></div>
+                </div>
+              <% end %>
+              <% if @user.lf_job %>
+                <% busca = 1 %>
+                <div class="key span3">Trabajo:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= User::JOB[@user.lf_job] %></div>
+                </div>
+              <% end %>
+              <% unless @user.lf_salary.blank? %>
+                <% busca = 1 %>
+                <div class="key span3">Ingresos anuales:</div>
+                <div class="valor span6">
+                  <div class="txt"><%= @user.lf_salary %></div>
+                </div>
+              <% end %>
+            </div>
+
+            <% if busca==0 %>
+              <%= "#{@user.name} aún no ha definido que busca" %>
+            <% end %>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <% unless @user == current_user %>
+    <%= render '/shared/user/profile-action-links' %>
+  <% end %>
 
 </section>
 
 <script type="text/javascript">
-	// tabs
+  // tabs
   $('.nav-tabs a').click(function (e) {
       e.preventDefault();
       $(this).tab('show');
   })
   // carousel
-  	$('.jcarousel').jcarousel({
-  	  animation: 'slow'
-  	});
+    $('.jcarousel').jcarousel({
+      animation: 'slow'
+    });
 
-  	$('.jcarousel-prev').click(function() {
-  	    $('.jcarousel').jcarousel('scroll', '-=5');
-  	});
+    $('.jcarousel-prev').click(function() {
+        $('.jcarousel').jcarousel('scroll', '-=5');
+    });
 
-  	$('.jcarousel-next').click(function() {
-  	    $('.jcarousel').jcarousel('scroll', '+=5');
-  	});
+    $('.jcarousel-next').click(function() {
+        $('.jcarousel').jcarousel('scroll', '+=5');
+    });
 </script>
