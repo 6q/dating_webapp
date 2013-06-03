@@ -10,39 +10,15 @@ class UsersController < ApplicationController
 
   def index
     distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
-    hidden_user_ids = current_user.get_all_invisible_to_me
 
-    if params[:q] && params[:q][:s] == "distance asc"
-      params[:q].except!(:s)
-      @search = User.where("users.id NOT IN (?)", hidden_user_ids)
-                    .near(current_user, distance, { :units => :km, :sort => :distance })
-                    .search(params[:q])
-    elsif params[:q]
-      nearbys = current_user.nearbys(distance, { :units => :km }).pluck(:id)
-      nearbys = [0] if nearbys.empty?
-
-      params[:q] = params[:q].merge(id_in: nearbys) if params[:q]
-      if params[:q][:s] == "recent_interaction asc"
-        params[:q].except!(:s)
-        @search = User.where("users.id NOT IN (?)", hidden_user_ids).sort_interactions.search(params[:q])
-      elsif params[:q][:s] == "prop_actividad asc"
-        params[:q].except!(:s)
-        @search = User.select("users.*, count(notifications.id) AS activity_count")
-                      .joins(:messages => { :conversation => :activity })
-                      .group("users.id, notifications.id")
-                      .order("activity_count DESC")
-                      .where("users.id NOT IN (?)", hidden_user_ids)
-                      .search(params[:q])
-      else
-        @search = User.where("users.id NOT IN (?)", hidden_user_ids).search(params[:q])
-      end
-      params[:q].except!(:id_in)
-    else
-      @search = User.search(params[:q])
-    end
     if params[:q].nil?
+      search_and_order(nil)
       @users = @search.result(:distinct => true).order('created_at DESC').page(params[:page])
     else
+      nearbys = current_user.nearbys(distance, { :units => :km }).pluck(:id)
+      nearbys = [0] if nearbys.empty?
+      search_and_order(nearbys)
+
       @users = @search.result.page(params[:page])
     end
     @cellove_search = Search.new
