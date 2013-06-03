@@ -115,6 +115,7 @@
 #  lf_language_level      :text
 #  cellove_index          :integer          default(0)
 #  lf_relationship        :string(255)
+#  background             :integer
 #
 
 require_dependency 'minimum_age_validator'

@@ -53,6 +53,8 @@ Cellove::Application.routes.draw do
     put 'general_settings',         to: 'users#general_settings',                 as: :general_settings
   end
   post '/rate' => 'rater#create', :as => 'rate'
+  post 'background',               to: 'users#save_background',                   as: :save_background
+  get 'background',                to: 'users#get_background',                    as: :get_background
 
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what

@@ -32,6 +32,8 @@ $(document).ready(function() {
   if (hasSkin) {
     var bg = '/assets/bg/main-bg' + hasSkin + '.jpg';
     $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
+  } else {
+    $.getScript("/background.json").done(function(background, textStatus) { });
   }
 
   $(".skin-change").click(function() {
@@ -39,6 +41,15 @@ $(document).ready(function() {
         bg = '/assets/bg/main-bg' + number + '.jpg';
     $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
     $.cookie("cellove-skin", number);
+    $.ajax({
+      url: "/background.json",
+      dataType: "jsonp",
+      type: "post",
+      data: {
+        background: number
+      },
+      success: function(data) { }
+    });
   });
 
   if (!$("#caixarandom").auderoFlashingText("isRunning")) {

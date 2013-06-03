@@ -109,6 +109,20 @@ class UsersController < ApplicationController
     redirect_to settings_path
   end
 
+  def save_background
+    current_user.background = params[:background]
+    current_user.save
+    respond_to do |format|
+      format.json { render json: current_user.background.to_json }
+    end
+  end
+
+  def get_background
+    respond_to do |format|
+      format.json { render json: current_user.background.to_json }
+    end
+  end
+
   private
     def user_visit
       if @user && current_user != @user
