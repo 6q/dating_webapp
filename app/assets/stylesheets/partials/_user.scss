@@ -382,6 +382,8 @@ section.chat{
 }
 
 .tab-pane {
+  margin: 10px;
+
   .msg-item {
     margin:10px;
   }
@@ -598,12 +600,10 @@ section.chat{
   }
 
   .profile-tabs {
-    article{
-      font-size: 16px;
-    }
-    select, input, label {
+    select, input, label, article {
       font-size: 16px;
       margin-left: 0px;
+      margin-right: 0px;
     }
 
     textarea {
@@ -636,6 +636,10 @@ section.chat{
     textarea {
       margin:0;
     }
+  }
+
+  .attributes-col-2 {
+    margin-left:40px;
   }
 
   #dicen{
@@ -1171,7 +1175,7 @@ section.messages{
           height:14px;
           display:block;
           float:left;
-          margin-top:5px;
+          margin-top:17px;
         }
       }
 
