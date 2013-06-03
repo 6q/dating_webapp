@@ -36,7 +36,7 @@
   </section>
 
   <section id="last-messages">
-    <h4>Últimas conversaciones <a href="/user/messages">(Ver todos los mensajes)</a></h4>
+    <h4>Últimas conversaciones <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
     <% current_user.mailbox.conversations.last(5).each do |conversation| %>
       <%= render conversation %>
       <hr>

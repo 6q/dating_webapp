@@ -27,14 +27,14 @@
 
 <article class="celes-item heart-<%= heart_class %>">
   <div class="clearfix">
-    <%= image_tag "avatar1.png" %>
+    <%= profile_pic(recommendation.creator, { width: 210, height: 100 }) %>
     <header>
       <% if is_creator %>
         <%= link_to recommendation.user.name, user_path(recommendation.user) %>
       <% else %>
         <%= link_to recommendation.creator.name, user_path(recommendation.creator) %>
       <% end %>
-      <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", recommendation_deny_path(recommendation.id), 'data-toggle' => 'modal' unless recommendation.user_id != current_user.id %><span class="date"><%= recommendation.updated_at %></span>
+      <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", recommendation_deny_path(recommendation.id), 'data-toggle' => 'modal' unless recommendation.user_id != current_user.id %><span class="date"><%= _('Hace') %> <%= time_ago_in_words(recommendation.updated_at) %></span>
     </header>
 
     <p><%= recommendation.description %></p>

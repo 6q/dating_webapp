@@ -60,14 +60,12 @@ class UsersController < ApplicationController
   def nice_couple
     @search = User.nice_couple(current_user).search(params[:q])
     @users = @search.result.page(params[:page])
-    render 'nice_couple'
   end
 
   # Matchmaker routes
   def be_matchmaker
     @recommendation = Recommendation.new
     @characteristic = Characteristic.new
-    render 'be_matchmaker'
   end
 
   def matchmaker_become_user
