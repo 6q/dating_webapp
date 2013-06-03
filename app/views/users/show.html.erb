@@ -21,7 +21,7 @@
 				<div class="description">
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
 						<p class="small"><%= "#{User::GENDER[@user.gender]} - #{@user.age} años - #{@user.height} altura" %></p>
-						<p class="small"><%= "#{@user.name} es #{User::MARITAL_STATUS[@user.marital_status]} y #{User::CHILD[@user.child]}. Busca
+						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]} y #{User::TP_CHILD[@user.child]}. Busca
 							#{User::GENDER[@user.lf_gender]} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para 
 							#{User::LF_RELATIONSHIP[@user.lf_relationship]} y que esté cerca de #{@user.town}, #{@user.country}" %>
 						</p>
@@ -263,13 +263,13 @@
 		  				<% if @user.child %>
 		  					<div class="key span3">Hijos:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::CHILD[@user.child] %></div>
+		  						<div class="txt"><%= User::TP_CHILD[@user.child] %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.house %>
 		  					<div class="key span3">Vive:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::HOUSE[@user.house] %></div>
+		  						<div class="txt"><%= User::TP_HOUSE[@user.house] %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.physical_desc %>
@@ -329,7 +329,7 @@
 		  				<% if @user.religion_activity %>
 		  					<div class="key span3">Devoción religiosa:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::RELIGION_ACTIVITY[@user.religion_activity] %></div>
+		  						<div class="txt"><%= User::TP_RELIGION_ACTIVITY[@user.religion_activity] %></div>
 		  					</div>
 		  				<% end %>
 		  				<% unless @user.citizenship.blank? %>
@@ -355,49 +355,49 @@
 		  					<div class="key span3">Dieta:</div>
 		  					<% gustos = 1 %>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::DIET[@user.diet] %></div>
+		  						<div class="txt"><%= User::TP_DIET[@user.diet] %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.smoke %>
 		  					<% gustos = 1 %>
 		  					<div class="key span3">Tabaco:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::SMOKE[@user.smoke].downcase %></div>
+		  						<div class="txt"><%= User::TP_SMOKE[@user.smoke].downcase %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.alcohol %>
 		  					<% gustos = 1 %>
 		  					<div class="key span3">Alcohol:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::ALCOHOL[@user.alcohol] %></div>
+		  						<div class="txt"><%= User::TP_ALCOHOL[@user.alcohol] %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.wedding_opinion %>
 		  					<% gustos = 1 %>
 		  					<div class="key span3">Matrimonio:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::WEDDING_OPINION[@user.wedding_opinion].downcase %></div>
+		  						<div class="txt"><%= User::TP_WEDDING_OPINION[@user.wedding_opinion].downcase %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.animals %>
 		  					<% gustos = 1 %>
 		  					<div class="key span3">Animales:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::ANIMALS[@user.animals].downcase %></div>
+		  						<div class="txt"><%= User::TP_ANIMALS[@user.animals].downcase %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.party %>
 		  					<% gustos = 1 %>
 		  					<div class="key span3">Salir:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::PARTY[@user.party].downcase %></div>
+		  						<div class="txt"><%= User::TP_PARTY[@user.party].downcase %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.music %>
 		  					<% gustos = 1 %>
 		  					<div class="key span3">Música:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::MUSIC[@user.music].downcase %></div>
+		  						<div class="txt"><%= User::TP_MUSIC[@user.music].downcase %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.music_genre %>
@@ -411,7 +411,7 @@
 		  					<% gustos = 1 %>
 		  					<div class="key span3">Cine:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= User::CINEMA[@user.cinema].downcase %></div>
+		  						<div class="txt"><%= User::TP_CINEMA[@user.cinema].downcase %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.cinema_frequency %>

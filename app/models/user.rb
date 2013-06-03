@@ -183,6 +183,8 @@ class User < ActiveRecord::Base
   CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
     'terror' => _('terror')}
 
+
+  # LOOKING FOR OPTIONS
   LF_RELATIONSHIP = {'friends' => _('hacer nuevas amistades'), 'fun' => _('salir y pasarlo bien'), 
     'couple' => _('establecer una relación estable'), 'marry' => _('casarme')}
   LF_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
@@ -205,6 +207,33 @@ class User < ActiveRecord::Base
   LF_CHILD = { 'have-children' => _('tenga hijos'),'no-children' => _('no tenga hijos'),'no-want-children' => _('no tenga hijos, y no quiera tener'),
     'no-kids-i-want' => _('no tenga hijos, pero quiera tener'),'have-children-no-want-more' => _('tenga hijos, y no quiera tener mas '),
     'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
+
+  # THIRD PERSON OPTIONS
+  TP_CHILD = { 'have-children' => _('tiene hijos'),'no-children' => _('no tiene hijos'),'no-want-children' => _('no tiene hijos, y no quiere tener'),
+    'no-kids-i-want' => _('no tiene hijos, pero quiere tener'),'have-children-no-want-more' => _('tiene hijos, y no quiere tener mas '),
+    'have-children-want-more' => _('si tiene hijos, y quiere tener mas '),'no-like-kids' => _('no le gustan los niños')}
+  TP_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
+    'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@')}
+  TP_SMOKE = {'smoker' => 'fuma', 'non-smoker' => 'no fuma', 'smoker-hater' => 'es antitabaco','not-mind-smoke' => _('no le molesta el humo'),
+    'smoke-leave-couple' => _('fuma pero lo dejaría por su pareja'), 'social-smoker' => _('es fumador social')}
+  TP_DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'),
+    'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('es muy maniátic@ con la comida'),
+    'like-all' => _('le gusta todo'), 'adapt' => _('se adapta fácilmente')}
+  TP_ALCOHOL = {'when-go-out' => _('le gusta beber solo cuando sale'), 'not-drink' => _('no bebe alcohol'),
+    'occasionally' => _('bebe ocasionalmente'), 'drinker' => _('es bebedor'), 'meke-me-sick' => _('el alcohol no le sienta bien')}
+  TP_WEDDING_OPINION = {'would-marry' => _('le gustaría casarse'), 'would-not-marry' => _('no le gustaría casarse'), 
+    'not-believe' => _('no cree en el matrimonio'), 'married-no-repeat'=> _('ya ha estado casad@ y no quiere repetir'),
+    'married-repeat' => _('ya ha estado casad@ y quiere repetir'), 'wonderful' => _('el matrimonio es algo maravilloso')}
+  TP_RELIGION_ACTIVITY = {'essential' => _('la religión es esencial en su vida'),
+    'care-little' => _('le importa poco la religión'), 'not-care' => _('no le importa en absoluto la religión')}
+  TP_ANIMALS = {'like-pets' => _('le gustan los animales de compañía'), 'not-like-pets' => _('mo le gustan los animales de compañía'),
+    'have-pets' => _('tiene animales de compañía'), 'no-pets' => _('no tiene animales de compañía'),
+    'allergic' => _('no tiene animales de compañía y es alérgic@')}
+  TP_PARTY = {'like-out' => _('le gusta mucho salir'), 'not-like-out' => _('no le gusta salir'), 'like-bars' => _('le gusta ir de bares'),
+    'like-disco' => _('le gusta ir a la discoteca'), 'like-drink-friends' => _('le gusta ir a tomar algo con amigos'),
+    'love-party' => _('le encanta la fiesta'), 'not-like-party' => _('no me gusta nada la fiesta')}
+  TP_MUSIC = {'like-music' => _('le gusta la música'), 'no-like-music' => _('no le gusta la música')}
+  TP_CINEMA = {'like-cinema' => _('Me gusta ir al cine'), 'not-like-cinema' => _('no me gusta ir al cine')}
 
   # Points for the Cellove index
   CELLOVE_USER_VISIT = 1
