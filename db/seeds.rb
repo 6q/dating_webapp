@@ -14,6 +14,8 @@ YAML.load(ENV['ROLES']).each do |role|
 end
 puts 'DEFAULT USERS'
 user = FactoryGirl.create(:regular_user_optin, :admin_role, :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup)
+Characteristic.create(user_id: user.id, creator_id: user.id)
+user.create_general_settings({})
 puts 'user: ' << user.name
 
 def create_towns
@@ -27,6 +29,8 @@ create_towns
   u = FactoryGirl.create(:regular_user_optin)
   receipt = u.send_message(user, Faker::Lorem.paragraphs.join("\n"), Faker::Lorem.sentence)
   user.reply_to_sender(receipt, Faker::Lorem.paragraph)
+  u.create_general_settings({})
+  Characteristic.create(user_id: u.id, creator_id: u.id)
 end
 
 user.mailbox.inbox.sample(5).each { |c| c.move_to_trash(user) }
