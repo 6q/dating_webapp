@@ -10,11 +10,6 @@ module UserHelper
     end
   end
 
-  def online?(user)
-    #TODO: Implement
-    rand > 0.5000
-  end
-
   def user_action_links
     html = '<li class="message">' + link_to('Send Message', '#fast-reply', 'data-toggle' => 'modal') + '</li>'
     html += '<li class="chat">' + link_to('Chat', '/user/chat/') + '</li>'

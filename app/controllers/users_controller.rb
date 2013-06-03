@@ -54,7 +54,6 @@ class UsersController < ApplicationController
   end
 
   def settings
-    render 'settings'
   end
 
   def nice_couple

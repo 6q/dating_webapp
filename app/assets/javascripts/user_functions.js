@@ -3,6 +3,7 @@
 //= require jquery.auderoFlashingText.min.js
 //= require jquery.tmpl.min.js
 //= require jquery.cookie.js
+//= require jquery.jcarousel.min.js
 
 $(document).ready(function() {
   setTimeout(getNotifications, 60000);

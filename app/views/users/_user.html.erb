@@ -1,5 +1,5 @@
 <li>
-  <article class="user-card online">
+  <article class="user-card <%= user.online? ? "online" : "" %>">
     <ul class="pics">
       <li><%= link_to profile_pic(user), user %></li>
       <li><%= link_to profile_pic(user), user %></li>
