@@ -238,13 +238,18 @@ class User < ActiveRecord::Base
     end
   end
 
+  def hidden_users(hidden_user_ids)
+    where("users.id NOT IN (?)", hidden_user_ids)
+  end
+
   # Get all user ids of the people for which I appear in their blocked list
   def invisible_to_me
-    UserBlock.where(blocked_user_id: self.id).map{ |u| u.user_id }
+    UserBlock.where(blocked_user_id: self.id).pluck(:user_id)
   end
 
   def get_all_invisible_to_me
-    users = self.hidden_user_ids.concat(self.invisible_to_me)
+    invited_users = User.with_role(:invited_user).pluck('users.id')
+    users = self.hidden_user_ids.concat(self.invisible_to_me).concat(invited_users)
     if users == []
       # Needed to fix MySQL bug where an '.. NOT IN (NULL)' query does not work
       return [self.id]
