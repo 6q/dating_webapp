@@ -22,19 +22,25 @@
       <div class="tab-content">
         <!-- begin tabs -->
         <div class="tab-pane active" id="confirmados">
-          <% current_user.confirmed_recommenders.each do |rec| %>
+          <% @confirmed_recommenders.each do |rec| %>
             <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
           <% end %>
-          <%= render '/shared/user/pagination' %>
+          <div class="pagination">
+            <%= pager_total(@confirmed_recommenders) %>
+          </div>
+          <%= paginate @confirmed_recommenders %>
         </div>
 
         <div class="tab-pane" id="confirmar">
           <% @type = 'por-confirmar' %>
 
-          <% current_user.unconfirmed_recommenders.each do |rec| %>
+          <% @unconfirmed_recommenders.each do |rec| %>
             <%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
           <% end %>
-          <%= render '/shared/user/pagination' %>
+          <div class="pagination">
+            <%= pager_total(@unconfirmed_recommenders) %>
+          </div>
+          <%= paginate @unconfirmed_recommenders %>
         </div>
 
         <div class="tab-pane" id="attributes">

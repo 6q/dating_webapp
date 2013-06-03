@@ -72,6 +72,8 @@ class UsersController < ApplicationController
   end
 
   def my_matchmakers
+    @confirmed_recommenders = current_user.confirmed_recommenders.page(params[:page])
+    @unconfirmed_recommenders = current_user.unconfirmed_recommenders.page(params[:page])
     @invitation = Invitation.new
   end
 
