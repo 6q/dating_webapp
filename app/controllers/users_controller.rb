@@ -103,48 +103,20 @@ class UsersController < ApplicationController
 
   # Interaction routes
   def likes
-    distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
-    hidden_user_ids = current_user.get_all_invisible_to_me
     likes = User.people_who_like_me(current_user).pluck(:creator_id)
-
-    if params[:q]
-      params[:q] = params[:q].merge(id_in: likes)
-    else
-      params[:q] = {}
-      params[:q][:id_in] = likes
-    end
-
-    if params[:q][:s] == "distance asc"
-      params[:q].except!(:s)
-      @search = User.where("users.id NOT IN (?)", hidden_user_ids)
-                    .near(current_user, distance, { :units => :km, :sort => :distance })
-                    .search(params[:q])
-    elsif params[:q][:s] == "recent_interaction asc"
-      params[:q].except!(:s)
-      @search = User.where("users.id NOT IN (?)", hidden_user_ids).sort_interactions.search(params[:q])
-    elsif params[:q][:s] == "prop_actividad asc"
-      params[:q].except!(:s)
-      @search = User.select("users.*, count(notifications.id) AS activity_count")
-                    .joins(:messages => { :conversation => :activity })
-                    .group("users.id, notifications.id")
-                    .order("activity_count DESC")
-                    .where("users.id NOT IN (?)", hidden_user_ids)
-                    .search(params[:q])
-    else
-      @search = User.where("users.id NOT IN (?)", hidden_user_ids).search(params[:q])
-    end
-    params[:q].except!(:id_in)
+    search_and_order(likes)
     @users = @search.result.page(params[:page])
   end
 
   def likes_of_mine
-    # @search = User.people_i_like(current_user).search(params[:q])
-    # @users = @search.result.page(params[:page])
-    @users = Kaminari.paginate_array(current_user.people_i_like).page(params[:page])
+    likes = User.people_i_like(current_user).pluck(:user_id)
+    search_and_order(likes)
+    @users = @search.result.page(params[:page])
   end
 
   def hits
-    @search = User.all_visitors(current_user).search(params[:q])
+    visits = User.all_visitors(current_user).pluck('users.id')
+    search_and_order(visits)
     @users = @search.result.page(params[:page])
   end
 
@@ -172,5 +144,38 @@ class UsersController < ApplicationController
 
     def set_visit_seen
       current_user.set_all_visits_seen
+    end
+
+    def search_and_order(in_filter)
+      distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
+      hidden_user_ids = current_user.get_all_invisible_to_me
+
+      if params[:q]
+        params[:q] = params[:q].merge(id_in: in_filter)
+      else
+        params[:q] = {}
+        params[:q][:id_in] = in_filter
+      end
+
+      if params[:q][:s] == "distance asc"
+        params[:q].except!(:s)
+        @search = User.where("users.id NOT IN (?)", hidden_user_ids)
+                      .near(current_user, distance, { :units => :km, :sort => :distance })
+                      .search(params[:q])
+      elsif params[:q][:s] == "recent_interaction asc"
+        params[:q].except!(:s)
+        @search = User.where("users.id NOT IN (?)", hidden_user_ids).sort_interactions.search(params[:q])
+      elsif params[:q][:s] == "prop_actividad asc"
+        params[:q].except!(:s)
+        @search = User.select("users.*, count(notifications.id) AS activity_count")
+                      .joins(:messages => { :conversation => :activity })
+                      .group("users.id, notifications.id")
+                      .order("activity_count DESC")
+                      .where("users.id NOT IN (?)", hidden_user_ids)
+                      .search(params[:q])
+      else
+        @search = User.where("users.id NOT IN (?)", hidden_user_ids).search(params[:q])
+      end
+      params[:q].except!(:id_in)
     end
 end

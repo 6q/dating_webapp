@@ -326,10 +326,10 @@ class User < ActiveRecord::Base
     User.joins(:rates).joins(:ratings_given).where("users.id != ?", user.id)
   end
 
-  def people_who_like_me
-    self.likers.map { |l| l.creator }
+  def self.people_who_like_me(user)
+    #self.likers.map { |l| l.creator }
     # Need an AR::Relation for the Search part of Ransack :\
-    #user.likers.where(nil)
+    user.likers.where(nil)
   end
 
   def self.people_i_like(user)
