@@ -26,6 +26,14 @@ $(document).ready(function() {
     $(this).parent().parent().remove();
   });
 
+  $(".skin-change").click(function() {
+    console.log('Skin change clicked.');
+    var number = $(this).data("skin"),
+        bg = '/assets/bg/main-bg' + number + '.jpg';
+    $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
+    console.log('Changed bg');
+  });
+
   if (!$("#caixarandom").auderoFlashingText("isRunning")) {
     $("#caixarandom").auderoFlashingText({
       fadeOut: 1500,
