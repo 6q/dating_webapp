@@ -3,7 +3,6 @@ development:
   encoding: utf8
   database: cellove_development
   pool: 5
-  user: root
   host: 127.0.0.1
 
 test:
@@ -11,14 +10,13 @@ test:
   encoding: utf8
   database: cellove_test
   pool: 5
-  user: <%= ENV.fetch('CELLOVE_MYSQL_TEST_USER', 'root')%>
+  username: <%= ENV.fetch('CELLOVE_MYSQL_TEST_USER', 'root')%>
   host: 127.0.0.1
-  password: <%= ENV.fetch('CELLOVE_MYSQL_TEST_PASS', '') %>
+  password: '<%= ENV.fetch('CELLOVE_MYSQL_TEST_PASS', '') %>'
 
 production:
   adapter: mysql2
   encoding: utf8
   database: cellove_production
   pool: 5
-  user: root
   host: 127.0.0.1

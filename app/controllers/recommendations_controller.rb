@@ -1,3 +1,4 @@
+#encoding: utf-8
 class RecommendationsController < ApplicationController
   skip_before_filter :matchmaker_user, only: [:create]
   before_filter :correct_user, only: [:accept, :deny]
