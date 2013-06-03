@@ -10,7 +10,7 @@
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
-						<a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><img src="/users/profile.jpg" width="210"></a>
+					<%= profile_pic(@user, { width: 210, height: 100 }) %>
 				</div>
 				<div class="description">
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>

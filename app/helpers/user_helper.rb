@@ -1,12 +1,12 @@
 #encoding: utf-8
 module UserHelper
-  def profile_pic(user = current_user, options = {width: 210})
+  def profile_pic(user = current_user, options = {width: 210, height: 100})
     pp = user.profile_picture
     if user.profile_picture
       size = "#{options[:width]}x#{options[:height]}"
       image_tag(pp.image.thumb(size).url)
     else
-      image_tag("placeholder-#{user.gender}-#{Random.rand(1..3)}.jpg")
+      image_tag("placeholder-#{user.gender}-#{Random.rand(1..3)}.jpg", width: options[:width], height: options[:height])
     end
   end
 

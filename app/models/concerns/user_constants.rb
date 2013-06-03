@@ -2,7 +2,7 @@
 module UserConstants
   extend ActiveSupport::Concern
 
-  GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
+  GENDER = {'male' => _('hombre'), 'female' => _('mujer')}
   ORIENTATION = {'heterosexual' => _('heterosexual'), 'homosexual' => _('homosexual'), 'bisexual' => _('bisexual')}
   MARITAL_STATUS = {'single' => _('solter@'),'engaged' => _('ocupad@'), 'separated' => _('separad@'), 'divorced' => _('divorciad@'),
     'married' => _('casad@'), 'widowed' => _('viud@')}
@@ -20,7 +20,7 @@ module UserConstants
     'hairless' => _('sin pelo')}
   COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bien'), 'athletic' => _('atlético'), 'strong' => _('fuerte'), 
     'curvy' => _('con curvas'), 'obese' => _('obeso')}
-  SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'), 
+  SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'),
     'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 
     'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
@@ -28,6 +28,8 @@ module UserConstants
     'african' => _('africana'), 'asian' => _('asiática') }
   STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 
     'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
+  LANGUAGE = { 'english' => _('Inglés'), 'spanish' => _('Español'), 'french' => _('Francés'), 'italian' => _('Italiano'), 'other' => _('otro') }
+  LANGUAGE_LEVEL = { 'low' => _('bajo'), 'medium' => _('medio'), 'hight' => _('alto') }
   JOB = {'artistic' => _('trabajos artísticos y creativos '),'banking' => _('banca, financiero'),'administrative' => _('adminsitrativo'),
     'technology' => _('ordenadores y tecnología'),'construction' => _('construcción'),'education' => _('educación'),
     'advertising' => _('publicidad, entretenimiento y medios'),'management' => _('ejecutivo y gestión '),'health'=> _('salud'),
@@ -54,11 +56,13 @@ module UserConstants
   MUSIC = {'like-music' => _('Me gusta la música'), 'no-like-music' => _('no me gusta la música')}
   MUSIC_GENRE = {'pop' => _('pop'), 'rock' => _('rock'), 'classical' => _('clásica'), 'opera' => _('ópera'), 'heavy' => _('heavy'),
     'everything' => _('de todo un poco')}
-  CINEMA = {'like-cinema' => _('Me gusta ir al cine'), 'not-like-cinema' => _('no me gusta ir al cine')}
-  CINEMA_FREQUENCY = {'occasionally' => _('solo ocasionalemnete'), 'often' => _('muy a menudo')}
-  CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
+  CINEMA = {'like-cinema' => _('Me gusta ir al cine'), 'not-like-cinema' => _('No me gusta ir al cine')}
+  CINEMA_FREQUENCY = {'occasionally' => _('ocasionalemnete'), 'often' => _('muy a menudo')}
+  CINEMA_GENRE = {'romantic' => _('romántico'), 'dramas' => _('drama'), 'comedies' => _('comedia'), 'police' => _('policíaco'),
     'terror' => _('terror')}
 
+
+  # LOOKING FOR OPTIONS
   LF_RELATIONSHIP = {'friends' => _('hacer nuevas amistades'), 'fun' => _('salir y pasarlo bien'), 
     'couple' => _('establecer una relación estable'), 'marry' => _('casarme')}
   LF_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
@@ -81,7 +85,7 @@ module UserConstants
   LF_CHILD = { 'have-children' => _('tenga hijos'),'no-children' => _('no tenga hijos'),'no-want-children' => _('no tenga hijos, y no quiera tener'),
     'no-kids-i-want' => _('no tenga hijos, pero quiera tener'),'have-children-no-want-more' => _('tenga hijos, y no quiera tener mas '),
     'have-children-want-more' => _('tenga hijos, y quiera tener mas '),'no-like-kids' => _('no le gusten los niños')}
-  
+
   # THIRD PERSON OPTIONS
   TP_CHILD = { 'have-children' => _('tiene hijos'),'no-children' => _('no tiene hijos'),'no-want-children' => _('no tiene hijos, y no quiere tener'),
     'no-kids-i-want' => _('no tiene hijos, pero quiere tener'),'have-children-no-want-more' => _('tiene hijos, y no quiere tener mas '),
