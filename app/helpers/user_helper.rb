@@ -1,6 +1,6 @@
 #encoding: utf-8
 module UserHelper
-  def profile_pic(user = current_user, options = {width: 210, height: 100})
+  def profile_pic(user = current_user, options = {width: 210, height: 210})
     pp = user.profile_picture
     if user.profile_picture
       size = "#{options[:width]}x#{options[:height]}"

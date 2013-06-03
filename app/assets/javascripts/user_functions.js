@@ -32,6 +32,8 @@ $(document).ready(function() {
   if (hasSkin) {
     var bg = '/assets/bg/main-bg' + hasSkin + '.jpg';
     $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
+  } else {
+    $.getScript("/background.json").done(function(background, textStatus) { });
   }
 
   $(".skin-change").click(function() {
@@ -39,6 +41,15 @@ $(document).ready(function() {
         bg = '/assets/bg/main-bg' + number + '.jpg';
     $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
     $.cookie("cellove-skin", number);
+    $.ajax({
+      url: "/background.json",
+      dataType: "jsonp",
+      type: "post",
+      data: {
+        background: number
+      },
+      success: function(data) { }
+    });
   });
 
   if (!$("#caixarandom").auderoFlashingText("isRunning")) {
@@ -65,8 +76,8 @@ $(document).ready(function() {
       onstatechange: function(){
         $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
         var years = $("#years").val().split(';');
-        $('#q_years_lteq').val(years[0]);
-        $('#q_years_gteq').val(years[1]);
+        $('#q_years_end_lteq').val(years[0]);
+        $('#q_years_start_gteq').val(years[1]);
       }
     });
 

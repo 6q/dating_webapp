@@ -8,13 +8,19 @@ Cellove::Application.routes.draw do
   end
   root :to => "home#index"
 
-  devise_for :users, controllers: {
+  devise_for :users, :skip => [:sessions], controllers: {
     registrations: 'user_registrations'
-  }
+  } do
+    post "/users" => "devise/sessions#create", :as => :user_session
+    delete "/users" => "devise/sessions#destroy", :as => :destroy_user_session
+  end
 
-  devise_for :matchmakers, class_name: "User", controllers: {
+  devise_for :matchmakers, class_name: "User", :skip => [:sessions], controllers: {
     registrations: 'matchmaker_registrations'
-  }
+  } do
+    post "/matchmakers" => "devise/sessions#create", :as => :matchmaker_session
+    delete "/matchmakers" => "devise/sessions#destroy", :as => :destroy_matchmaker_session
+  end
 
   resource :profile, only: [:show, :update]
   
@@ -53,6 +59,8 @@ Cellove::Application.routes.draw do
     put 'general_settings',         to: 'users#general_settings',                 as: :general_settings
   end
   post '/rate' => 'rater#create', :as => 'rate'
+  post 'background',               to: 'users#save_background',                   as: :save_background
+  get 'background',                to: 'users#get_background',                    as: :get_background
 
   #get 'aviso-legal' => 'flat_pages#legal', as: :legal
   get 'que-es' => 'flat_pages#what', as: :what
