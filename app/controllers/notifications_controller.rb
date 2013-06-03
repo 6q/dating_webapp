@@ -7,9 +7,15 @@ class NotificationsController < ApplicationController
     @notificationlist = []
     @notifications.each do |notification|
       u = User.find(notification.sender_id)
+      pp = u.profile_picture
+      if u.profile_picture
+        picture_url = pp.image.thumb(size).url
+      else
+        picture_url = "/assets/placeholder-#{u.gender}-#{Random.rand(1..3)}.jpg"
+      end
       @notificationlist.push({
         :id => notification.id, :name => u.full_name, :user_id => u.id,
-        :photo => "/assets/placeholder2.jpg", #u.profile_picture.image.thumb("80x80").url,
+        :photo => picture_url,
         :town => u.town, :age => u.age,
         :status => CelloveNotification::NOTIFICATION_TYPE[notification.notifiable_type.to_sym]
       })
