@@ -104,9 +104,9 @@ class UsersController < ApplicationController
 
   # Interaction routes
   def likes
-    @search = User.people_who_like_me(current_user).search(params[:q])
-    @users = @search.result.page(params[:page])
-    render 'likes'
+    #@search = User.people_who_like_me(current_user).search(params[:q])
+    #@users = @search.result.page(params[:page])
+    @users = current_user.people_who_like_me.page(params[:page])
   end
 
   def likes_of_mine
