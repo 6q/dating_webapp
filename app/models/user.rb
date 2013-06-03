@@ -124,7 +124,7 @@ require_dependency 'minimum_age_validator'
 require_dependency 'user_retrieval'
 
 class User < ActiveRecord::Base
-  GENDER = {'male' => _('Hombre'), 'female' => _('Mujer')}
+  GENDER = {'male' => _('hombre'), 'female' => _('mujer')}
   ORIENTATION = {'heterosexual' => _('heterosexual'), 'homosexual' => _('homosexual'), 'bisexual' => _('bisexual')}
   MARITAL_STATUS = {'single' => _('solter@'),'engaged' => _('ocupad@'), 'separated' => _('separad@'), 'divorced' => _('divorciad@'),
     'married' => _('casad@'), 'widowed' => _('viud@')}
@@ -178,9 +178,9 @@ class User < ActiveRecord::Base
   MUSIC = {'like-music' => _('Me gusta la música'), 'no-like-music' => _('no me gusta la música')}
   MUSIC_GENRE = {'pop' => _('pop'), 'rock' => _('rock'), 'classical' => _('clásica'), 'opera' => _('ópera'), 'heavy' => _('heavy'),
     'everything' => _('de todo un poco')}
-  CINEMA = {'like-cinema' => _('Me gusta ir al cine'), 'not-like-cinema' => _('no me gusta ir al cine')}
-  CINEMA_FREQUENCY = {'occasionally' => _('solo ocasionalemnete'), 'often' => _('muy a menudo')}
-  CINEMA_GENRE = {'romantic' => _('románticas'), 'dramas' => _('dramas'), 'comedies' => _('comedias'), 'police' => _('policíacas'),
+  CINEMA = {'like-cinema' => _('Me gusta ir al cine'), 'not-like-cinema' => _('No me gusta ir al cine')}
+  CINEMA_FREQUENCY = {'occasionally' => _('ocasionalemnete'), 'often' => _('muy a menudo')}
+  CINEMA_GENRE = {'romantic' => _('romántico'), 'dramas' => _('drama'), 'comedies' => _('comedia'), 'police' => _('policíaco'),
     'terror' => _('terror')}
 
 
