@@ -150,6 +150,8 @@ class User < ActiveRecord::Base
     'african' => _('africana'), 'asian' => _('asiática') }
   STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 
     'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
+  LANGUAGE = { 'english' => _('Inglés'), 'spanish' => _('Español'), 'french' => _('Francés'), 'italian' => _('Italiano'), 'other' => _('otro') }
+  LANGUAGE_LEVEL = { 'low' => _('bajo'), 'medium' => _('medio'), 'hight' => _('alto') }
   JOB = {'artistic' => _('trabajos artísticos y creativos '),'banking' => _('banca, financiero'),'administrative' => _('adminsitrativo'),
     'technology' => _('ordenadores y tecnología'),'construction' => _('construcción'),'education' => _('educación'),
     'advertising' => _('publicidad, entretenimiento y medios'),'management' => _('ejecutivo y gestión '),'health'=> _('salud'),

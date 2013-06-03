@@ -176,10 +176,10 @@
 							<%= user.label :study_level, 'Mi nivel de estudios es' %>
 							<%= user.select :study_level, study_level_options %>
 							<hr class="thin">
-							<%= user.label :language, 'Hablo'%>
-							<%= user.text_field :language, class: 'span1' %>
-							<%= user.label :language_level,'idiomas a nivel' %>
-							<%= user.text_field :language_level, class: 'span2' %>
+							<%= user.label :language, 'También hablo'%>
+							<%= user.select :language, language_options, {}, {:class => 'span2'} %>
+							<%= user.label :language_level,'a nivel' %>
+							<%= user.select :language_level, language_level_options, {}, {:class => 'span2'} %>
 							<hr class="thin">
 							<%= user.label :job, 'Trabajo en' %>
 							<%= user.select :job, job_options %>
@@ -677,10 +677,4 @@
   	$(this).tab('show');
 	})
 </script>
-
-
-
-
-
-
 
