@@ -21,9 +21,13 @@
 				<div class="description">
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
 						<p class="small"><%= "#{User::GENDER[@user.gender]} - #{@user.age} años - #{@user.height} altura" %></p>
-						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]} y #{User::TP_CHILD[@user.child]}. Busca
-							#{User::GENDER[@user.lf_gender]} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para 
-							#{User::LF_RELATIONSHIP[@user.lf_relationship]} y que esté cerca de #{@user.town}, #{@user.country}" %>
+						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
+							<% if @user.child %>
+								<%= "y #{User::TP_CHILD[@user.child]}." %>
+							<% end %>
+							<% if @user.lf_gender %>
+								<%= "Busca #{User::GENDER[@user.lf_gender]} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para #{User::LF_RELATIONSHIP[@user.lf_relationship]} y que esté cerca de #{@user.town}, #{@user.country}" %>
+							<% end %>
 						</p>
 				</div>
 
