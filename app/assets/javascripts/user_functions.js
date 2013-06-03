@@ -2,6 +2,7 @@
 //= require jquery.prettyPhoto
 //= require jquery.auderoFlashingText.min.js
 //= require jquery.tmpl.min.js
+//= require jquery.cookie.js
 
 $(document).ready(function() {
   setTimeout(getNotifications, 60000);
@@ -26,10 +27,17 @@ $(document).ready(function() {
     $(this).parent().parent().remove();
   });
 
+  var hasSkin = $.cookie("cellove-skin");
+  if (hasSkin) {
+    var bg = '/assets/bg/main-bg' + hasSkin + '.jpg';
+    $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
+  }
+
   $(".skin-change").click(function() {
     var number = $(this).data("skin"),
         bg = '/assets/bg/main-bg' + number + '.jpg';
     $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
+    $.cookie("cellove-skin", number);
   });
 
   if (!$("#caixarandom").auderoFlashingText("isRunning")) {
