@@ -289,7 +289,7 @@ class User < ActiveRecord::Base
   has_many :rates, :class_name => "Rate", :foreign_key => :rateable_id, :dependent => :destroy
   has_many :raters, :through => :rates, :source => :rater  
 
-  accepts_nested_attributes_for :characteristics
+  accepts_nested_attributes_for :my_characteristics
 
   rolify
   # Include default devise modules. Others available are:
