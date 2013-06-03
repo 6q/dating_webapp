@@ -315,7 +315,7 @@ class User < ActiveRecord::Base
       # Absolute average (as in a number between 1 and 5)
       avg_absolute = total/self.confirmed_recommenders.length
       # Return the avg in percent
-      (avg_absolute/5.0)*100
+      ((avg_absolute-1.0)/4)*100
     else
       33
     end

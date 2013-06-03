@@ -666,7 +666,766 @@
       </div>
     </div>
   
+=======
+		</div>
+	</div>
 
+	<hr class="thin">
+
+	
+	<%= form_for @user, :url => profile_path, :html => {:class => "form-horizontal"} do |f| %>
+		<section class="boxed">
+			<div class="boxed-inner">
+				<fieldset>
+					<header>
+						<h1>Datos de acceso a Cellove</h1>
+						<br>
+						<p>Modifica aquí tus datos de acceso a Cellove</p>
+					</header>
+					<div>
+						<div class="span4 left">
+							<div class="control-group">
+								<%= f.label :email, 'Email', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.email_field :email, :class => 'span2' %>
+								</div>
+							</div>
+							<div class="control-group">
+								<%= f.label :email_confirmation, 'Confirmar Email', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.email_field :email_confirmation, :class => 'span2' %>
+								</div>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="control-group">
+								<%= f.label :password, 'Contraseña', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.password_field :password, :class => 'span2' %>
+								</div>
+							</div>
+							<div class="control-group">
+								<%= f.label :password_confirmation, 'Confirmar contraseña', :class => 'control-label' %>
+								<div class="controls">
+									<%= f.password_field :password_confirmation, :class => 'span2' %>
+								</div>
+							</div>
+						</div>
+						
+						<div class="center">
+							<%= f.submit 'Modificar datos de acceso', :class => 'btn btn-info' %>
+							<hr class="thin">
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</section>
+	<% end %>
+
+	<hr class="thin">
+
+	<%= form_for @user, :url => profile_path do |user| %>
+		<section class="boxed">
+			<div class="boxed-inner">
+				<fieldset class="quien form-inline">
+					<header>
+						<h1>¿Quien eres?</h1>
+					</header>
+					<div class="span9">
+						Me llamo 
+						<%= user.text_field :name, :class => 'input-small' %>
+						<%= user.text_field :surname, :class => 'input-small' %>
+						pero quiero que mi nombre para mostrar sea 
+						<%= user.text_field :screen_name, :class => 'input-small' %>
+						<small>* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.</small>
+					</div>
+					<div class="center">
+							<%= user.submit 'Modificar datos personales', :class => 'btn btn-info' %>
+							<hr class="thin">
+						</div>
+				</fieldset>
+			</div>
+		</section>
+	<% end %>
+
+	<hr class="thin">
+
+	<article class="profile-tabs">
+		<ul class="nav nav-tabs" id="myTab">
+		  <li class="active"><a href="#como" name="tab_como">¿Cómo eres?</a></li>
+		  <li><a href="#gustos" name="tab_gustos">Tus gustos</a></li>
+		  <li><a href="#buscas" name="tab_buscas">Qué buscas</a></li>
+		  <li><a href="#dicen" name="tab_dicen">Que dicen de ti</a></li>
+		</ul>
+		 
+		<div class="boxed">
+			<div class="boxed-inner">
+				<div class="tab-content">
+					<div class="tab-pane active" id="como">
+						<article class="form-inline">
+							
+							<%= form_for @user, :url => profile_path do |user| %>
+							<hr class="thin">
+							<%= user.label :gender, 'Soy' %>
+      				<%= user.select :gender, gender_options,{}, { :class => 'span2' }  %>
+      				<%= user.select :orientation, orientation_options,{}, { :class => 'span2' }  %>
+      				<%= user.label :marital_status, 'y' %>
+      				<%= user.select :marital_status, marital_status_options,{}, { :class => 'span2' } %>
+							<hr class="thin">
+							<%= user.label :birth_date, "Nací el" %>
+							<%= user.text_field :birth_date_day, placeholder: Date.today.day, class: "span1" %>
+							<%= user.label :birth_date, "de" %>
+      				<%= user.date_select(:birth_date, {:discard_day =>'true', :discard_year => 'true'}, :class=>'span2' ) %>
+      				<%= user.label :birth_date_year, "de" %>
+      				<%= user.text_field :birth_date_year, placeholder: Date.today.year, class: "span1" %>
+      				<hr class="thin">
+
+      				<%= user.label :country, "Vivo en" %>
+      				<%= user.select :country, country_options, {}, { :class => 'span2' } %>
+							<%= user.label :postal_code, ' y mi código postal es el' %>
+							<%= user.text_field :postal_code, placeholder: 'CP', :class => 'input-mini' %>.
+
+							<hr>
+							<%= user.label :marital_status, "Ahora mismo estoy" %>
+      				<%= user.select :marital_status, marital_status_options, {}, {:class => 'span2'} %>
+      				<%= user.label :child,'y' %>
+      				<%= user.select :child, child_options, {}, {:class =>'span4'} %>
+    					<hr class="thin">
+    					<%= user.label :house,'Vivo' %>
+      				<%= user.select :house, house_options, {}, {:class=> 'span4'} %>	
+
+      				<hr>
+      				<%= user.label :physical_desc, 'Me considero ' %>
+							<%= user.select :physical_desc, physical_desc_options, {} , {:class => 'span2'} %>
+							<%= user.label :height, ', mido' %>
+							<%= user.text_field :height, :class => 'input-mini' %>
+							<%= user.label :weight, 'm. y peso ' %>
+							<%= user.text_field :weight, :class => 'input-mini' %>
+							kg.
+							<hr class="thin">
+							<%= user.label :complexion, 'Tengo un cuerpo ' %>
+							<%= user.select :complexion, complexion_options,{}, {:class => 'span2'} %>.
+							<hr class="thin">
+							<%= user.label :eyes, 'Mis ojos son de color' %>
+							<%= user.select :eyes, eyes_options, {}, {:class=> 'span2'} %>, 
+							<%= user.label :hair,'pelo color' %>
+							<%= user.select :hair, hair_options, {}, {:class=>'span2'} %>
+							<%= user.label :hair_style,' y ' %>
+							<%= user.select :hair_style, hair_style_options, {}, {:class=>'span2'} %>
+							<hr class="thin">
+							<%= user.label :physical_style, 'Mi estilo es' %>
+							<%= user.select :physical_style, physical_style_options, {}, {:class=>'span2'} %>
+							<hr>
+							<%= user.label :religion, 'Soy' %>
+							<%= user.select :religion, religion_options, {},{:class => 'span2'} %>
+							<%= user.label :religion_activity, ' y' %>
+							<%= user.select :religion_activity, religion_activity_options ,{},{:class => 'span5'} %>
+							<hr class="thin">
+							<%= user.label :citizenship, 'Tengo nacionalidad ' %>
+							<%= user.text_field :citizenship, :class => 'span2' %>
+							<%= user.label :ethnicity, ' y soy de étnia' %>
+							<%= user.select :ethnicity, ethnicity_options, {}, {:class => 'span2'} %>
+
+							<hr>
+							<%= user.label :study_level, 'Mi nivel de estudios es' %>
+							<%= user.select :study_level, study_level_options %>
+							<hr class="thin">
+							<%= user.label :language, 'También hablo'%>
+							<%= user.select :language, language_options, {}, {:class => 'span2'} %>
+							<%= user.label :language_level,'a nivel' %>
+							<%= user.select :language_level, language_level_options, {}, {:class => 'span2'} %>
+							<hr class="thin">
+							<%= user.label :job, 'Trabajo en' %>
+							<%= user.select :job, job_options, {}, :class => 'span4' %>
+							<%= user.label :salary, 'y mi nivel de ganancias es' %>
+							<%= user.text_field :salary, class: 'span1' %>€/año
+
+						</article>
+						<hr>
+							
+						<article>
+							<h3>¿Cómo te describirias?</h3>
+							<p>¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!</br>
+								No desaproveches esta oportunidad...</p>
+							<%= user.text_area :description %>
+							
+						</article>
+						<hr>
+						<article class="clearfix">
+							<h3>¿Cómo te consideras?</h3>
+							<p><em>Puntua de 1 a 5 cada una de estas características</em></p>
+							<div class="span1">
+								&nbsp;
+							</div>
+							
+							<%= user.fields_for :characteristics do |my| %>
+								
+								<div class="span3 offset1 pull-left">
+									<h5>Romántico</h5>
+									<%= my.text_field :romantic, :class =>"points" %>
+
+									<h5>Aventurero</h5>
+									<%= my.text_field :adventurer, :class =>"points" %>
+
+									<h5>Amable</h5>
+									<%= my.text_field :friendly, :class =>"points" %>
+
+									<h5>Familiar</h5>
+									<%= my.text_field :familiar, :class =>"points" %>
+
+									<h5>Trabajador</h5>
+									<%= my.text_field :hardWorking, :class =>"points" %>
+
+									<h5>Extrovertido</h5>
+									<%= my.text_field :extroverted, :class =>"points" %>
+
+									<h5>Generoso</h5>
+									<%= my.text_field :generous, :class =>"points" %>
+
+									<h5>Reservado</h5>
+									<%= my.text_field :reserved, :class =>"points" %>
+
+									<h5>Sociable</h5>
+									<%= my.text_field :sociable, :class =>"points" %>
+
+									<h5>Tranquilo</h5>
+									<%= my.text_field :quiet, :class =>"points" %>
+
+									<h5>Exigente</h5>
+									<%= my.text_field :demanding, :class =>"points" %>
+
+									<h5>Orgulloso</h5>
+									<%= my.text_field :prideful, :class =>"points" %>
+								</div>
+								
+
+								<div class="span1">
+									&nbsp;
+								</div>
+	
+								<div class="span3">
+									<h5>Solitario</h5>
+									<%= my.text_field :solitary, :class =>"points" %>
+	
+									<h5>Tenaz</h5>
+									<%= my.text_field :tenacious, :class =>"points" %>
+	
+									<h5>Atento</h5>
+									<%= my.text_field :attentive, :class =>"points" %>
+	
+									<h5>Bienhumorado</h5>
+									<%= my.text_field :goodHumored, :class =>"points" %>
+	
+									<h5>Espontáneo</h5>
+									<%= my.text_field :spontaneous, :class =>"points" %>
+	
+									<h5>Inquieto</h5>
+									<%= my.text_field :restless, :class =>"points" %>
+	
+									<h5>Sensible</h5>
+									<%= my.text_field :sensitive, :class =>"points" %>
+	
+									<h5>Tímido</h5>
+									<%= my.text_field :shy, :class =>"points" %>
+	
+									<h5>Posesivo</h5>
+									<%= my.text_field :possessive, :class =>"points" %>
+	
+									<h5>Celoso</h5>
+									<%= my.text_field :jealous, :class =>"points" %>
+	
+									<h5>Fiel</h5>
+									<%= my.text_field :faithful, :class =>"points" %>
+	
+								</div>
+							<% end %>
+						
+						</article>
+						<hr>
+						<div class="center">
+							<button type="submit" class="btn btn-info btn-large">Guardar cambios</button>
+							<hr class="thin">
+						</div>
+						<% end %>
+						
+					</div>
+
+					<div class="tab-pane" id="gustos">	
+						<article class="form-inline">  
+						<%= form_for @user, :url => profile_path do |user| %>	
+							<hr class="thin">
+							<h5>Dieta</h5>
+							<%= user.label :diet, 'Me gusta la comida' %>
+							<%= user.select :diet, diet_options %>
+							<hr>
+							<h5>Hábitos</h5>
+							<%= user.select :smoke, smoke_options,{}, {:class => 'span3'} %> y 
+							<%= user.select :alcohol, alcohol_options %>
+							<hr>
+							<h5>Matrimonio</h5>
+							<%= user.select :wedding_opinion, wedding_opinion_options, {}, {:class => 'span4'} %>
+							<hr>
+							<h5>Animales</h5>
+							<%= user.select :animals, animals_options, {}, {:class => 'span4'} %>
+							<hr>
+							<h5>Ocio</h5>
+							<%= user.select :party, party_options, {}, {:class => 'span4'} %>
+							<hr class="thin">
+							<%= user.select :music, music_options, {}, {:class => 'span3'} %>
+							<%= user.label :music_genre, ', me gusta el' %>
+							<%= user.select :music_genre, music_genre_options, {}, {:class => 'span2'} %>
+							<hr class="thin">
+							<%= user.select :cinema, cinema_options, {}, {:class => 'span3'} %>
+							<%= user.select :cinema_frequency, cinema_frequency_options, {}, {:class => 'span3'} %>
+							<%= user.label :cinema_genre, ', de género' %>
+							<%= user.select :cinema_genre, cinema_genre_options, {}, {:class => 'span2'} %>
+							<hr class="thin">
+
+							<div class="span4">En mi tiempo libre me gusta:</div>
+							<div class="clearfix"></div>
+
+							<div class="checkbox-group">
+								<div class="span2">
+									<div>
+										<%= user.check_box :like_sport %>
+										<%= user.label :like_sport,'Deporte' %>
+									</div>
+									<div>
+										<%= user.check_box :like_read %>
+										<%= user.label :like_read,'Lectura' %>
+									</div>
+									<div>
+										<%= user.check_box :like_cinema %>
+										<%= user.label :like_cinema,'Cine' %>
+									</div>
+								</div>
+								<div class="span2">
+									<div>
+										<%= user.check_box :like_walk %>
+										<%= user.label :like_walk,'Pasear' %>
+									</div>
+									<div>
+										<%= user.check_box :like_beach %>
+										<%= user.label :like_beach,'Playa' %>
+									</div>
+									<div>
+										<%= user.check_box :like_mountain %>
+										<%= user.label :like_mountain,'Montaña' %>
+									</div>
+								</div>
+								<div class="span3">
+									<div>
+										<%= user.check_box :like_quiet %>
+										<%= user.label :like_quiet,'Estar tranquilo en casa' %>
+									</div>
+									<div>
+										<%= user.check_box :like_family %>
+										<%= user.label :like_family,'Estar con la familia' %>
+									</div>
+									<div>
+										<%= user.check_box :like_friends %>
+										<%= user.label :like_friends,'Estar con mis amigos' %>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+		
+							<hr class="thin">
+							
+						</article>
+								
+						<div class="center">
+							<button class="btn btn-info btn-large">Guardar gustos</button>
+						</div>
+						<% end %>
+
+						<hr class="thin">
+				  </div>
+
+				  <div class="tab-pane" id="buscas">
+						<article class="form-inline">
+							<hr class="thin">
+							<%= form_for @user, :url => profile_path do |user| %>
+								<%= user.label :lf_gender, "Busco" %>
+      					<%= user.select :lf_gender, gender_options, {}, :class => 'span2'  %>
+      					<%= user.select :lf_orientation, orientation_options,{}, :class => 'span2'  %>
+      					<%= user.label :lf_marital_status, "y" %>
+      					<%= user.select :lf_marital_status, marital_status_options,	{}, { :class => 'span2' } %>
+      					,
+								<hr class="thin">
+								<%= user.label :lf_age_between, 'de entre' %>
+								<%= user.text_field :lf_age_between, :class => 'input-mini' %>
+								<%= user.label :lf_age_to, 'y' %>
+								<%= user.text_field :lf_age_to, :class => 'input-mini' %>
+								<%= user.label :lf_relationship, 'años. Para' %>
+								<%= user.select :lf_relationship, lf_relationship_options, {}, :class => 'span4' %>
+								<hr class="thin">
+
+								<hr class="thin">
+								<%= user.label :lf_child, 'Que ' %>
+								<%= user.select :lf_child, lf_child_options, {}, :class => 'span4' %>
+      					<hr class="thin">
+      					<%= user.label :lf_house, 'Que viva' %>
+      					<%= user.select :lf_house, lf_house_options, {}, :class => 'span4' %>
+      					<%= user.label :lf_city, 'en' %>
+      					<%= user.text_field :lf_city, :class=> 'span2' %>
+      					<%= user.label :lf_country, ',' %>
+      					<%= user.select :lf_country, country_options, {}, :class=>'span2' %>
+      					<hr class="thin">
+								<%= user.label :lf_postal_code, ' cerca del código postal' %>
+								<%= user.text_field :lf_postal_code, placeholder: 'CP', :class => 'input-mini' %>.
+							
+								<hr>
+								<%= user.label :lf_physical_desc, 'Que sea' %>
+								<%= user.select :lf_physical_desc, physical_desc_options,{}, :class =>"span2" %>
+								<%= user.label :lf_physical_style, ', con estilo' %>
+								<%= user.select :lf_physical_style, physical_style_options,{}, :class =>"span2" %>.
+								<hr class="thin">
+								<%= user.label :lf_height_between, 'Que mida entre' %>
+								<%= user.text_field :lf_height_between, :class => 'input-mini' %>
+								<%= user.label :lf_height_to, 'y' %>
+								<%= user.text_field :lf_height_to, :class => 'input-mini' %>
+								<%= user.label :lf_weight_between, 'm. y pese entre ' %>
+								<%= user.text_field :lf_weight_between, :class => 'input-mini' %>
+								<%= user.label :lf_weight_to, 'y' %>
+								<%= user.text_field :lf_weight_to, :class => 'input-mini' %>
+								kg.,<hr class="thin">
+								<%= user.label :lf_complexion, 'con un cuerpo ' %>
+								<%= user.select :lf_complexion, complexion_options, {}, :class => 'span2' %>.
+								<hr class="thin">
+								<%= user.label :lf_hair, 'De pelo' %>
+								<%= user.select :lf_hair, hair_options, {}, :class=>"span2" %>
+								<%= user.label :lf_hair_style, 'y' %>
+								<%= user.select :lf_hair_style, hair_style_options, {}, :class =>"span2" %>
+								<%= user.label :lf_eyes, '. Con ojos de color' %>
+								<%= user.select :lf_eyes, eyes_options, {}, :class=>'span2' %>
+								<hr>
+
+								<%= user.label :lf_smoke, 'Que'%>
+								<%= user.select :lf_smoke, lf_smoke_options, {}, :class => 'span4' %>
+								<%= user.label :lf_alcohol, ','%>
+								<%= user.select :lf_alcohol, lf_alcohol_options,{}, :class => 'span4' %>
+								<hr class="thin">
+								<%= user.label :lf_party, 'y' %>
+								<%= user.select :lf_party, lf_party_options, {}, :class => 'span4' %>
+								<hr class="thin">
+								<%= user.label :lf_diet, 'Con una dieta'%>
+								<%= user.select :lf_diet, lf_diet_options, {}, :class => 'span4' %>
+								
+								<hr>
+								<%= user.label :lf_ethnicity,'De étnia' %>
+								<%= user.select :lf_ethnicity, ethnicity_options %>
+								<%= user.label :lf_citizenship, 'y nacionalidad' %>
+								<%= user.text_field :lf_citizenship %>
+								
+								<hr class="thin">
+								<%= user.label :lf_religion, 'Que sea' %>
+								<%= user.select :lf_religion, religion_options, {}, :class => 'span2' %>
+								<%= user.label :lf_religion_activity,'y' %>
+								<%= user.select :lf_religion_activity, lf_religion_activity_options, {}, :class=>'span4' %>
+								<hr class="thin">
+								<%= user.label :lf_animals, 'Que' %>
+								<%= user.select :lf_animals, lf_animals_options, {}, :class=>'span5' %>
+								<hr class="thin">
+								<div>Que en su tiempo libre le guste:</div>
+
+								<div class="checkbox-group">
+									<div class="span2">
+										<div>
+											<%= user.check_box :lf_like_sport %>
+											<%= user.label :lf_like_sport,'Deporte' %>
+										</div>
+										<div>
+											<%= user.check_box :lf_like_read %>
+											<%= user.label :lf_like_read,'Lectura' %>
+										</div>
+										<div>
+											<%= user.check_box :lf_like_cinema %>
+											<%= user.label :lf_like_cinema,'Cine' %>
+										</div>
+									</div>
+									<div class="span2">
+										<div>
+											<%= user.check_box :lf_like_walk %>
+											<%= user.label :lf_like_walk,'Pasear' %>
+										</div>
+										<div>
+											<%= user.check_box :lf_like_beach %>
+											<%= user.label :lf_like_beach,'Playa' %>
+										</div>
+										<div>
+											<%= user.check_box :lf_like_mountain %>
+											<%= user.label :lf_like_mountain,'Montaña' %>
+										</div>
+									</div>
+									<div class="span3">
+										<div>
+											<%= user.check_box :lf_like_quiet %>
+											<%= user.label :lf_like_quiet,'Estar tranquilo en casa' %>
+										</div>
+										<div>
+											<%= user.check_box :lf_like_family %>
+											<%= user.label :lf_like_family,'Estar con la familia' %>
+										</div>
+										<div>
+											<%= user.check_box :lf_like_friends %>
+											<%= user.label :lf_like_friends,'Estar con mis amigos' %>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<hr>
+								<%= user.label :lf_study_level, 'Con estudios' %>
+								<%= user.select :lf_study_level, study_level_options %>
+								<hr class="thin">
+								<%= user.label :lf_language,'Que domine' %>
+								<%= user.select :lf_language, language_options, {}, :class => 'span2'  %>
+								<%= user.label :lf_language_level,'idiomas a nivel' %>
+								<%= user.select :lf_language_level, language_level_options, {}, :class => 'span1' %>
+								<hr class="thin">
+								<%= user.label :lf_job, 'Que trabaje en el sector' %>
+								<%= user.select :lf_job, job_options, {}, :class => 'span4' %>
+								con ganancias
+								<hr class="thin">
+								<%= user.label :lf_salary, 'anuales de' %>
+								<%= user.text_field :lf_salary, :class =>'span1' %>€/año
+
+						</article>
+						<hr>
+						<article class="clearfix">
+							<h3>Puntua de 1 a 5 cada una de estas características</h3>
+							<div class="span1">
+								&nbsp;
+							</div>
+							
+							<%= user.fields_for :characteristics do |my| %>
+								
+								<div class="span3 offset1 pull-left">
+									<h5>Romántico</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Aventurero</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Amable</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Familiar</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Trabajadro</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Extrovertido</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Generoso</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Reservado</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Sociable</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Tranquilo</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Exigente</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Orgulloso</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+								</div>
+								
+
+								<div class="span1">
+									&nbsp;
+								</div>
+	
+								<div class="span3">
+									<h5>Solitario</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Tenaz</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Atento</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Bienhumorado</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Espontáneo</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Inquieto</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Sensible</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Tímido</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Posesivo</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+	
+									<h5>Celoso</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+									<h5>Fiel</h5>
+									<%= text_field_tag 'test', '3',:class =>"points" %>
+
+								</div>
+							<% end %>
+						
+						</article>
+						<hr>
+						<div class="center">
+							<button class="btn btn-info btn-large">Guardar preferencias</button>
+						</div>
+						<% end %>
+						<hr class="thin">
+				  </div>
+
+				  <div class="tab-pane" id="dicen">
+				  	<div class="clearfix">
+				  		<div class="span4">
+								<h5>Romántico</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('romantic')}%" %>"></div>
+								</div>
+
+								<h5>Aventurero</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('adventurer')}%" %>"></div>
+								</div>
+								
+								<h5>Amable</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('friendly')}%" %>"></div>
+								</div>
+
+								<h5>Familiar</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('familiar')}%" %>"></div>
+								</div>
+
+								<h5>Trabajador</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('hardWorking')}%" %>"></div>
+								</div>
+
+								<h5>Extrovertido</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('extroverted')}%" %>"></div>
+								</div>
+
+								<h5>Generoso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('generous')}%" %>"></div>
+								</div>
+
+								<h5>Reservado</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('reserved')}%" %>"></div>
+								</div>
+
+								<h5>Sociable</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('sociable')}%" %>"></div>
+								</div>
+
+								<h5>Tranquilo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('quiet')}%" %>"></div>
+								</div>
+
+								<h5>Exigente</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('demanding')}%" %>"></div>
+								</div>
+
+								<h5>Orgulloso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('prideful')}%" %>"></div>
+								</div>
+							</div>
+
+							<div class="span4 offset1 attributes-col-2">
+								<h5>Solitario</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('solitary')}%" %>"></div>
+								</div>
+
+								<h5>Tenaz</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('tenacious')}%" %>"></div>
+								</div>
+
+								<h5>Atento</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('attentive')}%" %>"></div>
+								</div>
+
+								<h5>Bienhumorado</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('goodHumored')}%" %>"></div>
+								</div>
+
+								<h5>Espontáneo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('spontaneous')}%" %>"></div>
+								</div>
+
+								<h5>Inquieto</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('restless')}%" %>"></div>
+								</div>
+
+								<h5>Sensible</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('sensitive')}%" %>"></div>
+								</div>
+
+								<h5>Tímido</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('shy')}%" %>"></div>
+								</div>
+
+								<h5>Posesivo</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('possessive')}%" %>"></div>
+								</div>
+
+								<h5>Celoso</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('jealous')}%" %>"></div>
+								</div>
+
+								<h5>Fiel</h5>
+								<div class="progress">
+									<div class="bar" style="<%= "width: #{@user.avg_characteristic('faithful')}%" %>"></div>
+								</div>
+							</div>
+
+				  	</div>
+
+						
+					</div>
+						<hr>			
+						<% current_user.confirmed_recommenders.each do |rec| %>
+							<%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
+						<% end %>
+						<hr class="thin">
+						<div class="center"><a href="/user/celestinos-of-mine#tab_mejora" class="btn btn-info btn-large">¡Consigue más puntos!</a></div>
+						<hr class="thin">
+					</div>
+
+				</div>
+			</div>
+		</div>
 </section>
 
 <script type="text/javascript">
@@ -675,10 +1434,4 @@
     $(this).tab('show');
   })
 </script>
-
-
-
-
-
-
 

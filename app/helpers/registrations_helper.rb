@@ -60,6 +60,14 @@ module RegistrationsHelper
     User::ETHNICITY.map {|k,v| [v,k]}
   end
 
+  def language_options
+    User::LANGUAGE.map {|k,v| [v,k]} 
+  end
+
+  def language_level_options
+    User::LANGUAGE_LEVEL.map {|k,v| [v,k]} 
+  end
+
   def study_level_options
     User::STUDY_LEVEL.map {|k,v| [v,k]}
   end
