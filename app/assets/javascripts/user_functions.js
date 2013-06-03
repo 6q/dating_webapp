@@ -65,8 +65,8 @@ $(document).ready(function() {
       onstatechange: function(){
         $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
         var years = $("#years").val().split(';');
-        $('#q_years_lteq').val(years[0]);
-        $('#q_years_gteq').val(years[1]);
+        $('#q_years_end_lteq').val(years[0]);
+        $('#q_years_start_gteq').val(years[1]);
       }
     });
 
