@@ -8,13 +8,19 @@ Cellove::Application.routes.draw do
   end
   root :to => "home#index"
 
-  devise_for :users, controllers: {
+  devise_for :users, :skip => [:sessions], controllers: {
     registrations: 'user_registrations'
-  }
+  } do
+    post "/users" => "devise/sessions#create", :as => :user_session
+    delete "/users" => "devise/sessions#destroy", :as => :destroy_user_session
+  end
 
-  devise_for :matchmakers, class_name: "User", controllers: {
+  devise_for :matchmakers, class_name: "User", :skip => [:sessions], controllers: {
     registrations: 'matchmaker_registrations'
-  }
+  } do
+    post "/matchmakers" => "devise/sessions#create", :as => :matchmaker_session
+    delete "/matchmakers" => "devise/sessions#destroy", :as => :destroy_matchmaker_session
+  end
 
   resource :profile, only: [:show, :update]
   
