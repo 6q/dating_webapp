@@ -8,6 +8,17 @@
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
+    <button class="btn btn-primary save-cropped">Save changes</button>
   </div>
 </div>
+
+<script>
+$(document).ready(function() {
+  // Sorry for the inline js.
+  $('.save-cropped').click(function () {
+    <% if picture.main %>
+      window.location = '/profile';
+    <% end %>
+  });
+});
+</script>
