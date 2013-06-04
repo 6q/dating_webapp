@@ -13,21 +13,21 @@ describe RecommendationsController do
         post :create, recommendation: attributes_for(:recommendation)
       end
       assert_response 302
-      assert_redirected_to root_path
+      assert_redirected_to new_user_session_path
     end
 
     it "GET #accept should redirect to the user sign in path" do
       get :accept, recommendation_id: 1
 
       assert_response 302
-      assert_redirected_to root_path
+      assert_redirected_to new_user_session_path
     end
 
     it "GET #deny should redirect to the user sign in path" do
       get :deny, recommendation_id: 1
 
       assert_response 302
-      assert_redirected_to root_path
+      assert_redirected_to new_user_session_path
     end
   end
   
