@@ -59,9 +59,27 @@ $(document).ready(function() {
         duration: 2000,
         selection: "ascending"
       });
-    }  
+    }
   }
-  
+
+  $(".ajax_like_trigger").bind("ajax:success",
+    function(evt, data, status, xhr) {
+      $(".user_like").addClass('hidden');
+      $(".user_dislike").removeClass('hidden');
+    }
+  ).bind("ajax:error", function(evt, data, status, xhr){
+    //do something with the error here
+    $("div#errors p").text(data);
+  });
+  $(".ajax_dislike_trigger").bind("ajax:success",
+    function(evt, data, status, xhr) {
+      $(".user_dislike").addClass('hidden');
+      $(".user_like").removeClass('hidden');
+    }
+  ).bind("ajax:error", function(evt, data, status, xhr){
+    //do something with the error here
+    $("div#errors p").text(data);
+  });
 
   // search sliders
 

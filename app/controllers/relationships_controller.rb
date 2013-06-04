@@ -3,11 +3,27 @@ class RelationshipsController < ApplicationController
   def like
     @user = User.find(params[:user_id])
     if @user
-      current_user.like(@user)
+      success = current_user.like(@user)
     else
-      flash[:error] = "Err."
+      flash[:error] = _('Oops!')
     end
-    redirect_to dashboard_path
+    respond_to do |format|
+      format.json { render json: success.to_json }
+      format.html { redirect_to :back }
+    end
+  end
+
+  def unlike
+    @user = User.find(params[:user_id])
+    if @user
+      current_user.unlike(@user)
+    else
+      flash[:error] = _('Oops!')
+    end
+    respond_to do |format|
+      format.json { render json: true.to_json }
+      format.html { redirect_to :back }
+    end
   end
 
   def block_hide
@@ -33,7 +49,7 @@ class RelationshipsController < ApplicationController
         end
       end
     end
-    redirect_to dashboard_path
+    redirect_to :back
   end
 
   def block_hide_settings

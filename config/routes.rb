@@ -31,6 +31,7 @@ Cellove::Application.routes.draw do
   resources :users do
     resource :chat, only: :show
     post 'like',                    to: 'relationships#like'
+    post 'unlike',                  to: 'relationships#unlike'
     post 'block_hide',              to: 'relationships#block_hide'
     post 'block_hide_settings',     to: 'relationships#block_hide_settings'
     get 'view',                     on: :collection

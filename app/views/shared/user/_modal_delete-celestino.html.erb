@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="delete-celestino" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="delete-celestino-<%= recommendation.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
   </div>
@@ -10,6 +10,6 @@
   </div>
   <div class="modal-footer center">
     <%= link_to 'No, creo que lo consideraré de nuevo', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
-    <button class="btn btn-danger">Si, quiero eliminarlo</button>
+    <%= link_to _('Si, quiero eliminarlo'), recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
   </div>
 </div>

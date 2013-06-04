@@ -13,11 +13,18 @@ class NotificationsController < ApplicationController
       else
         picture_url = "/assets/placeholder-#{u.gender}-#{Random.rand(1..3)}.jpg"
       end
+      if notification.notifiable_type == 'message'
+        # Create status_link
+        status_link = Rails.application.routes.url_helpers.conversation_path(notification.notifiable_id)
+      elsif notification.notifiable_type == 'matchmaker'
+        status_link = Rails.application.routes.url_helpers.my_matchmakers_path(:anchor => "tab_confirmar")
+      end
       @notificationlist.push({
         :id => notification.id, :name => u.full_name, :user_id => u.id,
         :photo => picture_url,
         :town => u.town, :age => u.age,
-        :status => CelloveNotification::NOTIFICATION_TYPE[notification.notifiable_type.to_sym]
+        :status => CelloveNotification::NOTIFICATION_TYPE[notification.notifiable_type.to_sym],
+        :status_link => status_link
       })
     end
 

@@ -48,6 +48,7 @@ describe RelationshipsController do
 
   describe "as a regular user" do
     before(:each) do
+      request.env["HTTP_REFERER"] = '/'
       @user = create(:regular_user)
       @interacted_user = create(:regular_user_optin)
       sign_in @user
@@ -87,6 +88,7 @@ describe RelationshipsController do
 
     describe "as a blocked or hidden interacted user" do
       before :each do
+        request.env["HTTP_REFERER"] = '/'
         post :block_hide, user_id: @interacted_user.id, user_block: { blocked_user: 1 }, user_hide: { hidden_user: 1 }
       end
 

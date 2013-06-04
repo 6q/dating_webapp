@@ -370,6 +370,18 @@ class User < ActiveRecord::Base
     send_notification_email(:like, user)
   end
 
+  def likes?(user)
+    like = self.likes.where(user_id: user.id).last
+    return !like.nil?
+  end
+
+  def unlike(user)
+    like = self.likes.where(user_id: user.id).last
+    if like
+      like.destroy
+    end
+  end
+
   # Rating
   def can_rate?(user_id)
     return true if (user_id != self.id)
