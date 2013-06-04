@@ -20,7 +20,10 @@ class RelationshipsController < ApplicationController
     else
       flash[:error] = _('Oops!')
     end
-    redirect_to :back
+    respond_to do |format|
+      format.json { render json: true.to_json }
+      format.html { redirect_to :back }
+    end
   end
 
   def block_hide
