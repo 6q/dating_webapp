@@ -18,7 +18,7 @@ Cellove::Application.routes.draw do
   }
 
   devise_scope :matchmaker do
-    get "/matchmakers/sign_in" => 'home#index' 
+    get "/matchmakers/sign_in" => 'home#index'
     post "/matchmakers/sign_in" => "devise/sessions#create", :as => :matchmaker_session
     delete "/matchmakers/sign_out" => "devise/sessions#destroy", :as => :destroy_matchmaker_session
   end

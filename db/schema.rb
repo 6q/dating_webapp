@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603162736) do
+ActiveRecord::Schema.define(:version => 20130604150056) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -574,6 +574,7 @@ ActiveRecord::Schema.define(:version => 20130603162736) do
     t.integer  "cellove_index",                                         :default => 0
     t.string   "lf_relationship"
     t.integer  "background",                                            :default => 1
+    t.integer  "progress_status",                                       :default => 1
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"

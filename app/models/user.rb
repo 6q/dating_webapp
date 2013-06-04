@@ -115,7 +115,8 @@
 #  lf_language_level      :text
 #  cellove_index          :integer          default(0)
 #  lf_relationship        :string(255)
-#  background             :integer
+#  background             :integer          default(1)
+#  progress_status        :integer          default(1)
 #
 
 require_dependency 'minimum_age_validator'
@@ -135,6 +136,8 @@ class User < ActiveRecord::Base
                       .joins(:messages)
                       .group("users.id, notifications.id")
                       .order("notifications_count DESC")
+
+  before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
 
   #relations
   has_many :pictures, as: :attachable
@@ -208,7 +211,7 @@ class User < ActiveRecord::Base
     :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals, 
     :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
     :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to, :lf_relationship,
-    :characteristics_attributes
+    :characteristics_attributes, :my_characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
   invited_user = lambda {|user| user.has_role?(:invited_user) }
@@ -578,4 +581,8 @@ class User < ActiveRecord::Base
       return passed_checks
     end
 
+    def update_profile_progress
+      progress = ProfileCompleteness.new(self).get_profile_completeness
+      self.progress_status = progress.to_i
+    end
 end

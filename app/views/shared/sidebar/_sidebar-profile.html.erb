@@ -23,9 +23,9 @@
     </li>
 		<li class="profile">
       <a href="<%= profile_path %>">
-        Tu perfil (63% completo)
+        Tu perfil (<%= current_user.progress_status %>% completo)
         <div class="progress">
-          <div class="bar" style="width:63%"></div>
+          <div class="bar" style="width:<%= current_user.progress_status %>%"></div>
         </div>
       </a>
     </li>
