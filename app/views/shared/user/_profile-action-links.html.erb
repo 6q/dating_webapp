@@ -2,7 +2,13 @@
 	<ul class="clearfix">
    	<li class="message"><%= link_to '<i></i>Enviar mensaje'.html_safe, "#fast-reply-#{@user.id}", 'data-toggle' => 'modal' %></li>
     <li class="chat"><%= link_to '<i></i> Chatear'.html_safe, '#', onclick: "jqac.arrowchat.sendMessage('#{@user.id}', 'foo'); return false;" %></li>
-    <li class="like"><%= link_to '<i></i> ¡Me gusta!'.html_safe, user_like_path(@user), :method => :post %></li>
+    <% if current_user.likes?(@user) %>
+      <li class="like user_dislike"><%= link_to '<i class="disabled"></i> ¡No me gusta!'.html_safe, user_unlike_path(@user), :method => :post, :remote => true, :class => "ajax_dislike_trigger" %></li>
+      <li class="like hidden user_like"><%= link_to '<i></i> ¡Me gusta!'.html_safe, user_like_path(@user), :method => :post, :remote => true, :class => "ajax_like_trigger" %></li>
+    <% else %>
+      <li class="like user_like"><%= link_to '<i></i> ¡Me gusta!'.html_safe, user_like_path(@user), :method => :post, :remote => true, :class => "ajax_like_trigger" %></li>
+      <li class="like hidden user_dislike"><%= link_to '<i class="disabled"></i> ¡No me gusta!'.html_safe, user_unlike_path(@user), :method => :post, :remote => true, :class => "ajax_dislike_trigger" %></li>
+    <% end %>
     <% block_modal_id = '#user-block-' + @user.id.to_s %>
     <li class="block"><%= link_to '<i></i>Bloquear'.html_safe, block_modal_id, "data-toggle" => "modal" %></li>
 	</ul>
