@@ -421,3 +421,25 @@ footer {
     }
   }
 }
+
+/* Flash messages */
+#flash-messages{
+  position: absolute;
+  top: 10px;
+  z-index: 999;
+  display: none;
+  .close{
+    margin-top: 4px;
+  }
+  .alert{
+    min-width: 150px;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 31px;
+    .flash-txt{
+      padding-right: 15px;
+    }
+  }
+}
+

@@ -52,13 +52,16 @@ $(document).ready(function() {
     });
   });
 
-  if (!$("#caixarandom").auderoFlashingText("isRunning")) {
-    $("#caixarandom").auderoFlashingText({
-      fadeOut: 1500,
-      duration: 2000,
-      selection: "ascending"
-    });
+  if ($("#caixarandom").length){
+    if (!$("#caixarandom").auderoFlashingText("isRunning")) {
+      $("#caixarandom").auderoFlashingText({
+        fadeOut: 1500,
+        duration: 2000,
+        selection: "ascending"
+      });
+    }  
   }
+  
 
   // search sliders
 

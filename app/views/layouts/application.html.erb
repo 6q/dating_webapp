@@ -24,19 +24,20 @@
           <div class="span9">
             <div class="box">
               <div class="box-content">
-                <%= render 'layouts/messages' %>
                 <%= yield %>
               </div>
             </div>
           </div>
         <% else %>
-          <%= render 'layouts/messages' %>
+          
           <%= yield %>
         <% end %>
       </section>
     </div>
     <%= render 'shared/in_love' %>
     <%= render 'shared/footer' %>
+    <%= render 'layouts/messages' %>
+
     </div>
   </body>
 </html>

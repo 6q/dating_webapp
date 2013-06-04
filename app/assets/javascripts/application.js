@@ -20,5 +20,12 @@
 //= require_tree .
 
 $(function() {
+  	// hide flash messages afer 3 seconds
+  if ($('#flash-messages').length){
+    left = ($(window).width()/2)-($('#flash-messages').width()/2);
+    $('#flash-messages').css('left', left+'px');
+    $('#flash-messages').delay(500).fadeIn('slow').delay(3000).fadeOut('slow');
+  }
+  
   $('.location').chosen();
 });
