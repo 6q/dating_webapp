@@ -25,7 +25,7 @@ describe UserRegistrationsController do
       @user = create(:regular_user)
       put :update, id: @user, user: attributes_for(:regular_user, name: 'John', surname: 'Doe')
       assert_response 302
-      assert_redirected_to new_user_session_path
+      assert_redirected_to root_path
     end
   end
 
@@ -57,7 +57,7 @@ describe UserRegistrationsController do
       @user = create(:regular_user)
       put :update, id: @user, user: attributes_for(:regular_user, name: 'John', surname: 'Doe')
       assert_response 302
-      assert_redirected_to new_user_session_path
+      assert_redirected_to root_path
     end
   end
 

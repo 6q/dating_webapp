@@ -15,13 +15,13 @@ describe RelationshipsController do
     it "should redirect to the the new user session path (POST #like)" do
       post :like, user_id: @user.id
       assert_response 302
-      assert_redirected_to new_user_session_path
+      assert_redirected_to root_path
     end
 
     it "should redirect to the the new user session path (POST #block_hide)" do
       post :block_hide, user_id: @user.id, user_block: { blocked_user: 1 }, user_hide: { hidden_user: 1 }
       assert_response 302
-      assert_redirected_to new_user_session_path
+      assert_redirected_to root_path
     end
   end
 
