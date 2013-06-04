@@ -52,7 +52,7 @@ class ConversationsController < ApplicationController
       @conversation.activity.accept! if @conversation.activity
     end
 
-    last_receipt = @mailbox.receipts_for(@conversation).last
+    last_receipt = @conversation.messages.reject {|m| m.sender == current_user}.first.receipts.sentbox.first
     @receipt = current_user.reply_to_sender(last_receipt, params[:message][:body])
 
     if @box.eql? 'trash'
