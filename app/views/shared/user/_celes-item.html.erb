@@ -34,16 +34,23 @@
       <% else %>
         <%= link_to recommendation.creator.name, user_path(recommendation.creator) %>
       <% end %>
-      <span><i class="heart"></i><%= relationship %></span> <%= link_to "Eliminar celestin@", recommendation_deny_path(recommendation.id), 'data-toggle' => 'modal' unless recommendation.user_id != current_user.id %><span class="date"><%= _('Hace') %> <%= time_ago_in_words(recommendation.updated_at) %></span>
+      <span><i class="heart"></i><%= relationship %></span>
+      <% if (@type != 'por-confirmar') %>
+        <% eliminar_celestino_id = '#delete-celestino-' + recommendation.id.to_s %>
+        <%= link_to "Eliminar celestin@", eliminar_celestino_id, 'data-toggle' => 'modal' unless recommendation.user_id != current_user.id %>
+      <% end %>
+      <span class="date"><%= _('Hace') %> <%= time_ago_in_words(recommendation.updated_at) %></span>
     </header>
 
     <p><%= recommendation.description %></p>
   </div>
 
   <% if (@type == 'por-confirmar') %>
-  <div class="choose">
-    <%= link_to '<i class="icon-ok icon-white"></i> Aceptar'.html_safe, recommendation_accept_path(recommendation.id), class: 'btn btn-success', :method => :post %>
-    <%= link_to '<i class="icon-remove icon-white"></i> Rechazar'.html_safe, recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
-  </div>  
+    <div class="choose">
+      <%= link_to '<i class="icon-ok icon-white"></i> Aceptar'.html_safe, recommendation_accept_path(recommendation.id), class: 'btn btn-success', :method => :post %>
+      <%= link_to '<i class="icon-remove icon-white"></i> Rechazar'.html_safe, recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+    </div>  
   <% end %>
 </article>
+
+<%= render 'shared/user/modal_delete-celestino', recommendation: recommendation %>

@@ -22,9 +22,9 @@ class ProfilesController < ApplicationController
         @recommendation = Recommendation.new
         @characteristic = Characteristic.new
 
-        render 'matchmaker_show'
+        render 'matchmaker_show', :notice => _('Cambios guardado.')
       else
-        render 'show', :notice => "User updated."
+        render 'show', :notice => _('Cambios guardado.')
       end
     else
       if @user.has_role?(:matchmaker)

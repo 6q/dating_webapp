@@ -9,7 +9,11 @@
     </header>
     <div class="container">
       <a href="/users/${user_id}"><img src="${photo}" width="80" height="80"></a>
-      <span class="status">${status}</span>
+      {{if status_link}}
+        <a href="${status_link}"><span class="status">${status}</span></a>
+      {{else}}
+        <span class="status">${status}</span>
+      {{/if}}
       <strong><a href="/users/${user_id}">${name}</a></strong><span>${town}</span><br>${age} años
     </div>
   </article>
