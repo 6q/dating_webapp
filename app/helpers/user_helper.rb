@@ -35,7 +35,7 @@ module UserHelper
   end
   
   def user_link_with_picture(user)
-    html = '<div class="pic">' + link_to(image_tag('placeholder2.jpg', size: '60x60'), user) + '</div>'
+    html = '<div class="pic">' + link_to(profile_pic(user, width: 60, height: 60), user) + '</div>'
     html.html_safe
   end
 
