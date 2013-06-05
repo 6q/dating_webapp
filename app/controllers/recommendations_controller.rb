@@ -51,7 +51,7 @@ class RecommendationsController < ApplicationController
     if @recommendation
       @recommendation.confirmed = true
       @recommendation.save
-      flash[:success] = _('Recommendación acceptado')
+      flash[:success] = _('Recommendación acceptada')
     end
     redirect_to my_matchmakers_path
   end
@@ -61,7 +61,7 @@ class RecommendationsController < ApplicationController
     if @recommendation
       @recommendation.denied = true
       @recommendation.save
-      flash[:success] = _('Recommendación negado')
+      flash[:success] = _('Recommendación negada')
     end
     redirect_to my_matchmakers_path
   end
