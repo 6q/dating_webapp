@@ -8,7 +8,7 @@ class RelationshipsController < ApplicationController
       flash[:error] = _('Oops!')
     end
     respond_to do |format|
-      format.json { render json: success.to_json }
+      format.json { render json: @user.id.to_json }
       format.html { redirect_to :back }
     end
   end
@@ -21,7 +21,7 @@ class RelationshipsController < ApplicationController
       flash[:error] = _('Oops!')
     end
     respond_to do |format|
-      format.json { render json: true.to_json }
+      format.json { render json: @user.id.to_json }
       format.html { redirect_to :back }
     end
   end

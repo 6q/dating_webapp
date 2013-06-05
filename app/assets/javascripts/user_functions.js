@@ -63,26 +63,46 @@ $(document).ready(function() {
   }
 
   $(".ajax_like_trigger").bind("ajax:success",
-    function(evt, data, status, xhr) {
+    function(evt, user_id, status, xhr) {
+      var firstEl, secondEl;
       $(".user_like").addClass('hidden');
       $(".user_dislike").removeClass('hidden');
+      firstEl = $('.like.active').find('[data-id=' + user_id + ']').parent();
+      secondEl = $('.like.hidden').find('[data-id=' + user_id + ']').parent();
+      firstEl.removeClass('disabled').removeClass('active').addClass('hidden');
+      secondEl.removeClass('hidden').addClass('active');
+      // console.log(firstEl); console.log(secondEl);
+      // $.map(firstEl, function (el, index) {
+      //   el.removeClass('hidden');
+      // });
+      // $.map(secondEl, function(el, index) {
+      //   el.addClass('hidden');
+      // });
     }
   ).bind("ajax:error", function(evt, data, status, xhr){
     //do something with the error here
-    $("div#errors p").text(data);
   });
   $(".ajax_dislike_trigger").bind("ajax:success",
-    function(evt, data, status, xhr) {
+    function(evt, user_id, status, xhr) {
+      var firstEl, secondEl;
       $(".user_dislike").addClass('hidden');
       $(".user_like").removeClass('hidden');
+      firstEl = $('.like.hidden').find('[data-id=' + user_id + ']').parent();
+      secondEl = $('.like.disabled.active').find('[data-id=' + user_id + ']').parent();
+      firstEl.removeClass('hidden').addClass('active');
+      secondEl.addClass('hidden').removeClass('active');
+      // $.map(firstEl, function (el, index) {
+      //   el.removeClass('hidden');
+      // });
+      // $.map(secondEl, function(el, index) {
+      //   el.addClass('hidden');
+      // });
     }
   ).bind("ajax:error", function(evt, data, status, xhr){
     //do something with the error here
-    $("div#errors p").text(data);
   });
 
   // search sliders
-
   $(".points, #points2").slider({ from: 1, to: 5, round: 1, skin: "plastic" });
 
   $("#years").jslider({
