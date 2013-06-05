@@ -27,7 +27,12 @@
         <li class="like disabled hidden"><%= link_to 'Unlike', user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %></li>
       <% end %>
       <% block_modal_id = '#user-block-' + user.id.to_s %>
-      <li class="block"><%= link_to 'Block', block_modal_id, "data-toggle" => "modal" %></li>
+      <% is_blocked = !current_user.user_blocks.where("blocked_user_id = ?", user.id).first.nil? %>
+      <% is_hidden = !current_user.user_hides.where("hidden_user_id = ?", user.id).first.nil? %>
+
+      <li class="block <%= (is_blocked || is_hidden) ? "disabled" : "" %> ">
+        <%= link_to 'Block', block_modal_id, "data-toggle" => "modal" %>
+      </li>
     </ul>
 
     <% if @interactions == true %>
@@ -44,4 +49,4 @@
   </article>
 </li>
 <%= render partial: 'shared/modal_new_message', locals: { user: user } %>
-<%= render partial: 'shared/user/modal_user-block', locals: { user: user } %>
+<%= render partial: 'shared/user/modal_user-block', locals: { user: user, is_blocked: is_blocked, is_hidden: is_hidden } %>

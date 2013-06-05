@@ -11,8 +11,6 @@
 
     <% user_block = UserBlock.find_by_user_id(current_user) || UserBlock.new({ user_id: current_user.id }) %>
     <% user_hide = UserHide.find_by_user_id(current_user) || UserHide.new({ user_id: current_user.id }) %>
-    <% is_blocked = !current_user.user_blocks.where("blocked_user_id = ?", user.id).first.nil? %>
-    <% is_hidden = !current_user.user_hides.where("hidden_user_id = ?", user.id).first.nil? %>
 
     <%= form_for(current_user, url: user_block_hide_path(user), :method => :post) do |f| %>
       <fieldset>
