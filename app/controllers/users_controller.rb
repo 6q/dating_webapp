@@ -101,10 +101,18 @@ class UsersController < ApplicationController
   end
 
   def general_settings
-    if current_user.general_settings.update_attributes(params[:general_setting])
-      flash[:success] = _('Configuración actualizado')
+    if current_user.has_role?(:premium_user)
+      if current_user.general_settings.update_attributes(params[:general_setting], {as: :premium_user})
+        flash[:success] = _('Configuración actualizado')
+      else
+        flash[:error] = _('Oops!')
+      end
     else
-      flash[:error] = _('Oops!')
+      if current_user.general_settings.update_attributes(params[:general_setting])
+        flash[:success] = _('Configuración actualizado')
+      else
+        flash[:error] = _('Oops!')
+      end
     end
     redirect_to settings_path
   end

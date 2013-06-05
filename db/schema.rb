@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604150056) do
+ActiveRecord::Schema.define(:version => 20130605172958) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -272,8 +272,8 @@ ActiveRecord::Schema.define(:version => 20130604150056) do
     t.boolean  "newsletter"
     t.boolean  "user_suggestions"
     t.boolean  "new_users_nearby"
-    t.datetime "created_at",                                     :null => false
-    t.datetime "updated_at",                                     :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
     t.boolean  "show_online",                  :default => true
     t.boolean  "allow_chat"
     t.boolean  "show_only_nearby"
@@ -282,6 +282,7 @@ ActiveRecord::Schema.define(:version => 20130604150056) do
     t.boolean  "show_only_buena_pareja"
     t.boolean  "show_only_pm"
     t.boolean  "show_only_rated_me"
+    t.boolean  "anonymous_browsing",           :default => false
   end
 
   create_table "invitations", :force => true do |t|
