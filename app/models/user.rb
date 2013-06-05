@@ -436,7 +436,7 @@ class User < ActiveRecord::Base
     else
       visit = user.user_visits.build({ visited_at: Time.now })
       visit.visitor_id = self.id
-      if visit.save
+      if visit.save && !self.general_settings.anonymous_browsing
         user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
       end
     end
