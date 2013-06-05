@@ -432,15 +432,16 @@ class User < ActiveRecord::Base
     visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
     if visit
       visit.update_attributes({ visited_at: Time.now, seen: false })
-      user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
     else
       visit = user.user_visits.build({ visited_at: Time.now })
       visit.visitor_id = self.id
-      if visit.save && !self.general_settings.anonymous_browsing
-        user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
-      end
+      visit.save
     end
-    send_notification_email(:profile_visit, user)
+
+    if visit && !self.general_settings.anonymous_browsing
+      user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
+      send_notification_email(:profile_visit, user)
+    end
   end
 
   def set_all_visits_seen
