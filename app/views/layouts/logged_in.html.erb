@@ -19,10 +19,10 @@
       <section role="main">
         <div class="row">
           <div class="span3">
-            <% if current_user.has_role?(:regular_user) || current_user.has_role?(:admin) %>
-              <%= render partial: 'shared/sidebar' %>
-            <% else %>
+            <% if current_user.has_role?(:matchmaker) %>
               <%= render '/shared/sidebar_matchmaker' %>
+            <% else %>
+              <%= render partial: 'shared/sidebar' %>
             <% end %>
 
             <h1 id="consejos">Consejos</h1>
