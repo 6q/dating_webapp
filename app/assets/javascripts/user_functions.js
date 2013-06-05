@@ -71,13 +71,6 @@ $(document).ready(function() {
       secondEl = $('.like.hidden').find('[data-id=' + user_id + ']').parent();
       firstEl.removeClass('disabled').removeClass('active').addClass('hidden');
       secondEl.removeClass('hidden').addClass('active');
-      // console.log(firstEl); console.log(secondEl);
-      // $.map(firstEl, function (el, index) {
-      //   el.removeClass('hidden');
-      // });
-      // $.map(secondEl, function(el, index) {
-      //   el.addClass('hidden');
-      // });
     }
   ).bind("ajax:error", function(evt, data, status, xhr){
     //do something with the error here
@@ -91,12 +84,6 @@ $(document).ready(function() {
       secondEl = $('.like.disabled.active').find('[data-id=' + user_id + ']').parent();
       firstEl.removeClass('hidden').addClass('active');
       secondEl.addClass('hidden').removeClass('active');
-      // $.map(firstEl, function (el, index) {
-      //   el.removeClass('hidden');
-      // });
-      // $.map(secondEl, function(el, index) {
-      //   el.addClass('hidden');
-      // });
     }
   ).bind("ajax:error", function(evt, data, status, xhr){
     //do something with the error here
