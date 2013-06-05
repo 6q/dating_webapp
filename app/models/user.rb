@@ -242,9 +242,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  def hidden_users(hidden_user_ids)
-    where("users.id NOT IN (?)", hidden_user_ids)
-  end
+  # def hidden_users(hidden_user_ids)
+  #   where("users.id NOT IN (?)", hidden_user_ids)
+  # end
 
   # Get all user ids of the people for which I appear in their blocked list
   def invisible_to_me
