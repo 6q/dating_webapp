@@ -214,6 +214,7 @@ class User < ActiveRecord::Base
     :characteristics_attributes, :my_characteristics_attributes
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
+  premium_user = lambda {|user| user.has_role?(:premium_user) }
   invited_user = lambda {|user| user.has_role?(:invited_user) }
 
   validates_presence_of :name
@@ -545,6 +546,14 @@ class User < ActiveRecord::Base
 
   def my_notes(user)
     self.notes.where(evaluated_id: user.id)
+  end
+
+  def upgrade_to_premium
+    if self.has_role?(:regular_user)
+      self.remove_role :regular_user
+      self.add_role :premium_user
+      self.save
+    end
   end
 
   # TODO: Refactor to other class

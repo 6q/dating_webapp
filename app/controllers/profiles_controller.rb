@@ -39,7 +39,16 @@ class ProfilesController < ApplicationController
   end
 
   def pay
+  end
 
+  def pay_confirmation
+    if true # Do some token/payment/what ever check here
+      current_user.upgrade_to_premium
+      flash[:success] = _('Actualización a usuari@ premium se ha realizado correctamente')
+    else
+      flash[:error] = _('Oops!')
+    end
+    redirect_to root_path
   end
 
   private

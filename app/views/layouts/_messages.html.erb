@@ -1,6 +1,6 @@
 <% flash.each do |name, msg| %>
 <div id="flash-messages">
-  <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+  <div class="alert alert-<%= (name == :notice || :success) ? "success" : "error" %>">
   	<button type="button" class="close" data-dismiss="alert">×</button>
     	<div class="flash-txt" id="<%= "flash_#{name}" %>"><%= msg %></div>
   	</div>

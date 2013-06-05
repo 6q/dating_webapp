@@ -54,6 +54,7 @@ Cellove::Application.routes.draw do
     get 'cellove-index',            to: 'users#cellove_index',                    as: :cellove_index
     get 'search',                   to: 'users#index',                            as: :search
     get 'pay',                      to: 'profiles#pay',                           as: :pay
+    get 'pay/confirmation',         to: 'profiles#pay_confirmation',              as: :pay_confirmation
 
     put 'general_settings',         to: 'users#general_settings',                 as: :general_settings
   end
