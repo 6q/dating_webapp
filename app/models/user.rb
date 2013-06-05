@@ -508,8 +508,10 @@ class User < ActiveRecord::Base
 
   # Cellove methods
   def add_to_cellove_index(points)
+    User.record_timestamps=false
     self.cellove_index += points
     self.save
+    User.record_timestamps=true
   end
 
   def cellove_percentage
