@@ -38,6 +38,10 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def pay
+
+  end
+
   private
     def skip_password_attribute
       if params[:user][:password].blank? && params[:user][:password_confirmation].blank?

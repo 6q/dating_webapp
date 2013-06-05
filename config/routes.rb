@@ -34,6 +34,7 @@ Cellove::Application.routes.draw do
     post 'unlike',                  to: 'relationships#unlike'
     post 'block_hide',              to: 'relationships#block_hide'
     post 'block_hide_settings',     to: 'relationships#block_hide_settings'
+
     get 'view',                     on: :collection
   end
   get '/dashboard', to: "dashboard#show", as: :dashboard
@@ -52,6 +53,7 @@ Cellove::Application.routes.draw do
 
     get 'cellove-index',            to: 'users#cellove_index',                    as: :cellove_index
     get 'search',                   to: 'users#index',                            as: :search
+    get 'pay',                      to: 'profiles#pay',                           as: :pay
 
     put 'general_settings',         to: 'users#general_settings',                 as: :general_settings
   end
