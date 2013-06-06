@@ -21,7 +21,7 @@ staging:
   pool: 5
   host: 127.0.0.1
   username: cellove
-  password: 12345
+  password: '12345'
 
 production:
   adapter: mysql2
@@ -30,4 +30,4 @@ production:
   pool: 5
   host: 127.0.0.1
   username: cellove
-  password: 12345
+  password: '12345'
