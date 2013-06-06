@@ -104,8 +104,8 @@ $(document).ready(function() {
       onstatechange: function(){
         $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
         var years = $("#years").val().split(';');
-        $('#q_years_end_lteq').val(years[0]);
-        $('#q_years_start_gteq').val(years[1]);
+        $('#q_years_start_gteq').val(years[0]);
+        $('#q_years_end_lteq').val(years[1]);
       }
     });
 
@@ -136,7 +136,7 @@ $(document).ready(function() {
       $('#q_height_lteq').val(height[1]);
     }
   });
-  jQuery("#afinidad").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
+  $("#affinity").slider({ from: 0, to: 100, step: 5, round: 1, skin: "plastic", dimension: '&nbsp;%' });
   //jQuery("#points, #points2").slider({ from: 1, to: 5, step: 0.5, round: 1, skin: "plastic" });
 
   // modal calls

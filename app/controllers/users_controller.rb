@@ -21,6 +21,8 @@ class UsersController < ApplicationController
 
       @users = @search.result.page(params[:page])
     end
+    logger.debug "JAJAJAJAJAJAJAJAJJAJAJAJAJA"
+    logger.debug @search.years_start_gteq
     @cellove_search = Search.new
   end
 
