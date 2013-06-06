@@ -252,6 +252,7 @@ class User < ActiveRecord::Base
     UserBlock.where(blocked_user_id: self.id).pluck(:user_id)
   end
 
+  # Includes all users that you have hidden or that have blocked you
   def get_all_invisible_to_me
     invited_users = User.with_role(:invited_user).pluck('users.id')
     users = self.hidden_user_ids.concat(self.invisible_to_me).concat(invited_users)
@@ -263,6 +264,10 @@ class User < ActiveRecord::Base
     end
   end
   
+  def matching_gender
+    self.lf_gender || (gender == 'male' ? 'female' : 'male')
+  end
+
   def location
     [postal_code, town, country].compact.join(', ')
   end
@@ -276,7 +281,7 @@ class User < ActiveRecord::Base
   ransacker :years_end, :formatter => proc { |age| age.to_i.years.ago.end_of_year } do |parent|
     parent.table[:birth_date]
   end
-  
+
   def age(dob = self.birth_date)
     if self.birth_date.nil?
       0

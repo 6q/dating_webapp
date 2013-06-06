@@ -25,8 +25,9 @@ end
 
 create_towns
 
-(1..60).each do
-  u = FactoryGirl.create(:regular_user_optin)
+1000.times do |n|
+  username = "#{Faker::Internet.user_name}_#{n}"
+  u = FactoryGirl.create(:regular_user_optin, email: Faker::Internet.email(username) )
   receipt = u.send_message(user, Faker::Lorem.paragraphs.join("\n"), Faker::Lorem.sentence)
   user.reply_to_sender(receipt, Faker::Lorem.paragraph)
   u.create_general_settings({})
@@ -35,4 +36,3 @@ end
 
 user.mailbox.inbox.sample(5).each { |c| c.move_to_trash(user) }
 user.mailbox.sentbox.sample(5).each { |c| c.move_to_trash(user) }
-

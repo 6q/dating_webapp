@@ -145,7 +145,9 @@ class UsersController < ApplicationController
 
     def search_and_order(in_filter)
       distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
-      hidden_users = User.where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
+      hidden_users = User
+            .where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
+            .where("users.gender = ?", current_user.matching_gender)
 
       if params[:q]
         params[:q] = params[:q].merge(id_in: in_filter)
