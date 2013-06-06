@@ -46,6 +46,9 @@ gem "mail_view", "~> 1.0.3", group: [:test, :development]
 group :development do
   gem "guard-rails"
   gem "rb-fsevent"
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
 end
 
 group :test, :development do
