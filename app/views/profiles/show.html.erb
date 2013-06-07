@@ -145,7 +145,7 @@
 							<%= user.select :physical_desc, physical_desc_options, {} , {:class => 'span2'} %>
 							<%= user.label :height, ', mido' %>
 							<%= user.text_field :height, :class => 'input-mini' %>
-							<%= user.label :weight, 'm. y peso ' %>
+							<%= user.label :weight, 'cms. y peso ' %>
 							<%= user.text_field :weight, :class => 'input-mini' %>
 							kg.
 							<hr class="thin">
@@ -431,7 +431,7 @@
 								<%= user.text_field :lf_height_between, :class => 'input-mini' %>
 								<%= user.label :lf_height_to, 'y' %>
 								<%= user.text_field :lf_height_to, :class => 'input-mini' %>
-								<%= user.label :lf_weight_between, 'm. y pese entre ' %>
+								<%= user.label :lf_weight_between, 'cms. y pese entre ' %>
 								<%= user.text_field :lf_weight_between, :class => 'input-mini' %>
 								<%= user.label :lf_weight_to, 'y' %>
 								<%= user.text_field :lf_weight_to, :class => 'input-mini' %>
@@ -536,17 +536,6 @@
 								<%= user.label :lf_salary, 'anuales de' %>
 								<%= user.text_field :lf_salary, :class =>'span1' %>€/año
 
-						</article>
-						<hr>
-						<article class="clearfix">
-							<h3>Puntua de 1 a 5 cada una de estas características</h3>
-							<div class="span1">
-								&nbsp;
-							</div>
-							
-							#TODO Characteristics that user are looking for
-							
-						
 						</article>
 						<hr>
 						<div class="center">

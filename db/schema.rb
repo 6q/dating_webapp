@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130523103827) do
+ActiveRecord::Schema.define(:version => 20130607084934) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -233,8 +233,8 @@ ActiveRecord::Schema.define(:version => 20130523103827) do
     t.float    "longitude"
     t.string   "physical_style"
     t.string   "physical_desc"
-    t.decimal  "height"
-    t.decimal  "weight"
+    t.integer  "height"
+    t.integer  "weight"
     t.string   "complexion"
     t.string   "child"
     t.string   "smoke"
@@ -260,10 +260,10 @@ ActiveRecord::Schema.define(:version => 20130523103827) do
     t.string   "lf_postal_code"
     t.string   "lf_physical_style"
     t.string   "lf_physical_desc"
-    t.decimal  "lf_height_between"
-    t.decimal  "lf_height_to"
-    t.decimal  "lf_weight_between"
-    t.decimal  "lf_weight_to"
+    t.integer  "lf_height_between"
+    t.integer  "lf_height_to"
+    t.integer  "lf_weight_between"
+    t.integer  "lf_weight_to"
     t.string   "lf_complexion"
     t.string   "lf_child"
     t.string   "lf_smoke"

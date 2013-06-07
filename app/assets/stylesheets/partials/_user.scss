@@ -184,6 +184,9 @@ li{
     } 
   }
 
+  i.heart{
+    margin-top: 17px;
+  }
 
 /*= user stuff */
 
@@ -930,6 +933,9 @@ section.chat{
 
     #dicen{
       @extend .celestinos;
+      i.heart{
+        margin-top: 5px;
+      }
     }
 
     .pagination {
@@ -1175,7 +1181,6 @@ section.messages{
           height:14px;
           display:block;
           float:left;
-          margin-top:17px;
         }
       }
 

@@ -16,18 +16,31 @@
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
-						
-					<a href="/users/large_1.jpg" class="grouped_elements" rel="group1"><%= profile_pic() %></a>
+					<a href="#" class="grouped_elements" rel="group1"><%= profile_pic() %></a>
 				</div>
 				<div class="description">
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
-						<p class="small"><%= "#{User::GENDER[@user.gender]} - #{@user.age} años - #{@user.height} altura" %></p>
+						<p class="small">
+							<%= "#{User::GENDER[@user.gender]} - #{@user.age} años " %>
+							<% if @user.height %>
+								<%= "- #{@user.height}cms de altura" %>
+							<% end %>
+						</p>
 						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
 							<% if @user.child %>
 								<%= "y #{User::TP_CHILD[@user.child]}." %>
 							<% end %>
 							<% if @user.lf_gender %>
-								<%= "Busca #{User::GENDER[@user.lf_gender]} de entre #{@user.lf_age_between} y #{@user.lf_age_to} años para #{User::LF_RELATIONSHIP[@user.lf_relationship]} y que esté cerca de #{@user.town}, #{@user.country}" %>
+								<%= "Busca #{User::GENDER[@user.lf_gender]} "%> 
+								<% if @user.lf_age_between and @user.lf_age_to %>
+									<%= "de entre #{@user.lf_age_between} y #{@user.lf_age_to} años" %>
+								<% end %>
+								<% if @user.lf_relationship %>
+									<%= "para #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>
+								<% end %>
+								<% if @user.town %>
+									<%= "y que esté cerca de #{@user.town}, #{@user.country}" %>
+								<% end %>
 							<% end %>
 						</p>
 				</div>
@@ -279,7 +292,7 @@
 		  				<% if @user.height %>
 		  					<div class="key span3">Altura:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= "#{@user.height} m" %></div>
+		  						<div class="txt"><%= "#{@user.height} cms" %></div>
 		  					</div>
 		  				<% end %>
 		  				<% if @user.weight %>
@@ -522,7 +535,7 @@
 		  					<% busca = 1 %>
 		  					<div class="key span3">Altura:</div>
 		  					<div class="valor span6">
-		  						<div class="txt"><%= "entre #{@user.lf_height_between} y #{@user.lf_height_to}" %></div>
+		  						<div class="txt"><%= "entre #{@user.lf_height_between} y #{@user.lf_height_to} cms" %></div>
 		  					</div>
 		  				<% end %>
 		  				<% unless @user.lf_weight_between.blank? or @user.lf_weight_to.blank? %>
