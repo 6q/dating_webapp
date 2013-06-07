@@ -4,6 +4,9 @@
 //= require jquery.tmpl.min.js
 //= require jquery.cookie.js
 //= require jquery.jcarousel.min.js
+//= require fancybox/jquery.fancybox-1.3.1.js
+
+//$("#caixarandom").auderoFlashingText("stop");
 
 $(document).ready(function() {
   setTimeout(getNotifications, 60000);
@@ -217,6 +220,12 @@ $(document).ready(function() {
   // image gallery in user profile
 
   $("a[rel^='prettyPhoto']").prettyPhoto();
+
+  // fancybox
+
+  $("a.grouped_elements").fancybox( {
+      titleShow :false
+  });
 
 
 });

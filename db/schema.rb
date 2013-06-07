@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605172958) do
+ActiveRecord::Schema.define(:version => 20130607084934) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -576,18 +576,18 @@ ActiveRecord::Schema.define(:version => 20130605172958) do
   add_index "user_visits", ["visitor_id"], :name => "index_user_visits_on_visitor_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                                 :default => "", :null => false
-    t.string   "encrypted_password",                                    :default => "", :null => false
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                                         :default => 0
+    t.integer  "sign_in_count",          :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                                                            :null => false
-    t.datetime "updated_at",                                                            :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.string   "name"
     t.string   "surname"
     t.string   "screen_name"
@@ -603,8 +603,8 @@ ActiveRecord::Schema.define(:version => 20130605172958) do
     t.float    "longitude"
     t.string   "physical_style"
     t.string   "physical_desc"
-    t.decimal  "height",                 :precision => 10, :scale => 0
-    t.decimal  "weight",                 :precision => 10, :scale => 0
+    t.integer  "height"
+    t.integer  "weight"
     t.string   "complexion"
     t.string   "child"
     t.string   "smoke"
@@ -630,10 +630,10 @@ ActiveRecord::Schema.define(:version => 20130605172958) do
     t.string   "lf_postal_code"
     t.string   "lf_physical_style"
     t.string   "lf_physical_desc"
-    t.decimal  "lf_height_between",      :precision => 10, :scale => 0
-    t.decimal  "lf_height_to",           :precision => 10, :scale => 0
-    t.decimal  "lf_weight_between",      :precision => 10, :scale => 0
-    t.decimal  "lf_weight_to",           :precision => 10, :scale => 0
+    t.integer  "lf_height_between"
+    t.integer  "lf_height_to"
+    t.integer  "lf_weight_between"
+    t.integer  "lf_weight_to"
     t.string   "lf_complexion"
     t.string   "lf_child"
     t.string   "lf_smoke"
@@ -685,10 +685,10 @@ ActiveRecord::Schema.define(:version => 20130605172958) do
     t.text     "lf_animals"
     t.text     "lf_party"
     t.text     "lf_language_level"
-    t.integer  "cellove_index",                                         :default => 0
+    t.integer  "cellove_index",          :default => 0
     t.string   "lf_relationship"
-    t.integer  "background",                                            :default => 1
-    t.integer  "progress_status",                                       :default => 1
+    t.integer  "background",             :default => 1
+    t.integer  "progress_status",        :default => 1
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
