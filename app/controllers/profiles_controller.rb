@@ -22,18 +22,22 @@ class ProfilesController < ApplicationController
         @recommendation = Recommendation.new
         @characteristic = Characteristic.new
 
-        render 'matchmaker_show', :notice => _('Cambios guardado.')
+        flash[:success] = _('Cambios guardados.')
+        render 'matchmaker_show'
       else
-        render 'show', :notice => _('Cambios guardado.')
+        flash[:success] = _('Cambios guardados.')
+        render 'show'
       end
     else
       if @user.has_role?(:matchmaker)
         @recommendation = Recommendation.new
         @characteristic = Characteristic.new
 
-        render 'matchmaker_show', :alert => "Unable to update user."
+        flash[:success] = _('No se ha podido guardar.')
+        render 'matchmaker_show'
       else
-        render 'show', :alert => "Unable to update user."
+        flash[:success] = _('No se ha podido guardar.')
+        render 'show'
       end
     end
   end
