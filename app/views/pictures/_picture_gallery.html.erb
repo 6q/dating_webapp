@@ -8,7 +8,7 @@
           <%= link_to image_tag('cross.png'), pic, method: :delete, confirm: _("¿Estas de seguro que quieres borrar la foto?") %>
         </div>
         <span>
-          <%= link_to pic do%>
+          <%= link_to pic.image.jpg.url , :class => 'grouped_elements' do%>
             <%= image_tag pic.image.thumb("80x").url %>
           <% end %>
         </span>

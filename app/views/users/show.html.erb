@@ -16,14 +16,14 @@
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
-					<a href="#" class="grouped_elements" rel="group1"><%= profile_pic() %></a>
+					<a href="<%= @user.profile_picture.image.jpg.url %>" class="grouped_elements" rel="group1"><%= profile_pic() %></a>
 				</div>
 				<div class="description">
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
 						<p class="small">
-							<%= "#{User::GENDER[@user.gender]} - #{@user.age} años " %>
+							<%= "#{User::GENDER[@user.gender].capitalize} - #{@user.age} años " %>
 							<% if @user.height %>
-								<%= "- #{@user.height}cms de altura" %>
+								<%= "- #{@user.height} cms de altura" %>
 							<% end %>
 						</p>
 						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
@@ -45,13 +45,13 @@
 						</p>
 				</div>
 
-				<% if @user.pictures.first!=@user.pictures.last %>
+				<% if @user.pictures.count > 1 %>
 					<div id="user-profile-thumbs">
 
 						<div class="jcarousel">
 							<ul>
 								<% @user.pictures.each do |p| %>
-									<li><a class="grouped_elements" href="<%= p.image.url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
+									<li><a class="grouped_elements" href="<%= p.image.jpg.url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
 								<% end %>
 							</ul>
 						</div>
@@ -92,11 +92,11 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
-		  			<% if @user.recommendations.empty? %>
+		  			<% if current_user.confirmed_recommenders.empty? %>
 		  				<%= @user.name %> aún no tiene ningún celestino. <%= link_to 'Quieres ser el primero?', be_matchmaker_path %>
 		  			<% else %>
-		  				<% @user.recommendations.each do |rec| %>
-								<%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
+		  				<% current_user.confirmed_recommenders.each do |rec| %>
+								<%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
 							<% end %>
 		  			<% end %>
 		  		</div>
