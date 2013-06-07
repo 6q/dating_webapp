@@ -31,10 +31,11 @@ gem 'mailboxer'
 gem 'gettext_i18n_rails'
 gem 'gettext', '>=1.9.3', :require => false, :group => :development
 gem 'ransack'
+gem 'faker'
+gem 'factory_girl_rails', '>= 4.2.0'
 
 group :test do
   gem 'sqlite3'
-  gem 'faker'
   gem 'database_cleaner'
   gem 'minitest-focus'
   gem 'minitest-reporters'
@@ -46,10 +47,12 @@ gem "mail_view", "~> 1.0.3", group: [:test, :development]
 group :development do
   gem "guard-rails"
   gem "rb-fsevent"
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
 end
 
 group :test, :development do
-  gem 'factory_girl_rails', '>= 4.2.0'
   gem 'commands'
   #gem 'rack-proxy', git: 'git://github.com/sportngin/rack-proxy.git'
   #gem "rack-reverse-proxy", :require => "rack/reverse_proxy", git: 'git://github.com/sportngin/rack-reverse-proxy.git'
