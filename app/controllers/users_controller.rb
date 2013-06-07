@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   before_filter :set_visit_seen, only: [:hits]
 
   def index
-
     if params[:q].nil?
       search_and_order(nil)
       @users = @search.result(:distinct => true).order('created_at DESC').page(params[:page])
