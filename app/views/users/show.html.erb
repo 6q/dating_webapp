@@ -16,7 +16,10 @@
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
-					<a href="<%= @user.profile_picture.image.jpg.url %>" class="grouped_elements" rel="group1"><%= profile_pic() %></a>
+
+					<a <%= "href=#{@user.profile_picture.image.jpg.url} class=grouped_elements " if @user.profile_picture %> rel="group1">
+						<%= profile_pic(@user) %>
+					</a>
 				</div>
 				<div class="description">
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
@@ -102,6 +105,7 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="atributos">
+		  			<% if @user.my_characteristics %>
 							<div class="span4">
 								<h5>Romántico</h5>
 								<div class="progress">
@@ -222,6 +226,9 @@
 									<div class="bar" style="<%= "width: #{@user.my_characteristics.faithful*20}%" %>"></div>
 								</div>
 							</div>
+						<% else %>
+							<%= "#{@user.name} aún no ha definido sus atributos" %>
+						<% end %>
 		  		</div>
 
 		  		<div class="tab-pane" id="notas">
