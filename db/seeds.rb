@@ -25,7 +25,7 @@ end
 
 create_towns
 
-1000.times do |n|
+60.times do |n|
   username = "#{Faker::Internet.user_name}_#{n}"
   u = FactoryGirl.create(:regular_user_optin, email: Faker::Internet.email(username) )
   receipt = u.send_message(user, Faker::Lorem.paragraphs.join("\n"), Faker::Lorem.sentence)

@@ -54,9 +54,9 @@ li{
         margin-left:5px;
       }
 
-      #user-options {
+      #user-count {
         position:absolute;
-        right:260px;
+        right:230px;
         top:5px;
         text-align:right;
       }
@@ -117,12 +117,22 @@ li{
 
           }
         }
-
       }
 
-
-      .user-count {
-        margin-top:10px;
+      .avatar {
+        float: right;
+        padding-left: 10px;
+        margin-top: 6px;
+        img{
+          border-radius: 4px;
+        }
+      }
+      .user-actions{
+        float: right;
+        margin-top: 3px;
+        p{
+          margin:3px;
+        }
       }
 
     }
@@ -135,7 +145,7 @@ li{
           position:relative;
 
           span {
-            position:absolute;
+            position: absolute;
             color:#fff;
             right:.2em;
             top:-1.2em;
@@ -184,6 +194,9 @@ li{
     } 
   }
 
+  i.heart{
+    margin-top: 17px;
+  }
 
 /*= user stuff */
 
@@ -905,6 +918,7 @@ section.chat{
 
     &.basic-tabs {
       margin-bottom:40px;
+      margin-top: 20px;
     }
 
     .nav{margin-bottom: 0px;}
@@ -930,6 +944,9 @@ section.chat{
 
     #dicen{
       @extend .celestinos;
+      i.heart{
+        margin-top: 5px;
+      }
     }
 
     .pagination {
@@ -1175,7 +1192,6 @@ section.messages{
           height:14px;
           display:block;
           float:left;
-          margin-top:17px;
         }
       }
 
