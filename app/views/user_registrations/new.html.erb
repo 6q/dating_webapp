@@ -10,7 +10,7 @@
   </ul>
 </header>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'register-form' }) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'register-form', :multipart => true }) do |f| %>
   <%= display_base_errors resource %>
   <div class="row">
     <div class="span4">
@@ -62,7 +62,10 @@
     <legend>¿Cómo eres?</legend>
     <div class="row">
       <div class="span6">
-        <label class="control-label photo">Sube tu foto</label> <input type="file" class="span4">
+        <label class="control-label photo">Sube tu foto</label>
+          <%= f.file_field :pictures, :name => 'images[]', :multiple => true, class: 'span4 upload_pic_input_unregistered' %>
+          <div id="renderImage">
+          </div>
       </div>
       <div class="span6">
         <%= f.check_box :image_not_uploaded %>
@@ -115,3 +118,6 @@
     </div>
   </fieldset>
 <% end %>
+
+<div id="crop_modal_wrapper">
+</div>
