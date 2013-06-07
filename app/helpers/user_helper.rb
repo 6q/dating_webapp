@@ -7,7 +7,7 @@ module UserHelper
       image_tag(pp.image.thumb(size).url)
     else
       app = Dragonfly[:images]
-      uid = app.store(Pathname.new('app/assets/images/placeholder-user.jpg'))
+      uid = app.store(Pathname.new(Rails.application.config.assets.paths.first + "/placeholder-#{user.gender}-#{Random.rand(1..3)}.jpg"))
       image = app.fetch(uid)
       image_tag(image.thumb(size).url)
     end
