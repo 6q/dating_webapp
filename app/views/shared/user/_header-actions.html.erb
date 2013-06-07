@@ -1,14 +1,8 @@
 <div id="header-actions">
 
 	<div id="header-preface">
-    <div id="user-options">
-      <% if current_user.has_role? :matchmaker %>
-        <%= link_to _('Conviértete en usuari@'), matchmaker_become_user_path %> |
-      <% else %>
-        <%= link_to _('Cambiar configuración'), '/user/settings/' %> | 
-      <% end %>
-      <%= link_to _('Editar mi perfil'), profile_path %> |
-      <%= link_to _('Desconectar'), destroy_user_session_path, method: :delete %>
+    <div id="user-count">
+    	Somos 60.000 usuari@s. ¡Gracias por vuestra confianza!
     </div>
 
 		<div id="color-switcher" class="header-switcher">
@@ -34,6 +28,26 @@
 
 	</div>
 
-	<p class="user-count">Somos 60.000 usuari@s. ¡Gracias por vuesra confianza!</p>
-  <p class="user-info">Bienvenid@, <%= current_user.name %> | <strong>Estás disponible para chatear</strong></p>
+	<div class="avatar">
+  	<%= profile_pic(current_user, options = {width: 60, height: 60}) %>
+  </div>
+	
+	<div class="user-actions">
+		<p>
+			<%= link_to _('Editar mi perfil'), profile_path %> |
+    	<%= link_to _('Desconectar'), destroy_user_session_path, method: :delete %>
+		</p>
+		<p>
+			<% if current_user.has_role? :matchmaker %>
+      	<%= link_to _('Conviértete en usuari@'), matchmaker_become_user_path %> |
+    	<% else %>
+      	<%= link_to _('Cambiar configuración'), '/user/settings/' %>
+    	<% end %>
+		</p>
+		<p>
+			<%= current_user.name + ' ' + current_user.surname %>
+		</p>
+  </div>
+	<div class="clearfix"></div>  
+
 </div>
