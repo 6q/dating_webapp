@@ -12,5 +12,5 @@ MANDRILL_API_KEY: Your_API_Key
 ADMIN_NAME: First User
 ADMIN_EMAIL: user@example.com
 ADMIN_PASSWORD: changeme
-ROLES: [admin, user, VIP]
+ROLES: [admin, regular_user, premium_user]
 ARROWCHAT_HOST: localhost
