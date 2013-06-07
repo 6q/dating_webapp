@@ -16,9 +16,9 @@
         <div class="control-group slider">
           <label class="control-label">Edad</label>
           <div class="span6">
-            <input id="years" type="slider" value="<%= @search.years_start_lteq || '18' %>;<%= @search.years_end_gteq || '80' %>"/>
-            <%= f.hidden_field :years_start_lteq %>
-            <%= f.hidden_field :years_end_gteq %>
+            <input id="years" type="slider" value="<%= params[:q][:years_lteq] || '18' %>;<%= params[:q][:years_gteq] || '80' %>"/>
+            <%= f.hidden_field :years_lteq %>
+            <%= f.hidden_field :years_gteq %>
           </div>
         </div>
 

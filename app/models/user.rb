@@ -272,9 +272,9 @@ class User < ActiveRecord::Base
     [postal_code, town, country].compact.join(', ')
   end
 
-  # ransacker :years, :formatter => proc { |age| age.to_i.years.ago.end_of_year } do |parent|
-  #   parent.table[:birth_date]
-  # end
+  ransacker :years, :formatter => proc { |age| age.to_i.years.ago.end_of_year } do |parent|
+    parent.table[:birth_date]
+  end
   ransacker :years_start, :formatter => proc { |age| age.to_i.years.ago.beginning_of_year } do |parent|
     parent.table[:birth_date]
   end

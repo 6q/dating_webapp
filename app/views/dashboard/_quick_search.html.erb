@@ -8,9 +8,9 @@
             <div class="control-group sliders">
               <label>Edad <span></span></label>
               <div class="controls">
-                <input id="years" type="slider" name="" value="<%= @search.years_start_lteq || '18' %>;<%= @search.years_end_gteq || '80' %>"/>
-                <%= f.hidden_field :years_start_lteq  %>
-                <%= f.hidden_field :years_end_gteq  %>
+                <input id="years" type="slider" name="" value="<%= @search.years_lteq || '18' %>;<%= @search.years_gteq || '80' %>"/>
+                <%= f.hidden_field :years_lteq  %>
+                <%= f.hidden_field :years_gteq  %>
               </div>
             </div>
             <div class="control-group">
