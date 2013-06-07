@@ -1,6 +1,7 @@
 //= require jquery.slider
 //= require jquery.prettyPhoto
 //= require jquery.auderoFlashingText.min.js
+//= require jquery.jcarousel.min.js
 
 //$("#caixarandom").auderoFlashingText("stop");
 
