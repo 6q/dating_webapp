@@ -35,6 +35,15 @@ GEM
       sass (~> 3.2)
     builder (3.0.4)
     cancan (1.6.9)
+    capistrano (2.14.2)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capistrano_colors (0.5.5)
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -94,6 +103,7 @@ GEM
     guard-rails (0.4.1)
       guard (>= 0.2.2)
     hashie (2.0.3)
+    highline (1.6.15)
     hike (1.2.2)
     hominid (3.0.5)
     i18n (0.6.4)
@@ -136,6 +146,13 @@ GEM
       powerbar
     multi_json (1.7.2)
     mysql2 (0.3.11)
+    net-scp (1.1.0)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.6)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     orm_adapter (0.4.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -225,6 +242,9 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (>= 2.3.0.0)
   cancan (>= 1.6.9)
+  capistrano
+  capistrano-ext
+  capistrano_colors
   commands
   compass-rails
   compass_twitter_bootstrap

@@ -8,6 +8,7 @@ module UserRetrieval
       .includes(:rates)
       .order('AVG(rates.stars) DESC')
       .where("users.id NOT IN (?)", hidden_user_ids)
+      .where("users.gender = ?", self.matching_gender)
       .limit(5)
   end
 
@@ -16,10 +17,12 @@ module UserRetrieval
     how_many.times.map{ self.class.all.sample }
   end
 
-
   def new_users_near_me
     hidden_user_ids = self.get_all_invisible_to_me
-    nearbys(User::DEFAULT_NEARBY_DISTANCE).where("users.id NOT IN (?)", hidden_user_ids).limit(5)
+    nearbys(User::DEFAULT_NEARBY_DISTANCE)
+      .where("users.id NOT IN (?)", hidden_user_ids)
+      .where("users.gender = ?", self.matching_gender)
+      .limit(5)
   end
 
 end

@@ -252,6 +252,7 @@ class User < ActiveRecord::Base
     UserBlock.where(blocked_user_id: self.id).pluck(:user_id)
   end
 
+  # Includes all users that you have hidden or that have blocked you
   def get_all_invisible_to_me
     invited_users = User.with_role(:invited_user).pluck('users.id')
     users = self.hidden_user_ids.concat(self.invisible_to_me).concat(invited_users)
@@ -263,20 +264,24 @@ class User < ActiveRecord::Base
     end
   end
   
+  def matching_gender
+    self.lf_gender || (gender == 'male' ? 'female' : 'male')
+  end
+
   def location
     [postal_code, town, country].compact.join(', ')
   end
 
-  # ransacker :years, :formatter => proc { |age| age.to_i.years.ago.end_of_year } do |parent|
-  #   parent.table[:birth_date]
-  # end
+  ransacker :years, :formatter => proc { |age| age.to_i.years.ago.end_of_year } do |parent|
+    parent.table[:birth_date]
+  end
   ransacker :years_start, :formatter => proc { |age| age.to_i.years.ago.beginning_of_year } do |parent|
     parent.table[:birth_date]
   end
   ransacker :years_end, :formatter => proc { |age| age.to_i.years.ago.end_of_year } do |parent|
     parent.table[:birth_date]
   end
-  
+
   def age(dob = self.birth_date)
     if self.birth_date.nil?
       0
@@ -557,6 +562,62 @@ class User < ActiveRecord::Base
       self.add_role :premium_user
       self.save
     end
+  end
+
+  # Calculates the common LF_* fields between self and user
+  def affinity(user)
+    affinity_score = 0
+    affinity_score += 1 if self.lf_orientation == user.orientation
+    affinity_score += 1 if self.marital_status == user.marital_status
+    affinity_score += 1 if (user.age >= self.lf_age_between.to_i && user.age <= self.lf_age_to.to_i)
+    
+    affinity_score += 1 if self.lf_city == user.town
+    affinity_score += 1 if self.lf_country == user.country
+    affinity_score += 1 if self.lf_postal_code == user.postal_code
+    affinity_score += 1 if self.lf_physical_style == user.physical_style
+    affinity_score += 1 if self.lf_physical_desc == user.physical_desc
+
+    if user.height
+      affinity_score += 1 if (user.height >= self.lf_height_between.to_i && user.height <= self.lf_height_to.to_i)
+    end
+    if user.weight
+      affinity_score += 1 if (user.weight >= self.lf_weight_between.to_i && user.weight <= self.lf_weight_to.to_i)
+    end
+
+    affinity_score += 1 if self.lf_complexion == user.complexion
+    affinity_score += 1 if self.lf_child == user.child
+    affinity_score += 1 if self.lf_smoke == user.smoke
+    affinity_score += 1 if self.lf_diet == user.diet
+    affinity_score += 1 if self.lf_alcohol == user.alcohol
+    affinity_score += 1 if self.lf_religion == user.religion
+    affinity_score += 1 if self.lf_study_level == user.study_level
+    affinity_score += 1 if self.lf_language == user.language
+    affinity_score += 1 if self.lf_job == user.job
+    affinity_score += 1 if self.lf_salary.to_i <= (user.salary.to_i || 0)
+
+    affinity_score += 1 if self.lf_house == user.house
+    affinity_score += 1 if self.lf_hair == user.hair
+    affinity_score += 1 if self.lf_hair_style == user.hair_style
+    affinity_score += 1 if self.lf_eyes == user.eyes
+    affinity_score += 1 if self.lf_like_sport == user.like_sport
+    affinity_score += 1 if self.lf_like_read == user.like_read
+    affinity_score += 1 if self.lf_like_cinema == user.like_cinema
+    affinity_score += 1 if self.lf_like_quiet == user.like_quiet
+    affinity_score += 1 if self.lf_like_walk == user.like_walk
+    affinity_score += 1 if self.lf_like_mountain == user.like_mountain
+    affinity_score += 1 if self.lf_like_beach == user.like_beach
+    affinity_score += 1 if self.lf_like_family == user.like_family
+    affinity_score += 1 if self.lf_like_friends == user.like_friends
+    affinity_score += 1 if self.lf_religion_activity == user.religion_activity
+
+    affinity_score += 1 if self.lf_citizenship == user.citizenship
+    affinity_score += 1 if self.lf_ethnicity == user.ethnicity
+    affinity_score += 1 if self.lf_animals == user.animals
+    affinity_score += 1 if self.lf_party == user.party
+    affinity_score += 1 if self.lf_language_level == user.language_level
+    #affinity_score += 1 if self.lf_relationship == user.relationship
+
+    (affinity_score.to_f/39.0)*100
   end
 
   # TODO: Refactor to other class

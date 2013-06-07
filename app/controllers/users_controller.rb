@@ -153,6 +153,12 @@ class UsersController < ApplicationController
 
       if params[:q]
         params[:q] = params[:q].merge(id_in: in_filter)
+        if params[:q][:years_lteq] == params[:q][:years_gteq]
+          params[:q][:years_start_gteq] = params[:q][:years_lteq]
+          params[:q][:years_end_lteq] = params[:q][:years_gteq]
+          params[:q].except!(:years_lteq)
+          params[:q].except!(:years_gteq)
+        end
       else
         params[:q] = {}
         params[:q][:id_in] = in_filter
@@ -161,8 +167,8 @@ class UsersController < ApplicationController
       if params[:q][:s] == "distance asc"
         params[:q].except!(:s)
         @search = hidden_users
-                      .near(current_user, distance, { :units => :km, :sort => :distance })
-                      .search(params[:q])
+                    .near(current_user, distance, { :units => :km, :sort => :distance })
+                    .search(params[:q])
       elsif params[:q][:s] == "recent_interaction asc"
         params[:q].except!(:s)
         @search = hidden_users.sort_interactions.search(params[:q])

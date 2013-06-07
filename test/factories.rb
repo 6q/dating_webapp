@@ -19,7 +19,7 @@ FactoryGirl.define do
       gender{ User::GENDER.keys.sample }
       birth_date{ Date.today << ((rand(10) + 19) * 12) }
       terms_and_conditions "1"
-      height { Random.rand(170..210) }
+      height { Random.rand(150..210) }
     end
 
     trait :optional_data do
