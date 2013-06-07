@@ -21,8 +21,6 @@ class UsersController < ApplicationController
 
       @users = @search.result.page(params[:page])
     end
-    logger.debug "JAJAJAJAJAJAJAJAJJAJAJAJAJA"
-    logger.debug @search.years_start_gteq
     @cellove_search = Search.new
   end
 
@@ -147,6 +145,7 @@ class UsersController < ApplicationController
 
     def search_and_order(in_filter)
       distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
+      affinity = params[:affinity]
       hidden_users = User
             .where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
             .where("users.gender = ?", current_user.matching_gender)
@@ -161,8 +160,8 @@ class UsersController < ApplicationController
       if params[:q][:s] == "distance asc"
         params[:q].except!(:s)
         @search = hidden_users
-                      .near(current_user, distance, { :units => :km, :sort => :distance })
-                      .search(params[:q])
+                    .near(current_user, distance, { :units => :km, :sort => :distance })
+                    .search(params[:q])
       elsif params[:q][:s] == "recent_interaction asc"
         params[:q].except!(:s)
         @search = hidden_users.sort_interactions.search(params[:q])

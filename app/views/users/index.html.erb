@@ -16,9 +16,9 @@
         <div class="control-group slider">
           <label class="control-label">Edad</label>
           <div class="span6">
-            <input id="years" type="slider" value="<%= @search.years_start_gteq || '18' %>;<%= @search.years_end_lteq || '80' %>"/>
-            <%= f.hidden_field :years_start_gteq  %>
-            <%= f.hidden_field :years_end_lteq  %>
+            <input id="years" type="slider" value="<%= @search.years_start_lteq || '18' %>;<%= @search.years_end_gteq || '80' %>"/>
+            <%= f.hidden_field :years_start_lteq %>
+            <%= f.hidden_field :years_end_gteq %>
           </div>
         </div>
 
@@ -61,8 +61,7 @@
             <div class="control-group slider">
               <label class="control-label">Afinidad</label>
               <div class="controls">
-                <%#= text_field_tag :affinity, (params[:affinity] || '70'), type: 'slider' %>
-                <input id="affinity" type="slider" name="" value="70"/>
+                <%= text_field_tag :affinity, (params[:affinity] || '70'), type: 'slider' %>
               </div>
             </div>
             <div class="control-group fit">
