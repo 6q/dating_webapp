@@ -338,8 +338,14 @@ class User < ActiveRecord::Base
       # Return the avg in percent
       ((avg_absolute-1.0)/4)*100
     else
-      33
+      50  
     end
+  end
+
+  def my_charact_percent(charact = 'romantic')
+    # get my_characteristic value
+    c = self.my_characteristics.send(charact)
+    percent = (c-1)*25
   end
 
   # Intersection of people who I rated and people who rated me
