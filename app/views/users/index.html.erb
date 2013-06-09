@@ -2,14 +2,14 @@
 
 <section class="search boxed">
 
-  <div class="boxed-inner clearfix">
+  <div class="boxed-inner clearfix overflow-show">
     <header>
       <h1>Encuentra personas afines a tí</h1>
     </header>
 
     
     <form class="span9 form-horizontal">
-    <%= search_form_for @search, class: 'span9 form-horizontal' do |f| %>
+    <%= search_form_for @search, class: 'span9 form-horizontal overflow-show' do |f| %>
     <div class="row">
       <div class="span8">
 
@@ -27,7 +27,7 @@
             <div class="control-group">
               <div class="pull-left">
                 <%= f.label :town_eq, _('Localidad'), class: 'control-label location-label' %>
-                <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: _('Localidad...'), selected: @search.town_eq, class: 'location' %>
+                <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, { include_blank: _('Localidad...'), selected: @search.town_eq }, { class: 'location' } %>
               </div>
               <div class="pull-left">
                 <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>

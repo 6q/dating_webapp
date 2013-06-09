@@ -234,4 +234,20 @@ section.direct-search {
     }
 
   }
+
+  // hack to show chosen search option
+  .boxed-inner.overflow-show{
+    .searchform{
+      position: relative;
+      padding-bottom: 10px;
+      margin-top: 0px;
+  
+      fieldset{
+        padding-top: 10px;
+      }
+      fieldset.form-options{
+        padding-top: 20px;
+      }
+    }
+  }
 }
