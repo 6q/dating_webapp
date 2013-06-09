@@ -1099,8 +1099,15 @@ section.chat{
         }
       }
 
+      .location-label{
+        margin-right: 10px;
+      }
       .zip {
         width:auto;
+        margin-left: 10px;
+      }
+      .zip-input{
+        float: none;
       }
     }
 
@@ -1118,6 +1125,12 @@ section.chat{
       margin-top:5px;
     }
 
+    .checkbox input[type="checkbox"]{
+      float: none;
+      margin-left: 0px;
+      margin-right: 7px;
+      margin-top: -2px;
+    }
   }
 }
 

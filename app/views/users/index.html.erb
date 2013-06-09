@@ -25,10 +25,14 @@
         <div class="row search-location">
           <div class="span8">
             <div class="control-group">
-              <%= f.label :town_eq, _('Localidad'), class: 'control-label' %>
-              <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: _('Localidad...'), selected: @search.town_eq, class: 'location' %>
-              <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
-              <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
+              <div class="pull-left">
+                <%= f.label :town_eq, _('Localidad'), class: 'control-label location-label' %>
+                <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, include_blank: _('Localidad...'), selected: @search.town_eq, class: 'location' %>
+              </div>
+              <div class="pull-left">
+                <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
+                <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1 zip-input' %>
+              </div>
             </div>
           </div>
         </div>
