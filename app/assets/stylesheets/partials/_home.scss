@@ -149,7 +149,6 @@ section.direct-search {
 
   .searchform {
 
-    float:left;
     margin-top:10px;
     position:relative;
 
@@ -216,7 +215,7 @@ section.direct-search {
         padding-top:9px;
 
         @include clearfix;
-        width:95px;
+        width:85px;
         position:relative;
 
         input.btn {
