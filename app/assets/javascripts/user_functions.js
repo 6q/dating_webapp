@@ -126,7 +126,7 @@ $(document).ready(function() {
   });
 
   jQuery("#altura").slider({ 
-    from: 160,
+    from: 150,
     to: 220,
     step: 5,
     smooth: true,

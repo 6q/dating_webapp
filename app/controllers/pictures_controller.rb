@@ -12,7 +12,6 @@ class PicturesController < ApplicationController
       @picture.attachable = current_user
       @picture.main = true if current_user.pictures.empty?
       if @picture.save
-        logger.debug "RENDERING JSON"
         render json: {
           crop_template: render_to_string(partial: 'pictures/picture_crop', locals: {picture: @picture}),
           update_path: picture_path(@picture)

@@ -9,17 +9,17 @@ class UsersController < ApplicationController
   before_filter :set_visit_seen, only: [:hits]
 
   def index
-    distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
-
     if params[:q].nil?
       search_and_order(nil)
       @users = @search.result(:distinct => true).order('created_at DESC').page(params[:page])
     else
-      nearbys = current_user.nearbys(distance, { :units => :km }).pluck(:id)
-      nearbys = [0] if nearbys.empty?
-      search_and_order(nearbys)
+      search_and_order(nil)
 
-      @users = @search.result.page(params[:page])
+      if params[:affinity]
+        @users = @users.page(params[:page])
+      else
+        @users = @search.result.page(params[:page])
+      end
     end
     @cellove_search = Search.new
   end
@@ -145,7 +145,7 @@ class UsersController < ApplicationController
 
     def search_and_order(in_filter)
       distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
-      affinity = params[:affinity]
+      affinity = params[:affinity].to_i
       hidden_users = User
             .where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
             .where("users.gender = ?", current_user.matching_gender)
@@ -188,6 +188,17 @@ class UsersController < ApplicationController
         params[:q][:years_gteq] = params[:q][:years_start_gteq]
         params[:q].except(:years_start_gteq)
         params[:q].except(:years_end_lteq)
+      end
+      if affinity
+        logger.debug "ITERATING AFFINITY: " + @search.result.length.to_s
+        @users = @search.result
+        @users.each do |user|
+          logger.debug "ITERATING JAJAJAJAJAJA"
+          if current_user.affinity(user) < affinity
+            logger.debug "SORRY " + user.name + ", YOU HAVE TO GO"
+            @users.delete(user)
+          end
+        end
       end
     end
 end
