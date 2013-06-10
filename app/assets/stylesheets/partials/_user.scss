@@ -1314,6 +1314,8 @@ section.messages{
     display: inline-block;
     width:80%;
     margin: 20px 0 20px 10%; 
+    border-radius: 5px;
+    padding-bottom: 10px;
 
     ul{
       @include clearfix;
@@ -1352,8 +1354,25 @@ section.messages{
       margin:10px auto;
       text-align: center;
       .btn{
-        width:250px;
+        width:220px;
       }
+    }
+  }
+
+  .your-celestines{
+    .heart{
+      margin-top: 4px;
+    }
+    .celes-item{
+      margin: 10px;
+    }
+  }
+
+  #confirmar.tab-pane, #confirmados.tab-pane{
+    margin: 0px;
+
+    i.heart{
+      margin-top: 4px;
     }
   }
 }

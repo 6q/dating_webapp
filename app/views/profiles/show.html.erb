@@ -7,6 +7,7 @@
         <div class="pull-right">
           <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to "¡Mejora tu índice!", "/user/celestinos-of-mine#tab_mejora" %> - Perfil <%= current_user.progress_status %>% completado
         </div>
+        <div class="clearfix"></div>
       </header>
       <div id="user-pictures">
         <div id="picture_gallery">
@@ -25,7 +26,6 @@
 				<fieldset>
 					<header>
 						<h1>Datos de acceso a Cellove</h1>
-						<br>
 						<p>Modifica aquí tus datos de acceso a Cellove</p>
 					</header>
 					<div>
@@ -120,7 +120,7 @@
 				  </div>
 
 				  <div class="tab-pane" id="dicen">
-				  	<%= render 'dicen' %>
+				  	<%= render 'dicen', user: current_user, show_footer: true %>
 					</div>
 
 				</div>
