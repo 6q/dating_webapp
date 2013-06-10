@@ -422,7 +422,7 @@ footer {
 
 /* Flash messages */
 #flash-messages{
-  position: absolute;
+  position: fixed;
   top: 10px;
   z-index: 999;
   display: none;

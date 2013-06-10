@@ -1320,35 +1320,46 @@ section.messages{
     ul{
       @include clearfix;
       margin:20px 0;
-      margin-left:10px;
+      margin-left:15px;
 
       li{
-        width: 42px;
-        height:56px;
         float: left;
-        margin:0px 45px;
-        padding-top:50px;
+        margin:0px 35px;
+        padding-top:10px;
+        padding-bottom: 10px;
         text-align: center;
+        width: 60px;
+
+        i{
+        width: 42px;
+        height: 56px;
+        display: block;
+        margin: 0 auto;
         background:image-url('sprite-hearts.jpg') left top no-repeat;
+        }
       }
     }
-
-
 
     .red-heart {
       color:#e61c25;
     }
     .violet-heart{
-      background-position:-42px 0;
       color:#815ca2;
+      i{
+        background-position:-42px 0;
+      }
     }
     .green-heart{
-      background-position:-84px 0;
       color:#8bc457;
+      i{
+        background-position:-84px 0;
+      }
     }
-    .yellow-heart{
-      background-position:-126px 0;
+    .yellow-heart{  
       color:#fcc009;
+      i{
+        background-position:-126px 0;
+      }
     }
     .btns{
       margin:10px auto;
