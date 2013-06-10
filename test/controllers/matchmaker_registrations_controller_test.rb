@@ -17,7 +17,7 @@ describe MatchmakerRegistrationsController do
       assigns(:user).has_role?(:matchmaker).must_equal true
 
       assert_response 302
-      assert_redirected_to @controller.after_sign_up_path_for(assigns(:user))
+      assert_redirected_to @controller.profile_path
     end
 
   end
