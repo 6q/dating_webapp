@@ -25,6 +25,7 @@ end
 
 create_towns
 
+puts 'Creating users...'
 60.times do |n|
   username = "#{Faker::Internet.user_name}_#{n}"
   u = FactoryGirl.create(:regular_user_optin, email: Faker::Internet.email(username) )
