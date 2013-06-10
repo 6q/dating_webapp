@@ -1,0 +1,228 @@
+<div class="row">
+	<% busca = 0 %>
+
+	<% if @user.lf_gender %>
+		<% busca = 1 %>
+		<div class="key span3">Busca:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::GENDER[@user.lf_gender].downcase %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_orientation %>
+		<% busca = 1 %>
+		<div class="key span3">Orientacion sexual:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::ORIENTATION[@user.lf_orientation] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_marital_status %>
+		<% busca = 1 %>
+		<div class="key span3">Estado civil:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::MARITAL_STATUS[@user.lf_marital_status] %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_age_between.blank? or @user.lf_age_to.blank? %>
+		<% busca = 1 %>
+		<div class="key span3">Edad:</div>
+		<div class="valor span6">
+			<div class="txt"><%= "entre #{@user.lf_age_between} y #{@user.lf_age_to}" %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_relationship %>
+		<% busca = 1 %>
+		<div class="key span3">Relación:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_RELATIONSHIP[@user.lf_relationship] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_child %>
+		<% busca = 1 %>
+		<div class="key span3">Hijos:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_CHILD[@user.lf_child] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_house %>
+		<% busca = 1 %>
+		<div class="key span3">Viva:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_HOUSE[@user.lf_house] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_physical_desc %>
+		<% busca = 1 %>
+		<div class="key span3">Fisico:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::PHYSICAL_DESC[@user.lf_physical_desc] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_physical_style %>
+		<% busca = 1 %>
+		<div class="key span3">Estilo:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::PHYSICAL_STYLE[@user.lf_physical_style] %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_height_between.blank? or @user.lf_height_to.blank? %>
+		<% busca = 1 %>
+		<div class="key span3">Altura:</div>
+		<div class="valor span6">
+			<div class="txt"><%= "entre #{@user.lf_height_between} y #{@user.lf_height_to} cms" %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_weight_between.blank? or @user.lf_weight_to.blank? %>
+		<% busca = 1 %>
+		<div class="key span3">Peso:</div>
+		<div class="valor span6">
+			<div class="txt"><%= "entre #{@user.lf_weight_between} y #{@user.lf_weight_to}" %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_complexion %>
+		<% busca = 1 %>
+		<div class="key span3">Complexión:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::COMPLEXION[@user.lf_complexion] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_eyes %>
+		<% busca = 1 %>
+		<div class="key span3">Ojos:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::EYES[@user.lf_eyes] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_hair %>
+		<% busca = 1 %>
+		<div class="key span3">Pelo:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::HAIR[@user.lf_hair] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_hair_style %>
+		<% busca = 1 %>
+		<div class="key span3">Peinado:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::HAIR_STYLE[@user.lf_hair_style] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_smoke %>
+		<% busca = 1 %>
+		<div class="key span3">Tabaco:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_SMOKE[@user.lf_smoke] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_alcohol %>
+		<% busca = 1 %>
+		<div class="key span3">Alcohol:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_ALCOHOL[@user.lf_alcohol] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_party %>
+		<% busca = 1 %>
+		<div class="key span3">Salir:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_PARTY[@user.lf_party] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_diet %>
+		<% busca = 1 %>
+		<div class="key span3">Dieta:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_DIET[@user.lf_diet] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_ethnicity %>
+		<% busca = 1 %>
+		<div class="key span3">Étnia:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::ETHNICITY[@user.lf_ethnicity] %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_citizenship.blank? %>
+		<% busca = 1 %>
+		<div class="key span3">Nacionalidad:</div>
+		<div class="valor span6">
+			<div class="txt"><%= @user.lf_citizenship %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_religion %>
+		<% busca = 1 %>
+		<div class="key span3">Religión:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::RELIGION[@user.lf_religion] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_religion_activity %>
+		<% busca = 1 %>
+		<div class="key span3">Devoción religiosa:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_RELIGION_ACTIVITY[@user.lf_religion_activity] %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_animals %>
+		<% busca = 1 %>
+		<div class="key span3">Animales:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::LF_ANIMALS[@user.lf_animals] %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_like_sport.blank? or (@user.lf_like_sport=='0' and @user.lf_like_read=="0" and @user.lf_like_cinema=="0" and @user.lf_like_quiet=="0" and @user.lf_like_walk=="0" and @user.lf_like_mountain=="0" and @user.lf_like_beach=="0" and @user.lf_like_family=="0" and @user.lf_like_friends=="0")%>
+		<% busca = 1 %>
+		<div class="key span3">Le guste:</div>
+		<div class="valor span6">
+			<div class="txt">
+				<%= "el deporte<br>".html_safe if @user.lf_like_sport=="1" %>
+				<%= "la lectura<br>".html_safe if @user.lf_like_read=="1" %>
+				<%= "el cine<br>".html_safe if @user.lf_like_cinema=="1" %>
+				<%= "estar tranquil@ en casa<br>".html_safe if @user.lf_like_quiet=="1" %>
+				<%= "pasear<br>".html_safe if @user.lf_like_walk=="1" %>
+				<%= "la montaña<br>".html_safe if @user.lf_like_mountain=="1" %>
+				<%= "la playa<br>".html_safe if @user.lf_like_beach=="1" %>
+				<%= "estar con la familia<br>".html_safe if @user.lf_like_family=="1" %>
+				<%= "estar con sus amigos<br>".html_safe if @user.lf_like_friends=="1" %>
+			</div>
+		</div>
+	<% end %>
+	<% if @user.lf_study_level %>
+		<% busca = 1 %>
+		<div class="key span3">Estudios:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::STUDY_LEVEL[@user.lf_study_level] %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_language.blank? %>
+		<% busca = 1 %>
+		<div class="key span3">Idiomas:</div>
+		<div class="valor span6">
+			<div class="txt"><%= @user.lf_language %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_language_level.blank? %>
+		<% busca = 1 %>
+		<div class="key span3">Nivel:</div>
+		<div class="valor span6">
+			<div class="txt"><%= @user.lf_language_level %></div>
+		</div>
+	<% end %>
+	<% if @user.lf_job %>
+		<% busca = 1 %>
+		<div class="key span3">Trabajo:</div>
+		<div class="valor span6">
+			<div class="txt"><%= User::JOB[@user.lf_job] %></div>
+		</div>
+	<% end %>
+	<% unless @user.lf_salary.blank? %>
+		<% busca = 1 %>
+		<div class="key span3">Ingresos anuales:</div>
+		<div class="valor span6">
+			<div class="txt"><%= @user.lf_salary %></div>
+		</div>
+	<% end %>
+</div>
+
+<% if busca==0 %>
+	<%= "#{@user.name} aún no ha definido que busca" %>
+<% end %>
