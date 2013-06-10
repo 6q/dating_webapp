@@ -9,10 +9,13 @@ describe ConversationsController do
 
     @receiver = FactoryGirl.create(:regular_user_optin)
     @receipt = @user.send_message(@receiver, "Body", "A subject")
+    
+    sign_out @user
+    sign_in @receiver
   end
 
   it "should update a conversation" do
-    put :update, id: @receipt.conversation.id, :message => { body: "This is a reply" }
+        put :update, id: @receipt.conversation.id, :message => { body: "This is a reply" }
     assert_redirected_to conversation_path(assigns(:conversation))
     assigns(:receipt).message.body.must_equal('This is a reply')
   end
