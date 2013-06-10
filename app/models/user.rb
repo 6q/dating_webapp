@@ -323,6 +323,10 @@ class User < ActiveRecord::Base
     self.recommenders.where(confirmed: false, denied: false)
   end
 
+  def confirmed_recommendations
+    self.recommendations.where(confirmed: true, denied: false)
+  end
+
   def avg_characteristic(characteristic = 'romantic')
     recommendations = self.confirmed_recommenders
     if self.confirmed_recommenders.length > 0

@@ -1,9 +1,9 @@
 <section class="direct-search">
   <div class="boxed">
-    <div class="boxed-inner">
+    <div class="boxed-inner overflow-show">
       <h4>Búsqueda directa:</h4>
       <div class="searchform form-horizontal">
-        <%= search_form_for @search do |f| %>
+        <%= search_form_for @search, :class => 'overflow-show' do |f| %>
           <fieldset class="span6">
             <div class="control-group sliders">
               <label>Edad <span></span></label>
@@ -13,7 +13,7 @@
                 <%= f.hidden_field :years_gteq  %>
               </div>
             </div>
-            <div class="control-group">
+            <div class="overflow-show control-group">
               <label>Población y código postal</label>
               <div class="controls">
                 <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, { include_blank: _('Localidad...'), selected: @search.town_eq }, { class: 'location' } %>

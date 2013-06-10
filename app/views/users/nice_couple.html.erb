@@ -1,7 +1,10 @@
 <section class="list">
   <header>
-    <h1>Hacemos buena pareja</h1>
-    <%= render '/shared/user/sorting' %>
+    <h1 class="pull-left">Hacemos buena pareja</h1>
+    <div class="sort-gustado">
+      <%= render '/shared/user/sorting' %>
+    </div>
+    <div class="clearfix"></div>
   </header>
   <% @interactions = true %>
   <% @timestamp = true %>

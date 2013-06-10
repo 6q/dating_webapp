@@ -36,7 +36,7 @@ $(document).ready(function() {
     var bg = '/assets/bg/main-bg' + hasSkin + '.jpg';
     $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
   } else {
-    $.getScript("/background.json").done(function(background, textStatus) { });
+    //$.getScript("/background.json").done(function(background, textStatus) { });
   }
 
   $(".skin-change").click(function() {
