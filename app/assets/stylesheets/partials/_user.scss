@@ -222,10 +222,11 @@ section.list {
     @include clearfix;
     font-size:.8em;
     color:#999;
+    float: left;
 
     span.page {
       display:block;
-      float:right;
+      float:left;
 
       a.prev, a.next {
         background:$link_color;
@@ -234,7 +235,7 @@ section.list {
         color:#fff;
         padding:0 .5em;
         text-decoration:none;
-        margin:0 5px;
+        margin:0 8px;
         &:hover {
           background:$link-hover-color;
         }
@@ -246,6 +247,17 @@ section.list {
         color:#666;
       }
     }
+
+    span{
+      a {
+        float:left;
+        margin:0 3px;
+      }
+    }
+  }
+
+  nav.pagination{
+    float: right;
   }
 }
 
