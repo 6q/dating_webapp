@@ -206,6 +206,9 @@ section.list {
     form {
       margin:0;
     }
+    .sort-gustado{
+      padding-top: 5px;
+    }
     .sort {
       float:right;
 
@@ -370,8 +373,8 @@ section.chat{
 
   .sort {
     position:absolute;
-    right:0;
-    top:0;
+    right:2px;
+    top:7px;
     select {
       font-size:.85em;
     }
@@ -1523,6 +1526,7 @@ section.list {
       padding:10px;
       border:0;
       margin:0;
+      overflow: visible;
 
       h1 {
         font-size:.8em;
