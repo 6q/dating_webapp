@@ -1,154 +1,154 @@
 <article class="form-inline">
-							<hr class="thin">
-							<%= form_for @user, :url => profile_path do |user| %>
-								<%= user.label :lf_gender, "Busco" %>
-      					<%= user.select :lf_gender, gender_options, {}, :class => 'span2'  %>
-      					<%= user.select :lf_orientation, orientation_options,{}, :class => 'span2'  %>
-      					<%= user.label :lf_marital_status, "y" %>
-      					<%= user.select :lf_marital_status, marital_status_options,	{}, { :class => 'span2' } %>
-      					,
-								<hr class="thin">
-								<%= user.label :lf_age_between, 'de entre' %>
-								<%= user.text_field :lf_age_between, :class => 'input-mini' %>
-								<%= user.label :lf_age_to, 'y' %>
-								<%= user.text_field :lf_age_to, :class => 'input-mini' %>
-								<%= user.label :lf_relationship, 'años. Para' %>
-								<%= user.select :lf_relationship, lf_relationship_options, {}, :class => 'span4' %>
-								<hr class="thin">
+	<hr class="thin">
+	<%= form_for @user, :url => profile_path do |user| %>
+		<%= user.label :lf_gender, "Busco" %>
+   	<%= user.select :lf_gender, gender_options, {}, :class => 'span2'  %>
+   	<%= user.select :lf_orientation, orientation_options,{}, :class => 'span2'  %>
+   	<%= user.label :lf_marital_status, "y" %>
+   	<%= user.select :lf_marital_status, marital_status_options,	{}, { :class => 'span2' } %>
+   	,
+		<hr class="thin">
+		<%= user.label :lf_age_between, 'de entre' %>
+		<%= user.text_field :lf_age_between, :class => 'input-mini' %>
+		<%= user.label :lf_age_to, 'y' %>
+		<%= user.text_field :lf_age_to, :class => 'input-mini' %>
+		<%= user.label :lf_relationship, 'años. Para' %>
+		<%= user.select :lf_relationship, lf_relationship_options, {}, :class => 'span4' %>
+		<hr class="thin">
 
-								<hr class="thin">
-								<%= user.label :lf_child, 'Que ' %>
-								<%= user.select :lf_child, lf_child_options, {}, :class => 'span4' %>
-      					<hr class="thin">
-      					<%= user.label :lf_house, 'Que viva' %>
-      					<%= user.select :lf_house, lf_house_options, {}, :class => 'span4' %>
-      					<%= user.label :lf_city, 'en' %>
-      					<%= user.text_field :lf_city, :class=> 'span2' %>
-      					<%= user.label :lf_country, ',' %>
-      					<%= user.select :lf_country, country_options, {}, :class=>'span2' %>
-      					<hr class="thin">
-								<%= user.label :lf_postal_code, ' cerca del código postal' %>
-								<%= user.text_field :lf_postal_code, placeholder: 'CP', :class => 'input-mini' %>.
+		<hr class="thin">
+		<%= user.label :lf_child, 'Que ' %>
+		<%= user.select :lf_child, lf_child_options, {}, :class => 'span4' %>
+    <hr class="thin">
+    <%= user.label :lf_house, 'Que viva' %>
+    <%= user.select :lf_house, lf_house_options, {}, :class => 'span4' %>
+    <%= user.label :lf_city, 'en' %>
+    <%= user.text_field :lf_city, :class=> 'span2' %>
+    <%= user.label :lf_country, ',' %>
+    <%= user.select :lf_country, country_options, {}, :class=>'span2' %>
+    <hr class="thin">
+		<%= user.label :lf_postal_code, ' cerca del código postal' %>
+		<%= user.text_field :lf_postal_code, placeholder: 'CP', :class => 'input-mini' %>.
 							
-								<hr>
-								<%= user.label :lf_physical_desc, 'Que sea' %>
-								<%= user.select :lf_physical_desc, physical_desc_options,{}, :class =>"span2" %>
-								<%= user.label :lf_physical_style, ', con estilo' %>
-								<%= user.select :lf_physical_style, physical_style_options,{}, :class =>"span2" %>.
-								<hr class="thin">
-								<%= user.label :lf_height_between, 'Que mida entre' %>
-								<%= user.text_field :lf_height_between, :class => 'input-mini' %>
-								<%= user.label :lf_height_to, 'y' %>
-								<%= user.text_field :lf_height_to, :class => 'input-mini' %>
-								<%= user.label :lf_weight_between, 'cms. y pese entre ' %>
-								<%= user.text_field :lf_weight_between, :class => 'input-mini' %>
-								<%= user.label :lf_weight_to, 'y' %>
-								<%= user.text_field :lf_weight_to, :class => 'input-mini' %>
-								kg.,<hr class="thin">
-								<%= user.label :lf_complexion, 'con un cuerpo ' %>
-								<%= user.select :lf_complexion, complexion_options, {}, :class => 'span2' %>.
-								<hr class="thin">
-								<%= user.label :lf_hair, 'De pelo' %>
-								<%= user.select :lf_hair, hair_options, {}, :class=>"span2" %>
-								<%= user.label :lf_hair_style, 'y' %>
-								<%= user.select :lf_hair_style, hair_style_options, {}, :class =>"span2" %>
-								<%= user.label :lf_eyes, '. Con ojos de color' %>
-								<%= user.select :lf_eyes, eyes_options, {}, :class=>'span2' %>
-								<hr>
+		<hr>
+		<%= user.label :lf_physical_desc, 'Que sea' %>
+		<%= user.select :lf_physical_desc, physical_desc_options,{}, :class =>"span2" %>
+		<%= user.label :lf_physical_style, ', con estilo' %>
+		<%= user.select :lf_physical_style, physical_style_options,{}, :class =>"span2" %>.
+		<hr class="thin">
+		<%= user.label :lf_height_between, 'Que mida entre' %>
+		<%= user.text_field :lf_height_between, :class => 'input-mini' %>
+		<%= user.label :lf_height_to, 'y' %>
+		<%= user.text_field :lf_height_to, :class => 'input-mini' %>
+		<%= user.label :lf_weight_between, 'cms. y pese entre ' %>
+		<%= user.text_field :lf_weight_between, :class => 'input-mini' %>
+		<%= user.label :lf_weight_to, 'y' %>
+		<%= user.text_field :lf_weight_to, :class => 'input-mini' %>
+		kg.,<hr class="thin">
+		<%= user.label :lf_complexion, 'con un cuerpo ' %>
+		<%= user.select :lf_complexion, complexion_options, {}, :class => 'span2' %>.
+		<hr class="thin">
+		<%= user.label :lf_hair, 'De pelo' %>
+		<%= user.select :lf_hair, hair_options, {}, :class=>"span2" %>
+		<%= user.label :lf_hair_style, 'y' %>
+		<%= user.select :lf_hair_style, hair_style_options, {}, :class =>"span2" %>
+		<%= user.label :lf_eyes, '. Con ojos de color' %>
+		<%= user.select :lf_eyes, eyes_options, {}, :class=>'span2' %>
+		<hr>
 
-								<%= user.label :lf_smoke, 'Que'%>
-								<%= user.select :lf_smoke, lf_smoke_options, {}, :class => 'span4' %>
-								<%= user.label :lf_alcohol, ','%>
-								<%= user.select :lf_alcohol, lf_alcohol_options,{}, :class => 'span4' %>
-								<hr class="thin">
-								<%= user.label :lf_party, 'y' %>
-								<%= user.select :lf_party, lf_party_options, {}, :class => 'span4' %>
-								<hr class="thin">
-								<%= user.label :lf_diet, 'Con una dieta'%>
-								<%= user.select :lf_diet, lf_diet_options, {}, :class => 'span4' %>
+		<%= user.label :lf_smoke, 'Que'%>
+		<%= user.select :lf_smoke, lf_smoke_options, {}, :class => 'span4' %>
+		<%= user.label :lf_alcohol, ','%>
+		<%= user.select :lf_alcohol, lf_alcohol_options,{}, :class => 'span4' %>
+		<hr class="thin">
+		<%= user.label :lf_party, 'y' %>
+		<%= user.select :lf_party, lf_party_options, {}, :class => 'span4' %>
+		<hr class="thin">
+		<%= user.label :lf_diet, 'Con una dieta'%>
+		<%= user.select :lf_diet, lf_diet_options, {}, :class => 'span4' %>
 								
-								<hr>
-								<%= user.label :lf_ethnicity,'De étnia' %>
-								<%= user.select :lf_ethnicity, ethnicity_options %>
-								<%= user.label :lf_citizenship, 'y nacionalidad' %>
-								<%= user.text_field :lf_citizenship %>
+		<hr>
+		<%= user.label :lf_ethnicity,'De étnia' %>
+		<%= user.select :lf_ethnicity, ethnicity_options %>
+		<%= user.label :lf_citizenship, 'y nacionalidad' %>
+		<%= user.text_field :lf_citizenship %>
 								
-								<hr class="thin">
-								<%= user.label :lf_religion, 'Que sea' %>
-								<%= user.select :lf_religion, religion_options, {}, :class => 'span2' %>
-								<%= user.label :lf_religion_activity,'y' %>
-								<%= user.select :lf_religion_activity, lf_religion_activity_options, {}, :class=>'span4' %>
-								<hr class="thin">
-								<%= user.label :lf_animals, 'Que' %>
-								<%= user.select :lf_animals, lf_animals_options, {}, :class=>'span5' %>
-								<hr class="thin">
-								<div>Que en su tiempo libre le guste:</div>
+		<hr class="thin">
+		<%= user.label :lf_religion, 'Que sea' %>
+		<%= user.select :lf_religion, religion_options, {}, :class => 'span2' %>
+		<%= user.label :lf_religion_activity,'y' %>
+		<%= user.select :lf_religion_activity, lf_religion_activity_options, {}, :class=>'span4' %>
+		<hr class="thin">
+		<%= user.label :lf_animals, 'Que' %>
+		<%= user.select :lf_animals, lf_animals_options, {}, :class=>'span5' %>
+		<hr class="thin">
+		<div>Que en su tiempo libre le guste:</div>
 
-								<div class="checkbox-group">
-									<div class="span2">
-										<div>
-											<%= user.check_box :lf_like_sport %>
-											<%= user.label :lf_like_sport,'Deporte' %>
-										</div>
-										<div>
-											<%= user.check_box :lf_like_read %>
-											<%= user.label :lf_like_read,'Lectura' %>
-										</div>
-										<div>
-											<%= user.check_box :lf_like_cinema %>
-											<%= user.label :lf_like_cinema,'Cine' %>
-										</div>
-									</div>
-									<div class="span2">
-										<div>
-											<%= user.check_box :lf_like_walk %>
-											<%= user.label :lf_like_walk,'Pasear' %>
-										</div>
-										<div>
-											<%= user.check_box :lf_like_beach %>
-											<%= user.label :lf_like_beach,'Playa' %>
-										</div>
-										<div>
-											<%= user.check_box :lf_like_mountain %>
-											<%= user.label :lf_like_mountain,'Montaña' %>
-										</div>
-									</div>
-									<div class="span3">
-										<div>
-											<%= user.check_box :lf_like_quiet %>
-											<%= user.label :lf_like_quiet,'Estar tranquilo en casa' %>
-										</div>
-										<div>
-											<%= user.check_box :lf_like_family %>
-											<%= user.label :lf_like_family,'Estar con la familia' %>
-										</div>
-										<div>
-											<%= user.check_box :lf_like_friends %>
-											<%= user.label :lf_like_friends,'Estar con mis amigos' %>
-										</div>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<hr>
-								<%= user.label :lf_study_level, 'Con estudios' %>
-								<%= user.select :lf_study_level, study_level_options %>
-								<hr class="thin">
-								<%= user.label :lf_language,'Que domine' %>
-								<%= user.select :lf_language, language_options, {}, :class => 'span2'  %>
-								<%= user.label :lf_language_level,'idiomas a nivel' %>
-								<%= user.select :lf_language_level, language_level_options, {}, :class => 'span1' %>
-								<hr class="thin">
-								<%= user.label :lf_job, 'Que trabaje en el sector' %>
-								<%= user.select :lf_job, job_options, {}, :class => 'span4' %>
-								con ganancias
-								<hr class="thin">
-								<%= user.label :lf_salary, 'anuales de' %>
-								<%= user.text_field :lf_salary, :class =>'span1' %>€/año
+		<div class="checkbox-group">
+			<div class="span2">
+				<div>
+					<%= user.check_box :lf_like_sport %>
+					<%= user.label :lf_like_sport,'Deporte' %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_read %>
+					<%= user.label :lf_like_read,'Lectura' %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_cinema %>
+					<%= user.label :lf_like_cinema,'Cine' %>
+				</div>
+			</div>
+			<div class="span2">
+				<div>
+					<%= user.check_box :lf_like_walk %>
+					<%= user.label :lf_like_walk,'Pasear' %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_beach %>
+					<%= user.label :lf_like_beach,'Playa' %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_mountain %>
+					<%= user.label :lf_like_mountain,'Montaña' %>
+				</div>
+			</div>
+			<div class="span3">
+				<div>
+					<%= user.check_box :lf_like_quiet %>
+					<%= user.label :lf_like_quiet,'Estar tranquilo en casa' %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_family %>
+					<%= user.label :lf_like_family,'Estar con la familia' %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_friends %>
+					<%= user.label :lf_like_friends,'Estar con mis amigos' %>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<hr>
+		<%= user.label :lf_study_level, 'Con estudios' %>
+		<%= user.select :lf_study_level, study_level_options %>
+		<hr class="thin">
+		<%= user.label :lf_language,'Que domine' %>
+		<%= user.select :lf_language, language_options, {}, :class => 'span2'  %>
+		<%= user.label :lf_language_level,'idiomas a nivel' %>
+		<%= user.select :lf_language_level, language_level_options, {}, :class => 'span1' %>
+		<hr class="thin">
+		<%= user.label :lf_job, 'Que trabaje en el sector' %>
+		<%= user.select :lf_job, job_options, {}, :class => 'span4' %>
+		con ganancias
+		<hr class="thin">
+		<%= user.label :lf_salary, 'anuales de' %>
+		<%= user.text_field :lf_salary, :class =>'span1' %>€/año
 
-						</article>
-						<hr>
-						<div class="center">
-							<button class="btn btn-info btn-large">Guardar preferencias</button>
-						</div>
-						<% end %>
-						<hr class="thin">
+</article>
+<hr>
+<div class="center">
+	<button class="btn btn-info btn-large">Guardar preferencias</button>
+</div>
+<% end %>
+<hr class="thin">
