@@ -24,3 +24,22 @@ namespace :deploy do
     run "kill -s USR2 `cat #{shared_path}/pids/unicorn.pid`"
   end
 end
+
+after 'deploy:create_symlink', 'arrowchat:setup'
+after 'deploy:create_symlink', 'symlink:app_config'
+
+namespace :arrowchat do
+  desc "Setup arrowchat folder permissions in the public"
+  task :setup, :roles => [:web] do
+    ['cache', 'includes', 'includes/functions/integrations'].each do |path|
+      run "chmod 777 #{current_path}/public/arrowchat/#{path}"
+    end
+  end
+end
+
+namespace :symlink do
+  desc "Link public directories to shared location."
+  task :app_config, :roles => [:web] do
+    run "ln -nfs #{shared_path}/config/application.yml #{current_path}/config/application.yml"
+  end
+end
