@@ -5,12 +5,14 @@ class NotesController < ApplicationController
 	
 	def create
 		@note = Note.create(params[:note])
+    flash[:success] = _('Tu nota se ha guardado.')
 		redirect_to :back
 	end
 
 	def destroy
 		@note = Note.find(params[:id])
 		@note.destroy
+    flash[:success] = _('Tu nota se ha borrado.')
 		redirect_to :back
 	end
 
