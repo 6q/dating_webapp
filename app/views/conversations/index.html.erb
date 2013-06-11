@@ -12,9 +12,9 @@
 
   <div class="tabs">
     <ul class="nav nav-tabs" id="messages-tab">
-      <li class="active"><a href="#inbox">Recibidos<%= " (#{@conversations_inbox.count})" if @conversations_inbox.count > 0 %></a></li>
-        <li><a href="#sentbox">Enviados<%= " (#{@conversations_sentbox.count})" if @conversations_sentbox.count > 0 %></a></li>
-        <li><a href="#trash">Eliminados<%= " (#{@conversations_trash.count})" if @conversations_trash.count > 0 %></a></li>
+      <li class="active"><a href="#inbox">Recibidos<%= " (#{@conversations_inbox.total_count})" if @conversations_inbox.total_count > 0 %></a></li>
+      <li><a href="#sentbox">Enviados<%= " (#{@conversations_sentbox.total_count})" if @conversations_sentbox.total_count > 0 %></a></li>
+        <li><a href="#trash">Eliminados<%= " (#{@conversations_trash.total_count})" if @conversations_trash.total_count > 0 %></a></li>
     </ul>
     <%= render '/shared/user/sorting' %>
   </div>
