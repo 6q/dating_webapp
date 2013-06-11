@@ -33,6 +33,7 @@ gem 'gettext', '>=1.9.3', :require => false, :group => :development
 gem 'ransack'
 gem 'faker'
 gem 'factory_girl_rails', '>= 4.2.0'
+gem "mail_view", "~> 1.0.3"
 
 group :test do
   gem 'sqlite3'
@@ -42,7 +43,6 @@ group :test do
 end
 
 gem 'minitest-rails', group: [:test, :development]
-gem "mail_view", "~> 1.0.3", group: [:test, :development]
 
 group :development do
   gem "guard-rails"
