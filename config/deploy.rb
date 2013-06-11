@@ -31,9 +31,11 @@ after 'deploy:create_symlink', 'symlink:app_config'
 namespace :arrowchat do
   desc "Setup arrowchat folder permissions in the public"
   task :setup, :roles => [:web] do
-    ['cache', 'includes', 'includes/functions/integrations'].each do |path|
+    ['cache', 'includes', 'includes/functions/integrations', 'cache/data_admin_options.php'].each do |path|
       run "chmod 777 #{current_path}/public/arrowchat/#{path}"
     end
+
+    run "rm -rf #{current_path}/public/arrowchat/install"
   end
 end
 
