@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_cookie
   before_filter :matchmaker_user
   after_filter :user_activity
+  before_filter :authenticate
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -20,4 +21,12 @@ class ApplicationController < ActionController::Base
     current_user.try :touch
   end
   private :user_activity
+
+  def authenticate
+    if Rails.env.staging? 
+      authenticate_or_request_with_http_basic do |username, password|
+        username == 'cellove' && password == 'c3l0v3'
+      end
+    end
+  end
 end
