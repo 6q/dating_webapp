@@ -1,0 +1,10 @@
+<% unless conversation.activity.blank? %>
+<div class="clearfix proposal">
+	<div class="pull-left">
+		<b>Propuesta de actividad:</b> <%= "#{conversation.activity.body.capitalize} el #{I18n.l(conversation.activity.date, format: :long)}" %>
+	</div>
+	<div class="pull-right">
+		<a data-toggle="modal" href="#proposal-accept">Aceptar</a> - <a data-toggle="modal" href="#proposal-reject">Rechazar</a>
+	</div>
+</div>
+<% end %>
