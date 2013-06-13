@@ -18,7 +18,6 @@
     </ul>
     <%= render '/shared/user/sorting' %>
   </div>
-  
   <div class="boxed">
     <div class="boxed-inner">
 
@@ -26,7 +25,7 @@
 
         <!-- begin tabs -->
         <div class="tab-pane<%= ' active' if @box.eql? 'inbox' %>" id="inbox">
-          <%= render partial: 'conversations', locals: {conversations: @conversations_inbox} %>
+          <%= render partial: 'conversations', locals: {conversations: @conversations_inbox, activities: @activities} %>
         </div>
 
         <div class="tab-pane<%= ' active' if @box.eql? 'sentbox' %>" id="sentbox">
