@@ -9,7 +9,7 @@ class NotificationsController < ApplicationController
       u = User.find(notification.sender_id)
       pp = u.profile_picture
       if u.profile_picture
-        picture_url = pp.image.thumb(size).url
+        picture_url = pp.image.thumb.url
       else
         picture_url = "/assets/placeholder-#{u.gender}-#{Random.rand(1..3)}.jpg"
       end
