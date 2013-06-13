@@ -196,7 +196,7 @@ class UsersController < ApplicationController
           logger.debug "ITERATING JAJAJAJAJAJA"
           if current_user.affinity(user) < affinity
             logger.debug "SORRY " + user.name + ", YOU HAVE TO GO"
-            @users.delete(user)
+            #@users.delete(user)
           end
         end
       end
