@@ -29,4 +29,5 @@ class ApplicationController < ActionController::Base
       end
     end
   end
+  private :authenticate
 end
