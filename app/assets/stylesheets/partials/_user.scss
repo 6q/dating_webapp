@@ -436,6 +436,7 @@ section.chat{
 
   .info {
     margin-left:80px;
+    display: block;
 
     .msg-data {
       font-size:.85em;
@@ -444,7 +445,6 @@ section.chat{
       padding:.5em;
       padding-bottom: 0px;
       margin-left: 0px;
-      float: left;
 
       a {
         font-size:1.2em;
@@ -455,11 +455,12 @@ section.chat{
     .msg-date {
       color:#666;
       font-size:.8em;
-      float: right;
+      position: absolute;
+      right: 12px;
+      margin-top: -26px;
     }
 
     .msg {
-      float: left;
       padding:0em .5em;
       line-height:1em;
       a {
@@ -698,7 +699,7 @@ section.chat{
       @each $a in $activities {
         &.#{$a} {
           background-position: -60px*$i 0;
-          $i: $i+1;          
+          $i: $i+1;        
         }
       }
     }
@@ -715,7 +716,7 @@ section.chat{
 
   ul {
     @include clearfix;
-    margin:0;
+    margin-left: 40px;
     padding:0;
     margin-bottom:20px;
 
@@ -750,9 +751,9 @@ section.chat{
       li.#{$a} {
         a {
           background-position: -60px*$i 0;
-          $i: $i+1;          
+          opacity: 0.4;
+          $i: $i+1;
         }
-
       }
     }
 

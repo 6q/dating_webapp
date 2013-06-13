@@ -6,10 +6,20 @@ class ConversationsController < ApplicationController
   layout "logged_in"
   
   def index
-    @conversations_inbox = @mailbox.inbox.page(params[:page]).per(9)
-    @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(9)
-    @conversations_trash = @mailbox.trash.page(params[:page]).per(9)
+    if params[:activities] == 'show'
+      @conversations_inbox = @mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }
+      @conversations_inbox = Kaminari.paginate_array(@conversations_inbox).page(params[:page]).per(9)
+      @conversations_sentbox = @mailbox.sentbox.includes(:activity).reject { |i| i.activity.nil? }
+      @conversations_sentbox = Kaminari.paginate_array(@conversations_sentbox).page(params[:page]).per(9)
+      @conversations_trash = @mailbox.trash.includes(:activity).reject { |i| i.activity.nil? }
+      @conversations_trash = Kaminari.paginate_array(@conversations_trash).page(params[:page]).per(3)
+    else 
+      @conversations_inbox = @mailbox.inbox.page(params[:page]).per(9)
+      @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(9)
+      @conversations_trash = @mailbox.trash.page(params[:page]).per(9)
+    end
     @search = User.search(params[:q])
+
 
     respond_to do |format|
       format.html { render partial: 'conversations', locals: { conversations: @conversations_sentbox } if request.xhr? }
