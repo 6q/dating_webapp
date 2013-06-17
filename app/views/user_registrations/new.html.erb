@@ -43,39 +43,39 @@
     </div>
     <div class="control-group">
       <%= f.label :birth_date_day, "Nací el" %>
-      <%= f.text_field :birth_date_day, placeholder: Date.today.day, class: "span1" %>
+      <%= f.text_field :birth_date_day, placeholder: _('Día'), class: "span1" %>
       <%= f.label :birth_date_month, "de" %>
-      <%= f.text_field :birth_date_month, placeholder: Date.today.month, class: "span1" %>
+      <%= f.text_field :birth_date_month, placeholder: _('Mes'), class: "span1" %>
       <%= f.label :birth_date_year, "de" %>
-      <%= f.text_field :birth_date_year, placeholder: Date.today.year, class: "span1" %>
+      <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
       <%= f.label :country, "y vivo en" %>
       <%= f.select :country, country_options %>
     </div>
     <div class="control-group">
-      <%= f.label :postal_code, "Mi codigo postal es el" %>
+      <%= f.label :postal_code, _("Mi codigo postal es el") %>
       <%= f.text_field :postal_code, class: "span1" %>
       <%= f.label :town, "de" %>
       <%= f.text_field :town %>
     </div>
   </fieldset>
   <fieldset id="photo" class="clearfix form-inline">
-    <legend>¿Cómo eres?</legend>
+    <legend><%= _('¿Cómo eres?') %></legend>
     <div class="row">
       <div class="span6">
-        <label class="control-label photo">Sube tu foto</label>
+        <label class="control-label photo"><%= _('Sube tu foto') %></label>
           <%= f.file_field :pictures, :name => 'images[]', :multiple => true, class: 'span4 upload_pic_input_unregistered' %>
           <div id="renderImage">
           </div>
       </div>
       <div class="span6">
         <%= f.check_box :image_not_uploaded %>
-        <%= f.label :image_not_uploaded, "!Subir image más adelante!" %>
-        <small>* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s.</small>
+        <%= f.label :image_not_uploaded, _("!Subir image más adelante!") %>
+        <small>* <%= _('Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s.') %></small>
       </div>
     </div>
   </fieldset>
   <fieldset id="access" class="clearfix form-horizontal">
-    <legend>Datos de acceso a Cellove</legend>
+    <legend><%= _('Datos de acceso a Cellove') %></legend>
     <div class="row">
       <div class="span6">
         <div class="control-group">
