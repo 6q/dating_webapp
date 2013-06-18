@@ -1,17 +1,11 @@
 <section class="user-profile">
 	<article class="boxed">
 		<div class="boxed-inner">
-			<div id="nice-couple">
+			<div id="nice-couple" class="">
 				<i></i>
 				<p>¿Hacéis buena pareja?</p>
-				<ul>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-				</ul>
-			</div>
+        <%= rating_for(@user, current_user, readonly: false) %>
+      </div>
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
