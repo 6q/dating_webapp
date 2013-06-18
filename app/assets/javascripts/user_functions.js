@@ -225,14 +225,5 @@ $(document).ready(function() {
       titleShow :false
   });
 
-  // hover with opacity in proposal activity modal
-  $('#activity-types li').mouseover(function(){
-    $(this).children().animate({opacity: 1}, 500);
-  });
-  $('#activity-types li').mouseout(function(){
-    $(this).children().animate({opacity: 0.4}, 500);
-  });
-
-
 
 });
