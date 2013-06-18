@@ -21,7 +21,7 @@ gem 'compass-rails'
 gem "geocoder", "~> 1.1.3"
 gem 'friendly_id'
 gem 'dragonfly', '~>0.9.14'
-gem 'country_select'
+gem 'country_select', github: 'stefanpenner/country_select'
 gem 'kaminari'
 #gem 'turbolinks'
 gem 'mail_form'

@@ -1,0 +1,14 @@
+$("#example-input").ajaxChosen({
+    type: 'GET',
+    url: '<%= country_data_path %>',
+    dataType: 'json'
+  }, function (data) {
+    var results = [];
+
+    $.each(data, function (i, val) {
+      results.push({ value: val.value, text: val.text });
+    });
+
+    return results;
+  });
+
