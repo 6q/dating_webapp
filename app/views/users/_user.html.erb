@@ -13,26 +13,34 @@
         <br>
         <span><%= truncate(user.town, length: 20) %></span>
         <br><%= "#{user.age} #{t("datetime.prompts.year")}" %>
-        <br><%= (current_user.distance_to user).round(2) if current_user.distance_to user %> km
+        <br><%= (current_user.distance_to user).round(2) + ' km' if user_signed_in? && current_user.distance_to(user) %>
       </h1>
     </header>
     <ul class="actions clearfix">
-      <li class="message"><%= link_to 'Send Message', "#fast-reply-#{user.id}", 'data-toggle' => 'modal' %></li>
-      <li class="chat"><%= link_to 'Chat', '#', onclick: "jqac.arrowchat.chatWith('#{user.id}'); return false;" %></li>
-      <% if current_user.likes?(user) %>
-        <li class="like disabled active"><%= link_to 'Unlike', user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %></li>
-        <li class="like hidden"><%= link_to 'Like', user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %></li>
-      <% else %>
-        <li class="like active"><%= link_to 'Like', user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %></li>
-        <li class="like disabled hidden"><%= link_to 'Unlike', user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %></li>
-      <% end %>
-      <% block_modal_id = '#user-block-' + user.id.to_s %>
-      <% is_blocked = !current_user.user_blocks.where("blocked_user_id = ?", user.id).first.nil? %>
-      <% is_hidden = !current_user.user_hides.where("hidden_user_id = ?", user.id).first.nil? %>
+      <% if user_signed_in? %>
+        <li class="message"><%= link_to 'Send Message', "#fast-reply-#{user.id}", 'data-toggle' => 'modal' %></li>
+        <li class="chat"><%= link_to 'Chat', '#', onclick: "jqac.arrowchat.chatWith('#{user.id}'); return false;" %></li>
+        <% if current_user.likes?(user) %>
+          <li class="like disabled active"><%= link_to 'Unlike', user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %></li>
+          <li class="like hidden"><%= link_to 'Like', user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %></li>
+        <% else %>
+          <li class="like active"><%= link_to 'Like', user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %></li>
+          <li class="like disabled hidden"><%= link_to 'Unlike', user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %></li>
+        <% end %>
+        <% block_modal_id = '#user-block-' + user.id.to_s %>
+        <% is_blocked = !current_user.user_blocks.where("blocked_user_id = ?", user.id).first.nil? %>
+        <% is_hidden = !current_user.user_hides.where("hidden_user_id = ?", user.id).first.nil? %>
 
-      <li class="block <%= (is_blocked || is_hidden) ? "disabled" : "" %> ">
+        <li class="block <%= (is_blocked || is_hidden) ? "disabled" : "" %> ">
         <%= link_to 'Block', block_modal_id, "data-toggle" => "modal" %>
-      </li>
+        </li>
+      <% else %>
+        <li class="message"><%= link_to _('Send Message'), new_user_registration_path %></li>
+        <li class="chat"><%= link_to 'Chat', new_user_registration_path %></li>
+          <li class="like disabled active"><%= link_to 'Unlike', new_user_registration_path %></li>
+          <li class="like hidden"><%= link_to 'Like', new_user_registration_path %></li>
+        <li class="block"><%= link_to 'Block', new_user_registration_path %></li>
+      <% end %>
     </ul>
 
     <% if @interactions == true %>
@@ -47,6 +55,8 @@
 
     <% end %>
   </article>
-</li>
-<%= render partial: 'shared/modal_new_message', locals: { user: user } %>
-<%= render partial: 'shared/user/modal_user-block', locals: { user: user, is_blocked: is_blocked, is_hidden: is_hidden } %>
+  </li>
+  <% if user_signed_in? %>
+    <%= render partial: 'shared/modal_new_message', locals: { user: user } %>
+    <%= render partial: 'shared/user/modal_user-block', locals: { user: user, is_blocked: is_blocked, is_hidden: is_hidden } %>
+  <% end %>
