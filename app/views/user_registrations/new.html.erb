@@ -55,7 +55,7 @@
       <%= f.label :postal_code, _("Mi codigo postal es el") %>
       <%= f.text_field :postal_code, class: "span1" %>
       <%= f.label :town, "de" %>
-      <%= f.text_field :town %>
+      <%= f.text_field :town, value: @geocoder.city %>
     </div>
   </fieldset>
   <fieldset id="photo" class="clearfix form-inline">
