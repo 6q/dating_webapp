@@ -34,6 +34,7 @@ gem 'ransack'
 gem 'faker'
 gem 'factory_girl_rails', '>= 4.2.0'
 gem "mail_view", "~> 1.0.3"
+gem 'client_side_validations'
 
 group :test do
   gem 'sqlite3'

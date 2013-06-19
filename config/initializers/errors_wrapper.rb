@@ -1,3 +1,4 @@
+=begin
 ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   object = instance.object
   attr_name = instance.method_name
@@ -14,3 +15,4 @@ ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   }
   out.html_safe
 end
+=end

@@ -56,19 +56,11 @@
           <%= f.label :email, "Email", class: 'control-label' %>
           <%= f.email_field :email %>
         </div>
-        <div class="control-group">
-          <%= f.label :email_confirmation, "Confirmar email", class: 'control-label' %>
-          <%= f.email_field :email_confirmation %>
-        </div>
       </div>
       <div class="span6">
         <div class="control-group">
           <%= f.label :password, "Contraseña", class: "control-label" %>
           <%= f.password_field :password %>
-        </div>
-        <div class="control-group">
-          <%= f.label :password_confirmation, "Confirmar contraseña", class: "control-label" %>
-          <%= f.password_field :password_confirmation %>
         </div>
       </div>
     </div>
@@ -84,9 +76,9 @@
             <label>Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.</label>
           </div>
         </div>
-        <div class="span6">
+        <div class="span6 center">
           <%= f.hidden_field :invitation_code, :value => params['invitation_code'] %>
-          <%= f.submit t(:sign_up), :class => 'btn btn-info btn-large' %>
+          <%= f.submit t(:sign_up), :class => 'btn btn-info btn-large submit' %>
         </div>
       </div>
     </div>

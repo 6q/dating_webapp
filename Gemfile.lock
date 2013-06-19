@@ -48,6 +48,7 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
     chunky_png (1.2.8)
+    client_side_validations (3.2.5)
     coderay (1.0.9)
     commands (0.2.1)
       rails (>= 3.2.0)
@@ -253,6 +254,7 @@ DEPENDENCIES
   capistrano
   capistrano-ext
   capistrano_colors
+  client_side_validations
   commands
   compass-rails
   compass_twitter_bootstrap

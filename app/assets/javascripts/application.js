@@ -17,6 +17,7 @@
 //= require jquery.flexslider-min
 //= require user_functions
 //= require chosen.jquery.min
+//= require rails.validations
 //= require_tree .
 
 $(function() {

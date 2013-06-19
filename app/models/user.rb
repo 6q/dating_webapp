@@ -186,17 +186,16 @@ class User < ActiveRecord::Base
   #virtual attributes
   attr_accessor :terms_and_conditions
   attr_accessor :image_not_uploaded
-  attr_accessor :email_confirmation
   attr_accessor :blocked
   attr_accessor :hidden
   present_date :birth_date
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation,
+  attr_accessible :name, :email, :password,
     :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status,
     :birth_date, :country, :postal_code, :town, :town_id,
-    :newsletter_optin, :image_not_uploaded, :email_confirmation, :terms_and_conditions, 
+    :newsletter_optin, :image_not_uploaded, :terms_and_conditions, 
     :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house, 
     :eyes, :hair, :hair_style, :religion_activity, :citizenship, :ethnicity, :language_level,
     :smoke, :diet, :alcohol, :drugs, :drug_frequency, :religion, :religion_opinion, 
@@ -220,8 +219,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :surname, unless: invited_user
   validates :email, presence: true
-  validates :email, confirmation: true, on: :create
-  validates :password, presence: true, confirmation: true, on: :create
+  validates :password, presence: true
   validates :terms_and_conditions, acceptance: {accept: "1"} #it's virtual so it doesn't convert anything
 
   #Validations only performed on regular users, not matchmakers
