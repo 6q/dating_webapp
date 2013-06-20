@@ -164,3 +164,56 @@ fieldset {
     margin:0;
   }
 }
+
+.popover-form{
+  position: absolute;
+  z-index: 1010;
+  max-width: 276px;
+  text-align: left;
+  background-color: white;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: 1px solid #b94a48;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  white-space: normal;
+  margin-top: -2px;
+  font-size: 14px;
+  padding: 5px 8px 0px 8px;
+  
+  .arrow {
+    position: absolute;
+    background: #ffffff;
+    top: 0px;
+    left: 50%;
+  }
+  .arrow:after, .arrow:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .arrow:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 8px;
+    margin-left: -8px;
+  }
+  .arrow:before {
+    border-color: rgba(245, 5, 5, 0);
+    border-bottom-color: #b94a48;
+    border-width: 9px;
+    left: 50%;
+    margin-left: -9px;
+  }
+}
+
