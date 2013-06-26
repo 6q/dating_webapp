@@ -1,12 +1,11 @@
 class CitiesController < ApplicationController
+  COUNTRIES = 
   def index
   end
 
   def countries
-    @countries = Country.all
-
     render do |format|
-      format.json { @countries.to_json }
+      format.json { CountrySelect::COUNTRIES.to_json }
     end
   end
 end

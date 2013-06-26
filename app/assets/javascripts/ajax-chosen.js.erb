@@ -1,6 +1,6 @@
 $("#example-input").ajaxChosen({
     type: 'GET',
-    url: 'countries_path',
+    url: '<%= Rails.application.class.routes.url_helpers.countries_path %>',
     dataType: 'json'
   }, function (data) {
     var results = [];
