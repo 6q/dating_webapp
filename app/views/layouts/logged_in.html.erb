@@ -17,6 +17,7 @@
     </header>
     <div class="container">
       <section role="main">
+      <%= countries_path %>
         <div class="row">
           <div class="span3">
             <% if current_user.has_role?(:matchmaker) %>

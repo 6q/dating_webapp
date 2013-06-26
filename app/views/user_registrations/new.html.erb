@@ -54,9 +54,9 @@
     <div class="control-group">
       <%= f.label :postal_code, _("Mi codigo postal es el") %>
       <%= f.text_field :postal_code, class: "span1", value: @geocoder.data['zipcode'] %>
-      <%= f.label :town, "de" %>
-      <%= f.text_field :town, value: @geocoder.city %>
-      <%= f.select :town, Town.all.map {|t| [t.name, t.id] }, { include_blank: _('Localidad...'), selected: @geocoder.city }, { class: 'location' } %>
+      <%= f.label :city, "de" %>
+      <%= f.text_field :city, value: @geocoder.city %>
+      <%= f.select :city, [], { include_blank: _('Localidad...'), selected: @geocoder.city }, { class: 'location' } %>
     </div>
   </fieldset>
   <fieldset id="photo" class="clearfix form-inline">

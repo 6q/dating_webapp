@@ -15,7 +15,7 @@
 					</a>
 				</div>
 				<div class="description">
-						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
+						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.city}, #{@user.country}" %></span></h5>
 						<p class="small">
 							<%= "#{User::GENDER[@user.gender].capitalize} - #{@user.age} años " %>
 							<% if @user.height %>
@@ -34,8 +34,8 @@
 								<% if @user.lf_relationship %>
 									<%= "para #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>
 								<% end %>
-								<% if @user.town %>
-									<%= "y que esté cerca de #{@user.town}, #{@user.country}" %>
+								<% if @user.city %>
+									<%= "y que esté cerca de #{@user.city}, #{@user.country}" %>
 								<% end %>
 							<% end %>
 						</p>

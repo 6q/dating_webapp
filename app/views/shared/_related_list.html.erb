@@ -5,7 +5,7 @@
       <ul class="clearfix">
         <% current_user.best_suited_near_me(6).each do |user| %>
           <li class="<%= user.online? ? "online" : "" %>">
-            <%= link_to user, "data-toggle" => 'tooltip', title: "<strong>#{user.name}</strong><br>#{user.town}<br>#{user.age} años" do %>
+            <%= link_to user, "data-toggle" => 'tooltip', title: "<strong>#{user.name}</strong><br>#{user.city}<br>#{user.age} años" do %>
               <%= profile_pic(user, width: 80, height: 80) %>
             <% end %>
           </li>

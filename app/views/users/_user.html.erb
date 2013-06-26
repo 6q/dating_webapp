@@ -11,7 +11,7 @@
       <h1>
         <%= link_to user.name, user %>
         <br>
-        <span><%= truncate(user.town, length: 20) %></span>
+        <span><%= truncate(user.city, length: 20) %></span>
         <br><%= "#{user.age} #{t("datetime.prompts.year")}" %>
         <br><%= (current_user.distance_to user).round(2) + ' km' if user_signed_in? && current_user.distance_to(user) %>
       </h1>

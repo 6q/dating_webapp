@@ -1,5 +1,5 @@
 class ProfileCompleteness
-  COMO_ERES_1 = %w[gender orientation marital_status birth_date postal_code town country]
+  COMO_ERES_1 = %w[gender orientation marital_status birth_date postal_code city country]
   COMO_ERES_2 = %w[marital_status child house]
   COMO_ERES_3 = %w[physical_desc height weight complexion eyes hair hair_style physical_style]
   COMO_ERES_4 = %w[religion religion_activity citizenship ethnicity]

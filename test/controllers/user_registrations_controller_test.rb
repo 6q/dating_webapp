@@ -98,13 +98,13 @@ describe UserRegistrationsController do
 
     it "PUT #update with valid attributes should update the matchmaker account to a regular user account" do
       put :update, id: @user, user: attributes_for(:matchmaker,
-        town: 'Barcelona', country: 'Spain', postal_code: '08009',
+        city: 'Barcelona', country: 'Spain', postal_code: '08009',
         marital_status: 'single', orientation: 'heterosexual', gender: 'male',
         birth_date: Date.today << 12*19)
 
       @user.reload
       @user.postal_code.must_equal '08009'
-      @user.town.must_equal 'Barcelona'
+      @user.city.must_equal 'Barcelona'
       @user.country.must_equal 'Spain'
       @user.marital_status.must_equal 'single'
       @user.orientation.must_equal 'heterosexual'

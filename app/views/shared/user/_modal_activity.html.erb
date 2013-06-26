@@ -8,7 +8,7 @@
         <%= link_to profile_pic(user, width: 60), user %>
       </div>
       <div class="data"><small><%= user.last_sign_in_at %></small>
-        <%= link_to user.name, user %>, <%= "#{user.age} #{t("datetime.prompts.year")} - #{truncate(user.town, length: 20)}" %>
+        <%= link_to user.name, user %>, <%= "#{user.age} #{t("datetime.prompts.year")} - #{truncate(user.city, length: 20)}" %>
       </div>
     </div> 
   </div>

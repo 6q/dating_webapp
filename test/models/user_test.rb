@@ -25,7 +25,7 @@ describe User do
   end
 
   it 'tests a geocode user' do
-    u = FactoryGirl.create(:regular_user, postal_code: '08008', town: 'Barcelona', country: 'Spain')
+    u = FactoryGirl.create(:regular_user, postal_code: '08008', city: 'Barcelona', country: 'Spain')
     [u.latitude, u.longitude].must_equal Geocoder.coordinates(u.location)
   end
 
@@ -109,7 +109,7 @@ describe User do
 
   # Class method tests
   it 'must have a correct location' do
-    u = create(:regular_user, postal_code: '08009', town: 'Barcelona', country: 'Spain')
+    u = create(:regular_user, postal_code: '08009', city: 'Barcelona', country: 'Spain')
     u.location.must_equal '08009, Barcelona, Spain'
   end
 

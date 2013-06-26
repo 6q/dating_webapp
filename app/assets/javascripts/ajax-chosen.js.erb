@@ -1,6 +1,6 @@
 $("#example-input").ajaxChosen({
     type: 'GET',
-    url: '<%= country_data_path %>',
+    url: 'countries_path',
     dataType: 'json'
   }, function (data) {
     var results = [];
@@ -10,5 +10,6 @@ $("#example-input").ajaxChosen({
     });
 
     return results;
-  });
+  }
+});
 

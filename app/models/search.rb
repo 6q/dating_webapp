@@ -6,7 +6,7 @@
 #  user_id          :integer
 #  years_lteq       :integer
 #  years_gteq       :integer
-#  town_eq          :string(255)
+#  city_eq          :string(255)
 #  postal_code_cont :string(255)
 #  description_cont :string(255)
 #  pictures_main_eq :boolean
@@ -28,7 +28,7 @@ class Search < ActiveRecord::Base
   attr_accessible :afinity_eq, :complexion_eq, :children_in, :description_cont,
                   :distance, :height_gteq, :height_lteq, :online, :name,
                   :pictures_main_eq, :postal_code_cont, :smoker_in,
-                  :sort, :town_eq, :years_gteq, :years_lteq
+                  :sort, :city_eq, :years_gteq, :years_lteq
 
   belongs_to :user
 
@@ -39,7 +39,7 @@ class Search < ActiveRecord::Base
     Rails.application.routes.url_helpers.users_path(:q => {
       :years_lteq => self.years_lteq,
       :years_gteq => self.years_gteq,
-      :town_eq => self.town_eq,
+      :city_eq => self.city_eq,
       :postal_code_cont => self.postal_code_cont,
       :description_cont => self.description_cont,
       :pictures_main_eq => self.pictures_main_eq,

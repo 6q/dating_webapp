@@ -23,7 +23,7 @@ es:
         website: 'Página web'
         email: 'Email'
         postal_code: 'Mi código postal es el'
-        town_id: 'Población'
+        city_id: 'Población'
         password: 'Contraseña'
         password_confirmation: 'Confirmar contraseña'
 

@@ -11,7 +11,7 @@ FactoryGirl.define do
     end
 
     trait :complementary_data do
-      town{ Faker::Address.city }
+      city{ Faker::Address.city }
       country "Spain"
       postal_code{ Faker::Address.zip_code }
       marital_status{ User::MARITAL_STATUS.keys.sample }
