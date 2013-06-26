@@ -88,6 +88,6 @@ Cellove::Application.routes.draw do
   resources :invitations
   resources :searches, only: [:create, :destroy, :show]
 
-  get 'cities/:country_id', to: 'cities#index', as: :cities
+  get :cities, to: 'cities#index'
   get :countries, to: 'cities#countries'
 end

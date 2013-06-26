@@ -1,15 +1,15 @@
-$("#example-input").ajaxChosen({
-    type: 'GET',
-    url: '<%= Rails.application.class.routes.url_helpers.countries_path %>',
-    dataType: 'json'
-  }, function (data) {
-    var results = [];
+$(function() {
+  $(".location").ajaxChosen({
+      type: 'GET',
+      url: '<%= Rails.application.class.routes.url_helpers.cities_path(format: :json) %>',
+      dataType: 'json'
+    }, function (data) {
+      var results = [];
 
-    $.each(data, function (i, val) {
-      results.push({ value: val.value, text: val.text });
-    });
+      $.each(data, function (i, val) {
+        results.push({ value: val.value, text: val.text });
+      });
 
-    return results;
-  }
+      return results;
+  });
 });
-

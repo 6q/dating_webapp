@@ -30,7 +30,4 @@ $(function() {
 		}, 500);
 
   }
-
-  $('.location').chosen();
-  
 });
