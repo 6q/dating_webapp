@@ -16,7 +16,7 @@
             <div class="overflow-show control-group">
               <label>Población y código postal</label>
               <div class="controls">
-                <%= f.select :city_eq, [], { include_blank: _('Localidad...'), selected: @search.city_eq }, { class: 'location' } %>
+                <%= f.select :city_eq, [current_user.city], { include_blank: _('Localidad...'), selected: @search.city_eq || current_user.city }, { class: 'city' } %>
                 <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1' %>
               </div>
             </div>
@@ -48,3 +48,4 @@
     </div>
   </div>
 </section>
+<%= render partial: 'shared/search_js' %>
