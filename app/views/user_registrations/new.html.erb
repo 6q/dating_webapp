@@ -49,13 +49,12 @@
       <%= f.label :birth_date_year, "de" %>
       <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
       <%= f.label :country, "y vivo en" %>
-      <%= country_select("user", "country") %>
+      <%= country_select("user", "country", { include_blank: _('Selecciona...') }) %>
     </div>
     <div class="control-group">
       <%= f.label :postal_code, _("Mi codigo postal es el") %>
       <%= f.text_field :postal_code, class: "span1", value: @geocoder.data['zipcode'] %>
       <%= f.label :city, "de" %>
-      <%= f.text_field :city, value: @geocoder.city %>
       <%= f.select :city, [], { include_blank: _('Localidad...'), selected: @geocoder.city }, { class: 'location' } %>
     </div>
   </fieldset>

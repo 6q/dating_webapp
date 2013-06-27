@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626222658) do
+ActiveRecord::Schema.define(:version => 20130627161250) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -263,6 +263,9 @@ ActiveRecord::Schema.define(:version => 20130626222658) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "cities", ["country"], :name => "index_cities_on_country"
+  add_index "cities", ["name"], :name => "index_cities_on_name"
 
   create_table "conversations", :force => true do |t|
     t.string   "subject",    :default => ""
