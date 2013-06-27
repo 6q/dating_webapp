@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627161250) do
+ActiveRecord::Schema.define(:version => 20130607084934) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -260,8 +260,6 @@ ActiveRecord::Schema.define(:version => 20130627161250) do
     t.string   "region"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   add_index "cities", ["country"], :name => "index_cities_on_country"
