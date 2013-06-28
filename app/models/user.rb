@@ -137,7 +137,6 @@ class User < ActiveRecord::Base
                       .group("users.id, notifications.id")
                       .order("notifications_count DESC")
 
-  before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
 
   #relations
   has_many :pictures, as: :attachable
@@ -680,4 +679,10 @@ class User < ActiveRecord::Base
       progress = ProfileCompleteness.new(self).get_profile_completeness
       self.progress_status = progress.to_i
     end
+    before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
+
+    def confirmation_required?
+      false
+    end
+    protected :confirmation_required?
 end

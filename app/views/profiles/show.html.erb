@@ -1,5 +1,19 @@
 <section class="profile">
 
+  <% unless current_user.confirmed? %>
+    <div class="boxed">
+      <div class="boxed-inner">
+        <header>
+        <h1 class="span3">Sin confirmar</h1>
+        <div class="pull-right">
+          <%= _('No recibiras notificaciones hasta que no hayas confirmado tu cuenta de email.') %> 
+        </div>
+        <div class="clearfix"></div>
+        </header>
+      </div>
+    </div>
+  <% end%>
+
   <div class="boxed">
     <div class="boxed-inner">
       <header>

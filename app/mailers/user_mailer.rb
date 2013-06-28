@@ -1,6 +1,13 @@
 class UserMailer < ActionMailer::Base
   default from: "Cellove <noreply@cellove.com>"
 
+  def prevent_delivery_to_guests
+    if (@user && !@user.confirmed?) || (@recipient && !@recipient.confirmed?)
+      mail.perform_deliveries = false
+    end
+  end
+  after_action :prevent_deliveries_to_unconfirmed
+
   def welcome_email(user)
     @user = user
     mail(:to => user.email, :subject => "Welcome to Cellove")
