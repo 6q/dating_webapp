@@ -22,7 +22,7 @@ class NotificationsController < ApplicationController
       @notificationlist.push({
         :id => notification.id, :name => u.full_name, :user_id => u.id,
         :photo => picture_url,
-        :town => u.town, :age => u.age,
+        :city => u.city, :age => u.age,
         :status => CelloveNotification::NOTIFICATION_TYPE[notification.notifiable_type.to_sym],
         :status_link => status_link
       })

@@ -1,0 +1,17 @@
+<script>
+$(function() {
+  $('.city').ajaxChosen({
+    type: 'GET',
+    url: '<%= cities_path(format: :json, country: CountrySelect::COUNTRIES.key(current_user.country)) %>',
+    dataType: 'json'
+    }, function (data) {
+    var results = [];
+
+    $.each(data, function (i, val) {
+      results.push({ value: val.name, text: val.name });
+    });
+
+    return results;
+  });
+});
+</script>

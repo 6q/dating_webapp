@@ -1,7 +1,7 @@
 <div class="<%= cycle("msg-origin", "msg-reply") -%>">
   <%= user_link_with_picture(receipt.message.sender) %>
   <div class="info">
-  	<p class="msg-data"><%= link_to receipt.message.sender.name, user_path(receipt.message.sender) %> <%= receipt.message.sender.age %> Años, <%= receipt.message.sender.town %></p>
+  	<p class="msg-data"><%= link_to receipt.message.sender.name, user_path(receipt.message.sender) %> <%= receipt.message.sender.age %> Años, <%= receipt.message.sender.city %></p>
   	<p class="msg-date"><%= _('Hace ') + time_ago_in_words(receipt.created_at) %></p>
   	<div class="msg">
   	  <%= receipt.message.body %>

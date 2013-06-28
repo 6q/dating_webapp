@@ -1,17 +1,11 @@
 <section class="user-profile">
 	<article class="boxed">
 		<div class="boxed-inner">
-			<div id="nice-couple">
+			<div id="nice-couple" class="">
 				<i></i>
 				<p>¿Hacéis buena pareja?</p>
-				<ul>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-				</ul>
-			</div>
+        <%= rating_for(@user, current_user, readonly: false) %>
+      </div>
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
@@ -21,7 +15,7 @@
 					</a>
 				</div>
 				<div class="description">
-						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.town}, #{@user.country}" %></span></h5>
+						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.city}, #{@user.country}" %></span></h5>
 						<p class="small">
 							<%= "#{User::GENDER[@user.gender].capitalize} - #{@user.age} años " %>
 							<% if @user.height %>
@@ -40,8 +34,8 @@
 								<% if @user.lf_relationship %>
 									<%= "para #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>
 								<% end %>
-								<% if @user.town %>
-									<%= "y que esté cerca de #{@user.town}, #{@user.country}" %>
+								<% if @user.city %>
+									<%= "y que esté cerca de #{@user.city}, #{@user.country}" %>
 								<% end %>
 							<% end %>
 						</p>

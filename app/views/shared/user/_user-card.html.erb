@@ -4,7 +4,7 @@
     <li><%= link_to(image_tag('placeholder2.jpg', size: '60x60'), user) %></li>
   </ul>
   <header>
-    <h1><%= link_to user.full_name, user_path(user) %><br><span><%= user.town %></span><br><%= user.age %> años</h1>
+    <h1><%= link_to user.full_name, user_path(user) %><br><span><%= user.city %></span><br><%= user.age %> años</h1>
   </header>
   <ul class="actions clearfix">
     <li class="message"><%= link_to 'Send Message', '#fast-reply', 'data-toggle' => 'modal' %></li>

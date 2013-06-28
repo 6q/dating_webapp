@@ -18,12 +18,24 @@ Characteristic.create(user_id: user.id, creator_id: user.id)
 user.create_general_settings({})
 puts 'user: ' << user.name
 
-def create_towns
-  puts 'Creating towns...'
-  CreateTowns.create_all
+def create_geo
+  puts 'Loading geo info...'
+  base_dir = Rails.root.join('db', 'data')
+
+  bulk_load = [City, Region]
+
+  bulk_load.each do |table|
+    if table.first.nil? # only bulk load into empty tables
+      f = File.new "#{base_dir}/#{table.table_name}.sql"
+
+      while statements = f.gets("") do
+        ActiveRecord::Base.connection.execute(statements)
+      end
+    end
+  end
 end
 
-create_towns
+create_geo
 
 puts 'Creating users...'
 60.times do |n|

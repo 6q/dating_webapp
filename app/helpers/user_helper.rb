@@ -31,7 +31,7 @@ module UserHelper
     end
     html = '<div class="user-detail clearfix">'
     html += user_link_with_picture(user) 
-    html += '<div class="data">' + link_to(user.name, user) + ', ' + n_('Años', 'Años', user.age) + ' - ' +  user.town + '</div>'
+    html += '<div class="data">' + link_to(user.name, user) + ', ' + n_('Años', 'Años', user.age) + ' - ' +  user.city + '</div>'
     html += '</div>'
 
     html.html_safe

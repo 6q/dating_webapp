@@ -2,7 +2,7 @@
 class SessionsController < Devise::SessionsController
 
   def new
-    flash[:error] = _('Email o contraseño inválidos')
+    flash[:error] = _('Email o contraseña inválidos')
     redirect_to root_path
   end
 

@@ -1,0 +1,31 @@
+$(function() {
+  $('#user_country').change(function() {
+    chosenize($(this).val());
+  });
+
+  $(".location").ajaxChosen();
+  $('.location').attr('disabled', true).trigger("liszt:updated");
+
+});
+
+chosenize = function(country) {
+  $('#user_city_chzn').remove();
+  $('.location').show();
+  $('.location').removeClass('chzn-done');
+  
+  $(".location").ajaxChosen({
+      type: 'GET',
+      url: '<%= Rails.application.class.routes.url_helpers.cities_path(format: :json) %>?country=' + country,
+      dataType: 'json'
+    }, function (data) {
+      var results = [];
+
+      $.each(data, function (i, val) {
+        results.push({ value: val.name, text: val.name });
+      });
+
+      return results;
+  });
+  
+  $('.location').attr('disabled', false).trigger("liszt:updated");
+}

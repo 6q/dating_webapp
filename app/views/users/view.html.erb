@@ -3,29 +3,22 @@
 
 <section class="list public-user-list">
 <div id="last-users" class="user-list">
-  <h3>Últimos usuarios en Cellove <%= link_to '¡Regístrate Gratis!', '/public/alta-usuario' %></h3>
+  <h3>Últimos usuarios en Cellove <%= link_to _('¡Regístrate Gratis!'), new_user_registration_path %></h3>
   <ul class="clearfix">
     <% @users.each do |user| %>
-      <%= render partial: 'shared/user_card', locals: { user: user } %>
+      <%= render user %>
     <% end %>
   </ul>
 </div>
 
 
 <div id="top-users" class="user-list">
-  <h3>Usuarios más populares <%= link_to '¡Regístrate Gratis!', '/public/alta-usuario' %></h3>
+  <h3>Usuarios más populares <%= link_to _('¡Regístrate Gratis!'), new_user_registration_path %></h3>
   <ul class="clearfix">
     <% User.popular.each do |user| %>
-      <%= render partial: 'shared/user_card', locals: { user: user } %>
+      <%= render user %>
     <% end %>
   </ul>
 </div>
 
 </section>
-
-
-<script>
-  $(document).ready(function(e){
-    $('.public-user-list a').attr('href','/public/alta-usuario');
-  });
-</script>

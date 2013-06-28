@@ -88,4 +88,5 @@ Cellove::Application.routes.draw do
   resources :invitations
   resources :searches, only: [:create, :destroy, :show]
 
+  get :cities, to: 'cities#index'
 end

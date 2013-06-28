@@ -26,12 +26,12 @@
           <div class="span8">
             <div class="control-group">
               <div class="pull-left">
-                <%= f.label :town_eq, _('Localidad'), class: 'control-label location-label' %>
-                <%= f.select :town_eq, Town.all.map {|t| [t.name, t.id] }, { include_blank: _('Localidad...'), selected: @search.town_eq }, { class: 'location' } %>
+                <%= f.label :city_eq, _('Localidad'), class: 'control-label location-label' %>
+                <%= f.select :city_eq, [(current_user.city || @search.city_eq)], { include_blank: _('Localidad...'), selected: @search.city_eq || current_user.city }, { class: 'city' } %>
               </div>
               <div class="pull-left">
                 <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
-                <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1 zip-input' %>
+                <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1 zip-input', value: current_user.postal_code %>
               </div>
             </div>
           </div>
@@ -127,3 +127,5 @@
   </div>
   <%= paginate @users %>
 </section>
+
+<%= render partial: 'shared/search_js' %>

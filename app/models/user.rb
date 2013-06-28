@@ -24,7 +24,7 @@
 #  marital_status         :string(255)
 #  birth_date             :date
 #  postal_code            :string(255)
-#  town                   :string(255)
+#  city                   :string(255)
 #  country                :string(255)
 #  newsletter_optin       :boolean
 #  latitude               :float
@@ -137,7 +137,6 @@ class User < ActiveRecord::Base
                       .group("users.id, notifications.id")
                       .order("notifications_count DESC")
 
-  before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
 
   #relations
   has_many :pictures, as: :attachable
@@ -181,7 +180,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   #virtual attributes
   attr_accessor :terms_and_conditions
@@ -194,7 +193,7 @@ class User < ActiveRecord::Base
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :password,
     :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status,
-    :birth_date, :country, :postal_code, :town, :town_id,
+    :birth_date, :country, :postal_code, :city,
     :newsletter_optin, :image_not_uploaded, :terms_and_conditions, 
     :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house, 
     :eyes, :hair, :hair_style, :religion_activity, :citizenship, :ethnicity, :language_level,
@@ -224,7 +223,7 @@ class User < ActiveRecord::Base
 
   #Validations only performed on regular users, not matchmakers
   validates_presence_of :gender, :orientation, if: regular_user
-  validates_presence_of :postal_code, :town, if: regular_user
+  validates_presence_of :postal_code, :city, if: regular_user
   validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year, if: regular_user
 
   validates :birth_date, presence: true, minimum_age: true, if: regular_user
@@ -267,7 +266,7 @@ class User < ActiveRecord::Base
   end
 
   def location
-    [postal_code, town, country].compact.join(', ')
+    [postal_code, city, country].compact.join(', ')
   end
 
   ransacker :years, :formatter => proc { |age| age.to_i.years.ago.end_of_year } do |parent|
@@ -579,7 +578,7 @@ class User < ActiveRecord::Base
     affinity_score += 1 if self.marital_status == user.marital_status
     affinity_score += 1 if (user.age >= self.lf_age_between.to_i && user.age <= self.lf_age_to.to_i)
     
-    affinity_score += 1 if self.lf_city == user.town
+    affinity_score += 1 if self.lf_city == user.city
     affinity_score += 1 if self.lf_country == user.country
     affinity_score += 1 if self.lf_postal_code == user.postal_code
     affinity_score += 1 if self.lf_physical_style == user.physical_style
@@ -678,4 +677,10 @@ class User < ActiveRecord::Base
       progress = ProfileCompleteness.new(self).get_profile_completeness
       self.progress_status = progress.to_i
     end
+    before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
+
+    def confirmation_required?
+      false
+    end
+    protected :confirmation_required?
 end
