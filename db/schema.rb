@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130607084934) do
+ActiveRecord::Schema.define(:version => 20130628161138) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -255,11 +255,11 @@ ActiveRecord::Schema.define(:version => 20130607084934) do
   end
 
   create_table "cities", :force => true do |t|
-    t.string   "country"
-    t.string   "name"
-    t.string   "region"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.string "country"
+    t.string "name"
+    t.string "region"
+    t.float  "latitude"
+    t.float  "longitude"
   end
 
   add_index "cities", ["country"], :name => "index_cities_on_country"
@@ -581,9 +581,14 @@ ActiveRecord::Schema.define(:version => 20130607084934) do
     t.string   "lf_relationship"
     t.integer  "background",             :default => 1
     t.integer  "progress_status",        :default => 1
+    t.string   "unconfirmed_email"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
+  add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["created_at"], :name => "index_users_on_created_at"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["invitation_code"], :name => "index_users_on_invitation_code", :unique => true
