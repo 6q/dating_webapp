@@ -21,13 +21,13 @@
 //= require_tree .
 
 $(function() {
-	// hide flash messages afer 3 seconds
+  // hide flash messages afer 3 seconds
   if ($('#flash-messages').length){
-		setTimeout(function() {
-			left = ($(window).width()/2)-($('#flash-messages').width()/2);
-			$('#flash-messages').css('left', left+'px');
-			$('#flash-messages').fadeIn('slow').delay(3000).fadeOut('slow');
-		}, 500);
+    setTimeout(function() {
+      left = ($(window).width()/2)-($('#flash-messages').width()/2);
+      $('#flash-messages').css('left', left+'px');
+      $('#flash-messages').fadeIn('slow').delay(3000).fadeOut('slow');
+    }, 500);
 
   }
 });
