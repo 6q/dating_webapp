@@ -8,10 +8,4 @@ class CitiesController < ApplicationController
       format.json { render json: @cities }
     end
   end
-
-  def countries
-    respond_to do |format|
-      format.json { render json: CountrySelect::COUNTRIES }
-    end
-  end
 end

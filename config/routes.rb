@@ -89,5 +89,4 @@ Cellove::Application.routes.draw do
   resources :searches, only: [:create, :destroy, :show]
 
   get :cities, to: 'cities#index'
-  get :countries, to: 'cities#countries'
 end
