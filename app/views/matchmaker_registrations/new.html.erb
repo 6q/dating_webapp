@@ -68,11 +68,10 @@
       <div class="row">
         <div class="span6 center">
           <div class="clearfix">
-            <%= f.check_box :terms_and_conditions %>
-            <label>Certifico que soy mayor de edad y que he leído y acepto los <%= link_to 'Consejos de uso', '/public/consejos-de-uso' %>, las <%= link_to 'Condiciones generales', '/public/condiciones-generales' %> y la <%= link_to 'Política de privacidad', '/public/politica-de-privacidad' %> del sitio y los servicios descritos</label>
+            <label>Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los <%= link_to 'Consejos de uso', '/public/consejos-de-uso' %>, las <%= link_to 'Condiciones generales', '/public/condiciones-generales' %> y la <%= link_to 'Política de privacidad', '/public/politica-de-privacidad' %> del sitio y los servicios descritos</label>
           </div>
           <div class="clearfix">
-            <%= f.check_box :newsletter_optin %>
+            <%= f.check_box :newsletter_optin, checked: true %>
             <label>Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.</label>
           </div>
         </div>

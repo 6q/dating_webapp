@@ -219,7 +219,6 @@ class User < ActiveRecord::Base
   validates_presence_of :surname, unless: invited_user
   validates :email, presence: true
   validates :password, presence: true
-  validates :terms_and_conditions, acceptance: {accept: "1"} #it's virtual so it doesn't convert anything
 
   #Validations only performed on regular users, not matchmakers
   validates_presence_of :gender, :orientation, if: regular_user
