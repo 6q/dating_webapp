@@ -1,16 +1,16 @@
 <section>
-	<header>
-		<h1>Actividad reciente</h1>
-	</header>
-	<ul>
-		<%
-			number_of_visits = current_user.number_of_visitors_since_last_login
-			visit_str = ('<span>' + number_of_visits.to_s + '</span>').html_safe unless number_of_visits == 0
-		%>
-		<li><%= link_to (_('Me han visitado') + (!visit_str.nil? ? visit_str : '')).html_safe, user_hits_path %></li>
-		<li><%= link_to _('Les he gustado'), user_likes_path %></li>
-		<li><%= link_to _('Hacemos buena pareja'), nice_couple_path %></li>
-		<li><%= link_to _('Mensajes'), conversations_path %></li>
-    <li><%= link_to _('Actividades'), conversations_path %></li>
-	</ul>
+  <header>
+    <h1>Actividad reciente</h1>
+  </header>
+  <ul>
+    <%
+      number_of_visits = current_user.number_of_visitors_since_last_login
+      visit_str = ('<span>' + number_of_visits.to_s + '</span>').html_safe unless number_of_visits == 0
+    %>
+    <li><%= link_to (_('Me han visitado') + (!visit_str.nil? ? visit_str : '')).html_safe, user_hits_path %></li>
+    <li><%= link_to _('Les he gustado'), user_likes_path %><%= indicate(current_user.likers.count) %></li>
+    <li><%= link_to _('Hacemos buena pareja'), nice_couple_path %><%= indicate(current_user.rates.count) %></li>
+    <li><%= link_to _('Mensajes'), conversations_path %><%= indicate(current_user.mailbox.inbox.unread(current_user).count) %></li>
+    <li><%= link_to _('Actividades'), conversations_path %><%= indicate(current_user.mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }.count) %></li>
+  </ul>
 </section>

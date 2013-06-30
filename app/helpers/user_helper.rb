@@ -74,4 +74,14 @@ module UserHelper
     html += '</span>'
     html.html_safe
   end
+
+  def indicate(count)
+    if count > 0
+      html = "<span>#{count}</span>"
+    else
+      html = ""
+    end
+
+    html.html_safe
+  end
 end

@@ -165,8 +165,11 @@ class User < ActiveRecord::Base
   has_many :user_hides
   has_many :hidden_users, through: :user_hides, source: :hidden_user
 
+  # rates that the user has done
   has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id 
+  # ratings that have been received by the user
   has_many :rates, :class_name => "Rate", :foreign_key => :rateable_id, :dependent => :destroy
+  # List of people that has given a rating to this user
   has_many :raters, :through => :rates, :source => :rater
 
   has_many :notifications, :class_name => "CelloveNotification", :foreign_key => :receiver_id
