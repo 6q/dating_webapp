@@ -35,7 +35,7 @@ FactoryGirl.define do
 
     trait :user_role do
       after(:create) do |user|
-        user.add_role :user
+        user.add_role :regular_user
       end
     end
     
