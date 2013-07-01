@@ -2,7 +2,7 @@
 
 	<div id="header-preface">
     <div id="user-count">
-    	Somos 60.000 usuari@s. ¡Gracias por vuestra confianza!
+      Somos <%= number_with_delimiter(User.count + 60000) %> usuari@s. ¡Gracias por vuestra confianza!
     </div>
 
 		<div id="color-switcher" class="header-switcher">
