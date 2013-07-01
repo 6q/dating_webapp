@@ -65,10 +65,9 @@ class UserRegistrationsController < Devise::RegistrationsController
         Characteristic.create(user_id: @user.id, creator_id: @user.id)
         GeneralSetting.create(user_id: @user.id)
 
-        unless params[:images].nil?
-          params[:images].each do |image|
-            @user.pictures << Picture.create(:image => image)
-          end
+        if session[:registration_image]
+          @user.pictures << Picture.find(session[:registration_image]) 
+          session[:registration_image] = nil
         end
 
         UserMailer.welcome_email(@user).deliver

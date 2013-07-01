@@ -5,7 +5,7 @@
 //= require jquery.form
 //= require jquery.fileupload
 
-$(document).ready(function () {
+$(function () {
   function showModalAndCrop(event, data) {
     var cropData;
     var modalObject;
@@ -21,14 +21,14 @@ $(document).ready(function () {
       e.preventDefault();
       $.post(data.result.update_path, {_method: "PUT", crop_data: cropData}, function (data) {
         modalObject.modal("hide");
-        $("#picture_gallery").html(data.gallery_template);
+        $("#picture_gallery").html(data.template);
         bindUploads(); //rebind uploads
       });
     });
   }
 
   function bindUploads() {
-    $(".upload_pic_input").fileupload({
+    $(".upload_pic_input, .upload_pic_input_unregistered").fileupload({
       dataType: 'json',
       url: '/pictures',
       formData : [{
@@ -36,26 +36,9 @@ $(document).ready(function () {
         value : $('meta[name="csrf-token"]').attr('content')
       }],
       acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
-      done: showModalAndCrop,
-      change: function (e, data) {
-        console.log(arguments);
-      }
+      done: showModalAndCrop
     });
-
-    // Not sure if this works in browsers other than Chrome.
-    $('.upload_pic_input_unregistered').change(function(evt) {
-      var files = evt.target.files,
-          reader = new FileReader(),
-          cropData;
-
-      reader.onload = (function(theFile){
-        return function(e) {
-          $("#renderImage").html('<img id="crop_profile_img" src="' + e.target.result + '" />');
-        };
-      })(files[0]);
-      reader.readAsDataURL(files[0]);
-    });
-  }
+ }
 
   bindUploads();
 

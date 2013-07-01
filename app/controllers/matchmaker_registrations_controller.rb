@@ -24,6 +24,12 @@ class MatchmakerRegistrationsController < Devise::RegistrationsController
     @user = User.new(params[:matchmaker])
     if @user.save
       @user.add_role :matchmaker
+
+      if session[:registration_image]
+        @user.pictures << Picture.find(session[:registration_image]) 
+        session[:registration_image] = nil
+      end
+
       if @user.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_up(:user, @user)

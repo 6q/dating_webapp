@@ -38,7 +38,9 @@
     <legend>¿Cómo eres?</legend>
     <div class="row">
       <div class="span6">
-        <label class="control-label photo">Sube tu foto</label> <input type="file" class="span4">
+        <label class="control-label photo">Sube tu foto</label>
+        <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+        <div id="picture_gallery"></div>
       </div>
       <div class="span6">
         <%= f.check_box :image_not_uploaded %>
@@ -83,3 +85,5 @@
     </div>
   </fieldset>
 <% end %>
+
+<div id="crop_modal_wrapper"></div>

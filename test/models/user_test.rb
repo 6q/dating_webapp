@@ -11,10 +11,6 @@ describe User do
     u.password = "password"
     u.password_confirmation = "password"
     u.valid?.must_equal true
-    u.email_confirmation = ""
-    u.valid?.must_equal false
-    u.email_confirmation = u.email
-    u.valid?.must_equal true
     u.newsletter_optin = false
     u.valid?.must_equal true
   end

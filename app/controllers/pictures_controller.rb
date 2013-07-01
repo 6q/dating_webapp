@@ -1,17 +1,21 @@
 class PicturesController < ApplicationController
-  layout 'logged_in'
   before_filter :find_picture, only: [:show, :destroy, :update]
   before_filter :check_ownership, only: [:update, :destroy]
+  skip_before_filter :authenticate_user!
 
   def create
-    if current_user.is_over_picture_limit?
+    if current_user && current_user.is_over_picture_limit?
       render json: {error: _('Ya has alcanzado tu limite de fotos')}, status: 403
     else
       @picture = Picture.new(image: params["picture"])
       @picture.image = @picture.image.thumb("500x500").tempfile
-      @picture.attachable = current_user
-      @picture.main = true if current_user.pictures.empty?
+      if current_user
+        @picture.attachable = current_user
+        @picture.main = true if current_user.pictures.empty?
+      end
       if @picture.save
+        session[:registration_image] = @picture.id unless current_user
+
         render json: {
           crop_template: render_to_string(partial: 'pictures/picture_crop', locals: {picture: @picture}),
           update_path: picture_path(@picture)
@@ -27,9 +31,15 @@ class PicturesController < ApplicationController
       @picture.image = @picture.image.thumb(geometry).tempfile
       @picture.save
     end
-    render json: {
-      gallery_template: render_to_string(partial: 'pictures/picture_gallery', locals: {user: current_user}),
-    }
+    if current_user
+      render json: {
+        template: render_to_string(partial: 'pictures/picture_gallery', locals: {user: current_user}),
+      }
+    else
+      render json: { 
+        template: render_to_string(partial: 'pictures/registration_thumb', locals: { picture: @picture }) 
+      }
+    end
   end
 
   def show
