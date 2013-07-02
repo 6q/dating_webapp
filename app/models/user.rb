@@ -225,7 +225,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true, on: :create
 
   #Validations only performed on regular users, not matchmakers
-  validates_presence_of :gender, :orientation, if: regular_user
+  validates_presence_of :gender, if: regular_user
   validates_presence_of :postal_code, :city, if: regular_user
   validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year, if: regular_user
 
@@ -694,7 +694,7 @@ class User < ActiveRecord::Base
       "woman" => :female
     }
 
-    self.gender = gen_cor[seeking.split.first]
+    self.gender = gen_cor[seeking.split.first] if seeking.present?
   end
-  before_save :set_gender
+  before_validation :set_gender
 end
