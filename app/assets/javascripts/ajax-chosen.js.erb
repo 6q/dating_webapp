@@ -4,7 +4,11 @@ $(function() {
   });
 
   $(".location").ajaxChosen();
-  $('.location').attr('disabled', true).trigger("liszt:updated");
+  if ($('#user_country').val() == "") {
+    $('.location').attr('disabled', true).trigger("liszt:updated");
+  } else {
+    chosenize($('#user_country').val());
+  }
 
 });
 

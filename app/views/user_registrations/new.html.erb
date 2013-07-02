@@ -49,13 +49,13 @@
       <%= f.label :birth_date_year, "de" %>
       <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
       <%= f.label :country, "y vivo en" %>
-      <%= country_select("user", "country", { include_blank: _('Selecciona...') }) %>
+      <%= country_select("user", "country", nil, include_blank: _('Selecciona...')) %>
     </div>
     <div class="control-group">
       <%= f.label :postal_code, _("Mi codigo postal es el") %>
-      <%= f.text_field :postal_code, class: "span1", value: @geocoder.data['zipcode'] %>
+      <%= f.text_field :postal_code, class: "span1", value: (@geocoder ? @geocoder.data['zipcode'] : resource.postal_code) %>
       <%= f.label :city, "de" %>
-      <%= f.select :city, [], { include_blank: _('Localidad...'), selected: @geocoder.city }, { class: 'location' } %>
+      <%= f.select :city, ([resource.city] || []), { include_blank: _('Localidad...'), selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location' } %>
     </div>
   </fieldset>
   <fieldset id="photo" class="clearfix form-inline">
