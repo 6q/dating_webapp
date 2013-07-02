@@ -21,6 +21,7 @@
 #  screen_name            :string(255)
 #  gender                 :string(255)
 #  orientation            :string(255)
+#  seeking                :string(255)
 #  marital_status         :string(255)
 #  birth_date             :date
 #  postal_code            :string(255)
@@ -195,7 +196,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
   attr_accessible :name, :email, :password,
-    :remember_me, :surname, :screen_name, :gender, :orientation, :marital_status,
+    :remember_me, :surname, :screen_name, :gender, :orientation, :seeking, :marital_status,
     :birth_date, :country, :postal_code, :city,
     :newsletter_optin, :image_not_uploaded, :terms_and_conditions, 
     :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house, 
@@ -221,7 +222,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :surname, unless: invited_user
   validates :email, presence: true
-  validates :password, presence: true
+  validates :password, presence: true, on: :create
 
   #Validations only performed on regular users, not matchmakers
   validates_presence_of :gender, :orientation, if: regular_user

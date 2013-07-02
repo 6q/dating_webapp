@@ -3,7 +3,7 @@ module UserConstants
   extend ActiveSupport::Concern
 
   GENDER = {'male' => _('hombre'), 'female' => _('mujer')}
-  ORIENTATION = {'heterosexual' => _('heterosexual'), 'homosexual' => _('homosexual'), 'bisexual' => _('bisexual')}
+  SEEKING = {'man seeking woman' => _('hombre buscando una mujer'), 'woman seeking man' => _('mujer buscando un hombre'), 'man seeking man' => _('hombre buscando un hombre'), 'woman seeking woman' => _('mujer buscando una mujer')}
   MARITAL_STATUS = {'single' => _('solter@'),'engaged' => _('ocupad@'), 'separated' => _('separad@'), 'divorced' => _('divorciad@'),
     'married' => _('casad@'), 'widowed' => _('viud@')}
   CHILD = { 'have-children' => _('tengo hijos'),'no-children' => _('no tengo hijos'),'no-want-children' => _('no tengo hijos, y no quiero tener'),

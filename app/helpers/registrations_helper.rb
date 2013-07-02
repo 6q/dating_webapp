@@ -4,8 +4,8 @@ module RegistrationsHelper
     User::GENDER.map {|k,v| [v,k]}
   end
 
-  def orientation_options
-    User::ORIENTATION.map {|k,v| [v,k]}
+  def seeking_options
+    User::SEEKING.map {|k,v| [v,k]}
   end
 
   def marital_status_options

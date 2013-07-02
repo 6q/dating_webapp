@@ -3,7 +3,6 @@
 	<%= form_for @user, :url => profile_path do |user| %>
 		<%= user.label :lf_gender, "Busco" %>
    	<%= user.select :lf_gender, gender_options, {}, :class => 'span2'  %>
-   	<%= user.select :lf_orientation, orientation_options,{}, :class => 'span2'  %>
    	<%= user.label :lf_marital_status, "y" %>
    	<%= user.select :lf_marital_status, marital_status_options,	{}, { :class => 'span2' } %>
    	,

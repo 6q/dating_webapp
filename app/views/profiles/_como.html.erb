@@ -2,9 +2,8 @@
 
 	<%= form_for @user, :url => profile_path do |user| %>
 	<hr class="thin">
-	<%= user.label :gender, 'Soy' %>
-	<%= user.select :gender, gender_options,{}, { :class => 'span2' }  %>
-	<%= user.select :orientation, orientation_options,{}, { :class => 'span2' }  %>
+	<%= user.label :seeking, 'Soy' %>
+	<%= user.select :seeking, seeking_options,{}, { :class => 'span4' }  %>
 	<%= user.label :marital_status, 'y' %>
 	<%= user.select :marital_status, marital_status_options,{}, { :class => 'span2' } %>
 	<hr class="thin">
