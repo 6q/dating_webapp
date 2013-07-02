@@ -129,7 +129,7 @@ class User < ActiveRecord::Base
   include UserRetrieval
 
   acts_as_messageable
-  
+
   #scopes
   scope :not_hidden, includes(:user_hides).where(:user_hides => { :hidden_user_id => nil, :user_id => nil })
   scope :not_blocked, includes(:user_blocks).where(:user_blocks => { :user_id => nil })
@@ -646,44 +646,55 @@ class User < ActiveRecord::Base
     end
   end
 
-  private
-    def pass_checks(settings, recipient)
-      to_check = []
-      to_check.push(:show_only_nearby) if settings.show_only_nearby
-      to_check.push(:show_only_matching_profiles) if settings.show_only_matching_profiles
-      to_check.push(:show_only_people_who_like_me) if settings.show_only_people_who_like_me
-      to_check.push(:show_only_buena_pareja) if settings.show_only_buena_pareja
-      to_check.push(:show_only_pm) if settings.show_only_pm
-      to_check.push(:show_only_rated_me) if settings.show_only_rated_me
-      passed_checks = true
+  def pass_checks(settings, recipient)
+    to_check = []
+    to_check.push(:show_only_nearby) if settings.show_only_nearby
+    to_check.push(:show_only_matching_profiles) if settings.show_only_matching_profiles
+    to_check.push(:show_only_people_who_like_me) if settings.show_only_people_who_like_me
+    to_check.push(:show_only_buena_pareja) if settings.show_only_buena_pareja
+    to_check.push(:show_only_pm) if settings.show_only_pm
+    to_check.push(:show_only_rated_me) if settings.show_only_rated_me
+    passed_checks = true
 
-      to_check.each do |check|
-        case check
-        when :show_only_nearby
-          passed_checks = false if !nearbys(User::DEFAULT_NEARBY_DISTANCE).include?(recipient)
-        when :show_only_matching_profiles
-          # Not sure what this does :\
-        when :show_only_people_who_like_me
-          passed_checks = false if !self.likes.include?(recipient)
-        when :show_only_buena_pareja
-          passed_checks = false if !self.is_nice_couple?(recipient)
-        when :show_only_pm
-          passed_checks = false if !self.has_messages_with?(recipient)
-        when :show_only_rated_me
-          passed_checks = false if !recipient.raters.include?(self)
-        end
+    to_check.each do |check|
+      case check
+      when :show_only_nearby
+        passed_checks = false if !nearbys(User::DEFAULT_NEARBY_DISTANCE).include?(recipient)
+      when :show_only_matching_profiles
+        # Not sure what this does :\
+      when :show_only_people_who_like_me
+        passed_checks = false if !self.likes.include?(recipient)
+      when :show_only_buena_pareja
+        passed_checks = false if !self.is_nice_couple?(recipient)
+      when :show_only_pm
+        passed_checks = false if !self.has_messages_with?(recipient)
+      when :show_only_rated_me
+        passed_checks = false if !recipient.raters.include?(self)
       end
-      return passed_checks
     end
+    return passed_checks
+  end
+  private :pass_checks
 
-    def update_profile_progress
-      progress = ProfileCompleteness.new(self).get_profile_completeness
-      self.progress_status = progress.to_i
-    end
-    before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
+  def update_profile_progress
+    progress = ProfileCompleteness.new(self).get_profile_completeness
+    self.progress_status = progress.to_i
+  end
+  private :update_profile_progress
+  before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
 
-    def confirmation_required?
-      false
-    end
-    protected :confirmation_required?
+  def confirmation_required?
+    false
+  end
+  protected :confirmation_required?
+
+  def set_gender
+    gen_cor = {
+      "man" => :male,
+      "woman" => :female
+    }
+
+    self.gender = gen_cor[seeking.split.first]
+  end
+  before_save :set_gender
 end

@@ -318,4 +318,12 @@ describe User do
     User.search(children_in: ['have_children_want_more']).result.first.must_equal u
     User.search(children_in: ['children']).result.first.must_be_nil
   end
+
+  test 'should set gender' do
+    u = create(:regular_user, seeking: User::SEEKING.keys.first)
+    u.gender.must_equal :male
+
+    u = create(:regular_user, seeking: User::SEEKING.keys[1])
+    u.gender.must_equal :female
+  end
 end

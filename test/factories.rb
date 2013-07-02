@@ -15,7 +15,7 @@ FactoryGirl.define do
       country "Spain"
       postal_code{ Faker::Address.zip_code }
       marital_status{ User::MARITAL_STATUS.keys.sample }
-      gender{ User::GENDER.keys.sample }
+      seeking{User::SEEKING.keys.sample}
       birth_date{ Date.today << ((rand(10) + 19) * 12) }
       terms_and_conditions "1"
       height { Random.rand(150..210) }
