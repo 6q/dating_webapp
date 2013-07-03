@@ -2,7 +2,7 @@
   <i class="type <%= activity.activity_type %>">
     <%= Activity::ACTIVITY_TYPE[activity.activity_type] %>
   </i>
-  <p><strong><%= activity_creator(activity).name %></strong> <%= _('te ha propuesto...') %></p>
+  <p><strong><%= activity_creator(activity).name %></strong> <%= activity.sender_id != current_user.id ? _('te ha propuesto...') : _('has propuesto...') %></p>
   <p><%= activity.body %></p>
   <% if activity.sender_id != current_user.id %>
     <div class="actions right">

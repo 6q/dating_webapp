@@ -76,10 +76,7 @@ Cellove::Application.routes.draw do
   get 'anuncio-tv/:id' => 'flat_pages#tv_spot', as: :tv_spot
 
   resources :messages
-  resources :conversations do 
-    resources :activities
-  end
-
+  resources :conversations
   resources :activities, only: [:new, :create] do
     post 'reject'
   end

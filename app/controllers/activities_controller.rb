@@ -5,6 +5,11 @@ class ActivitiesController < ApplicationController
   end
 
   def create
+    unless @conversation
+      @recipient = User.find(params[:recipient]) if params[:recipient].present? 
+      @receipt = current_user.send_message(@recipient, _('Propuesta de actividad'), params[:activity][:body][0..10])
+      @conversation = @receipt.conversation
+    end
     @activity = @conversation.build_activity(params[:activity])
     @activity.sender_id = current_user.id
 
@@ -25,11 +30,6 @@ class ActivitiesController < ApplicationController
   private
     def check_current_subject_in_conversation
       @conversation = Conversation.find_by_id(params[:conversation_id])
-
-      if @conversation.nil? or !@conversation.is_participant?(current_user)
-        redirect_to conversations_path(:box => @box)
-      return
-      end
     end
 
 end

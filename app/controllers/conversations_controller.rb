@@ -6,7 +6,7 @@ class ConversationsController < ApplicationController
   
   def index
     if params[:activities] == 'show' 
-           @conversations_inbox = @mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }
+      @conversations_inbox = @mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }
       @conversations_inbox = Kaminari.paginate_array(@conversations_inbox).page(params[:page]).per(9)
       @conversations_sentbox = @mailbox.sentbox.includes(:activity).reject { |i| i.activity.nil? }
       @conversations_sentbox = Kaminari.paginate_array(@conversations_sentbox).page(params[:page]).per(9)

@@ -16,7 +16,7 @@
         <li><a href="#sentbox">Enviados<%= " (#{@conversations_sentbox.count})" if @conversations_sentbox.count > 0 %></a></li>
         <li><a href="#trash">Eliminados<%= " (#{@conversations_trash.count})" if @conversations_trash.count > 0 %></a></li>
     </ul>
-    <%= render '/shared/user/sorting' %>
+    <%= render 'shared/user/sorting' %>
   </div>
   
   <div class="boxed">
@@ -53,4 +53,4 @@
   </div>
 </section> 
 <%= render partial: 'modal_delete', locals: { conversation: @conversation } %>
-<%= render partial: 'modal_activity', locals: { conversation: @conversation } %>
+<%= render partial: 'conversations/modal_activity', locals: { conversation: @conversation, user: sender_or_recipient(@conversation) } %>
