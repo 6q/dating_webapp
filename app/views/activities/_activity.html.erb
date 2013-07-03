@@ -4,17 +4,17 @@
   </i>
   <p><strong><%= activity_creator(activity).name %></strong> <%= activity.sender_id != current_user.id ? _('te ha propuesto...') : _('has propuesto...') %></p>
   <p><%= activity.body %></p>
-  <% if activity.sender_id != current_user.id %>
-    <div class="actions right">
-      <% if activity.rejected? %>
-        <%= _('Actividad rechazada') %>
-      <% elsif activity.accepted? %>
-        <%= _('Actividad aceptada') %>
-      <% else %>
+  <div class="actions right">
+    <% if activity.rejected? %>
+      <%= _('Actividad rechazada') %>
+    <% elsif activity.accepted? %>
+      <%= _('Actividad aceptada') %>
+    <% else %>
+      <% if activity.sender_id != current_user.id %>
         <a class="btn btn-danger" href="#proposal-reject" data-toggle="modal"><i class="icon icon-remove icon-white"></i> <%= _('Rechazar') %></a>
         <a class="btn btn-success" href="#proposal-accept" data-toggle="modal"><i class="icon icon-ok icon-white"></i> <%= _('Aceptar') %></a>
       <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 <%= render partial: 'activities/modal_answer_proposal', locals: { activity: activity } %>
