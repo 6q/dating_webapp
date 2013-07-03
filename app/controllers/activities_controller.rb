@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
   def create
     unless @conversation
       @recipient = User.find(params[:recipient]) if params[:recipient].present? 
-      @receipt = current_user.send_message(@recipient, _('Propuesta de actividad'), params[:activity][:body][0..10])
+      @receipt = current_user.send_message(@recipient, _('Te propongo esta actividad'), params[:activity][:body][0..10])
       @conversation = @receipt.conversation
     end
     @activity = @conversation.build_activity(params[:activity])

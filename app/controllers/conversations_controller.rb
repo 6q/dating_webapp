@@ -1,4 +1,6 @@
 class ConversationsController < ApplicationController
+  helper ConversationsHelper
+
   before_filter :get_mailbox, :get_box
   before_filter :check_current_subject_in_conversation, :only => [:show, :update, :destroy]
 
@@ -65,8 +67,7 @@ class ConversationsController < ApplicationController
       @conversation.activity.accept! if @conversation.activity
     end
 
-    last_receipt = @conversation.messages.reject {|m| m.sender == current_user}.first.receipts.sentbox.first
-    @receipt = current_user.reply_to_sender(last_receipt, params[:message][:body])
+    @receipt = current_user.reply_to_conversation(@conversation, params[:message][:body])
 
     if @box.eql? 'trash'
       @receipts = @mailbox.receipts_for(@conversation).trash

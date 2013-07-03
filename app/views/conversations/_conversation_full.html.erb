@@ -1,4 +1,4 @@
-<div class="<%= cycle("msg-origin", "msg-reply") -%>">
+<div class="<%= cycle("msg-reply", "msg-origin") -%>">
   <%= user_link_with_picture(receipt.message.sender) %>
   <div class="info">
     <p class="msg-data"><%= link_to receipt.message.sender.name, user_path(receipt.message.sender) %> <%= receipt.message.sender.age %> Años, <%= receipt.message.sender.city %></p>
