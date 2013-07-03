@@ -8,13 +8,6 @@
 			<div class="txt"><%= User::GENDER[@user.lf_gender].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_orientation %>
-		<% busca = 1 %>
-		<div class="key span3">Orientacion sexual:</div>
-		<div class="valor span6">
-			<div class="txt"><%= User::ORIENTATION[@user.lf_orientation] %></div>
-		</div>
-	<% end %>
 	<% if @user.lf_marital_status %>
 		<% busca = 1 %>
 		<div class="key span3">Estado civil:</div>
