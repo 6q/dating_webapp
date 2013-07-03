@@ -3,8 +3,6 @@
   <%= form_for @user, :url => profile_path do |user| %>
   <hr class="thin">
   <%= _('Soy') + ' ' + User::SEEKING[@user.seeking] %>
-  <%= user.label :marital_status, 'y' %>
-  <%= user.select :marital_status, marital_status_options,{}, { :class => 'span2' } %>
   <hr class="thin">
   <%= user.label :birth_date, "Nací el" %>
   <%= user.text_field :birth_date_day, placeholder: Date.today.day, class: "span1" %>
