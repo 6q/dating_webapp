@@ -16,9 +16,9 @@ FactoryGirl.define do
       postal_code{ Faker::Address.zip_code }
       marital_status{ User::MARITAL_STATUS.keys.sample }
       seeking{User::SEEKING.keys.sample}
-      birth_date{ Date.today << ((rand(10) + 19) * 12) }
+      birth_date{ Date.today << ((rand(10) + 19) * rand(10..20)) }
       terms_and_conditions "1"
-      height { Random.rand(150..210) }
+      height { Random.rand(150..180) }
     end
 
     trait :optional_data do
