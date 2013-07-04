@@ -76,6 +76,8 @@ GEM
       multi_json (~> 1.0)
       rack
     erubis (2.7.0)
+    exception_notification (3.0.1)
+      actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.2.0)
@@ -267,6 +269,7 @@ DEPENDENCIES
   database_cleaner
   devise (>= 2.2.3)
   dragonfly (~> 0.9.14)
+  exception_notification
   factory_girl_rails (>= 4.2.0)
   faker
   figaro (>= 0.6.3)
