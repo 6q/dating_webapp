@@ -268,6 +268,10 @@ class User < ActiveRecord::Base
     self.lf_gender || (gender == 'male' ? 'female' : 'male')
   end
 
+  def matching_postal_code
+    self.lf_postal_code || self.postal_code
+  end
+
   def location
     [postal_code, city, country].compact.join(', ')
   end
