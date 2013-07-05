@@ -1,8 +1,8 @@
 Typus.setup do |config|
 
   # Application name.
-  # config.admin_title = "Typus"
-  # config.admin_sub_title = ""
+  config.admin_title = "Cellove"
+  config.admin_sub_title = "Ponle alas al amor"
 
   # When mailer_sender is set, password recover is enabled. This email
   # address will be used in Admin::Mailer.
@@ -23,11 +23,11 @@ Typus.setup do |config|
 
   # Authentication: +:none+, +:http_basic+
   # Run `rails g typus:migration` if you need an advanced authentication system.
-  # config.authentication = :none
+  config.authentication = :http_basic
 
   # Define username and password for +:http_basic+ authentication.
-  # config.username = "admin"
-  # config.password = "columbia"
+  config.username = "admin"
+  config.password = "columbia"
 
   # Define subdomain to use instead of additional path
   # config.subdomain = "admin"
