@@ -183,15 +183,12 @@
     <div class="boxed-inner blocked">
 
       <header>
-        <h1>Configuración</h1>
-        <div>Desde aquí podrás configurar tus parámetros en Cellove</div>
+        <h1>Usuarios bloqueados</h1>
+        <div>Has bloqueado estos ususarios. ¿Has cambiado de opinión?</div>
       </header>
     
       <%= form_for(current_user, url: user_block_hide_settings_path(current_user), :method => :post) do |f| %>
         <article>
-          <h4>Ususarios bloqueados</h4>
-          <p>Has bloqueado estos ususarios. ¿Has cambiado de opinión?</p>
-
             <table border="0" cellpadding="5" cellspacing="0" align="center">
               <tr>
                 <th></th>
