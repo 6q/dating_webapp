@@ -202,7 +202,7 @@
               <% current_user.blocked_and_hidden_users.each do |user| %>
                 <tr>
                   <td width="350" style="text-align:left">
-                    <%= link_to user.name, user_path(user) %> <%= user.age %> años, <%= user.city %>
+                    <%= user_detail user %>
                   </td>
                   <td width="100">
                     <% hidden_user_name = 'user[' + user.id.to_s + '][hidden_user]' %>
