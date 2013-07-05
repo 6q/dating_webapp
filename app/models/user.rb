@@ -509,6 +509,14 @@ class User < ActiveRecord::Base
     return users
   end
 
+  def blocked?(user)
+    !user_blocks.where("blocked_user_id = ?", user.id).first.nil?
+  end
+
+  def hidden?(user)
+    !user_hides.where("hidden_user_id = ?", user.id).first.nil?
+  end
+
   def rating(user_id)
     rate = self.ratings_given.where("rateable_id = ?", user_id).first
     if rate
