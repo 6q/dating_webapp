@@ -1,16 +1,22 @@
 #encoding: utf-8
 module UserHelper
-  def profile_pic(user = current_user, options = {width: 210, height: 210})
-    pp = user.profile_picture
+  def profile_pic_url(user, options)
     size = "#{options[:width]}x#{options[:height]}#"
-    if user.profile_picture
-      image_tag(pp.image.thumb(size).url)
+    url = nil
+    if profile_pic = user.profile_picture
+      url = profile_pic.image.thumb(size).url
     else
       app = Dragonfly[:images]
       uid = app.store(Pathname.new(Rails.application.config.assets.paths.first + "/placeholder-#{user.gender || 'male'}-#{Random.rand(1..3)}.jpg"))
       image = app.fetch(uid)
-      image_tag(image.thumb(size).url)
+      url = image.thumb(size).url
     end
+
+    url
+  end
+
+  def profile_pic(user = current_user, options = {width: 210, height: 210})
+    image_tag(profile_pic_url(user, options))
   end
 
   def user_action_links

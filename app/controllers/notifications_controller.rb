@@ -1,5 +1,6 @@
 class NotificationsController < ApplicationController
   after_filter :set_notifications_seen
+  include UserHelper
 
   # Get all unseen notifications
   def notifications
@@ -7,18 +8,16 @@ class NotificationsController < ApplicationController
     @notificationlist = []
     @notifications.each do |notification|
       u = User.find(notification.sender_id)
-      pp = u.profile_picture
-      if u.profile_picture
-        picture_url = pp.image.thumb.url
-      else
-        picture_url = "/assets/placeholder-#{u.gender}-#{Random.rand(1..3)}.jpg"
-      end
+
+      picture_url = profile_pic_url(u, width: 80, height: 80)
+
       if notification.notifiable_type == 'message'
         # Create status_link
         status_link = Rails.application.routes.url_helpers.conversation_path(notification.notifiable_id)
       elsif notification.notifiable_type == 'matchmaker'
         status_link = Rails.application.routes.url_helpers.my_matchmakers_path(:anchor => "tab_confirmar")
       end
+
       @notificationlist.push({
         :id => notification.id, :name => u.full_name, :user_id => u.id,
         :photo => picture_url,
