@@ -18,6 +18,8 @@ class Picture < ActiveRecord::Base
   attr_accessible :image
 
   image_accessor :image
+  validates_size_of :image, maximum: 3.megabytes
+  validates_property :format, of: :image, in: [:jpeg, :png, :gif]
 
   def to_json
     {
