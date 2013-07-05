@@ -8,8 +8,7 @@ class RecommendationsController < ApplicationController
 
   def create
     if params[:user] &&
-        params[:user][:name] && 
-        params[:user][:email] && 
+        params[:user][:email] &&
         params[:user][:email] =~ EMAIL_REGEX
       @recommendation = current_user.recommendations.build(params[:recommendation])
 
