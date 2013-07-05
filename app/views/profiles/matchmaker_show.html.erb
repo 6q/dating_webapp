@@ -9,6 +9,58 @@
     </div>
   </div>
   <hr class="thin">
+  
+  <div class="boxed">
+    <div class="boxed-inner">
+
+      <article>
+        <header>
+          <h1>Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?</h1>
+        </header>
+      </article>
+
+      <div class="celes-box">
+        <ul>
+          <li class="red-heart">
+            <i class="red-heart"></i>
+            Ex pareja
+          </li>
+
+          <li class="violet-heart">
+            <i class="violet-heart"></i>
+            Amigo especial
+          </li>
+
+          <li class="green-heart">
+            <i class="green-heart"></i>
+            Amigo
+          </li>
+
+          <li class="yellow-heart">
+            <i class="yellow-heart"></i>
+            Familiar
+          </li>
+        </ul>
+        <div class="btns">
+          <%
+            # Yes. Both buttons perform the same action. Don't ask. ^__^
+          %>
+          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ registrad@</a>
+          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ nuev@</a>
+        </div>
+      </div>
+
+      <div class="your-celestines">
+        <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
+        <% @can_delete_celestino.present? %>
+        <% current_user.recommendations.each do |rec| %>
+          <%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <hr class="thin">
 
   <%= form_for @user, :url => profile_path do |f| %>
     <div class="boxed">
@@ -60,54 +112,6 @@
       </div>
     </div>
   <% end %>
-
-  <hr class="thin">
-
-  <div class="boxed">
-    <div class="boxed-inner">
-
-      <article>
-        <header>
-          <h1>Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?</h1>
-        </header>
-      </article>
-
-      <div class="celes-box">
-        <ul>
-          <li class="red-heart">
-            Ex pareja
-          </li>
-      
-          <li class="violet-heart">
-            Amigo especial
-          </li>
-      
-          <li class="green-heart">
-            Amigo
-          </li>
-      
-          <li class="yellow-heart">
-            Familiar
-          </li>
-        </ul>
-        <div class="btns">
-          <%
-            # Yes. Both buttons perform the same action. Don't ask. ^__^
-          %>
-          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ registrad@</a>
-          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ nuev@</a>
-        </div>
-      </div>
-
-      <div class="your-celestines">
-        <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
-        <% @can_delete_celestino.present? %>
-        <% current_user.recommendations.each do |rec| %>
-          <%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
-        <% end %>
-      </div>
-    </div>
-  </div>
 
 </section>
 
