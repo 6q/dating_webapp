@@ -19,7 +19,7 @@
       <header>
         <h1 class="span3">Tu perfil</h1>
         <div class="pull-right">
-          <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to "¡Mejora tu índice!", "/user/celestinos-of-mine#tab_mejora" %> - Perfil <%= current_user.progress_status %>% completado
+          <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to "¡Mejora tu índice!", my_matchmakers_path(anchor: 'tab_mejora') %> - Perfil <%= current_user.progress_status %>% completado
         </div>
         <div class="clearfix"></div>
       </header>
