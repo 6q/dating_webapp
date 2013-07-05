@@ -4,14 +4,17 @@
   <ul>
     <% user.pictures.each do |pic| %>
       <li>
-        <div class="overlay">
-          <%= link_to image_tag('cross.png'), pic, method: :delete, confirm: _("¿Estas de seguro que quieres borrar la foto?") %>
+        <div class="<%= 'main' if pic.main %>">
+          <div class="overlay">
+            <%= link_to image_tag('cross.png'), pic, method: :delete, confirm: _("¿Estas de seguro que quieres borrar la foto?") %>
+            <%= link_to image_tag('cross.png'), picture_path(pic, main: true), method: :put %>
+          </div>
+          <span>
+            <%= link_to pic.image.jpg.url , :class => 'grouped_elements' do %>
+              <%= image_tag pic.image.thumb("80x80#").url %>
+            <% end %>
+          </span>
         </div>
-        <span>
-          <%= link_to pic.image.jpg.url , :class => 'grouped_elements' do%>
-            <%= image_tag pic.image.thumb("80x80#").url %>
-          <% end %>
-        </span>
       </li>
     <% end %>
     <% user_remaining_pictures(user).times do %>

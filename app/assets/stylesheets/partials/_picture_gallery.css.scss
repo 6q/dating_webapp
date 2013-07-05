@@ -65,6 +65,10 @@
           @include transition(all 0.5s ease-out);
         }
       }
+      
+      .main {
+        border: 5px solid #8ccc8c;
+      }
     }
   }
 }

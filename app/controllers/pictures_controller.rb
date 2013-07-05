@@ -25,11 +25,15 @@ class PicturesController < ApplicationController
   end
 
   def update
-    cd = params[:crop_data]
-    if cd
+    if cd = params[:crop_data]
       geometry = "#{cd[:w]}x#{cd[:h]}+#{cd[:x]}+#{cd[:y]}"
       @picture.image = @picture.image.thumb(geometry).tempfile
       @picture.save
+    elsif main = params[:main]
+      current_user.pictures.update_all(main: false)
+      @picture.main = true
+      @picture.save
+      redirect_to :back
     end
     if current_user
       render json: {
