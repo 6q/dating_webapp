@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Invitation:
+  fields:
+    default: invitor_id, invited_email, accepted, invitation_code
+    form: invitor_id, invited_email, accepted, invitation_code
+  relationships: 
+  application: Application

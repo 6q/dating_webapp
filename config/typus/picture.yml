@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Picture:
+  fields:
+    default: image_uid, image_name, attachable_id, main
+    form: image_uid, image_name, attachable_id, main
+  relationships: 
+  application: Application

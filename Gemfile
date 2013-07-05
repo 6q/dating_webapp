@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -35,6 +35,7 @@ gem 'faker'
 gem 'factory_girl_rails', '>= 4.2.0'
 gem "mail_view", "~> 1.0.3"
 gem 'client_side_validations'
+gem "typus", :git => "git://github.com/fesplugas/typus.git", :branch => "features/3-2-stable-bootstrap"
 
 group :test do
   gem 'sqlite3'

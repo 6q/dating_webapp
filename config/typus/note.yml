@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Note:
+  fields:
+    default: user_id, evaluated_id, content
+    form: user_id, evaluated_id, content
+  relationships: 
+  application: Application

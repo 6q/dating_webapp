@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Activity:
+  fields:
+    default: status, conversation_id, body, date, sender_id
+    form: status, conversation_id, body, date, sender_id
+  relationships: 
+  application: Application

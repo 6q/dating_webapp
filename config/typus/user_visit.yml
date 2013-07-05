@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+UserVisit:
+  fields:
+    default: user_id, visitor_id, visited_at, seen
+    form: user_id, visitor_id, visited_at, seen
+  relationships: notifications
+  application: Application

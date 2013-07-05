@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+GeneralSetting:
+  fields:
+    default: user_id, no_email_online, profile_visit, receive_message, like, star_rating, celestino_recommendation, newsletter, user_suggestions, new_users_nearby, show_online, allow_chat, show_only_nearby, show_only_matching_profiles, show_only_people_who_like_me, show_only_buena_pareja, show_only_pm, show_only_rated_me, anonymous_browsing
+    form: user_id, no_email_online, profile_visit, receive_message, like, star_rating, celestino_recommendation, newsletter, user_suggestions, new_users_nearby, show_online, allow_chat, show_only_nearby, show_only_matching_profiles, show_only_people_who_like_me, show_only_buena_pareja, show_only_pm, show_only_rated_me, anonymous_browsing
+  relationships: 
+  application: Application

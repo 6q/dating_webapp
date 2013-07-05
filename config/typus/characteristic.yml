@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Characteristic:
+  fields:
+    default: user_id, creator_id, romantic, adventurer, friendly, familiar, hardWorking, extroverted, generous, reserved, sociable, quiet, demanding, prideful, solitary, tenacious, attentive, goodHumored, spontaneous, restless, sensitive, shy, possessive, jealous, faithful, recommendation_id
+    form: user_id, creator_id, romantic, adventurer, friendly, familiar, hardWorking, extroverted, generous, reserved, sociable, quiet, demanding, prideful, solitary, tenacious, attentive, goodHumored, spontaneous, restless, sensitive, shy, possessive, jealous, faithful, recommendation_id
+  relationships: 
+  application: Application

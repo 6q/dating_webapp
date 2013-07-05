@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+UserHide:
+  fields:
+    default: user_id, hidden_user_id
+    form: user_id, hidden_user_id
+  relationships: 
+  application: Application

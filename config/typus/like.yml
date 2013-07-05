@@ -1,0 +1,8 @@
+# Use the README file as a reference to customize settings.
+
+Like:
+  fields:
+    default: user_id, creator_id
+    form: user_id, creator_id
+  relationships: notifications
+  application: Application
