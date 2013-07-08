@@ -15,6 +15,7 @@
 //= require bootstrap
 //= require functions
 //= require jquery.flexslider-min
+//= require jquery.datepicker.min
 //= require user_functions
 //= require chosen.jquery.min
 //= require rails.validations
