@@ -10,7 +10,7 @@ module DatePresenter
 
       define_method(partial_name) do
         date = self.send(attr_name)
-        date && date.send(c) || self.instance_variable_get("@#{partial_name}")
+        self.instance_variable_get("@#{partial_name}") || date && date.send(c)
       end
     end
 
