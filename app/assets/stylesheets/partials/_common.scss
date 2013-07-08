@@ -15,12 +15,17 @@ li{
   margin-top: 35px;
 }
 
-.overflow-show{
+.overflow-show {
   overflow: visible !important;
 }
-header{
-  overflow: visible !important;
+
+.list {
+  header{
+   overflow: visible !important;
+  }  
 }
+
+
 
 
 
