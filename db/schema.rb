@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130708200138) do
+ActiveRecord::Schema.define(:version => 20130708225649) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -508,7 +508,7 @@ ActiveRecord::Schema.define(:version => 20130708200138) do
     t.string   "language"
     t.string   "job"
     t.string   "salary"
-    t.string   "description"
+    t.text     "description"
     t.text     "party"
     t.text     "music"
     t.text     "cinema"
