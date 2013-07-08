@@ -17,8 +17,9 @@ class ProfilesController < ApplicationController
   end
 
   def update
-  	@user = current_user
-    if @user.update_attributes!(params[:user])
+    @user = current_user
+    @user.assign_attributes(params[:user])
+    if @user.save
       if @user.has_role?(:matchmaker)
         @recommendation = Recommendation.new
         @characteristic = Characteristic.new

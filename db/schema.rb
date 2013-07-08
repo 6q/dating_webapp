@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702160345) do
+ActiveRecord::Schema.define(:version => 20130708200138) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -409,7 +409,7 @@ ActiveRecord::Schema.define(:version => 20130702160345) do
     t.integer  "user_id"
     t.integer  "years_lteq"
     t.integer  "years_gteq"
-    t.string   "town_eq"
+    t.string   "city_eq"
     t.string   "postal_code_cont"
     t.string   "description_cont"
     t.boolean  "pictures_main_eq"

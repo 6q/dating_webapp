@@ -5,9 +5,6 @@
       <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>
-      <% if user.last_sign_in_at %>
-        <small><%= time_ago_in_words(user.last_sign_in_at) %></small>
-      <% end %>
       <h1>
         <%= link_to user.name, user, 'data-toggle' => 'tooltip', :title => 'activo hace 2 horas' %>
         <br>

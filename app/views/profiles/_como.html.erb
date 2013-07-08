@@ -4,12 +4,12 @@
   <hr class="thin">
   <%= _('Soy') + ' ' + User::SEEKING[@user.seeking] %>
   <hr class="thin">
-  <%= user.label :birth_date, "Nací el" %>
-  <%= user.text_field :birth_date_day, placeholder: Date.today.day, class: "span1" %>
-  <%= user.label :birth_date, "de" %>
-  <%= user.date_select(:birth_date, {:discard_day =>'true', :discard_year => 'true'}, :class=>'span2' ) %>
+  <%= user.label :birth_date_day, "Nací el" %>
+  <%= user.text_field :birth_date_day, placeholder: _('Día'), class: "span1" %>
+  <%= user.label :birth_date_month, "de" %>
+  <%= user.text_field :birth_date_month, placeholder: _('Mes'), class: "span1" %>
   <%= user.label :birth_date_year, "de" %>
-  <%= user.text_field :birth_date_year, placeholder: Date.today.year, class: "span1" %>
+  <%= user.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
   <hr class="thin">
 
   <%= user.label :country, "Vivo en" %>
