@@ -6,7 +6,7 @@
     </header>
     <ul>
       <% current_user.searches.each do |search| %>
-        <li><%= link_to search.name, search.search_path %><%= link_to '<i class="icon icon-trash">x</i>'.html_safe, search, method: :delete, class: 'delete-search', confirm: _('¿Estás seguro de que deseas eliminar esta búsqueda?') %></li>
+        <li><%= link_to search.name, search.search_path %><%= link_to '<i class="icon">x</i>'.html_safe, search, method: :delete, class: 'delete-search', confirm: _('¿Estás seguro de que deseas eliminar esta búsqueda?') %></li>
       <% end %>
     </ul>
   </section>
