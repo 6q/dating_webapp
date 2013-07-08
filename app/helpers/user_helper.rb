@@ -20,10 +20,10 @@ module UserHelper
   end
 
   def user_action_links
-    html = '<li class="message">' + link_to('Send Message', '#fast-reply', 'data-toggle' => 'modal') + '</li>'
-    html += '<li class="chat">' + link_to('Chat', '/user/chat/') + '</li>'
-    html += '<li class="like">' + link_to('Like', '/user/likes-of-mine/') + '</li>'
-    html += '<li class="block">' + link_to('Block', '#user-block', 'data-toggle' => 'modal') + '</li>'
+    html = '<li class="message">' + link_to(_('Enviar Mensaje'), '#fast-reply', 'data-toggle' => 'modal', title: _('Enviar Mensaje')) + '</li>'
+    html += '<li class="chat">' + link_to('Chat', '/user/chat/', title: 'Chat') + '</li>'
+    html += '<li class="like">' + link_to(_('Me gusta'), '/user/likes-of-mine/', title: _('Me gusta')) + '</li>'
+    html += '<li class="block">' + link_to(_('Bloquear'), '#user-block', 'data-toggle' => 'modal', title: _('Bloquear')) + '</li>'
     html.html_safe
   end
 

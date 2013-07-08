@@ -18,26 +18,26 @@
     </header>
     <ul class="actions clearfix">
       <% if user_signed_in? %>
-        <li class="message"><%= link_to 'Send Message', "#fast-reply-#{user.id}", 'data-toggle' => 'modal' %></li>
-        <li class="chat"><%= link_to 'Chat', '#', onclick: "jqac.arrowchat.chatWith('#{user.id}'); return false;" %></li>
+        <li class="message"><%= link_to _('Enviar mensaje'), "#fast-reply-#{user.id}", 'data-toggle' => 'modal', title: _('Enviar mensaje') %></li>
+        <li class="chat"><%= link_to _('Chat'), '#', onclick: "jqac.arrowchat.chatWith('#{user.id}'); return false;", title: _('Chat') %></li>
         <% if current_user.likes?(user) %>
-          <li class="like disabled active"><%= link_to 'Unlike', user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %></li>
-          <li class="like hidden"><%= link_to 'Like', user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %></li>
+          <li class="like disabled active"><%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true, title: _('Ya no me gusta') %></li>
+          <li class="like hidden"><%= link_to _('Me gusta'), user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true, title: _('Me gusta') %></li>
         <% else %>
-          <li class="like active"><%= link_to 'Like', user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %></li>
-          <li class="like disabled hidden"><%= link_to 'Unlike', user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %></li>
+          <li class="like active"><%= link_to _('Me gusta'), user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true, title: _('Me gusta') %></li>
+          <li class="like disabled hidden"><%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true, title: _('Ya no me gusta') %></li>
         <% end %>
         <% block_modal_id = '#user-block-' + user.id.to_s %>
 
         <li class="block <%= (current_user.blocked?(user) || current_user.hidden?(user)) ? "disabled" : "" %> ">
-        <%= link_to 'Block', block_modal_id, "data-toggle" => "modal" %>
+        <%= link_to _('Bloquear'), block_modal_id, "data-toggle" => "modal", title: _('Bloquear') %>
         </li>
       <% else %>
-        <li class="message"><%= link_to _('Send Message'), new_user_registration_path %></li>
-        <li class="chat"><%= link_to 'Chat', new_user_registration_path %></li>
-          <li class="like disabled active"><%= link_to 'Unlike', new_user_registration_path %></li>
-          <li class="like hidden"><%= link_to 'Like', new_user_registration_path %></li>
-        <li class="block"><%= link_to 'Block', new_user_registration_path %></li>
+        <li class="message"><%= link_to _('Enviar mensaje'), new_user_registration_path %></li>
+        <li class="chat"><%= link_to _('Chat'), new_user_registration_path %></li>
+          <li class="like disabled active"><%= link_to _('Ya no me gusta'), new_user_registration_path %></li>
+          <li class="like hidden"><%= link_to _('Me gusta'), new_user_registration_path %></li>
+        <li class="block"><%= link_to _('Bloquear'), new_user_registration_path %></li>
       <% end %>
     </ul>
 
