@@ -16,7 +16,9 @@ fieldset {
   }
 
   .field_with_errors {
-    @include ctb-formFieldState($errorText, $errorText, $errorBackground)
+    @include ctb-formFieldState($errorText, $errorText, $errorBackground);
+    position:relative;
+    display:inline;
   }
 
   legend {
@@ -168,6 +170,7 @@ fieldset {
 .popover-form{
   position: absolute;
   z-index: 1010;
+  left:20%;
   max-width: 276px;
   text-align: left;
   background-color: white;
@@ -185,6 +188,11 @@ fieldset {
   margin-top: -2px;
   font-size: 14px;
   padding: 5px 8px 0px 8px;
+  color:#b94a48;
+
+  label {
+    font-weight:normal!important;
+  }
   
   .arrow {
     position: absolute;
@@ -216,4 +224,5 @@ fieldset {
     margin-left: -9px;
   }
 }
+
 
