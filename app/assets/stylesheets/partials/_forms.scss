@@ -225,4 +225,54 @@ fieldset {
   }
 }
 
+#fast-register {
+  background:#565455;
+  margin-top:2em;
+  padding:.6em 0;
 
+  form {
+    margin:0;
+  }
+
+  legend {
+    float:left;
+    color:#fff;
+    font-weight:normal;
+    font-size:1em;
+    margin:0;
+    width:auto;
+    height:30px;
+    line-height:30px;
+    margin:0 1em;
+  }
+
+
+  input[type="email"], 
+  input[type="password"] {
+    width:150px;
+    margin-bottom:0;
+    margin-right:.5em;
+  }
+
+  .checkbox {
+    display:inline;
+    padding-left:.5em;
+  }
+
+  label {
+    display:inline;
+    color:#fff;
+  }
+
+  input[type="checkbox"] {
+    float:none;
+    margin:0;
+  }
+
+  input[type="submit"] {
+    @include button(#363636,#242625,#ffffff);
+    margin-left:1em;
+  }
+
+
+}
