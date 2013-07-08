@@ -6,7 +6,7 @@ class SearchesController < ApplicationController
   def create
     search = current_user.searches.build(params[:search])
     if search.save
-      flash[:success] = _('Búsqueda guardado')
+      flash[:success] = _('Búsqueda guardada')
     else
       flash[:error] = _('Oops!')
     end
@@ -16,7 +16,7 @@ class SearchesController < ApplicationController
   def destroy
     # Delete search.
     Search.find(params[:id]).destroy
-    flash[:success] = _('Búsqueda borrado')
+    flash[:success] = _('Búsqueda borrada')
     redirect_to search_path
   end
 

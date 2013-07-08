@@ -393,6 +393,7 @@ aside {
         padding:5px;
         border:none;
         margin-bottom:2px;
+        position:relative;
         a {
           padding:5px;
           display:block;
@@ -416,6 +417,15 @@ aside {
             border-radius:20px;
             font-size:.8em;
           }
+
+        &.delete-search {
+          position:absolute;
+          top:5px;
+          right:5px;
+          i {
+            text-indent:-999em;
+          }
+        }
 
         }
       }

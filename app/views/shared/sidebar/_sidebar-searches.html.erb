@@ -2,11 +2,11 @@
   <hr>
   <section>
     <header>
-      <h1>Búsquedas guardado</h1>
+      <h1>Búsquedas guardadas</h1>
     </header>
     <ul>
       <% current_user.searches.each do |search| %>
-        <li><%= link_to search.name, search.search_path %></li>
+        <li><%= link_to search.name, search.search_path %><%= link_to '<i class="icon icon-trash">x</i>'.html_safe, search, method: :delete, class: 'delete-search', confirm: _('¿Estás seguro de que deseas eliminar esta búsqueda?') %></li>
       <% end %>
     </ul>
   </section>
