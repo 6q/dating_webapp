@@ -1,16 +1,19 @@
 <section id="user-sidebar">
-  <% if params[:controller] == 'users'  %>
-    <div class="profile_pic_wrapper">
-      <div class="profile_pic_overlay">
-        <button class="btn btn-info" type="submit">
-          <i class="icon-wrench icon-white"></i>
-          <%= _('Cambia tu foto de perfil') %>
-        </button>
+
+  <% if params[:controller] == 'users' %>
+    <% if params[:action] != 'index' %>
+      <div class="profile_pic_wrapper">
+        <div class="profile_pic_overlay">
+          <button class="btn btn-info" type="submit">
+            <i class="icon-wrench icon-white"></i>
+            <%= _('Cambia tu foto de perfil') %>
+          </button>
+        </div>
+        <div class="profile_pic">
+          <%= profile_pic(current_user) %>
+        </div>
       </div>
-      <div class="profile_pic">
-        <%= profile_pic(current_user) %>
-      </div>
-    </div>
+    <% end %>
   <% end %>
   
 	<ul>
