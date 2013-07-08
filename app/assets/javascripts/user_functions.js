@@ -204,10 +204,6 @@ $(document).ready(function() {
 
   //$('.activity').click();
 
-  // tooltips in user names
-  $('.user-card h1 a').tooltip();
-
-
   $('.msg-reply-dialog .action-reply').click(function(e){
     e.preventDefault();
     $('.msg-reply-dialog .reply-form, .msg-reply-dialog .pic img').toggle();

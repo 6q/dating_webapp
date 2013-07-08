@@ -51,7 +51,7 @@ $(document).ready(function(){
   });
 
 
-  $('#related-list a').tooltip({
+  $('#related-list a, .user-card h1 a, .user-card').tooltip({
     html:true
   });
 

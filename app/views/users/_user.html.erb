@@ -1,12 +1,12 @@
 <li>
-  <article class="user-card <%= user.online? ? "online" : "" %>">
+<article class="user-card <%= user.online? ? "online" : "" %>" data-toggle="tooltip" title="<%= "<strong>#{user.full_name}</strong><br>#{_('Última conexión')}: #{user.last_sign_in_at ? _('hace ') + time_ago_in_words(user.last_sign_in_at) : _('Nunca')}" %>">
     <ul class="pics">
       <li><%= link_to profile_pic(user), user %></li>
       <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>
       <h1>
-        <%= link_to user.name, user, 'data-toggle' => 'tooltip', :title => 'activo hace 2 horas' %>
+        <%= link_to user.name, user, 'data-toggle' => 'tooltip', :title => "<strong>#{user.full_name}</strong><br>#{_('Última conexión')}: #{user.last_sign_in_at ? _('hace ') + time_ago_in_words(user.last_sign_in_at) : _('Nunca')}".html_safe %>
         <br>
         <span><%= truncate(user.city, length: 20) %></span>
         <br><%= "#{user.age} #{_('Años')}" %>
