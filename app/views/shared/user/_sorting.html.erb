@@ -1,13 +1,12 @@
 <% if @search %>
   <div class="dropdown sort">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ordenar por...</a>
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= _('Ordenar por...') %></a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-      <li><%= sort_link(@search, :updated_at, "Online primero", default_order: :desc) %></li>
-      <li><%= sort_link(@search, :prop_actividad, "Prop. Actividad primero") %></li>
-      <li><%= sort_link(@search, :created_at, "Más antiguos primero", default_order: :desc) %></li>
-      <li><%= sort_link(@search, :created_at, "Más recientes primero") %></li>
-      <li><%= sort_link(@search, :distance, "Más cercanos primero", { :distance => params[:distance] }) %></li>
-      <li><%= sort_link(@search, :recent_interaction, "Interactuación reciente") %></li>
+      <li><%= sort_link(@search, :updated_at, _("Online"), default_order: :desc) %></li>
+      <li><%#= sort_link(@search, :prop_actividad, _("Prop. Actividad")) %></li>
+      <li><%= sort_link(@search, :created_at, _("Fecha de alta"), default_order: :desc) %></li>
+      <li><%= sort_link(@search, :distance, "Más cercanos", { :distance => params[:distance] }) %></li>
+      <li><%#= sort_link(@search, :recent_interaction, "Interactuación reciente") %></li>
     </ul>
   </div>
 <% end %>

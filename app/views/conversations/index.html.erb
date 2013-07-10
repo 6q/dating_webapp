@@ -16,7 +16,6 @@
       <li><a href="#sentbox">Enviados<%= " (#{@conversations_sentbox.total_count})" if @conversations_sentbox.total_count > 0 %></a></li>
         <li><a href="#trash">Eliminados<%= " (#{@conversations_trash.total_count})" if @conversations_trash.total_count > 0 %></a></li>
     </ul>
-    <%= render 'shared/user/sorting' %>
   </div>
   <div class="boxed">
     <div class="boxed-inner">
