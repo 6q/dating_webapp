@@ -1,0 +1,10 @@
+<% self.formats = [:html] %>
+<section id="new-users" class="home-users">
+<div class="clearfix list-header">
+  <h4 class="pull-left">Usuari@s nuevos en tu zona</h4>
+  <div class="pull-right">En un radio de <span class="radius"><%= radius %></span>km > <%= link_to "Cambiar radio",  "#", class: 'radius' %> | <%= link_to "Ver más", users_path %></div>
+</div>
+<ul class="user-list clearfix">
+  <%= render current_user.new_users_near_me(radius) %>
+</ul>
+</section>

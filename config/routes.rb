@@ -36,7 +36,9 @@ Cellove::Application.routes.draw do
 
     get 'view',                     on: :collection
   end
+
   get '/dashboard', to: "dashboard#show", as: :dashboard
+  post '/dashboard', to: "dashboard#update_radius", as: :dashboard
 
   scope "/user" do
     get 'settings',                 to: 'users#settings'

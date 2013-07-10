@@ -5,35 +5,9 @@
 
   <hr class="thin">
 
-  <section id="new-users" class="home-users">
-    <div class="clearfix list-header">
-      <h4 class="pull-left">Usuari@s nuevos en tu zona</h4>
-      <div class="pull-right">En un radio de 50 km > <%= link_to "Cambiar radio", "#" %> | <%= link_to "Ver más", "#" %></div>
-    </div>
-    <ul class="user-list clearfix">
-      <%= render current_user.new_users_near_me %>
-    </ul>
-  </section>
-
-  <section id="best-rated" class="home-users">
-    <div class="clearfix list-header">
-      <h4 class="pull-left">Usuari@s con mejor Índice Cellove</h4>
-      <div class="pull-right"><%= link_to "Ver más", "#" %></div>
-    </div>
-    <ul class="user-list clearfix">
-      <%= render current_user.best_rated %>
-    </ul>
-  </section>
-
-  <section id="near-most-visited" class="home-users">
-    <div class="clearfix list-header">
-      <h4 class="pull-left">Usuari@s que te pueden gustar</h4>
-      <div class="pull-right"><%= link_to "Ver más", "#" %></div>
-    </div>
-    <ul class="user-list clearfix">
-      <%= render current_user.best_suited_near_me %>
-    </ul>
-  </section>
+  <%= render partial: 'near_most_visited', locals: { radius: 500 } %>
+  <%= render partial: 'best_rated', locals: { radius: 500 } %>
+  <%= render partial: 'new_users', locals: { radius: 500 } %>
 
   <section id="last-messages">
     <h4>Últimas conversaciones <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>

@@ -20,4 +20,5 @@ class UserVisit < ActiveRecord::Base
 
   validates :user_id, uniqueness: { scope: :visitor_id }
   validates_presence_of :user_id, :visitor_id, :visited_at
+
 end
