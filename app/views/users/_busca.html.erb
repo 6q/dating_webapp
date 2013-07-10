@@ -15,11 +15,11 @@
 			<div class="txt"><%= User::MARITAL_STATUS[@user.lf_marital_status] %></div>
 		</div>
 	<% end %>
-	<% unless @user.lf_age_between.blank? or @user.lf_age_to.blank? %>
+	<% unless @user.lf_age_from.blank? or @user.lf_age_to.blank? %>
 		<% busca = 1 %>
 		<div class="key span3">Edad:</div>
 		<div class="valor span6">
-			<div class="txt"><%= "entre #{@user.lf_age_between} y #{@user.lf_age_to}" %></div>
+			<div class="txt"><%= "entre #{@user.lf_age_from} y #{@user.lf_age_to}" %></div>
 		</div>
 	<% end %>
 	<% if @user.lf_relationship %>

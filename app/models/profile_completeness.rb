@@ -13,7 +13,7 @@ class ProfileCompleteness
   GUSTOS_4 = %w[animals]
   GUSTOS_5 = %w[party music music_genre cinema cinema_frequency cinema_genre]
 
-  QUE_BUSCAS_1 = %w[lf_gender lf_orientation lf_marital_status lf_age_between lf_age_to lf_relationship lf_child lf_house lf_city lf_country lf_postal_code]
+  QUE_BUSCAS_1 = %w[lf_gender lf_orientation lf_marital_status lf_age_from lf_age_to lf_relationship lf_child lf_house lf_city lf_country lf_postal_code]
   QUE_BUSCAS_2 = %w[lf_physical_desc lf_physical_style lf_height_between lf_height_to lf_weight_between lf_weight_to lf_complexion lf_hair lf_hair_style lf_eyes]
   QUE_BUSCAS_3 = %w[lf_smoke lf_alcohol lf_party lf_diet]
   QUE_BUSCAS_4 = %w[lf_ethnicity lf_citizenship lf_religion lf_religion_activity lf_animals]

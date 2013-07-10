@@ -28,8 +28,8 @@
 							<% end %>
 							<% if @user.lf_gender %>
 								<%= "Busca #{User::GENDER[@user.lf_gender]} "%> 
-								<% if @user.lf_age_between and @user.lf_age_to %>
-									<%= "de entre #{@user.lf_age_between} y #{@user.lf_age_to} años" %>
+								<% if @user.lf_age_from and @user.lf_age_to %>
+									<%= "de entre #{@user.lf_age_from} y #{@user.lf_age_to} años" %>
 								<% end %>
 								<% if @user.lf_relationship %>
 									<%= "para #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>

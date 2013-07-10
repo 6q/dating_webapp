@@ -52,7 +52,7 @@
 #  lf_gender              :string(255)
 #  lf_orientation         :string(255)
 #  lf_marital_status      :string(255)
-#  lf_age_between         :string(255)
+#  lf_age_from            :string(255)
 #  lf_age_to              :string(255)
 #  lf_city                :string(255)
 #  lf_country             :string(255)
@@ -206,7 +206,7 @@ class User < ActiveRecord::Base
     :cinema_frequency, :cinema_genre, :like_sport, :like_read, :like_cinema, :like_walk, 
     :like_beach, :like_mountain, :like_quiet, :like_family, :like_friends,
     :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation, 
-    :lf_marital_status, :lf_age_between, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
+    :lf_marital_status, :lf_age_from, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
     :lf_physical_desc, :lf_physical_style, :lf_height_between, :lf_weight_to, :lf_weight_between,
     :lf_complexion, :lf_child, :lf_smoke, :lf_diet, :lf_alcohol, :lf_drugs, :lf_religion, 
     :lf_study_level, :lf_language, :lf_job, :lf_salary,:lf_house, :lf_hair, :lf_hair_style, 
@@ -591,7 +591,7 @@ class User < ActiveRecord::Base
     affinity_score = 0
     affinity_score += 1 if self.lf_orientation == user.orientation
     affinity_score += 1 if self.marital_status == user.marital_status
-    affinity_score += 1 if (user.age >= self.lf_age_between.to_i && user.age <= self.lf_age_to.to_i)
+    affinity_score += 1 if (user.age >= self.lf_age_from.to_i && user.age <= self.lf_age_to.to_i)
     
     affinity_score += 1 if self.lf_city == user.city
     affinity_score += 1 if self.lf_country == user.country
