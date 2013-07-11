@@ -696,7 +696,7 @@ class User < ActiveRecord::Base
   before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
 
   def confirmation_required?
-    false
+    true
   end
   protected :confirmation_required?
 
