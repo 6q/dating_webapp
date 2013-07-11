@@ -695,11 +695,6 @@ class User < ActiveRecord::Base
   private :update_profile_progress
   before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
 
-  def confirmation_required?
-    true
-  end
-  protected :confirmation_required?
-
   def set_gender
     gen_cor = {
       "man" => :male,
