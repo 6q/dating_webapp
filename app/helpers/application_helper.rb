@@ -21,10 +21,14 @@ module ApplicationHelper
   end
 
   def pager_total(paged_object)
-    html = '<span class="total">' + _('Mostrando ')
-    html += (paged_object.current_page * paged_object.length - paged_object.length + 1).to_s + _(' a ')
-    html += (paged_object.current_page * paged_object.length).to_s + _(' de ')
-    html += paged_object.total_count.to_s + '.</span>'
+    html = ""
+
+    if paged_object.length > 0
+      html = '<span class="total">' + _('Mostrando ')
+      html += (paged_object.current_page * paged_object.length - paged_object.length + 1).to_s + _(' a ')
+      html += (paged_object.current_page * paged_object.length).to_s + _(' de ')
+      html += paged_object.total_count.to_s + '.</span>'
+    end
 
     html.html_safe
   end
