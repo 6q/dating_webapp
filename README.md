@@ -3,6 +3,12 @@ Cellove - Dating site
 
 Cellove is a dating site with chat and a uniq recomendations system.
 
+Before start
+------------
+
+  * Clone the repository and bundle install
+  * Copy config/application.example.yml to config/application.yml
+
 Development practices
 ---------------------
 
