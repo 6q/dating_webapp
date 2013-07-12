@@ -46,3 +46,16 @@ References:
 [http://www.rubyinside.com/a-minitestspec-tutorial-elegant-spec-style-testing-that-comes-with-ruby-5354.html]
 [http://bfts.rubyforge.org/minitest/MiniTest/Expectations.html]
 [https://github.com/seattlerb/minitest]
+
+Deploy
+------
+
+Add id_rsa-cellove key to sshagent @ssh-add config/keypair/id_rsa-cellove@
+
+Deploy to staging will deploy develop branch:
+
+  cap staging deploy
+
+Deploy to production will deploy master branch:
+
+  cap production deploy
