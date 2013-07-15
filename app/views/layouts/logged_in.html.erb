@@ -27,6 +27,7 @@
           </div>
 
           <div class="span9">
+            <%= render 'shared/confirmation_pending_form' unless current_user.confirmed? %>
             <%= yield %>
           </div>
         </section>
