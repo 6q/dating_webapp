@@ -2,7 +2,7 @@
 <section class="boxed">
   <div class="boxed-inner">
     <header>
-      <h1>Índice Cellove</h1>
+      <h1><%= _('Índice Cellove') %></h1>
     </header>
 
     <div class="clearfix">
@@ -15,22 +15,22 @@
     <hr class="thin">
 
     <div class="center">
-      <%= link_to _('¡Mejora tu Índice Cellove!'), '/user/celestinos-of-mine#tab_mejora', class: 'btn btn-info btn-large' %>
+      <%= link_to _('¡Mejora tu Índice Cellove!'), my_matchmakers_path(anchor: 'tab_mejora'), class: 'btn btn-info btn-large' %>
     </div>
       <article class="clearfix">
-        <h3>¿Cómo se calcula?</h3>
-        <p>Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove.</p>
-        <p>Eso incluye desde las visitas a tu perfil hasta el número de mensajes enviados/recibidos.</p>
-        <p>Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que invitas o cuantos celestinos tengas.</p>
+        <h3><%= _('¿Cómo se calcula?') %></h3>
+        <p><%= _('Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove.') %></p>
+        <p><%= _('Eso incluye desde las visitas a tu perfil hasta el número de mensajes enviados/recibidos.') %></p>
+        <p><%= _('Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que invitas o cuantos celestinos tengas.') %></p>
 
-        <h3>¿Quieres mejorarlo?</h3>
-        <p>Tienes muchas formas de hacerlo:</p>
+        <h3><%= _('¿Quieres mejorarlo?') %></h3>
+        <p><%= _('Tienes muchas formas de hacerlo:') %></p>
         <ul>
-          <li>- <%= link_to "Completa tu perfil", profile_path %> al 100%</li>
-          <li>- <%= link_to "Invita a tus amigos", "/user/celestinos-of-mine#tab_mejora" %> a formar parte de Cellove</li>
-          <li>- <%= link_to "Consigue Celestinos", my_matchmakers_path %></li>
+          <li>- <%= link_to _("Completa tu perfil"), profile_path %> <%= _('al') %> 100%</li>
+          <li>- <%= link_to _("Invita a tus amigos"), my_matchmakers_path(anchor: 'tab_mejora') %> <% _('a formar parte de Cellove') %></li>
+          <li>- <%= link_to _("Consigue Celestinos"), my_matchmakers_path(anchor: 'tab_mejora') %></li>
         </ul>
-        <p>Pero sobretodo, ven a menudo ;-)</p>
+        <p><%= _('Pero sobretodo, ven a menudo ;-)') %></p>
       </article>
   </div>
 
