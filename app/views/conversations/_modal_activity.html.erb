@@ -2,13 +2,13 @@
 <div id="activity-proposal-<%= user.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>Proponer una actividad</h3>
+    <h3><%= _('Proponer una actividad') %></h3>
     <%= user_detail(user) %>
   </div>
   <%= simple_form_for Activity.new, url: activities_path do |f| %>
     <div class="modal-body">
 
-      <p>Selecciona una propuesta para compartir...</p>
+      <p><%= _('Selecciona una propuesta para compartir...') %></p>
       <br>
       <ul id="activity-types">
         <% Activity::ACTIVITY_TYPE.each do |k, v| %>
@@ -26,14 +26,14 @@
         <div class="control-group">
           <label><%= _('¿Cuando?') %></label> <%= f.input_field :date, as: :string, placeholder: 'dd/mm/aaaa', class: 'input-small' %>
           <label class="checkbox">
-            <input type="checkbox"> No quiero especificar cuando
+            <input type="checkbox"> <%= _('No quiero especificar cuando' %>
           </label>
         </div>
       </div>
 
     </div>
     <div class="modal-footer">
-      <%= link_to 'Cancelar', '#fast-reply', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+      <%= link_to _('Cancelar'), '#fast-reply', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
       <%= f.submit _('Proponer'), class: 'btn btn-info' %>
     </div>
   <% end %>

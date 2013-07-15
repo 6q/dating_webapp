@@ -6,11 +6,11 @@
   <div class="modal-body">
     <div class="center">
       <% s_or_r = sender_or_recipient(conversation) %>
-      <p>¿Seguro que deseas eliminar el mensaje de <strong><%= link_to s_or_r.name, s_or_r %></strong>?</p>
+      <p><%= _('¿Seguro que deseas eliminar el mensaje de') %> <strong><%= link_to s_or_r.name, s_or_r %></strong>?</p>
     </div>
   </div>
   <div class="modal-footer center">
-    <%= link_to 'No, me lo he pensado mejor', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= link_to _('No, me lo he pensado mejor'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
     <%= link_to _('Eliminar conversación'), conversation_path(conversation), method: :delete, class: 'btn btn-danger'  %>
   </div>
 </div>

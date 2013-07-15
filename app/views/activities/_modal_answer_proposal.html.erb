@@ -6,7 +6,7 @@
   </div>
   <%= simple_form_for activity.conversation.messages.new, url: conversation_path(activity.conversation, accept_activity: true), method: :put do |f| %>
     <div class="modal-body">
-      <p>¡Estás a un paso de aceptar la propuesta de <%= sender_or_recipient(activity.conversation).name %> para <strong><%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
+      <p><%= _('¡Estás a un paso de aceptar la propuesta de') %> <%= sender_or_recipient(activity.conversation).name %> <%= _('para') %> <strong><%= Activity::ACTIVITY_TYPE[activity.activity_type] %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
       <div class="reply">
         <%= f.input_field :body %>
       </div>
@@ -25,12 +25,12 @@
   </div>
   <div class="modal-body">
     <div>
-      <p><strong><%= sender_or_recipient(activity.conversation).name %> te ha propuesto <%= _(activity.activity_type) %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>.
-      <p>Vaya. Parece que NO vas a aceptar la actividad que te propone <%= sender_or_recipient(activity.conversation).name %>. Esperamos que la próxima vez funcione.</p>
+      <p><strong><%= sender_or_recipient(activity.conversation).name %> <%= _('te ha propuesto') %> <%= Activity::ACTIVITY_TYPE[activity.activity_type] %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>.
+      <p><%= _('Vaya. Parece que NO vas a aceptar la actividad que te propone') %> <%= sender_or_recipient(activity.conversation).name %>. <%= _('Esperamos que la próxima vez funcione.') %></p>
     </div>
   </div>
   <div class="modal-footer">
-    <%= link_to 'Cancelar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= link_to _('Cancelar'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
     <%= link_to _('Rechazar propuesta de actividad'), activity_reject_path(activity), class: 'btn btn-danger', method: :post %>
   </div>
 </div>

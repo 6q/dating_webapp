@@ -1,0 +1,1732 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: version 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-15 21:28+0200\n"
+"PO-Revision-Date: 2013-07-15 21:28+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/controllers/activities_controller.rb:10
+msgid "Te propongo esta actividad"
+msgstr ""
+
+#: app/controllers/invitations_controller.rb:10
+msgid "Usuari@ invitado!"
+msgstr ""
+
+#: app/controllers/invitations_controller.rb:14
+msgid "Celestin@ invitado!"
+msgstr ""
+
+#: app/controllers/invitations_controller.rb:18
+#: app/controllers/profiles_controller.rb:55
+#: app/controllers/relationships_controller.rb:8
+#: app/controllers/relationships_controller.rb:21
+#: app/controllers/searches_controller.rb:11
+#: app/controllers/users_controller.rb:108
+#: app/controllers/users_controller.rb:114
+msgid "Oops!"
+msgstr ""
+
+#: app/controllers/messages_controller.rb:43
+msgid "Mensaje enviado"
+msgstr ""
+
+#: app/controllers/notes_controller.rb:8
+msgid "Tu nota se ha guardado."
+msgstr ""
+
+#: app/controllers/notes_controller.rb:15
+msgid "Tu nota se ha borrado."
+msgstr ""
+
+#: app/controllers/pictures_controller.rb:8
+msgid "Ya has alcanzado tu limite de fotos"
+msgstr ""
+
+#: app/controllers/pictures_controller.rb:64
+msgid "No tienes permiso para borrar esta foto"
+msgstr ""
+
+#: app/controllers/profiles_controller.rb:27
+#: app/controllers/profiles_controller.rb:30
+msgid "Cambios guardados."
+msgstr ""
+
+#: app/controllers/profiles_controller.rb:38
+#: app/controllers/profiles_controller.rb:41
+msgid "No se ha podido guardar."
+msgstr ""
+
+#: app/controllers/profiles_controller.rb:53
+msgid "Actualización a usuari@ premium se ha realizado correctamente"
+msgstr ""
+
+#: app/controllers/recommendations_controller.rb:30
+msgid "Recommendación enviada"
+msgstr ""
+
+#: app/controllers/recommendations_controller.rb:33
+#: app/controllers/recommendations_controller.rb:40
+msgid "Datos incorrectos o faltantes"
+msgstr ""
+
+#: app/controllers/recommendations_controller.rb:53
+msgid "Recommendación acceptada"
+msgstr ""
+
+#: app/controllers/recommendations_controller.rb:63
+msgid "Recommendación negada"
+msgstr ""
+
+#: app/controllers/searches_controller.rb:9
+msgid "Búsqueda guardada"
+msgstr ""
+
+#: app/controllers/searches_controller.rb:19
+msgid "Búsqueda borrada"
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:5
+msgid "Email o contraseña inválidos"
+msgstr ""
+
+#: app/controllers/users_controller.rb:106
+#: app/controllers/users_controller.rb:112
+msgid "Configuración actualizado"
+msgstr ""
+
+#: app/helpers/application_helper.rb:27
+msgid "Mostrando "
+msgstr ""
+
+#: app/helpers/application_helper.rb:28
+msgid " a "
+msgstr ""
+
+#: app/helpers/application_helper.rb:29
+msgid " de "
+msgstr ""
+
+#: app/helpers/user_helper.rb:23
+msgid "Enviar Mensaje"
+msgstr ""
+
+#: app/helpers/user_helper.rb:25 app/views/users/_user.html.erb:22
+#: app/views/users/_user.html.erb:24 app/views/users/_user.html.erb:36
+msgid "Me gusta"
+msgstr ""
+
+#: app/helpers/user_helper.rb:26 app/views/users/_user.html.erb:30
+#: app/views/users/_user.html.erb:37
+msgid "Bloquear"
+msgstr ""
+
+#: app/models/activity.rb:21
+msgid "Tomar un café"
+msgstr ""
+
+#: app/models/activity.rb:22
+msgid "Ir al cine / espectáculo"
+msgstr ""
+
+#: app/models/activity.rb:23
+msgid "Salir de copas"
+msgstr ""
+
+#: app/models/activity.rb:24
+msgid "Actividad deportiva"
+msgstr ""
+
+#: app/models/activity.rb:25
+msgid "Actividad cultural"
+msgstr ""
+
+#: app/models/activity.rb:26
+msgid "Conocerte de verdad"
+msgstr ""
+
+#: app/models/cellove_notification.rb:20
+msgid "¡Le gusta!"
+msgstr ""
+
+#: app/models/cellove_notification.rb:21
+msgid "¡Nuevo visitante!"
+msgstr ""
+
+#: app/models/cellove_notification.rb:22
+msgid "¡Nuevo mensaje!"
+msgstr ""
+
+#: app/models/cellove_notification.rb:23
+msgid "¡Buena pareja!"
+msgstr ""
+
+#: app/models/cellove_notification.rb:24
+msgid "¡Nuevo celestino!"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:5
+msgid "hombre"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:5
+msgid "mujer"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:6
+msgid "hombre buscando una mujer"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:6
+msgid "mujer buscando un hombre"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:6
+msgid "hombre buscando un hombre"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:6
+msgid "mujer buscando una mujer"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:7
+msgid "solter@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:7
+msgid "ocupad@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:7
+msgid "separad@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:7
+msgid "divorciad@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:8
+msgid "casad@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:8
+msgid "viud@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:9
+msgid "tengo hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:9
+msgid "no tengo hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:9
+msgid "no tengo hijos, y no quiero tener"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:10
+msgid "no tengo hijos, pero quiero tener"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:10
+msgid "si tengo hijos, y no quiero tener mas "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:11
+msgid "si tengo hijos, y quiero tener mas "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:11
+msgid "no me gustan los niños"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:12
+#: app/models/concerns/user_constants.rb:68
+#: app/models/concerns/user_constants.rb:93
+msgid "sol@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:12
+#: app/models/concerns/user_constants.rb:68
+#: app/models/concerns/user_constants.rb:93
+msgid "en pareja"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:12
+msgid "con mis hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:13
+msgid "ocasionalmente con mis hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:13
+#: app/models/concerns/user_constants.rb:69
+#: app/models/concerns/user_constants.rb:94
+msgid "acompañad@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:13
+msgid "con mis padres"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:14
+#: app/models/concerns/user_constants.rb:21
+msgid "normal"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:14
+msgid "atractiv@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:14
+msgid "guap@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:14
+msgid "del montón"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:15
+msgid "bohemio"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:15
+msgid "clásico"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:15
+msgid "indie/casual"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:16
+msgid "deportivo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:16
+msgid "formal"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:16
+msgid "a la moda"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:16
+msgid "rockero"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:16
+msgid "pijo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:17
+#: app/models/concerns/user_constants.rb:18
+msgid "marrón"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:17
+#: app/models/concerns/user_constants.rb:18
+msgid "negro"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:17
+msgid "verde"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:17
+#: app/models/concerns/user_constants.rb:18
+msgid "gris"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:17
+msgid "café"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:17
+msgid "azul"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:18
+msgid "rubio"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:18
+msgid "pelirrojo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:19
+msgid "corto"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:19
+msgid "muy corto"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:19
+msgid "largo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:19
+msgid "afeitado"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:20
+msgid "sin pelo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:21
+msgid "delgado"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:21
+msgid "muy bien"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:21
+msgid "atlético"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:21
+msgid "fuerte"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:22
+msgid "con curvas"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:22
+msgid "obeso"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:23
+msgid "No me molesta el humo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:24
+msgid "Fumo pero lo dejaría por mi pareja"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:24
+msgid "Soy fumador social"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:25
+msgid "agnóstico"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:25
+msgid "ateo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:25
+msgid "cristiano"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:25
+msgid "judío"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:26
+msgid "católico"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:26
+msgid "musulmán"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:26
+msgid "indú"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:26
+msgid "budista"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:27
+msgid "hispana"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:27
+msgid "árabe"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:27
+msgid "india"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:27
+msgid "europea"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:28
+msgid "africana"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:28
+msgid "asiática"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:29
+msgid "instituto o inferior"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:29
+msgid "bachillerato"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:29
+msgid "diplomado"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:30
+msgid "módulo profesional"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:30
+msgid "licenciado o superior"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:31
+msgid "Inglés"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:31
+msgid "Español"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:31
+msgid "Francés"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:31
+msgid "Italiano"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:31
+msgid "otro"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:32
+msgid "bajo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:32
+msgid "medio"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:32
+msgid "alto"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:33
+msgid "trabajos artísticos y creativos "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:33
+msgid "banca, financiero"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:33
+msgid "adminsitrativo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:34
+msgid "ordenadores y tecnología"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:34
+msgid "construcción"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:34
+msgid "educación"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:35
+msgid "publicidad, entretenimiento y medios"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:35
+msgid "ejecutivo y gestión "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:35
+msgid "salud"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:36
+msgid "viajes"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:36
+msgid "servicios legales"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:36
+msgid "militar"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:36
+msgid "empleado"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:37
+msgid "empleado público / gobierno"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:37
+msgid "ciencia"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:37
+msgid "ventas y márketing"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:38
+msgid "transporte y logística "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:38
+msgid "desempleado"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:38
+msgid "jubilado"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:39
+msgid "retirado temporalmente"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:39
+msgid "estoy estudiando"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:40
+#: app/models/concerns/user_constants.rb:77
+#: app/models/concerns/user_constants.rb:97
+msgid "vegetariana"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:40
+#: app/models/concerns/user_constants.rb:77
+#: app/models/concerns/user_constants.rb:97
+msgid "vegana"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:40
+#: app/models/concerns/user_constants.rb:77
+#: app/models/concerns/user_constants.rb:97
+msgid "japonesa"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:40
+#: app/models/concerns/user_constants.rb:77
+#: app/models/concerns/user_constants.rb:97
+msgid "mediterránea"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:41
+#: app/models/concerns/user_constants.rb:78
+#: app/models/concerns/user_constants.rb:98
+msgid "italiana"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:41
+#: app/models/concerns/user_constants.rb:78
+#: app/models/concerns/user_constants.rb:98
+msgid "kosher"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:41
+#: app/models/concerns/user_constants.rb:78
+#: app/models/concerns/user_constants.rb:98
+msgid "halal"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:41
+msgid "soy muy maniátic@ con la comida"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:42
+msgid "me gusta todo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:42
+msgid "me adapto fácilmente"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:43
+msgid "me gusta beber solo cuando salgo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:43
+msgid "no bebo alcohol"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:44
+msgid "bebo ocasionalmente"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:44
+msgid "soy bebedor"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:44
+msgid "el alcohol no me sienta bien"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:45
+msgid "Me gustaría casarme"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:45
+msgid "No me gustaría casarme"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:46
+msgid "No creo en el matrimonio"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:46
+msgid "Ya he estado casado y no quiero repetir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:47
+msgid "Ya he estado casado y quiero repetir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:47
+msgid "El matrimonio es algo maravilloso"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:48
+msgid "para mi la religión es esencial en mi vida"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:49
+msgid "me importa poco la religión"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:49
+msgid "no me importa en absoluto la religión"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:50
+msgid "Me gustan los animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:50
+msgid "No me gustan los animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:51
+msgid "Tengo animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:51
+msgid "No tengo animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:52
+msgid "No tengo animales de compañía y soy alérgico"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:53
+msgid "Me gusta mucho salir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:53
+msgid "No me gusta salir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:53
+msgid "Me gusta ir de bares"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:54
+msgid "Me gusta ir a la discoteca"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:54
+msgid "Me gusta ir a tomar algo con amigos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:55
+msgid "Me encanta la fiesta"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:55
+msgid "No me gusta nada la fiesta"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:56
+msgid "Me gusta la música"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:56
+msgid "no me gusta la música"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:57
+msgid "pop"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:57
+msgid "rock"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:57
+msgid "clásica"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:57
+msgid "ópera"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:57
+msgid "heavy"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:58
+msgid "de todo un poco"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:59
+#: app/models/concerns/user_constants.rb:114
+msgid "Me gusta ir al cine"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:59
+msgid "No me gusta ir al cine"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:60
+msgid "ocasionalemnete"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:60
+msgid "muy a menudo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:61
+msgid "romántico"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:61
+msgid "drama"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:61
+msgid "comedia"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:61
+msgid "policíaco"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:62
+msgid "terror"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:66
+msgid "hacer nuevas amistades"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:66
+msgid "salir y pasarlo bien"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:67
+msgid "establecer una relación estable"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:67
+msgid "casarme"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:68
+#: app/models/concerns/user_constants.rb:93
+msgid "con sus hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:69
+#: app/models/concerns/user_constants.rb:94
+msgid "ocasionalmente con sus hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:70
+msgid "no le moleste el humo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:71
+msgid "fume pero lo dejaría por su pareja"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:71
+msgid "sea fumador social"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:72
+msgid "le guste beber solo cuando salga"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:72
+msgid "no beba alcohol"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:73
+msgid "beba ocasionalmente"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:73
+msgid "sea bebedor"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:73
+#: app/models/concerns/user_constants.rb:101
+msgid "el alcohol no le sienta bien"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:74
+msgid "le guste mucho salir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:74
+msgid "no le guste salir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:74
+msgid "le guste ir de bares"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:75
+msgid "le guste ir a la discoteca"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:75
+msgid "le guste ir a tomar algo con amigos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:76
+msgid "le encante la fiesta"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:76
+msgid "no le guste nada la fiesta"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:78
+msgid "sea muy maniátic@ con la comida"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:79
+msgid "le guste todo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:79
+msgid "se adapte fácilmente"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:80
+msgid "la religión sea esencial en su vida"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:81
+msgid "le importe poco la religión"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:81
+msgid "no le importe en absoluto la religión"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:82
+msgid "le gusten los animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:82
+msgid "no le gusten los animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:83
+msgid "tenga animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:83
+msgid "no tenga animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:84
+msgid "no tenga animales de compañía y sea alérgic@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:85
+msgid "tenga hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:85
+msgid "no tenga hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:85
+msgid "no tenga hijos, y no quiera tener"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:86
+msgid "no tenga hijos, pero quiera tener"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:86
+msgid "tenga hijos, y no quiera tener mas "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:87
+msgid "tenga hijos, y quiera tener mas "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:87
+msgid "no le gusten los niños"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:90
+msgid "tiene hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:90
+msgid "no tiene hijos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:90
+msgid "no tiene hijos, y no quiere tener"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:91
+msgid "no tiene hijos, pero quiere tener"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:91
+msgid "tiene hijos, y no quiere tener mas "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:92
+msgid "si tiene hijos, y quiere tener mas "
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:92
+msgid "no le gustan los niños"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:95
+msgid "no le molesta el humo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:96
+msgid "fuma pero lo dejaría por su pareja"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:96
+msgid "es fumador social"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:98
+msgid "es muy maniátic@ con la comida"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:99
+msgid "le gusta todo"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:99
+msgid "se adapta fácilmente"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:100
+msgid "le gusta beber solo cuando sale"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:100
+msgid "no bebe alcohol"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:101
+msgid "bebe ocasionalmente"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:101
+msgid "es bebedor"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:102
+msgid "le gustaría casarse"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:102
+msgid "no le gustaría casarse"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:103
+msgid "no cree en el matrimonio"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:103
+msgid "ya ha estado casad@ y no quiere repetir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:104
+msgid "ya ha estado casad@ y quiere repetir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:104
+msgid "el matrimonio es algo maravilloso"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:105
+msgid "la religión es esencial en su vida"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:106
+msgid "le importa poco la religión"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:106
+msgid "no le importa en absoluto la religión"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:107
+msgid "le gustan los animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:107
+msgid "mo le gustan los animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:108
+msgid "tiene animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:108
+msgid "no tiene animales de compañía"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:109
+msgid "no tiene animales de compañía y es alérgic@"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:110
+msgid "le gusta mucho salir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:110
+msgid "no le gusta salir"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:110
+msgid "le gusta ir de bares"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:111
+msgid "le gusta ir a la discoteca"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:111
+msgid "le gusta ir a tomar algo con amigos"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:112
+msgid "le encanta la fiesta"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:112
+msgid "no me gusta nada la fiesta"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:113
+msgid "le gusta la música"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:113
+msgid "no le gusta la música"
+msgstr ""
+
+#: app/models/concerns/user_constants.rb:114
+msgid "no me gusta ir al cine"
+msgstr ""
+
+#: app/views/activities/_activity-small.html.erb:8
+#: app/views/activities/_activity.html.erb:10
+msgid "Actividad rechazada"
+msgstr ""
+
+#: app/views/activities/_activity-small.html.erb:10
+#: app/views/activities/_activity.html.erb:12
+msgid "Actividad aceptada"
+msgstr ""
+
+#: app/views/activities/_activity-small.html.erb:12
+#: app/views/activities/_activity.html.erb:16
+msgid "Aceptar"
+msgstr ""
+
+#: app/views/activities/_activity-small.html.erb:12
+#: app/views/activities/_activity.html.erb:15
+msgid "Rechazar"
+msgstr ""
+
+#: app/views/activities/_activity.html.erb:5
+msgid "te ha propuesto..."
+msgstr ""
+
+#: app/views/activities/_activity.html.erb:5
+msgid "has propuesto..."
+msgstr ""
+
+#: app/views/activities/_activity.html.erb:7
+msgid "fecha a concretar contigo."
+msgstr ""
+
+#: app/views/activities/_modal_answer_proposal.html.erb:9
+#: app/views/activities/_modal_answer_proposal.html.erb:28
+msgid "el próximo día"
+msgstr ""
+
+#: app/views/activities/_modal_answer_proposal.html.erb:14
+msgid "Aceptar actividad"
+msgstr ""
+
+#: app/views/activities/_modal_answer_proposal.html.erb:34
+msgid "Rechazar propuesta de actividad"
+msgstr ""
+
+#: app/views/conversations/_conversation.html.erb:12
+msgid "Eliminar"
+msgstr ""
+
+#: app/views/conversations/_conversation_full.html.erb:5
+msgid "Hace "
+msgstr ""
+
+#: app/views/conversations/_conversations.html.erb:3
+msgid "No hay ninguna conversación."
+msgstr ""
+
+#: app/views/conversations/_modal_activity.html.erb:27
+msgid "¿Cuando?"
+msgstr ""
+
+#: app/views/conversations/_modal_activity.html.erb:37
+msgid "Proponer"
+msgstr ""
+
+#: app/views/conversations/_modal_delete.html.erb:14
+msgid "Eliminar conversación"
+msgstr ""
+
+#: app/views/conversations/_modal_new_message.html.erb:17
+#: app/views/conversations/_modal_reply_conversation.html.erb:17
+msgid "Enviar"
+msgstr ""
+
+#: app/views/conversations/show.html.erb:32
+msgid "Conversación con: "
+msgstr ""
+
+#: app/views/conversations/show.html.erb:46
+#: app/views/conversations/show.html.erb:53
+msgid "Responder"
+msgstr ""
+
+#: app/views/conversations/show.html.erb:46
+msgid "Proponer actividad"
+msgstr ""
+
+#: app/views/dashboard/_quick_search.html.erb:19
+#: app/views/user_registrations/new.html.erb:56
+#: app/views/users/index.html.erb:28
+msgid "Localidad..."
+msgstr ""
+
+#: app/views/dashboard/_quick_search.html.erb:39
+#: app/views/users/index.html.erb:83
+msgid "Con foto"
+msgstr ""
+
+#: app/views/dashboard/_quick_search.html.erb:42
+#: app/views/shared/user/_sorting.html.erb:5
+#: app/views/users/index.html.erb:86
+msgid "Online"
+msgstr ""
+
+#: app/views/dashboard/_quick_search.html.erb:44
+#: app/views/users/index.html.erb:74
+msgid "Buscar"
+msgstr ""
+
+#: app/views/dashboard/show.html.erb:13
+msgid "(Ver todos los mensajes)"
+msgstr ""
+
+#: app/views/devise/passwords/new.html.erb:3
+msgid "¿Has olvidado tu contraseña?"
+msgstr ""
+
+#: app/views/devise/passwords/new.html.erb:14
+msgid "Recuperar contraseña"
+msgstr ""
+
+#: app/views/home/index.html.erb:35
+msgid "Registro Usuario Gratis"
+msgstr ""
+
+#: app/views/pictures/_picture_crop.html.erb:4
+msgid "Dimensiona tu imagen"
+msgstr ""
+
+#: app/views/pictures/_picture_gallery.html.erb:9
+msgid "Eliminar imagen"
+msgstr ""
+
+#: app/views/pictures/_picture_gallery.html.erb:9
+msgid "¿Estas de seguro que quieres borrar la foto?"
+msgstr ""
+
+#: app/views/pictures/_picture_gallery.html.erb:10
+msgid "Marcar como principal"
+msgstr ""
+
+#: app/views/profiles/_buscas.html.erb:16
+msgid "* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán."
+msgstr ""
+
+#: app/views/profiles/_como.html.erb:5
+msgid "Soy"
+msgstr ""
+
+#: app/views/profiles/_como.html.erb:8
+#: app/views/user_registrations/new.html.erb:44
+msgid "Día"
+msgstr ""
+
+#: app/views/profiles/_como.html.erb:10
+#: app/views/user_registrations/new.html.erb:46
+msgid "Mes"
+msgstr ""
+
+#: app/views/profiles/_como.html.erb:12
+#: app/views/user_registrations/new.html.erb:48
+msgid "Año"
+msgstr ""
+
+#: app/views/profiles/pay.html.erb:25
+msgid "Contratar por 96€/año"
+msgstr ""
+
+#: app/views/profiles/show.html.erb:8
+#: app/views/shared/sidebar/_sidebar-profile.html.erb:15
+#: app/views/users/cellove_index.html.erb:5
+msgid "Índice Cellove"
+msgstr ""
+
+#: app/views/shared/_confirmation_pending_form.html.erb:6
+msgid "No recibiras notificaciones hasta que no hayas confirmado tu cuenta de email."
+msgstr ""
+
+#: app/views/shared/_confirmation_pending_form.html.erb:7
+msgid "Estar solo visible para usuari@s de entre:"
+msgstr ""
+
+#: app/views/shared/_confirmation_pending_form.html.erb:8
+msgid "a"
+msgstr ""
+
+#: app/views/shared/_confirmation_pending_form.html.erb:9
+msgid "años."
+msgstr ""
+
+#: app/views/shared/_confirmation_pending_form.html.erb:10
+msgid "Guardar"
+msgstr ""
+
+#: app/views/shared/sidebar/_sidebar-activity.html.erb:10
+msgid "Me han visitado"
+msgstr ""
+
+#: app/views/shared/sidebar/_sidebar-activity.html.erb:11
+msgid "Les he gustado"
+msgstr ""
+
+#: app/views/shared/sidebar/_sidebar-activity.html.erb:12
+msgid "Hacemos buena pareja"
+msgstr ""
+
+#: app/views/shared/sidebar/_sidebar-activity.html.erb:13
+#: app/views/shared/user/_main-nav.html.erb:5
+msgid "Mensajes"
+msgstr ""
+
+#: app/views/shared/sidebar/_sidebar-activity.html.erb:14
+#: app/views/shared/user/_main-nav.html.erb:6
+msgid "Actividades"
+msgstr ""
+
+#: app/views/shared/sidebar/_sidebar-profile.html.erb:29
+msgid "Te gustan <em>("
+msgstr ""
+
+#: app/views/shared/sidebar/_sidebar-searches.html.erb:9
+msgid "¿Estás seguro de que deseas eliminar esta búsqueda?"
+msgstr ""
+
+#: app/views/shared/user/_celes-item.html.erb:46
+msgid "Hace"
+msgstr ""
+
+#: app/views/shared/user/_celes-item.html.erb:56
+msgid "Tu recomendación está pendiente de confirmar."
+msgstr ""
+
+#: app/views/shared/user/_celes-item.html.erb:58
+msgid "Has desactivado esta recomendación."
+msgstr ""
+
+#: app/views/shared/user/_celes-item.html.erb:60
+msgid "Tu recomendación ha sido rechazada."
+msgstr ""
+
+#: app/views/shared/user/_celes-item.html.erb:62
+msgid "Tu recomendación ha sido aceptada."
+msgstr ""
+
+#: app/views/shared/user/_header-actions.html.erb:36
+msgid "Editar mi perfil"
+msgstr ""
+
+#: app/views/shared/user/_header-actions.html.erb:37
+msgid "Desconectar"
+msgstr ""
+
+#: app/views/shared/user/_header-actions.html.erb:41
+msgid "Conviértete en usuari@"
+msgstr ""
+
+#: app/views/shared/user/_header-actions.html.erb:43
+msgid "Cambiar configuración"
+msgstr ""
+
+#: app/views/shared/user/_main-nav.html.erb:3
+msgid "Visitas"
+msgstr ""
+
+#: app/views/shared/user/_main-nav.html.erb:4
+msgid "¡Les he gustado!"
+msgstr ""
+
+#: app/views/shared/user/_modal_delete-celestino.html.erb:9
+msgid "Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil y no podrás recomendarlo de nuevo. ¿Te lo has pensado bien?"
+msgstr ""
+
+#: app/views/shared/user/_modal_delete-celestino.html.erb:11
+msgid "Estás a punto de eliminar a un Celestin@ de tu lista. Si lo haces, lo que ha dicho sobre ti desaparecerá de tu perfil. ¿Te lo has pensado bien?"
+msgstr ""
+
+#: app/views/shared/user/_modal_delete-celestino.html.erb:16
+msgid "No, creo que lo consideraré de nuevo"
+msgstr ""
+
+#: app/views/shared/user/_modal_delete-celestino.html.erb:17
+msgid "Si, quiero eliminarlo"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:51
+#: app/views/users/_atributes.html.erb:3
+msgid "Romántico"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:54
+#: app/views/users/_atributes.html.erb:8
+msgid "Aventurero"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:57
+#: app/views/users/_atributes.html.erb:13
+msgid "Amable"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:60
+#: app/views/users/_atributes.html.erb:18
+msgid "Familiar"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:63
+#: app/views/users/_atributes.html.erb:23
+msgid "Trabajador"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:66
+#: app/views/users/_atributes.html.erb:28
+msgid "Extrovertido"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:69
+#: app/views/users/_atributes.html.erb:33
+msgid "Generoso"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:72
+#: app/views/users/_atributes.html.erb:38
+msgid "Reservado"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:75
+#: app/views/users/_atributes.html.erb:43
+msgid "Sociable"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:78
+#: app/views/users/_atributes.html.erb:48
+msgid "Tranquilo"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:81
+#: app/views/users/_atributes.html.erb:53
+msgid "Exigente"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:84
+#: app/views/users/_atributes.html.erb:58
+msgid "Orgulloso"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:88
+#: app/views/users/_atributes.html.erb:66
+msgid "Solitario"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:91
+#: app/views/users/_atributes.html.erb:71
+msgid "Tenaz"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:94
+#: app/views/users/_atributes.html.erb:76
+msgid "Atento"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:97
+#: app/views/users/_atributes.html.erb:81
+msgid "Bienhumorado"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:100
+#: app/views/users/_atributes.html.erb:86
+msgid "Espontáneo"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:103
+#: app/views/users/_atributes.html.erb:91
+msgid "Inquieto"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:106
+#: app/views/users/_atributes.html.erb:96
+msgid "Sensible"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:109
+#: app/views/users/_atributes.html.erb:101
+msgid "Tímido"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:112
+#: app/views/users/_atributes.html.erb:106
+msgid "Posesivo"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:115
+#: app/views/users/_atributes.html.erb:111
+msgid "Celoso"
+msgstr ""
+
+#: app/views/shared/user/_modal_recommend-user.html.erb:118
+#: app/views/users/_atributes.html.erb:116
+msgid "Fiel"
+msgstr ""
+
+#: app/views/shared/user/_modal_save-search.html.erb:6
+msgid "Indicanos el nombre con el que quieres guardar esta búsqueda para poderla utilizar cuando quieras de forma más ágil y con acceso directo en la zona izquierda de tu perfil."
+msgstr ""
+
+#: app/views/shared/user/_modal_save-search.html.erb:11
+msgid "Nombre"
+msgstr ""
+
+#: app/views/shared/user/_modal_save-search.html.erb:31
+#: app/views/users/index.html.erb:111
+msgid "Guarda búsqueda"
+msgstr ""
+
+#: app/views/shared/user/_sorting.html.erb:3
+msgid "Ordenar por..."
+msgstr ""
+
+#: app/views/shared/user/_sorting.html.erb:7
+msgid "Fecha de alta"
+msgstr ""
+
+#: app/views/user_registrations/new.html.erb:50
+msgid "Selecciona..."
+msgstr ""
+
+#: app/views/user_registrations/new.html.erb:53
+msgid "Mi codigo postal es el"
+msgstr ""
+
+#: app/views/user_registrations/new.html.erb:60
+msgid "¿Cómo eres?"
+msgstr ""
+
+#: app/views/user_registrations/new.html.erb:63
+msgid "Sube tu foto"
+msgstr ""
+
+#: app/views/user_registrations/new.html.erb:69
+msgid "¡Subir imagen más adelante!"
+msgstr ""
+
+#: app/views/user_registrations/new.html.erb:70
+msgid "Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s."
+msgstr ""
+
+#: app/views/user_registrations/new.html.erb:75
+msgid "Datos de acceso a Cellove"
+msgstr ""
+
+#: app/views/users/_user.html.erb:18 app/views/users/_user.html.erb:33
+msgid "Enviar mensaje"
+msgstr ""
+
+#: app/views/users/_user.html.erb:19 app/views/users/_user.html.erb:34
+msgid "Chat"
+msgstr ""
+
+#: app/views/users/_user.html.erb:21 app/views/users/_user.html.erb:25
+#: app/views/users/_user.html.erb:35
+msgid "Ya no me gusta"
+msgstr ""
+
+#: app/views/users/_user.html.erb:45
+msgid "Tu dices:"
+msgstr ""
+
+#: app/views/users/_user.html.erb:46
+msgid "Ha dicho:"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:9
+msgid "Tu indice Cellove es"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:18
+msgid "¡Mejora tu Índice Cellove!"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:21
+msgid "¿Cómo se calcula?"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:22
+msgid "Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove."
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:23
+msgid "Eso incluye desde las visitas a tu perfil hasta el número de mensajes enviados/recibidos."
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:24
+msgid "Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que invitas o cuantos celestinos tengas."
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:26
+msgid "¿Quieres mejorarlo?"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:27
+msgid "Tienes muchas formas de hacerlo:"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:29
+msgid "Completa tu perfil"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:29
+msgid "al"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:30
+msgid "Invita a tus amigos"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:30
+msgid "a formar parte de Cellove"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:31
+msgid "Consigue Celestinos"
+msgstr ""
+
+#: app/views/users/cellove_index.html.erb:33
+msgid "Pero sobretodo, ven a menudo ;-)"
+msgstr ""
+
+#: app/views/users/index.html.erb:27
+msgid "Localidad"
+msgstr ""
+
+#: app/views/users/index.html.erb:31
+msgid "Código postal"
+msgstr ""
+
+#: app/views/users/index.html.erb:55
+msgid "Palabra clave"
+msgstr ""
+
+#: app/views/users/index.html.erb:70
+msgid "Complexión"
+msgstr ""
+
+#: app/views/users/index.html.erb:71
+msgid "Complexión..."
+msgstr ""
+
+#: app/views/users/index.html.erb:89
+msgid "Fumador"
+msgstr ""
+
+#: app/views/users/index.html.erb:92
+msgid "Con hijos"
+msgstr ""
+
+#: app/views/users/my_matchmakers.html.erb:6
+msgid "¡Mejora tu índice Cellove!"
+msgstr ""
+
+#: app/views/users/settings.html.erb:173
+msgid "Guardar Configuración"
+msgstr ""
+
+#: app/views/users/view.html.erb:6 app/views/users/view.html.erb:16
+msgid "¡Regístrate Gratis!"
+msgstr ""
