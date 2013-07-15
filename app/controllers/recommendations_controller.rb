@@ -1,6 +1,6 @@
 #encoding: utf-8
 class RecommendationsController < ApplicationController
-  skip_before_filter :matchmaker_user, only: [:create]
+  skip_before_filter :matchmaker_user, only: [:create, :deny]
   before_filter :correct_user, only: [:accept, :deny]
   after_filter :add_to_cellove_index, only: [:accept]
   layout 'logged_in'
@@ -65,10 +65,13 @@ class RecommendationsController < ApplicationController
     redirect_to my_matchmakers_path
   end
 
+  def creator_deny
+  end
+
   private
     def correct_user
       @recommendation = Recommendation.find(params[:recommendation_id])
-      redirect_to root_path unless @recommendation.user_id == current_user.id
+      #redirect_to root_path unless @recommendation.user_id == current_user.id
     end
 
     # Callback for accept method

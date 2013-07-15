@@ -50,13 +50,14 @@
         </div>
       </div>
 
-      <div class="your-celestines">
-        <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
-        <% @can_delete_celestino.present? %>
-        <% current_user.recommendations.each do |rec| %>
-          <%= render '/shared/user/celes-item', recommendation: rec, is_creator: true %>
-        <% end %>
-      </div>
+      <% unless current_user.recommendations.empty? %>
+        <div class="your-celestines">
+          <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
+          <% current_user.recommendations.each do |rec| %>
+            <%= render 'shared/user/celes-item', recommendation: rec, is_creator: true %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 

@@ -35,9 +35,13 @@
         <%= link_to recommendation.creator.name, user_path(recommendation.creator) %>
       <% end %>
       <span><i class="heart"></i><%= relationship %></span>
-      <% if (@type != 'por-confirmar') %>
-        <% eliminar_celestino_id = '#delete-celestino-' + recommendation.id.to_s %>
-        <%= link_to "Eliminar celestin@", eliminar_celestino_id, 'data-toggle' => 'modal' unless recommendation.user_id != current_user.id %>
+      <% eliminar_celestino_id = '#delete-celestino-' + recommendation.id.to_s %>
+      <% if recommendation.user_id == current_user.id %>
+        <%= link_to "Eliminar celestin@", eliminar_celestino_id, 'data-toggle' => 'modal' %>
+      <% else %>
+        <% if !recommendation.denied? && !recommendation.confirmed? %>
+          <%= link_to "Eliminar recomendación", eliminar_celestino_id, 'data-toggle' => 'modal' %>
+        <% end %>
       <% end %>
       <span class="date"><%= _('Hace') %> <%= time_ago_in_words(recommendation.updated_at) %></span>
     </header>
@@ -45,12 +49,28 @@
     <p><%= recommendation.description %></p>
   </div>
 
-  <% if (@type == 'por-confirmar') %>
+  <% if is_creator %>
+    <div class="status">
+      <% recommendation.tap do |r| %>
+        <% if !r.confirmed? && !r.denied? %>
+          <%= _('Tu recomendación está pendiente de confirmar.') %>
+        <% elsif r.denied? && r.confirmed? %>
+          <%= _('Has desactivado esta recomendación.') %>
+        <% elsif !r.confirmed? && r.denied? %>
+          <%= _('Tu recomendación ha sido rechazada.') %>
+        <% elsif r.confirmed? && !r.denied? %>
+          <%= _('Tu recomendación ha sido aceptada.')  %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if !is_creator && !recommendation.confirmed? %>
     <div class="choose">
       <%= link_to '<i class="icon-ok icon-white"></i> Aceptar'.html_safe, recommendation_accept_path(recommendation.id), class: 'btn btn-success', :method => :post %>
       <%= link_to '<i class="icon-remove icon-white"></i> Rechazar'.html_safe, recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
-    </div>  
+    </div>
   <% end %>
 </article>
 
-<%= render 'shared/user/modal_delete-celestino', recommendation: recommendation %>
+<%= render 'shared/user/modal_delete-celestino', recommendation: recommendation, is_creator: is_creator %>
