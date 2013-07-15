@@ -100,7 +100,7 @@ hr.thin {
 
   .boxed-inner {
     @include clearfix;
-    background:#f2f2f2;
+    background:#fff;
 
     [class*="span"] {
       margin-left:10px;      

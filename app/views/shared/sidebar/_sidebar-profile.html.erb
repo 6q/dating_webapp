@@ -12,7 +12,7 @@
   
 	<ul>
 		<li>
-      <a href="/user/cellove-index"><%= _('Índice Cellove') %> (<%= current_user.cellove_percentage %>/100)
+      <a href="/user/cellove-index"><%= _('Índice Cellove') %> <em>(<%= current_user.cellove_percentage %>/100)</em>
         <div class="progress">
           <div class="bar" style="width:<%= current_user.cellove_percentage %>%"></div>
         </div>
@@ -20,12 +20,12 @@
     </li>
 		<li class="profile">
       <a href="<%= profile_path %>">
-        Tu perfil (<%= current_user.progress_status %>% completo)
+        Tu perfil <em>(<%= current_user.progress_status %>% completo)</em>
         <div class="progress">
           <div class="bar" style="width:<%= current_user.progress_status %>%"></div>
         </div>
       </a>
     </li>
-		<li><%= link_to _('Te gustan') + '(' + User.people_i_like(current_user).length.to_s + ')', user_likes_of_mine_path %></li>
+		<li><%= link_to _('Te gustan <em>(' + User.people_i_like(current_user).length.to_s + ')</em>').html_safe, user_likes_of_mine_path %></li>
 	</ul>
 </section>

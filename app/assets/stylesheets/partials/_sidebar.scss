@@ -21,6 +21,7 @@
 
   .profile_pic_wrapper {
     position: relative;
+    margin-bottom: 10px;
 
     .profile_pic_overlay {
       position: absolute;
@@ -51,7 +52,6 @@
 #ads{
   header{
     padding: 5px 8px!important;
-    border-top: solid 1px #e0e0e0;
 
     span{
       float: right;
