@@ -8,13 +8,12 @@
 		<div id="color-switcher" class="header-switcher">
 			<ul>
 				<li class="picker"><a href="#">Ponle color <i></i></a></li>
-				<% (1..5).each_with_index do |i| %>
-          <li class="leaf">
+				<% [1,3,5].each_with_index do |i| %>
+          <span class="leaf">
             <a href="#" class="skin-change" data-skin="<%= i %>">
               <%= image_tag("skin#{i}-thumb.jpg") %>
-              Fondo <%= i %>
             </a>
-          </li>
+          </span>
 				<% end %>
 			</ul>
 		</div>

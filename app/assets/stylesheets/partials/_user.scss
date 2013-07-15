@@ -71,7 +71,9 @@
                 text-decoration:none;
               }
 
-
+          span {
+            display:none;
+          }
           li {
 
             &.picker {
