@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   before_filter :matchmaker_user
   after_filter :user_activity
   before_filter :authenticate
+  before_filter :set_gettext_locale
+
   protect_from_forgery
 
   rescue_from CanCan::AccessDenied do |exception|
