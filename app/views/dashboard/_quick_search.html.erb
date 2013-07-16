@@ -1,12 +1,12 @@
 <section class="direct-search">
   <div class="boxed">
     <div class="boxed-inner overflow-show">
-      <h4>Búsqueda directa:</h4>
+      <h4><%= _('Búsqueda directa:') %></h4>
       <div class="searchform form-horizontal">
         <%= search_form_for @search, :class => 'overflow-show' do |f| %>
           <fieldset class="span6">
             <div class="control-group sliders">
-              <label>Edad <span></span></label>
+              <label><%= _('Edad') %> <span></span></label>
               <div class="controls">
                 <input id="years" type="slider" name="" value="<%= current_user.lf_age_from || '18' %>;<%= current_user.lf_age_to || '80' %>"/>
                 <%= f.hidden_field :years_lteq  %>
@@ -14,20 +14,20 @@
               </div>
             </div>
             <div class="overflow-show control-group">
-              <label>Población y código postal</label>
+              <label><%= _('Población y código postal') %></label>
               <div class="controls">
                 <%= f.select :city_eq, [current_user.city], { include_blank: _('Localidad...'), selected: @search.city_eq || current_user.city }, { class: 'city' } %>
-                <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1', value: current_user.postal_code %>
+                <%= f.text_field :postal_code_cont, placeholder: _('CP'), class: 'span1', value: current_user.postal_code %>
               </div>
             </div>
             <div class="control-group sliders">
-              <label>Distancia <span></span></label>
+              <label><%= _('Distancia') %> <span></span></label>
               <div class="controls">
                 <%= text_field_tag :distance, (params[:distance] || '250'), type: 'slider' %>
               </div>
             </div>
             <div class="control-group">
-              <label>Palabra clave</label>
+              <label><%= _('Palabra clave') %></label>
               <div class="controls">
                 <%= f.text_field :description_cont %>
               </div>

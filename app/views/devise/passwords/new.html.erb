@@ -2,7 +2,7 @@
 <header>
   <h1><%= _('¿Has olvidado tu contraseña?') %></h1>
 </header>
-<p>Introduce el email con el que te registraste y te enviaremos las instrucciones de recuperación.</p>
+<p><%= _('Introduce el email con el que te registraste y te enviaremos las instrucciones de recuperación.') %></p>
 
 <%= form_for(resource, :as => resource_name,
               :url => password_path(resource_name), :method => :post,

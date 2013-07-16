@@ -1,4 +1,4 @@
-<% title = "¿Cómo consigo más popularidad?" %>
+<% title = _("¿Cómo consigo más popularidad?") %>
 <% content_for(:title) {title} %>
 
 <article>
@@ -8,12 +8,12 @@
   </header>
 
   <div class="article-body">
-    <p>Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes  mejorar tu <strong>Índice Cellove</strong> y aprovecharte de sus beneficios.</p>
+    <p><%= _('Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes  mejorar tu <strong>Índice Cellove</strong> y aprovecharte de sus beneficios.') %></p>
 
-    <p>Propón nuevos <%= link_to 'Celestin@s', matchmakers_path %> para que te recomienden y así mejorar tu <strong>Índice Cellove</strong>.</p>
+    <p><%= _('Propón nuevos %{link} para que te recomienden y así mejorar tu <strong>Índice Cellove</strong>.') % { link: link_to('Celestin@s', matchmakers_path) } %></p>
 
-    <p>Si quieres proponer un <%= link_to 'Celestin@', matchmakers_path %>, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo <%= link_to 'Aquí', new_user_registration_path %>.</p>
+    <p>S<%= _('i quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}.') % { link: link_to('Celestin@', matchmakers_path), link2: link_to('Aquí', new_user_registration_path) } %>.</p>
 
-    <p>Cuanto más elevado sea tu <strong>Índice Cellove</strong>, tus probabilidades de encontrar exactamente lo que buscas mejoran. Cellove te proporciona continuamente esos perfiles que son más compatibles para ti y los perfiles que tengan más <%= link_to 'Celestin@s', matchmakers_path %>. Por eso, si tu consigues más <%= link_to 'Celestin@s', matchmakers_path %>, significa que Cellove te promocionará mejor y te ayudará a encontrar a esa persona especial con más efectividad.</p>
+    <p><%= _('Cuanto más elevado sea tu <strong>Índice Cellove</strong>, tus probabilidades de encontrar exactamente lo que buscas mejoran. Cellove te proporciona continuamente esos perfiles que son más compatibles para ti y los perfiles que tengan más %{link}. Por eso, si tu consigues más %{link}, significa que Cellove te promocionará mejor y te ayudará a encontrar a esa persona especial con más efectividad.') % {link: link_to('Celestin@s', matchmakers_path)} %></p>
 
 </article>

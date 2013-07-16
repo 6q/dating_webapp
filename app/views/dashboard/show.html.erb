@@ -10,7 +10,7 @@
   <%= render partial: 'new_users', locals: { radius: 500 } %>
 
   <section id="last-messages">
-    <h4>Últimas conversaciones <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
+    <h4><%= _('Últimas conversaciones') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
     <% current_user.mailbox.conversations.last(5).each do |conversation| %>
       <%= render conversation %>
       <hr>

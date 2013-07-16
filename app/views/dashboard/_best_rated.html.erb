@@ -1,8 +1,8 @@
 <% self.formats = [:html] %>
 <section id="best-rated" class="home-users">
 <div class="clearfix list-header">
-  <h4 class="pull-left">Usuari@s con mejor Índice Cellove</h4>
-  <div class="pull-right">En un radio de <span class="radius"><%= radius %></span> km > <%= link_to "Cambiar radio", dashboard_path, class: 'radius' %> | <%= link_to "Ver más", users_path %></div>
+  <h4 class="pull-left"><%= _('Usuari@s con mejor Índice Cellove') %></h4>
+  <div class="pull-right"><%= _('En un radio de') %> <span class="radius"><%= radius %></span> km > <%= link_to _("Cambiar radio"), dashboard_path, class: 'radius' %> | <%= link_to _("Ver más"), users_path %></div>
 </div>
 <ul class="user-list clearfix">
   <%= render current_user.best_rated(radius) %>
