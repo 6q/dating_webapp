@@ -1,7 +1,7 @@
 <section id="unconfirmed-form">
   <div class="boxed">
     <div class="boxed-inner">
-      <h4>Que no te molesten</h4>
+      <h4><%= _('Que no te molesten') %></h4>
       <%= simple_form_for current_user, url: profile_path, html: { class: 'form-horizontal' } do |f| %>
         <%= _('No recibiras notificaciones hasta que no hayas confirmado tu cuenta de email.') %> 
         <%= f.input :lf_age_from, label: _('Estar solo visible para usuari@s de entre:'), input_html: { class: 'input-mini', maxlength: 2 } %>

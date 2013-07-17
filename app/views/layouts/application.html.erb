@@ -9,8 +9,7 @@
       <div class="container">
         <%= render 'layouts/header-login' %>
         <h1><%= link_to "Cellove", root_path, :class => 'brand' %></h1>
-        <h2>Ponle alas al amor</h2>
-        <%#= render '/shared/public/main-nav' %>
+        <h2><%= _('Ponle alas al amor') %></h2>
         <%= render 'layouts/navigation' %>
       </div>
     </header>
@@ -29,7 +28,6 @@
             </div>
           </div>
         <% else %>
-          
           <%= yield %>
         <% end %>
       </section>

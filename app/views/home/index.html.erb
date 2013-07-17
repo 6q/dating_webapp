@@ -1,5 +1,5 @@
 <% @page = 'home' %>
-<% content_for(:title) { "Ponle alas al amor" } %>
+<% content_for(:title) { _("Ponle alas al amor") } %>
 
 <section id="slider" class="flex-container">
   <div class="flexslider loading">
@@ -34,24 +34,24 @@
     <header>
       <h1><%= _('Registro Usuario Gratis') %></h1>
     </header>
-    <p>Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!</p>
-    <p><%= link_to 'Regístrate GRATIS', new_user_registration_path %> ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!</p>
-    <%= link_to 'Registro Usuario Gratis', new_user_registration_path, class: 'more'  %>
+    <p><%= _('Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!') %></p>
+    <p><%= _('%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!') % {link: link_to(_('Regístrate GRATIS'), new_user_registration_path)} %></p>
+    <%= link_to _('Registro Usuario Gratis'), new_user_registration_path, class: 'more'  %>
   </article>
   <article class="span4">
     <header>
-      <h1>Registros Celestin@ Gratis</h1>
+      <h1><%= _('Registros Celestin@ Gratis') %></h1>
     </header>
-    <p>¿Quieres recomendar a un amig@, exnovi@ o familiar?</p>
-    <p>Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste.</p>
-    <%= link_to 'Registro Celestin@', new_matchmaker_registration_path, class: 'more' %>
+    <p><%= _('¿Quieres recomendar a un amig@, exnovi@ o familiar?') %></p>
+    <p><%= _('Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste.') %></p>
+    <%= link_to _('Registro Celestin@'), new_matchmaker_registration_path, class: 'more' %>
   </article>
   <article class="span4">
     <header>
-      <h1>¿Cómo funciona?</h1>
+      <h1><%= _('¿Cómo funciona?') %></h1>
     </header>
-    <p>Es muy fácil y efectivo. <%= link_to 'Regístrate', new_user_registration_path %> para encontrar personas afines por edad, gustos, estilo de vida...</p>
-    <p>Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas.</p>
-    <%= link_to '¿Como funciona?', how_it_works_path, class: 'more'  %>
+    <p><%= _('Es muy fácil y efectivo. %{link} para encontrar personas afines por edad, gustos, estilo de vida...') % {link: link_to(_('Regístrate'), new_user_registration_path)} %></p>
+    <p><%= _('Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas.') %></p>
+    <%= link_to _('¿Como funciona?'), how_it_works_path, class: 'more'  %>
   </article>
 </div>

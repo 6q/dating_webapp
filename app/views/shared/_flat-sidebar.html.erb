@@ -1,11 +1,11 @@
 <% if @videos %>
   <aside class="sidebar">
-    <h2>Anuncios TV</h2>
+    <h2><%= _('Anuncios TV') %></h2>
     <ul>
-      <li<%= ' class="active"' if @page == 'anuncio-tv' %>><%= link_to 'Encuentra tu nueva pareja', tv_spot_path(1) %></li>
-      <li<%= ' class="active"' if @page == 'anuncio-tv-2' %>><%= link_to 'Solteros exigentes', tv_spot_path(2) %></li>
-      <li<%= ' class="active"' if @page == 'anuncio-tv-3' %>><%= link_to 'Amor en línea', tv_spot_path(3) %></li>
-      <li<%= ' class="active"' if @page == 'anuncio-tv-4' %>><%= link_to 'Solteros exigentes', tv_spot_path(4) %></li>
+      <li<%= ' class="active"' if @page == 'anuncio-tv' %>><%= link_to _('Encuentra tu nueva pareja'), tv_spot_path(1) %></li>
+      <li<%= ' class="active"' if @page == 'anuncio-tv-2' %>><%= link_to _('Solteros exigentes'), tv_spot_path(2) %></li>
+      <li<%= ' class="active"' if @page == 'anuncio-tv-3' %>><%= link_to _('Amor en línea'), tv_spot_path(3) %></li>
+      <li<%= ' class="active"' if @page == 'anuncio-tv-4' %>><%= link_to _('Solteros exigentes'), tv_spot_path(4) %></li>
 
 
     </ul>
@@ -13,12 +13,12 @@
   </aside>
 <% else %>
   <aside class="sidebar">
-    <h2>Sobre Cellove</h2>
+    <h2><%= _('Sobre Cellove') %></h2>
     <ul>
-      <li<%= ' class="active"' if @page == 'que-es' %>><%= link_to '¿Qué es?', what_path %></li>
-      <li<%= ' class="active"' if @page == 'como-funciona' %>><%= link_to '¿Cómo funciona?', how_it_works_path %></li>
-      <li<%= ' class="active"' if @page == 'consigue-popularidad' %>><%= link_to '¿Cómo consigo más popularidad?', raise_popularity_path %></li>
-      <li<%= ' class="active"' if @page == 'celestinos' %>><%= link_to 'Celestin@s', matchmakers_path %></li>
+      <li<%= ' class="active"' if @page == 'que-es' %>><%= link_to _('¿Qué es?'), what_path %></li>
+      <li<%= ' class="active"' if @page == 'como-funciona' %>><%= link_to _('¿Cómo funciona?'), how_it_works_path %></li>
+      <li<%= ' class="active"' if @page == 'consigue-popularidad' %>><%= link_to _('¿Cómo consigo más popularidad?'), raise_popularity_path %></li>
+      <li<%= ' class="active"' if @page == 'celestinos' %>><%= link_to _('Celestin@s'), matchmakers_path %></li>
 
 
     </ul>

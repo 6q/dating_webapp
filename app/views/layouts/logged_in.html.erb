@@ -2,16 +2,16 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-    <%= render partial: "layouts/common_head" %>
+    <%= render "layouts/common_head" %>
     <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
   </head>
   <body class="user">
-    <%= render partial: "layouts/changing_background" %>
+    <%= render "layouts/changing_background" %>
     <header role="banner" class="clearfix">
       <div class="container">
         <%= render 'shared/user/header-actions' %>
         <h1><%= link_to "Cellove", dashboard_path %></h1>
-        <h2>Ponle alas al amor</h2>
+        <h2><%= _('Ponle alas al amor') %></h2>
         <%= render 'shared/user/main-nav' %>
       </div>
     </header>
@@ -22,7 +22,7 @@
             <% if current_user.has_role?(:matchmaker) %>
               <%= render 'shared/sidebar_matchmaker' %>
             <% else %>
-              <%= render partial: 'shared/sidebar' %>
+              <%= render 'shared/sidebar' %>
             <% end %>
           </div>
 
@@ -32,10 +32,10 @@
           </div>
         </section>
       </div>
-      <%= render partial: 'shared/footer' %>
+      <%= render 'shared/footer' %>
     </div>
 
-    <%= render partial: 'shared/user/notifications' %>
+    <%= render 'shared/user/notifications' %>
     <%= render 'layouts/messages' %>
 
 

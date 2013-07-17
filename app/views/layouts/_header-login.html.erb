@@ -1,33 +1,12 @@
 <div id="login-box">
-  <% if user_signed_in? %>
-    <% if current_user.has_role? :matchmaker %>
-      <li>
-        <%= link_to 'Become a user', matchmaker_become_user_path %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to 'Edit account', edit_user_registration_path %>
-      </li>
+  <h4><%= _('Acceso usuarios') %></h4>
+  <small><%= link_to _('¿Has olvidado tu contraseña?'), new_user_password_path %></small>
+  <fieldset>
+    <%= simple_form_for('user', :url => user_session_path) do |f| %>
+      <%= f.input_field :email, :required => false, :autofocus => true, wrapper_html: {} %>
+      <%= f.input_field :password, :required => false %>
+      <%= f.button :submit, "Login", :class => 'btn btn-success' %>
     <% end %>
-    <li>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-    </li>
-    <% if current_user.has_role? :admin %>
-      <li>
-        <%= link_to 'Admin', users_path %>
-      </li>
-    <% end %>
-  <% else %>
-    <h4>Acceso usuarios</h4>
-    <small><%= link_to '¿Has olvidado tu contraseña?', new_user_password_path %></small>
-    <fieldset>
-      <%= simple_form_for('user', :url => user_session_path) do |f| %>
-          <%= f.input_field :email, :required => false, :autofocus => true, wrapper_html: {} %>
-          <%= f.input_field :password, :required => false %>
-          <%= f.button :submit, "Login", :class => 'btn btn-success' %>
-      <% end %>
-    </fieldset>
-    <p id="user-count"><strong>Somos <%= number_with_delimiter(User.count + 60000) %> usuari@s</strong>. Gracias por vuesra confianza.</p>
-  <% end %>
+  </fieldset>
+  <p id="user-count"><%= _('<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza.') % {user_count: number_with_delimiter(User.count + 60000)} %></p>
 </div>
-

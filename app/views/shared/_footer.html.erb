@@ -1,42 +1,42 @@
-      <footer>
-        <div class="container">
-          <nav class="row">
-            <div class="span3">
-              <h4>Sobre Cellove</h4>
-              <ul>
-                <li><%= link_to '¿Qué es?', what_path %></li>
-                <li><%= link_to '¿Cómo funciona?', how_it_works_path %></li>
-                <li><%= link_to '¿Cómo consigo popularidad?', raise_popularity_path %></li>
-                <li><%= link_to 'Celestin@s', matchmakers_path %></li>
-              </ul>
-            </div>
+<footer>
+<div class="container">
+  <nav class="row">
+  <div class="span3">
+    <h4><%= _('Sobre Cellove') %></h4>
+    <ul>
+      <li><%= link_to _('¿Qué es?'), what_path %></li>
+      <li><%= link_to _('¿Cómo funciona?'), how_it_works_path %></li>
+      <li><%= link_to _('¿Cómo consigo popularidad?'), raise_popularity_path %></li>
+      <li><%= link_to _('Celestin@s'), matchmakers_path %></li>
+    </ul>
+  </div>
 
-            <div class="span3">
-              <h4>Anuncios TV</h4>
-              <ul>
-                <li><%= link_to 'Encuentra pareja', tv_spot_path(1) %></li>
-                <li><%= link_to 'Solteros exigentes', tv_spot_path(2) %></li>
-                <li><%= link_to 'Amor en línea', tv_spot_path(3) %></li>
-                <li><%= link_to 'Ashley Madison', tv_spot_path(4) %></li>
-              </ul>
-            </div>
+  <div class="span3">
+    <h4><%= _('Anuncios TV') %></h4>
+    <ul>
+      <li><%= link_to _('Encuentra pareja'), tv_spot_path(1) %></li>
+      <li><%= link_to _('Solteros exigentes'), tv_spot_path(2) %></li>
+      <li><%= link_to _('Amor en línea'), tv_spot_path(3) %></li>
+      <li><%= link_to _('Ashley Madison'), tv_spot_path(4) %></li>
+    </ul>
+  </div>
 
-            <div class="span3">
-              <h4>Legal y conducta</h4>
-              <ul>
-                <li><%= link_to 'Consejos de uso', usage_path %></li>
-                <li><%= link_to 'Términos y condiciones', terms_conditions_path %></li>
-                <li><%= link_to 'Política de Privacidad', privacy_policy_path %></li>
-              </ul>
-            </div>
+  <div class="span3">
+    <h4><%= _('Legal y conducta') %></h4>
+    <ul>
+      <li><%= link_to _('Consejos de uso'), usage_path %></li>
+      <li><%= link_to _('Términos y condiciones'), terms_conditions_path %></li>
+      <li><%= link_to _('Política de Privacidad'), privacy_policy_path %></li>
+    </ul>
+  </div>
 
-            <div class="span3">
-              <h4>Cellove © <%= Time.now.year %></h4>
-              <ul>
-                <li><%= link_to 'Contacto', new_contact_form_path %></li>
-                <li><%= link_to 'Media & prensa', media_press_path %></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </footer>
+  <div class="span3">
+    <h4>Cellove © <%= Time.now.year %></h4>
+    <ul>
+      <li><%= link_to _('Contacto'), new_contact_form_path %></li>
+      <li><%= link_to _('Media & prensa'), media_press_path %></li>
+    </ul>
+  </div>
+  </nav>
+</div>
+</footer>

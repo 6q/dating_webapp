@@ -4,7 +4,7 @@
   <div class="boxed headless">
     <div class="boxed-inner">
       <header>
-        <h1>¡Hola Celestin@!</h1>
+        <h1><%= _('¡Hola Celestin@!') %></h1>
       </header>
     </div>
   </div>
@@ -15,7 +15,7 @@
 
       <article>
         <header>
-          <h1>Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?</h1>
+          <h1><%= _('Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?') %></h1>
         </header>
       </article>
 
@@ -23,36 +23,36 @@
         <ul>
           <li class="red-heart">
             <i class="red-heart"></i>
-            Ex pareja
+            <%= _('Ex pareja') %>
           </li>
 
           <li class="violet-heart">
             <i class="violet-heart"></i>
-            Amigo especial
+            <%= _('Amigo especial') %>
           </li>
 
           <li class="green-heart">
             <i class="green-heart"></i>
-            Amigo
+            <%= _('Amigo') %>
           </li>
 
           <li class="yellow-heart">
             <i class="yellow-heart"></i>
-            Familiar
+            <%= _('Familiar') %>
           </li>
         </ul>
         <div class="btns">
           <%
             # Yes. Both buttons perform the same action. Don't ask. ^__^
           %>
-          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ registrad@</a>
-          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ nuev@</a>
+          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal"><%= _('Recomendar usuari@ registrad@') %></a>
+          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal"><%= _('Recomendar usuari@ nuev@') %></a>
         </div>
       </div>
 
       <% unless current_user.recommendations.empty? %>
         <div class="your-celestines">
-          <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
+          <h4 style="text-align:center"><%= _('Personas a las que haces de Celestin@') %></h4>
           <% current_user.recommendations.each do |rec| %>
             <%= render 'shared/user/celes-item', recommendation: rec, is_creator: true %>
           <% end %>
@@ -68,12 +68,12 @@
       <div class="boxed-inner">
         <article>
           <header>
-            <h1>Datos de acceso a Cellove</h1>
+            <h1><%= _('Datos de acceso a Cellove') %></h1>
           </header>
           <div class="clearfix">
             <div class="span4 left">
               <div class="control-group">
-                <%= f.label :email, 'Email', :class => 'control-label' %>
+                <%= f.label :email,_( 'Email'), :class => 'control-label' %>
                 <div class="controls">
                   <%= f.email_field :email, :class => 'span2' %>
                 </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="span4">
               <div class="control-group">
-                <%= f.label :password, 'Contraseña', :class => 'control-label' %>
+                <%= f.label :password,_( 'Contraseña'), :class => 'control-label' %>
                 <div class="controls">
                   <%= f.password_field :password, :class => 'span2' %>
                 </div>
@@ -92,12 +92,12 @@
           <div class="clearfix">
             <div class="span8">
               <div class="form-inline">
-                Me llamo
+                <%= _('Me llamo') %>
                 <%= f.text_field :name, :class => 'input-small' %>
                 <%= f.text_field :surname, :class => 'input-small' %>
-                pero quiero que mi nombre para mostrar sea 
+                <%= _('pero quiero que mi nombre para mostrar sea ') %>
                 <%= f.text_field :screen_name, :class => 'input-small' %>
-                <small>* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.</small>
+                <small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@
           <hr>
 
           <div class="center">
-            <%= f.submit 'Modificar datos de acceso', :class => 'btn btn-info' %>
+            <%= f.submit _( 'Modificar datos de acceso'), :class => 'btn btn-info' %>
             <hr class="thin">
           </div>
 
@@ -116,5 +116,5 @@
 
 </section>
 
-<%= render '/shared/user/modal_recommend-user' %>
+<%= render 'shared/user/modal_recommend-user' %>
 

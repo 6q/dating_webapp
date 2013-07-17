@@ -3,9 +3,9 @@
   <div class="boxed">
     <div class="boxed-inner">
       <header>
-        <h1 class="span3">Tu perfil</h1>
+        <h1 class="span3"><%= _('Tu perfil') %></h1>
         <div class="pull-right">
-          <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to "¡Mejora tu índice!", my_matchmakers_path(anchor: 'tab_mejora') %> - Perfil <%= current_user.progress_status %>% completado
+          <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to _('¡Mejora tu índice!'), my_matchmakers_path(anchor: 'tab_mejora') %> - <%= _('Perfil %{progress} % completado') % {progress: current_user.progress_status %>
         </div>
         <div class="clearfix"></div>
       </header>
@@ -25,13 +25,13 @@
       <div class="boxed-inner">
         <fieldset>
           <header>
-            <h1>Datos de acceso a Cellove</h1>
-            <p>Modifica aquí tus datos de acceso a Cellove</p>
+            <h1><%= _('Datos de acceso a Cellove') %></h1>
+            <p><%= _('Modifica aquí tus datos de acceso a Cellove') %></p>
           </header>
           <div>
             <div class="span4 left">
               <div class="control-group">
-                <%= f.label :email, 'Email', :class => 'control-label' %>
+                <%= f.label :email, _('Email'), :class => 'control-label' %>
                 <div class="controls">
                   <%= f.email_field :email, :class => 'span2' %>
                 </div>
@@ -39,15 +39,14 @@
             </div>
             <div class="span4">
               <div class="control-group">
-                <%= f.label :password, 'Contraseña', :class => 'control-label' %>
+                <%= f.label :password, _('Contraseña'), :class => 'control-label' %>
                 <div class="controls">
                   <%= f.password_field :password, :class => 'span2' %>
                 </div>
               </div>
             </div>
-            
             <div class="center">
-              <%= f.submit 'Modificar datos de acceso', :class => 'btn btn-info' %>
+              <%= f.submit _('Modificar datos de acceso'), :class => 'btn btn-info' %>
               <hr class="thin">
             </div>
           </div>
@@ -63,18 +62,18 @@
       <div class="boxed-inner">
         <fieldset class="quien form-inline">
           <header>
-            <h1>¿Quien eres?</h1>
+            <h1><%= _('¿Quien eres?') %></h1>
           </header>
           <div class="span9">
-            Me llamo 
+            <%= _('Me llamo') %>
             <%= user.text_field :name, :class => 'input-small' %>
             <%= user.text_field :surname, :class => 'input-small' %>
-            pero quiero que mi nombre para mostrar sea 
+            <%= _('pero quiero que mi nombre para mostrar sea') %>
             <%= user.text_field :screen_name, :class => 'input-small' %>
-            <small>* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.</small>
+            <small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small>
           </div>
           <div class="center">
-              <%= user.submit 'Modificar datos personales', :class => 'btn btn-info' %>
+              <%= user.submit _('Modificar datos personales'), :class => 'btn btn-info' %>
               <hr class="thin">
             </div>
         </fieldset>
@@ -86,12 +85,12 @@
 
   <article class="profile-tabs">
     <ul class="nav nav-tabs" id="myTab">
-      <li class="active"><a href="#como" name="tab_como">¿Cómo eres?</a></li>
-      <li><a href="#gustos" name="tab_gustos">Tus gustos</a></li>
-      <li><a href="#buscas" name="tab_buscas">Qué buscas</a></li>
-      <li><a href="#dicen" name="tab_dicen">Que dicen de ti</a></li>
+      <li class="active"><a href="#como" name="tab_como"><%= _('¿Cómo eres?') %></a></li>
+      <li><a href="#gustos" name="tab_gustos"><%= _('Tus gustos') %></a></li>
+      <li><a href="#buscas" name="tab_buscas"><%= _('Qué buscas') %></a></li>
+      <li><a href="#dicen" name="tab_dicen"><%= _('Que dicen de ti') %></a></li>
     </ul>
-     
+
     <div class="boxed">
       <div class="boxed-inner">
         <div class="tab-content">
