@@ -17,14 +17,14 @@ class UserMailer < ActionMailer::Base
   def invite_user(user, email_address, invitation_code)
     @user = user
     @url = new_user_registration_url + '?invitation_code=' + invitation_code
-    mail(:to => email_address, :subject => (_('%{name} te invita a Cellove') % {name: user.name})
+    mail(:to => email_address, :subject => _('%{name} te invita a Cellove') % {name: user.name})
     prevent_delivery_to_unconfirmed
   end
 
   def invite_celestino(user, email_address, invitation_code)
     @user = user
     @url = new_user_registration_url + '?invitation_code=' + invitation_code
-    mail(:to => email_address, :subject => (_('%{name} te invita a Cellove') % {name: user.name})
+    mail(:to => email_address, :subject => _('%{name} te invita a Cellove') % {name: user.name})
     prevent_delivery_to_unconfirmed
   end
 
