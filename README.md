@@ -8,6 +8,7 @@ Before start
 
   * Clone the repository and bundle install
   * Copy config/application.example.yml to config/application.yml
+  * Run rake db:setup and go out for a coffe, because you are loading all the f*cking towns in the world each time you seed the database.
 
 Development practices
 ---------------------
