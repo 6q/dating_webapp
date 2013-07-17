@@ -2,49 +2,49 @@
 <div id="recommend-user" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>¡Conviértete en Celestin@!</h3>
-    <p>¿Quieres recomendar a alguien? ¡Cuéntanos cómo es!</p>
+    <h3><%= _('¡Conviértete en Celestin@!') %></h3>
+    <p><%= _('¿Quieres recomendar a alguien? ¡Cuéntanos cómo es!') %></p>
   </div>
   <div class="modal-body">
-    <h5>Sus datos</h5>
+    <h5><%= _('Sus datos') %></h5>
 
     <%= form_for @recommendation do |f| %>
       <div id="user-data" class="form-inline">
         <div class="control-group">
-          <label for="user[name]">Su Email</label> <input type="text" class="input-small" placeholder="Su Email" name="user[email]">
+          <label for="user[name]"><%= _('Su Email') %></label> <input type="text" class="input-small" placeholder="<%= _('Su Email') %>" name="user[email]">
         </div>
       </div>
 
-      <h5>¿Qué relación tenéis?</h5>
+      <h5><%= _('¿Qué relación tenéis?') %></h5>
       <ul>
         <li class="red-heart">
           <%= f.radio_button :relationship, 1, checked: true %>
-          <%= f.label :relationship, 'Ex Pareja', value: 1, class: 'radio' %>
+          <%= f.label :relationship, _('Ex Pareja'), value: 1, class: 'radio' %>
         </li>
-    
+
         <li class="violet-heart">
           <%= f.radio_button :relationship, 2 %>
-          <%= f.label :relationship, "Amigo Especial", value: 2, class: 'radio' %>
+          <%= f.label :relationship, _('Amigo Especial'), value: 2, class: 'radio' %>
         </li>
-    
+
         <li class="green-heart">
           <%= f.radio_button :relationship, 3 %>
-          <%= f.label :relationship, "Amigo", value: 3, class: 'radio' %>
+          <%= f.label :relationship, _('Amigo'), value: 3, class: 'radio' %>
         </li>
-    
+
         <li class="yellow-heart">
           <%= f.radio_button :relationship, 4 %>
-          <%= f.label :relationship, "Familiar", value: 4, class: 'radio' %>
+          <%= f.label :relationship, _('Familiar'), value: 4, class: 'radio' %>
         </li>
       </ul>
 
       <div class="description">
-        <h5>¿Cómo le describirías?</h5>
-        <%= f.text_area :description, value: "Es muy majo y muy flamenco." %>
-      </div>      
+        <h5><%= _('¿Cómo le describirías?') %></h5>
+        <%= f.text_area :description, value: _('Es muy majo y muy flamenco.') %>
+      </div>
 
       <div class="attributes">
-        <h5>Sus atributos</h5>
+        <h5><%= _('Sus atributos') %></h5>
         <div class="row">
           <div class="span3">
             <%= fields_for(@characteristic) do |builder| %>
@@ -123,8 +123,8 @@
       </div>
       
       <div class="modal-footer">
-        <%= link_to 'Cancelar', 'data-dismiss' => 'modal' %>
-        <%= f.submit "Recomendar usuari@", class: 'btn btn-info' %>
+        <%= link_to _('Cancelar'), 'data-dismiss' => 'modal' %>
+        <%= f.submit _('Recomendar usuari@'), class: 'btn btn-info' %>
       </div>
     <% end %>
 

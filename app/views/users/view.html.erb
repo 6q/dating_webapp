@@ -1,9 +1,9 @@
-<% title = "Ver usuarios" %>
+<% title = _('Ver usuarios') %>
 <% content_for(:title) { title } %>
 
 <section class="list public-user-list">
 <div id="last-users" class="user-list">
-  <h3>Últimos usuarios en Cellove <%= link_to _('¡Regístrate Gratis!'), new_user_registration_path %></h3>
+  <h3><%= _('Últimos usuarios en Cellove %{link}') % {link: link_to(_('¡Regístrate Gratis!'), new_user_registration_path)} %></h3>
   <ul class="clearfix">
     <% @users.each do |user| %>
       <%= render user %>
@@ -13,7 +13,7 @@
 
 
 <div id="top-users" class="user-list">
-  <h3>Usuarios más populares <%= link_to _('¡Regístrate Gratis!'), new_user_registration_path %></h3>
+  <h3><%= _('Usuarios más populares %{link}') % {link: link_to(_('¡Regístrate Gratis!'), new_user_registration_path)} %></h3>
   <ul class="clearfix">
     <% User.popular.each do |user| %>
       <%= render user %>

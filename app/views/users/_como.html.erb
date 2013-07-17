@@ -1,88 +1,88 @@
 <div class="row">
-	<div class="key span3">Estado civil:</div>
+	<div class="key span3"><%= _('Estado civil') %>:</div>
 	<div class="valor span6">
 		<div class="txt"><%= User::MARITAL_STATUS[@user.marital_status] %></div>
 	</div>
 	<% if @user.child %>
-		<div class="key span3">Hijos:</div>
+		<div class="key span3"><%= _('Hijos') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_CHILD[@user.child] %></div>
 		</div>
 	<% end %>
 	<% if @user.house %>
-		<div class="key span3">Vive:</div>
+		<div class="key span3"><%= _('Vive') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_HOUSE[@user.house] %></div>
 		</div>
 	<% end %>
 	<% if @user.physical_desc %>
-		<div class="key span3">Físico:</div>
+		<div class="key span3"><%= _('Físico') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::PHYSICAL_DESC[@user.physical_desc] %></div>
 		</div>
 	<% end %>
 	<% if @user.height %>
-		<div class="key span3">Altura:</div>
+		<div class="key span3"><%= _('Altura') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= "#{@user.height} cms" %></div>
 		</div>
 	<% end %>
 	<% if @user.weight %>
-		<div class="key span3">Peso:</div>
+		<div class="key span3"><%= _('Peso') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= "#{@user.weight} kg" %></div>
 		</div>
 	<% end %>
 	<% if @user.complexion %>
-		<div class="key span3">Cuerpo:</div>
+		<div class="key span3"><%= _('Cuerpo') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::COMPLEXION[@user.complexion] %></div>
 		</div>
 	<% end %>
 	<% if @user.eyes %>
-		<div class="key span3">Ojos:</div>
+		<div class="key span3"><%= _('Ojos') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::EYES[@user.eyes] %></div>
 		</div>
 	<% end %>
 	<% if @user.hair %>
-		<div class="key span3">Pelo:</div>
+		<div class="key span3"><%= _('Pelo') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::HAIR[@user.hair] %></div>
 		</div>
 	<% end %>
 	<% if @user.hair_style %>
-		<div class="key span3">Peinado:</div>
+		<div class="key span3"><%= _('Peinado') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::HAIR_STYLE[@user.hair_style] %></div>
 		</div>
 	<% end %>
 	<% if @user.physical_style %>
-		<div class="key span3">Estilo:</div>
+		<div class="key span3"><%= _('Estilo') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::PHYSICAL_STYLE[@user.physical_style] %></div>
 		</div>
 	<% end %>
 	<% if @user.religion %>
-		<div class="key span3">Religión:</div>
+		<div class="key span3"><%= _('Religión') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::RELIGION[@user.religion] %></div>
 		</div>
 	<% end %>
 	<% if @user.religion_activity %>
-		<div class="key span3">Devoción religiosa:</div>
+		<div class="key span3"><%= _('Devoción religiosa') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_RELIGION_ACTIVITY[@user.religion_activity] %></div>
 		</div>
 	<% end %>
 	<% unless @user.citizenship.blank? %>
-		<div class="key span3">Nacionalidad:</div>
+		<div class="key span3">N<%= _('acionalidad') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= @user.citizenship %></div>
 		</div>
 	<% end %>
 	<% if @user.ethnicity %>
-		<div class="key span3">Étnia:</div>
+		<div class="key span3"><%= _('Étnia') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::ETHNICITY[@user.ethnicity] %></div>
 		</div>

@@ -2,12 +2,12 @@
 
 	<div id="header-preface">
     <div id="user-count">
-      Somos <%= number_with_delimiter(User.count + 60000) %> usuari@s. ¡Gracias por vuestra confianza!
+      <%= _('Somos %{count} usuari@s. ¡Gracias por vuestra confianza!') % {count: number_with_delimiter(User.count + 60000)} %>
     </div>
 
 		<div id="color-switcher" class="header-switcher">
 			<ul>
-				<li class="picker"><a href="#">Ponle color <i></i></a></li>
+				<li class="picker"><a href="#"><%= _('Ponle color') %> <i></i></a></li>
 				<% [1,3,5].each_with_index do |i| %>
           <span class="leaf">
             <a href="#" class="skin-change" data-skin="<%= i %>">
@@ -20,8 +20,8 @@
 
 		<div id="lang-switcher" class="header-switcher">
 			<ul>
-				<li class="picker"><a href="#">Castellano<i></i></a></li>
-				<li class="leaf"><a href="#">Català</a></li>
+				<li class="picker"><a href="#"><%= _('Castellano') %><i></i></a></li>
+				<li class="leaf"><a href="#"><%= _('Català') %></a></li>
 			</ul>
 		</div>
 

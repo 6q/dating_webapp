@@ -119,5 +119,5 @@
 		</div>
 	</div>
 	<% else %>
-		<%= "#{user.name} aún no ha definido sus atributos" %>
+    <%= _('%{name} aún no ha definido sus atributos') % {name: user.name} %>
 	<% end %>

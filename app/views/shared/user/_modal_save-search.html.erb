@@ -2,7 +2,7 @@
 <div id="save-search" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>Guarda búsqueda</h3>
+    <h3><%= _('Guarda búsqueda') %></h3>
     <p><%= _('Indicanos el nombre con el que quieres guardar esta búsqueda para poderla utilizar cuando quieras de forma más ágil y con acceso directo en la zona izquierda de tu perfil.') %></p>
   </div>
   <div class="modal-body">
@@ -27,7 +27,7 @@
       <%= f.hidden_field :complexion_eq, value: params[:q][:complexion_eq] %>
   </div>
   <div class="modal-footer">
-    <%= link_to 'Cancelar', '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= link_to _('Cancelar'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
     <%= f.submit _('Guarda búsqueda'), class: 'btn btn-info' %>
   </div>
   <% end %>

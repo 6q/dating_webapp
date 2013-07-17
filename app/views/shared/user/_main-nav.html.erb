@@ -4,6 +4,6 @@
     <li><%= link_to _('¡Les he gustado!'), user_likes_path %><%= indicate(current_user.likers.count) %></li>
     <li><%= link_to _('Mensajes'), conversations_path %><%= indicate(current_user.mailbox.inbox.unread(current_user).count) %></li>
     <li><%= link_to _('Actividades'), conversations_path+'?activities=show' %><%= indicate(current_user.mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }.count) %></li>
-    <li><%= link_to 'Búsquedas', search_path %></li>
+    <li><%= link_to _('Búsquedas'), search_path %></li>
   </ul>
 </nav>

@@ -12,10 +12,10 @@
     </div>
   </div>
   <header>
-    <h1>@Celestino:<br><%= current_user.full_name %></h1>
+    <h1><%= _('@Celestino') %>:<br><%= current_user.full_name %></h1>
   </header>
   <ul>
-    <li><%= link_to 'Mi perfil de Celestin@', profile_path %></li>
-    <li class="highlight"><%= link_to '¡Conviértete en usuari@!', matchmaker_become_user_path %></li>
+    <li><%= link_to _('Mi perfil de Celestin@'), profile_path %></li>
+    <li class="highlight"><%= link_to _('¡Conviértete en usuari@!'), matchmaker_become_user_path %></li>
   </ul>
 </section>

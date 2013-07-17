@@ -6,22 +6,22 @@
 <%
   if num == 1 
     heart_class = 'ex'
-    relationship = 'Ex pareja'
+    relationship = _('Ex pareja')
   end
 
   if num == 2 
     heart_class = 'special'
-    relationship = 'Amigo Especial'
+    relationship = _('Amigo Especial')
   end
 
   if num == 3 
     heart_class = 'friend'
-    relationship = 'Amigo'
+    relationship = _('Amigo')
   end
 
   if num == 4 
     heart_class = 'family'
-    relationship = 'Familiar'
+    relationship = _('Familiar')
   end
 %>
 
@@ -37,10 +37,10 @@
       <span><i class="heart"></i><%= relationship %></span>
       <% eliminar_celestino_id = '#delete-celestino-' + recommendation.id.to_s %>
       <% if recommendation.user_id == current_user.id %>
-        <%= link_to "Eliminar celestin@", eliminar_celestino_id, 'data-toggle' => 'modal' %>
+        <%= link_to _('Eliminar celestin@'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
       <% else %>
         <% if !recommendation.denied? && !recommendation.confirmed? %>
-          <%= link_to "Eliminar recomendación", eliminar_celestino_id, 'data-toggle' => 'modal' %>
+          <%= link_to _('Eliminar recomendación'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
         <% end %>
       <% end %>
       <span class="date"><%= _('Hace') %> <%= time_ago_in_words(recommendation.updated_at) %></span>
@@ -67,8 +67,8 @@
 
   <% if !is_creator && !recommendation.confirmed? %>
     <div class="choose">
-      <%= link_to '<i class="icon-ok icon-white"></i> Aceptar'.html_safe, recommendation_accept_path(recommendation.id), class: 'btn btn-success', :method => :post %>
-      <%= link_to '<i class="icon-remove icon-white"></i> Rechazar'.html_safe, recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+      <%= link_to '<i class="icon-ok icon-white"></i> '.html_safe + _('Aceptar'), recommendation_accept_path(recommendation.id), class: 'btn btn-success', :method => :post %>
+      <%= link_to '<i class="icon-remove icon-white"></i> '.html_safe + _('Rechazar'), recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
     </div>
   <% end %>
 </article>

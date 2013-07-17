@@ -1,9 +1,9 @@
 <%= content_for :title do %>
-  Quiero encontrar
+  <%= _('Quiero encontrar') %>
 <% end %>
 
 <header class="bg clearfix">
-  <h1>Registro<br>Usuari@<br>Gratis!</h1>
+  <h1><%= _('Registro<br>Usuari@<br>Gratis!') %></h1>
   <ul class="miniSlider">
     <li class="item active"><%= image_tag 'teaser-user.jpg' %></li>
     <li class="item"><%= image_tag 'teaser-user2.jpg' %></li>
@@ -15,44 +15,44 @@
   <div class="row">
     <div class="span4">
       <fieldset id="name" class="clearfix">
-        <legend>¿Quién eres?</legend>
-        <p>Me llamo<br>
-        <%= f.text_field :name, :autofocus => true, placeholder: t('simple_form.labels.user.name') %>
-        <%= f.text_field :surname, placeholder: t('simple_form.labels.user.surname') %>
+        <legend><%= _('¿Quién eres?') %></legend>
+        <p><%= _('Me llamo') %><br>
+        <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre') %>
+        <%= f.text_field :surname, placeholder: _('Apellidos') %>
         <p>
-        <%= f.text_field :screen_name, placeholder: t('simple_form.labels.user.screen_name') %>
-        <small class="span3">* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.</small>
+        <%= f.text_field :screen_name, placeholder: _('Nickname') %>
+        <small class="span3"><%= _('* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.') %></small>
       </fieldset>
     </div>
 
     <div class="span8">
-      <p>Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu.</p>
-      <p>Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas.</p> 
-      <p>Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes. </p>
+      <p><%= _('Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu.') %></p>
+      <p><%= _('Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas.') %></p> 
+      <p><%= _('Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes.') %></p>
     </div>
   </div>
  <fieldset id="orientation" class="form-inline">
     <div class="control-group">
-      <%= f.label :gender, "Soy" %>
+      <%= f.label :gender, _('Soy') %>
       <%= f.select :seeking, seeking_options  %>
-      <%= f.label :marital_status, "y" %>
+      <%= f.label :marital_status, _('y') %>
       <%= f.select :marital_status, marital_status_options %>
       .
     </div>
     <div class="control-group">
-      <%= f.label :birth_date_day, "Nací el" %>
+      <%= f.label :birth_date_day, _('Nací el') %>
       <%= f.text_field :birth_date_day, placeholder: _('Día'), class: "span1" %>
-      <%= f.label :birth_date_month, "de" %>
+      <%= f.label :birth_date_month, _('de') %>
       <%= f.text_field :birth_date_month, placeholder: _('Mes'), class: "span1" %>
-      <%= f.label :birth_date_year, "de" %>
+      <%= f.label :birth_date_year, _('de') %>
       <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
-      <%= f.label :country, "y vivo en" %>
+      <%= f.label :country, _('y vivo en') %>
       <%= country_select("user", "country", nil, include_blank: _('Selecciona...')) %>
     </div>
     <div class="control-group">
       <%= f.label :postal_code, _("Mi codigo postal es el") %>
       <%= f.text_field :postal_code, class: "span1", value: (@geocoder ? @geocoder.data['zipcode'] : resource.postal_code) %>
-      <%= f.label :city, "de" %>
+      <%= f.label :city, _('de') %>
       <%= f.select :city, ([resource.city] || []), { include_blank: _('Localidad...'), selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location' } %>
     </div>
   </fieldset>
@@ -91,11 +91,11 @@
       <div class="row">
         <div class="span6 center">
           <div class="clearfix">
-            <label>Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los <%= link_to 'Consejos de uso', '/public/consejos-de-uso' %>, las <%= link_to 'Condiciones generales', '/public/condiciones-generales' %> y la <%= link_to 'Política de privacidad', '/public/politica-de-privacidad' %> del sitio y los servicios descritos</label>
+            <label><%= _('Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los %{consejos_link}, las %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') % {consejos_link: link_to(_('Consejos de uso'), '/public/consejos-de-uso'), condiciones_link: link_to(_('Condiciones generales'), '/public/condiciones-generales'), privacy_link: link_to(_('Política de privacidad'), '/public/politica-de-privacidad')}%></label>
           </div>
           <div class="clearfix">
             <%= f.check_box :newsletter_optin, checked: true %>
-            <label>Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.</label>
+            <label><%= _('Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.') %></label>
           </div>
         </div>
         <div class="span6 center">

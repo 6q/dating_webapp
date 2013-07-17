@@ -3,7 +3,7 @@
 		<div class="boxed-inner">
 			<div id="nice-couple" class="">
 				<i></i>
-				<p>¿Hacéis buena pareja?</p>
+				<p><%= _('¿Hacéis buena pareja?') %></p>
         <%= rating_for(@user, current_user, readonly: false) %>
       </div>
 
@@ -17,25 +17,25 @@
 				<div class="description">
 						<h5><%= "#{@user.name} #{@user.surname} | " %><span><%= "#{@user.city}, #{@user.country}" %></span></h5>
 						<p class="small">
-							<%= "#{User::GENDER[@user.gender].capitalize} - #{@user.age} años " %>
+							<%= "#{User::GENDER[@user.gender].capitalize} - #{@user.age} #{_('años')} " %>
 							<% if @user.height %>
-								<%= "- #{@user.height} cms de altura" %>
+                <%= "- #{@user.height} #{_('cms de altura')}" %>
 							<% end %>
 						</p>
 						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
 							<% if @user.child %>
-								<%= "y #{User::TP_CHILD[@user.child]}." %>
+                <%= "#{_('y')} #{User::TP_CHILD[@user.child]}." %>
 							<% end %>
 							<% if @user.lf_gender %>
-								<%= "Busca #{User::GENDER[@user.lf_gender]} "%> 
+                <%= "#{_('Busca')} #{User::GENDER[@user.lf_gender]} "%> 
 								<% if @user.lf_age_from and @user.lf_age_to %>
-									<%= "de entre #{@user.lf_age_from} y #{@user.lf_age_to} años" %>
+                  <%= "#{_('de entre')} #{@user.lf_age_from} #{_('y')} #{@user.lf_age_to} #{_('años')}" %>
 								<% end %>
 								<% if @user.lf_relationship %>
-									<%= "para #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>
+                  <%= "#{_('para')} #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>
 								<% end %>
 								<% if @user.city %>
-									<%= "y que esté cerca de #{@user.city}, #{@user.country}" %>
+                  <%= "#{_('y que esté cerca de')} #{@user.city}, #{@user.country}" %>
 								<% end %>
 							<% end %>
 						</p>
@@ -52,8 +52,8 @@
 							</ul>
 						</div>
 						<% if @user.pictures.count > 6 %>
-							<a href="#" class="jcarousel-prev">anterior</a>
-							<a href="#" class="jcarousel-next">siguiente</a>
+							<a href="#" class="jcarousel-prev"><%= _('anterior') %></a>
+							<a href="#" class="jcarousel-next"><%= _('siguiente') %></a>
 						<% end %>
 					</div>
 				<% end %>
@@ -63,16 +63,16 @@
 	</article>
 
 	<% unless @user == current_user %>
-		<%= render '/shared/user/profile-action-links' %>
+		<%= render 'shared/user/profile-action-links' %>
 	<% end %>
 
 <article class="basic-tabs tabs-container">
 		
 		<ul class="nav nav-tabs" id="basic-tabs">
-  		<li class="active"><a href="#desc">Descripción</a></li>
-		  <li><a href="#dicen">Sus Celestin@s</a></li>
-		  <li><a href="#atributos">Sus Atributos</a></li>
-		  <li class="last"><a href="#notas">Tus notas</a></li>
+  		<li class="active"><a href="#desc"><%= _('Descripción') %></a></li>
+		  <li><a href="#dicen"><%= _('Sus Celestin@s') %></a></li>
+		  <li><a href="#atributos"><%= _('Sus Atributos') %></a></li>
+		  <li class="last"><a href="#notas"><%= _('Tus notas') %></a></li>
 		</ul>
 
 		<div class="boxed">
@@ -81,7 +81,7 @@
 
 		  		<div class="tab-pane active" id="desc">
 		  			<% if @user.description.blank? %>
-		  				<%= @user.name %> aún no ha introducido su descripción.
+              <%= _('%{name} aún no ha introducido su descripción.') % {name: @user.name} %>
 		  			<% else %>
 							<p><%= @user.description %></p>
 					<% end %>
@@ -89,10 +89,10 @@
 
 		  		<div class="tab-pane" id="dicen">
 		  			<% if current_user.confirmed_recommenders.empty? %>
-		  				<%= @user.name %> aún no tiene ningún celestino. <%= link_to 'Quieres ser el primero?', be_matchmaker_path %>
+              <%= _('%{name} aún no tiene ningún celestino.') % {name: @user.name} %><%= link_to _('Quieres ser el primero?'), be_matchmaker_path %>
 		  			<% else %>
 		  				<% current_user.confirmed_recommenders.each do |rec| %>
-								<%= render '/shared/user/celes-item', recommendation: rec, is_creator: false %>
+								<%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>
 							<% end %>
 		  			<% end %>
 		  		</div>
@@ -102,19 +102,19 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="notas">
-		  			<h4>Tus notas de María González <span>(tranquilo, él/ella no las verá)</span></h4>
+            <h4><%= _('Tus notas de %{name} <span>(tranquilo, él/ella no las verá)</span>') % {name: @user.name} %></h4>
 		  			<hr>
 		  			<% current_user.my_notes(@user).each do |note| %>
-		  				<%= render '/shared/user/nota-item', note: note %>
+		  				<%= render 'shared/user/nota-item', note: note %>
 		  			<% end %>
 
 		  			<div class="new-nota">
 		  				<%= form_for :note, :url => '/notes' do |n| %>
-		  					<%= n.text_area :content, :placeholder => 'Nueva nota' %>
+		  					<%= n.text_area :content, :placeholder => _('Nueva nota') %>
 		  					<%= n.hidden_field :user_id, :value => current_user.id %>
 		  					<%= n.hidden_field :evaluated_id, :value => @user.id %>
 		  					<div class="pull-right controls">
-		  						<button type="submit" class="btn btn-info">Añadir nota</button>
+		  						<button type="submit" class="btn btn-info"><%= _('Añadir nota') %></button>
 		  					</div>
 		  				<% end %>
 		  			</div>
@@ -129,9 +129,9 @@
 	<article class="profile-tabs tabs-container">
 		
 		<ul class="nav nav-tabs" id="myTab">
-  		<li class="active"><a href="#como">¿Cómo es?</a></li>
-		  <li><a href="#gustos">Sus gustos</a></li>
-		  <li><a href="#busca">Qué busca</a></li>
+  		<li class="active"><a href="#como"><%= _('¿Cómo es?') %></a></li>
+		  <li><a href="#gustos"><%= _('Sus gustos') %></a></li>
+		  <li><a href="#busca"><%= _('Qué busca') %></a></li>
 		</ul>
 
 		<div class="boxed">
@@ -156,7 +156,7 @@
 	</article>
 
 	<% unless @user == current_user %>
-		<%= render '/shared/user/profile-action-links' %>
+		<%= render 'shared/user/profile-action-links' %>
 	<% end %>
 
 

@@ -1,44 +1,44 @@
 <section class="celestinos boxed">
   <div class="boxed-inner">
     <header>
-      <h1>Quiero ser Celestin@ | <span>Realizar recomendación</span></h1>
+      <h1><%= _('Quiero ser Celestin@') +' | <span>' _('Realizar recomendación')+'</span>' %></h1>
     </header>
 
-    <div class="box-title">Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?</div>
+    <div class="box-title"><%= _('Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?') %></div>
     <div class="celes-box">
       <ul>
         <li class="red-heart">
           <i class="red-heart"></i>
-          Ex pareja
+          <%= _('Ex pareja') %>
         </li>
     
         <li class="violet-heart">
           <i class="violet-heart"></i>
-          Amigo especial
+          <%= _('Amigo especial') %>
         </li>
     
         <li class="green-heart">
           <i class="green-heart"></i>
-          Amigo
+          <%= _('Amigo') %>
         </li>
     
         <li class="yellow-heart">
           <i class="yellow-heart"></i>
-          Familiar
+          <%= _('Familiar') %>
         </li>
       </ul>
       <div class="btns">
         <%
           # Yes. Both buttons perform the same action. Don't ask. ^__^
         %>
-        <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ registrad@</a>
-        <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal">Recomendar usuari@ nuev@</a>
+        <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal"><%= _('Recomendar usuari@ registrad@') %></a>
+        <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal"><%= _('Recomendar usuari@ nuev@') %></a>
       </div>
     </div>
 
     <% unless current_user.confirmed_recommendations.blank? %>
     <div class="your-celestines">
-      <h4 style="text-align:center">Personas a las que haces de Celestin@</h4>
+      <h4 style="text-align:center"><%= _('Personas a las que haces de Celestin@') %></h4>
       <% current_user.confirmed_recommendations.each do |rec| %>
         <%= render 'shared/user/celes-item', recommendation: rec, is_creator: true %>
       <% end %>

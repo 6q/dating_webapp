@@ -2,7 +2,7 @@
   <div class="boxed headless">
     <div class="boxed-inner">
       <header>
-        <h1>¡Convertirte en usuari@ de Cellove es muy fácil!</h1>
+        <h1><%= _('¡Convertirte en usuari@ de Cellove es muy fácil!') %></h1>
       </header>
     </div>
   </div>
@@ -13,34 +13,34 @@
 
       <article>
         <header>
-          <h1>Registro de usuario</h1>
+          <h1><%= _('Registro de usuario') %></h1>
         </header>
 
-        <p>Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu.</p>
-        <p>Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas.</p> 
-        <p>Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes. </p>
+        <p><%= _('Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu.') %></p>
+        <p><%= _('Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas.') %></p> 
+        <p><%= _('Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes.') %></p>
 
         <%= form_for(current_user, url: '/users', method: :put) do |f| %>
           <fieldset id="orientation" class="form-inline">
             <div class="control-group">
-              <%= f.label :seeking, "Soy" %>
+              <%= f.label :seeking, _('Soy') %>
               <%= f.select(:seeking, seeking_options) %>
-              <%= f.label :marital_status, " y " %>
+              <%= f.label :marital_status, _(' y ') %>
               <%= f.select(:marital_status, marital_status_options) %>.
             </div>
 
             <div class="control-group">
-              <%= f.label :birth_date_day, "Nací el" %>
+              <%= f.label :birth_date_day, _('Nací el') %>
               <%= f.text_field :birth_date_day, placeholder: Date.today.day, class: "span1" %>
-              <%= f.label :birth_date_month, "de" %>
+              <%= f.label :birth_date_month, _('de') %>
               <%= f.text_field :birth_date_month, placeholder: Date.today.month, class: "span1" %>
-              <%= f.label :birth_date_year, "de" %>
+              <%= f.label :birth_date_year, _('de') %>
               <%= f.text_field :birth_date_year, placeholder: Date.today.year, class: "span1" %>
-              <%= f.label :country, "y vivo en" %>
+              <%= f.label :country, _('y vivo en') %>
               <%= f.select(:country, country_options) %>
             </div>
             <div class="control-group">
-              <%= f.label :postal_code, "Mi código postal es el" %> <%= f.text_field :postal_code, class: 'span1' %>
+              <%= f.label :postal_code, _('Mi código postal es el') %> <%= f.text_field :postal_code, class: 'span1' %>
               <%= f.label :city, "de" %>
               <%= f.select(:city, options_for_select([['Barcelona', 'Barcelona']])) %>
             </div>
@@ -50,7 +50,7 @@
             <div class="actions">
               <div class="row">
                 <div class="span6">
-                  <%= f.submit "¡Registrarme Gratis!", class: 'btn btn-info btn-large btn-celestino-user' %>
+                  <%= f.submit _('¡Registrarme Gratis!'), class: 'btn btn-info btn-large btn-celestino-user' %>
                 </div>
               </div>
             </div>

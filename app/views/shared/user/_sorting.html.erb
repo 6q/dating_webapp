@@ -5,7 +5,7 @@
       <li><%= sort_link(@search, :updated_at, _("Online"), default_order: :desc) %></li>
       <li><%#= sort_link(@search, :prop_actividad, _("Prop. Actividad")) %></li>
       <li><%= sort_link(@search, :created_at, _("Fecha de alta"), default_order: :desc) %></li>
-      <li><%= sort_link(@search, :distance, "Más cercanos", { :distance => params[:distance] }) %></li>
+      <li><%= sort_link(@search, :distance, _('Más cercanos'), { :distance => params[:distance] }) %></li>
       <li><%#= sort_link(@search, :recent_interaction, "Interactuación reciente") %></li>
     </ul>
   </div>

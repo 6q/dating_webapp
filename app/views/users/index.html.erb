@@ -4,7 +4,7 @@
 
   <div class="boxed-inner clearfix overflow-show">
     <header>
-      <h1>Encuentra personas afines a tí</h1>
+      <h1><%= _('Encuentra personas afines a tí') %></h1>
     </header>
     
     <%= search_form_for @search, class: 'span9 form-horizontal overflow-show' do |f| %>
@@ -12,7 +12,7 @@
         <div class="span8">
 
           <div class="control-group slider">
-            <label class="control-label">Edad</label>
+            <label class="control-label"><%= _('Edad') %></label>
             <div class="span6">
               <input id="years" type="slider" value="<%= params[:q][:years_lteq] || current_user.lf_age_from || '18' %>;<%= params[:q][:years_gteq] || current_user.lf_age_to || '80' %>"/>
               <%= f.hidden_field :years_lteq %>
@@ -38,13 +38,13 @@
           <div class="row">
             <div class="span4">
               <div class="control-group slider">
-                <label class="control-label">Distancia</label>
+                <label class="control-label"><%= _('Distancia') %></label>
                 <div class="controls">
                   <%= text_field_tag :distance, (params[:distance] || '250'), type: 'slider' %>
                 </div>
               </div>
               <div class="control-group slider">
-                <label class="control-label">Altura</label>
+                <label class="control-label"><%= _('Altura') %></label>
                 <div class="controls">
                   <input id="altura" type="slider" name="" value="<%= @search.height_gteq || '150' %>;<%= @search.height_lteq || '220' %>"/>
                   <%= f.hidden_field :height_gteq  %>
@@ -61,7 +61,7 @@
 
             <div class="span4">
               <div class="control-group slider">
-                <label class="control-label">Afinidad</label>
+                <label class="control-label"><%= _('Afinidad') %></label>
                 <div class="controls">
                   <%= text_field_tag :affinity, (params[:affinity] || '70'), type: 'slider' %>
                 </div>
@@ -102,17 +102,17 @@
 <section class="list">
   <header>
     <div class="pull-left">
-      <h1>Resultados de la búsqueda</h1>
+      <h1><%= _('Resultados de la búsqueda') %></h1>
     </div>
     <div class="pull-right">
       <div class="pull-left">
         <% if params[:q] %>
-          <%= render '/shared/user/modal_save-search' %>
+          <%= render 'shared/user/modal_save-search' %>
           <%= link_to _('Guarda búsqueda'), '#save-search', "data-toggle" => "modal", class: 'btn btn-info' %>
         <% end %>
       </div>
       <div class="pull-right sort-gustado"> 
-        <%= render '/shared/user/sorting' %>
+        <%= render 'shared/user/sorting' %>
       </div>
     </div>
     <div class="clearfix"></div>
