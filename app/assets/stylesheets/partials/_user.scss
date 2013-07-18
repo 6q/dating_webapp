@@ -782,10 +782,19 @@ section.chat{
       .description{
           margin: 0;
           padding: 0 10px;
+          float:left;
 
-          h5{
+          h5 {
+
             font-size: 1.5em;
-            span{
+            &.online {
+              border-left:#6BC36C 10px solid;
+              padding-left:10px;
+              border-radius:3px;
+              padding-top:3px;
+            }
+
+            span {
               font-size: .8em;
               font-weight: normal;
             }
