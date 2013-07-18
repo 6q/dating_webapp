@@ -55,8 +55,20 @@ Add id_rsa-cellove key to sshagent @ssh-add config/keypair/id_rsa-cellove@
 
 Deploy to staging will deploy develop branch:
 
-  cap staging deploy
+  `cap staging deploy
 
 Deploy to production will deploy master branch:
 
-  cap production deploy
+  `cap production deploy
+
+Extra
+-----
+
+  * To deploy:
+    `chmod 0600 config/keypair/id_rsa-cellove
+    `ssh-add config/keypair/id_rsa-cellove (Enter passphrase)
+    `cap staging|production deploy
+
+  * Application is deployed in deploy user in the server under ~/public_html/cellove_production or ~/public_html/cellove_staging
+  * application.yml config file could be found in ~/public_html/cellove_[env]/shared/config/application.yml
+  * User uploaded images gets stored in: public/system/dragonfly/[environment]
