@@ -2,7 +2,7 @@
   <article class="boxed headless">
     <div class="boxed-inner">
       <header>
-      <h1 class="pull-left"><%= _('Mis Celestin@s') %> | <span><%= _('Tu índice es del %{index}%% y tienes %{count} Celestin@s.') % {index: current_user.cellove_percentage, count: current_user.recommenders.count.to_s %></span></h1>
+      <h1 class="pull-left"><%= _('Mis Celestin@s') %> | <span><%= _('Tu índice es del %{index}%% y tienes %{count} Celestin@s.') % {index: current_user.cellove_percentage, count: current_user.recommenders.count.to_s } %></span></h1>
         <%= link_to _('¡Mejora tu índice Cellove!') , "#mejora", :class => 'pull-right' %>
         <div class="clearfix"></div>
       </header>
