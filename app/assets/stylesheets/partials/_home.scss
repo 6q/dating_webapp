@@ -75,7 +75,7 @@ section#unconfirmed-form{
     margin:5px 0;
     margin-left:15px;
     padding:0;
-    min-height:70px;
+    min-height:50px;
     padding-top:10px;
     width:100px;
     line-height:1em;
@@ -85,6 +85,15 @@ section#unconfirmed-form{
     margin-right:10px;
     padding-right:10px;
   }
+
+  form {
+    margin-top:20px;
+    margin-left:5px;
+  }
+
+    label {
+      display:inline-block;
+    }
 }
 
 .button{
