@@ -194,6 +194,10 @@ section.direct-search {
       float:left;
       margin-top:.3em;
 
+      &.checkbox {
+        width:70px;
+      }
+
       span {
         color:$link-color;
       }
