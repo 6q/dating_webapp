@@ -1,4 +1,5 @@
 <article class="form-inline">
+	<fieldset>
 	<hr class="thin">
 	<%= form_for @user, :url => profile_path do |user| %>
 		<%= user.label :lf_gender, _("Busco") %>
@@ -13,7 +14,7 @@
 		<%= user.text_field :lf_age_to, :class => 'input-mini' %>
 		<%= user.label :lf_relationship, _('años. Para') %>
 		<%= user.select :lf_relationship, lf_relationship_options, {}, :class => 'span4' %>
-    <%= _('* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán.') %>
+		<small><%= _('* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán.') %></small>
 		<hr class="thin">
 
 		<hr class="thin">
@@ -144,7 +145,7 @@
 		<hr class="thin">
 		<%= user.label :lf_salary, _('anuales de') %>
     <%= user.text_field :lf_salary, :class =>'span1' %><%= _('€/año') %>
-
+</fieldset>
 </article>
 <hr>
 <div class="center">
