@@ -5,7 +5,7 @@
       <header>
         <h1 class="span3"><%= _('Tu perfil') %></h1>
         <div class="pull-right">
-          <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to _('¡Mejora tu índice!'), my_matchmakers_path(anchor: 'tab_mejora') %> - <%= _('Perfil %{progress} % completado') % {progress: current_user.progress_status %>
+          <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to _('¡Mejora tu índice!'), my_matchmakers_path(anchor: 'tab_mejora') %> - <%= _('Perfil %{progress}%% completado') % {progress: current_user.progress_status} %>
         </div>
         <div class="clearfix"></div>
       </header>
