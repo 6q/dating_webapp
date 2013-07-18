@@ -284,12 +284,13 @@ DEPENDENCIES
   figaro (>= 0.6.3)
   friendly_id
   geocoder (~> 1.1.3)
-  gettext (>= 1.9.3)
+  gettext (~> 2.3.9)
   gettext_i18n_rails
   guard-rails
   hominid (>= 3.0.5)
   jquery-rails (~> 2.2.1)
   kaminari
+  locale
   mail_form
   mail_view (~> 1.0.3)
   mailboxer

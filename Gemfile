@@ -28,8 +28,9 @@ gem 'mail_form'
 gem 'rails-i18n'
 gem 'strong_parameters'
 gem 'mailboxer'
+gem 'locale'
 gem 'gettext_i18n_rails'
-gem 'gettext', '>=1.9.3', :require => false, :group => :development
+gem 'gettext', '~> 2.3.9', :require => false
 gem 'ransack'
 gem 'faker'
 gem 'factory_girl_rails', '>= 4.2.0'
