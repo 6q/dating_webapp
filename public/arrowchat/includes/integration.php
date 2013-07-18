@@ -137,12 +137,13 @@
 	function get_avatar($image, $user_id) 
 	{
 		global $base_url;
-    #var_dump('/Users/victorcoder/Code/cellove/public/system/dragonfly/development/' . $image);
-		if (is_file(CELLOVE_PATH . '/system/dragonfly/development/' . $image)) 
+    $env = $_COOKIE['env'];
+
+		if (is_file(CELLOVE_PATH . '/system/dragonfly/'.$env.'/'.$image)) 
 		{
-			return '/system/dragonfly/' . $image;
-		} 
-		else 
+			return '/system/dragonfly/'.$env.'/'.$image;
+		}
+		else
 		{
 			return "/assets/placeholder-male-3.jpg";
 		}
