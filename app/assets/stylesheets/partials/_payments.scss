@@ -1,12 +1,15 @@
 section#pay {
 
   fieldset {
-    margin-left:13px;
+    margin-left:40px;
   }
 
   .payment {
+
+    float:left;
+
     z-index:2;
-    width:200px;
+    width:240px;
     background:#fff;
     border-radius:5px;
     box-shadow:0px 5px 5px rgba(0,0,0,.2);
@@ -35,17 +38,19 @@ section#pay {
       text-align:center;
       border-top:#e0e0e0 1px solid;
       padding:.7em 0;
+      font-size:.6em;
     }
 
-    button {
+    .btn {
       margin:0 auto;
+      font-size:1.4em;
+      margin-left:5px;
     }
 
-    /*
 
     &.plan2 {
       font-size:1.2em;
-      width:250px;
+      width:350px;
       margin-top:-13px;
       z-index:3;
       border:#fff 2px solid;
@@ -63,6 +68,6 @@ section#pay {
         padding:.5em .5em;
       }
     }
-    */
+
   }
 }

@@ -4,6 +4,7 @@
     <h1><%= _('Modalidades de uso') %></h1>
   </header>
 
+
   <article>
       <h2><%= _('Elige entre uno de nuestros planes:') %></h2>
       <p><%= _('Contrata una de nuestras tres modalidades de uso en Cellove para sacarle el máximo partido de todas las herramientas, facilidades que te ofrecemos. Elije la modalidad que mejor se adapte a tus necesidades y disfruta de Cellove sin limitaciones ni restricciones de ningún tipo.') %></p>
@@ -11,18 +12,32 @@
       <form>
         <fieldset class="clearfix">
             <div class="payment">
-              <h3><%= _('8€/mes') %></h3>
+              <h3><%= _('GRATIS') %></h3>
               <ul>
+                <li><%= _('Ilimitada navegación') %></li>
                 <li><%= _('Ilimitados mensajes privados') %></li>
-                <li><%= _('Ilimitados chats simultáneo') %></li>
+                <li><%= _('2 chats simultáneos') %></li>
+                <li><%= _('Enviar preguntas a Celestinos') %></li>
+                <li><%= _('Publicidad en navegación') %></li>
+                <li>&nbsp;</li>
+              </ul>
+            </div>
+
+            <div class="payment plan2">
+              <h3><%= _('VIP 3,95€/mes') %></h3>
+              <ul>
+                <li><%= _('Ilimitada navegación') %></li>
+                <li><%= _('Ilimitados mensajes privados') %></li>
                 <li><%= _('Capacidad ilimitada') %></li>
-                <li><%= _('Demás recursos ilimitados') %></li>
-                <li><%= _('Navegación ilimitada') %></li>
+                <li><%= _('Ilimitados chats simultáneos') %></li>
+                <li><%= _('Videochat online') %></li>
                 <li><%= _('Opc. de privacidad avanzadas') %></li>
+                <li><%= _('Acuse de recibo de mensajes') %></li>
                 <li><%= _('Navegación oculta') %></li>
               </ul>
               <div class="call">
-                <%= link_to _('Contratar por 96€/año'), pay_confirmation_path, class: 'btn btn-info' %>
+                Contratar por: <%= link_to _('3,95 €/ mes'), pay_confirmation_path, class: 'btn btn-info' %>
+                <%= link_to _('47,4 €/año'), pay_confirmation_path, class: 'btn btn-info' %>
               </div>
             </div>
         </fieldset>
