@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-18 18:50+0200\n"
+"POT-Creation-Date: 2013-07-18 20:33+0200\n"
 "PO-Revision-Date: 2013-07-18 20:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: Cellove <info@gestinet.com>\n"
@@ -19,3790 +19,2489 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 
-#: app/controllers/activities_controller.rb:10
-msgid "Te propongo esta actividad"
-msgstr ""
-
-#: app/controllers/invitations_controller.rb:10
-msgid "Usuari@ invitado!"
-msgstr ""
-
-#: app/controllers/invitations_controller.rb:14
-msgid "Celestin@ invitado!"
-msgstr ""
-
-#: app/controllers/invitations_controller.rb:18
-#: app/controllers/profiles_controller.rb:55
-#: app/controllers/relationships_controller.rb:8
-#: app/controllers/relationships_controller.rb:21
-#: app/controllers/searches_controller.rb:11
-#: app/controllers/users_controller.rb:108
-#: app/controllers/users_controller.rb:114
-msgid "Oops!"
-msgstr ""
-
-#: app/controllers/messages_controller.rb:43
-msgid "Mensaje enviado"
-msgstr ""
-
-#: app/controllers/notes_controller.rb:8
-msgid "Tu nota se ha guardado."
-msgstr ""
-
-#: app/controllers/notes_controller.rb:15
-msgid "Tu nota se ha borrado."
-msgstr ""
-
-#: app/controllers/pictures_controller.rb:8
-msgid "Ya has alcanzado tu limite de fotos"
-msgstr ""
-
-#: app/controllers/pictures_controller.rb:64
-msgid "No tienes permiso para borrar esta foto"
-msgstr ""
-
-#: app/controllers/profiles_controller.rb:27
-#: app/controllers/profiles_controller.rb:30
-msgid "Cambios guardados."
-msgstr ""
-
-#: app/controllers/profiles_controller.rb:38
-#: app/controllers/profiles_controller.rb:41
-msgid "No se ha podido guardar."
-msgstr ""
-
-#: app/controllers/profiles_controller.rb:53
-msgid "Actualización a usuari@ premium se ha realizado correctamente"
-msgstr ""
-
-#: app/controllers/recommendations_controller.rb:30
-msgid "Recommendación enviada"
-msgstr ""
-
-#: app/controllers/recommendations_controller.rb:33
-#: app/controllers/recommendations_controller.rb:40
-msgid "Datos incorrectos o faltantes"
-msgstr ""
-
-#: app/controllers/recommendations_controller.rb:53
-msgid "Recommendación acceptada"
-msgstr ""
-
-#: app/controllers/recommendations_controller.rb:63
-msgid "Recommendación negada"
-msgstr ""
-
-#: app/controllers/searches_controller.rb:9
-msgid "Búsqueda guardada"
-msgstr ""
-
-#: app/controllers/searches_controller.rb:19
-msgid "Búsqueda borrada"
-msgstr ""
-
-#: app/controllers/sessions_controller.rb:5
-msgid "Email o contraseña inválidos"
-msgstr ""
-
-#: app/controllers/users_controller.rb:106
-#: app/controllers/users_controller.rb:112
-msgid "Configuración actualizada"
-msgstr ""
-
-#: app/helpers/application_helper.rb:27
-msgid "Mostrando "
-msgstr ""
-
-#: app/helpers/application_helper.rb:28
 msgid " a "
 msgstr ""
 
-#: app/helpers/application_helper.rb:29
-msgid " de "
-msgstr ""
-
-#: app/helpers/user_helper.rb:23
-msgid "Enviar Mensaje"
-msgstr ""
-
-#: app/helpers/user_helper.rb:25
-#: app/views/users/_user.html.erb:22
-#: app/views/users/_user.html.erb:24
-#: app/views/users/_user.html.erb:36
-msgid "Me gusta"
-msgstr ""
-
-#: app/helpers/user_helper.rb:26
-#: app/views/users/_user.html.erb:30
-#: app/views/users/_user.html.erb:37
-msgid "Bloquear"
-msgstr ""
-
-#: app/mailers/user_mailer.rb:13
-msgid "Bienvenido a Cellove"
-msgstr ""
-
-#: app/mailers/user_mailer.rb:20
-#: app/mailers/user_mailer.rb:27
-msgid "%{name} te invita a Cellove"
-msgstr ""
-
-#: app/mailers/user_mailer.rb:35
-msgid "Nuevo mensaje"
-msgstr ""
-
-#: app/mailers/user_mailer.rb:42
-msgid "Nueva visita de perfil"
-msgstr ""
-
-#: app/mailers/user_mailer.rb:49
-msgid "Nuevo me gusta"
-msgstr ""
-
-#: app/mailers/user_mailer.rb:56
-msgid "Nuevo hacemos buena pareja"
-msgstr ""
-
-#: app/mailers/user_mailer.rb:63
-msgid "Nueva recomendación"
-msgstr ""
-
-#: app/models/activity.rb:21
-msgid "Tomar un café"
-msgstr ""
-
-#: app/models/activity.rb:22
-msgid "Ir al cine / espectáculo"
-msgstr ""
-
-#: app/models/activity.rb:23
-msgid "Salir de copas"
-msgstr ""
-
-#: app/models/activity.rb:24
-msgid "Actividad deportiva"
-msgstr ""
-
-#: app/models/activity.rb:25
-msgid "Actividad cultural"
-msgstr ""
-
-#: app/models/activity.rb:26
-msgid "Conocerte de verdad"
-msgstr ""
-
-#: app/models/cellove_notification.rb:20
-msgid "¡Le gusta!"
-msgstr ""
-
-#: app/models/cellove_notification.rb:21
-msgid "¡Nuevo visitante!"
-msgstr ""
-
-#: app/models/cellove_notification.rb:22
-msgid "¡Nuevo mensaje!"
-msgstr ""
-
-#: app/models/cellove_notification.rb:23
-msgid "¡Buena pareja!"
-msgstr ""
-
-#: app/models/cellove_notification.rb:24
-msgid "¡Nuevo celestino!"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:5
-msgid "hombre"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:5
-msgid "mujer"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:6
-msgid "hombre buscando una mujer"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:6
-msgid "mujer buscando un hombre"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:6
-msgid "hombre buscando un hombre"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:6
-msgid "mujer buscando una mujer"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:7
-msgid "solter@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:7
-msgid "ocupad@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:7
-msgid "separad@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:7
-msgid "divorciad@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:8
-msgid "casad@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:8
-msgid "viud@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:9
-msgid "tengo hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:9
-msgid "no tengo hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:9
-msgid "no tengo hijos, y no quiero tener"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:10
-msgid "no tengo hijos, pero quiero tener"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:10
-msgid "si tengo hijos, y no quiero tener mas "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:11
-msgid "si tengo hijos, y quiero tener mas "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:11
-msgid "no me gustan los niños"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:12
-#: app/models/concerns/user_constants.rb:68
-#: app/models/concerns/user_constants.rb:93
-msgid "sol@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:12
-#: app/models/concerns/user_constants.rb:68
-#: app/models/concerns/user_constants.rb:93
-msgid "en pareja"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:12
-msgid "con mis hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:13
-msgid "ocasionalmente con mis hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:13
-#: app/models/concerns/user_constants.rb:69
-#: app/models/concerns/user_constants.rb:94
-msgid "acompañad@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:13
-msgid "con mis padres"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:14
-#: app/models/concerns/user_constants.rb:21
-msgid "normal"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:14
-msgid "atractiv@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:14
-msgid "guap@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:14
-msgid "del montón"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:15
-msgid "bohemio"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:15
-msgid "clásico"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:15
-msgid "indie/casual"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:16
-msgid "deportivo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:16
-msgid "formal"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:16
-msgid "a la moda"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:16
-msgid "rockero"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:16
-msgid "pijo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:17
-#: app/models/concerns/user_constants.rb:18
-msgid "marrón"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:17
-#: app/models/concerns/user_constants.rb:18
-msgid "negro"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:17
-msgid "verde"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:17
-#: app/models/concerns/user_constants.rb:18
-msgid "gris"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:17
-msgid "café"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:17
-msgid "azul"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:18
-msgid "rubio"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:18
-msgid "pelirrojo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:19
-msgid "corto"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:19
-msgid "muy corto"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:19
-msgid "largo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:19
-msgid "afeitado"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:20
-msgid "sin pelo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:21
-msgid "delgado"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:21
-msgid "muy bien"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:21
-msgid "atlético"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:21
-msgid "fuerte"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:22
-msgid "con curvas"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:22
-msgid "obeso"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:23
-msgid "No me molesta el humo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:24
-msgid "Fumo pero lo dejaría por mi pareja"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:24
-msgid "Soy fumador social"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:25
-msgid "agnóstico"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:25
-msgid "ateo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:25
-msgid "cristiano"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:25
-msgid "judío"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:26
-msgid "católico"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:26
-msgid "musulmán"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:26
-msgid "indú"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:26
-msgid "budista"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:27
-msgid "hispana"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:27
-msgid "árabe"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:27
-msgid "india"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:27
-msgid "europea"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:28
-msgid "africana"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:28
-msgid "asiática"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:29
-msgid "instituto o inferior"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:29
-msgid "bachillerato"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:29
-msgid "diplomado"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:30
-msgid "módulo profesional"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:30
-msgid "licenciado o superior"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:31
-msgid "Inglés"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:31
-msgid "Español"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:31
-msgid "Francés"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:31
-msgid "Italiano"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:31
-msgid "otro"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:32
-msgid "bajo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:32
-msgid "medio"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:32
-msgid "alto"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:33
-msgid "trabajos artísticos y creativos "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:33
-msgid "banca, financiero"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:33
-msgid "adminsitrativo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:34
-msgid "ordenadores y tecnología"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:34
-msgid "construcción"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:34
-msgid "educación"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:35
-msgid "publicidad, entretenimiento y medios"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:35
-msgid "ejecutivo y gestión "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:35
-msgid "salud"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:36
-msgid "viajes"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:36
-msgid "servicios legales"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:36
-msgid "militar"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:36
-msgid "empleado"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:37
-msgid "empleado público / gobierno"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:37
-msgid "ciencia"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:37
-msgid "ventas y márketing"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:38
-msgid "transporte y logística "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:38
-msgid "desempleado"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:38
-msgid "jubilado"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:39
-msgid "retirado temporalmente"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:39
-msgid "estoy estudiando"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:40
-#: app/models/concerns/user_constants.rb:77
-#: app/models/concerns/user_constants.rb:97
-msgid "vegetariana"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:40
-#: app/models/concerns/user_constants.rb:77
-#: app/models/concerns/user_constants.rb:97
-msgid "vegana"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:40
-#: app/models/concerns/user_constants.rb:77
-#: app/models/concerns/user_constants.rb:97
-msgid "japonesa"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:40
-#: app/models/concerns/user_constants.rb:77
-#: app/models/concerns/user_constants.rb:97
-msgid "mediterránea"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:41
-#: app/models/concerns/user_constants.rb:78
-#: app/models/concerns/user_constants.rb:98
-msgid "italiana"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:41
-#: app/models/concerns/user_constants.rb:78
-#: app/models/concerns/user_constants.rb:98
-msgid "kosher"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:41
-#: app/models/concerns/user_constants.rb:78
-#: app/models/concerns/user_constants.rb:98
-msgid "halal"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:41
-msgid "soy muy maniátic@ con la comida"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:42
-msgid "me gusta todo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:42
-msgid "me adapto fácilmente"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:43
-msgid "me gusta beber solo cuando salgo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:43
-msgid "no bebo alcohol"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:44
-msgid "bebo ocasionalmente"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:44
-msgid "soy bebedor"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:44
-msgid "el alcohol no me sienta bien"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:45
-msgid "Me gustaría casarme"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:45
-msgid "No me gustaría casarme"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:46
-msgid "No creo en el matrimonio"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:46
-msgid "Ya he estado casado y no quiero repetir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:47
-msgid "Ya he estado casado y quiero repetir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:47
-msgid "El matrimonio es algo maravilloso"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:48
-msgid "para mi la religión es esencial en mi vida"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:49
-msgid "me importa poco la religión"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:49
-msgid "no me importa en absoluto la religión"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:50
-msgid "Me gustan los animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:50
-msgid "No me gustan los animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:51
-msgid "Tengo animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:51
-msgid "No tengo animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:52
-msgid "No tengo animales de compañía y soy alérgico"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:53
-msgid "Me gusta mucho salir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:53
-msgid "No me gusta salir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:53
-msgid "Me gusta ir de bares"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:54
-msgid "Me gusta ir a la discoteca"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:54
-msgid "Me gusta ir a tomar algo con amigos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:55
-msgid "Me encanta la fiesta"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:55
-msgid "No me gusta nada la fiesta"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:56
-msgid "Me gusta la música"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:56
-msgid "no me gusta la música"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:57
-msgid "pop"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:57
-msgid "rock"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:57
-msgid "clásica"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:57
-msgid "ópera"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:57
-msgid "heavy"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:58
-msgid "de todo un poco"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:59
-#: app/models/concerns/user_constants.rb:114
-msgid "Me gusta ir al cine"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:59
-msgid "No me gusta ir al cine"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:60
-msgid "ocasionalemnete"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:60
-msgid "muy a menudo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:61
-msgid "romántico"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:61
-msgid "drama"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:61
-msgid "comedia"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:61
-msgid "policíaco"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:62
-msgid "terror"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:66
-msgid "hacer nuevas amistades"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:66
-msgid "salir y pasarlo bien"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:67
-msgid "establecer una relación estable"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:67
-msgid "casarme"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:68
-#: app/models/concerns/user_constants.rb:93
-msgid "con sus hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:69
-#: app/models/concerns/user_constants.rb:94
-msgid "ocasionalmente con sus hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:70
-msgid "no le moleste el humo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:71
-msgid "fume pero lo dejaría por su pareja"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:71
-msgid "sea fumador social"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:72
-msgid "le guste beber solo cuando salga"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:72
-msgid "no beba alcohol"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:73
-msgid "beba ocasionalmente"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:73
-msgid "sea bebedor"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:73
-#: app/models/concerns/user_constants.rb:101
-msgid "el alcohol no le sienta bien"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:74
-msgid "le guste mucho salir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:74
-msgid "no le guste salir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:74
-msgid "le guste ir de bares"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:75
-msgid "le guste ir a la discoteca"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:75
-msgid "le guste ir a tomar algo con amigos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:76
-msgid "le encante la fiesta"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:76
-msgid "no le guste nada la fiesta"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:78
-msgid "sea muy maniátic@ con la comida"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:79
-msgid "le guste todo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:79
-msgid "se adapte fácilmente"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:80
-msgid "la religión sea esencial en su vida"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:81
-msgid "le importe poco la religión"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:81
-msgid "no le importe en absoluto la religión"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:82
-msgid "le gusten los animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:82
-msgid "no le gusten los animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:83
-msgid "tenga animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:83
-msgid "no tenga animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:84
-msgid "no tenga animales de compañía y sea alérgic@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:85
-msgid "tenga hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:85
-msgid "no tenga hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:85
-msgid "no tenga hijos, y no quiera tener"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:86
-msgid "no tenga hijos, pero quiera tener"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:86
-msgid "tenga hijos, y no quiera tener mas "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:87
-msgid "tenga hijos, y quiera tener mas "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:87
-msgid "no le gusten los niños"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:90
-msgid "tiene hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:90
-msgid "no tiene hijos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:90
-msgid "no tiene hijos, y no quiere tener"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:91
-msgid "no tiene hijos, pero quiere tener"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:91
-msgid "tiene hijos, y no quiere tener mas "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:92
-msgid "si tiene hijos, y quiere tener mas "
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:92
-msgid "no le gustan los niños"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:95
-msgid "no le molesta el humo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:96
-msgid "fuma pero lo dejaría por su pareja"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:96
-msgid "es fumador social"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:98
-msgid "es muy maniátic@ con la comida"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:99
-msgid "le gusta todo"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:99
-msgid "se adapta fácilmente"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:100
-msgid "le gusta beber solo cuando sale"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:100
-msgid "no bebe alcohol"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:101
-msgid "bebe ocasionalmente"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:101
-msgid "es bebedor"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:102
-msgid "le gustaría casarse"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:102
-msgid "no le gustaría casarse"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:103
-msgid "no cree en el matrimonio"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:103
-msgid "ya ha estado casad@ y no quiere repetir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:104
-msgid "ya ha estado casad@ y quiere repetir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:104
-msgid "el matrimonio es algo maravilloso"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:105
-msgid "la religión es esencial en su vida"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:106
-msgid "le importa poco la religión"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:106
-msgid "no le importa en absoluto la religión"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:107
-msgid "le gustan los animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:107
-msgid "mo le gustan los animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:108
-msgid "tiene animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:108
-msgid "no tiene animales de compañía"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:109
-msgid "no tiene animales de compañía y es alérgic@"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:110
-msgid "le gusta mucho salir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:110
-msgid "no le gusta salir"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:110
-msgid "le gusta ir de bares"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:111
-msgid "le gusta ir a la discoteca"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:111
-msgid "le gusta ir a tomar algo con amigos"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:112
-msgid "le encanta la fiesta"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:112
-msgid "no me gusta nada la fiesta"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:113
-msgid "le gusta la música"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:113
-msgid "no le gusta la música"
-msgstr ""
-
-#: app/models/concerns/user_constants.rb:114
-msgid "no me gusta ir al cine"
-msgstr ""
-
-#: app/views/activities/_activity-small.html.erb:4
-msgid "Propuesta de actividad:"
-msgstr ""
-
-#: app/views/activities/_activity-small.html.erb:8
-#: app/views/activities/_activity.html.erb:10
-msgid "Actividad rechazada"
-msgstr ""
-
-#: app/views/activities/_activity-small.html.erb:10
-#: app/views/activities/_activity.html.erb:12
-msgid "Actividad aceptada"
-msgstr ""
-
-#: app/views/activities/_activity-small.html.erb:12
-#: app/views/activities/_activity.html.erb:16
-#: app/views/shared/user/_celes-item.html.erb:70
-msgid "Aceptar"
-msgstr ""
-
-#: app/views/activities/_activity-small.html.erb:12
-#: app/views/activities/_activity.html.erb:15
-#: app/views/shared/user/_celes-item.html.erb:71
-msgid "Rechazar"
-msgstr ""
-
-#: app/views/activities/_activity.html.erb:5
-msgid "te ha propuesto..."
-msgstr ""
-
-#: app/views/activities/_activity.html.erb:5
-msgid "has propuesto..."
-msgstr ""
-
-#: app/views/activities/_activity.html.erb:7
-msgid "fecha a concretar contigo."
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:9
-msgid "¡Estás a un paso de aceptar la propuesta de"
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:9
-msgid "para"
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:9
-#: app/views/activities/_modal_answer_proposal.html.erb:28
-msgid "el próximo día"
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:14
-msgid "Aceptar actividad"
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:28
-msgid "te ha propuesto"
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:29
-msgid "Vaya. Parece que NO vas a aceptar la actividad que te propone"
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:29
-msgid "Esperamos que la próxima vez funcione."
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:33
-#: app/views/conversations/_modal_activity.html.erb:36
-#: app/views/shared/user/_modal_recommend-user.html.erb:126
-#: app/views/shared/user/_modal_save-search.html.erb:30
-#: app/views/shared/user/_modal_user-block.html.erb:28
-msgid "Cancelar"
-msgstr ""
-
-#: app/views/activities/_modal_answer_proposal.html.erb:34
-msgid "Rechazar propuesta de actividad"
-msgstr ""
-
-#: app/views/conversations/_conversation.html.erb:5
-#: app/views/conversations/_conversation_full.html.erb:4
-msgid "Años"
-msgstr ""
-
-#: app/views/conversations/_conversation.html.erb:12
-msgid "Eliminar"
-msgstr ""
-
-#: app/views/conversations/_conversation.html.erb:13
-#: app/views/conversations/show.html.erb:45
-#: app/views/conversations/show.html.erb:52
-msgid "Responder"
-msgstr ""
-
-#: app/views/conversations/_conversation_full.html.erb:5
-msgid "Hace "
-msgstr ""
-
-#: app/views/conversations/_conversations.html.erb:3
-msgid "No hay ninguna conversación."
-msgstr ""
-
-#: app/views/conversations/_modal_activity.html.erb:5
-msgid "Proponer una actividad"
-msgstr ""
-
-#: app/views/conversations/_modal_activity.html.erb:11
-msgid "Selecciona una propuesta para compartir..."
-msgstr ""
-
-#: app/views/conversations/_modal_activity.html.erb:27
-msgid "¿Cuando?"
-msgstr ""
-
-#: app/views/conversations/_modal_activity.html.erb:29
-msgid "No quiero especificar cuando"
-msgstr ""
-
-#: app/views/conversations/_modal_activity.html.erb:37
-msgid "Proponer"
-msgstr ""
-
-#: app/views/conversations/_modal_delete.html.erb:9
-msgid "¿Seguro que deseas eliminar el mensaje de"
-msgstr ""
-
-#: app/views/conversations/_modal_delete.html.erb:13
-msgid "No, me lo he pensado mejor"
-msgstr ""
-
-#: app/views/conversations/_modal_delete.html.erb:14
-msgid "Eliminar conversación"
-msgstr ""
-
-#: app/views/conversations/_modal_new_message.html.erb:15
-#: app/views/conversations/_modal_reply_conversation.html.erb:15
-#: app/views/conversations/show.html.erb:45
-msgid "Proponer actividad"
-msgstr ""
-
-#: app/views/conversations/_modal_new_message.html.erb:16
-#: app/views/conversations/_modal_reply_conversation.html.erb:16
-msgid "Cerrar"
-msgstr ""
-
-#: app/views/conversations/_modal_new_message.html.erb:17
-#: app/views/conversations/_modal_reply_conversation.html.erb:17
-msgid "Enviar"
-msgstr ""
-
-#: app/views/conversations/index.html.erb:5
-#: app/views/conversations/show.html.erb:5
-#: app/views/shared/sidebar/_sidebar-messages.html.erb:3
-msgid "Mensajes y actividades"
-msgstr ""
-
-#: app/views/conversations/index.html.erb:14
-#: app/views/conversations/show.html.erb:14
-msgid "Recibidos"
-msgstr ""
-
-#: app/views/conversations/index.html.erb:15
-#: app/views/conversations/show.html.erb:15
-msgid "Enviados"
-msgstr ""
-
-#: app/views/conversations/index.html.erb:16
-#: app/views/conversations/show.html.erb:16
-msgid "Eliminados"
-msgstr ""
-
-#: app/views/conversations/show.html.erb:31
-msgid "Conversación con: "
-msgstr ""
-
-#: app/views/conversations/show.html.erb:46
-msgid "Eliminar hilo"
-msgstr ""
-
-#: app/views/dashboard/_best_rated.html.erb:4
-msgid "Usuari@s con mejor Índice Cellove"
-msgstr ""
-
-#: app/views/dashboard/_best_rated.html.erb:5
-#: app/views/dashboard/_near_most_visited.html.erb:5
-#: app/views/dashboard/_new_users.html.erb:5
-msgid "En un radio de"
-msgstr ""
-
-#: app/views/dashboard/_best_rated.html.erb:5
-#: app/views/dashboard/_near_most_visited.html.erb:5
-#: app/views/dashboard/_new_users.html.erb:5
-msgid "Cambiar radio"
-msgstr ""
-
-#: app/views/dashboard/_best_rated.html.erb:5
-#: app/views/dashboard/_near_most_visited.html.erb:5
-#: app/views/dashboard/_new_users.html.erb:5
-msgid "Ver más"
-msgstr ""
-
-#: app/views/dashboard/_near_most_visited.html.erb:4
-msgid "Usuari@s que te pueden gustar"
-msgstr ""
-
-#: app/views/dashboard/_new_users.html.erb:4
-msgid "Usuari@s nuevos en tu zona"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:4
-msgid "Búsqueda directa:"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:9
-#: app/views/users/_busca.html.erb:20
-#: app/views/users/index.html.erb:15
-msgid "Edad"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:17
-msgid "Población y código postal"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:19
-#: app/views/user_registrations/new.html.erb:56
-#: app/views/users/index.html.erb:28
-msgid "Localidad..."
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:20
-#: app/views/profiles/_buscas.html.erb:31
-#: app/views/profiles/_como.html.erb:18
-msgid "CP"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:24
-#: app/views/users/index.html.erb:41
-msgid "Distancia"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:30
-#: app/views/users/index.html.erb:55
-msgid "Palabra clave"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:39
-#: app/views/users/index.html.erb:83
-msgid "Con foto"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:42
-#: app/views/shared/user/_sorting.html.erb:5
-#: app/views/users/index.html.erb:86
-msgid "Online"
-msgstr ""
-
-#: app/views/dashboard/_quick_search.html.erb:44
-#: app/views/users/index.html.erb:74
-msgid "Buscar"
-msgstr ""
-
-#: app/views/dashboard/show.html.erb:13
-msgid "Últimas conversaciones"
-msgstr ""
-
-#: app/views/dashboard/show.html.erb:13
-msgid "(Ver todos los mensajes)"
-msgstr ""
-
-#: app/views/devise/passwords/new.html.erb:3
-#: app/views/layouts/_header-login.html.erb:3
-msgid "¿Has olvidado tu contraseña?"
-msgstr ""
-
-#: app/views/devise/passwords/new.html.erb:5
-msgid "Introduce el email con el que te registraste y te enviaremos las instrucciones de recuperación."
-msgstr ""
-
-#: app/views/devise/passwords/new.html.erb:14
-msgid "Recuperar contraseña"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:1
-#: app/views/home/index.html.erb:51
-#: app/views/shared/_flat-sidebar.html.erb:19
-#: app/views/shared/_footer.html.erb:8
-msgid "¿Cómo funciona?"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:6
-msgid "¿Cómo<br>funciona?"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:13
-msgid "Encontrar a tu pareja ideal es muy fácil. Solo tienes que %{register_link}, especificar que características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que más se adecuen y mejor encajen con tu perfil ¡para que seas tu quien elija!"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:13
-msgid "registrarte en Cellove"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:15
-msgid "En Cellove lo más importante eres tú y que encuentres exactamente lo que buscas. Por ello, y porque el tiempo es oro, contamos con nuestra función exclusiva llamada"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:15
-#: app/views/flat_pages/matchmakers.html.erb:1
-#: app/views/layouts/_navigation.html.erb:7
-#: app/views/shared/_flat-sidebar.html.erb:21
-#: app/views/shared/_footer.html.erb:10
-#: app/views/shared/sidebar/_sidebar-matchmakers.html.erb:3
-msgid "Celestin@s"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:17
-msgid "A través de Cellove podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones muy potentes para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc."
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:19
-msgid "Registrarse en Cellove es totalmente gratuito"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:19
-msgid "Podrás incluir tus datos y las características de la persona que buscas sin coste alguno. Cellove te proporcionara gratis acceso a los perfiles compatibles y afines a ti. Podrás navegar ilimitadamente por Cellove, 24h al día durante todo el año y visualizar todos los perfiles que desees, características de estos, sus Celestin@s, que es lo que buscan, sus gustos, actividades... ¡Lo que quieras!"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:21
-msgid "Tu panel de control como usuario registrado va actualizándose a tiempo real, si recibes visitas nuevas a tu perfil, nuevos mensajes, propuestas de actividad, etc. De esta forma estarás al corriente de todo, podrás interactuar al instante y sacar máximo provecho de Cellove."
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:23
-msgid "Cellove te ofrece todas las herramientas y todo su potencial para encontar pareja o amistad por tan solo %{link}."
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:23
-msgid "1€ al mes"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:23
-msgid "Sin duda podras hacer realidad tu objetivo más íntimo y emocional, encontrar esa persona especial, sea amor o amistad duradera."
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:25
-msgid "Con Cellove, ¡tus citas ya no serán a ciegas!"
-msgstr ""
-
-#: app/views/flat_pages/how_it_works.html.erb:26
-#: app/views/flat_pages/what.html.erb:19
-msgid "¡Regístrate ahora Gratis!"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:11
-msgid "Son las personas del entorno del usuario registrado que ayudan a encontrar con más confianza y seguridad a esa persona perfecta. Dispone de un panel privado y totalmente Gratis para recomendar a sus usuarios y otorgarle atributos y virtudes que serán visibles por los otros usuarios registrados afines a este."
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:13
-msgid "Hay cuatro tipos de Celestin@s y su finalidad es mejorar el Índice Cellove de los usuarios registrados, por el siguiente orden:"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:16
-msgid "Ex pareja:"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:16
-msgid "todos tenemos ex novios e incluso ex maridos. Puede que los dos no hayáis congeniado pero sois personas fantásticas, capaces de ofrecer amor y amistar y con ganas de encontrar a otra persona especial. ¿Porque no recomendarl@?"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:18
-msgid "Amigo especial:"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:18
-msgid "si tienes algún amigo con el que siempre has tenido mucha química, algo especial,  y quieres ayudarlo a que encuentre el amor... ¡Recomiéndalo en Cellove!"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:20
-msgid "Amigo:"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:20
-msgid "ayuda a tu mejor amig@ a que sea feliz encontrando a su media naranja, ¡apóyale en su búsqueda del amor! ¡Recomiéndalo en Cellove!"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:22
-msgid "Familiar:"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:22
-msgid "¿algún miembro de tu familia está buscando pareja o una amistad especial?  ¿Tienes algún hermano, primo, o incluso a tu padre o tu madre les gustaría encontrar a alguien para compartir de nuevo su vida? ¡No lo dudes y ayúdales! ¡Recomiéndalos en Cellove!"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:25
-msgid "Esta función es completamente Gratis y siempre lo será."
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:26
-msgid "Porque te gusta ayudar a la gente que quieres:"
-msgstr ""
-
-#: app/views/flat_pages/matchmakers.html.erb:28
-msgid "¡Regístrate ahora como Celestin@!"
-msgstr ""
-
-#: app/views/flat_pages/media_press.html.erb:1
-msgid "Media & Prensa"
-msgstr ""
-
-#: app/views/flat_pages/media_press.html.erb:6
-msgid "Media<br>&<br>Prensa"
-msgstr ""
-
-#: app/views/flat_pages/media_press.html.erb:13
-msgid "cede los siguientes archivos para su divulgación y publicación en medios y prensa con finalidades legales y leales a nuestra marca. Ninguno de estos archivos debe ser modificado y/o manipulado. Solo se acepta el ajuste de medidas para su correcta visualización."
-msgstr ""
-
-#: app/views/flat_pages/media_press.html.erb:18
-msgid "Material para descargar"
-msgstr ""
-
-#: app/views/flat_pages/media_press.html.erb:22
-msgid "Logotipo"
-msgstr ""
-
-#: app/views/flat_pages/media_press.html.erb:29
-msgid "Logotipo & Slogan"
-msgstr ""
-
-#: app/views/flat_pages/media_press.html.erb:36
-#: app/views/flat_pages/media_press.html.erb:43
-#: app/views/flat_pages/media_press.html.erb:56
-#: app/views/flat_pages/media_press.html.erb:63
-#: app/views/flat_pages/media_press.html.erb:70
-#: app/views/flat_pages/media_press.html.erb:77
-msgid "Diapositiva"
-msgstr ""
-
-#: app/views/flat_pages/new_contact_form.html.erb:1
-msgid "Contacta"
-msgstr ""
-
-#: app/views/flat_pages/new_contact_form.html.erb:13
-msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad."
-msgstr ""
-
-#: app/views/flat_pages/new_contact_form.html.erb:19
-msgid "Si tienes cualquier duda o pregunta sobre Cellove, su funcionamiento o, simplemente quieres ponerte en contacto con nosotr@s, hazlo a través del siguiente formulario:"
-msgstr ""
-
-#: app/views/flat_pages/new_contact_form.html.erb:25
-msgid "ENVIAR"
-msgstr ""
-
-#: app/views/flat_pages/privacy_policy.html.erb:1
-msgid "Política de Privacidad y Protección de datos de Cellove"
-msgstr ""
-
-#: app/views/flat_pages/privacy_policy.html.erb:11
-msgid ""
-"<p>CELLOVE SOCIAL NETWORK, S.L., sociedad de nacionalidad española con domicilio social en Ronda de Mar, 53, de Vilafranca del Penedès, Barcelona, CP 08720 (España), es la titular del fichero generado con los datos de carácter personal suministrados por los usuarios registrados.</p>\\n"
-"\\n"
-"    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L., es la prestación de los servicios de www.cellove.com, descritos con detalle en estos términos y condiciones generales. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente.</p>\\n"
-"\\n"
-"    <p>La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos. </p>\\n"
-"\\n"
-"    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad del fichero incluye el uso de sus datos para efectuar mejoras en el servicio de www.cellove.com, tareas básicas de administración y comunicación a los usuarios de incidencias del servicio, por parte de CELLOVE SOCIAL NETWORK, S.L., incluyendo asimismo el uso de sus datos por CELLOVE SOCIAL NETWORK, S.L. para enviar ofertas, novedades y eventuales contrataciones, destinadas a sus usuarios, de otros productos y servicios de CELLOVE SOCIAL NETWORK, S.L.</p>\\n"
-"\\n"
-"    <p>El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de las presentes condiciones generales y política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas.</p>\\n"
-"\\n"
-"    <p>Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com.</p>\\n"
-"\\n"
-"    <p>Por la propia naturaleza del servicio prestado por www.cellove.com, los usuarios registrados comprenden y aceptan que el ejercicio de su derecho de cancelación u oposición implicará su cese en su uso de los servicios de facilitación y promoción de relaciones interpersonales prestadas por www.cellove.com. </p>\\n"
-"\\n"
-"    <p>CELLOVE SOCIAL NETWORK, S.L. ha implantado las medidas de seguridad técnicas y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal, evitando su alteración, pérdida, tratamiento y/o acceso no autorizado, de conformidad con el estado de la tecnología.</p>\\n"
-"\\n"
-"    <p>CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la veracidad de los datos facilitados, de los cuales el usuario responderá, en cualquier caso, reservándose CELLOVE SOCIAL NETWORK, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en derecho.</p>"
-msgstr ""
-
-#: app/views/flat_pages/raise_popularity.html.erb:1
-#: app/views/shared/_flat-sidebar.html.erb:20
-msgid "¿Cómo consigo más popularidad?"
-msgstr ""
-
-#: app/views/flat_pages/raise_popularity.html.erb:11
-msgid "Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes  mejorar tu <strong>Índice Cellove</strong> y aprovecharte de sus beneficios."
-msgstr ""
-
-#: app/views/flat_pages/raise_popularity.html.erb:13
-msgid "Propón nuevos %{link} para que te recomienden y así mejorar tu <strong>Índice Cellove</strong>."
-msgstr ""
-
-#: app/views/flat_pages/raise_popularity.html.erb:15
-msgid "i quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}."
-msgstr ""
-
-#: app/views/flat_pages/raise_popularity.html.erb:17
-msgid "Cuanto más elevado sea tu <strong>Índice Cellove</strong>, tus probabilidades de encontrar exactamente lo que buscas mejoran. Cellove te proporciona continuamente esos perfiles que son más compatibles para ti y los perfiles que tengan más %{link}. Por eso, si tu consigues más %{link}, significa que Cellove te promocionará mejor y te ayudará a encontrar a esa persona especial con más efectividad."
-msgstr ""
-
-#: app/views/flat_pages/terms_conditions.html.erb:1
-msgid "Términos y condiciones generales de uso de Cellove"
-msgstr ""
-
-#: app/views/flat_pages/terms_conditions.html.erb:11
-msgid ""
-"<p>Cellove® es Marca registrada de CELLOVE SOCIAL NETWORK, S.L.</p>\\n"
-"    <h4>A. CUESTIONES PRELIMINARES: </h4>\\n"
-"    <h5>1. Objeto de los presentes términos y condiciones generales.</h5>\\n"
-"\\n"
-"    <p>Los presentes Términos y Condiciones tienen por objeto regular el uso de Cellove® Al visitar y/o utilizar los servicios prestados por CELLOVE SOCIAL NETWORK, S.L. a través de su página web www.cellove.com u otras de su propiedad, vinculadas a los servicios aquí establecidos, usted expresamente acepta hacerlo de acuerdo a los presentes Términos y Condiciones Generales de Uso de Cellove y sus modificaciones futuras. CELLOVE SOCIAL NETWORK, S.L. utilizará todos los recursos a su alcance para notificar de forma anticipada a sus usuarios, cualquier modificación en los presentes Términos y Condiciones de Uso, pero es obligación del usuario, visitar periódicamente estos Términos y Condiciones para comprobar si han sido actualizados.</p>\\n"
-"\\n"
-"    <p>CELLOVE SOCIAL NETWORK, S.L. es una sociedad de nacionalidad española, con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), con C.I.F. Nº B-65940686, e inscrita en el Registro Mercantil de Barcelona, Tomo 43573, Folio 214, Hoja  B-432621, Inscripción 1. </p>\\n"
-"\\n"
-"    <h5>2. ¿Qué es Cellove®?</h5>\\n"
-"    <p> Cellove® es una página web que facilita y promueve las relaciones interpersonales a través de Internet.</p>\\n"
-"\\n"
-"    <h5>3. ¿Los servicios de Cellove® son gratuitos?</h5>\\n"
-"    <p> Cellove® ofrece algunos servicios gratuitos y otros de pago, los que se detallarán mas adelante. </p>\\n"
-"\\n"
-"    <h5>4. ¿Quiénes pueden ser usuarios de Cellove®? </h5>\\n"
-"    <p>Pueden ser usuarios de Cellove® todas aquellas personas que sean mayores de edad y que por su libre decisión completen el proceso de registro en Cellove®.</p>\\n"
-"\\n"
-"\\n"
-"    <h4>B. CONDICIONES DE REGISTRO Y USO: </h4>\\n"
-"\\n"
-"    <p>1. Usuario: Podrá ser usuario de Cellove® cualquier persona que sea mayor de edad según la legislación de su país. Para adquirir la condición de usuario, la persona que así lo desee, debe completar todos los datos requeridos en los formularios de registro. Siendo esta la única forma de acceder a los servicios gratuitos de Cellove®. Los servicios de pago de Cellove® requerirán, además de todo lo exigido para los servicios gratuitos, el pago del precio correspondiente a cada producto que el Usuario contrate.</p>\\n"
-"\\n"
-"    <p>2. Acceso: El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos.</p>\\n"
-"\\n"
-"    <p>3. Tipos de Usuarios: Existen diferentes tipos de Usuarios en Cellove®: “Chico”, “Chica”, “Celestino” y “Celestina”. “Chico” y “Chica” son aquellos usuarios que buscan relacionarse con otros Usuarios.  “Celestino” y “Celestina” son aquellos usuarios que vinculados a algún “Chico” y/o “Chica”, promueven el encuentro de estos con otros “Chico” y/o “Chica”.  </p>\\n"
-"\\n"
-"    <p>4. Incorporación de información y contenidos: A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®.\\n"
-"    En los espacios de uso privado para los Usuarios, los datos allí registrados son accesibles única y exclusivamente para los usuarios que la compartan. Nosotros respetamos su derecho a la propiedad del contenido creado o almacenado por usted.  A menos que sea permitido específicamente por usted, su uso de los servicios prestados por Cellove® no le otorga a Cellove®, la licencia para usar, reproducir, adaptar, modificar, publicar o distribuir el contenido creado por usted o almacenarlos en cuentas de uso comercial, o cualquier otro propósito similar. Sin embargo, usted otorga su permiso al acceder a Cellove® para que Cellove®, pueda copiar, distribuir, almacenar, transmitir, volver a formatear, mostrar públicamente y ejecutar públicamente el contenido de su cuenta de usuario solamente en el caso de tener que proporcionarle servicios de Cellove®, previamente autorizados por usted. De forma especial usted acepta que se realice copia de seguridad de sus datos y que estos se conserven en las instalaciones habilitadas por Cellove®, con el fin de proteger su información y la integridad de esta frente a posibles daños del sistema.</p>\\n"
-"\\n"
-"    <p>5. Contenido generado por usuarios: Usted puede transmitir o publicar contenido creado por usted con los servicios ofrecidos a tal efecto por Cellove®. Usted será el único responsable de dicho contenido y las consecuencias de su transmisión o publicación. Todo el contenido hecho público podría ser accesible al público a través de Internet y puede ser rastreado e indexado por los motores de búsqueda. Usted es responsable de asegurarse de no poner ningún contenido privado a disposición del público.</p>\\n"
-"    <p> Cualquier contenido que usted pueda recibir de otros usuarios a través de Cellove®, se le proporciona TAL CUAL para su información y uso personal y que se compromete a no utilizar, copiar, reproducir, distribuir, transmitir, difundir, exhibir, vender, licenciar o explotar el contenido para cualquier propósito, sin el consentimiento expreso y por escrito de la persona que posee los derechos de dicho contenido. En el curso de la utilización de cualquiera de los Servicios, si Usted se encuentra con cualquier contenido con copyright (s) o cualquier otra característica de protección contra copia(s), usted se compromete a no eliminar el aviso de copyright como desactivar dicha función de protección contra copia(s).  Usted acepta expresamente que Cellove® tendrá el derecho de bloquear el acceso o remover dicho contenido puesto a disposición por usted, si Cellove® recibe quejas sobre cualquier ilegalidad o violación de los derechos de terceros en el contenido. Usted consiente expresamente que la determinación de las cuestiones de ilegalidad o violación de los derechos de terceros de este contenido se  determine por el agente designado por Cellove® para este propósito.</p>\\n"
-"\\n"
-"    <p>Para denunciar por ilegalidad o violación de los derechos de terceros un contenido transmitido o publicado al utilizar los Servicios de Cellove®, o desea protestar contra cualquier bloqueo o eliminación del contenido de Cellove® póngase en contacto con el departamento legal de Cellove®, en cellove@cellove.es </p>\\n"
-"\\n"
-"\\n"
-"    <h4>C. OBLIGACIONES: </h4>\\n"
-"\\n"
-"    <p>1. Generales: Es una obligación general de cualquier Usuario, no publicar contenidos ofensivos contra otros usuarios o contra Cellove®. No publicar contenidos que el mismo Usuario pretenda queden en la esfera de su intimidad personal, No infringir la propiedad industrial e intelectual de terceros o de Cellove® y de tomar las precauciones necesarias en los encuentros personales con otro Usuario. </p>\\n"
-"\\n"
-"    <p>2. De Cellove®: Cellove® se obliga a través de una página de Internet, a prestar de manera ininterrumpida, siempre que diferentes cuestiones técnicas se lo permitan, un servicio de facilitación y promoción de encuentros interpersonales. CELLOVE SOCIAL NETWORK, S.L. no tiene por objeto, ser mediador, ni garantiza el cumplimiento de encuentros establecidos entre sus Usuarios. CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la información o contenidos a los que pueda accederse desde los enlaces o hipervínculos a otras páginas web que se inserten en Cellove®.</p>\\n"
-"\\n"
-"    <p>3. Del Usuario: Cualquier Usuario está obligado a no publicar contenidos no ajustados a su persona y/o realidad personal. Es obligación de todos los Usuarios el no publicar datos personales o de contacto de cualquier otro Usuario o de terceros. Es obligación de todos los Usuarios, utilizar Cellove® solo con fines personales y nunca con fines profesionales. Todos los Usuarios deben mantener en secreto la contraseña brindada por Cellove®. Queda expresamente prohibida la incorporación de información y los contenidos:</p>\\n"
-"\\n"
-"    <blockquote>\\n"
-"\\n"
-"      <p>3.1 Que resulten contrarios a la ley, a la moral, a las buenas costumbres, al orden público establecido o que tengan fines ilícitos, prohibidos o que puedan ser lesivos de derechos e intereses de terceros. </p>\\n"
-"\\n"
-"      <p>3.2 Que, sin estar comprendidos en el apartado anterior, puedan considerarse como un trato difamatorio, vejatorio o simplemente desconsiderado para personas o instituciones; o de alguna forma puedan identificarse con supuestos de discriminación de las personas por razón de su nacimiento, raza, origen étnico, sexo, religión, opinión o cualquier otra circunstancia personal o social. </p>\\n"
-"\\n"
-"      <p>3.3 Que cuestionen o pongan en duda el buen nombre, profesionalidad o proyección social de las actividades desarrolladas por Cellove®. En particular, no se puede usar Cellove® para canalizar quejas o reclamaciones relacionadas con los productos y los servicios que comercialice CELLOVE SOCIAL NETWORK, S.L.</p>\\n"
-"    </blockquote>\\n"
-"\\n"
-"    <h4>D. PROPIEDAD INTELECTUAL E INDUSTRIAL:</h4>\\n"
-"\\n"
-"    <p>Los derechos de propiedad intelectual e industrial sobre la plataforma tecnológica, los instrumentos técnicos, sistemas informáticos y contenidos de  (bases de datos, información, imágenes, diseños, gráficos, formatos y códigos en cualquier lenguaje de programación), excepción hecha de los contenidos incorporados por los Usuarios conforme a estas condiciones, corresponden a CELLOVE SOCIAL NETWORK, S.L. por ser de su propiedad o haber obtenido previamente las autorizaciones pertinentes. En consecuencia, queda prohibida su reproducción, distribución, comunicación pública y transformación sin su autorización expresa. Igualmente, queda prohibido todo tipo de uso de los nombres comerciales, marcas o signos distintivos de cualquier clase, titularidad de Cellove® o CELLOVE SOCIAL NETWORK, S.L., sin su autorización expresa. El registro como Usuario en Cellove® no otorga otro derecho, que el de uso de la plataforma conforme a las presentes condiciones de uso, sin conceder a los Usuarios ningún otro derecho que no esté expresamente contemplado en los presentes Términos y Condiciones de Uso.</p>\\n"
-"\\n"
-"    <h4>E. PUBLICIDAD Y COMUNICACIONES COMERCIALES: </h4>\\n"
-"\\n"
-"    <p>Comunicaciones de Cellove®: El uso de Cellove® puede incluir ciertas comunicaciones de Cellove®, tales como anuncios de servicio, mensajes administrativos y boletines informativos. Usted entiende que estas comunicaciones se consideran parte de la utilización de Cellove®. Como parte de nuestra política para ofrecerle total privacidad, ponemos a su disposición la opción de optar por dejar de recibir boletines de noticias. Sin embargo, no podrá optar por dejar de recibir anuncios de servicio y mensajes administrativos. </p>\\n"
-"\\n"
-"    <h4>F. INCUMPLIMIENTO DE LAS CONDICIONES DE USO:</h4>\\n"
-"\\n"
-"    <p>CELLOVE SOCIAL NETWORK, S.L. podrá adoptar las normas y medidas de seguridad que en cada momento considere oportunas para garantizar que el acceso y la participación por parte de los Usuarios de Cellove® se desarrolla de acuerdo con las condiciones de uso y con sujeción a lo dispuesto en la normativa vigente aplicable.\\n"
-"    Sin necesidad de cumplir o realizar ningún trámite o comunicación previa, CELLOVE SOCIAL NETWORK, S.L. podrá, en cualquier momento: </p>\\n"
-"    <ul>\\n"
-"      <li>- Bloquear temporalmente o retirar de forma definitiva la información pública y los contenidos que se incorporen a la red pública de Cellove® cuando tenga la sospecha o la certeza de que los mismos pueden infringir lo dispuesto en las condiciones de uso o en la normativa legal aplicable.</li>\\n"
-"      <li>- Restringir o suspender la participación en la red de Cellove®, de cualquier Usuario e, incluso, expulsarle de forma definitiva en caso de incumplimiento de cualquiera de las condiciones de uso o de la normativa legal aplicable.</li>\\n"
-"    </ul>\\n"
-"\\n"
-"\\n"
-"    <h4>G. RESPONSABILIDADES:</h4>\\n"
-"\\n"
-"    <p>Usted entiende y acepta que el uso del servicio de Cellove® se realiza bajo su propio riesgo. Cellove® NO garantiza bajo ningún concepto la seguridad de sus usuarios en los casos de encuentros personales y/o virtuales, y recomienda adoptar las medidas de seguridad habituales en este tipo de encuentros. Cellove® presta el servicio de forma TAL CUAL y, según disponibilidad. CELLOVE SOCIAL NETWORK, S.L. no garantiza que el servicio no sea  interrumpido, oportuno, seguro o libre de virus. El uso de cualquier material descargado u obtenido a través de los servicios de Cellove® se realiza por su propia cuenta y riesgo y usted será el único responsable de cualquier daño a su sistema informático, teléfono móvil, dispositivo inalámbrico o pérdida o deterioro de datos. Ningún consejo o información, oral o escrita, obtenida por usted de Cellove®, o sus empleados o representantes será una garantía fuera de lo expresamente contenido en estos términos y condiciones. Usted como Usuario, acepta que CELLOVE SOCIAL NETWORK, S.L., en ningún caso, se hace responsable por los daños accidentales, indirectos, especiales, punitivos, o daño alguno, como pueden ser los daños por difamación, daños morales o violación de su intimidad, o de otro tipo de pérdida o daños, derivados desde o causados por su uso o imposibilidad de usar el servicio de Cellove®. CELLOVE SOCIAL NETWORK, S.L. no responderá en caso de daños y perjuicios ocasionados, por negligencia en el uso y custodia de la clave de acceso o mala gestión de la misma por su usuario titular incluyendo los daños por un uso no autorizado por terceros. CELLOVE SOCIAL NETWORK, S.L. no responderá por casos de fuerza mayor. CELLOVE SOCIAL NETWORK, S.L. se exonera de toda responsabilidad por la información y contenidos que los Usuarios incorporen a Cellove®, y por la utilización que de los mismos realicen otros Usuarios o terceros ajenos a la red de Cellove®. </p>\\n"
-"\\n"
-"    <p>Responsabilidad personal de los usuarios: Cada Usuario responderá de los daños y perjuicios causados a CELLOVE SOCIAL NETWORK, S.L. y/o a otros Usuarios y/o a terceros por el incumplimiento de cualquiera de las condiciones de uso. </p>\\n"
-"\\n"
-"\\n"
-"    <h4>H. BAJA DE USUARIO:</h4>\\n"
-"\\n"
-"    <p>El acceso y uso de Cellove® tiene una duración indefinida, con sujeción a las condiciones de uso. En cualquier momento, un usuario podrá instar su baja  a través de la funcionalidad habilitada en el entorno de Cellove®, sin necesidad de ningún otro trámite. Así mismo, Cellove® podrá dar por finalizada la participación de un usuario de Cellove® por incumplimiento de las condiciones aceptadas en este documento. Los datos referidos a los Usuarios, así como la información y los contenidos aportados por estos, se bloquearán, conservándose únicamente para la atención de las responsabilidades que, en su caso, se deriven para CELLOVE SOCIAL NETWORK, S.L. por el tiempo que dure el plazo de prescripción de estas. Cumplido el citado plazo, los datos, información y contenidos mencionados serán suprimidos.</p>\\n"
-"\\n"
-"\\n"
-"    <h4>I. CARGOS Y PAGOS:</h4>\\n"
-"\\n"
-"    <p>El uso de servicios de pago habilitados por Cellove® son los siguientes: </p>\\n"
-"\\n"
-"    <ul>\\n"
-"      <li>a. Pase 1: Permite el uso de cien (100) mensajes privados, un (1) Chat simultáneo, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase 1 es de un euro (1 €) al mes (IVA incluido). </li>\\n"
-"\\n"
-"      <li>b. Pase 2: Permite el uso de trescientos (300) mensajes privados, tres (3) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase 2 es de tres euros (3 €) al mes (IVA incluido).</li>\\n"
-"\\n"
-"      <li>c. Pase 3: Permite el uso ilimitado de mensajes privados, el uso ilimitado de Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación y opciones de privacidad avanzadas. El precio aplicable al contratar el Pase 3 es de seis euros (6 €) al mes (IVA incluido).</li>\\n"
-"\\n"
-"    </ul>\\n"
-"\\n"
-"    <p>La compra se realizará mediante plataforma de pago vía tarjeta de crédito o transferencia bancaria o cualquier otro sistema que Cellove® implante a tal efecto.</p>\\n"
-"\\n"
-"    <p>El uso del servicio libre de pago, habilitado por Cellove®, es el siguiente: </p>\\n"
-"\\n"
-"    <p>Pase free: Permite acceso veinticuatro (24) horas y navegación ilimitada con publicidad en www.cellove.com, y permite recibir \"Mensajes\", \"Chats\", \"Propuesta de actividad\" y \"¿Hacéis buena pareja?\", sin permitir contestar a dichas acciones.</p>\\n"
-"\\n"
-"    <h4>J. PROTECCIÓN DE DATOS:</h4>\\n"
-"\\n"
-"    <p>CELLOVE SOCIAL NETWORK, S.L., sociedad de nacionalidad española con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), es la titular del fichero generado con los datos de carácter personal suministrados por los usuarios registrados.</p>\\n"
-"\\n"
-"    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L, es la prestación de los servicios de www.cellove.com, descritos con detalle en estos términos y condiciones generales. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente.</p>\\n"
-"\\n"
-"    <p>La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos. </p>\\n"
-"\\n"
-"    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad del fichero incluye el uso de sus datos para efectuar mejoras en el servicio de www.cellove.com, tareas básicas de administración y comunicación a los usuarios de incidencias del servicio, por parte de CELLOVE SOCIAL NETWORK, S.L., incluyendo asimismo el uso de sus datos por CELLOVE SOCIAL NETWORK, S.L. para enviar ofertas, novedades y eventuales contrataciones, destinadas a sus usuarios, de otros productos y servicios de CELLOVE SOCIAL NETWORK, S.L.</p>\\n"
-"\\n"
-"    <p>El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de las presentes condiciones generales y política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas.</p>\\n"
-"\\n"
-"    <p>Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com.</p>\\n"
-"\\n"
-"    <p>Por la propia naturaleza del servicio prestado por www.cellove.com, los usuarios registrados comprenden y aceptan que el ejercicio de su derecho de cancelación u oposición implicará su cese en su uso de los servicios de facilitación y promoción de relaciones interpersonales prestadas por www.cellove.com. </p>\\n"
-"\\n"
-"    <p>CELLOVE SOCIAL NETWORK, S.L. ha implantado las medidas de seguridad técnicas y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal, evitando su alteración, pérdida, tratamiento y/o acceso no autorizado, de conformidad con el estado de la tecnología.</p>\\n"
-"\\n"
-"    <p>CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la veracidad de los datos facilitados, de los cuales el usuario responderá, en cualquier caso, reservándose CELLOVE SOCIAL NETWORK, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en derecho.</p>\\n"
-"\\n"
-"    <h4>K. LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h4>\\n"
-"\\n"
-"    <p>Las presentes condiciones de uso, las Condiciones Particulares e instrucciones que, en su caso, CELLOVE SOCIAL NETWORK, S.L. a través de Cellove® establezca y, en general, las relaciones entre CELLOVE SOCIAL NETWORK, S.L. y los usuarios se encuentran sometidas a la legislación y jurisdicción españolas. Para cualquier divergencia surgida de las presentes condiciones de uso, ambas partes se someten expresamente a los juzgados y tribunales de la ciudad de Barcelona con renuncia a su propio fuero, si este fuese otro.</p>"
-msgstr ""
-
-#: app/views/flat_pages/tv_spot_1.html.erb:1
-msgid "Encuentra tu nueva pareja en Cellove"
-msgstr ""
-
-#: app/views/flat_pages/tv_spot_2.html.erb:1
-msgid "Solteros Exigentes"
-msgstr ""
-
-#: app/views/flat_pages/tv_spot_3.html.erb:1
-#: app/views/shared/_flat-sidebar.html.erb:7
-#: app/views/shared/_footer.html.erb:19
-msgid "Amor en línea"
-msgstr ""
-
-#: app/views/flat_pages/tv_spot_4.html.erb:1
-#: app/views/shared/_footer.html.erb:20
-msgid "Ashley Madison"
-msgstr ""
-
-#: app/views/flat_pages/usage.html.erb:1
-#: app/views/matchmaker_registrations/new.html.erb:72
-#: app/views/shared/_footer.html.erb:27
-#: app/views/user_registrations/new.html.erb:94
-msgid "Consejos de uso"
-msgstr ""
-
-#: app/views/flat_pages/usage.html.erb:6
-msgid "Consejos<br>de uso"
-msgstr ""
-
-#: app/views/flat_pages/usage.html.erb:13
-msgid ""
-"<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n"
-"\\n"
-"    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n"
-"\\n"
-"    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\n"
-"Rellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n"
-"\\n"
-"    <p><h3>‘Sé activo’</h3>\\n"
-"Muévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n"
-"\\n"
-"    <p><h3>‘Muéstrate tal como eres’</h3>\\n"
-"Sé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n"
-"    <p><h3>‘Mejora tu Índice Cellove’</h3>\\n"
-"Utiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n"
-"    <p><h3>\\n"
-"‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
-msgstr ""
-
-#: app/views/flat_pages/what.html.erb:2
-#: app/views/flat_pages/what.html.erb:8
-msgid "¿Qué es Cellove?"
-msgstr ""
-
-#: app/views/flat_pages/what.html.erb:12
-msgid ""
-"<p>Cellove es una plataforma online de contactos donde fácilmente puedes conocer a gente nueva, interactuar, ampliar tu círculo de amistades y encontrar la pareja que siempre has soñado tener.</p>\\n"
-"\\n"
-"     <p>Sabemos lo difícil y al mismo tiempo importante que es dar con tu media naranja o con una amistad duradera, por eso ofrecemos nuestra plataforma que facilita y agiliza el contacto directo y eficaz con perfiles afines a ti, con total confianza y seguridad en nuestros sistemas. </p>\\n"
-"\\n"
-"    <p>¿Te imaginas quedar con alguien que nunca has visto pero tener la sensación de que lo conoces de toda la vida? Ahora es posible gracias a Cellove. Podrás tener a tu alcance mucha más información de esa persona a través de su círculo más cercano y de una manera segura y fiable. </p>\\n"
-"\\n"
-"    <p>Con Cellove, ¡tus citas ya no serán a ciegas! </p>"
-msgstr ""
-
-#: app/views/home/index.html.erb:2
-#: app/views/layouts/application.html.erb:12
-#: app/views/layouts/logged_in.html.erb:14
-msgid "Ponle alas al amor"
-msgstr ""
-
-#: app/views/home/index.html.erb:35
-#: app/views/home/index.html.erb:39
-msgid "Registro Usuario Gratis"
-msgstr ""
-
-#: app/views/home/index.html.erb:37
-msgid "Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!"
-msgstr ""
-
-#: app/views/home/index.html.erb:38
-msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
-msgstr ""
-
-#: app/views/home/index.html.erb:38
-msgid "Regístrate GRATIS"
-msgstr ""
-
-#: app/views/home/index.html.erb:43
-msgid "Registros Celestin@ Gratis"
-msgstr ""
-
-#: app/views/home/index.html.erb:45
-msgid "¿Quieres recomendar a un amig@, exnovi@ o familiar?"
-msgstr ""
-
-#: app/views/home/index.html.erb:46
-msgid "Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste."
-msgstr ""
-
-#: app/views/home/index.html.erb:47
-msgid "Registro Celestin@"
-msgstr ""
-
-#: app/views/home/index.html.erb:53
-msgid "Es muy fácil y efectivo. %{link} para encontrar personas afines por edad, gustos, estilo de vida..."
-msgstr ""
-
-#: app/views/home/index.html.erb:53
-msgid "Regístrate"
-msgstr ""
-
-#: app/views/home/index.html.erb:54
-msgid "Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas."
-msgstr ""
-
-#: app/views/home/index.html.erb:55
-msgid "¿Como funciona?"
-msgstr ""
-
-#: app/views/layouts/_header-login.html.erb:2
-msgid "Acceso usuarios"
-msgstr ""
-
-#: app/views/layouts/_header-login.html.erb:11
-msgid "<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza."
-msgstr ""
-
-#: app/views/layouts/_navigation.html.erb:4
-msgid "Registro Gratis"
-msgstr ""
-
-#: app/views/layouts/_navigation.html.erb:10
-#: app/views/users/view.html.erb:1
-msgid "Ver usuarios"
-msgstr ""
-
-#: app/views/layouts/_navigation.html.erb:13
-msgid "TV"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:2
-#: app/views/user_registrations/new.html.erb:2
-msgid "Quiero encontrar"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:6
-msgid "Alta<br>Celestin@<br>Gratis"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:18
-#: app/views/user_registrations/new.html.erb:18
-msgid "¿Quién eres?"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:19
-#: app/views/profiles/matchmaker_show.html.erb:95
-#: app/views/profiles/show.html.erb:68
-#: app/views/user_registrations/new.html.erb:19
-msgid "Me llamo"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:20
-#: app/views/shared/user/_modal_save-search.html.erb:11
-#: app/views/user_registrations/new.html.erb:20
-msgid "Nombre"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:21
-#: app/views/user_registrations/new.html.erb:21
-msgid "Apellidos"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:23
-#: app/views/user_registrations/new.html.erb:23
-msgid "Nickname"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:24
-#: app/views/user_registrations/new.html.erb:24
-msgid "* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s."
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:29
-msgid "Si quieres ayudar a un amig@, exnovi@ o familiar a encontrar a esa persona especial, ¡estás en el lugar adecuado!"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:30
-msgid "Con nuestro servicio Celestin@ completamente gratuito podrás hacerlo, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad, lo cual hará que nuestro sistema de presentación de usuari@s sea más útil y potente para éste."
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:31
-msgid "El objetivo de nuesrta herramienta Celestin@ es facilitar y hacer más accesible nuestro potente sistema para encontrar a esa persona especial, por ejemplo a usuari@s poco experimentados, con prejuicios o que simplemente no conozcan o no se atrevan a utilizar una plataforma de contactos, hoy en día muy extendida y utilizada ya por mucha gente."
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:32
-msgid "El registro como Celestin@ es muy fácil y rápido, en segundos estarás recomendando y el destinatario recibirá un e-mail para que pueda confirmar su registro gratuito como usuario en cellove, a partir de aquí ya contará con tu soporte y podrá acceder a todos los usuari@s y funciones que desee."
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:37
-#: app/views/profiles/show.html.erb:88
-#: app/views/user_registrations/new.html.erb:60
-msgid "¿Cómo eres?"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:40
-#: app/views/user_registrations/new.html.erb:63
-msgid "Sube tu foto"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:46
-msgid "!Subir image más adelante!"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:47
-msgid "* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s."
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:53
-#: app/views/profiles/matchmaker_show.html.erb:71
-#: app/views/profiles/show.html.erb:28
-#: app/views/user_registrations/new.html.erb:75
-msgid "Datos de acceso a Cellove"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:63
-#: app/views/profiles/matchmaker_show.html.erb:84
-#: app/views/profiles/show.html.erb:42
-msgid "Contraseña"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:72
-#: app/views/user_registrations/new.html.erb:94
-msgid "Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los %{consejos_link}, las %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:72
-#: app/views/user_registrations/new.html.erb:94
-msgid "Condiciones generales"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:72
-#: app/views/user_registrations/new.html.erb:94
-msgid "Política de privacidad"
-msgstr ""
-
-#: app/views/matchmaker_registrations/new.html.erb:76
-#: app/views/user_registrations/new.html.erb:98
-msgid "Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove."
-msgstr ""
-
-#: app/views/pictures/_picture_crop.html.erb:4
-msgid "Dimensiona tu imagen"
-msgstr ""
-
-#: app/views/pictures/_picture_gallery.html.erb:1
-msgid "Tus fotos "
-msgstr ""
-
-#: app/views/pictures/_picture_gallery.html.erb:9
-msgid "Eliminar imagen"
-msgstr ""
-
-#: app/views/pictures/_picture_gallery.html.erb:9
-msgid "¿Estas de seguro que quieres borrar la foto?"
-msgstr ""
-
-#: app/views/pictures/_picture_gallery.html.erb:10
-msgid "Marcar como principal"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:4
-msgid "Busco"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:10
-msgid "de entre"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:14
-msgid "años. Para"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:16
-msgid "* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán."
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:20
-msgid "Que "
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:23
-msgid "Que viva"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:25
-msgid "en"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:30
 msgid " cerca del código postal"
 msgstr ""
 
-#: app/views/profiles/_buscas.html.erb:34
-#: app/views/profiles/_buscas.html.erb:77
-msgid "Que sea"
+msgid " de "
 msgstr ""
 
-#: app/views/profiles/_buscas.html.erb:36
-msgid ", con estilo"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:39
-msgid "Que mida entre"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:41
-#: app/views/profiles/_buscas.html.erb:45
-#: app/views/profiles/_buscas.html.erb:53
-#: app/views/profiles/_buscas.html.erb:64
-#: app/views/profiles/_buscas.html.erb:79
-#: app/views/profiles/_como.html.erb:23
-#: app/views/user_registrations/new.html.erb:38
-msgid "y"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:43
-msgid "cms. y pese entre "
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:48
-msgid "con un cuerpo "
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:51
-msgid "De pelo"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:55
-msgid ". Con ojos de color"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:59
-#: app/views/profiles/_buscas.html.erb:82
-msgid "Que"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:67
-msgid "Con una dieta"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:71
-msgid "De étnia"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:73
-msgid "y nacionalidad"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:85
-msgid "Que en su tiempo libre le guste:"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:91
-#: app/views/profiles/_gustos.html.erb:38
-msgid "Deporte"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:95
-#: app/views/profiles/_gustos.html.erb:42
-msgid "Lectura"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:99
-#: app/views/profiles/_gustos.html.erb:46
-#: app/views/users/_gustos.html.erb:61
-msgid "Cine"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:105
-#: app/views/profiles/_gustos.html.erb:52
-msgid "Pasear"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:109
-#: app/views/profiles/_gustos.html.erb:56
-msgid "Playa"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:113
-#: app/views/profiles/_gustos.html.erb:60
-msgid "Montaña"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:119
-#: app/views/profiles/_gustos.html.erb:66
-msgid "Estar tranquilo en casa"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:123
-#: app/views/profiles/_gustos.html.erb:70
-msgid "Estar con la familia"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:127
-#: app/views/profiles/_gustos.html.erb:74
-msgid "Estar con mis amigos"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:133
-msgid "Con estudios"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:136
-msgid "Que domine"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:138
-msgid "idiomas a nivel"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:141
-msgid "Que trabaje en el sector"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:145
-msgid "anuales de"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:146
-msgid "€/año"
-msgstr ""
-
-#: app/views/profiles/_buscas.html.erb:151
-msgid "Guardar preferencias"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:5
-#: app/views/profiles/_como.html.erb:51
-#: app/views/user_registrations/new.html.erb:36
-#: app/views/users/matchmaker_become_user.html.erb:26
-msgid "Soy"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:7
-#: app/views/user_registrations/new.html.erb:43
-#: app/views/users/matchmaker_become_user.html.erb:33
-msgid "Nací el"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:8
-#: app/views/user_registrations/new.html.erb:44
-msgid "Día"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:10
-#: app/views/user_registrations/new.html.erb:46
-msgid "Mes"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:12
-#: app/views/user_registrations/new.html.erb:48
-msgid "Año"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:15
-msgid "Vivo en"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:17
-msgid " y mi código postal es el"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:21
-msgid "Ahora mismo estoy"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:26
-msgid "Vivo"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:30
-msgid "Me considero "
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:32
-msgid ", mido"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:34
-msgid "cms. y peso "
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:38
-msgid "Tengo un cuerpo "
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:41
-msgid "Mis ojos son de color"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:43
-msgid "pelo color"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:45
-#: app/views/users/matchmaker_become_user.html.erb:28
-msgid " y "
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:48
-msgid "Mi estilo es"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:53
 msgid " y"
 msgstr ""
 
-#: app/views/profiles/_como.html.erb:56
-msgid "Tengo nacionalidad "
+msgid " y "
 msgstr ""
 
-#: app/views/profiles/_como.html.erb:58
+msgid " y mi código postal es el"
+msgstr ""
+
 msgid " y soy de étnia"
 msgstr ""
 
-#: app/views/profiles/_como.html.erb:62
-msgid "Mi nivel de estudios es"
+msgid "!Subir image más adelante!"
 msgstr ""
 
-#: app/views/profiles/_como.html.erb:65
-msgid "También hablo"
+msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
 msgstr ""
 
-#: app/views/profiles/_como.html.erb:67
-msgid "a nivel"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:70
-msgid "Trabajo en"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:72
-msgid "y mi nivel de ganancias es"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:79
-msgid "¿Cómo te describirias?"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:80
-msgid "¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:81
-msgid "No desaproveches esta oportunidad..."
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:87
-msgid "¿Cómo te consideras?"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:88
-msgid "Puntua de 1 a 5 cada una de estas características"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:96
-#: app/views/profiles/_dicen.html.erb:3
-#: app/views/shared/user/_modal_recommend-user.html.erb:51
-#: app/views/users/_atributes.html.erb:3
-msgid "Romántico"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:99
-#: app/views/profiles/_dicen.html.erb:8
-#: app/views/shared/user/_modal_recommend-user.html.erb:54
-#: app/views/users/_atributes.html.erb:8
-msgid "Aventurero"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:102
-#: app/views/profiles/_dicen.html.erb:13
-#: app/views/shared/user/_modal_recommend-user.html.erb:57
-#: app/views/users/_atributes.html.erb:13
-msgid "Amable"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:105
-#: app/views/profiles/_dicen.html.erb:18
-#: app/views/profiles/matchmaker_show.html.erb:41
-#: app/views/shared/user/_celes-item.html.erb:24
-#: app/views/shared/user/_modal_recommend-user.html.erb:37
-#: app/views/shared/user/_modal_recommend-user.html.erb:60
-#: app/views/users/_atributes.html.erb:18
-#: app/views/users/be_matchmaker.html.erb:27
-msgid "Familiar"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:108
-#: app/views/profiles/_dicen.html.erb:23
-#: app/views/shared/user/_modal_recommend-user.html.erb:63
-#: app/views/users/_atributes.html.erb:23
-msgid "Trabajador"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:111
-#: app/views/profiles/_dicen.html.erb:28
-#: app/views/shared/user/_modal_recommend-user.html.erb:66
-#: app/views/users/_atributes.html.erb:28
-msgid "Extrovertido"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:114
-#: app/views/profiles/_dicen.html.erb:33
-#: app/views/shared/user/_modal_recommend-user.html.erb:69
-#: app/views/users/_atributes.html.erb:33
-msgid "Generoso"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:117
-#: app/views/profiles/_dicen.html.erb:38
-#: app/views/shared/user/_modal_recommend-user.html.erb:72
-#: app/views/users/_atributes.html.erb:38
-msgid "Reservado"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:120
-#: app/views/profiles/_dicen.html.erb:43
-#: app/views/shared/user/_modal_recommend-user.html.erb:75
-#: app/views/users/_atributes.html.erb:43
-msgid "Sociable"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:123
-#: app/views/profiles/_dicen.html.erb:48
-#: app/views/shared/user/_modal_recommend-user.html.erb:78
-#: app/views/users/_atributes.html.erb:48
-msgid "Tranquilo"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:126
-#: app/views/profiles/_dicen.html.erb:53
-#: app/views/shared/user/_modal_recommend-user.html.erb:81
-#: app/views/users/_atributes.html.erb:53
-msgid "Exigente"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:129
-#: app/views/profiles/_dicen.html.erb:58
-#: app/views/shared/user/_modal_recommend-user.html.erb:84
-#: app/views/users/_atributes.html.erb:58
-msgid "Orgulloso"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:139
-#: app/views/profiles/_dicen.html.erb:65
-#: app/views/shared/user/_modal_recommend-user.html.erb:88
-#: app/views/users/_atributes.html.erb:66
-msgid "Solitario"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:142
-#: app/views/profiles/_dicen.html.erb:70
-#: app/views/shared/user/_modal_recommend-user.html.erb:91
-#: app/views/users/_atributes.html.erb:71
-msgid "Tenaz"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:145
-#: app/views/profiles/_dicen.html.erb:75
-#: app/views/shared/user/_modal_recommend-user.html.erb:94
-#: app/views/users/_atributes.html.erb:76
-msgid "Atento"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:148
-#: app/views/profiles/_dicen.html.erb:80
-#: app/views/shared/user/_modal_recommend-user.html.erb:97
-#: app/views/users/_atributes.html.erb:81
-msgid "Bienhumorado"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:151
-#: app/views/profiles/_dicen.html.erb:85
-#: app/views/shared/user/_modal_recommend-user.html.erb:100
-#: app/views/users/_atributes.html.erb:86
-msgid "Espontáneo"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:154
-#: app/views/profiles/_dicen.html.erb:90
-#: app/views/shared/user/_modal_recommend-user.html.erb:103
-#: app/views/users/_atributes.html.erb:91
-msgid "Inquieto"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:157
-#: app/views/profiles/_dicen.html.erb:95
-#: app/views/shared/user/_modal_recommend-user.html.erb:106
-#: app/views/users/_atributes.html.erb:96
-msgid "Sensible"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:160
-#: app/views/profiles/_dicen.html.erb:100
-#: app/views/shared/user/_modal_recommend-user.html.erb:109
-#: app/views/users/_atributes.html.erb:101
-msgid "Tímido"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:163
-#: app/views/profiles/_dicen.html.erb:105
-#: app/views/shared/user/_modal_recommend-user.html.erb:112
-#: app/views/users/_atributes.html.erb:106
-msgid "Posesivo"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:166
-#: app/views/profiles/_dicen.html.erb:110
-#: app/views/shared/user/_modal_recommend-user.html.erb:115
-#: app/views/users/_atributes.html.erb:111
-msgid "Celoso"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:169
-#: app/views/profiles/_dicen.html.erb:115
-#: app/views/shared/user/_modal_recommend-user.html.erb:118
-#: app/views/users/_atributes.html.erb:116
-msgid "Fiel"
-msgstr ""
-
-#: app/views/profiles/_como.html.erb:178
-msgid "Guardar cambios"
-msgstr ""
-
-#: app/views/profiles/_dicen.html.erb:129
-msgid "¡Consigue más puntos!"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:4
-#: app/views/users/_busca.html.erb:125
-#: app/views/users/_gustos.html.erb:4
-msgid "Dieta"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:5
-msgid "Me gusta la comida"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:8
-msgid "Hábitos"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:12
-#: app/views/users/_gustos.html.erb:26
-msgid "Matrimonio"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:15
-#: app/views/users/_busca.html.erb:160
-#: app/views/users/_gustos.html.erb:33
-msgid "Animales"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:18
-msgid "Ocio"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:22
-msgid ", me gusta el"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:27
-msgid ", de género"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:31
-msgid "En mi tiempo libre me gusta:"
-msgstr ""
-
-#: app/views/profiles/_gustos.html.erb:85
-msgid "Guardar gustos"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:7
-msgid "¡Hola Celestin@!"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:18
-msgid "Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:26
-#: app/views/shared/user/_celes-item.html.erb:9
-#: app/views/users/be_matchmaker.html.erb:12
-msgid "Ex pareja"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:31
-#: app/views/users/be_matchmaker.html.erb:17
-msgid "Amigo especial"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:36
-#: app/views/shared/user/_celes-item.html.erb:19
-#: app/views/shared/user/_modal_recommend-user.html.erb:32
-#: app/views/users/be_matchmaker.html.erb:22
-msgid "Amigo"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:48
-#: app/views/users/be_matchmaker.html.erb:34
-msgid "Recomendar usuari@ registrad@"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:49
-#: app/views/users/be_matchmaker.html.erb:35
-msgid "Recomendar usuari@ nuev@"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:55
-#: app/views/users/be_matchmaker.html.erb:41
-msgid "Personas a las que haces de Celestin@"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:76
-#: app/views/profiles/show.html.erb:34
-msgid "Email"
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:98
-msgid "pero quiero que mi nombre para mostrar sea "
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:100
-#: app/views/profiles/show.html.erb:73
-msgid "* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real."
-msgstr ""
-
-#: app/views/profiles/matchmaker_show.html.erb:108
-#: app/views/profiles/show.html.erb:49
-msgid "Modificar datos de acceso"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:4
-msgid "Modalidades de uso"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:8
-msgid "Elige entre uno de nuestros planes:"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:9
-msgid "Contrata una de nuestras tres modalidades de uso en Cellove para sacarle el máximo partido de todas las herramientas, facilidades que te ofrecemos. Elije la modalidad que mejor se adapte a tus necesidades y disfruta de Cellove sin limitaciones ni restricciones de ningún tipo."
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:14
-msgid "8€/mes"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:16
-msgid "Ilimitados mensajes privados"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:17
-msgid "Ilimitados chats simultáneo"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:18
-msgid "Capacidad ilimitada"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:19
-msgid "Demás recursos ilimitados"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:20
-msgid "Navegación ilimitada"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:21
-msgid "Opc. de privacidad avanzadas"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:22
-msgid "Navegación oculta"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:25
-msgid "Contratar por 96€/año"
-msgstr ""
-
-#: app/views/profiles/pay.html.erb:31
-msgid "Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante."
-msgstr ""
-
-#: app/views/profiles/show.html.erb:6
-msgid "Tu perfil"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:8
-#: app/views/shared/sidebar/_sidebar-profile.html.erb:15
-#: app/views/users/cellove_index.html.erb:5
-msgid "Índice Cellove"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:8
-msgid "¡Mejora tu índice!"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:8
-msgid "Perfil %{progress}%% completado"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:29
-msgid "Modifica aquí tus datos de acceso a Cellove"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:65
-msgid "¿Quien eres?"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:71
-msgid "pero quiero que mi nombre para mostrar sea"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:76
-msgid "Modificar datos personales"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:89
-msgid "Tus gustos"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:90
-msgid "Qué buscas"
-msgstr ""
-
-#: app/views/profiles/show.html.erb:91
-msgid "Que dicen de ti"
-msgstr ""
-
-#: app/views/shared/_confirmation_pending_form.html.erb:4
-msgid "Que no te molesten"
-msgstr ""
-
-#: app/views/shared/_confirmation_pending_form.html.erb:6
-msgid "No recibiras notificaciones hasta que no hayas confirmado tu cuenta de email."
-msgstr ""
-
-#: app/views/shared/_confirmation_pending_form.html.erb:7
-msgid "Estar solo visible para usuari@s de entre:"
-msgstr ""
-
-#: app/views/shared/_confirmation_pending_form.html.erb:8
-msgid "a"
-msgstr ""
-
-#: app/views/shared/_confirmation_pending_form.html.erb:9
-msgid "años."
-msgstr ""
-
-#: app/views/shared/_confirmation_pending_form.html.erb:10
-msgid "Guardar"
-msgstr ""
-
-#: app/views/shared/_flat-sidebar.html.erb:3
-#: app/views/shared/_footer.html.erb:15
-msgid "Anuncios TV"
-msgstr ""
-
-#: app/views/shared/_flat-sidebar.html.erb:5
-msgid "Encuentra tu nueva pareja"
-msgstr ""
-
-#: app/views/shared/_flat-sidebar.html.erb:6
-#: app/views/shared/_flat-sidebar.html.erb:8
-#: app/views/shared/_footer.html.erb:18
-msgid "Solteros exigentes"
-msgstr ""
-
-#: app/views/shared/_flat-sidebar.html.erb:16
-#: app/views/shared/_footer.html.erb:5
-msgid "Sobre Cellove"
-msgstr ""
-
-#: app/views/shared/_flat-sidebar.html.erb:18
-#: app/views/shared/_footer.html.erb:7
-msgid "¿Qué es?"
-msgstr ""
-
-#: app/views/shared/_footer.html.erb:9
-msgid "¿Cómo consigo popularidad?"
-msgstr ""
-
-#: app/views/shared/_footer.html.erb:17
-msgid "Encuentra pareja"
-msgstr ""
-
-#: app/views/shared/_footer.html.erb:25
-msgid "Legal y conducta"
-msgstr ""
-
-#: app/views/shared/_footer.html.erb:28
-msgid "Términos y condiciones"
-msgstr ""
-
-#: app/views/shared/_footer.html.erb:29
-msgid "Política de Privacidad"
-msgstr ""
-
-#: app/views/shared/_footer.html.erb:36
-msgid "Contacto"
-msgstr ""
-
-#: app/views/shared/_footer.html.erb:37
-msgid "Media & prensa"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:3
-msgid "Se han enamorado en Cellove %{link}"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:3
-#: app/views/users/view.html.erb:6
-#: app/views/users/view.html.erb:16
-msgid "¡Regístrate Gratis!"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:4
-msgid "Ver"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:8
-msgid "Carlos & Maite"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:11
-msgid "Una amiga me hizo de Celestina y lo probé, conocí a Carlos, después de hablar durante unos días, quedamos para tomar un café y ahora estamos saliendo juntos."
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:15
-msgid "Anna & Joan"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:18
-msgid "Visité su perfil y le envié un mensaje, después de varias ocasiones escribiéndonos, decidimos quedar para cenar y desde entonces, ¡no nos hemos separado!."
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:22
-msgid "Fran & Irene"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:25
-msgid "Era un poco excéptica pero mi hija me hizo de Celestina, conocí a Fran y a parte de ser grandes amigos, también compartimos muchas cosas, es una suerte habernos conocido."
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:29
-msgid "Esther & Victor"
-msgstr ""
-
-#: app/views/shared/_in_love.html.erb:32
-msgid "En mi día a día no tenía ocasion de conocer a gente interesante, en Cellove le conocí y supe desde el primer momento que él era esa persona que necesitaba en mi vida."
-msgstr ""
-
-#: app/views/shared/_related_list.html.erb:4
-msgid "Afines cerca de ti..."
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-activity.html.erb:3
-msgid "Actividad reciente"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-activity.html.erb:10
-#: app/views/users/hits.html.erb:3
-msgid "Me han visitado"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-activity.html.erb:11
-#: app/views/user_mailer/new_message.html.erb:9
-#: app/views/users/likes.html.erb:3
-msgid "Les he gustado"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-activity.html.erb:12
-#: app/views/users/nice_couple.html.erb:3
-msgid "Hacemos buena pareja"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-activity.html.erb:13
-#: app/views/shared/user/_main-nav.html.erb:5
-msgid "Mensajes"
-msgstr "Missatges"
-
-#: app/views/shared/sidebar/_sidebar-activity.html.erb:14
-#: app/views/shared/user/_main-nav.html.erb:6
-msgid "Actividades"
-msgstr "Activitats"
-
-#: app/views/shared/sidebar/_sidebar-ads.html.erb:5
-msgid "Crear anuncio"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-matchmakers.html.erb:6
-msgid "Mis celestin@s"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-matchmakers.html.erb:7
-msgid "Quiero ser celestin@"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-matchmakers.html.erb:8
-#: app/views/users/cellove_index.html.erb:18
-msgid "¡Mejora tu Índice Cellove!"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-profile.html.erb:23
-msgid "Tu perfil <em>(%{progress}%% completo)</em>"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-profile.html.erb:29
-msgid "Te gustan <em>(%{count})</em>"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-searches.html.erb:5
-msgid "Tus búsquedas"
-msgstr ""
-
-#: app/views/shared/sidebar/_sidebar-searches.html.erb:9
-msgid "¿Estás seguro de que deseas eliminar esta búsqueda?"
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:14
-#: app/views/shared/user/_modal_recommend-user.html.erb:27
-msgid "Amigo Especial"
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:40
-msgid "Eliminar celestin@"
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:43
-msgid "Eliminar recomendación"
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:46
-msgid "Hace"
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:56
-msgid "Tu recomendación está pendiente de confirmar."
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:58
-msgid "Has desactivado esta recomendación."
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:60
-msgid "Tu recomendación ha sido rechazada."
-msgstr ""
-
-#: app/views/shared/user/_celes-item.html.erb:62
-msgid "Tu recomendación ha sido aceptada."
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:5
-msgid "Somos %{count} usuari@s. ¡Gracias por vuestra confianza!"
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:10
-msgid "Ponle color"
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:23
-msgid "Castellano"
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:24
-msgid "Català"
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:36
-msgid "Editar mi perfil"
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:37
-msgid "Desconectar"
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:41
-msgid "Conviértete en usuari@"
-msgstr ""
-
-#: app/views/shared/user/_header-actions.html.erb:43
-msgid "Cambiar configuración"
-msgstr ""
-
-#: app/views/shared/user/_main-nav.html.erb:3
-msgid "Visitas"
-msgstr "Visites"
-
-#: app/views/shared/user/_main-nav.html.erb:4
-msgid "¡Les he gustado!"
-msgstr "Els agrado!"
-
-#: app/views/shared/user/_main-nav.html.erb:7
-msgid "Búsquedas"
-msgstr "Cerques"
-
-#: app/views/shared/user/_modal_delete-celestino.html.erb:9
-msgid "Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil y no podrás recomendarlo de nuevo. ¿Te lo has pensado bien?"
-msgstr ""
-
-#: app/views/shared/user/_modal_delete-celestino.html.erb:11
-msgid "Estás a punto de eliminar a un Celestin@ de tu lista. Si lo haces, lo que ha dicho sobre ti desaparecerá de tu perfil. ¿Te lo has pensado bien?"
-msgstr ""
-
-#: app/views/shared/user/_modal_delete-celestino.html.erb:16
-msgid "No, creo que lo consideraré de nuevo"
-msgstr ""
-
-#: app/views/shared/user/_modal_delete-celestino.html.erb:17
-msgid "Si, quiero eliminarlo"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:5
-msgid "¡Conviértete en Celestin@!"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:6
-msgid "¿Quieres recomendar a alguien? ¡Cuéntanos cómo es!"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:9
-msgid "Sus datos"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:14
-msgid "Su Email"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:18
-msgid "¿Qué relación tenéis?"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:22
-msgid "Ex Pareja"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:42
-msgid "¿Cómo le describirías?"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:43
-msgid "Es muy majo y muy flamenco."
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:47
-msgid "Sus atributos"
-msgstr ""
-
-#: app/views/shared/user/_modal_recommend-user.html.erb:127
-msgid "Recomendar usuari@"
-msgstr ""
-
-#: app/views/shared/user/_modal_save-search.html.erb:5
-#: app/views/shared/user/_modal_save-search.html.erb:31
-#: app/views/users/index.html.erb:111
-msgid "Guarda búsqueda"
-msgstr ""
-
-#: app/views/shared/user/_modal_save-search.html.erb:6
-msgid "Indicanos el nombre con el que quieres guardar esta búsqueda para poderla utilizar cuando quieras de forma más ágil y con acceso directo en la zona izquierda de tu perfil."
-msgstr ""
-
-#: app/views/shared/user/_modal_user-block.html.erb:5
-msgid "¿Deseas bloquear a este usuario?"
-msgstr ""
-
-#: app/views/shared/user/_modal_user-block.html.erb:10
-msgid "Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a %{name}, desde tu apartado de configuración."
-msgstr ""
-
-#: app/views/shared/user/_modal_user-block.html.erb:23
-msgid "No quiero que me vea más"
-msgstr ""
-
-#: app/views/shared/user/_modal_user-block.html.erb:29
-msgid "BLOQUEAR"
-msgstr ""
-
-#: app/views/shared/user/_profile-action-links.html.erb:3
-#: app/views/users/_user.html.erb:18
-#: app/views/users/_user.html.erb:33
-msgid "Enviar mensaje"
-msgstr ""
-
-#: app/views/shared/user/_profile-action-links.html.erb:4
-msgid "Chatear"
-msgstr ""
-
-#: app/views/shared/user/_profile-action-links.html.erb:6
-#: app/views/shared/user/_profile-action-links.html.erb:10
-msgid "¡No me gusta!"
-msgstr ""
-
-#: app/views/shared/user/_profile-action-links.html.erb:7
-#: app/views/shared/user/_profile-action-links.html.erb:9
-msgid "¡Me gusta!"
-msgstr ""
-
-#: app/views/shared/user/_sidebar_profile-celestino.html.erb:15
-msgid "@Celestino"
-msgstr ""
-
-#: app/views/shared/user/_sidebar_profile-celestino.html.erb:18
-msgid "Mi perfil de Celestin@"
-msgstr ""
-
-#: app/views/shared/user/_sidebar_profile-celestino.html.erb:19
-msgid "¡Conviértete en usuari@!"
-msgstr ""
-
-#: app/views/shared/user/_sorting.html.erb:3
-msgid "Ordenar por..."
-msgstr ""
-
-#: app/views/shared/user/_sorting.html.erb:7
-msgid "Fecha de alta"
-msgstr ""
-
-#: app/views/shared/user/_sorting.html.erb:8
-msgid "Más cercanos"
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:6
-msgid "Registro<br>Usuari@<br>Gratis!"
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:29
-#: app/views/users/matchmaker_become_user.html.erb:19
-msgid "Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu."
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:30
-#: app/views/users/matchmaker_become_user.html.erb:20
-msgid "Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas."
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:31
-#: app/views/users/matchmaker_become_user.html.erb:21
-msgid "Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes."
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:45
-#: app/views/user_registrations/new.html.erb:47
-#: app/views/user_registrations/new.html.erb:55
-#: app/views/users/matchmaker_become_user.html.erb:35
-#: app/views/users/matchmaker_become_user.html.erb:37
-msgid "de"
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:49
-#: app/views/users/matchmaker_become_user.html.erb:39
-msgid "y vivo en"
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:50
-msgid "Selecciona..."
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:53
-msgid "Mi codigo postal es el"
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:69
-msgid "¡Subir imagen más adelante!"
-msgstr ""
-
-#: app/views/user_registrations/new.html.erb:70
-msgid "Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s."
-msgstr ""
-
-#: app/views/users/_atributes.html.erb:122
-msgid "%{name} aún no ha definido sus atributos"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:6
-msgid "Busca"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:13
-#: app/views/users/_como.html.erb:2
-msgid "Estado civil"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:27
-msgid "Relación"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:34
-#: app/views/users/_como.html.erb:7
-msgid "Hijos"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:41
-msgid "Viva"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:48
-msgid "Fisico"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:55
-#: app/views/users/_como.html.erb:61
-msgid "Estilo"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:62
-#: app/views/users/_como.html.erb:25
-#: app/views/users/index.html.erb:47
-msgid "Altura"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:69
-#: app/views/users/_como.html.erb:31
-msgid "Peso"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:76
-#: app/views/users/index.html.erb:70
-msgid "Complexión"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:83
-#: app/views/users/_como.html.erb:43
-msgid "Ojos"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:90
-#: app/views/users/_como.html.erb:49
-msgid "Pelo"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:97
-#: app/views/users/_como.html.erb:55
-msgid "Peinado"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:104
-#: app/views/users/_gustos.html.erb:12
-msgid "Tabaco"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:111
-#: app/views/users/_gustos.html.erb:19
-msgid "Alcohol"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:118
-#: app/views/users/_gustos.html.erb:40
-msgid "Salir"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:132
-#: app/views/users/_como.html.erb:85
-msgid "Étnia"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:139
-msgid "Nacionalidad"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:146
-#: app/views/users/_como.html.erb:67
-msgid "Religión"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:153
-#: app/views/users/_como.html.erb:73
-msgid "Devoción religiosa"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:167
-msgid "Le guste"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:170
-#: app/views/users/_gustos.html.erb:85
-msgid "el deporte<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:171
-#: app/views/users/_gustos.html.erb:86
-msgid "la lectura<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:172
-#: app/views/users/_gustos.html.erb:87
-msgid "el cine<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:173
-#: app/views/users/_gustos.html.erb:88
-msgid "estar tranquil@ en casa<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:174
-#: app/views/users/_gustos.html.erb:89
-msgid "pasear<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:175
-#: app/views/users/_gustos.html.erb:90
-msgid "la montaña<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:176
-#: app/views/users/_gustos.html.erb:91
-msgid "la playa<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:177
-#: app/views/users/_gustos.html.erb:92
-msgid "estar con la familia<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:178
-#: app/views/users/_gustos.html.erb:93
-msgid "estar con sus amigos<br>"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:184
-msgid "Estudios"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:191
-msgid "Idiomas"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:198
-msgid "Nivel"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:205
-msgid "Trabajo"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:212
-msgid "Ingresos anuales"
-msgstr ""
-
-#: app/views/users/_busca.html.erb:220
 msgid "%{name} aún no ha definido que busca"
 msgstr ""
 
-#: app/views/users/_como.html.erb:13
-msgid "Vive"
+msgid "%{name} aún no ha definido sus atributos"
 msgstr ""
 
-#: app/views/users/_como.html.erb:19
-msgid "Físico"
-msgstr ""
-
-#: app/views/users/_como.html.erb:37
-msgid "Cuerpo"
-msgstr ""
-
-#: app/views/users/_como.html.erb:79
-msgid "acionalidad"
-msgstr ""
-
-#: app/views/users/_gustos.html.erb:47
-msgid "Música"
-msgstr ""
-
-#: app/views/users/_gustos.html.erb:54
-msgid "Género muscial preferido"
-msgstr ""
-
-#: app/views/users/_gustos.html.erb:68
-msgid "Frecuencia"
-msgstr ""
-
-#: app/views/users/_gustos.html.erb:75
-msgid "Género preferido"
-msgstr ""
-
-#: app/views/users/_gustos.html.erb:100
 msgid "%{name} aún no ha definido sus gustos."
 msgstr ""
 
-#: app/views/users/_user.html.erb:19
-#: app/views/users/_user.html.erb:34
-msgid "Chat"
-msgstr ""
-
-#: app/views/users/_user.html.erb:21
-#: app/views/users/_user.html.erb:25
-#: app/views/users/_user.html.erb:35
-msgid "Ya no me gusta"
-msgstr ""
-
-#: app/views/users/_user.html.erb:45
-msgid "Tu dices:"
-msgstr ""
-
-#: app/views/users/_user.html.erb:46
-msgid "Ha dicho:"
-msgstr ""
-
-#: app/views/users/be_matchmaker.html.erb:4
-msgid "Quiero ser Celestin@"
-msgstr ""
-
-#: app/views/users/be_matchmaker.html.erb:4
-msgid "Realizar recomendación"
-msgstr ""
-
-#: app/views/users/be_matchmaker.html.erb:7
-msgid "Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:9
-msgid "Tu indice Cellove es"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:21
-msgid "¿Cómo se calcula?"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:22
-msgid "Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove."
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:23
-msgid "Eso incluye desde las visitas a tu perfil hasta el número de mensajes enviados/recibidos."
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:24
-msgid "Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que invitas o cuantos celestinos tengas."
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:26
-msgid "¿Quieres mejorarlo?"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:27
-msgid "Tienes muchas formas de hacerlo:"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:29
-msgid "Completa tu perfil"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:29
-msgid "al"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:30
-msgid "Invita a tus amigos"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:30
-msgid "a formar parte de Cellove"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:31
-msgid "Consigue Celestinos"
-msgstr ""
-
-#: app/views/users/cellove_index.html.erb:33
-msgid "Pero sobretodo, ven a menudo ;-)"
-msgstr ""
-
-#: app/views/users/index.html.erb:7
-msgid "Encuentra personas afines a tí"
-msgstr ""
-
-#: app/views/users/index.html.erb:27
-msgid "Localidad"
-msgstr ""
-
-#: app/views/users/index.html.erb:31
-msgid "Código postal"
-msgstr ""
-
-#: app/views/users/index.html.erb:64
-msgid "Afinidad"
-msgstr ""
-
-#: app/views/users/index.html.erb:71
-msgid "Complexión..."
-msgstr ""
-
-#: app/views/users/index.html.erb:89
-msgid "Fumador"
-msgstr ""
-
-#: app/views/users/index.html.erb:92
-msgid "Con hijos"
-msgstr ""
-
-#: app/views/users/index.html.erb:105
-msgid "Resultados de la búsqueda"
-msgstr ""
-
-#: app/views/users/likes_of_mine.html.erb:3
-msgid "Te gustan"
-msgstr ""
-
-#: app/views/users/matchmaker_become_user.html.erb:5
-msgid "¡Convertirte en usuari@ de Cellove es muy fácil!"
-msgstr ""
-
-#: app/views/users/matchmaker_become_user.html.erb:16
-msgid "Registro de usuario"
-msgstr ""
-
-#: app/views/users/matchmaker_become_user.html.erb:43
-msgid "Mi código postal es el"
-msgstr ""
-
-#: app/views/users/matchmaker_become_user.html.erb:53
-msgid "¡Registrarme Gratis!"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:5
-msgid "Mis Celestin@s"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:5
-msgid "Tu índice es del %{index}%% y tienes %{count} Celestin@s."
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:6
-msgid "¡Mejora tu índice Cellove!"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:15
-msgid "Confirmados"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:16
-msgid "Por confirmar"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:17
-msgid "Atributos"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:18
-msgid "Mejora tu índice Cellove"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:54
-msgid "¿Quieres aumentar tu indice Cellove?"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:55
-msgid "Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos."
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:64
-msgid "¿Quieres proponer un Celestin@?"
-msgstr ""
-
-#: app/views/users/my_matchmakers.html.erb:65
-msgid "Propón un nuevo celestin@ para que te recomiende y gana más puntos."
-msgstr ""
-
-#: app/views/users/settings.html.erb:7
-msgid "Configuración"
-msgstr ""
-
-#: app/views/users/settings.html.erb:8
-msgid "Desde aquí podrás configurar tus parámetros en Cellove"
-msgstr ""
-
-#: app/views/users/settings.html.erb:15
-msgid "Visibilidad"
-msgstr ""
-
-#: app/views/users/settings.html.erb:16
-msgid "¿Cómo de real quieres que sea el tiempo real?"
-msgstr ""
-
-#: app/views/users/settings.html.erb:19
-msgid "Mostrar a los demás usuarios si estoy conectado"
-msgstr ""
-
-#: app/views/users/settings.html.erb:30
-msgid "Permitir que cualquiera pueda chatear conmigo"
-msgstr ""
-
-#: app/views/users/settings.html.erb:38
-msgid "Sólo usuarios de mi área (menos de 50km)"
-msgstr ""
-
-#: app/views/users/settings.html.erb:46
-msgid "Sólo perfiles que conicidan con mis preferencias"
-msgstr ""
-
-#: app/views/users/settings.html.erb:54
-msgid "Sólo perfiles que me han gustado"
-msgstr ""
-
-#: app/views/users/settings.html.erb:62
-msgid "Sólo perfiles \"hacemos buena pareja\""
-msgstr ""
-
-#: app/views/users/settings.html.erb:70
-msgid "Sólo a perfiles con los que haya mantenido una conversación previa"
-msgstr ""
-
-#: app/views/users/settings.html.erb:78
-msgid "Sólo usuarios a los que haya valorado el perfil"
-msgstr ""
-
-#: app/views/users/settings.html.erb:88
-msgid "Notificaciones por email"
-msgstr ""
-
-#: app/views/users/settings.html.erb:89
-msgid "¿Que notificaciones quieres recibir?"
-msgstr ""
-
-#: app/views/users/settings.html.erb:92
-msgid "No enviar notificaciones si estoy online"
-msgstr ""
-
-#: app/views/users/settings.html.erb:99
-msgid "Cuando alguien visite mi perfil"
-msgstr ""
-
-#: app/views/users/settings.html.erb:107
-msgid "Cuando reciba un nuevo mensaje"
-msgstr ""
-
-#: app/views/users/settings.html.erb:115
-msgid "Cuando le guste a alguien"
-msgstr ""
-
-#: app/views/users/settings.html.erb:115
-msgid "(votaciones de 4 ó 5 estrellas)"
-msgstr ""
-
-#: app/views/users/settings.html.erb:123
-msgid "Cuando alguien me añada a sus favoritos"
-msgstr ""
-
-#: app/views/users/settings.html.erb:131
-msgid "Cuando un celestino me recomiende"
-msgstr ""
-
-#: app/views/users/settings.html.erb:139
-msgid "Quiero recibir la newsletter"
-msgstr ""
-
-#: app/views/users/settings.html.erb:139
-msgid "(noticias y novedades, quincenal)"
-msgstr ""
-
-#: app/views/users/settings.html.erb:147
-msgid "Quiero recibir sugerencias por email"
-msgstr ""
-
-#: app/views/users/settings.html.erb:147
-msgid "(perfiles afines, semanal)"
-msgstr ""
-
-#: app/views/users/settings.html.erb:155
-msgid "Quiero recibir nuevos usuarios en mi zona"
-msgstr ""
-
-#: app/views/users/settings.html.erb:155
-msgid "(semanal)"
-msgstr ""
-
-#: app/views/users/settings.html.erb:163
-msgid "Navegación anónima"
-msgstr ""
-
-#: app/views/users/settings.html.erb:173
-#: app/views/users/settings.html.erb:217
-msgid "Guardar Configuración"
-msgstr ""
-
-#: app/views/users/settings.html.erb:186
-msgid "Usuarios bloqueados"
-msgstr ""
-
-#: app/views/users/settings.html.erb:187
-msgid "Has bloqueado estos ususarios. ¿Has cambiado de opinión?"
-msgstr ""
-
-#: app/views/users/settings.html.erb:195
-msgid "No le veo"
-msgstr ""
-
-#: app/views/users/settings.html.erb:196
-msgid "No me ve"
-msgstr ""
-
-#: app/views/users/show.html.erb:6
-msgid "¿Hacéis buena pareja?"
-msgstr ""
-
-#: app/views/users/show.html.erb:55
-msgid "anterior"
-msgstr ""
-
-#: app/views/users/show.html.erb:56
-msgid "siguiente"
-msgstr ""
-
-#: app/views/users/show.html.erb:72
-msgid "Descripción"
-msgstr ""
-
-#: app/views/users/show.html.erb:73
-msgid "Sus Celestin@s"
-msgstr ""
-
-#: app/views/users/show.html.erb:74
-msgid "Sus Atributos"
-msgstr ""
-
-#: app/views/users/show.html.erb:75
-msgid "Tus notas"
-msgstr ""
-
-#: app/views/users/show.html.erb:84
 msgid "%{name} aún no ha introducido su descripción."
 msgstr ""
 
-#: app/views/users/show.html.erb:92
 msgid "%{name} aún no tiene ningún celestino."
 msgstr ""
 
-#: app/views/users/show.html.erb:92
-msgid "Quieres ser el primero?"
+msgid "%{name} te invita a Cellove"
 msgstr ""
 
-#: app/views/users/show.html.erb:105
-msgid "Tus notas de %{name} <span>(tranquilo, él/ella no las verá)</span>"
+msgid "(Ver todos los mensajes)"
 msgstr ""
 
-#: app/views/users/show.html.erb:113
-msgid "Nueva nota"
+msgid "(noticias y novedades, quincenal)"
 msgstr ""
 
-#: app/views/users/show.html.erb:117
+msgid "(perfiles afines, semanal)"
+msgstr ""
+
+msgid "(semanal)"
+msgstr ""
+
+msgid "(votaciones de 4 ó 5 estrellas)"
+msgstr ""
+
+msgid "* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real."
+msgstr ""
+
+msgid "* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán."
+msgstr ""
+
+msgid "* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s."
+msgstr ""
+
+msgid "* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s."
+msgstr ""
+
+msgid ", con estilo"
+msgstr ""
+
+msgid ", de género"
+msgstr ""
+
+msgid ", me gusta el"
+msgstr ""
+
+msgid ", mido"
+msgstr ""
+
+msgid ". Con ojos de color"
+msgstr ""
+
+msgid "1€ al mes"
+msgstr ""
+
+msgid "8€/mes"
+msgstr ""
+
+msgid "<p>CELLOVE SOCIAL NETWORK, S.L., sociedad de nacionalidad española con domicilio social en Ronda de Mar, 53, de Vilafranca del Penedès, Barcelona, CP 08720 (España), es la titular del fichero generado con los datos de carácter personal suministrados por los usuarios registrados.</p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L., es la prestación de los servicios de www.cellove.com, descritos con detalle en estos términos y condiciones generales. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente.</p>\\n\\n    <p>La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos. </p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad del fichero incluye el uso de sus datos para efectuar mejoras en el servicio de www.cellove.com, tareas básicas de administración y comunicación a los usuarios de incidencias del servicio, por parte de CELLOVE SOCIAL NETWORK, S.L., incluyendo asimismo el uso de sus datos por CELLOVE SOCIAL NETWORK, S.L. para enviar ofertas, novedades y eventuales contrataciones, destinadas a sus usuarios, de otros productos y servicios de CELLOVE SOCIAL NETWORK, S.L.</p>\\n\\n    <p>El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de las presentes condiciones generales y política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas.</p>\\n\\n    <p>Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com.</p>\\n\\n    <p>Por la propia naturaleza del servicio prestado por www.cellove.com, los usuarios registrados comprenden y aceptan que el ejercicio de su derecho de cancelación u oposición implicará su cese en su uso de los servicios de facilitación y promoción de relaciones interpersonales prestadas por www.cellove.com. </p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. ha implantado las medidas de seguridad técnicas y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal, evitando su alteración, pérdida, tratamiento y/o acceso no autorizado, de conformidad con el estado de la tecnología.</p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la veracidad de los datos facilitados, de los cuales el usuario responderá, en cualquier caso, reservándose CELLOVE SOCIAL NETWORK, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en derecho.</p>"
+msgstr ""
+
+msgid "<p>Cellove es una plataforma online de contactos donde fácilmente puedes conocer a gente nueva, interactuar, ampliar tu círculo de amistades y encontrar la pareja que siempre has soñado tener.</p>\\n\\n     <p>Sabemos lo difícil y al mismo tiempo importante que es dar con tu media naranja o con una amistad duradera, por eso ofrecemos nuestra plataforma que facilita y agiliza el contacto directo y eficaz con perfiles afines a ti, con total confianza y seguridad en nuestros sistemas. </p>\\n\\n    <p>¿Te imaginas quedar con alguien que nunca has visto pero tener la sensación de que lo conoces de toda la vida? Ahora es posible gracias a Cellove. Podrás tener a tu alcance mucha más información de esa persona a través de su círculo más cercano y de una manera segura y fiable. </p>\\n\\n    <p>Con Cellove, ¡tus citas ya no serán a ciegas! </p>"
+msgstr ""
+
+msgid "<p>Cellove® es Marca registrada de CELLOVE SOCIAL NETWORK, S.L.</p>\\n    <h4>A. CUESTIONES PRELIMINARES: </h4>\\n    <h5>1. Objeto de los presentes términos y condiciones generales.</h5>\\n\\n    <p>Los presentes Términos y Condiciones tienen por objeto regular el uso de Cellove® Al visitar y/o utilizar los servicios prestados por CELLOVE SOCIAL NETWORK, S.L. a través de su página web www.cellove.com u otras de su propiedad, vinculadas a los servicios aquí establecidos, usted expresamente acepta hacerlo de acuerdo a los presentes Términos y Condiciones Generales de Uso de Cellove y sus modificaciones futuras. CELLOVE SOCIAL NETWORK, S.L. utilizará todos los recursos a su alcance para notificar de forma anticipada a sus usuarios, cualquier modificación en los presentes Términos y Condiciones de Uso, pero es obligación del usuario, visitar periódicamente estos Términos y Condiciones para comprobar si han sido actualizados.</p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. es una sociedad de nacionalidad española, con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), con C.I.F. Nº B-65940686, e inscrita en el Registro Mercantil de Barcelona, Tomo 43573, Folio 214, Hoja  B-432621, Inscripción 1. </p>\\n\\n    <h5>2. ¿Qué es Cellove®?</h5>\\n    <p> Cellove® es una página web que facilita y promueve las relaciones interpersonales a través de Internet.</p>\\n\\n    <h5>3. ¿Los servicios de Cellove® son gratuitos?</h5>\\n    <p> Cellove® ofrece algunos servicios gratuitos y otros de pago, los que se detallarán mas adelante. </p>\\n\\n    <h5>4. ¿Quiénes pueden ser usuarios de Cellove®? </h5>\\n    <p>Pueden ser usuarios de Cellove® todas aquellas personas que sean mayores de edad y que por su libre decisión completen el proceso de registro en Cellove®.</p>\\n\\n\\n    <h4>B. CONDICIONES DE REGISTRO Y USO: </h4>\\n\\n    <p>1. Usuario: Podrá ser usuario de Cellove® cualquier persona que sea mayor de edad según la legislación de su país. Para adquirir la condición de usuario, la persona que así lo desee, debe completar todos los datos requeridos en los formularios de registro. Siendo esta la única forma de acceder a los servicios gratuitos de Cellove®. Los servicios de pago de Cellove® requerirán, además de todo lo exigido para los servicios gratuitos, el pago del precio correspondiente a cada producto que el Usuario contrate.</p>\\n\\n    <p>2. Acceso: El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos.</p>\\n\\n    <p>3. Tipos de Usuarios: Existen diferentes tipos de Usuarios en Cellove®: “Chico”, “Chica”, “Celestino” y “Celestina”. “Chico” y “Chica” son aquellos usuarios que buscan relacionarse con otros Usuarios.  “Celestino” y “Celestina” son aquellos usuarios que vinculados a algún “Chico” y/o “Chica”, promueven el encuentro de estos con otros “Chico” y/o “Chica”.  </p>\\n\\n    <p>4. Incorporación de información y contenidos: A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®.\\n    En los espacios de uso privado para los Usuarios, los datos allí registrados son accesibles única y exclusivamente para los usuarios que la compartan. Nosotros respetamos su derecho a la propiedad del contenido creado o almacenado por usted.  A menos que sea permitido específicamente por usted, su uso de los servicios prestados por Cellove® no le otorga a Cellove®, la licencia para usar, reproducir, adaptar, modificar, publicar o distribuir el contenido creado por usted o almacenarlos en cuentas de uso comercial, o cualquier otro propósito similar. Sin embargo, usted otorga su permiso al acceder a Cellove® para que Cellove®, pueda copiar, distribuir, almacenar, transmitir, volver a formatear, mostrar públicamente y ejecutar públicamente el contenido de su cuenta de usuario solamente en el caso de tener que proporcionarle servicios de Cellove®, previamente autorizados por usted. De forma especial usted acepta que se realice copia de seguridad de sus datos y que estos se conserven en las instalaciones habilitadas por Cellove®, con el fin de proteger su información y la integridad de esta frente a posibles daños del sistema.</p>\\n\\n    <p>5. Contenido generado por usuarios: Usted puede transmitir o publicar contenido creado por usted con los servicios ofrecidos a tal efecto por Cellove®. Usted será el único responsable de dicho contenido y las consecuencias de su transmisión o publicación. Todo el contenido hecho público podría ser accesible al público a través de Internet y puede ser rastreado e indexado por los motores de búsqueda. Usted es responsable de asegurarse de no poner ningún contenido privado a disposición del público.</p>\\n    <p> Cualquier contenido que usted pueda recibir de otros usuarios a través de Cellove®, se le proporciona TAL CUAL para su información y uso personal y que se compromete a no utilizar, copiar, reproducir, distribuir, transmitir, difundir, exhibir, vender, licenciar o explotar el contenido para cualquier propósito, sin el consentimiento expreso y por escrito de la persona que posee los derechos de dicho contenido. En el curso de la utilización de cualquiera de los Servicios, si Usted se encuentra con cualquier contenido con copyright (s) o cualquier otra característica de protección contra copia(s), usted se compromete a no eliminar el aviso de copyright como desactivar dicha función de protección contra copia(s).  Usted acepta expresamente que Cellove® tendrá el derecho de bloquear el acceso o remover dicho contenido puesto a disposición por usted, si Cellove® recibe quejas sobre cualquier ilegalidad o violación de los derechos de terceros en el contenido. Usted consiente expresamente que la determinación de las cuestiones de ilegalidad o violación de los derechos de terceros de este contenido se  determine por el agente designado por Cellove® para este propósito.</p>\\n\\n    <p>Para denunciar por ilegalidad o violación de los derechos de terceros un contenido transmitido o publicado al utilizar los Servicios de Cellove®, o desea protestar contra cualquier bloqueo o eliminación del contenido de Cellove® póngase en contacto con el departamento legal de Cellove®, en cellove@cellove.es </p>\\n\\n\\n    <h4>C. OBLIGACIONES: </h4>\\n\\n    <p>1. Generales: Es una obligación general de cualquier Usuario, no publicar contenidos ofensivos contra otros usuarios o contra Cellove®. No publicar contenidos que el mismo Usuario pretenda queden en la esfera de su intimidad personal, No infringir la propiedad industrial e intelectual de terceros o de Cellove® y de tomar las precauciones necesarias en los encuentros personales con otro Usuario. </p>\\n\\n    <p>2. De Cellove®: Cellove® se obliga a través de una página de Internet, a prestar de manera ininterrumpida, siempre que diferentes cuestiones técnicas se lo permitan, un servicio de facilitación y promoción de encuentros interpersonales. CELLOVE SOCIAL NETWORK, S.L. no tiene por objeto, ser mediador, ni garantiza el cumplimiento de encuentros establecidos entre sus Usuarios. CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la información o contenidos a los que pueda accederse desde los enlaces o hipervínculos a otras páginas web que se inserten en Cellove®.</p>\\n\\n    <p>3. Del Usuario: Cualquier Usuario está obligado a no publicar contenidos no ajustados a su persona y/o realidad personal. Es obligación de todos los Usuarios el no publicar datos personales o de contacto de cualquier otro Usuario o de terceros. Es obligación de todos los Usuarios, utilizar Cellove® solo con fines personales y nunca con fines profesionales. Todos los Usuarios deben mantener en secreto la contraseña brindada por Cellove®. Queda expresamente prohibida la incorporación de información y los contenidos:</p>\\n\\n    <blockquote>\\n\\n      <p>3.1 Que resulten contrarios a la ley, a la moral, a las buenas costumbres, al orden público establecido o que tengan fines ilícitos, prohibidos o que puedan ser lesivos de derechos e intereses de terceros. </p>\\n\\n      <p>3.2 Que, sin estar comprendidos en el apartado anterior, puedan considerarse como un trato difamatorio, vejatorio o simplemente desconsiderado para personas o instituciones; o de alguna forma puedan identificarse con supuestos de discriminación de las personas por razón de su nacimiento, raza, origen étnico, sexo, religión, opinión o cualquier otra circunstancia personal o social. </p>\\n\\n      <p>3.3 Que cuestionen o pongan en duda el buen nombre, profesionalidad o proyección social de las actividades desarrolladas por Cellove®. En particular, no se puede usar Cellove® para canalizar quejas o reclamaciones relacionadas con los productos y los servicios que comercialice CELLOVE SOCIAL NETWORK, S.L.</p>\\n    </blockquote>\\n\\n    <h4>D. PROPIEDAD INTELECTUAL E INDUSTRIAL:</h4>\\n\\n    <p>Los derechos de propiedad intelectual e industrial sobre la plataforma tecnológica, los instrumentos técnicos, sistemas informáticos y contenidos de  (bases de datos, información, imágenes, diseños, gráficos, formatos y códigos en cualquier lenguaje de programación), excepción hecha de los contenidos incorporados por los Usuarios conforme a estas condiciones, corresponden a CELLOVE SOCIAL NETWORK, S.L. por ser de su propiedad o haber obtenido previamente las autorizaciones pertinentes. En consecuencia, queda prohibida su reproducción, distribución, comunicación pública y transformación sin su autorización expresa. Igualmente, queda prohibido todo tipo de uso de los nombres comerciales, marcas o signos distintivos de cualquier clase, titularidad de Cellove® o CELLOVE SOCIAL NETWORK, S.L., sin su autorización expresa. El registro como Usuario en Cellove® no otorga otro derecho, que el de uso de la plataforma conforme a las presentes condiciones de uso, sin conceder a los Usuarios ningún otro derecho que no esté expresamente contemplado en los presentes Términos y Condiciones de Uso.</p>\\n\\n    <h4>E. PUBLICIDAD Y COMUNICACIONES COMERCIALES: </h4>\\n\\n    <p>Comunicaciones de Cellove®: El uso de Cellove® puede incluir ciertas comunicaciones de Cellove®, tales como anuncios de servicio, mensajes administrativos y boletines informativos. Usted entiende que estas comunicaciones se consideran parte de la utilización de Cellove®. Como parte de nuestra política para ofrecerle total privacidad, ponemos a su disposición la opción de optar por dejar de recibir boletines de noticias. Sin embargo, no podrá optar por dejar de recibir anuncios de servicio y mensajes administrativos. </p>\\n\\n    <h4>F. INCUMPLIMIENTO DE LAS CONDICIONES DE USO:</h4>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. podrá adoptar las normas y medidas de seguridad que en cada momento considere oportunas para garantizar que el acceso y la participación por parte de los Usuarios de Cellove® se desarrolla de acuerdo con las condiciones de uso y con sujeción a lo dispuesto en la normativa vigente aplicable.\\n    Sin necesidad de cumplir o realizar ningún trámite o comunicación previa, CELLOVE SOCIAL NETWORK, S.L. podrá, en cualquier momento: </p>\\n    <ul>\\n      <li>- Bloquear temporalmente o retirar de forma definitiva la información pública y los contenidos que se incorporen a la red pública de Cellove® cuando tenga la sospecha o la certeza de que los mismos pueden infringir lo dispuesto en las condiciones de uso o en la normativa legal aplicable.</li>\\n      <li>- Restringir o suspender la participación en la red de Cellove®, de cualquier Usuario e, incluso, expulsarle de forma definitiva en caso de incumplimiento de cualquiera de las condiciones de uso o de la normativa legal aplicable.</li>\\n    </ul>\\n\\n\\n    <h4>G. RESPONSABILIDADES:</h4>\\n\\n    <p>Usted entiende y acepta que el uso del servicio de Cellove® se realiza bajo su propio riesgo. Cellove® NO garantiza bajo ningún concepto la seguridad de sus usuarios en los casos de encuentros personales y/o virtuales, y recomienda adoptar las medidas de seguridad habituales en este tipo de encuentros. Cellove® presta el servicio de forma TAL CUAL y, según disponibilidad. CELLOVE SOCIAL NETWORK, S.L. no garantiza que el servicio no sea  interrumpido, oportuno, seguro o libre de virus. El uso de cualquier material descargado u obtenido a través de los servicios de Cellove® se realiza por su propia cuenta y riesgo y usted será el único responsable de cualquier daño a su sistema informático, teléfono móvil, dispositivo inalámbrico o pérdida o deterioro de datos. Ningún consejo o información, oral o escrita, obtenida por usted de Cellove®, o sus empleados o representantes será una garantía fuera de lo expresamente contenido en estos términos y condiciones. Usted como Usuario, acepta que CELLOVE SOCIAL NETWORK, S.L., en ningún caso, se hace responsable por los daños accidentales, indirectos, especiales, punitivos, o daño alguno, como pueden ser los daños por difamación, daños morales o violación de su intimidad, o de otro tipo de pérdida o daños, derivados desde o causados por su uso o imposibilidad de usar el servicio de Cellove®. CELLOVE SOCIAL NETWORK, S.L. no responderá en caso de daños y perjuicios ocasionados, por negligencia en el uso y custodia de la clave de acceso o mala gestión de la misma por su usuario titular incluyendo los daños por un uso no autorizado por terceros. CELLOVE SOCIAL NETWORK, S.L. no responderá por casos de fuerza mayor. CELLOVE SOCIAL NETWORK, S.L. se exonera de toda responsabilidad por la información y contenidos que los Usuarios incorporen a Cellove®, y por la utilización que de los mismos realicen otros Usuarios o terceros ajenos a la red de Cellove®. </p>\\n\\n    <p>Responsabilidad personal de los usuarios: Cada Usuario responderá de los daños y perjuicios causados a CELLOVE SOCIAL NETWORK, S.L. y/o a otros Usuarios y/o a terceros por el incumplimiento de cualquiera de las condiciones de uso. </p>\\n\\n\\n    <h4>H. BAJA DE USUARIO:</h4>\\n\\n    <p>El acceso y uso de Cellove® tiene una duración indefinida, con sujeción a las condiciones de uso. En cualquier momento, un usuario podrá instar su baja  a través de la funcionalidad habilitada en el entorno de Cellove®, sin necesidad de ningún otro trámite. Así mismo, Cellove® podrá dar por finalizada la participación de un usuario de Cellove® por incumplimiento de las condiciones aceptadas en este documento. Los datos referidos a los Usuarios, así como la información y los contenidos aportados por estos, se bloquearán, conservándose únicamente para la atención de las responsabilidades que, en su caso, se deriven para CELLOVE SOCIAL NETWORK, S.L. por el tiempo que dure el plazo de prescripción de estas. Cumplido el citado plazo, los datos, información y contenidos mencionados serán suprimidos.</p>\\n\\n\\n    <h4>I. CARGOS Y PAGOS:</h4>\\n\\n    <p>El uso de servicios de pago habilitados por Cellove® son los siguientes: </p>\\n\\n    <ul>\\n      <li>a. Pase 1: Permite el uso de cien (100) mensajes privados, un (1) Chat simultáneo, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase 1 es de un euro (1 €) al mes (IVA incluido). </li>\\n\\n      <li>b. Pase 2: Permite el uso de trescientos (300) mensajes privados, tres (3) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase 2 es de tres euros (3 €) al mes (IVA incluido).</li>\\n\\n      <li>c. Pase 3: Permite el uso ilimitado de mensajes privados, el uso ilimitado de Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación y opciones de privacidad avanzadas. El precio aplicable al contratar el Pase 3 es de seis euros (6 €) al mes (IVA incluido).</li>\\n\\n    </ul>\\n\\n    <p>La compra se realizará mediante plataforma de pago vía tarjeta de crédito o transferencia bancaria o cualquier otro sistema que Cellove® implante a tal efecto.</p>\\n\\n    <p>El uso del servicio libre de pago, habilitado por Cellove®, es el siguiente: </p>\\n\\n    <p>Pase free: Permite acceso veinticuatro (24) horas y navegación ilimitada con publicidad en www.cellove.com, y permite recibir \"Mensajes\", \"Chats\", \"Propuesta de actividad\" y \"¿Hacéis buena pareja?\", sin permitir contestar a dichas acciones.</p>\\n\\n    <h4>J. PROTECCIÓN DE DATOS:</h4>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L., sociedad de nacionalidad española con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), es la titular del fichero generado con los datos de carácter personal suministrados por los usuarios registrados.</p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L, es la prestación de los servicios de www.cellove.com, descritos con detalle en estos términos y condiciones generales. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente.</p>\\n\\n    <p>La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos. </p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad del fichero incluye el uso de sus datos para efectuar mejoras en el servicio de www.cellove.com, tareas básicas de administración y comunicación a los usuarios de incidencias del servicio, por parte de CELLOVE SOCIAL NETWORK, S.L., incluyendo asimismo el uso de sus datos por CELLOVE SOCIAL NETWORK, S.L. para enviar ofertas, novedades y eventuales contrataciones, destinadas a sus usuarios, de otros productos y servicios de CELLOVE SOCIAL NETWORK, S.L.</p>\\n\\n    <p>El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de las presentes condiciones generales y política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas.</p>\\n\\n    <p>Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com.</p>\\n\\n    <p>Por la propia naturaleza del servicio prestado por www.cellove.com, los usuarios registrados comprenden y aceptan que el ejercicio de su derecho de cancelación u oposición implicará su cese en su uso de los servicios de facilitación y promoción de relaciones interpersonales prestadas por www.cellove.com. </p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. ha implantado las medidas de seguridad técnicas y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal, evitando su alteración, pérdida, tratamiento y/o acceso no autorizado, de conformidad con el estado de la tecnología.</p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la veracidad de los datos facilitados, de los cuales el usuario responderá, en cualquier caso, reservándose CELLOVE SOCIAL NETWORK, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en derecho.</p>\\n\\n    <h4>K. LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h4>\\n\\n    <p>Las presentes condiciones de uso, las Condiciones Particulares e instrucciones que, en su caso, CELLOVE SOCIAL NETWORK, S.L. a través de Cellove® establezca y, en general, las relaciones entre CELLOVE SOCIAL NETWORK, S.L. y los usuarios se encuentran sometidas a la legislación y jurisdicción españolas. Para cualquier divergencia surgida de las presentes condiciones de uso, ambas partes se someten expresamente a los juzgados y tribunales de la ciudad de Barcelona con renuncia a su propio fuero, si este fuese otro.</p>"
+msgstr ""
+
+msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
+msgstr ""
+
+msgid "<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza."
+msgstr ""
+
+msgid "@Celestino"
+msgstr ""
+
+msgid "A través de Cellove podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones muy potentes para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc."
+msgstr ""
+
+msgid "Acceso usuarios"
+msgstr ""
+
+msgid "Aceptar"
+msgstr ""
+
+msgid "Aceptar actividad"
+msgstr ""
+
+msgid "Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove."
+msgstr ""
+
+msgid "Actividad aceptada"
+msgstr ""
+
+msgid "Actividad cultural"
+msgstr ""
+
+msgid "Actividad deportiva"
+msgstr ""
+
+msgid "Actividad rechazada"
+msgstr ""
+
+msgid "Actividad reciente"
+msgstr ""
+
+msgid "Actividades"
+msgstr "Activitats"
+
+msgid "Actualización a usuari@ premium se ha realizado correctamente"
+msgstr ""
+
+msgid "Afines cerca de ti..."
+msgstr ""
+
+msgid "Afinidad"
+msgstr ""
+
+msgid "Ahora mismo estoy"
+msgstr ""
+
+msgid "Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los %{consejos_link}, las %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos"
+msgstr ""
+
+msgid "Alcohol"
+msgstr ""
+
+msgid "Alta<br>Celestin@<br>Gratis"
+msgstr ""
+
+msgid "Altura"
+msgstr ""
+
+msgid "Amable"
+msgstr ""
+
+msgid "Amigo"
+msgstr ""
+
+msgid "Amigo Especial"
+msgstr ""
+
+msgid "Amigo especial"
+msgstr ""
+
+msgid "Amigo especial:"
+msgstr ""
+
+msgid "Amigo:"
+msgstr ""
+
+msgid "Amor en línea"
+msgstr ""
+
+msgid "Animales"
+msgstr ""
+
+msgid "Anna & Joan"
+msgstr ""
+
+msgid "Anuncios TV"
+msgstr ""
+
+msgid "Apellidos"
+msgstr ""
+
+msgid "Ashley Madison"
+msgstr ""
+
+msgid "Atento"
+msgstr ""
+
+msgid "Atributos"
+msgstr ""
+
+msgid "Aventurero"
+msgstr ""
+
+msgid "Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste."
+msgstr ""
+
 msgid "Añadir nota"
 msgstr ""
 
-#: app/views/users/show.html.erb:132
-msgid "¿Cómo es?"
+msgid "Año"
 msgstr ""
 
-#: app/views/users/show.html.erb:133
-msgid "Sus gustos"
+msgid "Años"
 msgstr ""
 
-#: app/views/users/show.html.erb:134
+msgid "BLOQUEAR"
+msgstr ""
+
+msgid "Bienhumorado"
+msgstr ""
+
+msgid "Bienvenido a Cellove"
+msgstr ""
+
+msgid "Bloquear"
+msgstr ""
+
+msgid "Busca"
+msgstr ""
+
+msgid "Buscar"
+msgstr ""
+
+msgid "Busco"
+msgstr ""
+
+msgid "Búsqueda borrada"
+msgstr ""
+
+msgid "Búsqueda directa:"
+msgstr ""
+
+msgid "Búsqueda guardada"
+msgstr ""
+
+msgid "Búsquedas"
+msgstr "Cerques"
+
+msgid "CP"
+msgstr ""
+
+msgid "Cambiar configuración"
+msgstr ""
+
+msgid "Cambiar radio"
+msgstr ""
+
+msgid "Cambios guardados."
+msgstr ""
+
+msgid "Cancelar"
+msgstr ""
+
+msgid "Capacidad ilimitada"
+msgstr ""
+
+msgid "Carlos & Maite"
+msgstr ""
+
+msgid "Castellano"
+msgstr ""
+
+msgid "Català"
+msgstr ""
+
+msgid "Celestin@ invitado!"
+msgstr ""
+
+msgid "Celestin@s"
+msgstr ""
+
+msgid "Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas."
+msgstr ""
+
+msgid "Cellove te ofrece todas las herramientas y todo su potencial para encontar pareja o amistad por tan solo %{link}."
+msgstr ""
+
+msgid "Celoso"
+msgstr ""
+
+msgid "Cerrar"
+msgstr ""
+
+msgid "Chat"
+msgstr ""
+
+msgid "Chatear"
+msgstr ""
+
+msgid "Cine"
+msgstr ""
+
+msgid "Completa tu perfil"
+msgstr ""
+
+msgid "Complexión"
+msgstr ""
+
+msgid "Complexión..."
+msgstr ""
+
+msgid "Con Cellove, ¡tus citas ya no serán a ciegas!"
+msgstr ""
+
+msgid "Con estudios"
+msgstr ""
+
+msgid "Con foto"
+msgstr ""
+
+msgid "Con hijos"
+msgstr ""
+
+msgid "Con nuestro servicio Celestin@ completamente gratuito podrás hacerlo, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad, lo cual hará que nuestro sistema de presentación de usuari@s sea más útil y potente para éste."
+msgstr ""
+
+msgid "Con una dieta"
+msgstr ""
+
+msgid "Condiciones generales"
+msgstr ""
+
+msgid "Configuración"
+msgstr ""
+
+msgid "Configuración actualizada"
+msgstr ""
+
+msgid "Confirmados"
+msgstr ""
+
+msgid "Conocerte de verdad"
+msgstr ""
+
+msgid "Consejos de uso"
+msgstr ""
+
+msgid "Consejos<br>de uso"
+msgstr ""
+
+msgid "Consigue Celestinos"
+msgstr ""
+
+msgid "Contacta"
+msgstr ""
+
+msgid "Contacto"
+msgstr ""
+
+msgid "Contraseña"
+msgstr ""
+
+msgid "Contrata una de nuestras tres modalidades de uso en Cellove para sacarle el máximo partido de todas las herramientas, facilidades que te ofrecemos. Elije la modalidad que mejor se adapte a tus necesidades y disfruta de Cellove sin limitaciones ni restricciones de ningún tipo."
+msgstr ""
+
+msgid "Contratar por 96€/año"
+msgstr ""
+
+msgid "Conversación con: "
+msgstr ""
+
+msgid "Conviértete en usuari@"
+msgstr ""
+
+msgid "Crear anuncio"
+msgstr ""
+
+msgid "Cuando alguien me añada a sus favoritos"
+msgstr ""
+
+msgid "Cuando alguien visite mi perfil"
+msgstr ""
+
+msgid "Cuando le guste a alguien"
+msgstr ""
+
+msgid "Cuando reciba un nuevo mensaje"
+msgstr ""
+
+msgid "Cuando un celestino me recomiende"
+msgstr ""
+
+msgid "Cuanto más elevado sea tu <strong>Índice Cellove</strong>, tus probabilidades de encontrar exactamente lo que buscas mejoran. Cellove te proporciona continuamente esos perfiles que son más compatibles para ti y los perfiles que tengan más %{link}. Por eso, si tu consigues más %{link}, significa que Cellove te promocionará mejor y te ayudará a encontrar a esa persona especial con más efectividad."
+msgstr ""
+
+msgid "Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes."
+msgstr ""
+
+msgid "Cuerpo"
+msgstr ""
+
+msgid "Código postal"
+msgstr ""
+
+msgid "Datos de acceso a Cellove"
+msgstr ""
+
+msgid "Datos incorrectos o faltantes"
+msgstr ""
+
+msgid "De pelo"
+msgstr ""
+
+msgid "De étnia"
+msgstr ""
+
+msgid "Demás recursos ilimitados"
+msgstr ""
+
+msgid "Deporte"
+msgstr ""
+
+msgid "Desconectar"
+msgstr ""
+
+msgid "Descripción"
+msgstr ""
+
+msgid "Desde aquí podrás configurar tus parámetros en Cellove"
+msgstr ""
+
+msgid "Devoción religiosa"
+msgstr ""
+
+msgid "Diapositiva"
+msgstr ""
+
+msgid "Dieta"
+msgstr ""
+
+msgid "Dimensiona tu imagen"
+msgstr ""
+
+msgid "Distancia"
+msgstr ""
+
+msgid "Día"
+msgstr ""
+
+msgid "ENVIAR"
+msgstr ""
+
+msgid "Edad"
+msgstr ""
+
+msgid "Editar mi perfil"
+msgstr ""
+
+msgid "El matrimonio es algo maravilloso"
+msgstr ""
+
+msgid "El objetivo de nuesrta herramienta Celestin@ es facilitar y hacer más accesible nuestro potente sistema para encontrar a esa persona especial, por ejemplo a usuari@s poco experimentados, con prejuicios o que simplemente no conozcan o no se atrevan a utilizar una plataforma de contactos, hoy en día muy extendida y utilizada ya por mucha gente."
+msgstr ""
+
+msgid "El registro como Celestin@ es muy fácil y rápido, en segundos estarás recomendando y el destinatario recibirá un e-mail para que pueda confirmar su registro gratuito como usuario en cellove, a partir de aquí ya contará con tu soporte y podrá acceder a todos los usuari@s y funciones que desee."
+msgstr ""
+
+msgid "Elige entre uno de nuestros planes:"
+msgstr ""
+
+msgid "Eliminados"
+msgstr ""
+
+msgid "Eliminar"
+msgstr ""
+
+msgid "Eliminar celestin@"
+msgstr ""
+
+msgid "Eliminar conversación"
+msgstr ""
+
+msgid "Eliminar hilo"
+msgstr ""
+
+msgid "Eliminar imagen"
+msgstr ""
+
+msgid "Eliminar recomendación"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Email o contraseña inválidos"
+msgstr ""
+
+msgid "En Cellove lo más importante eres tú y que encuentres exactamente lo que buscas. Por ello, y porque el tiempo es oro, contamos con nuestra función exclusiva llamada"
+msgstr ""
+
+msgid "En mi día a día no tenía ocasion de conocer a gente interesante, en Cellove le conocí y supe desde el primer momento que él era esa persona que necesitaba en mi vida."
+msgstr ""
+
+msgid "En mi tiempo libre me gusta:"
+msgstr ""
+
+msgid "En un radio de"
+msgstr ""
+
+msgid "Encontrar a tu pareja ideal es muy fácil. Solo tienes que %{register_link}, especificar que características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que más se adecuen y mejor encajen con tu perfil ¡para que seas tu quien elija!"
+msgstr ""
+
+msgid "Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas."
+msgstr ""
+
+msgid "Encuentra pareja"
+msgstr ""
+
+msgid "Encuentra personas afines a tí"
+msgstr ""
+
+msgid "Encuentra tu nueva pareja"
+msgstr ""
+
+msgid "Encuentra tu nueva pareja en Cellove"
+msgstr ""
+
+msgid "Enviados"
+msgstr ""
+
+msgid "Enviar"
+msgstr ""
+
+msgid "Enviar Mensaje"
+msgstr ""
+
+msgid "Enviar mensaje"
+msgstr ""
+
+msgid "Era un poco excéptica pero mi hija me hizo de Celestina, conocí a Fran y a parte de ser grandes amigos, también compartimos muchas cosas, es una suerte habernos conocido."
+msgstr ""
+
+msgid "Es muy fácil y efectivo. %{link} para encontrar personas afines por edad, gustos, estilo de vida..."
+msgstr ""
+
+msgid "Es muy majo y muy flamenco."
+msgstr ""
+
+msgid "Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove."
+msgstr ""
+
+msgid "Eso incluye desde las visitas a tu perfil hasta el número de mensajes enviados/recibidos."
+msgstr ""
+
+msgid "Español"
+msgstr ""
+
+msgid "Esperamos que la próxima vez funcione."
+msgstr ""
+
+msgid "Espontáneo"
+msgstr ""
+
+msgid "Esta función es completamente Gratis y siempre lo será."
+msgstr ""
+
+msgid "Estado civil"
+msgstr ""
+
+msgid "Estar con la familia"
+msgstr ""
+
+msgid "Estar con mis amigos"
+msgstr ""
+
+msgid "Estar solo visible para usuari@s de entre:"
+msgstr ""
+
+msgid "Estar tranquilo en casa"
+msgstr ""
+
+msgid "Esther & Victor"
+msgstr ""
+
+msgid "Estilo"
+msgstr ""
+
+msgid "Estudios"
+msgstr ""
+
+msgid "Estás a punto de eliminar a un Celestin@ de tu lista. Si lo haces, lo que ha dicho sobre ti desaparecerá de tu perfil. ¿Te lo has pensado bien?"
+msgstr ""
+
+msgid "Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil y no podrás recomendarlo de nuevo. ¿Te lo has pensado bien?"
+msgstr ""
+
+msgid "Ex Pareja"
+msgstr ""
+
+msgid "Ex pareja"
+msgstr ""
+
+msgid "Ex pareja:"
+msgstr ""
+
+msgid "Exigente"
+msgstr ""
+
+msgid "Extrovertido"
+msgstr ""
+
+msgid "Familiar"
+msgstr ""
+
+msgid "Familiar:"
+msgstr ""
+
+msgid "Fecha de alta"
+msgstr ""
+
+msgid "Fiel"
+msgstr ""
+
+msgid "Fisico"
+msgstr ""
+
+msgid "Fran & Irene"
+msgstr ""
+
+msgid "Francés"
+msgstr ""
+
+msgid "Frecuencia"
+msgstr ""
+
+msgid "Fumador"
+msgstr ""
+
+msgid "Fumo pero lo dejaría por mi pareja"
+msgstr ""
+
+msgid "Físico"
+msgstr ""
+
+msgid "Generoso"
+msgstr ""
+
+msgid "Guarda búsqueda"
+msgstr ""
+
+msgid "Guardar"
+msgstr ""
+
+msgid "Guardar Configuración"
+msgstr ""
+
+msgid "Guardar cambios"
+msgstr ""
+
+msgid "Guardar gustos"
+msgstr ""
+
+msgid "Guardar preferencias"
+msgstr ""
+
+msgid "Género muscial preferido"
+msgstr ""
+
+msgid "Género preferido"
+msgstr ""
+
+msgid "Ha dicho:"
+msgstr ""
+
+msgid "Hace"
+msgstr ""
+
+msgid "Hace "
+msgstr ""
+
+msgid "Hacemos buena pareja"
+msgstr ""
+
+msgid "Has bloqueado estos ususarios. ¿Has cambiado de opinión?"
+msgstr ""
+
+msgid "Has desactivado esta recomendación."
+msgstr ""
+
+msgid "Hay cuatro tipos de Celestin@s y su finalidad es mejorar el Índice Cellove de los usuarios registrados, por el siguiente orden:"
+msgstr ""
+
+msgid "Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que invitas o cuantos celestinos tengas."
+msgstr ""
+
+msgid "Hijos"
+msgstr ""
+
+msgid "Hábitos"
+msgstr ""
+
+msgid "Idioma"
+msgstr ""
+
+msgid "Idiomas"
+msgstr ""
+
+msgid "Ilimitados chats simultáneo"
+msgstr ""
+
+msgid "Ilimitados mensajes privados"
+msgstr ""
+
+msgid "Indicanos el nombre con el que quieres guardar esta búsqueda para poderla utilizar cuando quieras de forma más ágil y con acceso directo en la zona izquierda de tu perfil."
+msgstr ""
+
+msgid "Inglés"
+msgstr ""
+
+msgid "Ingresos anuales"
+msgstr ""
+
+msgid "Inquieto"
+msgstr ""
+
+msgid "Introduce el email con el que te registraste y te enviaremos las instrucciones de recuperación."
+msgstr ""
+
+msgid "Invita a tus amigos"
+msgstr ""
+
+msgid "Ir al cine / espectáculo"
+msgstr ""
+
+msgid "Italiano"
+msgstr ""
+
+msgid "Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante."
+msgstr ""
+
+msgid "Le guste"
+msgstr ""
+
+msgid "Lectura"
+msgstr ""
+
+msgid "Legal y conducta"
+msgstr ""
+
+msgid "Les he gustado"
+msgstr ""
+
+msgid "Localidad"
+msgstr ""
+
+msgid "Localidad..."
+msgstr ""
+
+msgid "Logotipo"
+msgstr ""
+
+msgid "Logotipo & Slogan"
+msgstr ""
+
+msgid "Marcar como principal"
+msgstr ""
+
+msgid "Material para descargar"
+msgstr ""
+
+msgid "Matrimonio"
+msgstr ""
+
+msgid "Me considero "
+msgstr ""
+
+msgid "Me encanta la fiesta"
+msgstr ""
+
+msgid "Me gusta"
+msgstr ""
+
+msgid "Me gusta ir a la discoteca"
+msgstr ""
+
+msgid "Me gusta ir a tomar algo con amigos"
+msgstr ""
+
+msgid "Me gusta ir al cine"
+msgstr ""
+
+msgid "Me gusta ir de bares"
+msgstr ""
+
+msgid "Me gusta la comida"
+msgstr ""
+
+msgid "Me gusta la música"
+msgstr ""
+
+msgid "Me gusta mucho salir"
+msgstr ""
+
+msgid "Me gustan los animales de compañía"
+msgstr ""
+
+msgid "Me gustaría casarme"
+msgstr ""
+
+msgid "Me han visitado"
+msgstr ""
+
+msgid "Me llamo"
+msgstr ""
+
+msgid "Media & Prensa"
+msgstr ""
+
+msgid "Media & prensa"
+msgstr ""
+
+msgid "Media<br>&<br>Prensa"
+msgstr ""
+
+msgid "Mejora tu índice Cellove"
+msgstr ""
+
+msgid "Mensaje enviado"
+msgstr ""
+
+msgid "Mensajes"
+msgstr "Missatges"
+
+msgid "Mensajes y actividades"
+msgstr ""
+
+msgid "Mes"
+msgstr ""
+
+msgid "Mi codigo postal es el"
+msgstr ""
+
+msgid "Mi código postal es el"
+msgstr ""
+
+msgid "Mi estilo es"
+msgstr ""
+
+msgid "Mi nivel de estudios es"
+msgstr ""
+
+msgid "Mi perfil de Celestin@"
+msgstr ""
+
+msgid "Mis Celestin@s"
+msgstr ""
+
+msgid "Mis celestin@s"
+msgstr ""
+
+msgid "Mis ojos son de color"
+msgstr ""
+
+msgid "Modalidades de uso"
+msgstr ""
+
+msgid "Modifica aquí tus datos de acceso a Cellove"
+msgstr ""
+
+msgid "Modificar datos de acceso"
+msgstr ""
+
+msgid "Modificar datos personales"
+msgstr ""
+
+msgid "Montaña"
+msgstr ""
+
+msgid "Mostrando "
+msgstr ""
+
+msgid "Mostrar a los demás usuarios si estoy conectado"
+msgstr ""
+
+msgid "Más cercanos"
+msgstr ""
+
+msgid "Música"
+msgstr ""
+
+msgid "Nacionalidad"
+msgstr ""
+
+msgid "Nací el"
+msgstr ""
+
+msgid "Navegación anónima"
+msgstr ""
+
+msgid "Navegación ilimitada"
+msgstr ""
+
+msgid "Navegación oculta"
+msgstr ""
+
+msgid "Nickname"
+msgstr ""
+
+msgid "Nivel"
+msgstr ""
+
+msgid "No creo en el matrimonio"
+msgstr ""
+
+msgid "No desaproveches esta oportunidad..."
+msgstr ""
+
+msgid "No enviar notificaciones si estoy online"
+msgstr ""
+
+msgid "No hay ninguna conversación."
+msgstr ""
+
+msgid "No le veo"
+msgstr ""
+
+msgid "No me gusta ir al cine"
+msgstr ""
+
+msgid "No me gusta nada la fiesta"
+msgstr ""
+
+msgid "No me gusta salir"
+msgstr ""
+
+msgid "No me gustan los animales de compañía"
+msgstr ""
+
+msgid "No me gustaría casarme"
+msgstr ""
+
+msgid "No me molesta el humo"
+msgstr ""
+
+msgid "No me ve"
+msgstr ""
+
+msgid "No quiero especificar cuando"
+msgstr ""
+
+msgid "No quiero que me vea más"
+msgstr ""
+
+msgid "No recibiras notificaciones hasta que no hayas confirmado tu cuenta de email."
+msgstr ""
+
+msgid "No se ha podido guardar."
+msgstr ""
+
+msgid "No tengo animales de compañía"
+msgstr ""
+
+msgid "No tengo animales de compañía y soy alérgico"
+msgstr ""
+
+msgid "No tienes permiso para borrar esta foto"
+msgstr ""
+
+msgid "No, creo que lo consideraré de nuevo"
+msgstr ""
+
+msgid "No, me lo he pensado mejor"
+msgstr ""
+
+msgid "Nombre"
+msgstr ""
+
+msgid "Notificaciones por email"
+msgstr ""
+
+msgid "Nueva nota"
+msgstr ""
+
+msgid "Nueva recomendación"
+msgstr ""
+
+msgid "Nueva visita de perfil"
+msgstr ""
+
+msgid "Nuevo hacemos buena pareja"
+msgstr ""
+
+msgid "Nuevo me gusta"
+msgstr ""
+
+msgid "Nuevo mensaje"
+msgstr ""
+
+msgid "Ocio"
+msgstr ""
+
+msgid "Ojos"
+msgstr ""
+
+msgid "Online"
+msgstr ""
+
+msgid "Oops!"
+msgstr ""
+
+msgid "Opc. de privacidad avanzadas"
+msgstr ""
+
+msgid "Ordenar por..."
+msgstr ""
+
+msgid "Orgulloso"
+msgstr ""
+
+msgid "Palabra clave"
+msgstr ""
+
+msgid "Pasear"
+msgstr ""
+
+msgid "Peinado"
+msgstr ""
+
+msgid "Pelo"
+msgstr ""
+
+msgid "Perfil %{progress}%% completado"
+msgstr ""
+
+msgid "Permitir que cualquiera pueda chatear conmigo"
+msgstr ""
+
+msgid "Pero sobretodo, ven a menudo ;-)"
+msgstr ""
+
+msgid "Personas a las que haces de Celestin@"
+msgstr ""
+
+msgid "Peso"
+msgstr ""
+
+msgid "Playa"
+msgstr ""
+
+msgid "Población y código postal"
+msgstr ""
+
+msgid "Podrás incluir tus datos y las características de la persona que buscas sin coste alguno. Cellove te proporcionara gratis acceso a los perfiles compatibles y afines a ti. Podrás navegar ilimitadamente por Cellove, 24h al día durante todo el año y visualizar todos los perfiles que desees, características de estos, sus Celestin@s, que es lo que buscan, sus gustos, actividades... ¡Lo que quieras!"
+msgstr ""
+
+msgid "Política de Privacidad"
+msgstr ""
+
+msgid "Política de Privacidad y Protección de datos de Cellove"
+msgstr ""
+
+msgid "Política de privacidad"
+msgstr ""
+
+msgid "Ponle alas al amor"
+msgstr ""
+
+msgid "Ponle color"
+msgstr ""
+
+msgid "Por confirmar"
+msgstr ""
+
+msgid "Porque te gusta ayudar a la gente que quieres:"
+msgstr ""
+
+msgid "Posesivo"
+msgstr ""
+
+msgid "Proponer"
+msgstr ""
+
+msgid "Proponer actividad"
+msgstr ""
+
+msgid "Proponer una actividad"
+msgstr ""
+
+msgid "Propuesta de actividad:"
+msgstr ""
+
+msgid "Propón nuevos %{link} para que te recomienden y así mejorar tu <strong>Índice Cellove</strong>."
+msgstr ""
+
+msgid "Propón un nuevo celestin@ para que te recomiende y gana más puntos."
+msgstr ""
+
+msgid "Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a %{name}, desde tu apartado de configuración."
+msgstr ""
+
+msgid "Puntua de 1 a 5 cada una de estas características"
+msgstr ""
+
+msgid "Que"
+msgstr ""
+
+msgid "Que "
+msgstr ""
+
+msgid "Que dicen de ti"
+msgstr ""
+
+msgid "Que domine"
+msgstr ""
+
+msgid "Que en su tiempo libre le guste:"
+msgstr ""
+
+msgid "Que mida entre"
+msgstr ""
+
+msgid "Que no te molesten"
+msgstr ""
+
+msgid "Que sea"
+msgstr ""
+
+msgid "Que trabaje en el sector"
+msgstr ""
+
+msgid "Que viva"
+msgstr ""
+
+msgid "Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?"
+msgstr ""
+
+msgid "Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?"
+msgstr ""
+
+msgid "Quieres ser el primero?"
+msgstr ""
+
+msgid "Quiero encontrar"
+msgstr ""
+
+msgid "Quiero recibir la newsletter"
+msgstr ""
+
+msgid "Quiero recibir nuevos usuarios en mi zona"
+msgstr ""
+
+msgid "Quiero recibir sugerencias por email"
+msgstr ""
+
+msgid "Quiero ser Celestin@"
+msgstr ""
+
+msgid "Quiero ser celestin@"
+msgstr ""
+
 msgid "Qué busca"
 msgstr ""
 
-#: app/views/users/view.html.erb:6
-msgid "Últimos usuarios en Cellove %{link}"
+msgid "Qué buscas"
 msgstr ""
 
-#: app/views/users/view.html.erb:16
+msgid "Realizar recomendación"
+msgstr ""
+
+msgid "Rechazar"
+msgstr ""
+
+msgid "Rechazar propuesta de actividad"
+msgstr ""
+
+msgid "Recibidos"
+msgstr ""
+
+msgid "Recomendar usuari@"
+msgstr ""
+
+msgid "Recomendar usuari@ nuev@"
+msgstr ""
+
+msgid "Recomendar usuari@ registrad@"
+msgstr ""
+
+msgid "Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos."
+msgstr ""
+
+msgid "Recommendación acceptada"
+msgstr ""
+
+msgid "Recommendación enviada"
+msgstr ""
+
+msgid "Recommendación negada"
+msgstr ""
+
+msgid "Recuperar contraseña"
+msgstr ""
+
+msgid "Registrarse en Cellove es totalmente gratuito"
+msgstr ""
+
+msgid "Registro Celestin@"
+msgstr ""
+
+msgid "Registro Gratis"
+msgstr ""
+
+msgid "Registro Usuario Gratis"
+msgstr ""
+
+msgid "Registro de usuario"
+msgstr ""
+
+msgid "Registro<br>Usuari@<br>Gratis!"
+msgstr ""
+
+msgid "Registros Celestin@ Gratis"
+msgstr ""
+
+msgid "Regístrate"
+msgstr ""
+
+msgid "Regístrate GRATIS"
+msgstr ""
+
+msgid "Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu."
+msgstr ""
+
+msgid "Relación"
+msgstr ""
+
+msgid "Religión"
+msgstr ""
+
+msgid "Reservado"
+msgstr ""
+
+msgid "Responder"
+msgstr ""
+
+msgid "Resultados de la búsqueda"
+msgstr ""
+
+msgid "Romántico"
+msgstr ""
+
+msgid "Salir"
+msgstr ""
+
+msgid "Salir de copas"
+msgstr ""
+
+msgid "Se han enamorado en Cellove %{link}"
+msgstr ""
+
+msgid "Selecciona una propuesta para compartir..."
+msgstr ""
+
+msgid "Selecciona..."
+msgstr ""
+
+msgid "Sensible"
+msgstr ""
+
+msgid "Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes  mejorar tu <strong>Índice Cellove</strong> y aprovecharte de sus beneficios."
+msgstr ""
+
+msgid "Si quieres ayudar a un amig@, exnovi@ o familiar a encontrar a esa persona especial, ¡estás en el lugar adecuado!"
+msgstr ""
+
+msgid "Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!"
+msgstr ""
+
+msgid "Si tienes cualquier duda o pregunta sobre Cellove, su funcionamiento o, simplemente quieres ponerte en contacto con nosotr@s, hazlo a través del siguiente formulario:"
+msgstr ""
+
+msgid "Si, quiero eliminarlo"
+msgstr ""
+
+msgid "Sin duda podras hacer realidad tu objetivo más íntimo y emocional, encontrar esa persona especial, sea amor o amistad duradera."
+msgstr ""
+
+msgid "Sobre Cellove"
+msgstr ""
+
+msgid "Sociable"
+msgstr ""
+
+msgid "Solitario"
+msgstr ""
+
+msgid "Solteros Exigentes"
+msgstr ""
+
+msgid "Solteros exigentes"
+msgstr ""
+
+msgid "Somos %{count} usuari@s. ¡Gracias por vuestra confianza!"
+msgstr ""
+
+msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad."
+msgstr ""
+
+msgid "Son las personas del entorno del usuario registrado que ayudan a encontrar con más confianza y seguridad a esa persona perfecta. Dispone de un panel privado y totalmente Gratis para recomendar a sus usuarios y otorgarle atributos y virtudes que serán visibles por los otros usuarios registrados afines a este."
+msgstr ""
+
+msgid "Soy"
+msgstr ""
+
+msgid "Soy fumador social"
+msgstr ""
+
+msgid "Su Email"
+msgstr ""
+
+msgid "Sube tu foto"
+msgstr ""
+
+msgid "Sus Atributos"
+msgstr ""
+
+msgid "Sus Celestin@s"
+msgstr ""
+
+msgid "Sus atributos"
+msgstr ""
+
+msgid "Sus datos"
+msgstr ""
+
+msgid "Sus gustos"
+msgstr ""
+
+msgid "Sólo a perfiles con los que haya mantenido una conversación previa"
+msgstr ""
+
+msgid "Sólo perfiles \"hacemos buena pareja\""
+msgstr ""
+
+msgid "Sólo perfiles que conicidan con mis preferencias"
+msgstr ""
+
+msgid "Sólo perfiles que me han gustado"
+msgstr ""
+
+msgid "Sólo usuarios a los que haya valorado el perfil"
+msgstr ""
+
+msgid "Sólo usuarios de mi área (menos de 50km)"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "Tabaco"
+msgstr ""
+
+msgid "También hablo"
+msgstr ""
+
+msgid "Te gustan"
+msgstr ""
+
+msgid "Te gustan <em>(%{count})</em>"
+msgstr ""
+
+msgid "Te propongo esta actividad"
+msgstr ""
+
+msgid "Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s."
+msgstr ""
+
+msgid "Tenaz"
+msgstr ""
+
+msgid "Tengo animales de compañía"
+msgstr ""
+
+msgid "Tengo nacionalidad "
+msgstr ""
+
+msgid "Tengo un cuerpo "
+msgstr ""
+
+msgid "Tienes muchas formas de hacerlo:"
+msgstr ""
+
+msgid "Tomar un café"
+msgstr ""
+
+msgid "Trabajador"
+msgstr ""
+
+msgid "Trabajo"
+msgstr ""
+
+msgid "Trabajo en"
+msgstr ""
+
+msgid "Tranquilo"
+msgstr ""
+
+msgid "Tu dices:"
+msgstr ""
+
+msgid "Tu indice Cellove es"
+msgstr ""
+
+msgid "Tu nota se ha borrado."
+msgstr ""
+
+msgid "Tu nota se ha guardado."
+msgstr ""
+
+msgid "Tu panel de control como usuario registrado va actualizándose a tiempo real, si recibes visitas nuevas a tu perfil, nuevos mensajes, propuestas de actividad, etc. De esta forma estarás al corriente de todo, podrás interactuar al instante y sacar máximo provecho de Cellove."
+msgstr ""
+
+msgid "Tu perfil"
+msgstr ""
+
+msgid "Tu perfil <em>(%{progress}%% completo)</em>"
+msgstr ""
+
+msgid "Tu recomendación está pendiente de confirmar."
+msgstr ""
+
+msgid "Tu recomendación ha sido aceptada."
+msgstr ""
+
+msgid "Tu recomendación ha sido rechazada."
+msgstr ""
+
+msgid "Tu índice es del %{index}%% y tienes %{count} Celestin@s."
+msgstr ""
+
+msgid "Tus búsquedas"
+msgstr ""
+
+msgid "Tus fotos "
+msgstr ""
+
+msgid "Tus gustos"
+msgstr ""
+
+msgid "Tus notas"
+msgstr ""
+
+msgid "Tus notas de %{name} <span>(tranquilo, él/ella no las verá)</span>"
+msgstr ""
+
+msgid "Términos y condiciones"
+msgstr ""
+
+msgid "Términos y condiciones generales de uso de Cellove"
+msgstr ""
+
+msgid "Tímido"
+msgstr ""
+
+msgid "Una amiga me hizo de Celestina y lo probé, conocí a Carlos, después de hablar durante unos días, quedamos para tomar un café y ahora estamos saliendo juntos."
+msgstr ""
+
+msgid "Usuari@ invitado!"
+msgstr ""
+
+msgid "Usuari@s con mejor Índice Cellove"
+msgstr ""
+
+msgid "Usuari@s nuevos en tu zona"
+msgstr ""
+
+msgid "Usuari@s que te pueden gustar"
+msgstr ""
+
+msgid "Usuarios bloqueados"
+msgstr ""
+
 msgid "Usuarios más populares %{link}"
 msgstr ""
 
+msgid "Vaya. Parece que NO vas a aceptar la actividad que te propone"
+msgstr ""
+
+msgid "Ver"
+msgstr ""
+
+msgid "Ver más"
+msgstr ""
+
+msgid "Ver usuarios"
+msgstr ""
+
+msgid "Visibilidad"
+msgstr ""
+
+msgid "Visitas"
+msgstr "Visites"
+
+msgid "Visité su perfil y le envié un mensaje, después de varias ocasiones escribiéndonos, decidimos quedar para cenar y desde entonces, ¡no nos hemos separado!."
+msgstr ""
+
+msgid "Viva"
+msgstr ""
+
+msgid "Vive"
+msgstr ""
+
+msgid "Vivo"
+msgstr ""
+
+msgid "Vivo en"
+msgstr ""
+
+msgid "Ya has alcanzado tu limite de fotos"
+msgstr ""
+
+msgid "Ya he estado casado y no quiero repetir"
+msgstr ""
+
+msgid "Ya he estado casado y quiero repetir"
+msgstr ""
+
+msgid "Ya no me gusta"
+msgstr ""
+
+msgid "a"
+msgstr ""
+
+msgid "a formar parte de Cellove"
+msgstr ""
+
+msgid "a la moda"
+msgstr ""
+
+msgid "a nivel"
+msgstr ""
+
+msgid "acionalidad"
+msgstr ""
+
+msgid "acompañad@"
+msgstr ""
+
+msgid "adminsitrativo"
+msgstr ""
+
+msgid "afeitado"
+msgstr ""
+
+msgid "africana"
+msgstr ""
+
+msgid "agnóstico"
+msgstr ""
+
+msgid "al"
+msgstr ""
+
+msgid "alto"
+msgstr ""
+
+msgid "anterior"
+msgstr ""
+
+msgid "anuales de"
+msgstr ""
+
+msgid "asiática"
+msgstr ""
+
+msgid "ateo"
+msgstr ""
+
+msgid "atlético"
+msgstr ""
+
+msgid "atractiv@"
+msgstr ""
+
+msgid "ayuda a tu mejor amig@ a que sea feliz encontrando a su media naranja, ¡apóyale en su búsqueda del amor! ¡Recomiéndalo en Cellove!"
+msgstr ""
+
+msgid "azul"
+msgstr ""
+
+msgid "años."
+msgstr ""
+
+msgid "años. Para"
+msgstr ""
+
+msgid "bachillerato"
+msgstr ""
+
+msgid "bajo"
+msgstr ""
+
+msgid "banca, financiero"
+msgstr ""
+
+msgid "beba ocasionalmente"
+msgstr ""
+
+msgid "bebe ocasionalmente"
+msgstr ""
+
+msgid "bebo ocasionalmente"
+msgstr ""
+
+msgid "bohemio"
+msgstr ""
+
+msgid "budista"
+msgstr ""
+
+msgid "café"
+msgstr ""
+
+msgid "casad@"
+msgstr ""
+
+msgid "casarme"
+msgstr ""
+
+msgid "católico"
+msgstr ""
+
+msgid "cede los siguientes archivos para su divulgación y publicación en medios y prensa con finalidades legales y leales a nuestra marca. Ninguno de estos archivos debe ser modificado y/o manipulado. Solo se acepta el ajuste de medidas para su correcta visualización."
+msgstr ""
+
+msgid "ciencia"
+msgstr ""
+
+msgid "clásica"
+msgstr ""
+
+msgid "clásico"
+msgstr ""
+
+msgid "cms. y pese entre "
+msgstr ""
+
+msgid "cms. y peso "
+msgstr ""
+
+msgid "comedia"
+msgstr ""
+
+msgid "con curvas"
+msgstr ""
+
+msgid "con mis hijos"
+msgstr ""
+
+msgid "con mis padres"
+msgstr ""
+
+msgid "con sus hijos"
+msgstr ""
+
+msgid "con un cuerpo "
+msgstr ""
+
+msgid "construcción"
+msgstr ""
+
+msgid "corto"
+msgstr ""
+
+msgid "cristiano"
+msgstr ""
+
+msgid "de"
+msgstr ""
+
+msgid "de entre"
+msgstr ""
+
+msgid "de todo un poco"
+msgstr ""
+
+msgid "del montón"
+msgstr ""
+
+msgid "delgado"
+msgstr ""
+
+msgid "deportivo"
+msgstr ""
+
+msgid "desempleado"
+msgstr ""
+
+msgid "diplomado"
+msgstr ""
+
+msgid "divorciad@"
+msgstr ""
+
+msgid "drama"
+msgstr ""
+
+msgid "educación"
+msgstr ""
+
+msgid "ejecutivo y gestión "
+msgstr ""
+
+msgid "el alcohol no le sienta bien"
+msgstr ""
+
+msgid "el alcohol no me sienta bien"
+msgstr ""
+
+msgid "el cine<br>"
+msgstr ""
+
+msgid "el deporte<br>"
+msgstr ""
+
+msgid "el matrimonio es algo maravilloso"
+msgstr ""
+
+msgid "el próximo día"
+msgstr ""
+
+msgid "empleado"
+msgstr ""
+
+msgid "empleado público / gobierno"
+msgstr ""
+
+msgid "en"
+msgstr ""
+
+msgid "en pareja"
+msgstr ""
+
+msgid "es bebedor"
+msgstr ""
+
+msgid "es fumador social"
+msgstr ""
+
+msgid "es muy maniátic@ con la comida"
+msgstr ""
+
+msgid "establecer una relación estable"
+msgstr ""
+
+msgid "estar con la familia<br>"
+msgstr ""
+
+msgid "estar con sus amigos<br>"
+msgstr ""
+
+msgid "estar tranquil@ en casa<br>"
+msgstr ""
+
+msgid "estoy estudiando"
+msgstr ""
+
+msgid "europea"
+msgstr ""
+
+msgid "fecha a concretar contigo."
+msgstr ""
+
+msgid "formal"
+msgstr ""
+
+msgid "fuerte"
+msgstr ""
+
+msgid "fuma pero lo dejaría por su pareja"
+msgstr ""
+
+msgid "fume pero lo dejaría por su pareja"
+msgstr ""
+
+msgid "gris"
+msgstr ""
+
+msgid "guap@"
+msgstr ""
+
+msgid "hacer nuevas amistades"
+msgstr ""
+
+msgid "halal"
+msgstr ""
+
+msgid "has propuesto..."
+msgstr ""
+
+msgid "heavy"
+msgstr ""
+
+msgid "hispana"
+msgstr ""
+
+msgid "hombre"
+msgstr ""
+
+msgid "hombre buscando un hombre"
+msgstr ""
+
+msgid "hombre buscando una mujer"
+msgstr ""
+
+msgid "i quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}."
+msgstr ""
+
+msgid "idiomas a nivel"
+msgstr ""
+
+msgid "india"
+msgstr ""
+
+msgid "indie/casual"
+msgstr ""
+
+msgid "indú"
+msgstr ""
+
+msgid "instituto o inferior"
+msgstr ""
+
+msgid "italiana"
+msgstr ""
+
+msgid "japonesa"
+msgstr ""
+
+msgid "jubilado"
+msgstr ""
+
+msgid "judío"
+msgstr ""
+
+msgid "kosher"
+msgstr ""
+
+msgid "la lectura<br>"
+msgstr ""
+
+msgid "la montaña<br>"
+msgstr ""
+
+msgid "la playa<br>"
+msgstr ""
+
+msgid "la religión es esencial en su vida"
+msgstr ""
+
+msgid "la religión sea esencial en su vida"
+msgstr ""
+
+msgid "largo"
+msgstr ""
+
+msgid "le encanta la fiesta"
+msgstr ""
+
+msgid "le encante la fiesta"
+msgstr ""
+
+msgid "le gusta beber solo cuando sale"
+msgstr ""
+
+msgid "le gusta ir a la discoteca"
+msgstr ""
+
+msgid "le gusta ir a tomar algo con amigos"
+msgstr ""
+
+msgid "le gusta ir de bares"
+msgstr ""
+
+msgid "le gusta la música"
+msgstr ""
+
+msgid "le gusta mucho salir"
+msgstr ""
+
+msgid "le gusta todo"
+msgstr ""
+
+msgid "le gustan los animales de compañía"
+msgstr ""
+
+msgid "le gustaría casarse"
+msgstr ""
+
+msgid "le guste beber solo cuando salga"
+msgstr ""
+
+msgid "le guste ir a la discoteca"
+msgstr ""
+
+msgid "le guste ir a tomar algo con amigos"
+msgstr ""
+
+msgid "le guste ir de bares"
+msgstr ""
+
+msgid "le guste mucho salir"
+msgstr ""
+
+msgid "le guste todo"
+msgstr ""
+
+msgid "le gusten los animales de compañía"
+msgstr ""
+
+msgid "le importa poco la religión"
+msgstr ""
+
+msgid "le importe poco la religión"
+msgstr ""
+
+msgid "licenciado o superior"
+msgstr ""
+
+msgid "marrón"
+msgstr ""
+
+msgid "me adapto fácilmente"
+msgstr ""
+
+msgid "me gusta beber solo cuando salgo"
+msgstr ""
+
+msgid "me gusta todo"
+msgstr ""
+
+msgid "me importa poco la religión"
+msgstr ""
+
+msgid "medio"
+msgstr ""
+
+msgid "mediterránea"
+msgstr ""
+
+msgid "militar"
+msgstr ""
+
+msgid "mo le gustan los animales de compañía"
+msgstr ""
+
+msgid "mujer"
+msgstr ""
+
+msgid "mujer buscando un hombre"
+msgstr ""
+
+msgid "mujer buscando una mujer"
+msgstr ""
+
+msgid "musulmán"
+msgstr ""
+
+msgid "muy a menudo"
+msgstr ""
+
+msgid "muy bien"
+msgstr ""
+
+msgid "muy corto"
+msgstr ""
+
+msgid "módulo profesional"
+msgstr ""
+
+msgid "negro"
+msgstr ""
+
+msgid "no beba alcohol"
+msgstr ""
+
+msgid "no bebe alcohol"
+msgstr ""
+
+msgid "no bebo alcohol"
+msgstr ""
+
+msgid "no cree en el matrimonio"
+msgstr ""
+
+msgid "no le gusta la música"
+msgstr ""
+
+msgid "no le gusta salir"
+msgstr ""
+
+msgid "no le gustan los niños"
+msgstr ""
+
+msgid "no le gustaría casarse"
+msgstr ""
+
+msgid "no le guste nada la fiesta"
+msgstr ""
+
+msgid "no le guste salir"
+msgstr ""
+
+msgid "no le gusten los animales de compañía"
+msgstr ""
+
+msgid "no le gusten los niños"
+msgstr ""
+
+msgid "no le importa en absoluto la religión"
+msgstr ""
+
+msgid "no le importe en absoluto la religión"
+msgstr ""
+
+msgid "no le molesta el humo"
+msgstr ""
+
+msgid "no le moleste el humo"
+msgstr ""
+
+msgid "no me gusta ir al cine"
+msgstr ""
+
+msgid "no me gusta la música"
+msgstr ""
+
+msgid "no me gusta nada la fiesta"
+msgstr ""
+
+msgid "no me gustan los niños"
+msgstr ""
+
+msgid "no me importa en absoluto la religión"
+msgstr ""
+
+msgid "no tenga animales de compañía"
+msgstr ""
+
+msgid "no tenga animales de compañía y sea alérgic@"
+msgstr ""
+
+msgid "no tenga hijos"
+msgstr ""
+
+msgid "no tenga hijos, pero quiera tener"
+msgstr ""
+
+msgid "no tenga hijos, y no quiera tener"
+msgstr ""
+
+msgid "no tengo hijos"
+msgstr ""
+
+msgid "no tengo hijos, pero quiero tener"
+msgstr ""
+
+msgid "no tengo hijos, y no quiero tener"
+msgstr ""
+
+msgid "no tiene animales de compañía"
+msgstr ""
+
+msgid "no tiene animales de compañía y es alérgic@"
+msgstr ""
+
+msgid "no tiene hijos"
+msgstr ""
+
+msgid "no tiene hijos, pero quiere tener"
+msgstr ""
+
+msgid "no tiene hijos, y no quiere tener"
+msgstr ""
+
+msgid "normal"
+msgstr ""
+
+msgid "obeso"
+msgstr ""
+
+msgid "ocasionalemnete"
+msgstr ""
+
+msgid "ocasionalmente con mis hijos"
+msgstr ""
+
+msgid "ocasionalmente con sus hijos"
+msgstr ""
+
+msgid "ocupad@"
+msgstr ""
+
+msgid "ordenadores y tecnología"
+msgstr ""
+
+msgid "otro"
+msgstr ""
+
+msgid "para"
+msgstr ""
+
+msgid "para mi la religión es esencial en mi vida"
+msgstr ""
+
+msgid "pasear<br>"
+msgstr ""
+
+msgid "pelirrojo"
+msgstr ""
+
+msgid "pelo color"
+msgstr ""
+
+msgid "pero quiero que mi nombre para mostrar sea"
+msgstr ""
+
+msgid "pero quiero que mi nombre para mostrar sea "
+msgstr ""
+
+msgid "pijo"
+msgstr ""
+
+msgid "policíaco"
+msgstr ""
+
+msgid "pop"
+msgstr ""
+
+msgid "publicidad, entretenimiento y medios"
+msgstr ""
+
+msgid "registrarte en Cellove"
+msgstr ""
+
+msgid "retirado temporalmente"
+msgstr ""
+
+msgid "rock"
+msgstr ""
+
+msgid "rockero"
+msgstr ""
+
+msgid "romántico"
+msgstr ""
+
+msgid "rubio"
+msgstr ""
+
+msgid "salir y pasarlo bien"
+msgstr ""
+
+msgid "salud"
+msgstr ""
+
+msgid "se adapta fácilmente"
+msgstr ""
+
+msgid "se adapte fácilmente"
+msgstr ""
+
+msgid "sea bebedor"
+msgstr ""
+
+msgid "sea fumador social"
+msgstr ""
+
+msgid "sea muy maniátic@ con la comida"
+msgstr ""
+
+msgid "separad@"
+msgstr ""
+
+msgid "servicios legales"
+msgstr ""
+
+msgid "si tengo hijos, y no quiero tener mas "
+msgstr ""
+
+msgid "si tengo hijos, y quiero tener mas "
+msgstr ""
+
+msgid "si tiene hijos, y quiere tener mas "
+msgstr ""
+
+msgid "si tienes algún amigo con el que siempre has tenido mucha química, algo especial,  y quieres ayudarlo a que encuentre el amor... ¡Recomiéndalo en Cellove!"
+msgstr ""
+
+msgid "siguiente"
+msgstr ""
+
+msgid "sin pelo"
+msgstr ""
+
+msgid "sol@"
+msgstr ""
+
+msgid "solter@"
+msgstr ""
+
+msgid "soy bebedor"
+msgstr ""
+
+msgid "soy muy maniátic@ con la comida"
+msgstr ""
+
+msgid "te ha propuesto"
+msgstr ""
+
+msgid "te ha propuesto..."
+msgstr ""
+
+msgid "tenga animales de compañía"
+msgstr ""
+
+msgid "tenga hijos"
+msgstr ""
+
+msgid "tenga hijos, y no quiera tener mas "
+msgstr ""
+
+msgid "tenga hijos, y quiera tener mas "
+msgstr ""
+
+msgid "tengo hijos"
+msgstr ""
+
+msgid "terror"
+msgstr ""
+
+msgid "tiene animales de compañía"
+msgstr ""
+
+msgid "tiene hijos"
+msgstr ""
+
+msgid "tiene hijos, y no quiere tener mas "
+msgstr ""
+
+msgid "todos tenemos ex novios e incluso ex maridos. Puede que los dos no hayáis congeniado pero sois personas fantásticas, capaces de ofrecer amor y amistar y con ganas de encontrar a otra persona especial. ¿Porque no recomendarl@?"
+msgstr ""
+
+msgid "trabajos artísticos y creativos "
+msgstr ""
+
+msgid "transporte y logística "
+msgstr ""
+
+msgid "vegana"
+msgstr ""
+
+msgid "vegetariana"
+msgstr ""
+
+msgid "ventas y márketing"
+msgstr ""
+
+msgid "verde"
+msgstr ""
+
+msgid "viajes"
+msgstr ""
+
+msgid "viud@"
+msgstr ""
+
+msgid "y"
+msgstr ""
+
+msgid "y mi nivel de ganancias es"
+msgstr ""
+
+msgid "y nacionalidad"
+msgstr ""
+
+msgid "y vivo en"
+msgstr ""
+
+msgid "ya ha estado casad@ y no quiere repetir"
+msgstr ""
+
+msgid "ya ha estado casad@ y quiere repetir"
+msgstr ""
+
+msgid "¡Buena pareja!"
+msgstr ""
+
+msgid "¡Consigue más puntos!"
+msgstr ""
+
+msgid "¡Convertirte en usuari@ de Cellove es muy fácil!"
+msgstr ""
+
+msgid "¡Conviértete en Celestin@!"
+msgstr ""
+
+msgid "¡Conviértete en usuari@!"
+msgstr ""
+
+msgid "¡Estás a un paso de aceptar la propuesta de"
+msgstr ""
+
+msgid "¡Hola Celestin@!"
+msgstr ""
+
+msgid "¡Le gusta!"
+msgstr ""
+
+msgid "¡Les he gustado!"
+msgstr "Els agrado!"
+
+msgid "¡Me gusta!"
+msgstr ""
+
+msgid "¡Mejora tu Índice Cellove!"
+msgstr ""
+
+msgid "¡Mejora tu índice Cellove!"
+msgstr ""
+
+msgid "¡Mejora tu índice!"
+msgstr ""
+
+msgid "¡No me gusta!"
+msgstr ""
+
+msgid "¡Nuevo celestino!"
+msgstr ""
+
+msgid "¡Nuevo mensaje!"
+msgstr ""
+
+msgid "¡Nuevo visitante!"
+msgstr ""
+
+msgid "¡Registrarme Gratis!"
+msgstr ""
+
+msgid "¡Regístrate Gratis!"
+msgstr ""
+
+msgid "¡Regístrate ahora Gratis!"
+msgstr ""
+
+msgid "¡Regístrate ahora como Celestin@!"
+msgstr ""
+
+msgid "¡Subir imagen más adelante!"
+msgstr ""
+
+msgid "¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!"
+msgstr ""
+
+msgid "¿Como funciona?"
+msgstr ""
+
+msgid "¿Cuando?"
+msgstr ""
+
+msgid "¿Cómo consigo más popularidad?"
+msgstr ""
+
+msgid "¿Cómo consigo popularidad?"
+msgstr ""
+
+msgid "¿Cómo de real quieres que sea el tiempo real?"
+msgstr ""
+
+msgid "¿Cómo eres?"
+msgstr ""
+
+msgid "¿Cómo es?"
+msgstr ""
+
+msgid "¿Cómo funciona?"
+msgstr ""
+
+msgid "¿Cómo le describirías?"
+msgstr ""
+
+msgid "¿Cómo se calcula?"
+msgstr ""
+
+msgid "¿Cómo te consideras?"
+msgstr ""
+
+msgid "¿Cómo te describirias?"
+msgstr ""
+
+msgid "¿Cómo<br>funciona?"
+msgstr ""
+
+msgid "¿Deseas bloquear a este usuario?"
+msgstr ""
+
+msgid "¿Estas de seguro que quieres borrar la foto?"
+msgstr ""
+
+msgid "¿Estás seguro de que deseas eliminar esta búsqueda?"
+msgstr ""
+
+msgid "¿Hacéis buena pareja?"
+msgstr ""
+
+msgid "¿Has olvidado tu contraseña?"
+msgstr ""
+
+msgid "¿Que notificaciones quieres recibir?"
+msgstr ""
+
+msgid "¿Quien eres?"
+msgstr ""
+
+msgid "¿Quieres aumentar tu indice Cellove?"
+msgstr ""
+
+msgid "¿Quieres mejorarlo?"
+msgstr ""
+
+msgid "¿Quieres proponer un Celestin@?"
+msgstr ""
+
+msgid "¿Quieres recomendar a alguien? ¡Cuéntanos cómo es!"
+msgstr ""
+
+msgid "¿Quieres recomendar a un amig@, exnovi@ o familiar?"
+msgstr ""
+
+msgid "¿Quién eres?"
+msgstr ""
+
+msgid "¿Qué es Cellove?"
+msgstr ""
+
+msgid "¿Qué es?"
+msgstr ""
+
+msgid "¿Qué relación tenéis?"
+msgstr ""
+
+msgid "¿Seguro que deseas eliminar el mensaje de"
+msgstr ""
+
+msgid "¿algún miembro de tu familia está buscando pareja o una amistad especial?  ¿Tienes algún hermano, primo, o incluso a tu padre o tu madre les gustaría encontrar a alguien para compartir de nuevo su vida? ¡No lo dudes y ayúdales! ¡Recomiéndalos en Cellove!"
+msgstr ""
+
+msgid "Étnia"
+msgstr ""
+
+msgid "Índice Cellove"
+msgstr ""
+
+msgid "Últimas conversaciones"
+msgstr ""
+
+msgid "Últimos usuarios en Cellove %{link}"
+msgstr ""
+
+msgid "árabe"
+msgstr ""
+
+msgid "ópera"
+msgstr ""
+
+msgid "€/año"
+msgstr ""
