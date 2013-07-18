@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
 
   def set_cookie
     cookies[:userid] = current_user.id if user_signed_in?
+    cookies[:env] = Rails.env
   end
   private :set_cookie
 
