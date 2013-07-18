@@ -182,11 +182,6 @@ $(document).ready(function() {
   });
 
 
-  $('.header-switcher .leaf a').click(function(e){
-    e.preventDefault();
-    $(this).parent().parent().find('.leaf').toggle();
-  });
-
   var hash = document.location.hash;
   var prefix = "tab_";
   if (hash) {

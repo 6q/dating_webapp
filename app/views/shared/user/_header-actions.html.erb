@@ -20,8 +20,9 @@
 
 		<div id="lang-switcher" class="header-switcher">
 			<ul>
-				<li class="picker"><a href="#"><%= _('Castellano') %><i></i></a></li>
-				<li class="leaf"><a href="#"><%= _('Català') %></a></li>
+				<li class="picker"><%= link_to _('Idioma'), '#' %><i></i></li>
+				<li class="leaf"><%= link_to _('Castellano'), root_path(locale: :es) %><i></i></li>
+				<li class="leaf"><%= link_to _('Català'), root_path(locale: :ca) %></li>
 			</ul>
 		</div>
 
