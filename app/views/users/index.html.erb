@@ -10,7 +10,6 @@
     <%= search_form_for @search, class: 'span9 form-horizontal overflow-show' do |f| %>
       <div class="row">
         <div class="span8">
-
           <div class="control-group slider">
             <label class="control-label"><%= _('Edad') %></label>
             <div class="span6">
@@ -20,23 +19,15 @@
             </div>
           </div>
 
-          <div class="row search-location">
-            <div class="span8">
-              <div class="control-group">
-                <div class="pull-left">
-                  <%= f.label :city_eq, _('Localidad'), class: 'control-label location-label' %>
-                  <%= f.select :city_eq, [(current_user.city || @search.city_eq)], { include_blank: _('Localidad...'), selected: @search.city_eq || current_user.city }, { class: 'city' } %>
-                </div>
-                <div class="pull-left">
-                  <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
-                  <%= f.text_field :postal_code_cont, placeholder: 'CP', class: 'span1 zip-input', value: current_user.postal_code %>
-                </div>
-              </div>
+            <div class="overflow-show control-group location-search">
+                <%= f.label :city_eq, _('Localidad'), class: 'control-label location-label' %>
+                <%= f.select :city_eq, [(current_user.city || @search.city_eq)], { include_blank: _('Localidad...'), selected: @search.city_eq || current_user.city }, { class: 'city' } %>
+                <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
+                <%= f.text_field :postal_code_cont, placeholder: _('CP'), class: 'span1', value: current_user.postal_code %>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="span4">
+          <div class="clearfix">
+            <div class="searchcol1">
               <div class="control-group slider">
                 <label class="control-label"><%= _('Distancia') %></label>
                 <div class="controls">
@@ -59,7 +50,7 @@
               </div>
             </div>
 
-            <div class="span4">
+            <div class="searchcol2">
               <div class="control-group slider">
                 <label class="control-label"><%= _('Afinidad') %></label>
                 <div class="controls">

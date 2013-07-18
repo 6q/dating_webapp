@@ -1095,11 +1095,51 @@ section.chat{
       }
     }
 
+    .searchcol1, .searchcol2 {
+      width:50%;
+    }
+
+    .searchcol1 {
+      float:left;
+
+      input[type="text"] {
+        width: 175px;
+      }
+    }
+
+    .searchcol2 {
+      float:right;
+
+      select {
+        font-size:.8em;
+      }
+    }
+
     .controls{
       margin-left: 130px;
     }
     .control-label{
       width:120px;
+    }
+
+    .location-search {
+      .control-label {
+        width:auto;
+        float:none;
+        display:inline-block;
+
+        &.location-label {
+          display:block;
+          width:120px;
+          text-align:right;
+          margin-right:10px;
+          float:left;
+        }
+
+        &.zip {
+          margin-left:10px;
+        }
+      }
     }
 
     .search-location {
@@ -1128,14 +1168,14 @@ section.chat{
 
     .fit {
       select {
-        width:170px;
+        width:180px;
         margin-left:10px;
       }
     }
 
     input.btn {
       font-size:1.1em;
-      width:170px;
+      width:180px;
       padding:.3em .7em;
       margin-top:5px;
     }
