@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="activity-proposal-<%= user.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="activity-proposal-<%= user.id %>" class="activity-proposal modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3><%= _('Proponer una actividad') %></h3>
@@ -24,7 +24,7 @@
       <br>
       <div id="activity-date" class="form-inline">
         <div class="control-group">
-          <label><%= _('¿Cuando?') %></label> <%= f.input_field :date, as: :string, placeholder: 'dd/mm/aaaa', class: 'input-small' %>
+          <label><%= _('¿Cuando?') %></label> <%= f.input_field :date, as: :string, placeholder: 'dd/mm/aaaa', id: "activity-datepicker-#{user.id}" , class: "input-small" %>
           <label class="checkbox">
             <input type="checkbox"> <%= _('No quiero especificar cuando') %>
           </label>
@@ -38,3 +38,16 @@
     </div>
   <% end %>
 </div>
+<script>
+  $(function() {
+    var dnShort = new Array("Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa");
+    var mn = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+
+    $("#activity-datepicker-<%= user.id %>").datepicker({
+      dateFormat: 'dd/mm/yy',
+      firstDay: 1,
+      dayNamesMin: dnShort,
+      monthNames: mn
+    });
+  });
+</script>

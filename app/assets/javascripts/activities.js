@@ -23,17 +23,6 @@ $(function() {
     	$(this).children().animate({opacity: 0.4}, 300);
   	};
   });
-
-  var dnShort = new Array("Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa");
-  var mn = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
-
-  $("#activity_date").datepicker({ 
-    dateFormat: 'dd/mm/yy',
-    firstDay: 1,
-    dayNamesMin: dnShort,
-    monthNames: mn
-  });
-
 });
 
 

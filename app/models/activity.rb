@@ -21,6 +21,7 @@ class Activity < ActiveRecord::Base
     coffee: _('Tomar un café'),
     movie: _('Ir al cine / espectáculo'),
     drink: _('Salir de copas'),
+    eat: _('Ir acomer'),
     sport: _('Actividad deportiva'),
     culture: _('Actividad cultural'),
     heart: _('Conocerte de verdad')
