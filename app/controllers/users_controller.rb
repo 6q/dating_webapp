@@ -2,9 +2,9 @@
 class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
-  
+
   layout 'logged_in', :except => 'view'
-  
+
   after_filter :user_visit, only: [:show]
   before_filter :set_visit_seen, only: [:hits]
 
