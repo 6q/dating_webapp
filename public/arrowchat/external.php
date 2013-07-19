@@ -439,7 +439,7 @@
 		require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'js/arrowchat_templates.js');
 		
 		echo "\n\n// **********Main Script Start**********\n// http://www.arrowchat.com\n";
-		require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'js/arrowchat_core.js');
+		require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'js/arrowchat_core.dev.js');
 		
 		echo "\n\n// **********Applications Pre-loading Start**********\n";
 		foreach ($apps as $val) 
