@@ -9,7 +9,7 @@
 //$("#caixarandom").auderoFlashingText("stop");
 
 $(document).ready(function() {
-  setTimeout(getNotifications, 60000);
+  setTimeout(getNotifications, 5000);
 
   function getNotifications () {
     var notification;
@@ -24,7 +24,7 @@ $(document).ready(function() {
     .fail(function(jqxhr, settings, exception) {
       // ERROR.
     });
-    setTimeout(getNotifications, 60000);
+    setTimeout(getNotifications, 5000);
   }
 
   $(document).on('click', '.notification-close', function() {
