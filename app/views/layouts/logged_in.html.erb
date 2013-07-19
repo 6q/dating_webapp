@@ -27,7 +27,7 @@
           </div>
 
           <div class="span9">
-            <%= render 'shared/confirmation_pending_form' unless current_user.confirmed? || current_user.has_role?(:matchmaker) %>
+            <%= render 'shared/confirmation_pending_form' unless current_user.confirmed? || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
             <%= yield %>
           </div>
         </section>
