@@ -59,10 +59,13 @@ GEM
       net-ssh-gateway (>= 1.1.0)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
+    capistrano-unicorn (0.1.6)
+      capistrano
     capistrano_colors (0.5.5)
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
+    chronic (0.9.0)
     chunky_png (1.2.8)
     client_side_validations (3.2.5)
     coderay (1.0.9)
@@ -260,6 +263,9 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.1)
       rack (>= 1.0)
+    whenever (0.8.2)
+      activesupport (>= 2.3.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -269,6 +275,7 @@ DEPENDENCIES
   cancan (>= 1.6.9)
   capistrano
   capistrano-ext
+  capistrano-unicorn
   capistrano_colors
   client_side_validations
   commands
@@ -311,3 +318,4 @@ DEPENDENCIES
   typus!
   uglifier (>= 1.0.3)
   unicorn (>= 4.3.1)
+  whenever

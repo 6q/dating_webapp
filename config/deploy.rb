@@ -7,7 +7,7 @@ set :use_sudo, false
 set :scm, :git
 set :repository, "git@git.season.es:cellove.git"
 set :deploy_via, :remote_cache
-set :keep_releases, 3
+set :keep_releases, 5
 set :normalize_asset_timestamps, false
 
 set :shared_children, shared_children + %w(tmp/dragonfly)
@@ -17,14 +17,8 @@ set :shared_children, shared_children + %w(tmp/dragonfly)
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "kill -s USR2 `cat #{shared_path}/pids/unicorn.pid`"
-  end
-end
-
+after "deploy:restart", "deploy:cleanup"
+after "deploy:restart", "whenever:update_crontab"
 after 'deploy:create_symlink', 'arrowchat:setup'
 after 'deploy:create_symlink', 'symlink:app_config'
 
@@ -43,5 +37,11 @@ namespace :symlink do
   desc "Link public directories to shared location."
   task :app_config, :roles => [:web] do
     run "ln -nfs #{shared_path}/config/application.yml #{current_path}/config/application.yml"
+  end
+end
+
+namespace :whenever do
+  task :update_crontab, roles: [:app] do
+    run "cd #{current_path} && bundle exec whenever --update-crontab #{application} --set 'path=#{current_path}'"
   end
 end
