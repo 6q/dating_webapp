@@ -3,7 +3,9 @@ $(function() {
   $('.city').ajaxChosen({
     type: 'GET',
     url: '<%= cities_path(format: :json, country: CountrySelect::COUNTRIES.key(current_user.country)) %>',
-    dataType: 'json'
+    dataType: 'json',
+    keepTypingMsg: '<%= _('Sigue escribiendo...') %>',
+    lookingForMsg: '<%= _('Buscando') %>'
     }, function (data) {
     var results = [];
 

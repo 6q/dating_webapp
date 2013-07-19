@@ -4,6 +4,7 @@ $(function() {
   });
 
   $(".location").ajaxChosen();
+
   if ($('#user_country').val() == "") {
     $('.location').attr('disabled', true).trigger("liszt:updated");
   } else {
@@ -20,7 +21,9 @@ chosenize = function(country) {
   $(".location").ajaxChosen({
       type: 'GET',
       url: '<%= Rails.application.class.routes.url_helpers.cities_path(format: :json) %>?country=' + country,
-      dataType: 'json'
+      dataType: 'json',
+      keepTypingMsg: '<%= _('Sigue escribiendo...') %>',
+      lookingForMsg: '<%= _('Buscando') %>'
     }, function (data) {
       var results = [];
 
