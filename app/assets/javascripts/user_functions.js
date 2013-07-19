@@ -31,27 +31,18 @@ $(document).ready(function() {
     $(this).parent().parent().remove();
   });
 
-  var hasSkin = $.cookie("cellove-skin");
-  if (hasSkin) {
-    var bg = '/assets/bg/main-bg' + hasSkin + '.jpg';
-    $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
-  } else {
-    //$.getScript("/background.json").done(function(background, textStatus) { });
-  }
-
   $(".skin-change").click(function() {
-    var number = $(this).data("skin"),
-        bg = '/assets/bg/main-bg' + number + '.jpg';
-    $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
-    $.cookie("cellove-skin", number);
+    var number = $(this).data("skin");
     $.ajax({
       url: "/background.json",
-      dataType: "jsonp",
       type: "post",
       data: {
         background: number
       },
-      success: function(data) { }
+      success: function(data) { 
+        var bg = '/assets/bg/main-bg' + data + '.jpg';
+        $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
+      }
     });
   });
 
