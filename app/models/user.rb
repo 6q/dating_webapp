@@ -138,7 +138,6 @@ class User < ActiveRecord::Base
                       .group("users.id, notifications.id")
                       .order("notifications_count DESC")
 
-
   #relations
   has_many :pictures, as: :attachable
   has_many :characteristics, class_name: 'Characteristic', foreign_key: 'user_id'
@@ -704,4 +703,12 @@ class User < ActiveRecord::Base
     self.gender = gen_cor[seeking.split.first] if seeking.present?
   end
   before_validation :set_gender
+
+  def visitor?(user)
+    user_visits.where('visitor_id = :id', id: user.id).first
+  end
+  
+  def liker?(user)
+    likers.where('creator_id = :id', id: user.id).first
+  end
 end

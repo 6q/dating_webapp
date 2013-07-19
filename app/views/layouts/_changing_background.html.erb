@@ -7,7 +7,7 @@
 <% else %>
   <style>
     header[role="banner"] {
-      background:url('<%= current_user.background.present? ? asset_path("bg/main-bg#{current_user.background}.jpg") : asset_path("bg/main-bg#{Random.rand(5) + 1}.jpg") %>') top left no-repeat;
+      background:url('<%= current_user && current_user.background.present? ? asset_path("bg/main-bg#{current_user.background}.jpg") : asset_path("bg/main-bg#{Random.rand(5) + 1}.jpg") %>') top left no-repeat;
     }
   </style>
 <% end %>

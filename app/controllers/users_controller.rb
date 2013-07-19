@@ -150,6 +150,8 @@ class UsersController < ApplicationController
             .where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
             .where("users.gender = ?", current_user.matching_gender)
 
+      in_filter = [0] if in_filter.empty?
+
       if params[:q]
         params[:q] = params[:q].merge(id_in: in_filter)
         if params[:q][:years_lteq] == params[:q][:years_gteq]
