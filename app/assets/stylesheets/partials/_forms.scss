@@ -21,6 +21,14 @@ fieldset {
     display:inline;
   }
 
+  &#name {
+    .field_with_errors {
+      .popover-form {
+        top:20px;
+      }
+    }
+  }
+
   legend {
     border-bottom:#ccc 1px solid;
     color:$link_color;
@@ -170,7 +178,7 @@ fieldset {
 .popover-form{
   position: absolute;
   z-index: 1010;
-  left:20%;
+  left:10%;
   max-width: 276px;
   text-align: left;
   background-color: white;
