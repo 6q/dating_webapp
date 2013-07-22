@@ -36,7 +36,18 @@ $(function () {
         value : $('meta[name="csrf-token"]').attr('content')
       }],
       acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
-      done: showModalAndCrop
+      done: showModalAndCrop,
+      progress: function (e, data) {
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        $('.progress .bar').css('width', data.loaded);
+      },
+      start: function() {
+        var modalObject;
+        $("#crop_modal_wrapper").html('<div id="crop_modal" class="modal hide fade" tabindex="-1" role="dialog"><div class="modal-body"><div class="progress progress-striped active"><div class="bar"></div></div></div></div>');
+        modalObject = $("#crop_modal_wrapper #crop_modal");
+        modalObject.modal({show: true});
+      }
+
     });
  }
 
