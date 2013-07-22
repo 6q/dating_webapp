@@ -8,7 +8,7 @@ Before start
 
   * Clone the repository and bundle install
   * Copy config/application.example.yml to config/application.yml
-  * Run rake db:setup and go out for a coffe, because you are loading all the f*cking towns in the world each time you seed the database.
+  * Run rake db:setup and go out for a coffe, because you are loading all the focking towns in the world each time you seed the database.
 
 Development practices
 ---------------------
@@ -72,6 +72,13 @@ Translations
 Locales are stored in config/locales
 
  To update translation templates: `rake gettext:find`
+
+Password protection
+-------------------
+
+If you want to remove the passwords edit app/controllers/application_controller.rb and edit authenticate method.
+
+
 
 Extra
 -----
