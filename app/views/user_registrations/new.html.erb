@@ -53,7 +53,7 @@
       <%= f.label :postal_code, _("Mi codigo postal es el") %>
       <%= f.text_field :postal_code, class: "span1", value: (@geocoder ? @geocoder.data['zipcode'] : resource.postal_code) %>
       <%= f.label :city, _('de') %>
-      <%= f.select :city, ([resource.city] || []), { include_blank: _('Localidad...'), selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %>
+      <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %>
     </div>
   </fieldset>
   <fieldset id="photo" class="clearfix form-inline">
