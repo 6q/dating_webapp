@@ -1,12 +1,16 @@
 <!-- celestino data! -->
 <section id="user-sidebar">
   <div class="profile_pic_wrapper">
-    <!-- div class="profile_pic_overlay">
+    <div class="profile_pic_overlay">
+      <%= simple_form_for Picture.new, html: { class: 'form-horizontal' } do |f| %>
+        <%= f.hidden_field :main, value: true %>
+        <%= f.file_field :picture, name: 'picture', class: 'upload_pic_input main' %>
+      <% end %>
       <button class="btn btn-info" type="submit">
         <i class="icon-wrench icon-white"></i>
         Cambia tu foto de perfil
       </button>
-    </div -->
+    </div>
     <div class="profile_pic">
       <%= profile_pic(current_user) %>
     </div>
@@ -19,3 +23,5 @@
     <li class="highlight"><%= link_to _('¡Conviértete en usuari@!'), matchmaker_become_user_path %></li>
   </ul>
 </section>
+
+<div id="crop_modal_wrapper"></div>

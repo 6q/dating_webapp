@@ -2,6 +2,7 @@ class PicturesController < ApplicationController
   before_filter :find_picture, only: [:show, :destroy, :update]
   before_filter :check_ownership, only: [:update, :destroy]
   skip_before_filter :authenticate_user!
+  skip_before_filter :matchmaker_user
 
   def create
     if current_user && current_user.is_over_picture_limit?
@@ -11,7 +12,10 @@ class PicturesController < ApplicationController
       @picture.image = @picture.image.thumb("500x500").tempfile
       if current_user
         @picture.attachable = current_user
-        @picture.main = true if current_user.pictures.empty?
+        if current_user.pictures.empty? || params[:main]
+          current_user.pictures.update_all(main: false)
+          @picture.main = true
+        end
       end
       if @picture.save
         session[:registration_image] = @picture.id unless current_user

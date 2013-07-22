@@ -31,10 +31,10 @@ $(function () {
     $(".upload_pic_input, .upload_pic_input_unregistered").fileupload({
       dataType: 'json',
       url: '/pictures',
-      formData : [{
-        name : 'authenticity_token',
-        value : $('meta[name="csrf-token"]').attr('content')
-      }],
+      formData: [{
+        name: 'authenticity_token',
+        value: $('meta[name="csrf-token"]').attr('content')
+      }, {name: 'main', value: $('#picture_main').val()}],
       acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
       done: showModalAndCrop,
       progress: function (e, data) {

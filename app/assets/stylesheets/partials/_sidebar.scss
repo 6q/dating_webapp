@@ -29,6 +29,14 @@
       display: none;
       bottom: 10px;
       text-align: center;
+
+      .upload_pic_input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        height: 100%;
+      }
     }
 
     &:hover {
