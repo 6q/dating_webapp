@@ -37,12 +37,12 @@
               <%= f.label :birth_date_year, _('de') %>
               <%= f.text_field :birth_date_year, placeholder: Date.today.year, class: "span1" %>
               <%= f.label :country, _('y vivo en') %>
-              <%= f.select(:country, country_options) %>
+              <%= country_select("user", "country", nil, include_blank: _('Selecciona...')) %>
             </div>
             <div class="control-group">
               <%= f.label :postal_code, _('Mi código postal es el') %> <%= f.text_field :postal_code, class: 'span1' %>
-              <%= f.label :city, "de" %>
-              <%= f.select(:city, options_for_select([['Barcelona', 'Barcelona']])) %>
+              <%= f.label :city, _('de') %>
+              <%= f.select :city, [''], { selected: (@geocoder ? @geocoder.city : '') }, { class: 'location', 'data-placeholder' => _('Localidad...')} %>
             </div>
           </fieldset>
             
