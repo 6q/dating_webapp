@@ -8,7 +8,7 @@ Before start
 
   * Clone the repository and bundle install
   * Copy config/application.example.yml to config/application.yml
-  * Run rake db:setup and go out for a coffe, because you are loading all the focking towns in the world each time you seed the database.
+  * Run rake db:setup and go out for a coffe, because you are loading all the towns in the world each time you seed the database.
 
 Development practices
 ---------------------
@@ -78,11 +78,9 @@ Password protection
 
 If you want to remove the passwords edit app/controllers/application_controller.rb and edit authenticate method.
 
-
-
 Extra
 -----
 
   * application.yml config file could be found in ~/public_html/cellove_[env]/shared/config/application.yml
   * User uploaded images gets stored in: public/system/dragonfly/[environment]
-  * Change password protection in app/controllers/application_controller
+  * Change password protection in app/controllers/application_controller.rb authenticat method
