@@ -83,4 +83,3 @@ Extra
 
   * application.yml config file could be found in ~/public_html/cellove_[env]/shared/config/application.yml
   * User uploaded images gets stored in: public/system/dragonfly/[environment]
-  * Change password protection in app/controllers/application_controller.rb authenticat method
