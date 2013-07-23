@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710213101) do
+ActiveRecord::Schema.define(:version => 20130723162120) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -586,6 +586,8 @@ ActiveRecord::Schema.define(:version => 20130710213101) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "seeking"
+    t.boolean  "banned"
+    t.boolean  "fake"
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"

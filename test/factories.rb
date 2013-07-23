@@ -8,6 +8,8 @@ FactoryGirl.define do
       screen_name{ [name, surname].join.underscore }
       email{ Faker::Internet.email }
       password "V3RYS3CUR3"
+      fake true
+      banned false
     end
 
     trait :complementary_data do
