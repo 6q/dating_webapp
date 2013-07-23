@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-Search:
-  fields:
-    default: user_id, years_lteq, years_gteq, town_eq, postal_code_cont, description_cont, pictures_main_eq, distance, sort, online, smoker_in, children_in, height_lteq, height_gteq, afinity_eq, complexion_eq, name
-    form: user_id, years_lteq, years_gteq, town_eq, postal_code_cont, description_cont, pictures_main_eq, distance, sort, online, smoker_in, children_in, height_lteq, height_gteq, afinity_eq, complexion_eq, name
-  relationships: 
-  application: Application

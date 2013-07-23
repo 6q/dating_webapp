@@ -4,5 +4,5 @@ CelloveNotification:
   fields:
     default: sender_id, receiver_id, notifiable_id, seen
     form: sender_id, receiver_id, notifiable_id, seen
-  relationships: 
+  relationships:
   application: Application

@@ -6,3 +6,4 @@ City:
     form: country, name, region, latitude, longitude
   relationships: 
   application: Application
+  search: name

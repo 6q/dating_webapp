@@ -1,8 +1,8 @@
 # Use the README file as a reference to customize settings.
 
-Role:
+Message:
   fields:
-    default: name, resource_id
-    form: name, resource_id
+    default: body
+    form: body  
   relationships: 
   application: Application

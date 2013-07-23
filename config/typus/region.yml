@@ -1,8 +1,0 @@
-# Use the README file as a reference to customize settings.
-
-Region:
-  fields:
-    default: name, code, country
-    form: name, code, country
-  relationships: 
-  application: Application

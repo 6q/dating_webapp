@@ -2,7 +2,7 @@
 
 Picture:
   fields:
-    default: image_uid, image_name, attachable_id, main
-    form: image_uid, image_name, attachable_id, main
+    default: image, attachable_id, main
+    form: image, attachable_id, main
   relationships: 
   application: Application
