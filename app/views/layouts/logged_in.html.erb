@@ -43,10 +43,9 @@
   <% unless current_user.has_role?(:matchmaker) %>
     <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
     <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script> 
-    <% unless current_user.has_role?(:premium_user) %>
-      <script type="text/javascript">
-        c_video_chat = 0;
-      </script>
-    <%end%>
+    <script type="text/javascript">
+      setTimeout(getNotifications, 5000);
+      c_video_chat = <%= current_user.has_role?(:premium_user) ? '1' : '0' %>;
+    </script>
   <% end %>
 </html>
