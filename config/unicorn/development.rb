@@ -50,6 +50,11 @@ preload_app true
 GC.respond_to?(:copy_on_write_friendly=) and
   GC.copy_on_write_friendly = true
 
+# Ensure Unicorn uses new Gemfile (not expanded path to old Gemfile).
+before_exec do |server|
+  ENV['BUNDLE_GEMFILE'] = "#{deploy_path}/current/Gemfile"
+end
+
 before_fork do |server, worker|
   # the following is highly recomended for Rails + "preload_app true"
   # as there's no need for the master process to hold a connection

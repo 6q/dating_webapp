@@ -52,7 +52,7 @@ GC.respond_to?(:copy_on_write_friendly=) and
 
 # Ensure Unicorn uses new Gemfile (not expanded path to old Gemfile).
 before_exec do |server|
-  ENV['BUNDLE_GEMFILE'] = "#{APP_PATH}/current/Gemfile"
+  ENV['BUNDLE_GEMFILE'] = "#{deploy_path}/current/Gemfile"
 end
 
 before_fork do |server, worker|
