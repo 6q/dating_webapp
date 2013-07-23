@@ -118,7 +118,8 @@
 #  lf_relationship        :string(255)
 #  background             :integer          default(1)
 #  progress_status        :integer          default(1)
-#
+#  fake                   :boolean
+#  banned                 :boolean
 
 require_dependency 'minimum_age_validator'
 
@@ -212,7 +213,7 @@ class User < ActiveRecord::Base
     :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals, 
     :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
     :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to, :lf_relationship,
-    :characteristics_attributes, :my_characteristics_attributes
+    :characteristics_attributes, :my_characteristics_attributes, :fake, :banned
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
   premium_user = lambda {|user| user.has_role?(:premium_user) }
