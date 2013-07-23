@@ -711,4 +711,8 @@ class User < ActiveRecord::Base
   def liker?(user)
     likers.where('creator_id = :id', id: user.id).first
   end
+
+  def active_for_authentication?
+    super && !self.banned?
+  end
 end
