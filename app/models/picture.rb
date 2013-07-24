@@ -15,7 +15,7 @@
 class Picture < ActiveRecord::Base
   belongs_to :attachable, polymorphic: true
 
-  attr_accessible :image
+  attr_accessible :image, :retained_image, :attachable_id, :main
 
   image_accessor :image
   validates_size_of :image, maximum: 3.megabytes
