@@ -78,6 +78,18 @@ Password protection
 
 If you want to remove the passwords edit app/controllers/application_controller.rb and edit authenticate method.
 
+Chat
+----
+
+Chat admin is accesed in /arrowchat/admin
+
+Username: admin
+Pass: columbia
+
+Theme is Cellove under `/public/arrowchat/themes/cellove`
+
+Change there images, css
+
 Extra
 -----
 
