@@ -21,7 +21,7 @@
 
             <div class="overflow-show control-group location-search">
                 <%= f.label :city_eq, _('Localidad'), class: 'control-label location-label' %>
-                <%= f.select :city_eq, [(params[:q][:city_eq] || current_user.city)], { selected: params[:q][:city_eq] || current_user.city }, { class: 'city', 'data-placeholder' => _('Localidad...') } %>
+                <%= f.select :city_eq, [(params[:q][:city_eq] || current_user.city)], { include_blank: _('Localidad...'), selected: params[:q][:city_eq] || current_user.city }, { class: 'city', 'data-placeholder' => _('Localidad...') } %>
                 <%= f.label :postal_code_cont, _('Código postal'), class: 'control-label zip' %>
                 <%= f.text_field :postal_code_cont, placeholder: _('CP'), class: 'span1', value: (params[:q][:postal_code_cont] || current_user.postal_code) %>
             </div>

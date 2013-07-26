@@ -16,7 +16,7 @@
             <div class="overflow-show control-group">
               <label><%= _('Población y código postal') %></label>
               <div class="controls">
-                <%= f.select :city_eq, [current_user.city], { selected: @search.city_eq || current_user.city }, { class: 'city', 'data-placeholder' => _('Localidad...') } %>
+                <%= f.select :city_eq, [current_user.city], { include_blank: _('Localidad...'), selected: @search.city_eq || current_user.city }, { class: 'city', 'data-placeholder' => _('Localidad...') } %>
                 <%= f.text_field :postal_code_cont, placeholder: _('CP'), class: 'span1', value: current_user.postal_code %>
               </div>
             </div>
