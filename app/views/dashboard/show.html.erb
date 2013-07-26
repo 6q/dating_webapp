@@ -15,5 +15,6 @@
       <%= render conversation %>
       <hr>
     <% end %>
+    <%= _("No hay ninguna conversación.") if current_user.mailbox.conversations.count == 0 %>
   </section>
 </section>

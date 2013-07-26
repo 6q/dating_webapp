@@ -39,7 +39,7 @@
       <% if recommendation.user_id == current_user.id %>
         <%= link_to _('Eliminar celestin@'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
       <% else %>
-        <% if !recommendation.denied? && !recommendation.confirmed? %>
+        <% if !recommendation.denied? %>
           <%= link_to _('Eliminar recomendación'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
         <% end %>
       <% end %>
@@ -55,7 +55,7 @@
         <% if !r.confirmed? && !r.denied? %>
           <%= _('Tu recomendación está pendiente de confirmar.') %>
         <% elsif r.denied? && r.confirmed? %>
-          <%= _('Has desactivado esta recomendación.') %>
+          <%= _('Se ha desactivado esta recomendación.') %>
         <% elsif !r.confirmed? && r.denied? %>
           <%= _('Tu recomendación ha sido rechazada.') %>
         <% elsif r.confirmed? && !r.denied? %>

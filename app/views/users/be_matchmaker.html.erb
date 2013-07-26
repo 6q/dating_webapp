@@ -36,14 +36,12 @@
       </div>
     </div>
 
-    <% unless current_user.confirmed_recommendations.blank? %>
     <div class="your-celestines">
       <h4 style="text-align:center"><%= _('Personas a las que haces de Celestin@') %></h4>
-      <% current_user.confirmed_recommendations.each do |rec| %>
+      <% current_user.recommendations.each do |rec| %>
         <%= render 'shared/user/celes-item', recommendation: rec, is_creator: true %>
       <% end %>
     </div>
-    <% end %>
     <hr class="thin">
   </div>
 
