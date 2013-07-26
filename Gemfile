@@ -25,7 +25,6 @@ gem 'country_select', github: 'stefanpenner/country_select'
 gem 'kaminari'
 #gem 'turbolinks'
 gem 'mail_form'
-gem 'rails-i18n'
 gem 'strong_parameters'
 gem 'mailboxer'
 gem 'locale'
@@ -38,6 +37,7 @@ gem "mail_view", "~> 1.0.3"
 gem 'client_side_validations'
 gem "typus", :git => "git://github.com/fesplugas/typus.git", :branch => "features/3-2-stable-bootstrap"
 gem "whenever"
+gem 'rails-i18n', '~> 3.0.0.pre'
 
 group :test do
   gem 'sqlite3'

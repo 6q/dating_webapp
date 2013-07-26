@@ -205,8 +205,9 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
-    rails-i18n (0.7.3)
+    rails-i18n (3.0.0.pre)
       i18n (~> 0.5)
+      rails (>= 3.0.0, < 4.0.0)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -307,7 +308,7 @@ DEPENDENCIES
   mysql2
   quiet_assets (>= 1.0.2)
   rails (= 3.2.13)
-  rails-i18n
+  rails-i18n (~> 3.0.0.pre)
   ransack
   rb-fsevent
   rolify (>= 3.2.0)
