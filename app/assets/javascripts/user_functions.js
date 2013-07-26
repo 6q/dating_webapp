@@ -108,6 +108,9 @@ $(document).ready(function() {
     dimension: '&nbsp;cm',
     onstatechange: function() {
       var height = $('#altura').val().split(';');
+      if (height[0] == '150' && height[1] == '220') {
+        height[0] = height[1] = '';
+      }
       $('#q_height_gteq').val(height[0]);
       $('#q_height_lteq').val(height[1]);
     }
