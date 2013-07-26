@@ -47,7 +47,7 @@
       <%= f.label :birth_date_year, _('de') %>
       <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
       <%= f.label :country, _('y vivo en') %>
-      <%= country_select("user", "country", nil, include_blank: _('Selecciona...')) %>
+      <%= localized_country_select_tag('user', (@geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %>
     </div>
     <div class="control-group">
       <%= f.label :postal_code, _("Mi codigo postal es el") %>
