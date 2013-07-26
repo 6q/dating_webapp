@@ -106,10 +106,10 @@
 		$sql = ("
 			SELECT " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " userid, " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " username, arrowchat_status.session_time lastactivity,  " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " link, " . TABLE_PREFIX . DB_AVATARTABLE . "." . DB_AVATARTABLE_AVATAR . " avatar, arrowchat_status.is_admin, arrowchat_status.status 
 			FROM " . TABLE_PREFIX . DB_USERTABLE . " 
-			LEFT JOIN arrowchat_status 
-				ON " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = arrowchat_status.userid LEFT JOIN pictures ON " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = " . DB_AVATARTABLE . "." . DB_AVATARTABLE_USERID . " WHERE " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = '" . $db->escape_string($userid) . "'
+			LEFT JOIN arrowchat_status ON " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = arrowchat_status.userid 
+      LEFT JOIN pictures ON " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = " . DB_AVATARTABLE . "." . DB_AVATARTABLE_USERID . " WHERE " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = '" . $db->escape_string($userid) . "' AND main = 1
 		");
-		
+
 		return $sql;
 	}
 
@@ -139,9 +139,10 @@
 		global $base_url;
     $env = $_COOKIE['env'];
 
-		if (is_file(CELLOVE_PATH . '/system/dragonfly/'.$env.'/'.$image)) 
-		{
-			return '/system/dragonfly/'.$env.'/'.$image;
+      #var_dump(is_file(CELLOVE_PATH . '/system/dragonfly/'.$env.'/'.$image));
+		if (is_file(CELLOVE_PATH . '/system/dragonfly/'.$env.'/'.$image))
+    {
+			return '/system/dragonfly/'.$env.'/'.$image.'.jpg';
 		}
 		else
 		{

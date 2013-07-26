@@ -89,7 +89,7 @@ if ($_SERVER['HTTP_HOST'] == 'staging.cellove.com' || $_SERVER['HTTP_HOST'] == '
 	define('DB_FRIENDSTABLE_FRIENDID', ''); 
 	define('DB_FRIENDSTABLE_FRIENDS', '');
 
-  define('CELLOVE_PATH', '/Users/victorcoder/Code/cellove/public');
+  define('CELLOVE_PATH', dirname(dirname(dirname(__FILE__))));
 	/**
 	 * Friend System
 	 *
