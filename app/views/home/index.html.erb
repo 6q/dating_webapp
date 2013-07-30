@@ -1,7 +1,13 @@
 <% @page = 'home' %>
 <% content_for(:title) { _("Ponle alas al amor") } %>
 
+
 <section id="slider" class="flex-container">
+  <a href="#fast-signup" rel="fastsignup" class="fast-register-btn">
+    <span class="a-btn-text"><%= _('Registrate ahora')%></span>
+    <span class="a-btn-slide-text"><%= _('¡Es totalmente gratis!')%></span>
+    <span class="a-btn-icon-right"><span></span></span>
+  </a> 
   <div class="flexslider loading">
     <ul class="slides">
       <li>
@@ -27,8 +33,7 @@
       </li>
     </ul>
   </div>
-</section>
-
+</section> 
 <div id="home-highlights" class="row">
   <article class="span4">
     <header>

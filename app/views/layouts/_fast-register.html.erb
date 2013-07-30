@@ -1,19 +1,31 @@
-<div id="fast-register">
-  <div class="container">
+<div id="fast-signup">
+  <div id="signup-ct">
+    <div id="signup-header">
+      <h2><%= _('Crea una cuenta') %></h2>
+      <p><%= _('Es fácil y gratis.') %></p>
+      <a class="modal_close" href="#"></a>
+    </div>
     <form>
-      <legend>Registro rápido Usuario Gratis</legend>
-      <input type="email" class="control-label" placeholder="Email">
-      <input type="password" class="control-label" placeholder="Contraseña">
-      <select id="user_seeking" name="user[seeking]" data-validate="true">
-        <option value="man seeking woman">hombre buscando una mujer</option>
-        <option value="woman seeking man">mujer buscando un hombre</option>
-        <option value="man seeking man">hombre buscando un hombre</option>
-        <option value="woman seeking woman">mujer buscando una mujer</option>
-      </select>
-      <div class="checkbox">
-        <input type="checkbox"> <label>Info</label>
+      <div class="txt-fld">
+        <label for=""><%= _('Tu correo') %></label>
+        <input type="email" class="control-label" placeholder="<%= _('Email') %>">
       </div>
-      <input type="submit" value="Ok">
+      <div class="txt-fld">
+        <label for=""><%= _('Contraseña') %></label>
+        <input type="password" class="control-label" placeholder="<%= _('Contraseña') %>">
+      </div>
+      <div class="txt-fld">
+        <label for=""><%= _('¿Qué buscas?') %></label>
+        <select id="user_seeking" name="user[seeking]" data-validate="true">
+          <option value="man seeking woman"><%= _('hombre buscando una mujer') %></option>
+          <option value="woman seeking man"><%= _('mujer buscando un hombre') %></option>
+          <option value="man seeking man"><%= _('hombre buscando un hombre') %></option>
+          <option value="woman seeking woman"><%= _('mujer buscando una mujer') %></option>
+      </select>
+      </div>      
+      <div class="btn-fld">
+        <button type="submit"><%= _('Registrate »') %></button>
+      </div>
     </form>
   </div>
 </div>
