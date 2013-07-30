@@ -4,7 +4,7 @@
   </i>
   <p><strong><%= activity_creator(activity).name %></strong> <%= activity.sender_id != current_user.id ? _('te ha propuesto...') : _('has propuesto...') %></p>
   <p><%= activity.body %></p>
-  <p><%= activity.date ? I18n.l(activity.conversation.activity.date, format: :long) : _('fecha a concretar contigo.') %></p>
+  <p><%= activity.date ? I18n.l(activity.date, format: :long) : _('fecha a concretar contigo.') %></p>
   <div class="actions right">
     <% if activity.rejected? %>
       <%= _('Actividad rechazada') %>
