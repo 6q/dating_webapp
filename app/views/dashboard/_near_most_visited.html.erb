@@ -5,6 +5,6 @@
   <div class="pull-right"><%= _('En un radio de') %> <span class="radius"><%= radius %></span> km > <%= link_to _("Cambiar radio"), dashboard_path, class: 'radius' %> | <%= link_to _("Ver más"), users_path %></div>
 </div>
 <ul class="user-list clearfix">
-  <%= render current_user.best_suited_near_me(radius) %>
+  <%= render current_user.best_suited_near_me(5, radius) %>
 </ul>
 </section>
