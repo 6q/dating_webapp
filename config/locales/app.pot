@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-30 13:06+0200\n"
+"POT-Creation-Date: 2013-08-07 16:27+0200\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1339,6 +1339,9 @@ msgid "Sigue escribiendo..."
 msgstr ""
 
 msgid "Sin duda podras hacer realidad tu objetivo más íntimo y emocional, encontrar esa persona especial, sea amor o amistad duradera."
+msgstr ""
+
+msgid "Sin mensaje"
 msgstr ""
 
 msgid "Sobre Cellove"
