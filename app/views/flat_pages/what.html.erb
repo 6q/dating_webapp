@@ -1,7 +1,5 @@
-<% content_for :title do %>
-  <%= _('¿Qué es Cellove?') %>
-<% end %>
-
+<% title = _("¿Qué es Cellove?") %>
+<% content_for(:title) {title} %>
 <article>
 
   <header>

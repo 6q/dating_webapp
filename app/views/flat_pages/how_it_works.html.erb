@@ -1,14 +1,11 @@
 <% title = _("¿Cómo funciona?") %>
 <% content_for(:title) {title} %>
 <article>
-
-  <header class="bg clearfix">
-    <h1><%= _('¿Cómo<br>funciona?') %></h1>
-    <ul class="miniSlider">
-      <li class="item active"><%= image_tag 'teaser-how.jpg' %></li>
-      <li class="item"><%= image_tag 'teaser-how2.jpg' %></li>
-    </ul>
+  
+  <header>
+    <h1><%= _('¿Cómo funciona?') %></h1>
   </header>
+
   <div class="article-body">
     <p><%= _('Encontrar a tu pareja ideal es muy fácil. Solo tienes que %{register_link}, especificar que características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que más se adecuen y mejor encajen con tu perfil ¡para que seas tu quien elija!') % { register_link: link_to(_('registrarte en Cellove'), new_user_registration_path) } %></p>
 
