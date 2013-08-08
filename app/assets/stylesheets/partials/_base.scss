@@ -45,5 +45,5 @@ $offline-color:#c00;
 @import "modules/all";
 @import "normalize";
 
-html, body { background: $background-color; }
+body { background: $background-color; }
 body { @include base-font; }
