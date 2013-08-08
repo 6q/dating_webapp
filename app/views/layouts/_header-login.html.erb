@@ -5,7 +5,7 @@
     <%= simple_form_for('user', :url => user_session_path) do |f| %>
       <%= f.input_field :email, :placeholder => _('Tu dirección de correo'), :required => true, :autofocus => true, wrapper_html: {} %>
       <%= f.input_field :password, :placeholder => _('Tu contraseña'), :required => true %>
-      <%= f.button :submit, "Login", :class => 'btn btn-success' %>
+      <%= f.button :submit, _('Login'), :class => 'btn btn-success' %>
     <% end %>
   </fieldset>
   <p id="user-count"><%= _('<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza.') % {user_count: number_with_delimiter(User.count + 60000)} %></p>
