@@ -868,15 +868,37 @@ section.chat{
   }
 
   article.action-links{
-
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     background:$link-color;
-    padding:20px;
+    padding:15px;
     margin:10px 0;
     margin-left:-10px;
+
+    .message {
+      margin-top: -8px;
+      i {
+        margin-top: 8px;
+      }
+    }
 
     a {
       color:#fff;
       line-height:30px;
+      font-weight:bold;
+    }
+
+    a:hover {
+      color:#000;
+      text-decoration:none;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 15px;
+      position: absolute;
     }
 
     i {
