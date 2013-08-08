@@ -176,27 +176,40 @@ header[role="banner"]{
   position:relative;
   padding-bottom:12px;
 
- h1 {
+  #logo {
     width:298px;
-    height:120px;
-    margin:0;
-    padding:0;
+    height: 120px;
     padding-left:50px;
+    margin-top:-20px;
     float:left;
-    margin-top:-10px;
 
-  a {
-    background:image-url('sprite.png') left top no-repeat;
-    text-indent:-999em;
-    width:289px;
-    height:120px;
-    display:block;
-    overflow:hidden;
-  }
- }
+    h1 {
+      width:298px;
+      height:90px;
+      float:left;
+      margin:0;
+      padding:0;
+      a {
+        background:image-url('sprite.png') left top no-repeat;
+        text-indent:-999em;
+        width:289px;
+        height:90px;
+        display:block;
+        overflow:hidden;
+      }
+    }
 
-  h2 {
-    display:none;
+    h2 {
+      margin-top:-10px;
+      padding:0;
+      text-align:right;
+      width:286px;
+      float:left;
+      color:#FFF;
+      font-size:30px;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-spacing:30px;
+    }
   }
 
   #login-box {
