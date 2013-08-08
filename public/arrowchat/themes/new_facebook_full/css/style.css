@@ -60,13 +60,28 @@
 .arrowchat_tab_new_message .arrowchat_busy{background-position:-48px -68px;text-align:left}
 .arrowchat_tab_new_message .arrowchat_offline{background-position:0px -68px;text-align:left}
 .arrowchat_bar_button{background:#EBEEF4;border-right:1px solid transparent;border-left:1px solid #bac0cd;color:#333;cursor:pointer;height:29px;padding:0px 6px;width:16px;position:relative;padding-top:2px;z-index:1026}
-#arrowchat_base{background:#EBEEF4;border:1px solid #bac0cd;border-bottom:0;-webkit-box-shadow:inset 0 1px rgba(255, 255, 255, .5);bottom:0px;left:15px;display:block;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;height:29px;position:fixed;text-align:left;z-index:1028;margin-top:8px}
+#arrowchat_base{
+	/*background:#EBEEF4;border:1px solid #bac0cd;border-bottom:0;-webkit-box-shadow:inset 0 1px rgba(255, 255, 255, .5);bottom:0px;left:15px;display:block;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;height:29px;position:fixed;text-align:left;z-index:1028;margin-top:8px */
+    background: none;
+    border: 0px solid #BAC0CD;
+    border-bottom: 0;
+    bottom: 0px;
+    left: 15px;
+    display: block;
+    font-family: "PT Sans","Helvetica Neue",Hevetica,Arial,sans-serif;
+    font-size: 11px;
+    height: 29px;
+    position: fixed;
+    text-align: left;
+    z-index: 28;
+    margin-top: 8px;
+}
 .arrowchat_bar_right{float:right}
 .arrowchat_bar_left{float:left}
 .arrowchat_tab{margin-top:1px;height:18px;border-left:1px solid #999;border-right:1px solid transparent;float:right;height:25px;cursor:pointer;font-weight:normal;width:140px;color:#444;line-height:1.2em;text-align:left}
 .arrowchat_icons{background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;display:inline-block;height:16px;width:16px}
 .arrowchat_tabclick{background:none !important;background-color:#fff !important;border-left:1px solid #b2b2b2 !important;border-right:1px solid #b2b2b2 !important;border-top:0px !important;color:#333 !important;text-align:left;position:relative !important;bottom: 1px !important;z-index:1029;padding-top:1px}
-.arrowchat_tabpopup{border-bottom:1px solid #333;background-color:#fff;position:fixed;width:230px;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;text-align:left;z-index:1025;line-height:normal;bottom:29px !important}
+.arrowchat_tabpopup{border-bottom:1px solid #BAC0CD;background-color:#fff;position:fixed;width:230px;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;text-align:left;z-index:1025;line-height:normal;bottom:29px !important}
 .arrowchat_tabopen{display:block !important;text-align:left}
 .arrowchat_tabopen_hidden{display:block !important;visibility:hidden}
 .arrowchat_tabtitle{border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#6D84B4 !important;padding-right:0px;text-align:left;height:23px}
@@ -91,10 +106,10 @@
 
 /* BUDDY LIST */
 #arrowchat_userstab{width:176px;padding-left:9px;text-align:left}
-#arrowchat_buddy_list_tab{background:#EBEEF4;padding-right:5px;white-space:nowrap;width:189px}
+#arrowchat_buddy_list_tab{background:#EBEEF4;padding-right:5px;white-space:nowrap;width:189px;border-top: 1px solid #BAC0CD;}
 .arrowchat_userstabtitle_button_click{}
 .arrowchat_hide_avatars{display:none !important}
-.arrowchat_user_tab{background:#EBEEF4;padding-right:5px;white-space:nowrap;width:135px}
+.arrowchat_user_tab{background:#EBEEF4;padding-right:5px;white-space:nowrap;width:135px;border-top: 1px solid #BAC0CD;	}
 #arrowchat_userstab_popup{width:202px;text-align:left;z-index:1024}
 .arrowchat_userstabtitle{line-height:normal;margin:0px;text-align:left;border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#6D84B4;text-align:left;height:23px}
 .arrowchat_tabsubtitle_userlist{height:20px;border-right:1px solid #b2b2b2;border-left:1px solid #b2b2b2;border-bottom:1px solid #C9D0DA;background-color:#eee;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:9px;color:#666;line-height:1.3em !important;text-align:left}
@@ -263,7 +278,10 @@
 /* HIDE CHAT */
 .arrowchat_hide_icon{height:17px !important;width:17px !important;background-position:-126px -85px}
 .arrowchat_show_icon{height:17px !important;width:17px !important;background-position:-102px -90px}
-#arrowchat_hide_bar_button{border-right:1px solid transparent}
+#arrowchat_hide_bar_button{
+    border-right: 1px solid #BAC0CD;
+    border-top: 1px solid #BAC0CD;
+    }
 #arrowchat_show_bar_button{height:27px;border-left:1px solid #999;border-right:1px solid #999;border-top:1px solid #999;position:fixed;right:14px;bottom:0px;z-index:1015;display:none;width:17px}
 
 /* MISC */
@@ -290,7 +308,10 @@ html[xmlns] .arrowchat_clearfix {display: block;}
 #arrowchat_bookmarks img{border:0}
 
 /* NOTIFICATIONS */
-.arrowchat_optionsbutton_border{border-right:1px solid #ccc !important}
+#arrowchat_optionsbutton{
+    border-top: 1px solid #BAC0CD;	
+}
+.arrowchat_optionsbutton_border{border-right:1px solid #ccc !important;}
 .arrowchat_notifications_icon{background-position:-196px -45px}
 #arrowchat_optionsbutton_popup{width:202px;text-align:left}
 .arrowchat_optionsimages_click{text-align:left}
@@ -415,4 +436,4 @@ html[xmlns] .arrowchat_clearfix {display: block;}
 .uploadify-queue-item.completed{background-color:#E5E5E5}
 .uploadify-progress{background-color:#E5E5E5;margin-top:10px;width:100%}
 .uploadify-progress-bar{background-color:#6D84B4;height:3px;width:1px}
-#arrowchat_cellove_reg{float: left; margin: 8px;}
+#arrowchat_cellove_reg{display:none;float: left; margin: 8px;}
