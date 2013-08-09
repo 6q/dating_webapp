@@ -336,7 +336,6 @@ section[role="main"] {
   article {
     text-align: justify;
     position:relative;
-    height:250px;
     ul {
       &.miniSlider {
         padding:0;
@@ -363,9 +362,8 @@ section[role="main"] {
     padding:.5em 1em;
     text-decoration:none;
     margin-top:20px;
-    position:absolute;
-    left:25px;
-    bottom:0;
+    margin-left:25px;
+    position:relative;
     width:220px;
     text-shadow:0 1px 0 rgba(255,255,255,0.50);
     background-color:#78BFF2;
