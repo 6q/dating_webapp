@@ -421,12 +421,13 @@ section[role="main"] {
 
 footer {
   background:#2C2C2C;
-  padding-top:20px;
+  padding-top:25px;
   padding-bottom:20px;
   border-top:#000 1px solid;
 
   h4 {
     color:#d0d0d0;
+    margin-top:0;
   }
 
   ul {
@@ -434,10 +435,9 @@ footer {
     padding:0;
     margin:0;
     list-style:none;
-    border-top:#373737 1px solid;
 
     li {
-      border-bottom:#373737 1px solid;
+      border-top:#373737 1px solid;
       padding:10px 0;
       line-height:120%;
       a {
