@@ -144,7 +144,7 @@
             b.slice(0, -1)
         }
 		function M() {
-			a(".arrowchat_popout_convo").css("height", a(window).height() - a("#arrowchat_popout_open_chats").height() - 70);
+			a(".arrowchat_popout_convo").css("height", a(window).height() - a("#arrowchat_popout_open_chats").height() - 120);
 		}
         function H() {
             var url = k + "includes/json/receive/receive_core.php?hash=" + u_hash_id + "&init=" + acsi;

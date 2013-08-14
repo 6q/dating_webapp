@@ -418,7 +418,7 @@
             b.slice(0, -1)
         }
 		function M() {
-			a(".arrowchat_popout_convo").css("height", a(window).height() - a("#arrowchat_popout_open_chats").height() - 70);
+			a(".arrowchat_popout_convo").css("height", a(window).height() - a("#arrowchat_popout_open_chats").height() - 120);
 		}
         function playNewMessageSound() {
             swfobject.embedSWF(k + "themes/" + u_theme + "/sounds/new%5Fmessage.player.swf?soundswf="+k+"themes/" + u_theme + "/sounds/new%5Fmessage.swf&autoplay=1&loops=0", "arrowchat_sound_player_holder", "1", "1", "9.0.0");
