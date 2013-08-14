@@ -13,7 +13,7 @@
           <div class="control-group slider">
             <label class="control-label"><%= _('Edad') %></label>
             <div class="span6">
-              <input id="years" type="slider" value="<%= params[:q][:years_lteq] || current_user.lf_age_from || '18' %>;<%= params[:q][:years_gteq] || current_user.lf_age_to || '80' %>"/>
+              <input id="years" type="slider" value="<%= params[:q][:years_lteq] || (current_user.lf_age_from.blank? ? '18' : current_user.lf_age_from) %>;<%= params[:q][:years_gteq] || (current_user.lf_age_to.blank? ? '80' : current_user.lf_age_to) %>"/>
               <%= f.hidden_field :years_lteq %>
               <%= f.hidden_field :years_gteq %>
             </div>
