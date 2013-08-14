@@ -507,7 +507,7 @@ aside {
       }
 
 
-      #color-switcher, #lang-switcher {
+      #lang-switcher {
         float:right;
         width:100px;
         margin-left:5px;
@@ -536,6 +536,12 @@ aside {
         border-bottom-right-radius:5px;
         border-bottom-left-radius:5px;
 
+        :hover {
+          background:#292A29;
+          border-bottom-right-radius:5px;
+          border-bottom-left-radius:5px;
+        }
+
         ul {
 
           margin:0;
@@ -544,6 +550,7 @@ aside {
 
               a {
                 text-decoration:none;
+                margin-right:25px;
               }
 
           span {
@@ -554,11 +561,12 @@ aside {
             &.picker {
 
               i {
-                display:inline-block;
-                width:14px;
-                height:9px;
-                margin-left:5px;
-                background:image-url('sprite.png') -359px -165px no-repeat;  
+                width:16px;
+                height:16px;
+                position: absolute;
+                top: 7px;
+                background:image-url('languages_icon.png') no-repeat; 
+                margin-left:10px; 
               }
               
             }

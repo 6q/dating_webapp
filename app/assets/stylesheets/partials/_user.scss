@@ -46,6 +46,20 @@
       }
 
       #lang-switcher {
+        .picker {
+          a {
+            padding-left:10px;
+            margin-right:25px;
+             i {
+              width:16px;
+              height:16px;
+              position: absolute;
+              top: 7px;
+              background:image-url('languages_icon.png') no-repeat; 
+              margin-left:10px; 
+            }
+          }
+        }
         .leaf {
           a {
             padding-left:10px;
@@ -61,6 +75,12 @@
         border-bottom-right-radius:5px;
         border-bottom-left-radius:5px;
 
+        :hover {
+          background:#292A29;
+          border-bottom-right-radius:5px;
+          border-bottom-left-radius:5px;
+        }
+        
         ul {
 
           margin:0;
