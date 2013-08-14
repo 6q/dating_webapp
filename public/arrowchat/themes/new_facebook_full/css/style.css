@@ -111,7 +111,12 @@
 .arrowchat_hide_avatars{display:none !important}
 .arrowchat_user_tab{background:#EBEEF4;padding-right:5px;white-space:nowrap;width:135px;border-top: 1px solid #BAC0CD;	}
 #arrowchat_userstab_popup{width:202px;text-align:left;z-index:1024}
-.arrowchat_userstabtitle{line-height:normal;margin:0px;text-align:left;border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#5CABE8;text-align:left;height:23px}
+.arrowchat_userstabtitle{line-height:normal;margin:0px;text-align:left;border:1px solid #489DD9;border-bottom:0px;color:#fff;font-family:sans-serif;font-weight:bold;cursor:pointer;background-color:#5CABE8;text-align:left;height:23px;-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;}
 .arrowchat_tabsubtitle_userlist{height:20px;border-right:1px solid #b2b2b2;border-left:1px solid #b2b2b2;border-bottom:1px solid #C9D0DA;background-color:#eee;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:9px;color:#666;line-height:1.3em !important;text-align:left}
 .arrowchat_userlist_hover{background-color:#e0e4ee !important;text-align:left;border-top:1px solid transparent !important;border-bottom:1px solid transparent !important}
 .arrowchat_userlist_hover2{background-color:#e0e4ee !important;text-align:left}
