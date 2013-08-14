@@ -32,4 +32,12 @@ module ApplicationHelper
 
     html.html_safe
   end
+
+  def time_ago_in_words_or_date(from_time, include_seconds_or_options = {})
+    if (from_time < (Time.now + 7.days))
+      time_ago_in_words(from_time, include_seconds_or_options = {})
+    else
+      I18n.l(from_time.to_date, format: :long)
+    end
+  end
 end
