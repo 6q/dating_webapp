@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-07 16:27+0200\n"
-"PO-Revision-Date: 2013-08-07 16:01+0100\n"
+"POT-Creation-Date: 2013-08-14 12:22+0200\n"
+"PO-Revision-Date: 2013-08-12 11:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: Cellove <info@gestinet.com>\n"
 "Language: es_ES\n"
@@ -22,7 +22,7 @@ msgid " a "
 msgstr "a"
 
 msgid " cerca del código postal"
-msgstr "a prop del còdic postal"
+msgstr "a prop del codi postal"
 
 msgid " de "
 msgstr "de"
@@ -31,10 +31,10 @@ msgid " y"
 msgstr "i"
 
 msgid " y "
-msgstr "Registra't ara"
+msgstr "i"
 
 msgid " y mi código postal es el"
-msgstr "i el meu còdic postal és"
+msgstr "i el meu codi postal és "
 
 msgid " y soy de étnia"
 msgstr "i sóc d'ètnia"
@@ -43,7 +43,7 @@ msgid "!Subir image más adelante!"
 msgstr "pujar imatges més endevant"
 
 msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
-msgstr "%{link}  ara a Cellove, es més fàcil i ràpid. Posa alas al amor!"
+msgstr "%{link}  ara a Cellove, es més fàcil i ràpid. Posa-li alas al amor!"
 
 msgid "%{name} aún no ha definido que busca"
 msgstr "%{name} encara no ha definit el que busca"
@@ -52,13 +52,13 @@ msgid "%{name} aún no ha definido sus atributos"
 msgstr "%{name} encara no ha definit els seus atributs"
 
 msgid "%{name} aún no ha definido sus gustos."
-msgstr "%{name} encara no ha definit els seus gustos"
+msgstr "%{name} encara no ha definit els seus gustos."
 
 msgid "%{name} aún no ha introducido su descripción."
 msgstr "%{name} encara no ha introduït la seva descripció."
 
 msgid "%{name} aún no tiene ningún celestino."
-msgstr "%{name} encara  o té cap Celestí"
+msgstr "%{name} encara  no té cap Celestí"
 
 msgid "%{name} te invita a Cellove"
 msgstr "%{name} et convida a Cellove"
@@ -68,6 +68,10 @@ msgstr "(Veure tots els missatges)"
 
 msgid "(noticias y novedades, quincenal)"
 msgstr "(notícies i novetats, quinzenal)"
+
+#, fuzzy
+msgid "(o proponer una actividad)"
+msgstr "Proposar una activitat"
 
 msgid "(perfiles afines, semanal)"
 msgstr "(perfils afins, semanal)"
@@ -82,7 +86,7 @@ msgid "* Cellove recomienda utilizar tu nombre real para tener más posibilidade
 msgstr "* Cellove et recomana utilitzar el teu nom real per a tenir més possibilitats de contactes i Celestins. Deixa aquest camp buit per utilitzar el teu nom real."
 
 msgid "* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán."
-msgstr "* Important! Els usuaris amb la franja d'edat que marquis en aquesta zona, són els únics que et veuran i tindran accés a tu. La resta no et coneixerà."
+msgstr "* Important! Els usuaris amb la franja d'edat que indiquis en aquesta zona, són els únics que et veuran i tindran accés a tu. La resta no et coneixerà."
 
 msgid "* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s."
 msgstr "* Et recomanem deixar aquest camp buit per a tenir més possibilitats de contactes i Celestins."
@@ -127,16 +131,14 @@ msgid "<p>Cellove® es Marca registrada de CELLOVE SOCIAL NETWORK, S.L.</p>\\n  
 msgstr ""
 
 msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
-msgstr "<p>Estem convençuts que Cellove pot aportar-te noves experiències, conèixer a una persona amb la que pots tindre una connexió especial.  De la mateixa manera que en la vida real, s'ha d'estar en el moment adequat i fer la sorgeixi la flama =)"
-
-msgid "<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza."
-msgstr "<strong>Somos %{user_count} usuari@s</strong>. Gràcies per la vostre confiança."
+msgstr "<p>Estem convençuts que Cellove pot aportar-te noves experiències, conèixer a una persona amb la que pots tindre una connexió especial.  De la mateixa manera que en la vida real, s'ha d'estar en el moment adequat i fer que sorgeixi la flama =)</p>\\n"
 
 msgid "A través de Cellove podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones muy potentes para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc."
 msgstr "A través de Cellove podràs comunicar-te amb qui desitjis, mitjantçant  el nostre Xat o Missatges privats, i disposaràs d'altres funcions molt potents per a interactuar amb els usuaris que t'interessin, com enviar propostes d'activitat, comprobar si feu bona parella, etc."
 
-msgid "Acceso usuarios"
-msgstr "Accés usuaris"
+#, fuzzy
+msgid "Acceso de usuarios registrados"
+msgstr "Recomenar usuari registrat"
 
 msgid "Aceptar"
 msgstr "Acceptar"
@@ -172,7 +174,7 @@ msgid "Acuse de recibo de mensajes"
 msgstr "Justificant de recepció de missatges"
 
 msgid "Afines cerca de ti..."
-msgstr "Afins prop de tu..."
+msgstr "Afins prop teu..."
 
 msgid "Afinidad"
 msgstr "Afinitat"
@@ -181,7 +183,7 @@ msgid "Ahora mismo estoy"
 msgstr "Ara estic"
 
 msgid "Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los %{consejos_link}, las %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos"
-msgstr "Al fer-te usuari/a de Cellove certifico que sóc major d'edat i que he llegit i accepto els %{consejos_link}, las %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos"
+msgstr "Al fer-te usuari/a de Cellove certifico que sóc major d'edat i que he llegit i accepto els %{consejos_link}, las %{condiciones_link} i la %{privacy_link} del lloc i els serveis descrits"
 
 msgid "Alcohol"
 msgstr "Alcohol"
@@ -238,7 +240,7 @@ msgid "Aventurero"
 msgstr "Aventurer"
 
 msgid "Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste."
-msgstr "Ajudar a trobar algú interessant aportant-li més visibilitat i fiabilitat, sense cap cost."
+msgstr "Ajuda a aquesta persona a trobar algú interessant aportant-li més visibilitat i fiabilitat, sense cap cost."
 
 msgid "Añadir nota"
 msgstr "Afegir nota"
@@ -260,6 +262,14 @@ msgstr "Benvingut a Cellove"
 
 msgid "Bloquear"
 msgstr "Bloquejar"
+
+#, fuzzy
+msgid "Bloquear Usuario"
+msgstr "Bloquejar"
+
+#, fuzzy
+msgid "Borrar mensajes"
+msgstr "Enviat missatge"
 
 msgid "Busca"
 msgstr "Busca"
@@ -342,6 +352,12 @@ msgstr "xatejar"
 msgid "Cine"
 msgstr "Cine"
 
+msgid "Claudia ha quedado con mi padre"
+msgstr ""
+
+msgid "Claudia ha quedado con mi padre para una cita"
+msgstr ""
+
 msgid "Completa tu perfil"
 msgstr "Completa el teu perfil"
 
@@ -411,6 +427,9 @@ msgstr "Conversa amb:"
 msgid "Conviértete en usuari@"
 msgstr "Converteix-te en usuari/a"
 
+msgid "Corta exactamente lo que quieras de la foto"
+msgstr ""
+
 msgid "Crea una cuenta"
 msgstr "Crea una conta"
 
@@ -442,7 +461,7 @@ msgid "Cuerpo"
 msgstr "Cos"
 
 msgid "Código postal"
-msgstr "Còdic postal"
+msgstr "Codi postal"
 
 msgid "Datos de acceso a Cellove"
 msgstr "Dades d'accés a Cellove"
@@ -466,7 +485,7 @@ msgid "Descripción"
 msgstr "Descripció"
 
 msgid "Desde aquí podrás configurar tus parámetros en Cellove"
-msgstr "Desde aquí podràs configura els teus paràmetres a Cellove"
+msgstr "Desde aquí podràs configurar els teus paràmetres a Cellove"
 
 msgid "Devoción religiosa"
 msgstr "Devoció religiosa"
@@ -476,9 +495,6 @@ msgstr "Diapositiva"
 
 msgid "Dieta"
 msgstr "Dieta"
-
-msgid "Dimensiona tu imagen"
-msgstr "Ajusta la teva imatge"
 
 msgid "Distancia"
 msgstr "Distància"
@@ -499,7 +515,7 @@ msgid "El matrimonio es algo maravilloso"
 msgstr "El matrimoni és algo maravellós"
 
 msgid "El objetivo de nuesrta herramienta Celestin@ es facilitar y hacer más accesible nuestro potente sistema para encontrar a esa persona especial, por ejemplo a usuari@s poco experimentados, con prejuicios o que simplemente no conozcan o no se atrevan a utilizar una plataforma de contactos, hoy en día muy extendida y utilizada ya por mucha gente."
-msgstr "L'objectiu de la nostre eina de Celestins és facilitar i fer més accessible el nostre potent sistema per a trobar a una persona especial. Per exemple, usuaris poc experimentats, amb prejudicis o que, simplement, no coneguin o no s'atreveixin a utilitzar una plataforma de contactes, molt estesa avui en dia i utilitzada ja per moltíssima gent"
+msgstr "L'objectiu de la nostre eina de Celestins és facilitar i fer més accessible el nostre potent sistema per a trobar a una persona especial. Per exemple, usuaris poc experimentats, amb prejudicis o que, simplement, no coneguin o no s'atreveixin a utilitzar una plataforma de contactes, molt estesa avui en dia i utilitzada per moltíssima gent"
 
 msgid "El registro como Celestin@ es muy fácil y rápido, en segundos estarás recomendando y el destinatario recibirá un e-mail para que pueda confirmar su registro gratuito como usuario en cellove, a partir de aquí ya contará con tu soporte y podrá acceder a todos los usuari@s y funciones que desee."
 msgstr "El registre como a Celestí és molt fàcil i ràpid i, en segons, estaràs recomenant. El destinatari rebrà un e-mail per a que pugui confirmar el seu registre gratuit com a usuari de Cellove. A partir d'aquí, rebrà el teu suport i podrà accedir als usuaris i funcions que desitgi"
@@ -512,6 +528,10 @@ msgstr "Eliminats"
 
 msgid "Eliminar"
 msgstr "Eliminar"
+
+#, fuzzy
+msgid "Eliminar Recomendación"
+msgstr "Eliminar recomenació"
 
 msgid "Eliminar celestin@"
 msgstr "Eliminar celestí"
@@ -552,9 +572,6 @@ msgstr "Trobar la teva parella perfecte és molt fàcil. Només tens que  %{regi
 msgid "Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas."
 msgstr "Trobaràs moltes utilitats úniques per a que les teves cites no siguin a cegues."
 
-msgid "Encuentra pareja"
-msgstr "Troba parella "
-
 msgid "Encuentra personas afines a tí"
 msgstr "Troba persones afins a tu"
 
@@ -563,6 +580,9 @@ msgstr "Troba a la teva nova parella"
 
 msgid "Encuentra tu nueva pareja en Cellove"
 msgstr "Troba a la teva nova parella a Cellove"
+
+msgid "English"
+msgstr ""
 
 msgid "Enviados"
 msgstr "Enviats"
@@ -696,8 +716,16 @@ msgstr "Generós"
 msgid "Guarda búsqueda"
 msgstr "Guarda recerca"
 
+#, fuzzy
+msgid "Guarda la Búsqueda"
+msgstr "Guarda recerca"
+
 msgid "Guardar"
 msgstr "Guardar"
+
+#, fuzzy
+msgid "Guardar Cambios"
+msgstr "Guardar canvis"
 
 msgid "Guardar Configuración"
 msgstr "Guardar configuarció"
@@ -807,6 +835,9 @@ msgstr "Localitat"
 msgid "Localidad..."
 msgstr "Localitat"
 
+msgid "Login"
+msgstr ""
+
 msgid "Logotipo"
 msgstr "Logotip"
 
@@ -815,6 +846,18 @@ msgstr "Logotip & Slogan"
 
 msgid "Marcar como principal"
 msgstr "Marcar com a principal"
+
+msgid "Marcos ha quedado con Ana"
+msgstr ""
+
+msgid "Marcos ha quedado con Ana gracias a su amig@"
+msgstr ""
+
+msgid "María ha quedado con Pedro"
+msgstr ""
+
+msgid "María ha quedado con Pedro gracias a su amig@ "
+msgstr ""
 
 msgid "Material para descargar"
 msgstr "Material per a descarregar"
@@ -889,10 +932,10 @@ msgid "Mes"
 msgstr "Mes"
 
 msgid "Mi codigo postal es el"
-msgstr "El meu còdic postal és el "
+msgstr "El meu codi postal és el "
 
 msgid "Mi código postal es el"
-msgstr "El meu còdic postal és el"
+msgstr "El meu codi postal és el"
 
 msgid "Mi estilo es"
 msgstr "El meu estil és"
@@ -1032,6 +1075,10 @@ msgstr "Nova recomenació"
 msgid "Nueva visita de perfil"
 msgstr "Nova visita del perfil"
 
+#, fuzzy
+msgid "Nuevo Mensaje"
+msgstr "Nou missatge"
+
 msgid "Nuevo hacemos buena pareja"
 msgstr "Nou fem bona parella"
 
@@ -1093,7 +1140,7 @@ msgid "Playa"
 msgstr "Platja"
 
 msgid "Población y código postal"
-msgstr "Població i còdic postal"
+msgstr "Població i codi postal"
 
 msgid "Podrás incluir tus datos y las características de la persona que buscas sin coste alguno. Cellove te proporcionara gratis acceso a los perfiles compatibles y afines a ti. Podrás navegar ilimitadamente por Cellove, 24h al día durante todo el año y visualizar todos los perfiles que desees, características de estos, sus Celestin@s, que es lo que buscan, sus gustos, actividades... ¡Lo que quieras!"
 msgstr "Podràs incloure les teves dades i les característiques de la persona que busques sense cap cost. Cellove et proporciona gratis accés als perfils campatibles i afins a tu. Podràs navegar il.limitadament per Cellove, 24 h al dia durant tot l'any i visualitzar tots els perfils que desitjis, característiques d'aquests, els seus Celestins, que és lo que busquen, els seus gustos, activitats... Lo que vulguis!"
@@ -1108,7 +1155,7 @@ msgid "Política de privacidad"
 msgstr "Política de privacitat"
 
 msgid "Ponle alas al amor"
-msgstr "Posa alas al amor"
+msgstr "Posa-li alas al amor"
 
 msgid "Ponle color"
 msgstr "Posa-li color"
@@ -1130,6 +1177,10 @@ msgstr "Proposar activitat"
 
 msgid "Proponer una actividad"
 msgstr "Proposar una activitat"
+
+#, fuzzy
+msgid "Propuesta de Actividad"
+msgstr "Proposta d'activitat:"
 
 msgid "Propuesta de actividad:"
 msgstr "Proposta d'activitat:"
@@ -1224,6 +1275,10 @@ msgstr "Rebutjar proposta d'activitat"
 msgid "Recibidos"
 msgstr "Rebuts"
 
+#, fuzzy
+msgid "Recomendar Usuario"
+msgstr "Recomenar usuari"
+
 msgid "Recomendar usuari@"
 msgstr "Recomenar usuari"
 
@@ -1247,6 +1302,10 @@ msgstr "Recomenació negada"
 
 msgid "Recuperar contraseña"
 msgstr "Recuperar contrasenya"
+
+#, fuzzy
+msgid "Redimensiona tu foto"
+msgstr "Ajusta la teva imatge"
 
 msgid "Registrarse en Cellove es totalmente gratuito"
 msgstr "Registrar-se a Cellove és totalment gratuït"
@@ -1282,7 +1341,7 @@ msgid "Regístrate GRATIS"
 msgstr "Registra't GRATIS"
 
 msgid "Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu."
-msgstr "Registra't ara mateix a Cellove, és molt fàcil i ràpid i, de seguida, estaràs veient a usuaris que busquen el amteix que tu."
+msgstr "Registra't ara mateix a Cellove, és molt fàcil i ràpid i, de seguida, estaràs veient a usuaris que busquen el mteix que tu."
 
 msgid "Relación"
 msgstr "Relació"
@@ -1294,6 +1353,10 @@ msgid "Reservado"
 msgstr "Reservat"
 
 msgid "Responder"
+msgstr "Respondre"
+
+#, fuzzy
+msgid "Responder Mensaje"
 msgstr "Respondre"
 
 msgid "Resultados de la búsqueda"
@@ -1363,8 +1426,12 @@ msgstr "Solters exigents"
 msgid "Somos %{count} usuari@s. ¡Gracias por vuestra confianza!"
 msgstr "Som %{count} usuaris. Gràcies per la vostre confiança!"
 
+#, fuzzy
+msgid "Somos %{user_count} usuari@s. Gracias por vuesra confianza."
+msgstr "Som %{count} usuaris. Gràcies per la vostre confiança!"
+
 msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad."
-msgstr "Som un euip jove i amb vocació de donar el millor de nosaltres per a facilitar i millorar les relacions personals d'amor i amistat."
+msgstr "Som un equip jove i amb vocació de donar el millor de nosaltres per a facilitar i millorar les relacions personals d'amor i amistat."
 
 msgid "Son las personas del entorno del usuario registrado que ayudan a encontrar con más confianza y seguridad a esa persona perfecta. Dispone de un panel privado y totalmente Gratis para recomendar a sus usuarios y otorgarle atributos y virtudes que serán visibles por los otros usuarios registrados afines a este."
 msgstr "Són les persones de l'entorn de l'usuari regsitrat que ajuden a trobar amb més confiança i seguretat a la persona perfecte. Disposen d'un panell privat i completament Gartis per a recomenar als seus usuaris i atorgar-li atributs i virtuts que seran visibles per a altres usuaris registrats afins a aquest"
@@ -1463,13 +1530,20 @@ msgid "Trabajo en"
 msgstr "Traballo en"
 
 msgid "Tranquilo"
-msgstr "tranquil"
+msgstr "Tranquil"
+
+#, fuzzy
+msgid "Tu contraseña"
+msgstr "Contrasenya"
 
 msgid "Tu correo"
-msgstr "el teu correu"
+msgstr "El teu correu"
 
 msgid "Tu dices:"
 msgstr "Tu dius:"
+
+msgid "Tu dirección de correo"
+msgstr ""
 
 msgid "Tu indice Cellove es"
 msgstr "El teu índex Cellove és"
@@ -1562,7 +1636,7 @@ msgid "Ver usuarios"
 msgstr "Veure usuaris"
 
 msgid "Videochat online"
-msgstr "Vídeochat"
+msgstr ""
 
 msgid "Visibilidad"
 msgstr "Visibilitat"
@@ -1715,13 +1789,13 @@ msgid "cms. y pese entre "
 msgstr "cms. i pesi entre"
 
 msgid "cms. y peso "
-msgstr "cms. i peso"
+msgstr "cms. i pes"
 
 msgid "comedia"
 msgstr "comèdia"
 
 msgid "con curvas"
-msgstr "amb corbes"
+msgstr ""
 
 msgid "con mis hijos"
 msgstr "amb els meus fills"
@@ -1808,16 +1882,16 @@ msgid "en"
 msgstr ""
 
 msgid "en pareja"
-msgstr "en aprella"
+msgstr "en parella"
 
 msgid "es bebedor"
-msgstr "bevedor"
+msgstr "és bevedor"
 
 msgid "es fumador social"
-msgstr "fumador social"
+msgstr "és fumador social"
 
 msgid "es muy maniátic@ con la comida"
-msgstr "molt maniàtic amb el menjar"
+msgstr "és molt maniàtic amb el menjar"
 
 msgid "establecer una relación estable"
 msgstr "establir una relació estable"
@@ -1882,6 +1956,15 @@ msgstr "home buscant un home"
 msgid "hombre buscando una mujer"
 msgstr "home buscant una dona"
 
+msgid "https://www.youtube.com/watch?v=O2ZHJjHHk3w"
+msgstr ""
+
+msgid "https://www.youtube.com/watch?v=l38oDLj4Be8"
+msgstr ""
+
+msgid "https://www.youtube.com/watch?v=vS2-2CJ9F9s"
+msgstr ""
+
 msgid "i quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}."
 msgstr "i vols proposar un %{link}. tant a una ex parellla, amic especial, amic o familiar, pots fer-ho %{link2}"
 
@@ -1901,10 +1984,10 @@ msgid "instituto o inferior"
 msgstr "institut o inferior"
 
 msgid "italiana"
-msgstr "italià"
+msgstr "italiana"
 
 msgid "japonesa"
-msgstr "japonès"
+msgstr "japonesa"
 
 msgid "jubilado"
 msgstr "jubilat"
@@ -1919,7 +2002,7 @@ msgid "la lectura<br>"
 msgstr "llegir<br>"
 
 msgid "la montaña<br>"
-msgstr "la montaña<br>"
+msgstr "la muntanya<br>"
 
 msgid "la playa<br>"
 msgstr "la platja<br>"
@@ -2093,10 +2176,10 @@ msgid "no le importe en absoluto la religión"
 msgstr "no li importi en absolut la religió"
 
 msgid "no le molesta el humo"
-msgstr "no li molesti el fum"
+msgstr "no li molesta el fum"
 
 msgid "no le moleste el humo"
-msgstr "no em molesta el fum"
+msgstr "no li molesti el fum"
 
 msgid "no me gusta ir al cine"
 msgstr "no m'agrada anar al cine"
@@ -2318,7 +2401,7 @@ msgid "tiene hijos, y no quiere tener mas "
 msgstr "té fills i no vol tindre'n més"
 
 msgid "todos tenemos ex novios e incluso ex maridos. Puede que los dos no hayáis congeniado pero sois personas fantásticas, capaces de ofrecer amor y amistar y con ganas de encontrar a otra persona especial. ¿Porque no recomendarl@?"
-msgstr "tots tenim ex parelles i, fins i tot, ex marits. Pot ser que els dos no hàgiu congeniat pero sou persones fantàstiques, capaços d'oferir amor i amistad i amb ganes de trobar una persona especial. Perquè no recomenar-lo/la?"
+msgstr "tots tenim ex parelles i, fins i tot, ex marits. Pot ser que els dos no hàgiu congeniat però sou persones fantàstiques, capaços d'oferir amor i amistad i amb ganes de trobar una persona especial. Perquè no recomenar-lo/la?"
 
 msgid "trabajos artísticos y creativos "
 msgstr "treballs artístics i creatius"
@@ -2435,7 +2518,7 @@ msgid "¡Subir imagen más adelante!"
 msgstr "Pujar imatge més endevant!"
 
 msgid "¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!"
-msgstr "Una petita descripció de com et veus a tu mateix, ajudarà a altres usuaris a que et coneixin millor!"
+msgstr "Una petita descripció de com et veus a tu mateix, ajudarà a altres usuaris a que et coneguin millor!"
 
 msgid "¿Como funciona?"
 msgstr "Com funciona?"
@@ -2472,9 +2555,6 @@ msgstr "Com et consideres?"
 
 msgid "¿Cómo te describirias?"
 msgstr "Com et descriuries?"
-
-msgid "¿Cómo<br>funciona?"
-msgstr "Com <br>funciona?"
 
 msgid "¿Deseas bloquear a este usuario?"
 msgstr "Desitges bloquejar a aquest usuari?"
@@ -2531,7 +2611,7 @@ msgid "¿Seguro que deseas eliminar el mensaje de"
 msgstr "Segur que desitjes eliminar el missatge de"
 
 msgid "¿algún miembro de tu familia está buscando pareja o una amistad especial?  ¿Tienes algún hermano, primo, o incluso a tu padre o tu madre les gustaría encontrar a alguien para compartir de nuevo su vida? ¡No lo dudes y ayúdales! ¡Recomiéndalos en Cellove!"
-msgstr "Algun membre de la teva família està buscant parella o una amistat especial? Tens algun germà, cosí o, fins i tot, el teu pare o la teva mare els hi agraderia trobar a algú per a compartir de nou la seva vida? No ho dubtis i ajuda¡ls! Recomana'ls a Cellove!"
+msgstr "Algun membre de la teva família està buscant parella o una amistat especial? Tens algun germà, cosí o, fins i tot, el teu pare o la teva mare els hi agraderia trobar a algú per a compartir de nou la seva vida? No ho dubtis i ajuda'ls! Recomana'ls a Cellove!"
 
 msgid "Étnia"
 msgstr "Ètnia"
@@ -2553,3 +2633,15 @@ msgstr "òpera"
 
 msgid "€/año"
 msgstr "€/any"
+
+#~ msgid "<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza."
+#~ msgstr "<strong>Somos %{user_count} usuari@s</strong>. Gràcies per la vostre confiança."
+
+#~ msgid "Acceso usuarios"
+#~ msgstr "Accés usuaris"
+
+#~ msgid "Encuentra pareja"
+#~ msgstr "Troba parella "
+
+#~ msgid "¿Cómo<br>funciona?"
+#~ msgstr "Com <br>funciona?"

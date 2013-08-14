@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-07 16:27+0200\n"
+"POT-Creation-Date: 2013-08-14 12:22+0200\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,6 +67,9 @@ msgid "(Ver todos los mensajes)"
 msgstr ""
 
 msgid "(noticias y novedades, quincenal)"
+msgstr ""
+
+msgid "(o proponer una actividad)"
 msgstr ""
 
 msgid "(perfiles afines, semanal)"
@@ -129,13 +132,10 @@ msgstr ""
 msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
 msgstr ""
 
-msgid "<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza."
-msgstr ""
-
 msgid "A través de Cellove podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones muy potentes para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc."
 msgstr ""
 
-msgid "Acceso usuarios"
+msgid "Acceso de usuarios registrados"
 msgstr ""
 
 msgid "Aceptar"
@@ -261,6 +261,12 @@ msgstr ""
 msgid "Bloquear"
 msgstr ""
 
+msgid "Bloquear Usuario"
+msgstr ""
+
+msgid "Borrar mensajes"
+msgstr ""
+
 msgid "Busca"
 msgstr ""
 
@@ -342,6 +348,12 @@ msgstr ""
 msgid "Cine"
 msgstr ""
 
+msgid "Claudia ha quedado con mi padre"
+msgstr ""
+
+msgid "Claudia ha quedado con mi padre para una cita"
+msgstr ""
+
 msgid "Completa tu perfil"
 msgstr ""
 
@@ -411,6 +423,9 @@ msgstr ""
 msgid "Conviértete en usuari@"
 msgstr ""
 
+msgid "Corta exactamente lo que quieras de la foto"
+msgstr ""
+
 msgid "Crea una cuenta"
 msgstr ""
 
@@ -477,9 +492,6 @@ msgstr ""
 msgid "Dieta"
 msgstr ""
 
-msgid "Dimensiona tu imagen"
-msgstr ""
-
 msgid "Distancia"
 msgstr ""
 
@@ -511,6 +523,9 @@ msgid "Eliminados"
 msgstr ""
 
 msgid "Eliminar"
+msgstr ""
+
+msgid "Eliminar Recomendación"
 msgstr ""
 
 msgid "Eliminar celestin@"
@@ -552,9 +567,6 @@ msgstr ""
 msgid "Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas."
 msgstr ""
 
-msgid "Encuentra pareja"
-msgstr ""
-
 msgid "Encuentra personas afines a tí"
 msgstr ""
 
@@ -562,6 +574,9 @@ msgid "Encuentra tu nueva pareja"
 msgstr ""
 
 msgid "Encuentra tu nueva pareja en Cellove"
+msgstr ""
+
+msgid "English"
 msgstr ""
 
 msgid "Enviados"
@@ -696,7 +711,13 @@ msgstr ""
 msgid "Guarda búsqueda"
 msgstr ""
 
+msgid "Guarda la Búsqueda"
+msgstr ""
+
 msgid "Guardar"
+msgstr ""
+
+msgid "Guardar Cambios"
 msgstr ""
 
 msgid "Guardar Configuración"
@@ -807,6 +828,9 @@ msgstr ""
 msgid "Localidad..."
 msgstr ""
 
+msgid "Login"
+msgstr ""
+
 msgid "Logotipo"
 msgstr ""
 
@@ -814,6 +838,18 @@ msgid "Logotipo & Slogan"
 msgstr ""
 
 msgid "Marcar como principal"
+msgstr ""
+
+msgid "Marcos ha quedado con Ana"
+msgstr ""
+
+msgid "Marcos ha quedado con Ana gracias a su amig@"
+msgstr ""
+
+msgid "María ha quedado con Pedro"
+msgstr ""
+
+msgid "María ha quedado con Pedro gracias a su amig@ "
 msgstr ""
 
 msgid "Material para descargar"
@@ -1032,6 +1068,9 @@ msgstr ""
 msgid "Nueva visita de perfil"
 msgstr ""
 
+msgid "Nuevo Mensaje"
+msgstr ""
+
 msgid "Nuevo hacemos buena pareja"
 msgstr ""
 
@@ -1131,6 +1170,9 @@ msgstr ""
 msgid "Proponer una actividad"
 msgstr ""
 
+msgid "Propuesta de Actividad"
+msgstr ""
+
 msgid "Propuesta de actividad:"
 msgstr ""
 
@@ -1224,6 +1266,9 @@ msgstr ""
 msgid "Recibidos"
 msgstr ""
 
+msgid "Recomendar Usuario"
+msgstr ""
+
 msgid "Recomendar usuari@"
 msgstr ""
 
@@ -1246,6 +1291,9 @@ msgid "Recommendación negada"
 msgstr ""
 
 msgid "Recuperar contraseña"
+msgstr ""
+
+msgid "Redimensiona tu foto"
 msgstr ""
 
 msgid "Registrarse en Cellove es totalmente gratuito"
@@ -1294,6 +1342,9 @@ msgid "Reservado"
 msgstr ""
 
 msgid "Responder"
+msgstr ""
+
+msgid "Responder Mensaje"
 msgstr ""
 
 msgid "Resultados de la búsqueda"
@@ -1360,6 +1411,9 @@ msgid "Solteros exigentes"
 msgstr ""
 
 msgid "Somos %{count} usuari@s. ¡Gracias por vuestra confianza!"
+msgstr ""
+
+msgid "Somos %{user_count} usuari@s. Gracias por vuesra confianza."
 msgstr ""
 
 msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad."
@@ -1464,10 +1518,16 @@ msgstr ""
 msgid "Tranquilo"
 msgstr ""
 
+msgid "Tu contraseña"
+msgstr ""
+
 msgid "Tu correo"
 msgstr ""
 
 msgid "Tu dices:"
+msgstr ""
+
+msgid "Tu dirección de correo"
 msgstr ""
 
 msgid "Tu indice Cellove es"
@@ -1879,6 +1939,15 @@ msgid "hombre buscando un hombre"
 msgstr ""
 
 msgid "hombre buscando una mujer"
+msgstr ""
+
+msgid "https://www.youtube.com/watch?v=O2ZHJjHHk3w"
+msgstr ""
+
+msgid "https://www.youtube.com/watch?v=l38oDLj4Be8"
+msgstr ""
+
+msgid "https://www.youtube.com/watch?v=vS2-2CJ9F9s"
 msgstr ""
 
 msgid "i quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}."
@@ -2470,9 +2539,6 @@ msgid "¿Cómo te consideras?"
 msgstr ""
 
 msgid "¿Cómo te describirias?"
-msgstr ""
-
-msgid "¿Cómo<br>funciona?"
 msgstr ""
 
 msgid "¿Deseas bloquear a este usuario?"
