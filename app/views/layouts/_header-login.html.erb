@@ -18,5 +18,5 @@
       <%= f.button :submit, _('Login'), :class => 'btn btn-success' %>
     <% end %>
   </fieldset>
-  <p id="user-count"><%= _('<strong>Somos %{user_count} usuari@s</strong>. Gracias por vuesra confianza.') % {user_count: number_with_delimiter(User.count + 60000)} %></p>
+  <p id="user-count"><%= _('Somos %{user_count} usuari@s. Gracias por vuesra confianza.') % {user_count: number_with_delimiter(User.count + 60000)} %></p>
 </div>
