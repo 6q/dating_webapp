@@ -57,7 +57,8 @@ class UsersController < ApplicationController
   end
 
   def nice_couple
-    @search = User.nice_couple(current_user).search(params[:q])
+    nc = User.nice_couple(current_user).pluck(:id) #.search(params[:q])
+    search_and_order(nc)
     @users = @search.result.page(params[:page])
   end
 
@@ -170,6 +171,7 @@ class UsersController < ApplicationController
                     .near(current_user, distance, { :units => :km, :sort => :distance })
                     .search(params[:q])
       elsif params[:q][:s] == "recent_interaction asc"
+        # Maybe this is not needed as it's the default option but... who knows if we are using this somewhere
         params[:q].except!(:s)
         @search = hidden_users.sort_interactions.search(params[:q])
       elsif params[:q][:s] == "prop_actividad asc"
@@ -181,7 +183,19 @@ class UsersController < ApplicationController
                       .order("activity_count DESC")
                       .search(params[:q])
       else
-        @search = hidden_users.search(params[:q])
+        hidden_users.tap do |hu|
+          case params[:action]
+          when 'nice_couple'
+            ordered = hu.joins(:rates).order('rates.created_at DESC')
+          when 'likes'
+            ordered = hu.joins(:likes).order('likes.created_at DESC')
+          when 'hits'
+            ordered = hu.joins(:user_visits).order('user_visits.created_at DESC')
+          else
+            ordered = hu
+          end
+          @search = ordered.search(params[:q])
+        end
       end
       params[:q].except!(:id_in)
       if params[:q][:years_start_gteq]
