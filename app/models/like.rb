@@ -30,4 +30,6 @@ class Like < ActiveRecord::Base
       # User record was not found
     end
   end
+
+  scope :unseen, where(seen: false)
 end

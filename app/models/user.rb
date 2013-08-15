@@ -152,9 +152,9 @@ class User < ActiveRecord::Base
   has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
   has_many :notes
 
-  # user.likers will return people that have liked 'user'
+  # user.likers will return Like objects of people that have liked 'user'
   has_many :likers, class_name: 'Like', foreign_key: 'user_id'
-  # user.likes will return people who 'user' has liked
+  # user.likes will return Likes objects of people who 'user' has liked
   has_many :likes, class_name: 'Like', foreign_key: 'creator_id'
 
   has_many :user_visits
@@ -471,6 +471,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def set_all_likes_seen
+    likers.update_all(seen: true)
+  end
+
+  def set_all_rates_seen
+    raters.update_all(seen: true)
+  end
+
   def online?
     updated_at > 5.minutes.ago
   end
@@ -489,10 +497,6 @@ class User < ActiveRecord::Base
 
   def self.have_children
     %w{children have-children-want-more have-children-no-want-more}
-  end
-
-  def number_of_visitors_since_last_login
-    UserVisit.count(:conditions => "user_id = " + self.id.to_s + " AND seen = false")
   end
 
   def blocked_and_hidden_users

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724142206) do
+ActiveRecord::Schema.define(:version => 20130815220804) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -308,8 +308,9 @@ ActiveRecord::Schema.define(:version => 20130724142206) do
   create_table "likes", :force => true do |t|
     t.integer  "user_id"
     t.integer  "creator_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "seen",       :default => false
   end
 
   create_table "notes", :force => true do |t|
@@ -353,9 +354,10 @@ ActiveRecord::Schema.define(:version => 20130724142206) do
   create_table "rates", :force => true do |t|
     t.integer  "rater_id"
     t.integer  "rateable_id"
-    t.float    "stars",       :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.float    "stars",                          :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "seen",        :default => false
   end
 
   add_index "rates", ["rateable_id"], :name => "index_rates_on_rateable_id"

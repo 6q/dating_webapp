@@ -21,4 +21,6 @@ class Rate < ActiveRecord::Base
   def self.average_score_for_user(user)
     where(rateable_id: user.id).average('stars')
   end
+
+  scope :unseen, where(seen: false)
 end

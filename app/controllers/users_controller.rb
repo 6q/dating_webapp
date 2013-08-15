@@ -7,6 +7,8 @@ class UsersController < ApplicationController
 
   after_filter :user_visit, only: [:show]
   before_filter :set_visit_seen, only: [:hits]
+  before_filter :set_likes_seen, only: [:likes]
+  before_filter :set_rates_seen, only: [:nice_couple]
 
   def index
     if params[:q].nil?
@@ -56,11 +58,6 @@ class UsersController < ApplicationController
   def settings
   end
 
-  def nice_couple
-    nc = User.nice_couple(current_user).pluck(:id) #.search(params[:q])
-    search_and_order(nc)
-    @users = @search.result.page(params[:page])
-  end
 
   # Matchmaker routes
   def be_matchmaker
@@ -78,6 +75,12 @@ class UsersController < ApplicationController
   end
 
   # Interaction routes
+  def nice_couple
+    nc = User.nice_couple(current_user).pluck(:id)
+    search_and_order(nc)
+    @users = @search.result.page(params[:page])
+  end
+
   def likes
     likes = User.people_who_like_me(current_user).pluck(:creator_id)
     search_and_order(likes)
@@ -142,6 +145,14 @@ class UsersController < ApplicationController
 
     def set_visit_seen
       current_user.set_all_visits_seen
+    end
+
+    def set_likes_seen
+      current_user.set_all_likes_seen
+    end
+
+    def set_rates_seen
+      current_user.set_all_rates_seen
     end
 
     def search_and_order(in_filter)
