@@ -19,7 +19,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"> 
 <head> 
 
-	<title>Popout Chat</title>
+	<title>&#9829; Cellove Chat</title>
 	
 	<link type="text/css" rel="stylesheet" media="all" href="<?php echo $base_url; ?>external.php?type=css" charset="utf-8" /> 
 	
@@ -46,7 +46,9 @@
 	<div id="arrowchat_sound_player_holder"></div>
 
 	<div id="arrowchat_popout_wrapper">
-	
+		<div id='cellove-chat-header'>
+		    &#9829; Cellove Chat<span class='wings-right'></span>
+		</div>	
 		<div id="arrowchat_popout_left">
 		
 			<div id="arrowchat_popout_friends">

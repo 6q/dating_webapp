@@ -125,7 +125,6 @@ hr.thin {
 
       h1 {
         color:$link-color;
-        font-weight:normal;
         font-size:1.4em;
         line-height: 1em;
         margin:0;
@@ -176,27 +175,40 @@ header[role="banner"]{
   position:relative;
   padding-bottom:12px;
 
- h1 {
+  #logo {
     width:298px;
-    height:120px;
-    margin:0;
-    padding:0;
+    height: 120px;
     padding-left:50px;
+    margin-top:-20px;
     float:left;
-    margin-top:-10px;
 
-  a {
-    background:image-url('sprite.png') left top no-repeat;
-    text-indent:-999em;
-    width:289px;
-    height:120px;
-    display:block;
-    overflow:hidden;
-  }
- }
+    h1 {
+      width:298px;
+      height:90px;
+      float:left;
+      margin:0;
+      padding:0;
+      a {
+        background:image-url('sprite.png') left top no-repeat;
+        text-indent:-999em;
+        width:289px;
+        height:90px;
+        display:block;
+        overflow:hidden;
+      }
+    }
 
-  h2 {
-    display:none;
+    h2 {
+      margin-top:-10px;
+      padding:0;
+      text-align:right;
+      width:286px;
+      float:left;
+      color:#FFF;
+      font-size:2.2em;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-weight: 400; 
+    }
   }
 
   #login-box {
@@ -209,7 +221,7 @@ header[role="banner"]{
       margin:0;
       float:left;
       font-weight:normal;
-      font-size:100%;
+      font-size:.8em;
     }
 
     small {
@@ -322,6 +334,8 @@ section[role="main"] {
   }
 
   article {
+    text-align: justify;
+    position:relative;
     ul {
       &.miniSlider {
         padding:0;
@@ -348,7 +362,37 @@ section[role="main"] {
     padding:.5em 1em;
     text-decoration:none;
     margin-top:20px;
+    margin-left:25px;
+    position:relative;
+    width:220px;
+    text-shadow:0 1px 0 rgba(255,255,255,0.50);
+    background-color:#78BFF2;
+    *background-color:#5CABE8;
+    vertical-align: middle;
+    text-align:center;
+    border: solid 1px #78BFF2;
+    background-image:-moz-linear-gradient(top,#78BFF2,#5CABE8);background-image:-webkit-gradient(linear,0 0,0 100%,from(#78BFF2),to(#5CABE8));
+    background-image:-webkit-linear-gradient(top,#78BFF2,#5CABE8);
+    background-image:-o-linear-gradient(top,#78BFF2,#5CABE8);
+    background-image:linear-gradient(to bottom,#78BFF2,#5CABE8);
+    background-repeat:repeat-x;border-color:#78BFF2 #78BFF2 #5CABE8;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#78BFF2',endColorstr='#5CABE8',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false); 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;    
+    border: solid 1px #78BFF2;
   }
+  a.more:hover {
+    background-image:-moz-linear-gradient(top,#5CABE8,#78BFF2);background-image:-webkit-gradient(linear,0 0,0 100%,from(#5CABE8),to(#78BFF2));
+    background-image:-webkit-linear-gradient(top,#5CABE8,#78BFF2);
+    background-image:-o-linear-gradient(top,#5CABE8,#78BFF2);
+    background-image:linear-gradient(to bottom,#5CABE8,#78BFF2);
+    background-repeat:repeat-x;border-color:#78BFF2 #78BFF2 #78BFF2;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CABE8',endColorstr='#78BFF2',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    text-decoration:none;
+    border: solid 1px #78BFF2;
+
+  }  
 
 }
 
@@ -377,12 +421,13 @@ section[role="main"] {
 
 footer {
   background:#2C2C2C;
-  padding-top:20px;
+  padding-top:25px;
   padding-bottom:20px;
   border-top:#000 1px solid;
 
   h4 {
     color:#d0d0d0;
+    margin-top:0;
   }
 
   ul {
@@ -390,10 +435,9 @@ footer {
     padding:0;
     margin:0;
     list-style:none;
-    border-top:#373737 1px solid;
 
     li {
-      border-bottom:#373737 1px solid;
+      border-top:#373737 1px solid;
       padding:10px 0;
       line-height:120%;
       a {
@@ -442,6 +486,8 @@ footer {
 
 
 #slider .fast-register-btn{
+  display: none;
+  /* display:inline-block; */
   background:#fecc5f;
   background:-webkit-gradient(linear,left top,left bottom,color-stop(#feda71,0),color-stop(#febb4a,1));
   background:-webkit-linear-gradient(top, #feda71 0%, #febb4a 100%);
@@ -456,7 +502,6 @@ footer {
   box-shadow:0 1px 1px #d3d3d3, inset 0 1px 0 #fee395;
   padding:0px 80px 0px 10px;
   height:38px;
-  display:inline-block;
   position:absolute;
   top: 20px;
   right: 10px;

@@ -4,8 +4,7 @@
   <div class="span3">
     <h4><%= _('Sobre Cellove') %></h4>
     <ul>
-      <li><%= link_to _('¿Qué es?'), what_path %></li>
-      <li><%= link_to _('¿Cómo funciona?'), how_it_works_path %></li>
+      <li><%= link_to _('¿Qué es?'), what_path %> <%= link_to _('¿Cómo funciona?'), how_it_works_path %></li>
       <li><%= link_to _('¿Cómo consigo popularidad?'), raise_popularity_path %></li>
       <li><%= link_to _('Celestin@s'), matchmakers_path %></li>
     </ul>
@@ -14,10 +13,15 @@
   <div class="span3">
     <h4><%= _('Anuncios TV') %></h4>
     <ul>
-      <li><%= link_to _('Encuentra pareja'), tv_spot_path(1) %></li>
-      <li><%= link_to _('Solteros exigentes'), tv_spot_path(2) %></li>
-      <li><%= link_to _('Amor en línea'), tv_spot_path(3) %></li>
-      <li><%= link_to _('Ashley Madison'), tv_spot_path(4) %></li>
+      <li>
+        <a href="<%= _('https://www.youtube.com/watch?v=vS2-2CJ9F9s') %>" class="html5lightbox" data-group="anuncios"  data-width="679" data-height="369" title="<%=_('María ha quedado con Pedro gracias a su amig@ ') %>"><%=_('María ha quedado con Pedro') %></a>
+      </li>
+      <li>
+        <a href="<%= _('https://www.youtube.com/watch?v=O2ZHJjHHk3w') %>" class="html5lightbox" data-group="anuncios"  data-width="679" data-height="369" title="<%=_('Marcos ha quedado con Ana gracias a su amig@') %>"><%=_('Marcos ha quedado con Ana') %></a>
+      </li>
+      <li>
+        <a href="<%= _('https://www.youtube.com/watch?v=l38oDLj4Be8') %>" class="html5lightbox" data-group="anuncios"  data-width="679" data-height="369" title="<%=_('Claudia ha quedado con mi padre para una cita') %>"><%=_('Claudia ha quedado con mi padre') %></a>
+      </li>
     </ul>
   </div>
 

@@ -1,6 +1,6 @@
 class FlatPagesController < ApplicationController
   skip_before_filter :authenticate_user!
-  before_filter :set_sidebar, only: [:what, :raise_popularity, :matchmakers, :tv_spot]
+  before_filter :set_sidebar, only: [:what, :how_it_works, :raise_popularity, :matchmakers, :tv_spot]
 
   def set_sidebar
     @sidebar = true

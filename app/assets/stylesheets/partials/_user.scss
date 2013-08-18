@@ -46,6 +46,20 @@
       }
 
       #lang-switcher {
+        .picker {
+          a {
+            padding-left:10px;
+            margin-right:25px;
+             i {
+              width:16px;
+              height:16px;
+              position: absolute;
+              top: 7px;
+              background:image-url('languages_icon.png') no-repeat; 
+              margin-left:10px; 
+            }
+          }
+        }
         .leaf {
           a {
             padding-left:10px;
@@ -60,6 +74,12 @@
         z-index:999;
         border-bottom-right-radius:5px;
         border-bottom-left-radius:5px;
+
+        :hover {
+          background:#292A29;
+          border-bottom-right-radius:5px;
+          border-bottom-left-radius:5px;
+        }
 
         ul {
 
@@ -201,7 +221,6 @@ section.list {
       margin-top:5px;
       font-size:1.4em;
       color:$link_color;
-      font-weight:normal;
       line-height:1.2em;
     }
 
@@ -770,7 +789,9 @@ section.chat{
 /* user-profile */
 
 .user-profile{
-
+  article {
+    position: inherit;
+  }
   .user-detail-container {
 
       position:relative;
@@ -868,15 +889,37 @@ section.chat{
   }
 
   article.action-links{
-
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     background:$link-color;
-    padding:20px;
+    padding:15px;
     margin:10px 0;
     margin-left:-10px;
+
+    .message {
+      margin-top: -8px;
+      i {
+        margin-top: 8px;
+      }
+    }
 
     a {
       color:#fff;
       line-height:30px;
+      font-weight:bold;
+    }
+
+    a:hover {
+      color:#000;
+      text-decoration:none;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 15px;
+      position: absolute;
     }
 
     i {
@@ -894,7 +937,7 @@ section.chat{
 
       li {
         float:left;
-        margin:0 25px;
+        margin:0 20px;
 
 
         &.message {
