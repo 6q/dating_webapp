@@ -4,7 +4,7 @@ class NotificationsController < ApplicationController
 
   # Get all unseen notifications
   def notifications
-    @notifications = CelloveNotification.where({ receiver_id: current_user.id, seen: false })
+    @notifications = CelloveNotification.where(receiver_id: current_user.id, seen: false).where('created_at > ?', current_user.current_sign_in_at)
     @notificationlist = []
     @notifications.each do |notification|
       u = User.find(notification.sender_id)
