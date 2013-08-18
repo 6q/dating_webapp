@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       if params[:affinity]
         @users = @users.page(params[:page])
       else
-        @users = @search.result.page(params[:page])
+        @users = @search.result.uniq.page(params[:page])
       end
     end
     @cellove_search = Search.new
