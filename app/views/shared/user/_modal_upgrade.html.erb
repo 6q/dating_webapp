@@ -1,0 +1,16 @@
+<!-- Modal -->
+<div id="upgrade-account" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <span class='heart'>&#9829;</span> <%= _('Actualiza tu cuenta') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body">
+    <p><%= _('Actualiza tu cuenta a premium ahora para poder disfrutar de todas las funcionalidades de Cellove.') %></p>
+  </div>
+  <div class="modal-footer">
+    <%= link_to(_('Actualizar'), pay_path) %>
+    <%= link_to _('Cancelar'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+  </div>
+</div>

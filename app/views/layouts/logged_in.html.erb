@@ -40,7 +40,8 @@
     <%= render 'shared/user/notifications' %>
     <%= render 'layouts/messages' %>
 
-
+    <%= render 'shared/user/modal_upgrade' %>
+    <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
   </body>
   <% unless current_user.has_role?(:matchmaker) %>
     <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
@@ -48,6 +49,16 @@
     <script type="text/javascript">
       setTimeout(getNotifications, 5000);
       c_video_chat = <%= current_user.has_role?(:premium_user) ? '1' : '0' %>;
+
+      <% unless current_user.has_role?(:premium_user) %>
+      function chatWith(id) {
+        if ($('#arrowchat_chatboxes_wide .arrowchat_bar_right').size() < 2) {
+          jqac.arrowchat.chatWith(id);
+        } else {
+          $('#upgrade-account-modal').click();
+        }
+      }
+      <% end %>
     </script>
   <% end %>
 </html>
