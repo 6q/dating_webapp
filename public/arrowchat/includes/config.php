@@ -20,12 +20,12 @@
 	 * Your existing users and information should already be in this database.  Do NOT create
 	 * a new database for ArrowChat.
 	*/
-if ($_SERVER['HTTP_HOST'] == 'staging.cellove.com' || $_SERVER['HTTP_HOST'] == 'cellove.season.es') {
+if ($_SERVER['HTTP_HOST'] == 'staging.cellove.com') {
   define('DB_SERVER','127.0.0.1'); 
 	define('DB_USERNAME','cellove'); 
 	define('DB_PASSWORD','12345'); 
   define('DB_NAME','cellove_staging');
-} elseif ($_SERVER['HTTP_HOST'] == 'www.cellove.com') {
+} elseif ($_SERVER['HTTP_HOST'] == 'www.cellove.com' || $_SERVER['HTTP_HOST'] == 'production.cellove.es') {
   define('DB_SERVER','127.0.0.1'); 
 	define('DB_USERNAME','cellove'); 
 	define('DB_PASSWORD','12345'); 
