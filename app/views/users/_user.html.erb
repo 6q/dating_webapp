@@ -1,5 +1,5 @@
 <li>
-<article class="user-card <%= user.online? ? "online" : "" %>" data-toggle="tooltip" title="<%= "<strong>#{user.full_name}</strong><br>#{_('Última conexión')}: #{user.last_sign_in_at ? time_ago_in_words_or_date(user.last_sign_in_at) : _('Nunca')}" %>">
+<article class="user-card <%= user.online? ? "online" : "" %>" data-toggle="tooltip" title="<%= "<strong>#{user.full_name}</strong><br>#{_('Última conexión')}: #{user.current_sign_in_at ? (user.online? ? _("Ahora online") : time_ago_in_words_or_date(user.current_sign_in_at)) : _('Nunca')}" %>">
     <ul class="pics">
       <li><%= link_to profile_pic(user), user %></li>
       <li><%= link_to profile_pic(user), user %></li>
