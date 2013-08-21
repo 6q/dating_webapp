@@ -30,7 +30,7 @@
 	</div>
 
 	<div class="avatar">
-  	<%= profile_pic(current_user, options = {width: 60, height: 60}) %>
+  	<%= link_to(profile_pic(current_user, options = {width: 60, height: 60}), profile_path) %>
   </div>
 	
 	<div class="user-actions">
