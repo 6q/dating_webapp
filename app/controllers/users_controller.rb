@@ -172,6 +172,10 @@ class UsersController < ApplicationController
           params[:q].except!(:years_lteq)
           params[:q].except!(:years_gteq)
         end
+
+        #if city = params[:q].delete(:city_eq)
+        #  hidden_users = hidden_users.near("#{city}, Spain", distance, { :units => :km })
+        #end
       else
         params[:q] = {}
         params[:q][:id_in] = in_filter

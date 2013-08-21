@@ -6,9 +6,9 @@ module UserRetrieval
       hidden_user_ids = self.get_all_invisible_to_me
       best = near.where("users.id NOT IN (?)", hidden_user_ids)
         .where(gender: self.matching_gender)
-        .limit(5)
+        .limit(20)
         .group(:id)
-        .order('cellove_index DESC')
+        .order('cellove_index DESC').sample(5)
     end
 
     best
@@ -25,7 +25,7 @@ module UserRetrieval
         most_visited -= hidden_user_ids
         best = near.where(id: most_visited)
         .where(gender: self.matching_gender)
-        .limit(how_many)
+        .limit(how_many).sample(how_many)
       end
       radius += 100
       max += 1
@@ -41,7 +41,7 @@ module UserRetrieval
       hidden_user_ids = self.get_all_invisible_to_me
       new_near = near.where("users.id NOT IN (?)", hidden_user_ids)
         .where(gender: self.matching_gender)
-        .limit(5)
+        .limit(20).sample(5)
     end
     new_near
   end
