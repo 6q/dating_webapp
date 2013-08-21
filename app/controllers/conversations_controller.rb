@@ -80,6 +80,7 @@ class ConversationsController < ApplicationController
 
   def destroy
     @conversation.move_to_trash(current_user)
+    #@conversation.mark_as_deleted(current_user)
 
     respond_to do |format|
       format.html {
@@ -91,7 +92,7 @@ class ConversationsController < ApplicationController
       }
       format.js {
         if params[:location].present? and params[:location] == 'conversation'
-          render :js => "window.location = '#{conversations_path(:box => @box,:page => params[:page])}';"
+          render :js => "window.location = '#{conversations_path(:box => @box, :page => params[:page])}';"
   else
           render 'conversations/destroy'
   end

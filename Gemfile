@@ -27,7 +27,7 @@ gem 'kaminari'
 #gem 'turbolinks'
 gem 'mail_form'
 gem 'strong_parameters'
-gem 'mailboxer'
+gem 'mailboxer', :git => "git://github.com/ging/mailboxer.git"
 gem 'locale'
 gem 'gettext_i18n_rails'
 gem 'gettext', '~> 2.3.9', :require => false
