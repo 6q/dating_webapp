@@ -142,7 +142,7 @@
       #var_dump(is_file(CELLOVE_PATH . '/system/dragonfly/'.$env.'/'.$image));
 		if (is_file(CELLOVE_PATH . '/system/dragonfly/'.$env.'/'.$image))
     {
-			return '/system/dragonfly/'.$env.'/'.$image.'.jpg';
+			return '/system/dragonfly/'.$env.'/'.$image;
 		}
 		else
 		{
