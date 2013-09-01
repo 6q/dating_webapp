@@ -3,19 +3,14 @@
 
 <section class="list public-user-list">
 <div id="last-users" class="user-list">
-  <h3><%= _('Últimos usuarios en Cellove %{link}') % {link: link_to(_('¡Regístrate Gratis!'), new_user_registration_path)} %></h3>
+  <h3><%= _('Algun@s usuari@s registrad@s en Cellove') %> <% link_to(_('¡Regístrate Gratis!'), new_user_registration_path) %></h3>
   <ul class="clearfix">
-    <% @users.each do |user| %>
+    <% User.women.popular.each do |user| %>
       <%= render user %>
     <% end %>
   </ul>
-</div>
-
-
-<div id="top-users" class="user-list">
-  <h3><%= _('Usuarios más populares %{link}') % {link: link_to(_('¡Regístrate Gratis!'), new_user_registration_path)} %></h3>
   <ul class="clearfix">
-    <% User.popular.each do |user| %>
+    <% User.men.popular.each do |user| %>
       <%= render user %>
     <% end %>
   </ul>

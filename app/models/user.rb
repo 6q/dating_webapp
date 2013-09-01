@@ -138,6 +138,13 @@ class User < ActiveRecord::Base
                       .joins(:messages)
                       .group("users.id, notifications.id")
                       .order("notifications_count DESC")
+  scope :popular, select("users.*, count(user_visits.id) AS visits_count, count(likes.id) AS likes_count").
+    joins(:user_visits, :likes).
+    group("users.id").
+    order("visits_count DESC, likes_count DESC")
+  scope :women, where(gender: 'female')
+  scope :men, where(gender: 'male')
+  scope :with_picture, joins(:pictures).where('pictures.main = 1')
 
   #relations
   has_many :pictures, as: :attachable
@@ -146,7 +153,7 @@ class User < ActiveRecord::Base
 
   has_one :general_settings, class_name: 'GeneralSetting', foreign_key: 'user_id'
   accepts_nested_attributes_for :general_settings
-  
+
   has_one :my_characteristics, class_name: 'Characteristic', conditions: Proc.new { "creator_id = #{self.id}" }
   has_many :recommendations, class_name: 'Recommendation', foreign_key: 'creator_id'
   has_many :recommenders, class_name: 'Recommendation', foreign_key: 'user_id'
@@ -263,7 +270,7 @@ class User < ActiveRecord::Base
       return users
     end
   end
-  
+
   def matching_gender
     self.lf_gender || (gender == 'male' ? 'female' : 'male')
   end
@@ -300,8 +307,6 @@ class User < ActiveRecord::Base
       self[column] = SecureRandom.urlsafe_base64
     end while User.exists?(column => self[column])
   end
-
-  scope :popular, where('users.created_at < ?', Time.now).with_role(:regular_user).limit(7)
 
   def full_name
     [name, surname].join(" ")
@@ -346,7 +351,7 @@ class User < ActiveRecord::Base
       # Return the avg in percent
       ((avg_absolute-1.0)/4)*100
     else
-      50  
+      50
     end
   end
 
