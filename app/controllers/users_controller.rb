@@ -202,11 +202,11 @@ class UsersController < ApplicationController
         hidden_users.tap do |hu|
           case params[:action]
           when 'nice_couple'
-            ordered = hu.joins(:rates).order('rates.created_at DESC')
+            ordered = hu.joins(:rates).order('rates.created_at DESC').uniq
           when 'likes'
-            ordered = hu.joins(:likes).order('likes.created_at DESC')
+            ordered = hu.joins(:likes).order('likes.created_at DESC').uniq
           when 'hits'
-            ordered = hu.joins(:user_visits).order('user_visits.created_at DESC')
+            ordered = hu.joins(:user_visits).order('user_visits.created_at DESC').uniq
           else
             ordered = hu
           end
