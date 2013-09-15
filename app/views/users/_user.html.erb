@@ -9,12 +9,12 @@
           if user_signed_in?
             case params[:action]
               when 'hits'
-                ('<small>' + time_ago_in_words(current_user.visitor?(user).visited_at) + '</small>').html_safe if current_user.visitor?(user)
+                ('<small>' + time_ago_in_words_or_date(current_user.visitor?(user).visited_at) + '</small>').html_safe if current_user.visitor?(user)
               when 'likes'
-                ('<small>' + time_ago_in_words(current_user.liker?(user).created_at) + '</small>').html_safe if current_user.liker?(user)
+                ('<small>' + time_ago_in_words_or_date(current_user.liker?(user).created_at) + '</small>').html_safe if current_user.liker?(user)
               when 'nice_couple'
                 if rate = current_user.rates.where(rater_id: user.id).first
-                  ('<small>' + time_ago_in_words(rate.created_at) + '</small>').html_safe
+                  ('<small>' + time_ago_in_words_or_date(rate.created_at) + '</small>').html_safe
                 end
             end
           end
