@@ -1688,6 +1688,13 @@ section.list {
       margin:0;
       overflow: visible;
 
+      small {
+        color: #5caae8;
+        font-size: .7em;
+        display: block;
+        margin-top: -5px;
+      }
+
       h1 {
         font-size:.8em;
         line-height:1.2em;
