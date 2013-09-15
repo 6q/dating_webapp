@@ -1,6 +1,6 @@
 env :MAILTO, 'sysadmin@season.es'
 
-job_type :unicorn_start, 'cd :path && /usr/local/bin/bundle exec unicorn -c :path/config/unicorn.rb -E :environment -D'
+job_type :unicorn_start, 'cd :path && /usr/local/bin/bundle exec unicorn -c :path/config/unicorn/:environment.rb -E :environment -D'
 
 every :reboot do
   unicorn_start 'application'
