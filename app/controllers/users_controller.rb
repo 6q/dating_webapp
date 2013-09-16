@@ -211,6 +211,7 @@ class UsersController < ApplicationController
             ordered = hu
           end
           @search = ordered.search(params[:q])
+          @users = @search.result
         end
       end
       params[:q].except!(:id_in)
