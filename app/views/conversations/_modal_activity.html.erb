@@ -17,7 +17,7 @@
       </ul>
       <%= f.input :activity_type, as: :hidden %>
       <div class="reply">
-        <%= f.input_field :body %>
+        <%= f.input_field :body, class: 'activity-body' %>
         <%= hidden_field_tag :recipient, user.id %>
         <%= hidden_field_tag :conversation_id, (defined?(conversation) ? conversation.id : nil) %>
       </div>
