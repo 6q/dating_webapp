@@ -9,15 +9,6 @@ GIT
       rails (~> 3.2.13)
 
 GIT
-  remote: git://github.com/ging/mailboxer.git
-  revision: d11d5d136b4bcc3ad25563def47beb37ce081dce
-  specs:
-    mailboxer (0.10.3)
-      carrierwave (>= 0.5.8)
-      foreigner (>= 0.9.1)
-      rails (> 3.0.0)
-
-GIT
   remote: git://github.com/stefanpenner/country_select.git
   revision: 2778d46f4a194389da2f3188adba5767be2649e7
   specs:
@@ -115,7 +106,7 @@ GEM
     figaro (0.6.4)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    foreigner (1.4.2)
+    foreigner (1.5.0)
       activerecord (>= 3.0.0)
     formatador (0.2.4)
     friendly_id (4.0.9)
@@ -165,6 +156,10 @@ GEM
       actionmailer (~> 3.0)
     mail_view (1.0.3)
       tilt
+    mailboxer (0.11.0)
+      carrierwave (>= 0.5.8)
+      foreigner (>= 0.9.1)
+      rails (> 3.0.0)
     method_source (0.8.1)
     mime-types (1.23)
     minitest (4.7.4)
@@ -312,7 +307,7 @@ DEPENDENCIES
   localized_country_select (>= 0.9.3)
   mail_form
   mail_view (~> 1.0.3)
-  mailboxer!
+  mailboxer (~> 0.11.0)
   minitest-focus
   minitest-rails
   minitest-reporters

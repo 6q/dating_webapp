@@ -79,6 +79,8 @@ Cellove::Application.routes.draw do
 
   resources :messages
   resources :conversations
+  delete 'conversations', to: 'conversations#destroy_all', as: :destroy_all_conversations
+
   resources :activities, only: [:new, :create] do
     post 'reject'
   end
