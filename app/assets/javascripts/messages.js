@@ -7,4 +7,11 @@ $(function() {
     ab = $(this).closest('.modal').next('.activity-proposal').find('.activity-body')
     ab.val($(this).val());
   });
+
+  $('.modal-new-message input[type="submit"]').click(function() {
+    if ($(this).closest('.modal-new-message').find('.message-body').val().length <= 0) {
+      $(this).closest('.modal-new-message').find('.message-body').css('border-color', 'red');
+      return false;
+    }
+  });
 });
