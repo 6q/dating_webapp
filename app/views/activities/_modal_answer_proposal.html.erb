@@ -9,7 +9,7 @@
   </div>
   <%= simple_form_for activity.conversation.messages.new, url: conversation_path(activity.conversation, accept_activity: true), method: :put do |f| %>
     <div class="modal-body">
-      <p><%= _('¡Estás a un paso de aceptar la propuesta de') %> <%= sender_or_recipient(activity.conversation).name %> <%= _('para') %> <strong><%= Activity::ACTIVITY_TYPE[activity.activity_type] %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
+      <p><%= _('¡Estás a un paso de aceptar la propuesta de') %> <%= sender_or_recipient(activity.conversation).name %> <%= _('para') %> <strong><%= Activity::ACTIVITY_TYPE[activity.activity_type.to_sym] %><%= ' ' + _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
       <div class="reply">
         <%= f.input_field :body %>
       </div>
