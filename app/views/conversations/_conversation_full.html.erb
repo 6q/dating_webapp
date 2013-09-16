@@ -2,7 +2,7 @@
   <%= user_link_with_picture(receipt.message.sender) %>
   <div class="info">
     <p class="msg-data"><%= link_to receipt.message.sender.name, user_path(receipt.message.sender) %> <%= receipt.message.sender.age %> <%= _('Años') %>, <%= receipt.message.sender.city %></p>
-    <p class="msg-date"><%= _('Hace ') + time_ago_in_words(receipt.created_at) %></p>
+    <p class="msg-date"><%= time_ago_in_words_or_date(receipt.created_at) %></p>
     <div class="msg">
       <%= receipt.message.body %>
     </div>
