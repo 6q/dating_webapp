@@ -1,7 +1,7 @@
 <% unless conversation.activity.blank? %>
   <div class="clearfix proposal">
     <div class="pull-left">
-      <b><%= _('Propuesta de actividad:') %></b> <%= "#{conversation.activity.body.capitalize}#{conversation.activity.date ? ' el ' + I18n.l(conversation.activity.date, format: :long) : _('fecha a concretar contigo.') }" %>
+      <b><%= _('Propuesta de actividad:') %></b> <%= "#{conversation.activity.body.capitalize} - #{conversation.activity.date ? I18n.l(conversation.activity.date, format: :long) : _('fecha a concretar contigo.') }" %>
     </div>
     <div class="pull-right">
       <% if conversation.activity.rejected? %>
