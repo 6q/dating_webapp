@@ -42,24 +42,18 @@
                   <%= f.hidden_field :height_lteq  %>
                 </div>
               </div>
+            </div>
+
+            <div class="searchcol2">
+              <div class="control-group fit">
+                <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
+                <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: _('Complexión...'), selected: @search.complexion_eq %>
+              </div>
               <div class="control-group">
                 <%= f.label :description_cont, _('Palabra clave'), class: 'control-label' %>
                 <div class="controls">
                   <%= f.text_field :description_cont %>
                 </div>
-              </div>
-            </div>
-
-            <div class="searchcol2">
-              <div class="control-group slider">
-                <label class="control-label"><%= _('Afinidad') %></label>
-                <div class="controls">
-                  <%= text_field_tag :affinity, (params[:affinity] || '0'), type: 'slider' %>
-                </div>
-              </div>
-              <div class="control-group fit">
-                <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
-                <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: _('Complexión...'), selected: @search.complexion_eq %>
               </div>
               <div class="right">
                 <%= f.submit _('Buscar'), class: 'btn btn-info' %>
