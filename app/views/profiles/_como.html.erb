@@ -19,16 +19,16 @@
 
   <hr>
   <%= user.label :marital_status, _('Ahora mismo estoy') %>
-  <%= user.select :marital_status, marital_status_options, {}, {:class => 'span2'} %>
+  <%= user.select :marital_status, marital_status_options, {:include_blank => _('No quiero decirlo')}, {:class => 'span2'} %>
   <%= user.label :child,_('y') %>
-  <%= user.select :child, child_options, {}, {:class =>'span4'} %>
+  <%= user.select :child, child_options, {include_blank: _('No quiero decirlo')}, {:class =>'span4'} %>
   <hr class="thin">
   <%= user.label :house,_('Vivo') %>
-  <%= user.select :house, house_options, {}, {:class=> 'span4'} %>  
+  <%= user.select :house, house_options, {include_blank: _('No quiero decirlo')}, {:class=> 'span4'} %>  
 
   <hr>
   <%= user.label :physical_desc, _('Me considero ') %>
-  <%= user.select :physical_desc, physical_desc_options, {} , {:class => 'span2'} %>
+  <%= user.select :physical_desc, physical_desc_options, {include_blank: _('No quiero decirlo')} , {:class => 'span2'} %>
   <%= user.label :height, _(', mido') %>
   <%= user.text_field :height, :class => 'input-mini' %>
   <%= user.label :weight, _('cms. y peso ') %>
@@ -36,39 +36,39 @@
   kg.
   <hr class="thin">
   <%= user.label :complexion, _('Tengo un cuerpo ') %>
-  <%= user.select :complexion, complexion_options,{}, {:class => 'span2'} %>.
+  <%= user.select :complexion, complexion_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>.
   <hr class="thin">
   <%= user.label :eyes, _('Mis ojos son de color') %>
-  <%= user.select :eyes, eyes_options, {}, {:class=> 'span2'} %>, 
+  <%= user.select :eyes, eyes_options, {include_blank: _('No quiero decirlo')}, {:class=> 'span2'} %>, 
   <%= user.label :hair,_('pelo color') %>
-  <%= user.select :hair, hair_options, {}, {:class=>'span2'} %>
+  <%= user.select :hair, hair_options, {include_blank: _('No quiero decirlo')}, {:class=>'span2'} %>
   <%= user.label :hair_style,_(' y ') %>
-  <%= user.select :hair_style, hair_style_options, {}, {:class=>'span2'} %>
+  <%= user.select :hair_style, hair_style_options, {include_blank: _('No quiero decirlo')}, {:class=>'span2'} %>
   <hr class="thin">
   <%= user.label :physical_style, _('Mi estilo es') %>
-  <%= user.select :physical_style, physical_style_options, {}, {:class=>'span2'} %>
+  <%= user.select :physical_style, physical_style_options, {include_blank: _('No quiero decirlo')}, {:class=>'span2'} %>
   <hr>
   <%= user.label :religion, _('Soy') %>
-  <%= user.select :religion, religion_options, {},{:class => 'span2'} %>
+  <%= user.select :religion, religion_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
   <%= user.label :religion_activity, _(' y') %>
-  <%= user.select :religion_activity, religion_activity_options ,{},{:class => 'span5'} %>
+  <%= user.select :religion_activity, religion_activity_options , {include_blank: _('No quiero decirlo')}, {:class => 'span5'} %>
   <hr class="thin">
   <%= user.label :citizenship, _('Tengo nacionalidad ') %>
   <%= user.text_field :citizenship, :class => 'span2' %>
   <%= user.label :ethnicity, _(' y soy de étnia') %>
-  <%= user.select :ethnicity, ethnicity_options, {}, {:class => 'span2'} %>
+  <%= user.select :ethnicity, ethnicity_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
 
   <hr>
   <%= user.label :study_level, _('Mi nivel de estudios es') %>
-  <%= user.select :study_level, study_level_options %>
+  <%= user.select :study_level, study_level_options, {include_blank: _('No quiero decirlo')} %>
   <hr class="thin">
   <%= user.label :language,_( 'También hablo')%>
-  <%= user.select :language, language_options, {}, {:class => 'span2'} %>
+  <%= user.select :language, language_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
   <%= user.label :language_level,_('a nivel') %>
-  <%= user.select :language_level, language_level_options, {}, {:class => 'span2'} %>
+  <%= user.select :language_level, language_level_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
   <hr class="thin">
   <%= user.label :job, _('Trabajo en') %>
-  <%= user.select :job, job_options, {}, :class => 'span4' %>
+  <%= user.select :job, job_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
   <%= user.label :salary, _('y mi nivel de ganancias es') %>
   <%= user.text_field :salary, class: 'span1' %>€/año
 

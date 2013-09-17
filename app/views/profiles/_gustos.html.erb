@@ -3,29 +3,29 @@
 	<hr class="thin">
 	<h5><%= _('Dieta') %></h5>
 	<%= user.label :diet, _('Me gusta la comida') %>
-	<%= user.select :diet, diet_options %>
+  <%= user.select :diet, diet_options, {include_blank: _('No quiero decirlo')} %>
 	<hr>
 	<h5><%= _('Hábitos') %></h5>
-	<%= user.select :smoke, smoke_options,{}, {:class => 'span3'} %> y 
-	<%= user.select :alcohol, alcohol_options %>
+  <%= user.select :smoke, smoke_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %> y 
+  <%= user.select :alcohol, alcohol_options, {include_blank: _('No quiero decirlo')} %>
 	<hr>
 	<h5><%= _('Matrimonio') %></h5>
-	<%= user.select :wedding_opinion, wedding_opinion_options, {}, {:class => 'span4'} %>
+  <%= user.select :wedding_opinion, wedding_opinion_options, {include_blank: _('No quiero decirlo')}, {:class => 'span4'} %>
 	<hr>
 	<h5><%= _('Animales') %></h5>
-	<%= user.select :animals, animals_options, {}, {:class => 'span4'} %>
+  <%= user.select :animals, animals_options, {include_blank: _('No quiero decirlo')}, {:class => 'span4'} %>
 	<hr>
 	<h5><%= _('Ocio') %></h5>
-	<%= user.select :party, party_options, {}, {:class => 'span4'} %>
+  <%= user.select :party, party_options, {include_blank: _('No quiero decirlo')}, {:class => 'span4'} %>
 	<hr class="thin">
-	<%= user.select :music, music_options, {}, {:class => 'span3'} %>
+  <%= user.select :music, music_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %>
 	<%= user.label :music_genre, _(', me gusta el') %>
-	<%= user.select :music_genre, music_genre_options, {}, {:class => 'span2'} %>
+  <%= user.select :music_genre, music_genre_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
 	<hr class="thin">
-	<%= user.select :cinema, cinema_options, {}, {:class => 'span3'} %>
-	<%= user.select :cinema_frequency, cinema_frequency_options, {}, {:class => 'span3'} %>
+  <%= user.select :cinema, cinema_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %>
+  <%= user.select :cinema_frequency, cinema_frequency_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %>
 	<%= user.label :cinema_genre, _(', de género') %>
-	<%= user.select :cinema_genre, cinema_genre_options, {}, {:class => 'span2'} %>
+  <%= user.select :cinema_genre, cinema_genre_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
 	<hr class="thin">
 
 	<div class="span4"><%= _('En mi tiempo libre me gusta:') %></div>
