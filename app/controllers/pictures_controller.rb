@@ -12,7 +12,7 @@ class PicturesController < ApplicationController
       @picture.image = @picture.image.thumb("500x500").tempfile
       if current_user
         @picture.attachable = current_user
-        if current_user.pictures.empty? || params[:main]
+        if current_user.pictures.empty? || (params[:main] && params[:main] != 'undefined')
           current_user.pictures.update_all(main: false)
           @picture.main = true
         end
