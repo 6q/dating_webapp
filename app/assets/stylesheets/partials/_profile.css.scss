@@ -28,3 +28,10 @@ input{
   img { max-width: initial; }
 }
 
+.profile {
+  .nav-tabs {
+    a {
+      font-weight: bold;
+    }
+  }
+}
