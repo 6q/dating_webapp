@@ -663,12 +663,17 @@ class User < ActiveRecord::Base
   def visitor?(user)
     user_visits.where('visitor_id = :id', id: user.id).first
   end
-  
+
   def liker?(user)
     likers.where('creator_id = :id', id: user.id).first
   end
 
   def active_for_authentication?
     super && !self.banned?
+  end
+
+  def soft_delete
+    # assuming you have deleted_at column added already
+    update_attribute(:deleted_at, Time.current)
   end
 end

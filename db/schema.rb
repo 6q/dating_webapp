@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130815220804) do
+ActiveRecord::Schema.define(:version => 20130918212801) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -351,6 +351,13 @@ ActiveRecord::Schema.define(:version => 20130815220804) do
     t.boolean  "main",            :default => false
   end
 
+  create_table "provinces", :force => true do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "rates", :force => true do |t|
     t.integer  "rater_id"
     t.integer  "rateable_id"
@@ -590,6 +597,7 @@ ActiveRecord::Schema.define(:version => 20130815220804) do
     t.string   "seeking"
     t.boolean  "banned",                 :default => false
     t.boolean  "fake",                   :default => false
+    t.datetime "deleted_at"
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
@@ -606,8 +614,8 @@ ActiveRecord::Schema.define(:version => 20130815220804) do
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
 
-  add_foreign_key "notifications", "conversations", :name => "notifications_on_conversation_id"
+  add_foreign_key "notifications", "conversations", name: "notifications_on_conversation_id"
 
-  add_foreign_key "receipts", "notifications", :name => "receipts_on_notification_id"
+  add_foreign_key "receipts", "notifications", name: "receipts_on_notification_id"
 
 end
