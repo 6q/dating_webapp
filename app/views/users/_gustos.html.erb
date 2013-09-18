@@ -1,76 +1,76 @@
 <% gustos = 0%>
 <div class="row">
-	<% if @user.diet %>
+	<% if @user.diet.present? %>
 		<div class="key span3"><%= _('Dieta') %>:</div>
 		<% gustos = 1 %>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_DIET[@user.diet] %></div>
 		</div>
 	<% end %>
-	<% if @user.smoke %>
+	<% if @user.smoke.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Tabaco') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_SMOKE[@user.smoke].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.alcohol %>
+	<% if @user.alcohol.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Alcohol') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_ALCOHOL[@user.alcohol] %></div>
 		</div>
 	<% end %>
-	<% if @user.wedding_opinion %>
+	<% if @user.wedding_opinion.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Matrimonio') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_WEDDING_OPINION[@user.wedding_opinion].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.animals %>
+	<% if @user.animals.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Animales') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_ANIMALS[@user.animals].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.party %>
+	<% if @user.party.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Salir') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_PARTY[@user.party].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.music %>
+	<% if @user.music.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Música') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_MUSIC[@user.music].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.music_genre %>
+	<% if @user.music_genre.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Género muscial preferido') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::MUSIC_GENRE[@user.music_genre] %></div>
 		</div>
 	<% end %>
-	<% if @user.cinema %>
+	<% if @user.cinema.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Cine') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::TP_CINEMA[@user.cinema].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.cinema_frequency %>
+	<% if @user.cinema_frequency.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Frecuencia') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::CINEMA_FREQUENCY[@user.cinema_frequency] %></div>
 		</div>
 	<% end %>
-	<% if @user.cinema_genre %>
+	<% if @user.cinema_genre.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Género preferido') %>:</div>
 		<div class="valor span6">

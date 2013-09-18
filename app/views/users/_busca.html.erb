@@ -1,14 +1,14 @@
 <div class="row">
 	<% busca = 0 %>
 
-	<% if @user.lf_gender %>
+	<% if @user.lf_gender.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Busca') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::GENDER[@user.lf_gender].downcase %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_marital_status %>
+	<% if @user.lf_marital_status.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Estado civil') %>:</div>
 		<div class="valor span6">
@@ -22,112 +22,112 @@
 			<div class="txt"><%= "entre #{@user.lf_age_from} y #{@user.lf_age_to}" %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_relationship %>
+	<% if @user.lf_relationship.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Relación') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_RELATIONSHIP[@user.lf_relationship] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_child %>
+	<% if @user.lf_child.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Hijos') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_CHILD[@user.lf_child] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_house %>
+	<% if @user.lf_house.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Viva') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_HOUSE[@user.lf_house] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_physical_desc %>
+	<% if @user.lf_physical_desc.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Fisico') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::PHYSICAL_DESC[@user.lf_physical_desc] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_physical_style %>
+	<% if @user.lf_physical_style.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Estilo') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::PHYSICAL_STYLE[@user.lf_physical_style] %></div>
 		</div>
 	<% end %>
-	<% unless @user.lf_height_between.blank? or @user.lf_height_to.blank? %>
+	<% unless @user.lf_height_between.blank? || @user.lf_height_to.blank? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Altura') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= "entre #{@user.lf_height_between} y #{@user.lf_height_to} cms" %></div>
 		</div>
 	<% end %>
-	<% unless @user.lf_weight_between.blank? or @user.lf_weight_to.blank? %>
+	<% unless @user.lf_weight_between.blank? || @user.lf_weight_to.blank? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Peso') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= "entre #{@user.lf_weight_between} y #{@user.lf_weight_to}" %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_complexion %>
+	<% if @user.lf_complexion.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Complexión') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::COMPLEXION[@user.lf_complexion] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_eyes %>
+	<% if @user.lf_eyes.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Ojos') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::EYES[@user.lf_eyes] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_hair %>
+	<% if @user.lf_hair.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Pelo') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::HAIR[@user.lf_hair] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_hair_style %>
+	<% if @user.lf_hair_style.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Peinado') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::HAIR_STYLE[@user.lf_hair_style] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_smoke %>
+	<% if @user.lf_smoke.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Tabaco') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_SMOKE[@user.lf_smoke] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_alcohol %>
+	<% if @user.lf_alcohol.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Alcohol') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_ALCOHOL[@user.lf_alcohol] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_party %>
+	<% if @user.lf_party.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Salir') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_PARTY[@user.lf_party] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_diet %>
+	<% if @user.lf_diet.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Dieta') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_DIET[@user.lf_diet] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_ethnicity %>
+	<% if @user.lf_ethnicity.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Étnia') %>:</div>
 		<div class="valor span6">
@@ -141,21 +141,21 @@
 			<div class="txt"><%= @user.lf_citizenship %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_religion %>
+	<% if @user.lf_religion.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Religión') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::RELIGION[@user.lf_religion] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_religion_activity %>
+	<% if @user.lf_religion_activity.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Devoción religiosa') %>:</div>
 		<div class="valor span6">
 			<div class="txt"><%= User::LF_RELIGION_ACTIVITY[@user.lf_religion_activity] %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_animals %>
+	<% if @user.lf_animals.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Animales') %>:</div>
 		<div class="valor span6">
@@ -179,7 +179,7 @@
 			</div>
 		</div>
 	<% end %>
-	<% if @user.lf_study_level %>
+	<% if @user.lf_study_level.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Estudios') %>:</div>
 		<div class="valor span6">
@@ -200,7 +200,7 @@
 			<div class="txt"><%= @user.lf_language_level %></div>
 		</div>
 	<% end %>
-	<% if @user.lf_job %>
+	<% if @user.lf_job.present? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Trabajo') %>:</div>
 		<div class="valor span6">
