@@ -263,7 +263,7 @@ class User < ActiveRecord::Base
   def get_all_invisible_to_me
     invited_users = User.with_role(:invited_user).pluck('users.id')
     deleted_users = User.where('deleted_at is not null').pluck('users.id')
-    users = self.hidden_user_ids.concat(self.invisible_to_me).concat(invited_users)#.concat(deleted_users)
+    users = self.hidden_user_ids.concat(self.invisible_to_me).concat(invited_users).concat(deleted_users)
     if users == []
       # Needed to fix MySQL bug where an '.. NOT IN (NULL)' query does not work
       return [self.id]
