@@ -2,9 +2,7 @@
 	<fieldset>
 	<hr class="thin">
 	<%= form_for @user, :url => profile_path do |user| %>
-		<%= user.label :lf_gender, _("Busco") %>
-    <%= user.select :lf_gender, gender_options, {include_blank: _('No quiero decirlo')}, :class => 'span2'  %>
-   	<%= user.label :lf_marital_status, "y" %>
+    <%= _("Busco") + ' ' + User::GENDER[@user.lf_gender] %>
    	<%= user.select :lf_marital_status, marital_status_options, {include_blank: _('No quiero decirlo')}, { :class => 'span2' } %>
    	,
 		<hr class="thin">

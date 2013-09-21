@@ -262,7 +262,8 @@ class User < ActiveRecord::Base
   # Includes all users that you have hidden or that have blocked you
   def get_all_invisible_to_me
     invited_users = User.with_role(:invited_user).pluck('users.id')
-    users = self.hidden_user_ids.concat(self.invisible_to_me).concat(invited_users)
+    deleted_users = User.where('deleted_at is not null').pluck('users.id')
+    users = self.hidden_user_ids.concat(self.invisible_to_me).concat(invited_users)#.concat(deleted_users)
     if users == []
       # Needed to fix MySQL bug where an '.. NOT IN (NULL)' query does not work
       return [self.id]
@@ -657,6 +658,7 @@ class User < ActiveRecord::Base
     }
 
     self.gender = gen_cor[seeking.split.first] if seeking.present?
+    self.lf_gender = gen_cor[seeking.split.last] if seeking.present?
   end
   before_validation :set_gender
 

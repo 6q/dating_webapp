@@ -11,7 +11,9 @@ Cellove::Application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'sessions',
     registrations: 'user_registrations'
-  }
+  } do
+      post 'users/recover', to: 'user_registrations#recover', as: :recover_user_registration
+  end
 
   devise_for :matchmakers, class_name: "User", controllers: {
     sessions: 'sessions',
@@ -19,7 +21,6 @@ Cellove::Application.routes.draw do
   }
 
   resource :profile, only: [:show, :update]
-  
   resources :notes, only: [:create, :destroy]
 
   resources :pictures, only: [:create, :destroy, :show, :update]

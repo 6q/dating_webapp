@@ -64,6 +64,11 @@ class UserRegistrationsController < Devise::RegistrationsController
     respond_with_navigational(resource){ redirect_to after_sign_out_path_for(resource_name) }
   end
 
+  def recover
+    current_user.update_attribute(:deleted_at, nil)
+    redirect_to profile_path
+  end
+
   private
 
     def register_user

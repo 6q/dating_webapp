@@ -114,7 +114,7 @@
       </div>
     </div>
     <% if current_user.deleted_at.present? %>
-      <%= link_to _('Reactivar cuenta'), user_registration_path, method: :delete, confirm: _('¿Estas seguro?') %>
+      <%= link_to _('Reactivar cuenta'), recover_user_registration_path, method: :post, confirm: _('¿Estas seguro?') %>
     <% else %>
       <%= link_to _('Desactivar cuenta'), user_registration_path, method: :delete, confirm: _('¿Estas seguro?') %>
     <% end %>
