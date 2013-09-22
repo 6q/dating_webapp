@@ -37,7 +37,7 @@ $(function () {
       }, {name: 'main', value: $('#picture_main').val()}],
       acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
       done: showModalAndCrop,
-      progress: function (e, data) {
+      progressall: function (e, data) {
         var progress = parseInt(data.loaded / data.total * 100, 10);
         $('.progress .bar').css('width', data.loaded);
       },
