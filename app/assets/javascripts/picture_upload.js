@@ -17,7 +17,7 @@ $(function () {
         cropData = c;
       }
     });
-    $("#crop_modal .btn-primary").click(function(e) {
+    $("#crop_modal .btn").click(function(e) {
       e.preventDefault();
       $.post(data.result.update_path, {_method: "PUT", crop_data: cropData}, function (data) {
         modalObject.modal("hide");
