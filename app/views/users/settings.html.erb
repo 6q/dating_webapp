@@ -13,81 +13,21 @@
           <article class="clearfix">
             <div class="col">
               <h5><%= _('Visibilidad') %></h5>
-              <p><%= _('¿Cómo de real quieres que sea el tiempo real?') %></p>
+              <p><%= _('¿Quien quieres que te vea?') %></p>
 
               <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Mostrar a los demás usuarios si estoy conectado') %></strong></div>
+                <div class="span3 right"><strong><%= _('Activar navegación oculta') %></strong></div>
                 <div class="checkbox">
-                  <%= f1.check_box :show_online %>
-                  <%= f1.label :show_online %>
-                </div>
-              </div>
-              
-              <!-- begin advanced settings, only for level3 users -->
-              <div class="advanced chat-options">
-
-                <div class="control-group clearfix">
-                  <div class="span3 right"><strong><%= _('Permitir que cualquiera pueda chatear conmigo') %></strong></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :allow_chat %>
-                    <%= f1.label :allow_chat %>
-                  </div>
-                </div>
-
-                <div class="control-group clearfix">
-                  <div class="span3 right"><%= _('Sólo usuarios de mi área (menos de 50km)') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :show_only_nearby %>
-                    <%= f1.label :show_only_nearby %>
-                  </div>
-                </div>
-
-                <div class="control-group clearfix">
-                  <div class="span3 right"><%= _('Sólo perfiles que conicidan con mis preferencias') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :show_only_matching_profiles %>
-                    <%= f1.label :show_only_matching_profiles %>
-                  </div>
-                </div>
-
-                <div class="control-group clearfix">
-                  <div class="span3 right"><%= _('Sólo perfiles que me han gustado') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :show_only_people_who_like_me %>
-                    <%= f1.label :show_only_people_who_like_me %>
-                  </div>
-                </div>
-
-                <div class="control-group clearfix">
-                  <div class="span3 right"><%= _('Sólo perfiles "hacemos buena pareja"') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :show_only_buena_pareja %>
-                    <%= f1.label :show_only_buena_pareja %>
-                  </div>
-                </div>
-
-                <div class="control-group clearfix">
-                  <div class="span3 right"><%= _('Sólo a perfiles con los que haya mantenido una conversación previa') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :show_only_pm %>
-                    <%= f1.label :show_only_pm %>
-                  </div>
-                </div>
-
-                <div class="control-group clearfix">
-                  <div class="span3 right"><%= _('Sólo usuarios a los que haya valorado el perfil') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :show_only_rated_me %>
-                    <%= f1.label :show_only_rated_me %>
-                  </div>
+                  <%= f1.check_box :anonymous_browsing %>
+                  <%= f1.label :anonymous_browsing %>
                 </div>
               </div>
             </div>
-            
+
             <div class="col">
               <h5><%= _('Notificaciones por email') %></h5>
               <p><%= _('¿Que notificaciones quieres recibir?') %></p>
-              
+
               <div class="control-group clearfix">
                 <div class="span3 right"><strong><%= _('No enviar notificaciones si estoy online') %></strong></div>
                   <div class="checkbox">
@@ -102,31 +42,27 @@
                     <%= f1.label :profile_visit %>
                 </div>
               </div>
-
               <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Cuando reciba un nuevo mensaje') %></strong></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :receive_message %>
-                    <%= f1.label :receive_message %>
-                </div>
-              </div>
-
-              <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Cuando le guste a alguien') %> </strong><%= _('(votaciones de 4 ó 5 estrellas)') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :star_rating %>
-                    <%= f1.label :star_rating %>
-                </div>
-              </div>
-
-              <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Cuando alguien me añada a sus favoritos') %></strong></div>
+                <div class="span3 right"><strong><%= _('Cuando le guste a alguien') %></strong></div>
                   <div class="checkbox">
                     <%= f1.check_box :like %>
                     <%= f1.label :like %>
                 </div>
               </div>
-
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Cuando reciba un nuevo mensaje y/o actividad') %></strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :receive_message %>
+                    <%= f1.label :receive_message %>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Cuando alguien indique que Hacemos buena pareja') %> </strong><%= _('(votaciones de 3 ó 5 estrellas)') %></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :star_rating %>
+                    <%= f1.label :star_rating %>
+                </div>
+              </div>
               <div class="control-group clearfix">
                 <div class="span3 right"><strong><%= _('Cuando un celestino me recomiende') %></strong></div>
                   <div class="checkbox">
@@ -136,7 +72,7 @@
               </div>
 
               <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Quiero recibir la newsletter') %></strong> <%= _('(noticias y novedades, quincenal)') %></div>
+                <div class="span3 right"><strong><%= _('Quiero recibir la newsletter') %></strong> <%= _('(noticias y novedades)') %></div>
                   <div class="checkbox">
                     <%= f1.check_box :newsletter %>
                     <%= f1.label :newsletter %>
@@ -150,23 +86,6 @@
                     <%= f1.label :user_suggestions %>
                 </div>
               </div>
-
-              <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Quiero recibir nuevos usuarios en mi zona') %></strong> <%= _('(semanal)') %></div>
-                  <div class="checkbox">
-                    <%= f1.check_box :new_users_nearby %>
-                    <%= f1.label :new_users_nearby %>
-                </div>
-              </div>
-              <% if current_user.has_role?(:premium_user) %>
-                <div class="control-group clearfix">
-                  <div class="span3 right"><strong><%= _('Navegación anónima') %></strong></div>
-                    <div class="checkbox">
-                      <%= f1.check_box :anonymous_browsing %>
-                      <%= f1.label :anonymous_browsing %>
-                  </div>
-                </div>
-              <% end %>
             </div>
           </article>
           <div class="button">
@@ -222,3 +141,14 @@
   </section>
 
 </section>
+
+<% unless current_user.has_role?(:premium_user) %>
+  <script>
+    $(function() {
+      $('#general_setting_anonymous_browsing').click(function(e) {
+        e.preventDefault();
+        $('#upgrade-account-modal').click();
+      });
+    });
+  </script>
+<% end %>
