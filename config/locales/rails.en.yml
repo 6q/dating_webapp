@@ -1,0 +1,6 @@
+---
+
+en:
+  date:
+    formats:
+      medium: "%A, %d/%m/%Y"

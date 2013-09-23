@@ -8,7 +8,7 @@
     formats:
       default: "%d/%m/%Y"
       short: "%d de %b"
-      medium: "%B de %Y"
+      medium: "%A, %d/%m/%Y"
       long: "%A, %d de %B de %Y"
 
     day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]

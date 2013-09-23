@@ -37,7 +37,7 @@ module ApplicationHelper
     if from_time > 7.days.ago
       time_ago_in_words(from_time, include_seconds_or_options = {})
     else
-      I18n.l(from_time.to_date, format: :long)
+      I18n.l(from_time.to_date, format: :medium)
     end
   end
 end
