@@ -49,7 +49,7 @@
           <%= link_to _('Reactivar recomendación'), recommendation_creator_toggle_path(recommendation), method: :post %>
         <% end %>
       <% end %>
-      <span class="date"><%= _('Hace') %> <%= time_ago_in_words_or_date(recommendation.updated_at) %></span>
+      <span class="date"><%= time_ago_in_words_or_date(recommendation.updated_at) %></span>
     </header>
 
     <p><%= recommendation.description %></p>
