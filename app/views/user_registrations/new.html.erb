@@ -44,10 +44,8 @@
       .
     </div>
     <div class="control-group">
-      <%= f.label :birth_date_day, _('Nací el') %>
-      <%= f.text_field :birth_date_day, placeholder: _('Día'), class: "span1" %>
-      <%= f.label :birth_date_month, _('de') %>
-      <%= f.text_field :birth_date_month, placeholder: _('Mes'), class: "span1" %>
+      <%= f.label :birth_date, _('Nací el') %>
+      <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
       <%= f.label :birth_date_year, _('de') %>
       <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
       <%= f.label :country, _('y vivo en') %>
