@@ -603,9 +603,11 @@ class User < ActiveRecord::Base
     settings = recipient.general_settings
     send_mail = Proc.new { UserMailer.send(notification_type, self, recipient).deliver }
 
-    if recipient.online? && !settings.no_email_online && settings.send(notification_type.to_sym)
+    if settings && recipient.online? && !settings.no_email_online && settings.send(notification_type.to_sym)
       send_mail.call
-    elsif settings.send(notification_type.to_sym)
+    elsif settings && settings.send(notification_type.to_sym)
+      send_mail.call
+    elsif settings.nil?
       send_mail.call
     end
   end

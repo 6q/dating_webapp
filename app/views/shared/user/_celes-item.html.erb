@@ -30,7 +30,11 @@
     <%= profile_pic((is_creator ? recommendation.user : recommendation.creator), { width: 100, height: 100 }) %>
     <header>
       <% if is_creator %>
-        <%= link_to recommendation.user.name, user_path(recommendation.user) %>
+        <% if recommendation.user.sign_in_count == 0 # This indicates it's an invited user %>
+          <%= recommendation.creator.email %>
+        <% else %>
+          <%= link_to recommendation.user.name, user_path(recommendation.user) %>
+        <% end %>
       <% else %>
         <%= link_to recommendation.creator.name, user_path(recommendation.creator) %>
       <% end %>
