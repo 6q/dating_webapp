@@ -9,7 +9,7 @@
   <div class="modal-body">
     <div class="center">
       <% if is_creator %>
-        <p><%= _('Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil y no podrás recomendarlo de nuevo. ¿Te lo has pensado bien?') %></p>
+        <p><%= _('Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil. ¿Te lo has pensado bien?') %></p>
       <% else %>
         <p><%= _('Estás a punto de eliminar a un Celestin@ de tu lista. Si lo haces, lo que ha dicho sobre ti desaparecerá de tu perfil. ¿Te lo has pensado bien?') %></p>
       <% end %>
@@ -17,6 +17,10 @@
   </div>
   <div class="modal-footer center">
     <%= link_to _('No, creo que lo consideraré de nuevo'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
-    <%= link_to _('Si, quiero eliminarlo'), recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+    <% if is_creator %>
+      <%= link_to _('Si, quiero eliminarla'), recommendation_creator_toggle_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+    <% else %>
+      <%= link_to _('Si, quiero eliminarlo'), recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+    <% end %>
   </div>
 </div>

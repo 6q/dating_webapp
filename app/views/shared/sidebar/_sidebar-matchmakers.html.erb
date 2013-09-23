@@ -3,7 +3,7 @@
     <h1><%= _('Celestin@s') %></h1>
   </header>
   <ul>
-    <li><%= link_to _('Mis celestin@s') + ' <em>('.html_safe + current_user.confirmed_recommenders.count.to_s + ')</em>'.html_safe + "<span>#{current_user.unconfirmed_recommenders.count.to_s}</span>".html_safe, my_matchmakers_path %></li>
+    <li><%= link_to _('Mis celestin@s') + ' <em>('.html_safe + current_user.confirmed_recommenders.count.to_s + ')</em>'.html_safe + "<span>#{current_user.unconfirmed_recommenders.count.to_s}</span>".html_safe, my_matchmakers_path(anchor: 'tab_confirmar') %></li>
     <li><%= link_to _('Quiero ser celestin@'), be_matchmaker_path %></li>
     <li class="highlight"><%= link_to _('¡Mejora tu Índice Cellove!'), '/user/celestinos-of-mine#tab_mejora' %></li>
   </ul>

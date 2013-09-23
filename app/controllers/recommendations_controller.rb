@@ -1,10 +1,15 @@
 #encoding: utf-8
 class RecommendationsController < ApplicationController
-  skip_before_filter :matchmaker_user, only: [:create, :deny]
-  before_filter :correct_user, only: [:accept, :deny]
+  skip_before_filter :matchmaker_user, only: [:index, :create, :deny, :creator_toggle]
+  before_filter :correct_user, only: [:accept, :deny, :creator_toggle]
   after_filter :add_to_cellove_index, only: [:accept]
   layout 'logged_in'
   EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
+
+  def index
+    @recommendation = Recommendation.new
+    @characteristic = Characteristic.new
+  end
 
   def create
     if params[:user] &&
@@ -65,7 +70,17 @@ class RecommendationsController < ApplicationController
     redirect_to my_matchmakers_path
   end
 
-  def creator_deny
+  def creator_toggle
+    if @recommendation
+      if @recommendation.deleted_at.blank?
+        @recommendation.deleted_at = Time.now
+      else
+        @recommendation.deleted_at = nil
+      end
+      @recommendation.save
+      flash[:success] = _('Recommendación modificada')
+    end
+    redirect_to recommendations_path
   end
 
   private

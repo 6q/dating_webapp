@@ -7,9 +7,6 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user
     if @user.has_role?(:matchmaker)
-      @recommendation = Recommendation.new
-      @characteristic = Characteristic.new
-
       render 'matchmaker_show'
     else
       render 'show'
@@ -47,6 +44,7 @@ class ProfilesController < ApplicationController
   def pay
   end
 
+  def 
   def pay_confirmation
     if true # Do some token/payment/what ever check here
       current_user.upgrade_to_premium

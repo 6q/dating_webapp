@@ -1,0 +1,59 @@
+<section class="celestinos">
+  <div class="boxed headless">
+    <div class="boxed-inner">
+      <header>
+        <h1><%= _('¡Hola Celestin@!') %></h1>
+      </header>
+    </div>
+  </div>
+  <hr class="thin">
+  
+  <div class="boxed">
+    <div class="boxed-inner">
+
+      <article>
+        <header>
+          <h1><%= _('Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?') %></h1>
+        </header>
+      </article>
+
+      <div class="celes-box">
+        <ul>
+          <li class="red-heart">
+            <i class="red-heart"></i>
+            <%= _('Ex pareja') %>
+          </li>
+
+          <li class="violet-heart">
+            <i class="violet-heart"></i>
+            <%= _('Amigo especial') %>
+          </li>
+
+          <li class="green-heart">
+            <i class="green-heart"></i>
+            <%= _('Amigo') %>
+          </li>
+
+          <li class="yellow-heart">
+            <i class="yellow-heart"></i>
+            <%= _('Familiar') %>
+          </li>
+        </ul>
+        <div class="btns">
+          <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal"><%= _('Quiero recomendar ahora') %></a>
+        </div>
+      </div>
+
+      <% unless current_user.recommendations.empty? %>
+        <div class="your-celestines">
+          <h4 style="text-align:center"><%= _('Personas a las que haces de Celestin@') %></h4>
+          <% current_user.recommendations.each do |rec| %>
+            <%= render 'shared/user/celes-item', recommendation: rec, is_creator: true %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/user/modal_recommend-user' %>

@@ -326,15 +326,15 @@ class User < ActiveRecord::Base
   end
 
   def confirmed_recommenders
-    self.recommenders.where(confirmed: true, denied: false)
+    self.recommenders.where(confirmed: true, denied: false).where(deleted_at: nil)
   end
 
   def unconfirmed_recommenders
-    self.recommenders.where(confirmed: false, denied: false)
+    self.recommenders.where(confirmed: false, denied: false).where(deleted_at: nil)
   end
 
   def confirmed_recommendations
-    self.recommendations.where(confirmed: true, denied: false)
+    self.recommendations.where(confirmed: true, denied: false).where(deleted_at: nil)
   end
 
   def avg_characteristic(characteristic = 'romantic')

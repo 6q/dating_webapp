@@ -43,8 +43,10 @@
       <% if recommendation.user_id == current_user.id %>
         <%= link_to _('Eliminar celestin@'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
       <% else %>
-        <% if !recommendation.denied? %>
-          <%= link_to _('Eliminar recomendación'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
+        <% if recommendation.deleted_at.blank? %>
+          <%= link_to _('Desactivar recomendación'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
+        <% else %>
+          <%= link_to _('Reactivar recomendación'), recommendation_creator_toggle_path(recommendation), method: :post %>
         <% end %>
       <% end %>
       <span class="date"><%= _('Hace') %> <%= time_ago_in_words_or_date(recommendation.updated_at) %></span>
@@ -55,15 +57,20 @@
 
   <% if is_creator %>
     <div class="status">
+      <%= _('Estado: ') %>
       <% recommendation.tap do |r| %>
-        <% if !r.confirmed? && !r.denied? %>
-          <%= _('Tu recomendación está pendiente de confirmar.') %>
-        <% elsif r.denied? && r.confirmed? %>
-          <%= _('Se ha desactivado esta recomendación.') %>
-        <% elsif !r.confirmed? && r.denied? %>
-          <%= _('Tu recomendación ha sido rechazada.') %>
-        <% elsif r.confirmed? && !r.denied? %>
-          <%= _('Tu recomendación ha sido aceptada.')  %>
+        <% if r.deleted_at.present? %>
+          <%= _('Has desactivado esta recomendación.') %>
+        <% else %>
+          <% if !r.confirmed? && !r.denied? %>
+            <%= _('Tu recomendación está pendiente de confirmar.') %>
+          <% elsif r.denied? && r.confirmed? %>
+            <%= _('Tu recomendación ha sido eliminada.') %>
+          <% elsif !r.confirmed? && r.denied? %>
+            <%= _('Tu recomendación ha sido rechazada.') %>
+          <% elsif r.confirmed? && !r.denied? %>
+            <%= _('Tu recomendación ha sido aceptada.')  %>
+          <% end %>
         <% end %>
       <% end %>
     </div>

@@ -24,9 +24,10 @@ Cellove::Application.routes.draw do
   resources :notes, only: [:create, :destroy]
 
   resources :pictures, only: [:create, :destroy, :show, :update]
-  resources :recommendations, only: [:create] do
-    post 'accept',  to: 'recommendations#accept'
-    post 'deny',    to: 'recommendations#deny'
+  resources :recommendations, only: [:index, :create] do
+    post 'accept',       to: 'recommendations#accept'
+    post 'deny',         to: 'recommendations#deny'
+    post 'creator/toggle', to: 'recommendations#creator_toggle'
   end
 
   resources :users do

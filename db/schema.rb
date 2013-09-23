@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130918212801) do
+ActiveRecord::Schema.define(:version => 20130923142601) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -393,6 +393,7 @@ ActiveRecord::Schema.define(:version => 20130918212801) do
     t.datetime "updated_at",                      :null => false
     t.boolean  "confirmed",    :default => false
     t.boolean  "denied",       :default => false
+    t.datetime "deleted_at"
   end
 
   create_table "regions", :force => true do |t|
