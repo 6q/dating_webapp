@@ -646,4 +646,8 @@ class User < ActiveRecord::Base
     # assuming you have deleted_at column added already
     update_attribute(:deleted_at, Time.current)
   end
+
+  def display_name
+    self.screen_name.present? ? self.screen_name : self.name
+  end
 end
