@@ -4,18 +4,18 @@
   <hr class="thin">
   <%= _('Soy') + ' ' + User::SEEKING[@user.seeking] %>
   <hr class="thin">
-  <%= user.label :birth_date_day, _('Nací el') %>
-  <%= user.text_field :birth_date_day, placeholder: _('Día'), class: "span1" %>
-  <%= user.label :birth_date_month, "de" %>
-  <%= user.text_field :birth_date_month, placeholder: _('Mes'), class: "span1" %>
-  <%= user.label :birth_date_year, "de" %>
+  <%= user.label :birth_date, _('Nací el') %>
+  <%= user.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
+  <%= user.label :birth_date_year, _('de') %>
   <%= user.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
   <hr class="thin">
 
   <%= user.label :country, _('Vivo en') %>
-  <%= user.select :country, country_options, {}, { :class => 'span2' } %>
+  <%= localized_country_select(:user, :country, [], {}, { class: "span2" }) %>
   <%= user.label :postal_code, _(' y mi código postal es el') %>
-  <%= user.text_field :postal_code, placeholder:_( 'CP'), :class => 'input-mini' %>.
+  <%= user.text_field :postal_code, placeholder: _('CP'), :class => 'input-mini' %>
+  <%= user.label :city, _('de') %>
+  <%= user.select :city, [@user.city], { selected: @user.city }, { class: 'location span2', 'data-placeholder' => _('Localidad...')} %>
 
   <hr>
   <%= user.label :marital_status, _('Ahora mismo estoy') %>
