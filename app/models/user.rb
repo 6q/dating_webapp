@@ -650,4 +650,12 @@ class User < ActiveRecord::Base
   def display_name
     self.screen_name.present? ? self.screen_name : self.name
   end
+
+  def can_interact_with?(user)
+    if user.lf_age_from.present? && user.lf_age_to.present?
+      self.age >= user.lf_age_from.to_i && self.age <= user.lf_age_to.to_i
+    else
+      true
+    end
+  end
 end
