@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   before_filter :set_rates_seen, only: [:nice_couple]
 
   def index
-    search_and_order(nil)
+    search_and_order
     @users = @search.result.page(params[:page]).uniq
 
     @cellove_search = Search.new
@@ -147,7 +147,7 @@ class UsersController < ApplicationController
       current_user.set_all_rates_seen
     end
 
-    def search_and_order(in_filter)
+    def search_and_order(in_filter = nil)
       distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
       hidden_users = User
             .where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
@@ -176,10 +176,6 @@ class UsersController < ApplicationController
         @search = hidden_users
                     .near(current_user, distance, { :units => :km, :sort => :distance })
                     .search(params[:q])
-      elsif params[:q][:s] == "recent_interaction asc"
-        # Maybe this is not needed as it's the default option but... who knows if we are using this somewhere
-        params[:q].except!(:s)
-        @search = hidden_users.sort_interactions.search(params[:q])
       elsif params[:q][:s] == "prop_actividad asc"
         params[:q].except!(:s)
         @search = hidden_users
@@ -200,6 +196,7 @@ class UsersController < ApplicationController
           else
             ordered = hu
           end
+          # ordered.joins('LEFT OUTER JOIN')
           @search = ordered.search(params[:q])
         end
       end
