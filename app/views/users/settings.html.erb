@@ -22,6 +22,27 @@
                   <%= f1.label :anonymous_browsing %>
                 </div>
               </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Estar visible solo para los usuari@s con franja de edad indicada en: "Editar perfil" + "Que buscas"') %></strong></div>
+                <div class="checkbox">
+                  <%= f1.check_box :age_restriction %>
+                  <%= f1.label :age_restriction %>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Solo recibir mensajes de perfiles que me han gustado') %></strong></div>
+                <div class="checkbox">
+                  <%= f1.check_box :receive_messages_only_from_likes %>
+                  <%= f1.label :receive_messages_only_from_likes %>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Solo recibir chats de perfiles que me han gustado') %></strong></div>
+                <div class="checkbox">
+                  <%= f1.check_box :allow_chat_only_from_likes %>
+                  <%= f1.label :allow_chat_only_from_likes %>
+                </div>
+              </div>
             </div>
 
             <div class="col">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130923142601) do
+ActiveRecord::Schema.define(:version => 20130924153539) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -273,8 +273,8 @@ ActiveRecord::Schema.define(:version => 20130923142601) do
 
   create_table "general_settings", :force => true do |t|
     t.integer  "user_id"
-    t.boolean  "no_email_online",              :default => true
-    t.boolean  "profile_visit",                :default => true
+    t.boolean  "no_email_online",                  :default => true
+    t.boolean  "profile_visit",                    :default => true
     t.boolean  "receive_message"
     t.boolean  "like"
     t.boolean  "star_rating"
@@ -282,9 +282,9 @@ ActiveRecord::Schema.define(:version => 20130923142601) do
     t.boolean  "newsletter"
     t.boolean  "user_suggestions"
     t.boolean  "new_users_nearby"
-    t.datetime "created_at",                                      :null => false
-    t.datetime "updated_at",                                      :null => false
-    t.boolean  "show_online",                  :default => true
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
+    t.boolean  "show_online",                      :default => true
     t.boolean  "allow_chat"
     t.boolean  "show_only_nearby"
     t.boolean  "show_only_matching_profiles"
@@ -292,7 +292,10 @@ ActiveRecord::Schema.define(:version => 20130923142601) do
     t.boolean  "show_only_buena_pareja"
     t.boolean  "show_only_pm"
     t.boolean  "show_only_rated_me"
-    t.boolean  "anonymous_browsing",           :default => false
+    t.boolean  "anonymous_browsing",               :default => false
+    t.boolean  "receive_messages_only_from_likes", :default => false
+    t.boolean  "allow_chat_only_from_likes",       :default => false
+    t.boolean  "age_restriction",                  :default => true
   end
 
   create_table "invitations", :force => true do |t|
