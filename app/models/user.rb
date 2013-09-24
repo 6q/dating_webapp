@@ -635,7 +635,11 @@ class User < ActiveRecord::Base
   end
 
   def liker?(user)
-    likers.where('creator_id = :id', id: user.id).first
+    if likers.where('creator_id = :id', id: user.id).first
+      true
+    else
+      false
+    end
   end
 
   def active_for_authentication?
@@ -654,6 +658,30 @@ class User < ActiveRecord::Base
   def can_interact_with?(user)
     if user.general_settings.age_restriction && user.lf_age_from.present? && user.lf_age_to.present?
       self.age >= user.lf_age_from.to_i && self.age <= user.lf_age_to.to_i
+    else
+      true
+    end
+  end
+
+  def can_message_to?(user)
+    if user.general_settings.receive_messages_only_from_likes
+      if self.liker?(user)
+        true
+      else
+        false
+      end
+    else
+      true
+    end
+  end
+
+  def can_chat_to?(user)
+    if user.general_settings.allow_chat_only_from_likes
+      if self.liker?(user)
+        true
+      else
+        false
+      end
     else
       true
     end

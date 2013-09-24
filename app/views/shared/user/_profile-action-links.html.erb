@@ -1,8 +1,16 @@
 <article class="action-links">
 	<ul class="clearfix">
-    <% if current_user.can_interact_with?(@user) %>
+    <% if current_user.can_interact_with?(@user) && current_user.can_message_to?(@user) %>
       <li class="message"><%= link_to '<i></i><span>'.html_safe + _('(o proponer una actividad)') + '</span>'.html_safe + _('Enviar mensaje'), "#fast-reply-#{@user.id}", 'data-toggle' => 'modal' %></li>
+    <% else %>
+      <li class="message disabled"><%= link_to '<i></i><span>'.html_safe + _('(o proponer una actividad)') + '</span>'.html_safe + _('Enviar mensaje'), "#" %></li>
+    <% end %>
+    <% if current_user.can_interact_with?(@user) && current_user.can_chat_to?(@user) %>
       <li class="chat"><%= link_to '<i></i> '.html_safe + _('Chatear'), '#', onclick: "chatWith('#{@user.id}'); return false;" %></li>
+    <% else %>
+      <li class="chat disabled"><%= link_to '<i></i> '.html_safe + _('Chatear'), '#' %></li>
+    <% end %>
+    <% if current_user.can_interact_with?(@user) %>
       <% if current_user.likes?(@user) %>
         <li class="like user_dislike"><%= link_to '<i class="disabled"></i> '.html_safe + _('¡No me gusta!'), user_unlike_path(@user), :method => :post, :remote => true, :class => "ajax_dislike_trigger" %></li>
         <li class="like hidden user_like"><%= link_to '<i></i>'.html_safe + _('¡Me gusta!'), user_like_path(@user), :method => :post, :remote => true, :class => "ajax_like_trigger" %></li>
@@ -11,8 +19,6 @@
         <li class="like hidden user_dislike"><%= link_to ('<i class="disabled"></i>').html_safe + _('¡No me gusta!'), user_unlike_path(@user), :method => :post, :remote => true, :class => "ajax_dislike_trigger" %></li>
       <% end %>
     <% else %>
-      <li class="message disabled"><%= link_to '<i></i><span>'.html_safe + _('(o proponer una actividad)') + '</span>'.html_safe + _('Enviar mensaje'), "#" %></li>
-      <li class="chat disabled"><%= link_to '<i></i> '.html_safe + _('Chatear'), '#' %></li>
       <li class="like disabled"><%= link_to '<i class="disabled"></i> '.html_safe + _('¡Me gusta!'), "#" %></li>
     <% end %>
     <% block_modal_id = '#user-block-' + @user.id.to_s %>
