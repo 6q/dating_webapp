@@ -11,18 +11,9 @@ class UsersController < ApplicationController
   before_filter :set_rates_seen, only: [:nice_couple]
 
   def index
-    if params[:q].nil?
-      search_and_order(nil)
-      @users = @search.result(:distinct => true).order('created_at DESC').page(params[:page])
-    else
-      search_and_order(nil)
+    search_and_order(nil)
+    @users = @search.result.page(params[:page]).uniq
 
-      if params[:affinity]
-        @users = @users.page(params[:page])
-      else
-        @users = @search.result.page(params[:page])
-      end
-    end
     @cellove_search = Search.new
   end
 
@@ -158,7 +149,6 @@ class UsersController < ApplicationController
 
     def search_and_order(in_filter)
       distance = params[:distance] || User::DEFAULT_SEARCH_DISTANCE
-      affinity = params[:affinity].to_i
       hidden_users = User
             .where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
             .where("users.gender = ?", current_user.matching_gender)
@@ -211,7 +201,6 @@ class UsersController < ApplicationController
             ordered = hu
           end
           @search = ordered.search(params[:q])
-          @users = @search.result
         end
       end
       params[:q].except!(:id_in)
