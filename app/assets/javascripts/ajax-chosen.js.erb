@@ -17,7 +17,7 @@ chosenize = function(country) {
   $('#user_city_chzn').remove();
   $('.location').show();
   $('.location').removeClass('chzn-done');
-  
+
   $(".location").ajaxChosen({
       type: 'GET',
       url: '<%= Rails.application.class.routes.url_helpers.cities_path(format: :json) %>?country=' + country,
@@ -33,6 +33,6 @@ chosenize = function(country) {
 
       return results;
   });
-  
+
   $('.location').attr('disabled', false).trigger("liszt:updated");
 }

@@ -21,9 +21,8 @@
     <hr class="thin">
     <%= user.label :lf_house, _('Que viva') %>
     <%= user.select :lf_house, lf_house_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
-
     <%= user.label :lf_city, _('en') %>
-    <%= user.select :lf_city, [@user.lf_city], { selected: @user.lf_city }, { class: 'location span2', 'data-placeholder' => _('Localidad...')} %>
+    <%= user.text_field :lf_city, :class=> 'span2' %>
     <%= user.label :lf_country, _(',') %>
     <%= localized_country_select(:user, :lf_country, [], {}, { class: "span2" }) %>
     <hr class="thin">
