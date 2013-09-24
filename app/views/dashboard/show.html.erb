@@ -10,8 +10,8 @@
   <%= render partial: 'new_users', locals: { radius: 500 } %>
 
   <section id="last-messages">
-    <h4><%= _('Últimas conversaciones') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
-    <% current_user.mailbox.conversations(mailbox_type: 'not_trash').first(5).each do |conversation| %>
+    <h4><%= _('Últimas conversaciones recibidas') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
+    <% current_user.mailbox.inbox.first(5).each do |conversation| %>
       <%= render conversation %>
       <hr>
     <% end %>
