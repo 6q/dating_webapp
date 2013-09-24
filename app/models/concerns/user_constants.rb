@@ -91,7 +91,7 @@ module UserConstants
     'no-kids-i-want' => _('no tiene hijos, pero quiere tener'),'have-children-no-want-more' => _('tiene hijos, y no quiere tener mas '),
     'have-children-want-more' => _('si tiene hijos, y quiere tener mas '),'no-like-kids' => _('no le gustan los niños')}
   TP_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'),
-    'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@')}
+    'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@'), 'with-parents' => _('con sus padres')}
   TP_SMOKE = {'smoker' => 'fuma', 'non-smoker' => 'no fuma', 'smoker-hater' => 'es antitabaco','not-mind-smoke' => _('no le molesta el humo'),
     'smoke-leave-couple' => _('fuma pero lo dejaría por su pareja'), 'social-smoker' => _('es fumador social')}
   TP_DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'),
