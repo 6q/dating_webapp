@@ -635,11 +635,7 @@ class User < ActiveRecord::Base
   end
 
   def liker?(user)
-    if likers.where('creator_id = :id', id: user.id).first
-      true
-    else
-      false
-    end
+    likers.where('creator_id = :id', id: user.id).first
   end
 
   def active_for_authentication?
