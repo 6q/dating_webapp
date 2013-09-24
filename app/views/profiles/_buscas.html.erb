@@ -21,10 +21,11 @@
     <hr class="thin">
     <%= user.label :lf_house, _('Que viva') %>
     <%= user.select :lf_house, lf_house_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+
     <%= user.label :lf_city, _('en') %>
-    <%= user.text_field :lf_city, :class=> 'span2' %>
-    <%= user.label :lf_country, ',' %>
-    <%= user.select :lf_country, country_options, {include_blank: _('No quiero decirlo')}, :class=>'span2' %>
+    <%= user.select :lf_city, [@user.lf_city], { selected: @user.lf_city }, { class: 'location span2', 'data-placeholder' => _('Localidad...')} %>
+    <%= user.label :lf_country, _(',') %>
+    <%= localized_country_select(:user, :lf_country, [], {}, { class: "span2" }) %>
     <hr class="thin">
 		<%= user.label :lf_postal_code, _(' cerca del código postal') %>
 		<%= user.text_field :lf_postal_code, placeholder:_( 'CP'), :class => 'input-mini' %>.
@@ -48,7 +49,7 @@
 		<%= user.select :lf_complexion, complexion_options, {include_blank: _('No quiero decirlo')}, :class => 'span2' %>.
 		<hr class="thin">
 		<%= user.label :lf_hair, _('De pelo') %>
-		<%= user.select :lf_hair, hair_options, {}, :class=>"span2" %>
+		<%= user.select :lf_hair, hair_options, {include_blank: _('No quiero decirlo')}, :class=>"span2" %>
 		<%= user.label :lf_hair_style, _('y') %>
 		<%= user.select :lf_hair_style, hair_style_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>
 		<%= user.label :lf_eyes, _('. Con ojos de color') %>
