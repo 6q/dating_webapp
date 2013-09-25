@@ -27,25 +27,25 @@ module UserRetrieval
     query += "LIMIT #{limit}"
   end
 
-  def best_suited_near_me(how_many = 5, radius = User::DEFAULT_NEARBY_DISTANCE)
+  def best_suited_near_me
     result = User.find_by_sql(build_query(self.get_all_invisible_to_me))
     @last_query = result.map {|b| b.id}
     result
   end
 
-  def could_interest_me(how_many = 5, radius = User::DEFAULT_NEARBY_DISTANCE)
+  def could_interest_me
     result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query))
     @last_query += result.map {|b| b.id}
     result
   end
 
-  def best_index(radius = User::DEFAULT_NEARBY_DISTANCE)
+  def best_index
     result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query))
     @last_query += result.map {|b| b.id}
     result
   end
 
-  def new_users_near_me(radius = User::DEFAULT_NEARBY_DISTANCE)
+  def new_users_near_me
     result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query))
     @last_query += result.map {|b| b.id}
     result

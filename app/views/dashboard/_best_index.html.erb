@@ -2,9 +2,9 @@
 <section id="best-rated" class="home-users">
 <div class="clearfix list-header">
   <h4 class="pull-left"><%= _('Usuari@s con mejor Índice Cellove') %></h4>
-  <div class="pull-right"><%= _('En un radio de') %> <span class="radius"><%= radius %></span> km > <%= link_to _("Cambiar radio"), dashboard_path, class: 'radius' %> | <%= link_to _("Ver más"), users_path %></div>
+  <div class="pull-right"><%= link_to_previous_page @best_index, '< ' + _('Anterior'), class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'best_index' } %>&nbsp;<%= link_to_next_page @best_index, _('Siguiente') + ' >', class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'best_index' } %> | <%= link_to _("Ver más"), users_path() %></div>
 </div>
 <ul class="user-list clearfix">
-  <%= render current_user.best_index(radius).sample(5) %>
+  <%= render current_user.best_index.sample(5) %>
 </ul>
 </section>
