@@ -21,6 +21,7 @@ after "deploy:restart", "deploy:cleanup"
 after "deploy:restart", "whenever:update_crontab"
 after 'deploy:create_symlink', 'arrowchat:setup'
 after 'deploy:create_symlink', 'symlink:app_config'
+after 'deploy:restart', 'unicorn:duplicate'
 
 namespace :arrowchat do
   desc "Setup arrowchat folder permissions in the public"
