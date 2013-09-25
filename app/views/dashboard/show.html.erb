@@ -1,13 +1,13 @@
 <section class="user-home">
 
-  <%= render "shared/related_list" %>
+  <%= render "shared/best_suited_near_me" %>
   <%= render "quick_search" %>
 
   <hr class="thin">
 
-  <%= render partial: 'near_most_visited', locals: { radius: 500 } %>
-  <%= render partial: 'best_rated', locals: { radius: 500 } %>
-  <%= render partial: 'new_users', locals: { radius: 500 } %>
+  <%= render partial: 'could_interest_me', locals: { radius: 500 } %>
+  <%= render partial: 'best_index', locals: { radius: 500 } %>
+  <%= render partial: 'new_users_near_me', locals: { radius: 500 } %>
 
   <section id="last-messages">
     <h4><%= _('Últimas conversaciones recibidas') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
