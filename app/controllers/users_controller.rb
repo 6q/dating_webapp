@@ -12,7 +12,11 @@ class UsersController < ApplicationController
 
   def index
     search_and_order
-    @users = @search.result.page(params[:page]).uniq
+    if params[:special]
+      @users = Kaminari.paginate_array(current_user.could_interest_me(500)).page(params[:page])
+    else
+      @users = @search.result.page(params[:page]).uniq
+    end
 
     @cellove_search = Search.new
   end

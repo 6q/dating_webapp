@@ -1,7 +1,7 @@
 module UserRetrieval
   extend ActiveSupport::Concern
 
-  def build_query(not_in, order_type = :by_visits, limit = 20)
+  def build_query(not_in, limit, order_type = :by_visits)
     order = {
       :by_visits => 'visits_count DESC, likes_count DESC, messages_count DESC, cellove_index DESC ',
       :by_likes => 'likes_count DESC, visits_count DESC, messages_count DESC, cellove_index DESC ',
@@ -27,26 +27,29 @@ module UserRetrieval
     query += "LIMIT #{limit}"
   end
 
-  def best_suited_near_me
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me))
+  def best_suited_near_me(limit = 20)
+    result = User.find_by_sql(build_query(self.get_all_invisible_to_me, limit))
     @last_query = result.map {|b| b.id}
     result
   end
 
-  def could_interest_me
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query))
+  def could_interest_me(limit = 20)
+    @last_query ||= []
+    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit))
     @last_query += result.map {|b| b.id}
     result
   end
 
-  def best_index
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query))
+  def best_index(limit = 20)
+    @last_query ||= []
+    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit))
     @last_query += result.map {|b| b.id}
     result
   end
 
-  def new_users_near_me
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query))
+  def new_users_near_me(limit = 20)
+    @last_query ||= []
+    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit))
     @last_query += result.map {|b| b.id}
     result
   end
