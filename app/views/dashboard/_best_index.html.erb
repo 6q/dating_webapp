@@ -5,6 +5,6 @@
   <div class="pull-right"><%= link_to_previous_page @best_index, '< ' + _('Anterior'), class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'best_index' } %>&nbsp;<%= link_to_next_page @best_index, _('Siguiente') + ' >', class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'best_index' } %> | <%= link_to _("Ver más"), users_path() %></div>
 </div>
 <ul class="user-list clearfix">
-  <%= render current_user.best_index.sample(5) %>
+  <%= render @best_index %>
 </ul>
 </section>
