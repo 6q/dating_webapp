@@ -40,7 +40,7 @@ Cellove::Application.routes.draw do
   end
 
   get '/dashboard', to: "dashboard#show", as: :dashboard
-  post '/dashboard', to: "dashboard#update_radius", as: :dashboard
+  get '/dashboard/paginate', to: "dashboard#paginate_users", as: :dashboard_paginate
 
   scope "/user" do
     get 'settings',                 to: 'users#settings'

@@ -2,9 +2,9 @@
 <section id="near-most-visited" class="home-users">
 <div class="clearfix list-header">
   <h4 class="pull-left"><%= _('Usuari@s que te pueden gustar') %></h4>
-  <div class="pull-right"><%= _('En un radio de') %> <span class="radius"><%= radius %></span> km > <%= link_to _("Cambiar radio"), dashboard_path, class: 'radius' %> | <%= link_to _("Ver más"), users_path %></div>
+  <div class="pull-right"><%= link_to_previous_page @could_interest_me, '< ' + _('Anterior'), class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %>&nbsp;<%= link_to_next_page @could_interest_me, _('Siguiente') + ' >', class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %> | <%= link_to _("Ver más"), users_path() %></div>
 </div>
 <ul class="user-list clearfix">
-  <%= render current_user.could_interest_me(5, radius).sample(5) %>
+  <%= render @could_interest_me %>
 </ul>
 </section>

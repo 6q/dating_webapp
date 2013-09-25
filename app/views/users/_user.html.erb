@@ -20,7 +20,7 @@
           end
         %>
       <h1>
-        <%= link_to truncate(user.display_name, length: 17), user %>
+        <%= link_to truncate(user.display_name, length: 16), user %>
         <br>
         <span><%= truncate(user.city, length: 20) %></span>
         <br><%= "#{user.age} #{_('Años')}" %>
