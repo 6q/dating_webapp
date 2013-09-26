@@ -5,6 +5,8 @@ module UserRetrieval
     order = {
       :by_visits => 'visits_count DESC, likes_count DESC, messages_count DESC, cellove_index DESC ',
       :by_likes => 'likes_count DESC, visits_count DESC, messages_count DESC, cellove_index DESC ',
+      :by_index => 'cellove_index DESC, likes_count DESC, visits_count DESC, messages_count DESC ',
+      :by_recent => 'users.created_at DESC, likes_count DESC, visits_count DESC, messages_count DESC, cellove_index DESC ',
     }
     query = <<-EOF
       SELECT users.*, COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(r.cnt, 0) as messages_count
@@ -27,30 +29,26 @@ module UserRetrieval
     query += "LIMIT #{limit}"
   end
 
-  def best_suited_near_me(limit = 20)
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me, limit))
-    @last_query = result.map {|b| b.id}
+  def retrieve_users(limit = 20, order_type = :by_visits)
+    @last_query ||= []
+    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit, order_type))
+    @last_query += result.map {|b| b.id}
     result
+  end
+
+  def best_suited_near_me
+    retrieve_users
   end
 
   def could_interest_me(limit = 20)
-    @last_query ||= []
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit))
-    @last_query += result.map {|b| b.id}
-    result
+    retrieve_users(limit, :by_likes)
   end
 
   def best_index(limit = 20)
-    @last_query ||= []
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit))
-    @last_query += result.map {|b| b.id}
-    result
+    retrieve_users(limit, :by_index)
   end
 
   def new_users_near_me(limit = 20)
-    @last_query ||= []
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit))
-    @last_query += result.map {|b| b.id}
-    result
+    retrieve_users(limit, :by_recent)
   end
 end
