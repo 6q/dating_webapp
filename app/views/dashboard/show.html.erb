@@ -11,10 +11,7 @@
 
   <section id="last-messages">
     <h4><%= _('Últimas conversaciones recibidas') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
-    <% current_user.mailbox.inbox.first(5).each do |conversation| %>
-      <%= render conversation %>
-      <hr>
-    <% end %>
+    <%= render current_user.mailbox.inbox.first(5) %>
     <%= _("No hay ninguna conversación.") if current_user.mailbox.conversations.count == 0 %>
   </section>
 </section>
