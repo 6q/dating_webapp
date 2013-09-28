@@ -9,7 +9,7 @@ module UserRetrieval
       :by_recent => 'users.created_at DESC, likes_count DESC, visits_count DESC, messages_count DESC, cellove_index DESC ',
     }
     query = <<-EOF
-      SELECT users.*, COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(r.cnt, 0) as messages_count
+      SELECT users.*, COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(r.cnt, 0) as messages_count, p.main
       FROM users
       LEFT JOIN
         (SELECT user_id, COUNT(*) AS cnt FROM user_visits WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) v
@@ -22,10 +22,11 @@ module UserRetrieval
       ON r.receiver_id = users.id
     EOF
 
+    query += "LEFT JOIN pictures p ON p.attachable_id = users.id "
     query += "WHERE users.id NOT IN (#{not_in.join(',')}) "
     query += "AND gender = '#{self.matching_gender}' "
     query += "GROUP BY users.id "
-    query += "ORDER BY #{order[order_type]} "
+    query += "ORDER BY p.main DESC, #{order[order_type]} "
     query += "LIMIT #{limit}"
   end
 
