@@ -23,18 +23,18 @@
 							<% end %>
 						</p>
 						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
-							<% if @user.child %>
+							<% if @user.child.present? %>
                 <%= "#{_('y')} #{User::TP_CHILD[@user.child]}." %>
 							<% end %>
-							<% if @user.lf_gender %>
+							<% if @user.lf_gender.present? %>
                 <%= "#{_('Busca')} #{User::GENDER[@user.lf_gender]} "%> 
-								<% if @user.lf_age_from and @user.lf_age_to %>
+								<% if @user.lf_age_from.present? and @user.lf_age_to.present? %>
                   <%= "#{_('de entre')} #{@user.lf_age_from} #{_('y')} #{@user.lf_age_to} #{_('años')}" %>
 								<% end %>
-								<% if @user.lf_relationship %>
+								<% if @user.lf_relationship.present? %>
                   <%= "#{_('para')} #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>
 								<% end %>
-								<% if @user.city %>
+								<% if @user.city.present? %>
                   <%= "#{_('y que esté cerca de')} #{@user.city}, #{@user.country}" %>
 								<% end %>
 							<% end %>
