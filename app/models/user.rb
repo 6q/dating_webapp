@@ -620,13 +620,13 @@ class User < ActiveRecord::Base
   before_update :update_profile_progress, :if => Proc.new {|u| u.progress_status < 100}
 
   def set_gender
-    gen_cor = {
+    gender_match = {
       "man" => :male,
       "woman" => :female
     }
 
-    self.gender = gen_cor[seeking.split.first] if seeking.present?
-    self.lf_gender = gen_cor[seeking.split.last] if seeking.present?
+    self.gender = gender_match[seeking.split.first] if seeking.present?
+    self.lf_gender = gender_match[seeking.split.last] if seeking.present?
   end
   before_validation :set_gender
 
