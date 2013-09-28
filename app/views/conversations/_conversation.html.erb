@@ -2,7 +2,7 @@
   <div class="clearfix">
     <%= user_link_with_picture(sender_or_recipient(conversation)) %>
     <div class="info">
-      <p class="msg-data"><%= time_ago_in_words_or_date(conversation.updated_at) %> - <%= link_to conversation.last_sender.display_name, conversation.last_sender %> <%= conversation.last_sender.age %> <%= _('Años') %>, <%= conversation.last_sender.city %> - (<%= conversation.messages.count %>)</p>
+      <p class="msg-data"><%= time_ago_in_words_or_date(conversation.updated_at) %> - <% if conversation.last_sender == current_user %><%= _("Tu") %><% else %><%= link_to conversation.last_sender.display_name, conversation.last_sender %> <%= conversation.last_sender.age %> <%= _('Años') %>, <%= conversation.last_sender.city %><% end %> - (<%= conversation.messages.count %>)</p>
 
       <p class="msg"><%= link_to(truncate(conversation.last_message.body, :length => 55), conversation_path(conversation.id, :box => @box, :page => params[:page])) %></p>
 
