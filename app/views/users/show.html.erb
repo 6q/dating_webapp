@@ -88,10 +88,10 @@
 		  		</div>
 
 		  		<div class="tab-pane" id="dicen">
-		  			<% if current_user.confirmed_recommenders.empty? %>
+		  			<% if @user.confirmed_recommenders.empty? %>
               <%= _('%{name} aún no tiene ningún celestino.') % {name: @user.name} %><%= link_to _('Quieres ser el primero?'), be_matchmaker_path %>
 		  			<% else %>
-		  				<% current_user.confirmed_recommenders.each do |rec| %>
+		  				<% @user.confirmed_recommenders.each do |rec| %>
 								<%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>
 							<% end %>
 		  			<% end %>
