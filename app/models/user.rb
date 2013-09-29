@@ -163,6 +163,8 @@ class User < ActiveRecord::Base
   has_many :likers, class_name: 'Like', foreign_key: 'user_id'
   # user.likes will return Likes objects of people who 'user' has liked
   has_many :likes, class_name: 'Like', foreign_key: 'creator_id'
+  has_many :user_likes, through: :likes, source: :user
+  has_many :user_likers, through: :likers, source: :creator
 
   has_many :user_visits
   has_many :visitors, through: :user_visits, source: :visitor
@@ -369,20 +371,60 @@ class User < ActiveRecord::Base
     self.where(id: nc.map { |u| u.rater_id })
   end
 
-  def self.people_who_like_me(user)
-    #self.likers.map { |l| l.creator }
-    # Need an AR::Relation for the Search part of Ransack :\
-    user.likers.where(nil)
+  def self.people_who_like_me(user, order)
+    order ||= 'likes.updated_at desc'
+
+    if order == 'distance asc'
+      nearbys = user.nearbys(1000)
+      order = nil
+    end
+
+    likes = user.user_likers
+      .order(order)
+      .where("likes.id not in (#{user.get_all_invisible_to_me.join(',')})")
+      #.where(gender: user.matching_gender)
+
+    # binding.pry
+    likes = nearbys & likes if order == nil
+
+    likes
   end
 
-  def self.people_i_like(user)
-    #self.likes.map { |l| l.user }
-    # Need an AR::Relation for the Search part of Ransack :\
-    user.likes.where(nil)
+  def self.people_i_like(user, order)
+    order ||= 'created_at desc'
+
+    if order == 'distance asc'
+      nearbys = user.nearbys(1000)
+      order = nil
+    end
+
+    likes = user.user_likes
+      .order(order)
+      .where("likes.id not in (#{user.get_all_invisible_to_me.join(',')})")
+      .where(gender: user.matching_gender)
+
+    # binding.pry
+    likes = nearbys & likes if order == nil
+
+    likes
   end
 
-  def self.all_visitors(user)
-    user.visitors.where(nil)
+  def self.all_visitors(user, order = 'visited_at desc')
+    order ||= 'visited_at desc'
+
+    if order == 'distance asc'
+      nearbys = user.nearbys(1000)
+      order = nil
+    end
+
+    hits = user.visitors
+      .order(order)
+      .where("users.id not in (#{user.get_all_invisible_to_me.join(',')})")
+      .where(gender: user.matching_gender)
+
+    hits = nearbys & hits if order == nil
+
+    hits
   end
 
   # Me gusta

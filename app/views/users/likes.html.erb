@@ -1,7 +1,16 @@
 <section class="list">
   <header>
     <h1 class="pull-left"><%= _('Les he gustado') %></h1>
-    <div class="sort-gustado"><%= render 'shared/user/sorting' %></div>
+    <div class="sort-gustado"> 
+      <div class="dropdown sort">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= _('Ordenar por...') %></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+          <li><%= link_to _("Online"), user_likes_path(order: 'updated_at desc') %></li>
+          <li><%= link_to _("Mejor Índice Cellove"), user_likes_path(order: 'cellove_index desc') %></li>
+          <li><%= link_to _('Más cercanos'), user_likes_path(order: 'distance asc') %></li>
+        </ul>
+      </div>
+    </div>
     <div class="clearfix"></div>
   </header>
   

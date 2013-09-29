@@ -79,21 +79,15 @@ class UsersController < ApplicationController
   end
 
   def likes
-    likes = User.people_who_like_me(current_user).pluck(:creator_id)
-    search_and_order(likes)
-    @users = @search.result.page(params[:page])
+    @users = Kaminari::paginate_array(User.people_who_like_me(current_user, params[:order])).page(params[:page])
   end
 
   def likes_of_mine
-    likes = User.people_i_like(current_user).pluck(:user_id)
-    search_and_order(likes)
-    @users = @search.result.page(params[:page])
+    @users = Kaminari::paginate_array(User.people_i_like(current_user, params[:order])).page(params[:page])
   end
 
   def hits
-    visits = User.all_visitors(current_user).pluck('users.id')
-    search_and_order(visits)
-    @users = @search.result.page(params[:page])
+    @users = Kaminari::paginate_array(User.all_visitors(current_user, params[:order])).page(params[:page])
   end
 
   def cellove_index
@@ -197,11 +191,12 @@ class UsersController < ApplicationController
           when 'likes'
             ordered = hu.joins(:likes).order('likes.created_at DESC').uniq
           when 'hits'
-            ordered = hu.joins(:user_visits).order('user_visits.created_at DESC').uniq
+            ordered = hu #.joins(:user_visits).order('user_visits.visited_at DESC').uniq
+            @search = ordered.search(params[:q])
+            @search.sorts = "user_visits_visited_at desc"
           else
             ordered = hu
           end
-          # ordered.joins('LEFT OUTER JOIN')
           @search = ordered.search(params[:q])
         end
       end
