@@ -382,7 +382,7 @@ class User < ActiveRecord::Base
     likes = user.user_likers
       .order(order)
       .where("likes.id not in (#{user.get_all_invisible_to_me.join(',')})")
-      #.where(gender: user.matching_gender)
+      .where(gender: user.matching_gender)
 
     # binding.pry
     likes = nearbys & likes if order == nil
