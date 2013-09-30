@@ -40,7 +40,7 @@ module UserRetrieval
     result_ids = result.map {|b| b.id}
     @last_query += result_ids
 
-    result = self.nearbys(200).where(id: result_ids)
+    result = self.nearbys(1000).where(id: result_ids)
     result
   end
 
