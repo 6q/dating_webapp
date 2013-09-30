@@ -175,21 +175,12 @@ class UsersController < ApplicationController
         end
         center = []
 
-        if params[:q][:city_eq].present?
-          center << params[:q][:city_eq]
-          params[:city] = params[:q][:city_eq]
-          params[:q].except!(:city_eq)
-        end
+        center << params[:city] if params[:city].present?
+        center << params[:postal_code] if params[:q][:postal_code].present?
 
-        if params[:q][:postal_code_cont].present?
-          center << params[:q][:postal_code_cont] 
-          params[:postal_code] = params[:q][:postal_code_cont]
-          params[:q].except!(:postal_code_cont)
-        end
-
-        @search = ordered.near(center.empty? ? current_user : center.join(','), distance, { :units => :km, :sort => :distance }).search(params[:q])
+        @search = ordered.near(center.empty? ? current_user : center.join(','), distance.to_i, { :units => :km, :sort => :distance }).search(params[:q])
         if @search.sorts.empty?
-          @search.sorts = 'pictures_main desc'
+          @search.sorts = ['pictures_main desc', 'distance asc']
         end
       end
 
