@@ -32,7 +32,7 @@
               <div class="control-group slider">
                 <label class="control-label"><%= _('Distancia') %></label>
                 <div class="controls">
-                  <%= text_field_tag :distance, (params[:distance] || '250'), type: 'slider' %>
+                  <%= text_field_tag :distance, (params[:distance] || User::DEFAULT_SEARCH_DISTANCE), type: 'slider' %>
                 </div>
               </div>
             </div>

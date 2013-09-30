@@ -114,8 +114,8 @@ module UserConstants
   TP_CINEMA = {'like-cinema' => _('Me gusta ir al cine'), 'not-like-cinema' => _('no me gusta ir al cine')}
 
   PICTURE_LIMIT = 12
-  DEFAULT_SEARCH_DISTANCE = 500
-  DEFAULT_NEARBY_DISTANCE = 500
+  DEFAULT_SEARCH_DISTANCE = 250
+  DEFAULT_NEARBY_DISTANCE = 250
 
   # Points for the Cellove index
   CELLOVE_USER_VISIT = 1
