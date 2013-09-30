@@ -188,12 +188,6 @@ class UsersController < ApplicationController
           case params[:action]
           when 'nice_couple'
             ordered = hu.joins(:rates).order('rates.created_at DESC').uniq
-          when 'likes'
-            ordered = hu.joins(:likes).order('likes.created_at DESC').uniq
-          when 'hits'
-            ordered = hu #.joins(:user_visits).order('user_visits.visited_at DESC').uniq
-            @search = ordered.search(params[:q])
-            @search.sorts = "user_visits_visited_at desc"
           else
             ordered = hu
           end

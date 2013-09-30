@@ -25,6 +25,10 @@ module UserRetrieval
     query += "LEFT JOIN pictures p ON p.attachable_id = users.id "
     query += "WHERE users.id NOT IN (#{not_in.join(',')}) "
     query += "AND gender = '#{self.matching_gender}' "
+    if self.lf_age_from.present? && self.lf_age_to.present?
+      query += "AND birth_date <= '#{self.lf_age_from.to_i.years.ago.beginning_of_year}' "
+      query += "AND birth_date >= '#{self.lf_age_to.to_i.years.ago.end_of_year}' "
+    end
     query += "GROUP BY users.id "
     query += "ORDER BY p.main DESC, #{order[order_type]} "
     query += "LIMIT #{limit}"
@@ -33,7 +37,10 @@ module UserRetrieval
   def retrieve_users(limit = 20, order_type = :by_visits)
     @last_query ||= []
     result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit, order_type))
-    @last_query += result.map {|b| b.id}
+    result_ids = result.map {|b| b.id}
+    @last_query += result_ids
+
+    result = self.nearbys(100000).where(id: result_ids)
     result
   end
 
