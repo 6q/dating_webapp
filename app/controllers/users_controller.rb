@@ -161,45 +161,44 @@ class UsersController < ApplicationController
           params[:q].except!(:years_lteq)
           params[:q].except!(:years_gteq)
         end
-
-        #if city = params[:q].delete(:city_eq)
-        #  hidden_users = hidden_users.near("#{city}, Spain", distance, { :units => :km })
-        #end
       else
         params[:q] = {}
         params[:q][:id_in] = in_filter
       end
 
-      if params[:q][:s] == "distance asc"
-        params[:q].except!(:s)
-        @search = hidden_users
-                    .near(current_user, distance, { :units => :km, :sort => :distance })
-                    .search(params[:q])
-      elsif params[:q][:s] == "prop_actividad asc"
-        params[:q].except!(:s)
-        @search = hidden_users
-                      .select("users.*, count(notifications.id) AS activity_count")
-                      .joins(:messages => { :conversation => :activity })
-                      .group("users.id, notifications.id")
-                      .order("activity_count DESC")
-                      .search(params[:q])
-      else
-        hidden_users.tap do |hu|
-          case params[:action]
-          when 'nice_couple'
-            ordered = hu.joins(:rates).order('rates.created_at DESC').uniq
-          else
-            ordered = hu
-          end
-          @search = ordered.search(params[:q])
+      hidden_users.tap do |hu|
+        case params[:action]
+        when 'nice_couple'
+          ordered = hu.joins(:rates).order('rates.created_at DESC').uniq
+        else
+          ordered = hu
+        end
+        center = []
+
+        if params[:q][:city_eq].present?
+          center << params[:q][:city_eq]
+          params[:city] = params[:q][:city_eq]
+          params[:q].except!(:city_eq)
+        end
+
+        if params[:q][:postal_code_cont].present?
+          center << params[:q][:postal_code_cont] 
+          params[:postal_code] = params[:q][:postal_code_cont]
+          params[:q].except!(:postal_code_cont)
+        end
+
+        @search = ordered.near(center.empty? ? current_user : center.join(','), distance, { :units => :km, :sort => :distance }).search(params[:q])
+        if @search.sorts.empty?
+          @search.sorts = 'pictures_main desc'
         end
       end
+
       params[:q].except!(:id_in)
       if params[:q][:years_start_gteq]
         params[:q][:years_lteq] = params[:q][:years_start_gteq]
         params[:q][:years_gteq] = params[:q][:years_start_gteq]
-        params[:q].except(:years_start_gteq)
-        params[:q].except(:years_end_lteq)
+        params[:q].except!(:years_start_gteq)
+        params[:q].except!(:years_end_lteq)
       end
     end
 end
