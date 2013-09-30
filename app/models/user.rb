@@ -375,7 +375,7 @@ class User < ActiveRecord::Base
     order ||= 'likes.updated_at desc'
 
     if order == 'distance asc'
-      nearbys = user.nearbys(1000)
+      by_distance = true
       order = nil
     end
 
@@ -384,8 +384,7 @@ class User < ActiveRecord::Base
       .where("likes.id not in (#{user.get_all_invisible_to_me.join(',')})")
       .where(gender: user.matching_gender)
 
-    # binding.pry
-    likes = nearbys & likes if order == nil
+    likes = user.nearbys(100000).where(id: likes.pluck(:id)) if by_distance
 
     likes
   end
@@ -394,7 +393,7 @@ class User < ActiveRecord::Base
     order ||= 'created_at desc'
 
     if order == 'distance asc'
-      nearbys = user.nearbys(1000)
+      by_distance = true
       order = nil
     end
 
@@ -403,8 +402,7 @@ class User < ActiveRecord::Base
       .where("likes.id not in (#{user.get_all_invisible_to_me.join(',')})")
       .where(gender: user.matching_gender)
 
-    # binding.pry
-    likes = nearbys & likes if order == nil
+    likes = user.nearbys(100000).where(id: likes.pluck(:id)) if by_distance
 
     likes
   end
@@ -413,7 +411,7 @@ class User < ActiveRecord::Base
     order ||= 'visited_at desc'
 
     if order == 'distance asc'
-      nearbys = user.nearbys(1000)
+      by_distance = true
       order = nil
     end
 
@@ -422,7 +420,7 @@ class User < ActiveRecord::Base
       .where("users.id not in (#{user.get_all_invisible_to_me.join(',')})")
       .where(gender: user.matching_gender)
 
-    hits = nearbys & hits if order == nil
+    hits = user.nearbys(100000).where(id: hits.pluck(:id)) if by_distance
 
     hits
   end
