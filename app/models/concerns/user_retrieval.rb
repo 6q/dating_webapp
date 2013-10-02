@@ -22,7 +22,7 @@ module UserRetrieval
       ON r.receiver_id = users.id
     EOF
 
-    #query += "LEFT JOIN pictures p ON p.attachable_id = users.id "
+    query += "LEFT JOIN pictures p ON p.attachable_id = users.id "
     query += "WHERE users.id NOT IN (#{not_in.join(',')}) "
     query += "AND gender = '#{self.matching_gender}' AND lf_gender = '#{self.gender}'"
     if self.lf_age_from.present? && self.lf_age_to.present?
@@ -44,7 +44,7 @@ module UserRetrieval
             .where("users.lf_gender = ?", self.gender)
             .joins('LEFT JOIN pictures p ON p.attachable_id = users.id')
             .reorder('p.main IS NULL, distance ASC')
-            .limit(limit)
+            .limit(limit).uniq
 
     if self.lf_age_from.present? && self.lf_age_to.present?
       nearbys = nearbys.where('birth_date <= ?', self.lf_age_from.to_i.years.ago.beginning_of_year)
