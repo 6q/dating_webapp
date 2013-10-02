@@ -20,7 +20,7 @@
           </div>
 
             <div class="overflow-show control-group location-search">
-                <%= f.label :city_eq, _('Localidad'), class: 'control-label location-label' %>
+                <%= f.label :city, _('Localidad'), class: 'control-label location-label' %>
                 <%= select_tag :city, options_for_select([(params[:city] || current_user.city)], params[:city] || current_user.city), { include_blank: _('Localidad...'), class: 'city', 'data-placeholder' => _('Localidad...') } %>
                 <%= f.label :postal_code, _('Código postal'), class: 'control-label zip' %>
                 <%= text_field_tag :postal_code, (params[:postal_code] || current_user.postal_code), placeholder: _('CP'), class: 'span1' %>
@@ -75,7 +75,7 @@
 
         <div>
           <label class="checkbox">
-            <%= f.check_box :pictures_main_eq, {}, 1, '' %><%= _('Con foto') %>
+            <%= f.check_box :pictures_main_not_null, {}, 1, '' %><%= _('Con foto') %>
           </label>
           <label class="checkbox">
             <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %><%= _('Online') %>

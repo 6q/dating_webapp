@@ -16,8 +16,8 @@
             <div class="overflow-show control-group">
               <label><%= _('Población y código postal') %></label>
               <div class="controls">
-                <%= f.select :city_eq, [current_user.city], { include_blank: _('Localidad...'), selected: @search.city_eq || current_user.city }, { class: 'city', 'data-placeholder' => _('Localidad...') } %>
-                <%= f.text_field :postal_code_cont, placeholder: _('CP'), class: 'span1', value: current_user.postal_code %>
+                <%= select_tag :city, options_for_select([current_user.city], current_user.city), { include_blank: _('Localidad...'), class: 'city', 'data-placeholder' => _('Localidad...') } %>
+                <%= text_field_tag :postal_code, current_user.postal_code, placeholder: _('CP'), class: 'span1' %>
               </div>
             </div>
             <div class="control-group sliders">
@@ -36,7 +36,7 @@
 
           <fieldset class="form-options">
             <label class="checkbox">
-              <%= f.check_box :pictures_main_eq, {}, 1, '' %><%= _('Con foto') %>
+              <%= f.check_box :pictures_main_not_null, {}, 1, '' %><%= _('Con foto') %>
             </label>
             <label class="checkbox">
               <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %><%= _('Online') %>
