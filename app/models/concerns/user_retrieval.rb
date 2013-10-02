@@ -1,7 +1,7 @@
 module UserRetrieval
   extend ActiveSupport::Concern
 
-  def build_query(not_in, limit, order_type = :by_visits)
+  def build_query(not_in, order_type = :by_visits)
     order = {
       :by_visits => 'visits_count DESC, likes_count DESC, messages_count DESC, cellove_index DESC ',
       :by_likes => 'likes_count DESC, visits_count DESC, messages_count DESC, cellove_index DESC ',
@@ -9,7 +9,7 @@ module UserRetrieval
       :by_recent => 'users.created_at DESC, likes_count DESC, visits_count DESC, messages_count DESC, cellove_index DESC ',
     }
     query = <<-EOF
-      SELECT users.*, COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(r.cnt, 0) as messages_count, p.main
+      SELECT users.*, COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(r.cnt, 0) as messages_count
       FROM users
       LEFT JOIN
         (SELECT user_id, COUNT(*) AS cnt FROM user_visits WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) v
@@ -22,25 +22,38 @@ module UserRetrieval
       ON r.receiver_id = users.id
     EOF
 
-    query += "LEFT JOIN pictures p ON p.attachable_id = users.id "
+    #query += "LEFT JOIN pictures p ON p.attachable_id = users.id "
     query += "WHERE users.id NOT IN (#{not_in.join(',')}) "
-    query += "AND gender = '#{self.matching_gender}' "
+    query += "AND gender = '#{self.matching_gender}' AND lf_gender = '#{self.gender}'"
     if self.lf_age_from.present? && self.lf_age_to.present?
       query += "AND birth_date <= '#{self.lf_age_from.to_i.years.ago.beginning_of_year}' "
       query += "AND birth_date >= '#{self.lf_age_to.to_i.years.ago.end_of_year}' "
     end
     query += "GROUP BY users.id "
-    query += "ORDER BY p.main DESC, #{order[order_type]} "
-    query += "LIMIT #{limit}"
+    query += "ORDER BY #{order[order_type]} "
+    # query += "LIMIT #{limit}"
   end
 
   def retrieve_users(limit = 20, order_type = :by_visits)
     @last_query ||= []
-    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, limit, order_type))
-    result_ids = result.map {|b| b.id}
-    @last_query += result_ids
+    result = User.find_by_sql(build_query(self.get_all_invisible_to_me + @last_query, order_type))
 
-    result = self.nearbys(1000).where(id: result_ids)
+    nearbys = self.nearbys(1000)
+            .where("users.id NOT IN (?)", self.get_all_invisible_to_me + @last_query)
+            .where("users.gender = ?", self.matching_gender)
+            .where("users.lf_gender = ?", self.gender)
+            .joins('LEFT JOIN pictures p ON p.attachable_id = users.id')
+            .reorder('p.main IS NULL, distance ASC')
+            .limit(limit)
+
+    if self.lf_age_from.present? && self.lf_age_to.present?
+      nearbys = nearbys.where('birth_date <= ?', self.lf_age_from.to_i.years.ago.beginning_of_year)
+      nearbys = nearbys.where('birth_date >= ?', self.lf_age_to.to_i.years.ago.end_of_year)
+    end
+
+    result = nearbys & result
+    result_ids = result.map(&:id)
+    @last_query += result_ids
     result
   end
 

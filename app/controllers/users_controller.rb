@@ -151,6 +151,7 @@ class UsersController < ApplicationController
       hidden_users = User
             .where("users.id NOT IN (?)", current_user.get_all_invisible_to_me)
             .where("users.gender = ?", current_user.matching_gender)
+            .where("users.lf_gender = ?", current_user.gender)
 
       in_filter = [0] if !in_filter.nil? && in_filter.empty?
       if params[:q]
