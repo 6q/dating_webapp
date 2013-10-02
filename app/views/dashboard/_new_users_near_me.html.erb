@@ -1,5 +1,5 @@
 <% self.formats = [:html] %>
-<section id="new-users" class="home-users">
+<section id="new-users-near-me" class="home-users">
 <div class="clearfix list-header">
   <h4 class="pull-left"><%= _('Usuari@s nuevos en tu zona') %></h4>
   <div class="pull-right"><%= link_to_previous_page @new_users_near_me, '< ' + _('Anterior'), class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'new_users_near_me' } %>&nbsp;<%= link_to_next_page @new_users_near_me, _('Siguiente') + ' >', class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'new_users_near_me' } %> | <%= link_to _("Ver más"), users_path(special: :by_recent) %></div>

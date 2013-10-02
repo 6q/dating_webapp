@@ -11,7 +11,7 @@ class DashboardController < ApplicationController
       template = render_to_string(partial: params[:partial], formats: [:html])
 
       respond_to do |format|
-        format.json { render json: { template: template } }
+        format.json { render json: { id: params[:partial].dasherize, template: template } }
       end
     end
   end
