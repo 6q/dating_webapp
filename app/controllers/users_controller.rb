@@ -12,7 +12,14 @@ class UsersController < ApplicationController
 
   def index
     search_and_order
-    @best_suited_near_me = current_user.best_suited_near_me
+
+    if session[:best_suited_near_me].present?
+      @best_suited_near_me = User.find(session[:best_suited_near_me])
+    else
+      @best_suited_near_me = current_user.best_suited_near_me
+      session[:best_suited_near_me] = @best_suited_near_me.map(&:id)
+    end
+
     if special = params[:special]
       @users = Kaminari.paginate_array(current_user.retrieve_users(500, special.to_sym)).page(params[:page])
     else
