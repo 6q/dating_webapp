@@ -18,9 +18,9 @@ class DashboardController < ApplicationController
 
   def set_vars
     @best_suited_near_me = current_user.best_suited_near_me
-    @could_interest_me = Kaminari.paginate_array(current_user.could_interest_me).page(params[:page]).per(5)
-    @best_index = Kaminari.paginate_array(current_user.best_index).page(params[:page]).per(5)
-    @new_users_near_me = Kaminari.paginate_array(current_user.new_users_near_me).page(params[:page]).per(5)
+    @could_interest_me = Kaminari.paginate_array(current_user.could_interest_me.sample(20)).page(params[:page]).per(5)
+    @best_index = Kaminari.paginate_array(current_user.best_index.sample(20)).page(params[:page]).per(5)
+    @new_users_near_me = Kaminari.paginate_array(current_user.new_users_near_me.sample(20)).page(params[:page]).per(5)
   end
   private :set_vars
 end
