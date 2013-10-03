@@ -9,8 +9,8 @@
               <label><%= _('Edad') %> <span></span></label>
               <div class="controls">
                 <input id="years" type="slider" name="" value="<%= current_user.lf_age_from.blank? ? '18' : current_user.lf_age_from %>;<%= current_user.lf_age_to.blank? ? '80' : current_user.lf_age_to %>"/>
-                <%= f.hidden_field :years_lteq  %>
-                <%= f.hidden_field :years_gteq  %>
+                <%= f.hidden_field :years_start_lteq  %>
+                <%= f.hidden_field :years_end_gteq  %>
               </div>
             </div>
             <div class="overflow-show control-group">
