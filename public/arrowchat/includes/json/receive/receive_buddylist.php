@@ -74,7 +74,8 @@
 				
 				$link = get_link($chat['link'], $chat['userid']);
 				$avatar = get_avatar($chat['avatar'], $chat['userid']);
-				
+        echo 'r';
+
 				$block_chats_unserialized = unserialize($block_chats);
 				
 				if (!is_array($block_chats_unserialized))
