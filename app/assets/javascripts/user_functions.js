@@ -82,7 +82,7 @@ $(document).ready(function() {
     });
 
   $("#distance").slider({
-    from: 0,
+    from: 10,
     to: 500,
     step: 10,
     round: 1,
