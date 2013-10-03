@@ -37,12 +37,10 @@ class Search < ActiveRecord::Base
       updated_at_gteq = 2.minutes.ago
     end
     Rails.application.routes.url_helpers.users_path(:q => {
-      :years_lteq => self.years_lteq,
-      :years_gteq => self.years_gteq,
-      :city_eq => self.city_eq,
-      :postal_code_cont => self.postal_code_cont,
-      :description_cont => self.description_cont,
-      :pictures_main_eq => self.pictures_main_eq,
+      :years_start_lteq => self.years_lteq,
+      :years_end_gteq => self.years_gteq,
+      :name_or_surname_or_screen_name_or_description_cont => self.description_cont,
+      :pictures_main_not_null => self.pictures_main_eq,
       :s => self.sort,
       :updated_at_gteq => updated_at_gteq,
       :smoker_in => self.smoker_in,
@@ -51,6 +49,10 @@ class Search < ActiveRecord::Base
       :height_gteq => self.height_gteq,
       :afinity_eq => self.afinity_eq,
       :complexion_eq => self.complexion_eq
-    }, :distance => self.distance)
+   },
+    :distance => self.distance,
+    :city => self.city_eq,
+    :postal_code => self.postal_code_cont
+  )
   end
 end

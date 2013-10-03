@@ -10,7 +10,7 @@ class SearchesController < ApplicationController
     else
       flash[:error] = _('Oops!')
     end
-    redirect_to search_path
+    redirect_to search.search_path
   end
 
   def destroy
