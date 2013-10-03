@@ -47,9 +47,7 @@
             </div>
           </div>
 
-          <a href="#adv-search" class="small" data-toggle="collapse"><%= _('Búsqueda avanzada') %></a>
-
-          <div id="adv-search" class="clearfix collapse">
+          <div id="adv-search" class="clearfix collapse<%= 'in' if @search.complexion_eq.present? || @search.height_gteq.present? %>">
             <div class="searchcol1">
               <div class="control-group slider">
                 <label class="control-label"><%= _('Altura') %></label>
@@ -69,6 +67,7 @@
           </div>
 
           <div class="right">
+            <a href="#adv-search" class="small" data-toggle="collapse"><%= _('Búsqueda avanzada') %></a>
             <%= f.submit _('Buscar'), class: 'btn btn-info' %>
           </div>
         </div>
