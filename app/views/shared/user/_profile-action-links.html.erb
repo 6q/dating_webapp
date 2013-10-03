@@ -19,7 +19,12 @@
         <li class="like hidden user_dislike"><%= link_to ('<i class="disabled"></i>').html_safe + _('¡No me gusta!'), user_unlike_path(@user), :method => :post, :remote => true, :class => "ajax_dislike_trigger" %></li>
       <% end %>
     <% else %>
-      <li class="like disabled"><%= link_to '<i class="disabled"></i> '.html_safe + _('¡Me gusta!'), "#", title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+      <% if current_user.likes?(@user) %>
+        <li class="like user_dislike"><%= link_to '<i class="disabled"></i> '.html_safe + _('¡No me gusta!'), user_unlike_path(@user), :method => :post, :remote => true, :class => "ajax_dislike_trigger" %></li>
+        <li class="like hidden user_like"><%= link_to '<i class="disabled"></i> '.html_safe + _('¡Me gusta!'), "#", title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+      <% else %>
+        <li class="like disabled"><%= link_to '<i class="disabled"></i> '.html_safe + _('¡Me gusta!'), "#", title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+      <% end %>
     <% end %>
     <% block_modal_id = '#user-block-' + @user.id.to_s %>
     <% is_blocked = !current_user.user_blocks.where("blocked_user_id = ?", @user.id).first.nil? %>
