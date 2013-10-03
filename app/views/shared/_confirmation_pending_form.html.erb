@@ -4,9 +4,9 @@
       <h4><%= _('Que no te molesten') %></h4>
       <%= simple_form_for current_user, url: profile_path, html: { class: 'form-horizontal' } do |f| %>
         <label for="user[lf_age_from]"><%= _('Estar solo visible para usuari@s de entre:') %></label>
-        <%= f.text_field :lf_age_from, class: 'input-mini', maxlength: 2 %>
+        <%= f.select :lf_age_from, 18..99, {}, class: 'input-mini', maxlength: 2 %>
         <label for="user[lf_age_to]"><%= _('a') %></label>
-        <%= f.text_field :lf_age_to, class: 'input-mini', maxlength: 2 %>
+        <%= f.select :lf_age_to, 18..99, {}, class: 'input-mini', maxlength: 2 %>
         <%= _('años.') %>
         <%= f.submit _('Guardar'), class: 'btn btn-success' %>
       <% end %>
