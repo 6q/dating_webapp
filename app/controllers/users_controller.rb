@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   before_filter :set_rates_seen, only: [:nice_couple]
 
   def index
-    search_and_order
 
     if session[:best_suited_near_me].present?
       @best_suited_near_me = User.find(session[:best_suited_near_me])
@@ -20,11 +19,7 @@ class UsersController < ApplicationController
       session[:best_suited_near_me] = @best_suited_near_me.map(&:id)
     end
 
-    if special = params[:special]
-      @users = Kaminari.paginate_array(current_user.retrieve_users(500, special.to_sym)).page(params[:page])
-    else
-      @users = @search.result.page(params[:page]).uniq
-    end
+    search_and_order
 
     @cellove_search = Search.new
   end
@@ -168,21 +163,28 @@ class UsersController < ApplicationController
         params[:q][:id_in] = in_filter
       end
 
-      hidden_users.tap do |hu|
-        case params[:action]
-        when 'nice_couple'
-          ordered = hu.joins(:rates).order('rates.created_at DESC').uniq
-        else
-          ordered = hu
-        end
-        center = []
+      case params[:action]
+      when 'nice_couple'
+        ordered = hidden_users.joins(:rates).order('rates.created_at DESC').uniq
+      else
+        ordered = hidden_users
+      end
 
-        center << params[:city] if params[:city].present?
-        center << params[:postal_code] if params[:q][:postal_code].present?
+      center = []
+      center << params[:city] if params[:city].present?
+      center << params[:postal_code] if params[:q][:postal_code].present?
 
-        @search = ordered.near(center.empty? ? current_user : center.join(','), distance.to_i, { :units => :km, :sort => :distance }).search(params[:q])
-        if @search.sorts.empty?
-          @search.sorts = ['pictures_main desc', 'distance asc']
+      @search = ordered.near(center.empty? ? current_user : center.join(','), distance.to_i, { :units => :km }).search(params[:q])
+      if @search.sorts.empty?
+        @search.sorts = ['pictures_main desc', 'distance asc']
+      end
+
+      if special = params[:special]
+        @users = Kaminari.paginate_array(current_user.retrieve_users(500, special.to_sym)).page(params[:page])
+      else
+        @users = @search.result.uniq.page(params[:page])
+        if params[:q] && params[:q][:s] && params[:q][:s] =~ /distance/
+          @users = @users.order(params[:q][:s])
         end
       end
 
