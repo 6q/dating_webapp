@@ -9,10 +9,6 @@
 //$("#caixarandom").auderoFlashingText("stop");
 
 $(document).ready(function() {
-  $(document).on('click', '.notification-close', function() {
-    $(this).parent().parent().remove();
-  });
-
   $(".skin-change").click(function() {
     var number = $(this).data("skin");
     $.ajax({
