@@ -4,7 +4,7 @@ class MinimumAgeValidator < ActiveModel::EachValidator
     date = options[:today] || Date.today
     minimum_age = options[:minimum_age] || 18
     unless value < (date << minimum_age * 12)
-      record.errors[attribute] << (options[:message] || I18n.t("errors.messages.under_age"))
+      record.errors[attribute] << (options[:message] || _("Debes ser mayor de edad."))
     end
   end
 end
