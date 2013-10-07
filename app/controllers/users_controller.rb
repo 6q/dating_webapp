@@ -9,18 +9,19 @@ class UsersController < ApplicationController
   before_filter :set_visit_seen, only: [:hits]
   before_filter :set_likes_seen, only: [:likes]
   before_filter :set_rates_seen, only: [:nice_couple]
+  before_filter :set_best_suited_near_me, only:[:index, :cellove_index]
 
-  def index
-
+  def set_best_suited_near_me
     if session[:best_suited_near_me].present?
       @best_suited_near_me = User.find(session[:best_suited_near_me])
     else
       @best_suited_near_me = current_user.best_suited_near_me
       session[:best_suited_near_me] = @best_suited_near_me.map(&:id)
     end
+  end
 
+  def index
     search_and_order
-
     @cellove_search = Search.new
   end
 
