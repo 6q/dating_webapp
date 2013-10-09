@@ -42,7 +42,7 @@
       <% eliminar_celestino_id = '#delete-celestino-' + recommendation.id.to_s %>
       <% if recommendation.user_id == current_user.id %>
         <%= link_to _('Eliminar celestin@'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
-      <% else %>
+      <% elsif recommendation.creator_id == current_user.id %>
         <% if recommendation.deleted_at.blank? %>
           <%= link_to _('Desactivar recomendación'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
         <% else %>
