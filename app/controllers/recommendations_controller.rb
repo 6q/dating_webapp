@@ -32,7 +32,7 @@ class RecommendationsController < ApplicationController
         @characteristic.user_id = user.id
         @characteristic.creator_id = current_user.id
         @characteristic.save
-        flash[:success] = _('Recommendación enviada')
+        flash[:success] = _('Recomendación enviada')
         redirect_to be_matchmaker_path
       else
         flash[:error] = _('Datos incorrectos o faltantes')
@@ -55,7 +55,7 @@ class RecommendationsController < ApplicationController
     if @recommendation
       @recommendation.confirmed = true
       @recommendation.save
-      flash[:success] = _('Recommendación acceptada')
+      flash[:success] = _('Recomendación acceptada')
     end
     redirect_to my_matchmakers_path
   end
@@ -65,7 +65,7 @@ class RecommendationsController < ApplicationController
     if @recommendation
       @recommendation.denied = true
       @recommendation.save
-      flash[:success] = _('Recommendación negada')
+      flash[:success] = _('Recomendación negada')
     end
     redirect_to my_matchmakers_path
   end
@@ -78,7 +78,7 @@ class RecommendationsController < ApplicationController
         @recommendation.deleted_at = nil
       end
       @recommendation.save
-      flash[:success] = _('Recommendación modificada')
+      flash[:success] = _('Recomendación modificada')
     end
     redirect_to recommendations_path
   end
