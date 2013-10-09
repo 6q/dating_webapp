@@ -34,7 +34,7 @@ class Search < ActiveRecord::Base
 
   def search_path
     if self.online?
-      updated_at_gteq = 2.minutes.ago
+      updated_at_gteq = 30.seconds.ago
     end
     Rails.application.routes.url_helpers.users_path(:q => {
       :years_start_lteq => self.years_lteq,

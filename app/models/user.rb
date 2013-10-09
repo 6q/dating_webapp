@@ -525,7 +525,7 @@ class User < ActiveRecord::Base
   end
 
   def online?
-    updated_at > 1.minutes.ago
+    updated_at > 30.seconds.ago
   end
 
   ransacker :smoker, :formatter => proc { |v| v.split } do |parent|
