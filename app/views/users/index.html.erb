@@ -9,10 +9,10 @@
     
     <%= search_form_for @search, class: 'span9 form-horizontal overflow-show' do |f| %>
       <div class="row">
-        <div class="span8">
+        <div class="span7">
           <div class="control-group slider">
             <label class="control-label"><%= _('Edad') %></label>
-            <div class="span6">
+            <div class="span5">
               <input id="years" type="slider" value="<%= params[:q][:years_start_lteq] || (current_user.lf_age_from.blank? ? '18' : current_user.lf_age_from) %>;<%= params[:q][:years_end_gteq] || (current_user.lf_age_to.blank? ? '80' : current_user.lf_age_to) %>"/>
               <%= f.hidden_field :years_start_lteq %>
               <%= f.hidden_field :years_end_gteq %>
@@ -59,14 +59,16 @@
               </div>
             </div>
             <div class="searchcol2">
-              <div class="control-group fit">
+              <div class="control-group">
                 <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
-                <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: _('Complexión...'), selected: @search.complexion_eq %>
+                <div class="controls">
+                  <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: _('Complexión...'), selected: @search.complexion_eq %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="right">
+          <div class="right span8">
             <a href="#adv-search" class="small" data-toggle="collapse"><%= _('Búsqueda avanzada') %></a>
             <%= f.submit _('Buscar'), class: 'btn btn-info' %>
           </div>
