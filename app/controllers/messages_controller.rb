@@ -42,7 +42,7 @@ class MessagesController < ApplicationController
     if (@receipt.errors.blank?)
       @conversation = @receipt.conversation
       flash[:success] = _('Mensaje enviado')
-      redirect_to @conversation
+      redirect_to :back
     else
       render :action => :new
     end

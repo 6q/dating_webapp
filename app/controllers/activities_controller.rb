@@ -14,7 +14,7 @@ class ActivitiesController < ApplicationController
     @activity.sender_id = current_user.id
 
     if @activity.save
-      redirect_to @conversation
+      redirect_to :back
     end
   end
 
