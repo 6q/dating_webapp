@@ -182,7 +182,11 @@ class UsersController < ApplicationController
       end
 
       if special = params[:special]
-        @users = Kaminari.paginate_array(current_user.retrieve_users(500, special.to_sym)).page(params[:page])
+        query = current_user.retrieve_users(500, special.to_sym)
+        orders = query.order_values.first.split(',').map(&:strip)
+        orders.delete("distance ASC")
+        query.order_values = orders
+        @users = query.page(params[:page])
       else
         @users = @search.result.uniq.page(params[:page])
         if params[:q] && params[:q][:s] && params[:q][:s] =~ /distance/
