@@ -51,7 +51,8 @@ class UsersController < ApplicationController
   end
 
   def view
-    @users = User.with_role(:user).last(7)
+    @popular_women = User.women.popular.with_picture.limit(20).sample(7)
+    @popular_men = User.men.popular.with_picture.limit(20).sample(7)
   end
 
   def settings

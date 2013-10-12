@@ -144,7 +144,7 @@ class User < ActiveRecord::Base
     order("visits_count DESC, likes_count DESC")
   scope :women, where(gender: 'female')
   scope :men, where(gender: 'male')
-  scope :with_picture, joins(:pictures).where('pictures.main = 1')
+  scope :with_picture, joins(:pictures).order('pictures.main IS NULL')
 
   #relations
   has_many :pictures, as: :attachable

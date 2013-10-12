@@ -5,14 +5,10 @@
 <div id="last-users" class="user-list">
   <h3><%= _('Algun@s usuari@s registrad@s en Cellove') %> <% link_to(_('¡Regístrate Gratis!'), new_user_registration_path) %></h3>
   <ul class="clearfix">
-    <% User.women.popular.limit(20).sample(7).each do |user| %>
-      <%= render user %>
-    <% end %>
+    <%= render @popular_women %>
   </ul>
   <ul class="clearfix">
-    <% User.men.popular.limit(20).sample(7).each do |user| %>
-      <%= render user %>
-    <% end %>
+    <%= render @popular_men %>
   </ul>
 </div>
 
