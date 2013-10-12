@@ -1,11 +1,13 @@
 <section class="user-profile">
 	<article class="boxed">
 		<div class="boxed-inner">
-			<div id="nice-couple" class="">
-				<i></i>
-				<p><%= _('¿Hacéis buena pareja?') %></p>
-        <%= rating_for(@user, current_user, readonly: false) %>
-      </div>
+      <% if current_user.can_interact_with?(@user) %>
+        <div id="nice-couple" class="">
+          <i></i>
+          <p><%= _('¿Hacéis buena pareja?') %></p>
+          <%= rating_for(@user, current_user, readonly: false) %>
+        </div>
+      <% end %>
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
