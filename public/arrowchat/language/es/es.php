@@ -47,7 +47,7 @@
 	$language[82]			=	"a&ntilde;os";								// Displayed after the time in notifications (years)
 
 	// ######################### BUDDY LIST ###########################
-	$language[4]			=	"Chat"; 									// Displayed in the title bar of the buddy list popup
+	$language[4]			=	"Chat de Cellove"; 									// Displayed in the title bar of the buddy list popup
 	$language[7]			=	"Chat (Desconectado)"; 							// Displayed in the buddy list tab when offline
 	$language[8]    		=   "No hay nadie disponible para hablar"; 			// Displayed with no one is online
 	$language[12]   		=   "Buscar"; 									// Displayed in the search text area of the buddy list
