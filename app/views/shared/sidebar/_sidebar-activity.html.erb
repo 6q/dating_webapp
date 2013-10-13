@@ -11,6 +11,5 @@
     <li><%= link_to (_('Les he gustado') + indicate(current_user.likers.unseen.count)).html_safe, user_likes_path %></li>
     <li><%= link_to (_('Hacemos buena pareja') + indicate(current_user.rates.unseen.count)).html_safe, nice_couple_path %></li>
     <li><%= link_to (_('Mensajes') + indicate(current_user.mailbox.inbox.unread(current_user).count)).html_safe, conversations_path %></li>
-    <li><%= link_to (_('Actividades') + indicate(current_user.mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }.count)).html_safe, conversations_path %></li>
   </ul>
 </section>
