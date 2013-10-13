@@ -283,7 +283,7 @@ class User < ActiveRecord::Base
   end
 
   def location
-    [postal_code, city, country].compact.join(', ')
+    [city, country].compact.join(', ')
   end
 
   ransacker :years_start, :formatter => proc { |age| age.to_i.years.ago.beginning_of_year + 1.year } do |parent|
