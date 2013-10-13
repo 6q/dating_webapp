@@ -35,7 +35,11 @@
           <li class="message disabled"><%= link_to _('Enviar mensaje'), '#', title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
         <% end %>
         <% if current_user.can_interact_with?(user) && current_user.can_chat_to?(user) %>
-          <li class="chat"><%= link_to _('Chat'), '#', onclick: "chatWith('#{user.id}'); return false;", title: _('Chat') %></li>
+          <% if user.online? %>
+            <li class="chat"><%= link_to _('Chat'), '#', onclick: "chatWith('#{user.id}'); return false;", title: _('Chat') %></li>
+          <% else %>
+            <li class="chat disabled"><%= link_to _('Chat'), '#', title: _('Chat desactivado. Usuario desconectado.') %></li>
+          <% end %>
         <% else %>
           <li class="chat disabled"><%= link_to _('Chat'), '#', title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
         <% end %>
@@ -50,7 +54,7 @@
         <% else %>
           <% if current_user.likes?(user) %>
             <li class="like disabled active"><%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true, title: _('Ya no me gusta') %></li>
-            <li class="like hidden"><%= link_to _('Me gusta'), "#", data: { id: user.id.to_s }, title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+            <li class="like disabled hidden"><%= link_to _('Me gusta'), "#", data: { id: user.id.to_s }, title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
           <% else %>
             <li class="like disabled"><%= link_to _('Me gusta'), "#", title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
           <% end %>

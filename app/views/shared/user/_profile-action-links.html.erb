@@ -6,7 +6,11 @@
       <li class="message disabled"><%= link_to '<i></i><span>'.html_safe + _('(o proponer una actividad)') + '</span>'.html_safe + _('Enviar mensaje'), "#", title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
     <% end %>
     <% if current_user.can_interact_with?(@user) && current_user.can_chat_to?(@user) %>
-      <li class="chat"><%= link_to '<i></i> '.html_safe + _('Chatear'), '#', onclick: "chatWith('#{@user.id}'); return false;" %></li>
+      <% if @user.online? %>
+        <li class="chat"><%= link_to '<i></i> '.html_safe + _('Chatear'), '#', onclick: "chatWith('#{@user.id}'); return false;" %></li>
+      <% else %>
+        <li class="chat disabled"><%= link_to '<i></i> '.html_safe + _('Chatear'), '#', title: _('Chat desactivado. Usuario desconectado.') %></li>
+      <% end %>
     <% else %>
       <li class="chat disabled"><%= link_to '<i></i> '.html_safe + _('Chatear'), '#', title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
     <% end %>
