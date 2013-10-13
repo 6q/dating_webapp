@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130924153539) do
+ActiveRecord::Schema.define(:version => 20131009191934) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -275,12 +275,12 @@ ActiveRecord::Schema.define(:version => 20130924153539) do
     t.integer  "user_id"
     t.boolean  "no_email_online",                  :default => true
     t.boolean  "profile_visit",                    :default => true
-    t.boolean  "receive_message"
-    t.boolean  "like"
-    t.boolean  "star_rating"
-    t.boolean  "celestino_recommendation"
-    t.boolean  "newsletter"
-    t.boolean  "user_suggestions"
+    t.boolean  "receive_message",                  :default => true
+    t.boolean  "like",                             :default => true
+    t.boolean  "star_rating",                      :default => true
+    t.boolean  "celestino_recommendation",         :default => true
+    t.boolean  "newsletter",                       :default => true
+    t.boolean  "user_suggestions",                 :default => true
     t.boolean  "new_users_nearby"
     t.datetime "created_at",                                          :null => false
     t.datetime "updated_at",                                          :null => false
