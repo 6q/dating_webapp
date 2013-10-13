@@ -187,7 +187,7 @@ $(document).ready(function() {
   $("a[rel^='prettyPhoto']").prettyPhoto();
 
   // fancybox
-  $("a.grouped_elements").fancybox( {
+  $("a.grouped_elements").fancybox({
       titleShow :false
   });
 

@@ -49,7 +49,7 @@
 						<div class="jcarousel">
 							<ul>
 								<% @user.pictures.each do |p| %>
-									<li><a class="grouped_elements" href="<%= p.image.jpg.url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
+									<li><a class="grouped_elements" rel="user-pictures" href="<%= p.image.jpg.url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
 								<% end %>
 							</ul>
 						</div>
