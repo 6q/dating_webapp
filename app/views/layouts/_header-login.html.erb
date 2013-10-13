@@ -15,6 +15,7 @@
     <%= simple_form_for('user', :url => user_session_path) do |f| %>
       <%= f.input_field :email, :placeholder => _('Tu dirección de correo'), :required => true, :autofocus => true, wrapper_html: {} %>
       <%= f.input_field :password, :placeholder => _('Tu contraseña'), :required => true %>
+      <%= f.input_field :remember_me, as: :hidden, value: true %>
       <%= f.button :submit, _('Login'), :class => 'btn btn-success' %>
     <% end %>
   </fieldset>
