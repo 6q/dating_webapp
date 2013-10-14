@@ -113,9 +113,13 @@
     </div>
     <div class="clearfix"></div>
   </header>
-  <ul class="user-list clearfix">
-    <%= render @users %>
-  </ul>
+  <% if @users.present? %>
+    <ul class="user-list clearfix">
+      <%= render @users %>
+    </ul>
+  <% else %>
+    <div class=""><strong><%= _('Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda.') %></strong></div>
+  <% end %>
   <div class="pagination">
     <%= pager_total(@users) %>
   </div>
