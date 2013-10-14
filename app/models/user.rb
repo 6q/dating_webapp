@@ -139,7 +139,8 @@ class User < ActiveRecord::Base
                       .group("users.id, notifications.id")
                       .order("notifications_count DESC")
   scope :popular, select("users.*, count(user_visits.id) AS visits_count, count(likes.id) AS likes_count").
-    joins(:user_visits, :likes).
+    joins('LEFT JOIN user_visits ON user_visits.user_id = users.id').
+    joins('LEFT JOIN likes ON likes.creator_id = users.id').
     group("users.id").
     order("visits_count DESC, likes_count DESC")
   scope :women, where(gender: 'female')
