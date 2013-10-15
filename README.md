@@ -94,8 +94,9 @@ Admin
 -----
 
 Admin interface access using /admin
-u: admin
-p: columbia
+
+Username: admin
+Pass: columbia
 
 
 Extra
