@@ -75,9 +75,15 @@ module UserHelper
     if !rater_obj.nil?
       rating = rater_obj.rating(rateable_obj.id).to_i
     end
-    html = '<span class="stars stars-'+rating.to_s+'">'
-    rating.times{ html += '*' }
-    html += '</span>'
+    if rating != 0
+      html = '<span class="stars stars-'+rating.to_s+'">'
+      rating.times{ html += '*' }
+      html += '</span>'
+    elsif rateable_obj == current_user
+      html = '&nbsp;' + _('Pendiente')
+    else
+      html = '&nbsp;' + link_to(_('Puntuar'), rateable_obj)
+    end
     html.html_safe
   end
 

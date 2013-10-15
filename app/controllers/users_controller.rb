@@ -77,9 +77,7 @@ class UsersController < ApplicationController
 
   # Interaction routes
   def nice_couple
-    nc = User.nice_couple(current_user).pluck(:id)
-    search_and_order(nc)
-    @users = @search.result.page(params[:page])
+    @users = Kaminari::paginate_array(User.nice_couple(current_user, params[:order])).page(params[:page])
   end
 
   def likes
@@ -165,12 +163,7 @@ class UsersController < ApplicationController
         params[:q][:id_in] = in_filter
       end
 
-      case params[:action]
-      when 'nice_couple'
-        ordered = hidden_users.joins(:rates).order('rates.created_at DESC').uniq
-      else
-        ordered = hidden_users
-      end
+      ordered = hidden_users
 
       center = []
       center << params[:city] if params[:city].present?

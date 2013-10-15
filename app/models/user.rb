@@ -363,10 +363,18 @@ class User < ActiveRecord::Base
   end
 
   # Intersection of people who I rated and people who rated me
-  def self.nice_couple(user)
-    rates = user.ratings_given
-    nc = Rate.where(rateable_id: user.id).where(rater_id: rates.pluck(:rateable_id)).all
-    self.where(id: nc.map { |u| u.rater_id })
+  def self.nice_couple(user, order)
+    order ||= 'rates.updated_at desc'
+
+    nc = user.rates.order('updated_at DESC').pluck(:rater_id) | user.ratings_given.order('updated_at DESC').pluck(:rateable_id)
+    nice = User
+            .order("FIELD('id', #{nc.join(',')})")
+            .where("users.id NOT IN (?)", user.get_all_invisible_to_me)
+            .where("users.gender = ?", user.matching_gender)
+            .where("users.lf_gender = ?", user.gender)
+            .where(id: nc)
+
+    nice
   end
 
   def self.people_who_like_me(user, order)
