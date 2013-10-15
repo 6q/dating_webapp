@@ -5,7 +5,7 @@ set(:application) { "cellove_#{stage}" }
 set :use_sudo, false
 
 set :scm, :git
-set :repository, "git@git.season.es:cellove.git"
+set :repository, "git@github.com:Cellove/cellove.git"
 set :deploy_via, :remote_cache
 set :keep_releases, 5
 set :normalize_asset_timestamps, false
