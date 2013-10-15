@@ -90,6 +90,14 @@ Theme is Cellove under `/public/arrowchat/themes/cellove`
 
 Change there images, css
 
+Admin
+-----
+
+Admin interface access using /admin
+u: admin
+p: columbia
+
+
 Extra
 -----
 
