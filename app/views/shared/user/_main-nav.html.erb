@@ -2,7 +2,7 @@
   <ul class="clearfix">
     <li><%= link_to _('Visitas'), user_hits_path %><%= indicate(current_user.user_visits.unseen.count) %></li>
     <li><%= link_to _('¡Les he gustado!'), user_likes_path %><%= indicate(current_user.likers.unseen.count) %></li>
-    <li><%= link_to _('Mensajes'), conversations_path %><%= indicate(current_user.mailbox.inbox.unread(current_user).count) %></li>
+    <li><%= link_to _('Mensajes'), conversations_path %><%= indicate(current_user.mailbox.inbox.unread(current_user).to_a.count) %></li>
     <li><%= link_to _('Buena pareja'), nice_couple_path %><%= indicate(current_user.rates.unseen.count) %></li>
     <li><%= link_to _('Búsquedas'), search_path(q: { years_lteq: current_user.lf_age_from, years_gteq: current_user.lf_age_to, city_eq: current_user.city }) %></li>
   </ul>
