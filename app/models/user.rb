@@ -364,17 +364,19 @@ class User < ActiveRecord::Base
 
   # Intersection of people who I rated and people who rated me
   def self.nice_couple(user, order)
-    order ||= 'rates.updated_at desc'
+    order ||= 'rates_updated_at desc'
 
-    nc = user.rates.order('updated_at DESC').pluck(:rater_id) | user.ratings_given.order('updated_at DESC').pluck(:rateable_id)
-    nice = User
-            .order("FIELD('id', #{nc.join(',')})")
-            .where("users.id NOT IN (?)", user.get_all_invisible_to_me)
-            .where("users.gender = ?", user.matching_gender)
-            .where("users.lf_gender = ?", user.gender)
-            .where(id: nc)
+    common_query = User
+      .select('users.*, rates.updated_at as rates_updated_at')
+      .where("users.id NOT IN (?)", user.get_all_invisible_to_me)
+      .where("users.gender = ?", user.matching_gender)
+      .where("users.lf_gender = ?", user.gender)
 
-    nice
+    user_rates = common_query.joins('INNER JOIN rates ON rates.rateable_id = users.id').where('rater_id = ?', user.id).order(order)
+    user_ratings = common_query.joins('INNER JOIN rates ON rates.rater_id = users.id').where('rateable_id = ?', user.id)
+
+    # nice = user_ratings | user_rates
+    nice = User.find_by_sql(user_ratings.union(user_rates).to_sql.gsub(/^\( | \)$/, ''))
   end
 
   def self.people_who_like_me(user, order)
