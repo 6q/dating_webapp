@@ -18,7 +18,7 @@ $(function () {
       }
     });
     $("#crop_modal .btn").click(function(e) {
-      e.preventDefault();
+      //e.preventDefault();
       $.post(data.result.update_path, {_method: "PUT", crop_data: cropData}, function (data) {
         modalObject.modal("hide");
         $("#picture_gallery").html(data.template);
@@ -36,16 +36,16 @@ $(function () {
         value: $('meta[name="csrf-token"]').attr('content')
       }, {name: 'main', value: $('#picture_main').val()}],
       acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
-      done: showModalAndCrop,
-      progressall: function (e, data) {
+      done: function(event, data) { 
+        showModalAndCrop(event, data);
+        $('#progress_modal').modal('hide');
+      },
+      progress: function (e, data) {
         var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('.progress .bar').css('width', data.loaded);
+        $('#progress_modal .progress .bar').css('width', progress + '%');
       },
       start: function() {
-        var modalObject;
-        $("#crop_modal_wrapper").html('<div id="crop_modal" class="modal hide fade" tabindex="-1" role="dialog"><div class="modal-body"><div class="progress progress-striped active"><div class="bar"></div></div></div></div>');
-        modalObject = $("#crop_modal_wrapper #crop_modal");
-        modalObject.modal({show: true});
+        $('#progress_modal').modal('show');
       }
 
     });

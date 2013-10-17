@@ -41,6 +41,7 @@
     <%= render 'layouts/messages' %>
 
     <%= render 'shared/user/modal_upgrade' %>
+    <%= render 'shared/modal_progress' %>
     <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
   </body>
   <% unless current_user.has_role?(:matchmaker) %>
