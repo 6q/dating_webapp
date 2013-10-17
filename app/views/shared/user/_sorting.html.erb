@@ -4,7 +4,7 @@
     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
       <li><%= sort_link(@search, :updated_at, _("Online"), default_order: :desc, distance: params[:distance], city: params[:city], postal_code: params[:postal_code]) %></li>
       <li><%= sort_link(@search, :index, _("Mejor Índice Cellove"), default_order: :asc, distance: params[:distance], city: params[:city], postal_code: params[:postal_code]) %></li>
-      <li><%= sort_link(@search, :distance, _('Más cercanos'), distance: params[:distance], city: params[:city], postal_code: params[:postal_code]) %></li>
+      <li><%= sort_link(@search, :distance, _('Más cercanos'), default_order: :desc, distance: params[:distance], city: params[:city], postal_code: params[:postal_code]) %></li>
     </ul>
   </div>
 <% end %>

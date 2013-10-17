@@ -183,7 +183,7 @@ class UsersController < ApplicationController
       else
         @users = @search.result.uniq.page(params[:page])
         if params[:q] && params[:q][:s] && params[:q][:s] =~ /distance/
-          @users = @users.order(params[:q][:s])
+          @users = @users.order('distance asc')
         end
       end
 
