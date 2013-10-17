@@ -376,7 +376,7 @@ class User < ActiveRecord::Base
     user_ratings = common_query.joins('INNER JOIN rates ON rates.rater_id = users.id').where('rateable_id = ?', user.id)
 
     # nice = user_ratings | user_rates
-    nice = User.find_by_sql(user_ratings.union(user_rates).to_sql.gsub(/^\( | \)$/, ''))
+    nice = User.find_by_sql(user_ratings.union(user_rates).to_sql.gsub(/^\( | \)$/, '')).uniq
   end
 
   def self.people_who_like_me(user, order)
