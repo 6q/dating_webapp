@@ -62,7 +62,7 @@
               <div class="control-group">
                 <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
                 <div class="controls">
-                  <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, include_blank: _('Complexión...'), selected: @search.complexion_eq %>
+                  <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, { include_blank: _('Complexión...'), selected: @search.complexion_eq }, { style: 'width:100%' } %>
                 </div>
               </div>
             </div>
