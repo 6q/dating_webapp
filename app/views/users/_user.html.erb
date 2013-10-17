@@ -14,7 +14,7 @@
                 ('<small>' + time_ago_in_words_or_date(current_user.liker?(user).created_at) + '</small>').html_safe if current_user.liker?(user)
               when 'nice_couple'
                 if rate = current_user.rates.where(rater_id: user.id).first || rate = current_user.ratings_given.where(rateable_id: user.id).first
-                  ('<small>' + time_ago_in_words_or_date(rate.created_at) + '</small>').html_safe
+                  ('<small>' + time_ago_in_words_or_date(rate.updated_at) + '</small>').html_safe
                 end
             end
           end

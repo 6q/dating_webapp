@@ -366,6 +366,11 @@ class User < ActiveRecord::Base
   def self.nice_couple(user, order)
     order ||= 'rates_updated_at desc'
 
+    if order == 'distance asc'
+      by_distance = true
+      order = nil
+    end
+
     common_query = User
       .select('users.*, rates.updated_at as rates_updated_at')
       .where("users.id NOT IN (?)", user.get_all_invisible_to_me)
@@ -375,8 +380,10 @@ class User < ActiveRecord::Base
     user_rates = common_query.joins('INNER JOIN rates ON rates.rateable_id = users.id').where('rater_id = ?', user.id).order(order)
     user_ratings = common_query.joins('INNER JOIN rates ON rates.rater_id = users.id').where('rateable_id = ?', user.id)
 
-    # nice = user_ratings | user_rates
     nice = User.find_by_sql(user_ratings.union(user_rates).to_sql.gsub(/^\( | \)$/, '')).uniq
+    nice = user.nearbys(100000).where(id: nice.map(&:id)) if by_distance
+
+    nice
   end
 
   def self.people_who_like_me(user, order)
@@ -468,7 +475,7 @@ class User < ActiveRecord::Base
     if can_rate? user.id
       rate = self.ratings_given.where("rateable_id = ?", user.id).first
       if rate
-        rate.update_attributes(stars: stars)
+        rate.update_attributes(stars: stars, seen: false)
       else
         rate = self.rates.build do |r|
           r.stars = stars
