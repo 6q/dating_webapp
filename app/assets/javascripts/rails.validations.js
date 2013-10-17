@@ -600,8 +600,14 @@
         label = form.find("label[for='" + (element.attr('id')) + "']:not(.message)");
         labelErrorField = label.closest("." + errorFieldClass);
         if (inputErrorField[0]) {
-          inputErrorField.find("#" + (element.attr('id'))).detach();
-          inputErrorField.replaceWith(element);
+          selects = inputErrorField.find('select');
+          if (selects.length > 0) {
+            inputErrorField.find('.popover-form').detach();
+            inputErrorField.replaceWith(inputErrorField);
+          } else {
+            inputErrorField.find("#" + (element.attr('id'))).detach();
+            inputErrorField.replaceWith(element);
+          }
           label.detach();
           return labelErrorField.replaceWith(label);
         }
