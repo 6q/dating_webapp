@@ -78,12 +78,13 @@ before_fork do |server, worker|
     rescue Errno::ENOENT, Errno::ESRCH
     end
   end
-  
+
   # Throttle the master from forking too quickly by sleeping.  Due
   # to the implementation of standard Unix signal handlers, this
   # helps (but does not completely) prevent identical, repeated signals
   # from being lost when the receiving process is busy.
   # sleep 1
+  I18n.t('activerecord')
 end
 
 after_fork do |server, worker|
