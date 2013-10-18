@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
+  layout :layout_from_resource
+
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => exception.message
   end
@@ -33,4 +35,12 @@ class ApplicationController < ActionController::Base
     end
   end
   private :authenticate
+
+  def layout_from_resource
+    if user_signed_in?
+      'logged_in'
+    else
+      'application'
+    end
+  end
 end
