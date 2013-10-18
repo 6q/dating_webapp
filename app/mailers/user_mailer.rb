@@ -64,4 +64,10 @@ class UserMailer < ActionMailer::Base
     mail(:to => @recipient.email, :subject => _('Nueva recomendación'))
     prevent_delivery_to_unconfirmed
   end
+
+  def report(reporter, reported)
+    @reporter = reporter
+    @reported = reported
+    mail(to: 'cellove@cellove.com', subject: _('Perfil denunciado'))
+  end
 end

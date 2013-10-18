@@ -37,6 +37,7 @@ Cellove::Application.routes.draw do
     post 'block_hide_settings',     to: 'relationships#block_hide_settings'
 
     get 'view',                     on: :collection
+    get 'report',                   to: 'users#report'
   end
 
   get '/dashboard', to: "dashboard#show", as: :dashboard

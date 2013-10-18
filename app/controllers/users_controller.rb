@@ -128,6 +128,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def report
+    reported = User.find(params[:user_id])
+    UserMailer.report(current_user, reported).deliver
+    redirect_to :back, notice: _('Se ha denunciado al usuario. ¡Gracias por tu ayuda!')
+  end
+
   private
     def user_visit
       if @user && current_user != @user

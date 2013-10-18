@@ -1,0 +1,5 @@
+<h1>Se ha recibido una denuncia</h1>
+
+  El usuario: <%= link_to @reporter.name, user_url(@reporter) %>
+
+  Ha denunciado al usuario: <%= link_to @reported.name, user_url(@reported) %>
