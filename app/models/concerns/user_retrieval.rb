@@ -47,7 +47,7 @@ module UserRetrieval
   end
 
   def best_suited_near_me
-    retrieve_users
+    retrieve_users(12)
   end
 
   def could_interest_me(limit = 20)
