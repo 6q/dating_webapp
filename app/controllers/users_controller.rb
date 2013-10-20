@@ -177,7 +177,7 @@ class UsersController < ApplicationController
 
       @search = ordered.near(center.empty? ? current_user : center.join(','), distance.to_i, { :units => :km }).search(params[:q])
       if @search.sorts.empty?
-        @search.sorts = ['pictures_main desc', 'distance asc']
+        @search.sorts = ['created_at desc']
       end
 
       if special = params[:special]
