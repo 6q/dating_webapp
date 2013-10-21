@@ -5,6 +5,12 @@
       <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>
+      <% if user_signed_in? 
+        block_modal_id = '#user-block-' + user.id.to_s %>
+        <div class="block <%= (current_user.blocked?(user) || current_user.hidden?(user)) ? "disabled" : "" %> " data-toggle="tooltip" title="<%= _('Bloquear')%>">
+          <%= link_to _('x'), block_modal_id, "data-toggle" => "modal" %>
+        </div>
+      <% end %>
         <%=
           if user_signed_in?
             case params[:action]
@@ -17,14 +23,13 @@
                   ('<small>' + time_ago_in_words_or_date(rate.updated_at) + '</small>').html_safe
                 end
             end
-          end
-        %>
+          end %>
       <h1>
-        <%= link_to truncate(user.display_name, length: 16), user %>
-        <br>
+        <div class="username">
+          <%= link_to truncate(user.display_name, length: 16), user %>
+        </div>
         <span><%= truncate(user.city, length: 20) %></span>
-        <br><%= "#{user.age} #{_('Años')}" %>
-        <br><%= (current_user.distance_to user).round.to_s + ' km' if user_signed_in? && current_user.distance_to(user) %>
+        <br /><%= "#{user.age} #{_('Años')}" %>
       </h1>
     </header>
     <ul class="actions clearfix">
@@ -83,7 +88,6 @@
             </li>
           <% end %>
         <% end %>
-        <% block_modal_id = '#user-block-' + user.id.to_s %>
         <li class="more" data-toggle="tooltip" title="<%= _('Ver el Perfil') %>">
           <%= link_to _('Ver Perfil'), user %>
         </li>
