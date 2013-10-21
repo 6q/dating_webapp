@@ -19,13 +19,14 @@
       <section role="main">
         <% if @sidebar %>
           <div class="row">
-          <div class="span3">
-            <%= render 'shared/flat-sidebar' %>
-          </div>
-          <div class="span9">
-            <div class="box">
-              <div class="box-content">
-                <%= yield %>
+            <div class="span3">
+              <%= render 'shared/flat-sidebar' %>
+            </div>
+            <div class="span9">
+              <div class="box">
+                <div class="box-content">
+                  <%= yield %>
+                </div>
               </div>
             </div>
           </div>

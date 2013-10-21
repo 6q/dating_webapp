@@ -24,6 +24,8 @@ Requirements
   Apache/PHP Setup on Mountain Lion: http://jason.pureconcepts.net/2012/10/install-apache-php-mysql-mac-os-x/
   sudo apachectl start/stop/restart
 
+  User the config located in doc/config/apache2 to configure a vhost in your local machine that can run Arrowcaht and the app as a reverse proxy.
+
 Testing
 -------
 

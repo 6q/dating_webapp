@@ -160,7 +160,9 @@
 	<% unless @user == current_user %>
 		<%= render 'shared/user/profile-action-links' %>
 	<% end %>
-
+  <div class="report small">
+    <%= link_to _('Denunciar perfil a Cellove'), user_report_path(@user) %>
+  </div>
 
 </section>
 
