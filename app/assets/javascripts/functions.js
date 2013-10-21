@@ -54,7 +54,9 @@ $(document).ready(function(){
   $('#related-list a, .user-card').tooltip({
     html:true
   });
-
+  $('.chat, .message, .like, .more, .block').tooltip({
+    html:true
+  });
 });
 
 

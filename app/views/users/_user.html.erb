@@ -30,38 +30,62 @@
     <ul class="actions clearfix">
       <% if user_signed_in? %>
         <% if current_user.can_interact_with?(user) && current_user.can_message_to?(user) %>
-          <li class="message"><%= link_to _('Enviar mensaje'), "#fast-reply-#{user.id}", 'data-toggle' => 'modal', title: _('Enviar mensaje') %></li>
+          <li class="message" data-toggle="tooltip" title="<%= _('Enviar mensaje') %>">
+            <%= link_to _('Enviar mensaje'), "#fast-reply-#{user.id}", 'data-toggle' => 'modal' %>
+          </li>
         <% else %>
-          <li class="message disabled"><%= link_to _('Enviar mensaje'), '#', title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+          <li class="message disabled" data-toggle="tooltip" title="<%= _('No cumples su franja de edad indicada') %>">
+            <%= link_to _('Enviar mensaje'), '#' %>
+          </li>
         <% end %>
         <% if current_user.can_interact_with?(user) && current_user.can_chat_to?(user) %>
           <% if user.online? %>
-            <li class="chat"><%= link_to _('Chat'), '#', onclick: "chatWith('#{user.id}'); return false;", title: _('Chat') %></li>
+            <li class="chat" data-toggle="tooltip" title="<%= _('Chatear') %>">
+              <%= link_to _('Chat'), '#', onclick: "chatWith('#{user.id}'); return false;" %>
+            </li>
           <% else %>
-            <li class="chat disabled"><%= link_to _('Chat'), '#', title: _('Chat desactivado. Usuario desconectado.') %></li>
+            <li class="chat disabled" data-toggle="tooltip" title="<%= _('Usuario desconectado') %>">
+              <%= link_to _('Chat'), '#' %>
+            </li>
           <% end %>
         <% else %>
-          <li class="chat disabled"><%= link_to _('Chat'), '#', title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+          <li class="chat disabled" data-toggle="tooltip" title="<%= _('No cumples su franja de edad indicada') %>">
+            <%= link_to _('Chat'), '#' %>
+          </li>
         <% end %>
         <% if current_user.can_interact_with?(user) %>
           <% if current_user.likes?(user) %>
-            <li class="like disabled active"><%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true, title: _('Ya no me gusta') %></li>
-            <li class="like hidden"><%= link_to _('Me gusta'), user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true, title: _('Me gusta') %></li>
+            <li class="like disabled active" data-toggle="tooltip" title="<%= _('Ya no me gusta') %>">
+              <%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %>
+            </li>
+            <li class="like hidden" data-toggle="tooltip" title="<%= _('Me gusta') %>">
+              <%= link_to _('Me gusta'), user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %>
+            </li>
           <% else %>
-            <li class="like active"><%= link_to _('Me gusta'), user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true, title: _('Me gusta') %></li>
-            <li class="like disabled hidden"><%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true, title: _('Ya no me gusta') %></li>
+            <li class="like active" data-toggle="tooltip" title="<%= _('Me gusta') %>">
+              <%= link_to _('Me gusta'), user_like_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_like_trigger", :remote => true %>
+            </li>
+            <li class="like disabled hidden" data-toggle="tooltip" title="<%= _('Ya no me gusta') %>">
+              <%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %>
+            </li>
           <% end %>
         <% else %>
           <% if current_user.likes?(user) %>
-            <li class="like disabled active"><%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true, title: _('Ya no me gusta') %></li>
-            <li class="like disabled hidden"><%= link_to _('Me gusta'), "#", data: { id: user.id.to_s }, title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+            <li class="like disabled active" data-toggle="tooltip" title="<%= _('Ya no me gusta') %>">
+              <%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %>
+            </li>
+            <li class="like disabled hidden" data-toggle="tooltip" title="<%= _('No cumples su franja de edad indicada') %>">
+              <%= link_to _('Me gusta'), "#", data: { id: user.id.to_s } %>
+            </li>
           <% else %>
-            <li class="like disabled"><%= link_to _('Me gusta'), "#", title: _('Desactivado. No cumples su franja de edad indicada.') %></li>
+            <li class="like disabled" data-toggle="tooltip" title="<%= _('No cumples su franja de edad indicada.') %>">
+              <%= link_to _('Me gusta'), "#" %>
+            </li>
           <% end %>
         <% end %>
         <% block_modal_id = '#user-block-' + user.id.to_s %>
-        <li class="block <%= (current_user.blocked?(user) || current_user.hidden?(user)) ? "disabled" : "" %> ">
-        <%= link_to _('Bloquear'), block_modal_id, "data-toggle" => "modal", title: _('Bloquear') %>
+        <li class="more" data-toggle="tooltip" title="<%= _('Ver el Perfil') %>">
+          <%= link_to _('Ver Perfil'), user %>
         </li>
       <% else %>
         <li class="message"><%= link_to _('Enviar mensaje'), new_user_registration_path %></li>
