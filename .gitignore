@@ -72,6 +72,9 @@ pickle-email-*.html
 # vim artifacts
 **.swp
 
+# Ubuntu Thumbs cache
+Thumbs.db
+
 # Ignore application configuration
 /config/application.yml
 /public/arrowchat/cache
