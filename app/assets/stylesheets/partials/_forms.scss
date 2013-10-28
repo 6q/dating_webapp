@@ -226,6 +226,13 @@ fieldset {
         background-image:url('placeholder-female-square.jpg');
         -webkit-box-shadow: 0px 0px 5px 0px #5CABE8;
         box-shadow: 0px 0px 5px 0px #5CABE8; 
+        img {
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;  
+          width:150px;
+          height:150px;       
+        }
       }
     }
   }

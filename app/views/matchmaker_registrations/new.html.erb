@@ -20,36 +20,18 @@
         <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre') %>
         <%= f.text_field :surname, placeholder: _('Apellidos') %>
         <p>
-        <%= f.text_field :screen_name, placeholder: _('Nickname') %>
-        <small class="span3"><%= _('* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.') %></small>
+        <%= f.text_field :screen_name, placeholder: _('Nombre de usuario') %>
+        <small class="span3"><%= _('* Te recomendamos dejar este campo vacío.') %></small>
       </fieldset>
     </div>
 
     <div class="span8">
-      <p><%= _('¿Quieres ayudar a un ex novio, amigo o familiar? ¡No lo dudes y échale una mano! A través de Cellove puedes ayudar a quien desees a que encuentre su pareja ideal o una amistad duradera. Recomiéndalo GRATIS a través de Cellove.') %></p>
-      <p><%= _('Con nuestro servicio de Celestin@s completamente gratuito podrás hacerlo, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad. ¡Apórtale seguridad y confianza a tus ex, amigos o familiares! ¡Ayúdales a encontrar a esa persona deseada con confianza y seguridad!') %></p>
-      <p><%= _('Ser Celestino es muy fácil y rápido. El destinatario recibirá un e-mail para que pueda confirmar su registro gratuito como usuario en cellove. A partir de aquí ya contará con tu ayuda y podrá acceder a todos los usuari@s y funciones que desee.') %></p>
-      <p><%= _('Como Celestino puedes recomendar a Usuarios que ya estén en Cellove o que no estén registrados. Puedes ayudar a tus ex, amigos o familiares a encontrar a esa persona deseada proponiendoles tu esta opción. ¡Recomiéndales GRATIS en Cellove!') %></p>
-      <p><%= _('Todos conocemos a chicos y chicas con ganas de enamorarse, ¡y que mejor que tú, para ayudarle! ¡Recomiéndalo y ayúdale a que sus citas ya no sean a ciegas!') %></p>
-      <p><%= _('¡Haz de celestino!') %></p>
+      <p><%= _('¿Quieres ayudar a un familia, amig@ o ex pareja? No lo dudes y échale una mano. Con Cellove puedes ayudar a quien desees a que encuentre su pareja ideal o una amistad. <b>¡Recomiéndal@!</b>') %></p>
+      <p><%= _('Con nuestra función <b>Celestin@</b> gratuita podrás hacerlo, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad.') %></p>
+      <p><%= _('Ser Celestino es muy fácil, el destinatario recibirá un e-mail para que confirme su <b>registro gratuito</b> como usuario en Cellove. A partir de aquí ya contará con tu ayuda y podrá acceder a todos los usuari@s y funciones que desee.') %></p>
+      <h3><%= _('¡Regístrate ahora GRATIS como Celestin@ en Cellove!') %></h3>
     </div>
   </div>
-
-  <fieldset id="photo" class="clearfix form-inline">
-    <legend><%= _('¿Cómo eres?') %></legend>
-    <div class="row">
-      <div class="span6">
-        <label class="control-label photo"><%= _('Sube tu foto') %></label>
-        <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
-        <div id="picture_gallery"></div>
-      </div>
-      <div class="span6">
-        <%= f.check_box :image_not_uploaded %>
-        <%= f.label :image_not_uploaded, _("!Subir image más adelante!") %>
-        <small><%= _('* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s.') %></small>
-      </div>
-    </div>
-  </fieldset>
 
   <fieldset id="access" class="clearfix form-horizontal">
     <legend><%= _('Datos de acceso a Cellove') %></legend>
