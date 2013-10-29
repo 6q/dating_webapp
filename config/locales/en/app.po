@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-14 12:22+0200\n"
+"POT-Creation-Date: 2013-10-29 10:16+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr ""
 msgid " y soy de étnia"
 msgstr ""
 
-msgid "!Subir image más adelante!"
+msgid " | Cellove.com"
 msgstr ""
 
 msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
@@ -60,13 +60,13 @@ msgstr ""
 msgid "%{name} aún no tiene ningún celestino."
 msgstr ""
 
-msgid "%{name} te invita a Cellove"
+msgid "%{name} te invita a usar Cellove"
 msgstr ""
 
 msgid "(Ver todos los mensajes)"
 msgstr ""
 
-msgid "(noticias y novedades, quincenal)"
+msgid "(noticias y novedades)"
 msgstr ""
 
 msgid "(o proponer una actividad)"
@@ -75,10 +75,7 @@ msgstr ""
 msgid "(perfiles afines, semanal)"
 msgstr ""
 
-msgid "(semanal)"
-msgstr ""
-
-msgid "(votaciones de 4 ó 5 estrellas)"
+msgid "(votaciones de 3 ó 5 estrellas)"
 msgstr ""
 
 msgid "* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real."
@@ -90,7 +87,10 @@ msgstr ""
 msgid "* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s."
 msgstr ""
 
-msgid "* Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s."
+msgid "* Te recomendamos dejar este campo vacío."
+msgstr ""
+
+msgid ","
 msgstr ""
 
 msgid ", con estilo"
@@ -108,9 +108,6 @@ msgstr ""
 msgid ". Con ojos de color"
 msgstr ""
 
-msgid "1€ al mes"
-msgstr ""
-
 msgid "2 chats simultáneos"
 msgstr ""
 
@@ -120,19 +117,19 @@ msgstr ""
 msgid "47,4 €/año"
 msgstr ""
 
-msgid "<p>CELLOVE SOCIAL NETWORK, S.L., sociedad de nacionalidad española con domicilio social en Ronda de Mar, 53, de Vilafranca del Penedès, Barcelona, CP 08720 (España), es la titular del fichero generado con los datos de carácter personal suministrados por los usuarios registrados.</p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L., es la prestación de los servicios de www.cellove.com, descritos con detalle en estos términos y condiciones generales. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente.</p>\\n\\n    <p>La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos. </p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad del fichero incluye el uso de sus datos para efectuar mejoras en el servicio de www.cellove.com, tareas básicas de administración y comunicación a los usuarios de incidencias del servicio, por parte de CELLOVE SOCIAL NETWORK, S.L., incluyendo asimismo el uso de sus datos por CELLOVE SOCIAL NETWORK, S.L. para enviar ofertas, novedades y eventuales contrataciones, destinadas a sus usuarios, de otros productos y servicios de CELLOVE SOCIAL NETWORK, S.L.</p>\\n\\n    <p>El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de las presentes condiciones generales y política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas.</p>\\n\\n    <p>Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com.</p>\\n\\n    <p>Por la propia naturaleza del servicio prestado por www.cellove.com, los usuarios registrados comprenden y aceptan que el ejercicio de su derecho de cancelación u oposición implicará su cese en su uso de los servicios de facilitación y promoción de relaciones interpersonales prestadas por www.cellove.com. </p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. ha implantado las medidas de seguridad técnicas y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal, evitando su alteración, pérdida, tratamiento y/o acceso no autorizado, de conformidad con el estado de la tecnología.</p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la veracidad de los datos facilitados, de los cuales el usuario responderá, en cualquier caso, reservándose CELLOVE SOCIAL NETWORK, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en derecho.</p>"
-msgstr ""
-
-msgid "<p>Cellove es una plataforma online de contactos donde fácilmente puedes conocer a gente nueva, interactuar, ampliar tu círculo de amistades y encontrar la pareja que siempre has soñado tener.</p>\\n\\n     <p>Sabemos lo difícil y al mismo tiempo importante que es dar con tu media naranja o con una amistad duradera, por eso ofrecemos nuestra plataforma que facilita y agiliza el contacto directo y eficaz con perfiles afines a ti, con total confianza y seguridad en nuestros sistemas. </p>\\n\\n    <p>¿Te imaginas quedar con alguien que nunca has visto pero tener la sensación de que lo conoces de toda la vida? Ahora es posible gracias a Cellove. Podrás tener a tu alcance mucha más información de esa persona a través de su círculo más cercano y de una manera segura y fiable. </p>\\n\\n    <p>Con Cellove, ¡tus citas ya no serán a ciegas! </p>"
-msgstr ""
-
-msgid "<p>Cellove® es Marca registrada de CELLOVE SOCIAL NETWORK, S.L.</p>\\n    <h4>A. CUESTIONES PRELIMINARES: </h4>\\n    <h5>1. Objeto de los presentes términos y condiciones generales.</h5>\\n\\n    <p>Los presentes Términos y Condiciones tienen por objeto regular el uso de Cellove® Al visitar y/o utilizar los servicios prestados por CELLOVE SOCIAL NETWORK, S.L. a través de su página web www.cellove.com u otras de su propiedad, vinculadas a los servicios aquí establecidos, usted expresamente acepta hacerlo de acuerdo a los presentes Términos y Condiciones Generales de Uso de Cellove y sus modificaciones futuras. CELLOVE SOCIAL NETWORK, S.L. utilizará todos los recursos a su alcance para notificar de forma anticipada a sus usuarios, cualquier modificación en los presentes Términos y Condiciones de Uso, pero es obligación del usuario, visitar periódicamente estos Términos y Condiciones para comprobar si han sido actualizados.</p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. es una sociedad de nacionalidad española, con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), con C.I.F. Nº B-65940686, e inscrita en el Registro Mercantil de Barcelona, Tomo 43573, Folio 214, Hoja  B-432621, Inscripción 1. </p>\\n\\n    <h5>2. ¿Qué es Cellove®?</h5>\\n    <p> Cellove® es una página web que facilita y promueve las relaciones interpersonales a través de Internet.</p>\\n\\n    <h5>3. ¿Los servicios de Cellove® son gratuitos?</h5>\\n    <p> Cellove® ofrece algunos servicios gratuitos y otros de pago, los que se detallarán mas adelante. </p>\\n\\n    <h5>4. ¿Quiénes pueden ser usuarios de Cellove®? </h5>\\n    <p>Pueden ser usuarios de Cellove® todas aquellas personas que sean mayores de edad y que por su libre decisión completen el proceso de registro en Cellove®.</p>\\n\\n\\n    <h4>B. CONDICIONES DE REGISTRO Y USO: </h4>\\n\\n    <p>1. Usuario: Podrá ser usuario de Cellove® cualquier persona que sea mayor de edad según la legislación de su país. Para adquirir la condición de usuario, la persona que así lo desee, debe completar todos los datos requeridos en los formularios de registro. Siendo esta la única forma de acceder a los servicios gratuitos de Cellove®. Los servicios de pago de Cellove® requerirán, además de todo lo exigido para los servicios gratuitos, el pago del precio correspondiente a cada producto que el Usuario contrate.</p>\\n\\n    <p>2. Acceso: El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos.</p>\\n\\n    <p>3. Tipos de Usuarios: Existen diferentes tipos de Usuarios en Cellove®: “Chico”, “Chica”, “Celestino” y “Celestina”. “Chico” y “Chica” son aquellos usuarios que buscan relacionarse con otros Usuarios.  “Celestino” y “Celestina” son aquellos usuarios que vinculados a algún “Chico” y/o “Chica”, promueven el encuentro de estos con otros “Chico” y/o “Chica”.  </p>\\n\\n    <p>4. Incorporación de información y contenidos: A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®.\\n    En los espacios de uso privado para los Usuarios, los datos allí registrados son accesibles única y exclusivamente para los usuarios que la compartan. Nosotros respetamos su derecho a la propiedad del contenido creado o almacenado por usted.  A menos que sea permitido específicamente por usted, su uso de los servicios prestados por Cellove® no le otorga a Cellove®, la licencia para usar, reproducir, adaptar, modificar, publicar o distribuir el contenido creado por usted o almacenarlos en cuentas de uso comercial, o cualquier otro propósito similar. Sin embargo, usted otorga su permiso al acceder a Cellove® para que Cellove®, pueda copiar, distribuir, almacenar, transmitir, volver a formatear, mostrar públicamente y ejecutar públicamente el contenido de su cuenta de usuario solamente en el caso de tener que proporcionarle servicios de Cellove®, previamente autorizados por usted. De forma especial usted acepta que se realice copia de seguridad de sus datos y que estos se conserven en las instalaciones habilitadas por Cellove®, con el fin de proteger su información y la integridad de esta frente a posibles daños del sistema.</p>\\n\\n    <p>5. Contenido generado por usuarios: Usted puede transmitir o publicar contenido creado por usted con los servicios ofrecidos a tal efecto por Cellove®. Usted será el único responsable de dicho contenido y las consecuencias de su transmisión o publicación. Todo el contenido hecho público podría ser accesible al público a través de Internet y puede ser rastreado e indexado por los motores de búsqueda. Usted es responsable de asegurarse de no poner ningún contenido privado a disposición del público.</p>\\n    <p> Cualquier contenido que usted pueda recibir de otros usuarios a través de Cellove®, se le proporciona TAL CUAL para su información y uso personal y que se compromete a no utilizar, copiar, reproducir, distribuir, transmitir, difundir, exhibir, vender, licenciar o explotar el contenido para cualquier propósito, sin el consentimiento expreso y por escrito de la persona que posee los derechos de dicho contenido. En el curso de la utilización de cualquiera de los Servicios, si Usted se encuentra con cualquier contenido con copyright (s) o cualquier otra característica de protección contra copia(s), usted se compromete a no eliminar el aviso de copyright como desactivar dicha función de protección contra copia(s).  Usted acepta expresamente que Cellove® tendrá el derecho de bloquear el acceso o remover dicho contenido puesto a disposición por usted, si Cellove® recibe quejas sobre cualquier ilegalidad o violación de los derechos de terceros en el contenido. Usted consiente expresamente que la determinación de las cuestiones de ilegalidad o violación de los derechos de terceros de este contenido se  determine por el agente designado por Cellove® para este propósito.</p>\\n\\n    <p>Para denunciar por ilegalidad o violación de los derechos de terceros un contenido transmitido o publicado al utilizar los Servicios de Cellove®, o desea protestar contra cualquier bloqueo o eliminación del contenido de Cellove® póngase en contacto con el departamento legal de Cellove®, en cellove@cellove.es </p>\\n\\n\\n    <h4>C. OBLIGACIONES: </h4>\\n\\n    <p>1. Generales: Es una obligación general de cualquier Usuario, no publicar contenidos ofensivos contra otros usuarios o contra Cellove®. No publicar contenidos que el mismo Usuario pretenda queden en la esfera de su intimidad personal, No infringir la propiedad industrial e intelectual de terceros o de Cellove® y de tomar las precauciones necesarias en los encuentros personales con otro Usuario. </p>\\n\\n    <p>2. De Cellove®: Cellove® se obliga a través de una página de Internet, a prestar de manera ininterrumpida, siempre que diferentes cuestiones técnicas se lo permitan, un servicio de facilitación y promoción de encuentros interpersonales. CELLOVE SOCIAL NETWORK, S.L. no tiene por objeto, ser mediador, ni garantiza el cumplimiento de encuentros establecidos entre sus Usuarios. CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la información o contenidos a los que pueda accederse desde los enlaces o hipervínculos a otras páginas web que se inserten en Cellove®.</p>\\n\\n    <p>3. Del Usuario: Cualquier Usuario está obligado a no publicar contenidos no ajustados a su persona y/o realidad personal. Es obligación de todos los Usuarios el no publicar datos personales o de contacto de cualquier otro Usuario o de terceros. Es obligación de todos los Usuarios, utilizar Cellove® solo con fines personales y nunca con fines profesionales. Todos los Usuarios deben mantener en secreto la contraseña brindada por Cellove®. Queda expresamente prohibida la incorporación de información y los contenidos:</p>\\n\\n    <blockquote>\\n\\n      <p>3.1 Que resulten contrarios a la ley, a la moral, a las buenas costumbres, al orden público establecido o que tengan fines ilícitos, prohibidos o que puedan ser lesivos de derechos e intereses de terceros. </p>\\n\\n      <p>3.2 Que, sin estar comprendidos en el apartado anterior, puedan considerarse como un trato difamatorio, vejatorio o simplemente desconsiderado para personas o instituciones; o de alguna forma puedan identificarse con supuestos de discriminación de las personas por razón de su nacimiento, raza, origen étnico, sexo, religión, opinión o cualquier otra circunstancia personal o social. </p>\\n\\n      <p>3.3 Que cuestionen o pongan en duda el buen nombre, profesionalidad o proyección social de las actividades desarrolladas por Cellove®. En particular, no se puede usar Cellove® para canalizar quejas o reclamaciones relacionadas con los productos y los servicios que comercialice CELLOVE SOCIAL NETWORK, S.L.</p>\\n    </blockquote>\\n\\n    <h4>D. PROPIEDAD INTELECTUAL E INDUSTRIAL:</h4>\\n\\n    <p>Los derechos de propiedad intelectual e industrial sobre la plataforma tecnológica, los instrumentos técnicos, sistemas informáticos y contenidos de  (bases de datos, información, imágenes, diseños, gráficos, formatos y códigos en cualquier lenguaje de programación), excepción hecha de los contenidos incorporados por los Usuarios conforme a estas condiciones, corresponden a CELLOVE SOCIAL NETWORK, S.L. por ser de su propiedad o haber obtenido previamente las autorizaciones pertinentes. En consecuencia, queda prohibida su reproducción, distribución, comunicación pública y transformación sin su autorización expresa. Igualmente, queda prohibido todo tipo de uso de los nombres comerciales, marcas o signos distintivos de cualquier clase, titularidad de Cellove® o CELLOVE SOCIAL NETWORK, S.L., sin su autorización expresa. El registro como Usuario en Cellove® no otorga otro derecho, que el de uso de la plataforma conforme a las presentes condiciones de uso, sin conceder a los Usuarios ningún otro derecho que no esté expresamente contemplado en los presentes Términos y Condiciones de Uso.</p>\\n\\n    <h4>E. PUBLICIDAD Y COMUNICACIONES COMERCIALES: </h4>\\n\\n    <p>Comunicaciones de Cellove®: El uso de Cellove® puede incluir ciertas comunicaciones de Cellove®, tales como anuncios de servicio, mensajes administrativos y boletines informativos. Usted entiende que estas comunicaciones se consideran parte de la utilización de Cellove®. Como parte de nuestra política para ofrecerle total privacidad, ponemos a su disposición la opción de optar por dejar de recibir boletines de noticias. Sin embargo, no podrá optar por dejar de recibir anuncios de servicio y mensajes administrativos. </p>\\n\\n    <h4>F. INCUMPLIMIENTO DE LAS CONDICIONES DE USO:</h4>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. podrá adoptar las normas y medidas de seguridad que en cada momento considere oportunas para garantizar que el acceso y la participación por parte de los Usuarios de Cellove® se desarrolla de acuerdo con las condiciones de uso y con sujeción a lo dispuesto en la normativa vigente aplicable.\\n    Sin necesidad de cumplir o realizar ningún trámite o comunicación previa, CELLOVE SOCIAL NETWORK, S.L. podrá, en cualquier momento: </p>\\n    <ul>\\n      <li>- Bloquear temporalmente o retirar de forma definitiva la información pública y los contenidos que se incorporen a la red pública de Cellove® cuando tenga la sospecha o la certeza de que los mismos pueden infringir lo dispuesto en las condiciones de uso o en la normativa legal aplicable.</li>\\n      <li>- Restringir o suspender la participación en la red de Cellove®, de cualquier Usuario e, incluso, expulsarle de forma definitiva en caso de incumplimiento de cualquiera de las condiciones de uso o de la normativa legal aplicable.</li>\\n    </ul>\\n\\n\\n    <h4>G. RESPONSABILIDADES:</h4>\\n\\n    <p>Usted entiende y acepta que el uso del servicio de Cellove® se realiza bajo su propio riesgo. Cellove® NO garantiza bajo ningún concepto la seguridad de sus usuarios en los casos de encuentros personales y/o virtuales, y recomienda adoptar las medidas de seguridad habituales en este tipo de encuentros. Cellove® presta el servicio de forma TAL CUAL y, según disponibilidad. CELLOVE SOCIAL NETWORK, S.L. no garantiza que el servicio no sea  interrumpido, oportuno, seguro o libre de virus. El uso de cualquier material descargado u obtenido a través de los servicios de Cellove® se realiza por su propia cuenta y riesgo y usted será el único responsable de cualquier daño a su sistema informático, teléfono móvil, dispositivo inalámbrico o pérdida o deterioro de datos. Ningún consejo o información, oral o escrita, obtenida por usted de Cellove®, o sus empleados o representantes será una garantía fuera de lo expresamente contenido en estos términos y condiciones. Usted como Usuario, acepta que CELLOVE SOCIAL NETWORK, S.L., en ningún caso, se hace responsable por los daños accidentales, indirectos, especiales, punitivos, o daño alguno, como pueden ser los daños por difamación, daños morales o violación de su intimidad, o de otro tipo de pérdida o daños, derivados desde o causados por su uso o imposibilidad de usar el servicio de Cellove®. CELLOVE SOCIAL NETWORK, S.L. no responderá en caso de daños y perjuicios ocasionados, por negligencia en el uso y custodia de la clave de acceso o mala gestión de la misma por su usuario titular incluyendo los daños por un uso no autorizado por terceros. CELLOVE SOCIAL NETWORK, S.L. no responderá por casos de fuerza mayor. CELLOVE SOCIAL NETWORK, S.L. se exonera de toda responsabilidad por la información y contenidos que los Usuarios incorporen a Cellove®, y por la utilización que de los mismos realicen otros Usuarios o terceros ajenos a la red de Cellove®. </p>\\n\\n    <p>Responsabilidad personal de los usuarios: Cada Usuario responderá de los daños y perjuicios causados a CELLOVE SOCIAL NETWORK, S.L. y/o a otros Usuarios y/o a terceros por el incumplimiento de cualquiera de las condiciones de uso. </p>\\n\\n\\n    <h4>H. BAJA DE USUARIO:</h4>\\n\\n    <p>El acceso y uso de Cellove® tiene una duración indefinida, con sujeción a las condiciones de uso. En cualquier momento, un usuario podrá instar su baja  a través de la funcionalidad habilitada en el entorno de Cellove®, sin necesidad de ningún otro trámite. Así mismo, Cellove® podrá dar por finalizada la participación de un usuario de Cellove® por incumplimiento de las condiciones aceptadas en este documento. Los datos referidos a los Usuarios, así como la información y los contenidos aportados por estos, se bloquearán, conservándose únicamente para la atención de las responsabilidades que, en su caso, se deriven para CELLOVE SOCIAL NETWORK, S.L. por el tiempo que dure el plazo de prescripción de estas. Cumplido el citado plazo, los datos, información y contenidos mencionados serán suprimidos.</p>\\n\\n\\n    <h4>I. CARGOS Y PAGOS:</h4>\\n\\n    <p>El uso de servicios de pago habilitados por Cellove® son los siguientes: </p>\\n\\n    <ul>\\n      <li>a. Pase 1: Permite el uso de cien (100) mensajes privados, un (1) Chat simultáneo, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase 1 es de un euro (1 €) al mes (IVA incluido). </li>\\n\\n      <li>b. Pase 2: Permite el uso de trescientos (300) mensajes privados, tres (3) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase 2 es de tres euros (3 €) al mes (IVA incluido).</li>\\n\\n      <li>c. Pase 3: Permite el uso ilimitado de mensajes privados, el uso ilimitado de Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, sin publicidad en la navegación y opciones de privacidad avanzadas. El precio aplicable al contratar el Pase 3 es de seis euros (6 €) al mes (IVA incluido).</li>\\n\\n    </ul>\\n\\n    <p>La compra se realizará mediante plataforma de pago vía tarjeta de crédito o transferencia bancaria o cualquier otro sistema que Cellove® implante a tal efecto.</p>\\n\\n    <p>El uso del servicio libre de pago, habilitado por Cellove®, es el siguiente: </p>\\n\\n    <p>Pase free: Permite acceso veinticuatro (24) horas y navegación ilimitada con publicidad en www.cellove.com, y permite recibir \"Mensajes\", \"Chats\", \"Propuesta de actividad\" y \"¿Hacéis buena pareja?\", sin permitir contestar a dichas acciones.</p>\\n\\n    <h4>J. PROTECCIÓN DE DATOS:</h4>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L., sociedad de nacionalidad española con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), es la titular del fichero generado con los datos de carácter personal suministrados por los usuarios registrados.</p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L, es la prestación de los servicios de www.cellove.com, descritos con detalle en estos términos y condiciones generales. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente.</p>\\n\\n    <p>La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos. </p>\\n\\n    <p>El usuario registrado comprende y acepta de forma expresa que la finalidad del fichero incluye el uso de sus datos para efectuar mejoras en el servicio de www.cellove.com, tareas básicas de administración y comunicación a los usuarios de incidencias del servicio, por parte de CELLOVE SOCIAL NETWORK, S.L., incluyendo asimismo el uso de sus datos por CELLOVE SOCIAL NETWORK, S.L. para enviar ofertas, novedades y eventuales contrataciones, destinadas a sus usuarios, de otros productos y servicios de CELLOVE SOCIAL NETWORK, S.L.</p>\\n\\n    <p>El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de las presentes condiciones generales y política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas.</p>\\n\\n    <p>Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com.</p>\\n\\n    <p>Por la propia naturaleza del servicio prestado por www.cellove.com, los usuarios registrados comprenden y aceptan que el ejercicio de su derecho de cancelación u oposición implicará su cese en su uso de los servicios de facilitación y promoción de relaciones interpersonales prestadas por www.cellove.com. </p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. ha implantado las medidas de seguridad técnicas y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal, evitando su alteración, pérdida, tratamiento y/o acceso no autorizado, de conformidad con el estado de la tecnología.</p>\\n\\n    <p>CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la veracidad de los datos facilitados, de los cuales el usuario responderá, en cualquier caso, reservándose CELLOVE SOCIAL NETWORK, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en derecho.</p>\\n\\n    <h4>K. LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h4>\\n\\n    <p>Las presentes condiciones de uso, las Condiciones Particulares e instrucciones que, en su caso, CELLOVE SOCIAL NETWORK, S.L. a través de Cellove® establezca y, en general, las relaciones entre CELLOVE SOCIAL NETWORK, S.L. y los usuarios se encuentran sometidas a la legislación y jurisdicción españolas. Para cualquier divergencia surgida de las presentes condiciones de uso, ambas partes se someten expresamente a los juzgados y tribunales de la ciudad de Barcelona con renuncia a su propio fuero, si este fuese otro.</p>"
-msgstr ""
-
 msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
 msgstr ""
 
-msgid "A través de Cellove podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones muy potentes para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc."
+msgid "A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®."
+msgstr ""
+
+msgid "A través de Cellove podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc."
+msgstr ""
+
+msgid "ATENCIÓN A LOS USUARIOS"
+msgstr ""
+
+msgid "Acceso"
 msgstr ""
 
 msgid "Acceso de usuarios registrados"
@@ -145,6 +142,9 @@ msgid "Aceptar actividad"
 msgstr ""
 
 msgid "Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove."
+msgstr ""
+
+msgid "Activar navegación oculta"
 msgstr ""
 
 msgid "Actividad aceptada"
@@ -162,7 +162,10 @@ msgstr ""
 msgid "Actividad reciente"
 msgstr ""
 
-msgid "Actividades"
+msgid "Actualiza tu cuenta"
+msgstr ""
+
+msgid "Actualiza tu cuenta a premium ahora para poder disfrutar de todas las funcionalidades de Cellove."
 msgstr ""
 
 msgid "Actualización a usuari@ premium se ha realizado correctamente"
@@ -174,9 +177,6 @@ msgstr ""
 msgid "Afines cerca de ti..."
 msgstr ""
 
-msgid "Afinidad"
-msgstr ""
-
 msgid "Ahora mismo estoy"
 msgstr ""
 
@@ -184,6 +184,15 @@ msgid "Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he le
 msgstr ""
 
 msgid "Alcohol"
+msgstr ""
+
+msgid "Alguien cree que hace buena pareja contigo"
+msgstr ""
+
+msgid "Alguien ha visitado tu perfil"
+msgstr ""
+
+msgid "Algun@s usuari@s registrad@s en Cellove"
 msgstr ""
 
 msgid "Alta<br>Celestin@<br>Gratis"
@@ -219,7 +228,13 @@ msgstr ""
 msgid "Anna & Joan"
 msgstr ""
 
+msgid "Anterior"
+msgstr ""
+
 msgid "Anuncios TV"
+msgstr ""
+
+msgid "Anuncios de los propios Usuarios"
 msgstr ""
 
 msgid "Apellidos"
@@ -249,6 +264,9 @@ msgstr ""
 msgid "Años"
 msgstr ""
 
+msgid "BAJA DE USUARIO"
+msgstr ""
+
 msgid "BLOQUEAR"
 msgstr ""
 
@@ -264,7 +282,13 @@ msgstr ""
 msgid "Bloquear Usuario"
 msgstr ""
 
+msgid "Bloquear temporalmente o retirar de forma definitiva la información pública y los contenidos que se incorporen a la red pública de Cellove® cuando tenga la sospecha o la certeza de que los mismos pueden infringir lo dispuesto en las condiciones de uso o en la normativa legal aplicable."
+msgstr ""
+
 msgid "Borrar mensajes"
+msgstr ""
+
+msgid "Buena pareja"
 msgstr ""
 
 msgid "Busca"
@@ -279,6 +303,9 @@ msgstr ""
 msgid "Busco"
 msgstr ""
 
+msgid "Búsqueda avanzada"
+msgstr ""
+
 msgid "Búsqueda borrada"
 msgstr ""
 
@@ -291,16 +318,37 @@ msgstr ""
 msgid "Búsquedas"
 msgstr ""
 
+msgid "CARGOS Y PAGOS"
+msgstr ""
+
+msgid "CELLOVE SOCIAL NETWORK, S.L. es una sociedad de nacionalidad española, con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), con C.I.F. Nº B-65940686, e inscrita en el Registro Mercantil de Barcelona, Tomo 43573, Folio 214, Hoja  B-432621, Inscripción 1."
+msgstr ""
+
+msgid "CELLOVE SOCIAL NETWORK, S.L. ha implantado las medidas de seguridad técnicas y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal, evitando su alteración, pérdida, tratamiento y/o acceso no autorizado, de conformidad con el estado de la tecnología."
+msgstr ""
+
+msgid "CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la veracidad de los datos facilitados, de los cuales el usuario responderá, en cualquier caso, reservándose CELLOVE SOCIAL NETWORK, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en derecho."
+msgstr ""
+
+msgid "CELLOVE SOCIAL NETWORK, S.L. podrá adoptar las normas y medidas de seguridad que en cada momento considere oportunas para garantizar que el acceso y la participación por parte de los Usuarios de Cellove® se desarrolla de acuerdo con las condiciones de uso y con sujeción a lo dispuesto en la normativa vigente aplicable."
+msgstr ""
+
+msgid "CELLOVE SOCIAL NETWORK, S.L., sociedad de nacionalidad española con domicilio social en Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), es la titular del fichero generado con los datos de carácter personal suministrados por los usuarios registrados."
+msgstr ""
+
+msgid "CONDICIONES DE REGISTRO Y USO"
+msgstr ""
+
 msgid "CP"
+msgstr ""
+
+msgid "CUESTIONES PRELIMINARES"
 msgstr ""
 
 msgid "Cambia tu foto de perfil"
 msgstr ""
 
 msgid "Cambiar configuración"
-msgstr ""
-
-msgid "Cambiar radio"
 msgstr ""
 
 msgid "Cambios guardados."
@@ -321,16 +369,28 @@ msgstr ""
 msgid "Català"
 msgstr ""
 
-msgid "Celestin@ invitado!"
-msgstr ""
-
 msgid "Celestin@s"
 msgstr ""
 
 msgid "Cellove es una potente herramienta online para encontrar perfiles afines a ti, pero además cuenta con nuevas funciones que mejoran su rendimiento y resultado: conversar con usuari@s, enviarles mensajes, proponer actividades, comprobar si hacéis buena pareja, etc... Además su motor y diseño es muy potente y consigue presentarte perfiles de interés según la relación de muchos parámetros, lo cual hace que aproveches mejor tu tiempo y consigas tener más éxito y sobretodo menos sorpresas en tus citas."
 msgstr ""
 
-msgid "Cellove te ofrece todas las herramientas y todo su potencial para encontar pareja o amistad por tan solo %{link}."
+msgid "Cellove es una red social GRATIS de contactos online donde fácilmente puedes conocer a gente nueva, interactuar, ampliar tu círculo de amistades y encontrar la pareja que siempre has soñado tener."
+msgstr ""
+
+msgid "Cellove te ofrece todas las herramientas y todo su potencial para encontar pareja o amistad completamente GRATIS. Sin duda,  podrás hacer realidad tu objetivo más íntimo y emocional, encontrar esa persona especial, sea amor o amistad duradera."
+msgstr ""
+
+msgid "Cellove® es Marca registrada de CELLOVE SOCIAL NETWORK, S.L."
+msgstr ""
+
+msgid "Cellove® es una página web que facilita y promueve las relaciones interpersonales a través de Internet."
+msgstr ""
+
+msgid "Cellove® ofrece algunos servicios gratuitos y otros de pago, los que se detallarán mas adelante."
+msgstr ""
+
+msgid "Cellove® se obliga a través de una página de Internet, a prestar de manera ininterrumpida, siempre que diferentes cuestiones técnicas se lo permitan, un servicio de facilitación y promoción de encuentros interpersonales. CELLOVE SOCIAL NETWORK, S.L. no tiene por objeto, ser mediador, ni garantiza el cumplimiento de encuentros establecidos entre sus Usuarios. CELLOVE SOCIAL NETWORK, S.L. no se hace responsable de la información o contenidos a los que pueda accederse desde los enlaces o hipervínculos a otras páginas web que se inserten en Cellove®."
 msgstr ""
 
 msgid "Celoso"
@@ -340,6 +400,9 @@ msgid "Cerrar"
 msgstr ""
 
 msgid "Chat"
+msgstr ""
+
+msgid "Chat desactivado. Usuario desconectado."
 msgstr ""
 
 msgid "Chatear"
@@ -363,6 +426,12 @@ msgstr ""
 msgid "Complexión..."
 msgstr ""
 
+msgid "Comunicaciones comerciales de terceros anunciantes"
+msgstr ""
+
+msgid "Comunicaciones de Cellove®"
+msgstr ""
+
 msgid "Con Cellove, ¡tus citas ya no serán a ciegas!"
 msgstr ""
 
@@ -375,7 +444,7 @@ msgstr ""
 msgid "Con hijos"
 msgstr ""
 
-msgid "Con nuestro servicio Celestin@ completamente gratuito podrás hacerlo, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad, lo cual hará que nuestro sistema de presentación de usuari@s sea más útil y potente para éste."
+msgid "Con nuestra función <b>Celestin@</b> gratuita podrás hacerlo, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad."
 msgstr ""
 
 msgid "Con una dieta"
@@ -411,6 +480,9 @@ msgstr ""
 msgid "Contacto"
 msgstr ""
 
+msgid "Contenido generado por usuarios"
+msgstr ""
+
 msgid "Contraseña"
 msgstr ""
 
@@ -432,7 +504,10 @@ msgstr ""
 msgid "Crear anuncio"
 msgstr ""
 
-msgid "Cuando alguien me añada a sus favoritos"
+msgid "Cualquier Usuario está obligado a no publicar contenidos no ajustados a su persona y/o realidad personal. Es obligación de todos los Usuarios el no publicar datos personales o de contacto de cualquier otro Usuario o de terceros. Es obligación de todos los Usuarios, utilizar Cellove® solo con fines personales y nunca con fines profesionales. Todos los Usuarios deben mantener en secreto la contraseña brindada por Cellove®. Queda expresamente prohibida la incorporación de información y los contenidos:"
+msgstr ""
+
+msgid "Cuando alguien indique que Hacemos buena pareja"
 msgstr ""
 
 msgid "Cuando alguien visite mi perfil"
@@ -441,7 +516,7 @@ msgstr ""
 msgid "Cuando le guste a alguien"
 msgstr ""
 
-msgid "Cuando reciba un nuevo mensaje"
+msgid "Cuando reciba un nuevo mensaje y/o actividad"
 msgstr ""
 
 msgid "Cuando un celestino me recomiende"
@@ -465,13 +540,37 @@ msgstr ""
 msgid "Datos incorrectos o faltantes"
 msgstr ""
 
+msgid "De Cellove®"
+msgstr ""
+
+msgid "De esta manera, tendrás la sensación de que conoces más aspectos de su vida, teniendo más seguridad y confianza en tus próximas citas."
+msgstr ""
+
 msgid "De pelo"
 msgstr ""
 
 msgid "De étnia"
 msgstr ""
 
+msgid "Debes ser mayor de edad."
+msgstr ""
+
+msgid "Del Usuario"
+msgstr ""
+
+msgid "Denunciar perfil a Cellove"
+msgstr ""
+
 msgid "Deporte"
+msgstr ""
+
+msgid "Desactivado. No cumples su franja de edad indicada."
+msgstr ""
+
+msgid "Desactivar cuenta"
+msgstr ""
+
+msgid "Desactivar recomendación"
 msgstr ""
 
 msgid "Desconectar"
@@ -495,25 +594,46 @@ msgstr ""
 msgid "Distancia"
 msgstr ""
 
-msgid "Día"
-msgstr ""
-
 msgid "ENVIAR"
 msgstr ""
 
 msgid "Edad"
 msgstr ""
 
+msgid "Editar Perfil"
+msgstr ""
+
 msgid "Editar mi perfil"
+msgstr ""
+
+msgid "El acceso y uso de Cellove® tiene una duración indefinida, con sujeción a las condiciones de uso. En cualquier momento, un usuario podrá instar su baja  a través de la funcionalidad habilitada en el entorno de Cellove®, sin necesidad de ningún otro trámite. Así mismo, Cellove® podrá dar por finalizada la participación de un usuario de Cellove® por incumplimiento de las condiciones aceptadas en este documento. Los datos referidos a los Usuarios, así como la información y los contenidos aportados por estos, se bloquearán, conservándose únicamente para la atención de las responsabilidades que, en su caso, se deriven para CELLOVE SOCIAL NETWORK, S.L. por el tiempo que dure el plazo de prescripción de estas. Cumplido el citado plazo, los datos, información y contenidos mencionados serán suprimidos."
+msgstr ""
+
+msgid "El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos."
 msgstr ""
 
 msgid "El matrimonio es algo maravilloso"
 msgstr ""
 
-msgid "El objetivo de nuesrta herramienta Celestin@ es facilitar y hacer más accesible nuestro potente sistema para encontrar a esa persona especial, por ejemplo a usuari@s poco experimentados, con prejuicios o que simplemente no conozcan o no se atrevan a utilizar una plataforma de contactos, hoy en día muy extendida y utilizada ya por mucha gente."
+msgid "El uso de Cellove® puede incluir ciertas comunicaciones de Cellove®, tales como anuncios de servicio, mensajes administrativos y boletines informativos. Usted entiende que estas comunicaciones se consideran parte de la utilización de Cellove®. Como parte de nuestra política para ofrecerle total privacidad, ponemos a su disposición la opción de optar por dejar de recibir boletines de noticias. Sin embargo, el usuario no podrá optar por dejar de recibir anuncios de servicio y/o mensajes administrativos, en tanto que no se dé de baja según lo establecido en el apartado H. Estas comunicaciones comerciales serán visibles para todos los usuarios de Cellove®."
 msgstr ""
 
-msgid "El registro como Celestin@ es muy fácil y rápido, en segundos estarás recomendando y el destinatario recibirá un e-mail para que pueda confirmar su registro gratuito como usuario en cellove, a partir de aquí ya contará con tu soporte y podrá acceder a todos los usuari@s y funciones que desee."
+msgid "El uso de este servicio está libre de pago y permite el uso ilimitado de mensajes privados, dos (2) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, con publicidad en la navegación. El usuario entiende y acepta de forma expresa que con el fin de prestar cada vez mejor servicio a sus usuarios, Cellove® cada tanto tiempo podrá modificar y/o adaptar los servicios que incorpora este Pase, en cuyo caso informará a los usuarios de aquellas condiciones y/o requerimientos que hayan sido introducidos, que deberán ser aceptados por los Usuarios a fin de seguir haciendo uso del servicio."
+msgstr ""
+
+msgid "El uso de este servicio permite el uso ilimitado de mensajes privados y de Chats simultáneos, acceso las veinticuatro (24) horas y navegación ilimitada y navegación oculta, previa activación, en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase VIP es de cuarenta y siete euros con cuarenta céntimos (47,4 €) al año (IVA incluido)."
+msgstr ""
+
+msgid "El uso de servicios de pago habilitados por Cellove® son los siguientes"
+msgstr ""
+
+msgid "El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de los Términos y Condiciones y esta política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas."
+msgstr ""
+
+msgid "El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L., es la prestación de los servicios de www.cellove.com, descritos con detalle en los Términos y Condiciones. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente."
+msgstr ""
+
+msgid "El usuario registrado comprende y acepta de forma expresa que la finalidad del fichero incluye el uso de sus datos para efectuar mejoras en el servicio de www.cellove.com, tareas básicas de administración y comunicación a los usuarios de incidencias del servicio, por parte de CELLOVE SOCIAL NETWORK, S.L., incluyendo asimismo el uso de sus datos por CELLOVE SOCIAL NETWORK, S.L. para enviar ofertas, novedades y eventuales contrataciones, destinadas a sus usuarios, de otros productos y servicios de CELLOVE SOCIAL NETWORK, S.L."
 msgstr ""
 
 msgid "Elige entre uno de nuestros planes:"
@@ -540,9 +660,6 @@ msgstr ""
 msgid "Eliminar imagen"
 msgstr ""
 
-msgid "Eliminar recomendación"
-msgstr ""
-
 msgid "Email"
 msgstr ""
 
@@ -552,16 +669,16 @@ msgstr ""
 msgid "En Cellove lo más importante eres tú y que encuentres exactamente lo que buscas. Por ello, y porque el tiempo es oro, contamos con nuestra función exclusiva llamada"
 msgstr ""
 
+msgid "En los espacios de uso privado para los Usuarios, los datos allí registrados son accesibles única y exclusivamente para los usuarios que la compartan. Nosotros respetamos su derecho a la propiedad del contenido creado o almacenado por usted.  A menos que sea permitido específicamente por usted, su uso de los servicios prestados por Cellove® no le otorga a Cellove®, la licencia para usar, reproducir, adaptar, modificar, publicar o distribuir el contenido creado por usted o almacenarlos en cuentas de uso comercial, o cualquier otro propósito similar. Sin embargo, usted otorga su permiso al acceder a Cellove® para que Cellove®, pueda copiar, distribuir, almacenar, transmitir, volver a formatear, mostrar públicamente y ejecutar públicamente el contenido de su cuenta de usuario solamente en el caso de tener que proporcionarle servicios de Cellove®, previamente autorizados por usted. De forma especial usted acepta que se realice copia de seguridad de sus datos y que estos se conserven en las instalaciones habilitadas por Cellove®, con el fin de proteger su información y la integridad de esta frente a posibles daños del sistema."
+msgstr ""
+
 msgid "En mi día a día no tenía ocasion de conocer a gente interesante, en Cellove le conocí y supe desde el primer momento que él era esa persona que necesitaba en mi vida."
 msgstr ""
 
 msgid "En mi tiempo libre me gusta:"
 msgstr ""
 
-msgid "En un radio de"
-msgstr ""
-
-msgid "Encontrar a tu pareja ideal es muy fácil. Solo tienes que %{register_link}, especificar que características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que más se adecuen y mejor encajen con tu perfil ¡para que seas tu quien elija!"
+msgid "Encontrar a tu pareja ideal es muy fácil. Sólo tienes que %{register_link}, especificar qué características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que mejor encajen con tu perfil ¡para que seas tú quién elija!"
 msgstr ""
 
 msgid "Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas."
@@ -603,10 +720,10 @@ msgstr ""
 msgid "Es muy fácil y efectivo. %{link} para encontrar personas afines por edad, gustos, estilo de vida..."
 msgstr ""
 
-msgid "Es muy majo y muy flamenco."
+msgid "Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove."
 msgstr ""
 
-msgid "Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove."
+msgid "Es una obligación general de cualquier Usuario, no publicar contenidos ofensivos contra otros usuarios o contra Cellove®. No publicar contenidos que el mismo Usuario pretenda queden en la esfera de su intimidad personal, No infringir la propiedad industrial e intelectual de terceros o de Cellove® y de tomar las precauciones necesarias en los encuentros personales con otro Usuario."
 msgstr ""
 
 msgid "Eso incluye desde las visitas a tu perfil hasta el número de mensajes enviados/recibidos."
@@ -627,6 +744,9 @@ msgstr ""
 msgid "Estado civil"
 msgstr ""
 
+msgid "Estado: "
+msgstr ""
+
 msgid "Estar con la familia"
 msgstr ""
 
@@ -637,6 +757,9 @@ msgid "Estar solo visible para usuari@s de entre:"
 msgstr ""
 
 msgid "Estar tranquilo en casa"
+msgstr ""
+
+msgid "Estar visible solo para los usuari@s con franja de edad indicada en: \"Editar perfil\" + \"Que buscas\""
 msgstr ""
 
 msgid "Esther & Victor"
@@ -651,7 +774,7 @@ msgstr ""
 msgid "Estás a punto de eliminar a un Celestin@ de tu lista. Si lo haces, lo que ha dicho sobre ti desaparecerá de tu perfil. ¿Te lo has pensado bien?"
 msgstr ""
 
-msgid "Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil y no podrás recomendarlo de nuevo. ¿Te lo has pensado bien?"
+msgid "Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil. ¿Te lo has pensado bien?"
 msgstr ""
 
 msgid "Ex Pareja"
@@ -666,6 +789,9 @@ msgstr ""
 msgid "Exigente"
 msgstr ""
 
+msgid "Existen diferentes tipos de Usuarios en Cellove®: “Chico”, “Chica”, “Celestino” y “Celestina”. “Chico” y “Chica” son aquellos usuarios que buscan relacionarse con otros Usuarios.  “Celestino” y “Celestina” son aquellos usuarios que vinculados a algún “Chico” y/o “Chica”, promueven el encuentro de estos con otros “Chico” y/o “Chica”."
+msgstr ""
+
 msgid "Extrovertido"
 msgstr ""
 
@@ -673,9 +799,6 @@ msgid "Familiar"
 msgstr ""
 
 msgid "Familiar:"
-msgstr ""
-
-msgid "Fecha de alta"
 msgstr ""
 
 msgid "Fiel"
@@ -705,7 +828,13 @@ msgstr ""
 msgid "GRATIS"
 msgstr ""
 
+msgid "Generales"
+msgstr ""
+
 msgid "Generoso"
+msgstr ""
+
+msgid "Gracias a nuestro <b>sistema de Celestinos</b>, podrás comunicarte con sus familiares, amig@s o ex parejas."
 msgstr ""
 
 msgid "Guarda búsqueda"
@@ -741,19 +870,19 @@ msgstr ""
 msgid "Ha dicho:"
 msgstr ""
 
-msgid "Hace"
-msgstr ""
-
-msgid "Hace "
-msgstr ""
-
 msgid "Hacemos buena pareja"
 msgstr ""
 
 msgid "Has bloqueado estos ususarios. ¿Has cambiado de opinión?"
 msgstr ""
 
-msgid "Hay cuatro tipos de Celestin@s y su finalidad es mejorar el Índice Cellove de los usuarios registrados, por el siguiente orden:"
+msgid "Has desactivado esta recomendación."
+msgstr ""
+
+msgid "Has recibido una recomendación"
+msgstr ""
+
+msgid "Hay cuatro tipos de Celestin@s y su finalidad es mejorar el Índice Cellove de los usuarios registrados:"
 msgstr ""
 
 msgid "Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que invitas o cuantos celestinos tengas."
@@ -763,6 +892,9 @@ msgid "Hijos"
 msgstr ""
 
 msgid "Hábitos"
+msgstr ""
+
+msgid "INCUMPLIMIENTO DE LAS CONDICIONES DE USO"
 msgstr ""
 
 msgid "Idioma"
@@ -778,6 +910,9 @@ msgid "Ilimitados chats simultáneos"
 msgstr ""
 
 msgid "Ilimitados mensajes privados"
+msgstr ""
+
+msgid "Incorporación de información y contenidos"
 msgstr ""
 
 msgid "Indicanos el nombre con el que quieres guardar esta búsqueda para poderla utilizar cuando quieras de forma más ágil y con acceso directo en la zona izquierda de tu perfil."
@@ -807,6 +942,24 @@ msgstr ""
 msgid "Italiano"
 msgstr ""
 
+msgid "LEGISLACIÓN APLICABLE Y JURISDICCIÓN"
+msgstr ""
+
+msgid "La baja de un usuario VIP no interrumpe el servicio anual, este queda activo hasta su vencimiento, sin que quepa por parte de los usuarios reclamar la recuperación de los importes ya abonados o parte proporcional de los mismos, salvo en caso de incumplimiento debidamente probado, e injustificado, de los servicios que corresponde prestar a Cellove®, según se describen en estos Términos y Condiciones."
+msgstr ""
+
+msgid "La compra se realizará mediante plataforma de pago vía tarjeta de crédito, PAYPAL o transferencia bancaria o cualquier otro sistema que Cellove® implante a tal efecto."
+msgstr ""
+
+msgid "La contratación es anual y sin posibilidad de retorno del importe pagado si durante el periodo de contratación el Usuario VIP decide dejar de usar el servicio, este seguirá activo hasta la fecha de vencimiento. El pago es anual y el sistema de Cellove® pondrá en aviso al Usuario VIP para su renovación antes de su vencimiento."
+msgstr ""
+
+msgid "La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos."
+msgstr ""
+
+msgid "Las presentes condiciones de uso, las Condiciones Particulares e instrucciones que, en su caso, CELLOVE SOCIAL NETWORK, S.L. a través de Cellove® establezca y, en general, las relaciones entre CELLOVE SOCIAL NETWORK, S.L. y los usuarios se encuentran sometidas a la legislación y jurisdicción españolas. Para cualquier divergencia surgida de las presentes condiciones de uso, ambas partes se someten expresamente a los juzgados y tribunales de la ciudad de Barcelona con renuncia a su propio fuero, si este fuese otro."
+msgstr ""
+
 msgid "Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante."
 msgstr ""
 
@@ -822,6 +975,9 @@ msgstr ""
 msgid "Les he gustado"
 msgstr ""
 
+msgid "Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda."
+msgstr ""
+
 msgid "Localidad"
 msgstr ""
 
@@ -835,6 +991,18 @@ msgid "Logotipo"
 msgstr ""
 
 msgid "Logotipo & Slogan"
+msgstr ""
+
+msgid "Los derechos de propiedad intelectual e industrial sobre la plataforma tecnológica, los instrumentos técnicos, sistemas informáticos y contenidos de  (bases de datos, información, imágenes, diseños, gráficos, formatos y códigos en cualquier lenguaje de programación), excepción hecha de los contenidos incorporados por los Usuarios conforme a estas condiciones, corresponden a CELLOVE SOCIAL NETWORK, S.L. por ser de su propiedad o haber obtenido previamente las autorizaciones pertinentes. En consecuencia, queda prohibida su reproducción, distribución, comunicación pública y transformación sin su autorización expresa. Igualmente, queda prohibido todo tipo de uso de los nombres comerciales, marcas o signos distintivos de cualquier clase, titularidad de Cellove® o CELLOVE SOCIAL NETWORK, S.L., sin su autorización expresa. El registro como Usuario en Cellove® no otorga otro derecho, que el de uso de la plataforma conforme a las presentes condiciones de uso, sin conceder a los Usuarios ningún otro derecho que no esté expresamente contemplado en los presentes Términos y Condiciones de Uso."
+msgstr ""
+
+msgid "Los presentes Términos y Condiciones tienen por objeto regular el uso de Cellove® Al visitar y/o utilizar los servicios prestados por CELLOVE SOCIAL NETWORK, S.L. a través de su página web www.cellove.com u otras de su propiedad, vinculadas a los servicios aquí establecidos, usted expresamente acepta hacerlo de acuerdo a los presentes Términos y Condiciones Generales de Uso de Cellove y sus modificaciones futuras. CELLOVE SOCIAL NETWORK, S.L. utilizará todos los recursos a su alcance para notificar de forma anticipada a sus usuarios, cualquier modificación en los presentes Términos y Condiciones de Uso, pero es obligación del usuario, visitar periódicamente estos Términos y Condiciones para comprobar si han sido actualizados."
+msgstr ""
+
+msgid "Los usuarios de Cellove® pueden dirigir sus quejas y/o reclamaciones o solicitar información sobre el servicio ofertado o contratado por correo postal a CELLOVE SOCIAL NETWORK, S.L. Ronda del Mar 53, CP 08720 Vilafranca del Penedès, Barcelona (España), o por correo electrónico a cellove@cellove.com. "
+msgstr ""
+
+msgid "Los usuarios pueden denunciar ante Cellove® a otros usuarios bajo cuyos perfiles se presenten textos, imágenes y/o audios (y/o enlaces a textos, imágenes y/o audios) que les parezcan contrarios al respeto de la dignidad de las personas, razas, sexos, religiones, opiniones, nacionalidades, discapacidades, o cualesquiera otras circunstancias personales o sociales, y/o contrarios al orden público, perjudiciales para la protección de la juventud y la infancia y/o que infrinjan derechos de propiedad intelectual, insultos, injurias, calumnias, textos, imágenes y/o audios (y/o enlaces a textos, imágenes y/o audios) que describan escenas obscenas, comentarios desagradables de cualquier tipo, contrarios al espíritu del servicio de Cellove® y/o en general, cualesquiera contenidos contrarios a la legislación vigente. Cualquier usuario podrá denunciar las conductas de dichos usuarios ante Cellove®, que recibirá la denuncia, la valorará y adoptará una decisión sobre si expulsar, o no, y/o comunicar una advertencia al usuario denunciado, tras sopesar la gravedad de los hechos."
 msgstr ""
 
 msgid "Marcar como principal"
@@ -909,6 +1077,9 @@ msgstr ""
 msgid "Media<br>&<br>Prensa"
 msgstr ""
 
+msgid "Mejor Índice Cellove"
+msgstr ""
+
 msgid "Mejora tu índice Cellove"
 msgstr ""
 
@@ -921,12 +1092,6 @@ msgstr ""
 msgid "Mensajes y actividades"
 msgstr ""
 
-msgid "Mes"
-msgstr ""
-
-msgid "Mi codigo postal es el"
-msgstr ""
-
 msgid "Mi código postal es el"
 msgstr ""
 
@@ -934,9 +1099,6 @@ msgid "Mi estilo es"
 msgstr ""
 
 msgid "Mi nivel de estudios es"
-msgstr ""
-
-msgid "Mi perfil de Celestin@"
 msgstr ""
 
 msgid "Mis Celestin@s"
@@ -966,9 +1128,6 @@ msgstr ""
 msgid "Mostrando "
 msgstr ""
 
-msgid "Mostrar a los demás usuarios si estoy conectado"
-msgstr ""
-
 msgid "Más cercanos"
 msgstr ""
 
@@ -981,19 +1140,19 @@ msgstr ""
 msgid "Nací el"
 msgstr ""
 
-msgid "Navegación anónima"
-msgstr ""
-
 msgid "Navegación oculta"
-msgstr ""
-
-msgid "Nickname"
 msgstr ""
 
 msgid "Nivel"
 msgstr ""
 
 msgid "No creo en el matrimonio"
+msgstr ""
+
+msgid "No cumples su franja de edad indicada"
+msgstr ""
+
+msgid "No cumples su franja de edad indicada."
 msgstr ""
 
 msgid "No desaproveches esta oportunidad..."
@@ -1029,6 +1188,9 @@ msgstr ""
 msgid "No me ve"
 msgstr ""
 
+msgid "No quiero decirlo"
+msgstr ""
+
 msgid "No quiero especificar cuando"
 msgstr ""
 
@@ -1056,28 +1218,25 @@ msgstr ""
 msgid "Nombre"
 msgstr ""
 
+msgid "Nombre de usuario"
+msgstr ""
+
 msgid "Notificaciones por email"
 msgstr ""
 
 msgid "Nueva nota"
 msgstr ""
 
-msgid "Nueva recomendación"
-msgstr ""
-
-msgid "Nueva visita de perfil"
-msgstr ""
-
 msgid "Nuevo Mensaje"
 msgstr ""
 
-msgid "Nuevo hacemos buena pareja"
+msgid "Nuevo mensaje recibido"
 msgstr ""
 
-msgid "Nuevo me gusta"
+msgid "OBLIGACIONES"
 msgstr ""
 
-msgid "Nuevo mensaje"
+msgid "Objeto de los presentes términos y condiciones generales."
 msgstr ""
 
 msgid "Ocio"
@@ -1101,7 +1260,22 @@ msgstr ""
 msgid "Orgulloso"
 msgstr ""
 
+msgid "PROPIEDAD INTELECTUAL E INDUSTRIAL"
+msgstr ""
+
+msgid "PUBLICIDAD Y COMUNICACIONES COMERCIALES"
+msgstr ""
+
 msgid "Palabra clave"
+msgstr ""
+
+msgid "Para denunciar por ilegalidad o violación de los derechos de terceros un contenido transmitido o publicado al utilizar los Servicios de Cellove®, o desea protestar contra cualquier bloqueo o eliminación del contenido de Cellove® póngase en contacto con el departamento legal de Cellove®, en cellove@cellove.es."
+msgstr ""
+
+msgid "Pase GRATIS"
+msgstr ""
+
+msgid "Pase VIP"
 msgstr ""
 
 msgid "Pasear"
@@ -1113,10 +1287,13 @@ msgstr ""
 msgid "Pelo"
 msgstr ""
 
+msgid "Pendiente"
+msgstr ""
+
 msgid "Perfil %{progress}%% completado"
 msgstr ""
 
-msgid "Permitir que cualquiera pueda chatear conmigo"
+msgid "Perfil denunciado"
 msgstr ""
 
 msgid "Pero sobretodo, ven a menudo ;-)"
@@ -1134,7 +1311,10 @@ msgstr ""
 msgid "Población y código postal"
 msgstr ""
 
-msgid "Podrás incluir tus datos y las características de la persona que buscas sin coste alguno. Cellove te proporcionara gratis acceso a los perfiles compatibles y afines a ti. Podrás navegar ilimitadamente por Cellove, 24h al día durante todo el año y visualizar todos los perfiles que desees, características de estos, sus Celestin@s, que es lo que buscan, sus gustos, actividades... ¡Lo que quieras!"
+msgid "Podrá ser usuario de Cellove® cualquier persona que sea mayor de edad según la legislación de su país. Para adquirir la condición de usuario, la persona que así lo desee, debe completar todos los datos requeridos en los formularios de registro. Siendo esta la única forma de acceder a los servicios gratuitos de Cellove®. Los servicios de pago de Cellove® requerirán, además de todo lo exigido para los servicios gratuitos, el pago del precio correspondiente a cada producto que el Usuario contrate."
+msgstr ""
+
+msgid "Podrás incluir tus datos y las características de la persona que buscas sin coste alguno. Cellove te proporcionará gratis acceso a los perfiles compatibles y afines a ti. Podrás navegar ilimitadamente por Cellove, 24h al día durante todo el año y visualizar todos los perfiles que desees, saber sus gustos y características, crear actividades, saber si tiene Celestinos y hablar con ellos... ¡Lo que quieras!"
 msgstr ""
 
 msgid "Política de Privacidad"
@@ -1155,7 +1335,10 @@ msgstr ""
 msgid "Por confirmar"
 msgstr ""
 
-msgid "Porque te gusta ayudar a la gente que quieres:"
+msgid "Por la propia naturaleza del servicio prestado por www.cellove.com, los usuarios registrados comprenden y aceptan que el ejercicio de su derecho de cancelación u oposición implicará su cese en su uso de los servicios de facilitación y promoción de relaciones interpersonales prestadas por www.cellove.com."
+msgstr ""
+
+msgid "Porque te gusta ayudar a la gente que quieres…"
 msgstr ""
 
 msgid "Posesivo"
@@ -1185,16 +1368,25 @@ msgstr ""
 msgid "Publicidad en navegación"
 msgstr ""
 
+msgid "Pueden ser usuarios de Cellove® todas aquellas personas que sean mayores de edad y que por su libre decisión completen el proceso de registro en Cellove®."
+msgstr ""
+
 msgid "Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a %{name}, desde tu apartado de configuración."
 msgstr ""
 
 msgid "Puntua de 1 a 5 cada una de estas características"
 msgstr ""
 
+msgid "Puntuar"
+msgstr ""
+
 msgid "Que"
 msgstr ""
 
 msgid "Que "
+msgstr ""
+
+msgid "Que cuestionen o pongan en duda el buen nombre, profesionalidad o proyección social de las actividades desarrolladas por Cellove®. En particular, no se puede usar Cellove® para canalizar quejas o reclamaciones relacionadas con los productos y los servicios que comercialice CELLOVE SOCIAL NETWORK, S.L."
 msgstr ""
 
 msgid "Que dicen de ti"
@@ -1212,6 +1404,9 @@ msgstr ""
 msgid "Que no te molesten"
 msgstr ""
 
+msgid "Que resulten contrarios a la ley, a la moral, a las buenas costumbres, al orden público establecido o que tengan fines ilícitos, prohibidos o que puedan ser lesivos de derechos e intereses de terceros."
+msgstr ""
+
 msgid "Que sea"
 msgstr ""
 
@@ -1219,6 +1414,9 @@ msgid "Que trabaje en el sector"
 msgstr ""
 
 msgid "Que viva"
+msgstr ""
+
+msgid "Que, sin estar comprendidos en el apartado anterior, puedan considerarse como un trato difamatorio, vejatorio o simplemente desconsiderado para personas o instituciones; o de alguna forma puedan identificarse con supuestos de discriminación de las personas por razón de su nacimiento, raza, origen étnico, sexo, religión, opinión o cualquier otra circunstancia personal o social."
 msgstr ""
 
 msgid "Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?"
@@ -1236,10 +1434,10 @@ msgstr ""
 msgid "Quiero recibir la newsletter"
 msgstr ""
 
-msgid "Quiero recibir nuevos usuarios en mi zona"
+msgid "Quiero recibir sugerencias por email"
 msgstr ""
 
-msgid "Quiero recibir sugerencias por email"
+msgid "Quiero recomendar ahora"
 msgstr ""
 
 msgid "Quiero ser Celestin@"
@@ -1254,6 +1452,15 @@ msgstr ""
 msgid "Qué buscas"
 msgstr ""
 
+msgid "RESPONSABILIDADES"
+msgstr ""
+
+msgid "Reactivar cuenta"
+msgstr ""
+
+msgid "Reactivar recomendación"
+msgstr ""
+
 msgid "Realizar recomendación"
 msgstr ""
 
@@ -1266,28 +1473,28 @@ msgstr ""
 msgid "Recibidos"
 msgstr ""
 
+msgid "Recomendación acceptada"
+msgstr ""
+
+msgid "Recomendación enviada"
+msgstr ""
+
+msgid "Recomendación modificada"
+msgstr ""
+
+msgid "Recomendación negada"
+msgstr ""
+
+msgid "Recomendar"
+msgstr ""
+
 msgid "Recomendar Usuario"
 msgstr ""
 
 msgid "Recomendar usuari@"
 msgstr ""
 
-msgid "Recomendar usuari@ nuev@"
-msgstr ""
-
-msgid "Recomendar usuari@ registrad@"
-msgstr ""
-
 msgid "Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos."
-msgstr ""
-
-msgid "Recommendación acceptada"
-msgstr ""
-
-msgid "Recommendación enviada"
-msgstr ""
-
-msgid "Recommendación negada"
 msgstr ""
 
 msgid "Recuperar contraseña"
@@ -1300,6 +1507,9 @@ msgid "Registrarse en Cellove es totalmente gratuito"
 msgstr ""
 
 msgid "Registrate ahora"
+msgstr ""
+
+msgid "Registrate ahora gratis en Cellove.com"
 msgstr ""
 
 msgid "Registrate »"
@@ -1332,6 +1542,9 @@ msgstr ""
 msgid "Regístrate ahora mismo en Cellove, es muy fácil y rápido, y en segundos estarás viendo a usuari@s que buscan lo mismo que tu."
 msgstr ""
 
+msgid "Regístrate en Cellove, la red social GRATIS para encontrar el <b>amor y amistad</b> de forma fácil y rápida. <b>Chatea</b> con los usuari@s, enviales mensajes, <b>propónles actividades</b> e incluso podrás comprobar si hacéis buena pareja."
+msgstr ""
+
 msgid "Relación"
 msgstr ""
 
@@ -1347,10 +1560,19 @@ msgstr ""
 msgid "Responder Mensaje"
 msgstr ""
 
+msgid "Responsabilidad personal de los usuarios: Cada Usuario responderá de los daños y perjuicios causados a CELLOVE SOCIAL NETWORK, S.L. y/o a otros Usuarios y/o a terceros por el incumplimiento de cualquiera de las condiciones de uso."
+msgstr ""
+
+msgid "Restringir o suspender la participación en la red de Cellove®, de cualquier Usuario e, incluso, expulsarle de forma definitiva en caso de incumplimiento de cualquiera de las condiciones de uso o de la normativa legal aplicable."
+msgstr ""
+
 msgid "Resultados de la búsqueda"
 msgstr ""
 
 msgid "Romántico"
+msgstr ""
+
+msgid "Sabemos lo difícil y, al mismo tiempo, lo importante que es dar con tu media naranja o con una amistad duradera. Por eso, ofrecemos nuestra plataforma, que facilita y agiliza el contacto directo y eficaz con perfiles afines a ti, con total confianza y seguridad."
 msgstr ""
 
 msgid "Salir"
@@ -1359,7 +1581,10 @@ msgstr ""
 msgid "Salir de copas"
 msgstr ""
 
-msgid "Se ha desactivado esta recomendación."
+msgid "Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?"
+msgstr ""
+
+msgid "Se ha denunciado al usuario. ¡Gracias por tu ayuda!"
 msgstr ""
 
 msgid "Se han enamorado en Cellove %{link}"
@@ -1371,16 +1596,22 @@ msgstr ""
 msgid "Sensible"
 msgstr ""
 
-msgid "Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes  mejorar tu <strong>Índice Cellove</strong> y aprovecharte de sus beneficios."
+msgid "Ser Celestino es muy fácil, el destinatario recibirá un e-mail para que confirme su <b>registro gratuito</b> como usuario en Cellove. A partir de aquí ya contará con tu ayuda y podrá acceder a todos los usuari@s y funciones que desee."
 msgstr ""
 
-msgid "Si quieres ayudar a un amig@, exnovi@ o familiar a encontrar a esa persona especial, ¡estás en el lugar adecuado!"
+msgid "Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes mejorar tu Índice Cellove y aprovecharte de sus beneficios."
 msgstr ""
 
 msgid "Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!"
 msgstr ""
 
+msgid "Si quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}."
+msgstr ""
+
 msgid "Si tienes cualquier duda o pregunta sobre Cellove, su funcionamiento o, simplemente quieres ponerte en contacto con nosotr@s, hazlo a través del siguiente formulario:"
+msgstr ""
+
+msgid "Si, quiero eliminarla"
 msgstr ""
 
 msgid "Si, quiero eliminarlo"
@@ -1389,10 +1620,13 @@ msgstr ""
 msgid "Sigue escribiendo..."
 msgstr ""
 
-msgid "Sin duda podras hacer realidad tu objetivo más íntimo y emocional, encontrar esa persona especial, sea amor o amistad duradera."
+msgid "Siguiente"
 msgstr ""
 
 msgid "Sin mensaje"
+msgstr ""
+
+msgid "Sin necesidad de cumplir o realizar ningún trámite o comunicación previa, CELLOVE SOCIAL NETWORK, S.L. podrá, en cualquier momento:"
 msgstr ""
 
 msgid "Sobre Cellove"
@@ -1402,6 +1636,12 @@ msgid "Sociable"
 msgstr ""
 
 msgid "Solitario"
+msgstr ""
+
+msgid "Solo recibir chats de perfiles que me han gustado"
+msgstr ""
+
+msgid "Solo recibir mensajes de perfiles que me han gustado"
 msgstr ""
 
 msgid "Solteros Exigentes"
@@ -1419,7 +1659,7 @@ msgstr ""
 msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad."
 msgstr ""
 
-msgid "Son las personas del entorno del usuario registrado que ayudan a encontrar con más confianza y seguridad a esa persona perfecta. Dispone de un panel privado y totalmente Gratis para recomendar a sus usuarios y otorgarle atributos y virtudes que serán visibles por los otros usuarios registrados afines a este."
+msgid "Son las personas del entorno del usuario registrado que ayudan a encontrar con más confianza y seguridad a esa persona perfecta. Disponen de un panel privado y totalmente Gratis para recomendar a sus usuarios y otorgarle atributos y virtudes que serán visibles por los otros usuarios registrados afines a este."
 msgstr ""
 
 msgid "Soy"
@@ -1449,24 +1689,6 @@ msgstr ""
 msgid "Sus gustos"
 msgstr ""
 
-msgid "Sólo a perfiles con los que haya mantenido una conversación previa"
-msgstr ""
-
-msgid "Sólo perfiles \"hacemos buena pareja\""
-msgstr ""
-
-msgid "Sólo perfiles que conicidan con mis preferencias"
-msgstr ""
-
-msgid "Sólo perfiles que me han gustado"
-msgstr ""
-
-msgid "Sólo usuarios a los que haya valorado el perfil"
-msgstr ""
-
-msgid "Sólo usuarios de mi área (menos de 50km)"
-msgstr ""
-
 msgid "TV"
 msgstr ""
 
@@ -1485,9 +1707,6 @@ msgstr ""
 msgid "Te propongo esta actividad"
 msgstr ""
 
-msgid "Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s."
-msgstr ""
-
 msgid "Tenaz"
 msgstr ""
 
@@ -1503,6 +1722,21 @@ msgstr ""
 msgid "Tienes muchas formas de hacerlo:"
 msgstr ""
 
+msgid "Tipos de Usuarios"
+msgstr ""
+
+msgid "Todo usuario comprende y acepta que el uso de Cellove® comporta la aceptación de la aparición de anuncios de Usuarios mediante un gestor de anuncios y sistema de pago on-line para tal efecto, en los que los Usuarios que lo deseen, a través de su “anuncio”, pueden presentarse y darse a conocer para ser más visibles. Cellove® pondrá los medios que tenga a su alcance para que dichos anunciantes sean más visibles para los demás usuarios, para aumentar sus posibilidades de encontrar pareja.  Estas comunicaciones comerciales serán visibles para todos los usuarios de Cellove®."
+msgstr ""
+
+msgid "Todo usuario comprende y acepta que el uso de Cellove® comporta la aceptación de la aparición de anuncios de terceros durante la navegación. Estas comunicaciones comerciales serán visibles para los usuarios del Pase GRATIS, pero no para los usuarios del Pase VIP (en el apartado I se explica en qué consisten el Pase GRATIS y el Pase VIP)."
+msgstr ""
+
+msgid "Todo usuario comprende y acepta que la plataforma web de Cellove®, www.cellove.com, actúa sólo como medio en el que terceros difunden anuncios, sin que CELLOVE SOCIAL NETWORK, S.L. asuma responsabilidad alguna sobre el contenido de los anuncios de terceros, más allá de lo expresamente previsto por la legislación vigente."
+msgstr ""
+
+msgid "Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com."
+msgstr ""
+
 msgid "Tomar un café"
 msgstr ""
 
@@ -1516,6 +1750,9 @@ msgid "Trabajo en"
 msgstr ""
 
 msgid "Tranquilo"
+msgstr ""
+
+msgid "Tu"
 msgstr ""
 
 msgid "Tu contraseña"
@@ -1539,7 +1776,7 @@ msgstr ""
 msgid "Tu nota se ha guardado."
 msgstr ""
 
-msgid "Tu panel de control como usuario registrado va actualizándose a tiempo real, si recibes visitas nuevas a tu perfil, nuevos mensajes, propuestas de actividad, etc. De esta forma estarás al corriente de todo, podrás interactuar al instante y sacar máximo provecho de Cellove."
+msgid "Tu panel de control como usuario registrado va actualizándose a tiempo real, si recibes visitas nuevas a tu perfil, nuevos mensajes, chats,  propuestas de actividad, etc. De esta forma estarás al corriente de todo, podrás interactuar al instante y sacar máximo provecho de Cellove."
 msgstr ""
 
 msgid "Tu perfil"
@@ -1552,6 +1789,9 @@ msgid "Tu recomendación está pendiente de confirmar."
 msgstr ""
 
 msgid "Tu recomendación ha sido aceptada."
+msgstr ""
+
+msgid "Tu recomendación ha sido eliminada."
 msgstr ""
 
 msgid "Tu recomendación ha sido rechazada."
@@ -1587,7 +1827,10 @@ msgstr ""
 msgid "Una amiga me hizo de Celestina y lo probé, conocí a Carlos, después de hablar durante unos días, quedamos para tomar un café y ahora estamos saliendo juntos."
 msgstr ""
 
-msgid "Usuari@ invitado!"
+msgid "Usted entiende y acepta que el uso del servicio de Cellove® se realiza bajo su propio riesgo. Cellove® NO garantiza bajo ningún concepto la seguridad de sus usuarios en los casos de encuentros personales y/o virtuales, y recomienda adoptar las medidas de seguridad habituales en este tipo de encuentros. Cellove® presta el servicio de forma TAL CUAL y, según disponibilidad. CELLOVE SOCIAL NETWORK, S.L. no garantiza que el servicio no sea  interrumpido, oportuno, seguro o libre de virus. El uso de cualquier material descargado u obtenido a través de los servicios de Cellove® se realiza por su propia cuenta y riesgo y usted será el único responsable de cualquier daño a su sistema informático, teléfono móvil, dispositivo inalámbrico o pérdida o deterioro de datos. Ningún consejo o información, oral o escrita, obtenida por usted de Cellove®, o sus empleados o representantes será una garantía fuera de lo expresamente contenido en estos términos y condiciones. Usted como Usuario, acepta que CELLOVE SOCIAL NETWORK, S.L., en ningún caso, se hace responsable por los daños accidentales, indirectos, especiales, punitivos, o daño alguno, como pueden ser los daños por difamación, daños morales o violación de su intimidad, o de otro tipo de pérdida o daños, derivados desde o causados por su uso o imposibilidad de usar el servicio de Cellove®. CELLOVE SOCIAL NETWORK, S.L. no responderá en caso de daños y perjuicios ocasionados, por negligencia en el uso y custodia de la clave de acceso o mala gestión de la misma por su usuario titular incluyendo los daños por un uso no autorizado por terceros. CELLOVE SOCIAL NETWORK, S.L. no responderá por casos de fuerza mayor. CELLOVE SOCIAL NETWORK, S.L. se exonera de toda responsabilidad por la información y contenidos que los Usuarios incorporen a Cellove®, y por la utilización que de los mismos realicen otros Usuarios o terceros ajenos a la red de Cellove®."
+msgstr ""
+
+msgid "Usted puede transmitir o publicar contenido creado por usted con los servicios ofrecidos a tal efecto por Cellove®. Usted será el único responsable de dicho contenido y las consecuencias de su transmisión o publicación. Todo el contenido hecho público podría ser accesible al público a través de Internet y puede ser rastreado e indexado por los motores de búsqueda. Usted es responsable de asegurarse de no poner ningún contenido privado a disposición del público. Cualquier contenido que usted pueda recibir de otros usuarios a través de Cellove®, se le proporciona TAL CUAL para su información y uso personal y que se compromete a no utilizar, copiar, reproducir, distribuir, transmitir, difundir, exhibir, vender, licenciar o explotar el contenido para cualquier propósito, sin el consentimiento expreso y por escrito de la persona que posee los derechos de dicho contenido. En el curso de la utilización de cualquiera de los Servicios, si Usted se encuentra con cualquier contenido con copyright (s) o cualquier otra característica de protección contra copia(s), usted se compromete a no eliminar el aviso de copyright como desactivar dicha función de protección contra copia(s).  Usted acepta expresamente que Cellove® tendrá el derecho de bloquear el acceso o remover dicho contenido puesto a disposición por usted, si Cellove® recibe quejas sobre cualquier ilegalidad o violación de los derechos de terceros en el contenido. Usted consiente expresamente que la determinación de las cuestiones de ilegalidad o violación de los derechos de terceros de este contenido se  determine por el agente designado por Cellove® para este propósito."
 msgstr ""
 
 msgid "Usuari@s con mejor Índice Cellove"
@@ -1599,19 +1842,31 @@ msgstr ""
 msgid "Usuari@s que te pueden gustar"
 msgstr ""
 
+msgid "Usuario"
+msgstr ""
+
+msgid "Usuario desconectado"
+msgstr ""
+
 msgid "Usuarios bloqueados"
 msgstr ""
 
-msgid "Usuarios más populares %{link}"
+msgid "VIP 3,95€/mes"
 msgstr ""
 
-msgid "VIP 3,95€/mes"
+msgid "Vaciar papelera"
 msgstr ""
 
 msgid "Vaya. Parece que NO vas a aceptar la actividad que te propone"
 msgstr ""
 
 msgid "Ver"
+msgstr ""
+
+msgid "Ver Perfil"
+msgstr ""
+
+msgid "Ver el Perfil"
 msgstr ""
 
 msgid "Ver más"
@@ -1642,6 +1897,9 @@ msgid "Vivo"
 msgstr ""
 
 msgid "Vivo en"
+msgstr ""
+
+msgid "Y vivo en"
 msgstr ""
 
 msgid "Ya has alcanzado tu limite de fotos"
@@ -1710,7 +1968,7 @@ msgstr ""
 msgid "atractiv@"
 msgstr ""
 
-msgid "ayuda a tu mejor amig@ a que sea feliz encontrando a su media naranja, ¡apóyale en su búsqueda del amor! ¡Recomiéndalo en Cellove!"
+msgid "ayuda a tu mejor amig@ a que sea feliz encontrando a su media naranja, ¡apóyale en su búsqueda del amor! ¡Hazle de Ceslestino!"
 msgstr ""
 
 msgid "azul"
@@ -1791,6 +2049,9 @@ msgstr ""
 msgid "con sus hijos"
 msgstr ""
 
+msgid "con sus padres"
+msgstr ""
+
 msgid "con un cuerpo "
 msgstr ""
 
@@ -1804,6 +2065,9 @@ msgid "cristiano"
 msgstr ""
 
 msgid "de"
+msgstr ""
+
+msgid "de "
 msgstr ""
 
 msgid "de entre"
@@ -1948,9 +2212,6 @@ msgid "https://www.youtube.com/watch?v=l38oDLj4Be8"
 msgstr ""
 
 msgid "https://www.youtube.com/watch?v=vS2-2CJ9F9s"
-msgstr ""
-
-msgid "i quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}."
 msgstr ""
 
 msgid "idiomas a nivel"
@@ -2277,7 +2538,7 @@ msgstr ""
 msgid "publicidad, entretenimiento y medios"
 msgstr ""
 
-msgid "registrarte en Cellove"
+msgid "registrarte gratis en Cellove"
 msgstr ""
 
 msgid "retirado temporalmente"
@@ -2331,7 +2592,7 @@ msgstr ""
 msgid "si tiene hijos, y quiere tener mas "
 msgstr ""
 
-msgid "si tienes algún amigo con el que siempre has tenido mucha química, algo especial,  y quieres ayudarlo a que encuentre el amor... ¡Recomiéndalo en Cellove!"
+msgid "si tienes algún amigo con el que siempre has tenido mucha química, algo especial, y quieres ayudarlo a que encuentre el amor... ¡Recomiéndalo en Cellove!"
 msgstr ""
 
 msgid "siguiente"
@@ -2412,6 +2673,9 @@ msgstr ""
 msgid "viud@"
 msgstr ""
 
+msgid "x"
+msgstr ""
+
 msgid "y"
 msgstr ""
 
@@ -2431,6 +2695,9 @@ msgid "ya ha estado casad@ y quiere repetir"
 msgstr ""
 
 msgid "¡Buena pareja!"
+msgstr ""
+
+msgid "¡Celestin@ invitado!"
 msgstr ""
 
 msgid "¡Consigue más puntos!"
@@ -2457,6 +2724,9 @@ msgstr ""
 msgid "¡Le gusta!"
 msgstr ""
 
+msgid "¡Le gustas a alguien!"
+msgstr ""
+
 msgid "¡Les he gustado!"
 msgstr ""
 
@@ -2470,6 +2740,9 @@ msgid "¡Mejora tu índice Cellove!"
 msgstr ""
 
 msgid "¡Mejora tu índice!"
+msgstr ""
+
+msgid "¡No dejes que tus citas sean a ciegas!"
 msgstr ""
 
 msgid "¡No me gusta!"
@@ -2493,16 +2766,19 @@ msgstr ""
 msgid "¡Regístrate Gratis!"
 msgstr ""
 
+msgid "¡Regístrate ahora GRATIS como Celestin@ en Cellove!"
+msgstr ""
+
 msgid "¡Regístrate ahora Gratis!"
 msgstr ""
 
 msgid "¡Regístrate ahora como Celestin@!"
 msgstr ""
 
-msgid "¡Subir imagen más adelante!"
+msgid "¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!"
 msgstr ""
 
-msgid "¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!"
+msgid "¡Usuari@ invitado!"
 msgstr ""
 
 msgid "¿Como funciona?"
@@ -2515,9 +2791,6 @@ msgid "¿Cómo consigo más popularidad?"
 msgstr ""
 
 msgid "¿Cómo consigo popularidad?"
-msgstr ""
-
-msgid "¿Cómo de real quieres que sea el tiempo real?"
 msgstr ""
 
 msgid "¿Cómo eres?"
@@ -2547,6 +2820,9 @@ msgstr ""
 msgid "¿Estas de seguro que quieres borrar la foto?"
 msgstr ""
 
+msgid "¿Estas seguro?"
+msgstr ""
+
 msgid "¿Estás seguro de que deseas eliminar esta búsqueda?"
 msgstr ""
 
@@ -2556,13 +2832,22 @@ msgstr ""
 msgid "¿Has olvidado tu contraseña?"
 msgstr ""
 
+msgid "¿Los servicios de Cellove® son gratuitos?"
+msgstr ""
+
 msgid "¿Que notificaciones quieres recibir?"
 msgstr ""
 
 msgid "¿Quien eres?"
 msgstr ""
 
+msgid "¿Quien quieres que te vea?"
+msgstr ""
+
 msgid "¿Quieres aumentar tu indice Cellove?"
+msgstr ""
+
+msgid "¿Quieres ayudar a un familia, amig@ o ex pareja? No lo dudes y échale una mano. Con Cellove puedes ayudar a quien desees a que encuentre su pareja ideal o una amistad. <b>¡Recomiéndal@!</b>"
 msgstr ""
 
 msgid "¿Quieres mejorarlo?"
@@ -2580,10 +2865,16 @@ msgstr ""
 msgid "¿Quién eres?"
 msgstr ""
 
+msgid "¿Quiénes pueden ser usuarios de Cellove®?"
+msgstr ""
+
 msgid "¿Qué buscas?"
 msgstr ""
 
 msgid "¿Qué es Cellove?"
+msgstr ""
+
+msgid "¿Qué es Cellove®?"
 msgstr ""
 
 msgid "¿Qué es?"
@@ -2595,7 +2886,13 @@ msgstr ""
 msgid "¿Seguro que deseas eliminar el mensaje de"
 msgstr ""
 
-msgid "¿algún miembro de tu familia está buscando pareja o una amistad especial?  ¿Tienes algún hermano, primo, o incluso a tu padre o tu madre les gustaría encontrar a alguien para compartir de nuevo su vida? ¡No lo dudes y ayúdales! ¡Recomiéndalos en Cellove!"
+msgid "¿Te imaginas quedar con alguien que nunca has visto pero tener la sensación de que lo conoces de toda la vida? Ahora es posible gracias a Cellove. Podrás tener a tu alcance mucha más información de esa persona a través de su círculo más cercano y de una manera segura y fiable."
+msgstr ""
+
+msgid "¿Te imaginas quedar con alguien que nunca has visto y tener la sensación de que lo conoces de toda la vida? <b>Ahora es posible gracias a Cellove</b>"
+msgstr ""
+
+msgid "¿algún miembro de tu familia está buscando pareja o una amistad especial? ¿Tienes algún hermano, primo, o incluso a tu padre o tu madre les gustaría encontrar a alguien para compartir de nuevo su vida? ¡No lo dudes y ayúdales! ¡Recomiéndalos en Cellove!"
 msgstr ""
 
 msgid "Étnia"
@@ -2605,9 +2902,6 @@ msgid "Índice Cellove"
 msgstr ""
 
 msgid "Últimas conversaciones"
-msgstr ""
-
-msgid "Últimos usuarios en Cellove %{link}"
 msgstr ""
 
 msgid "árabe"
