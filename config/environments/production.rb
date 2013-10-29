@@ -81,6 +81,6 @@ Cellove::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.middleware.use ExceptionNotifier,
                         :email_prefix => '[Cellove]',
-                        :sender_address => 'noreply@cellove.com',
-                        :exception_recipients => %w{sysadmin@season.es}
+                        :sender_address => 'no-reply@cellove.com',
+                        :exception_recipients => %w{error@cellove.com}
 end
