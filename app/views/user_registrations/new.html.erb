@@ -20,8 +20,7 @@
         <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre') %>
         <%= f.text_field :surname, placeholder: _('Apellidos') %>
         <p>
-        <%= f.text_field :screen_name, placeholder: _('Nombre de usuario') %>
-        <small class="span3"><%= _('* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.') %></small>
+        <%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)') %>
       </fieldset>
     </div>
 
@@ -29,8 +28,8 @@
       <p><%= _('Regístrate en Cellove, la red social GRATIS para encontrar el <b>amor y amistad</b> de forma fácil y rápida. <b>Chatea</b> con los usuari@s, enviales mensajes, <b>propónles actividades</b> e incluso podrás comprobar si hacéis buena pareja.') %></p>
       <p><%= _('Gracias a nuestro <b>sistema de Celestinos</b>, podrás comunicarte con sus familiares, amig@s o ex parejas.') %></p> 
       <p><%= _('¿Te imaginas quedar con alguien que nunca has visto y tener la sensación de que lo conoces de toda la vida? <b>Ahora es posible gracias a Cellove</b>') %></p> 
-      <p align="center"><b><%= _('¡No dejes que tus citas sean a ciegas!') %></b></p>
-      <h3><%= _('Registrate ahora gratis en Cellove.com') %></h3> 
+      <h3><%= _('¡No dejes que tus citas sean a ciegas!') %></h3>
+
     </div>
   </div>
   <fieldset id="photo" class="clearfix form-inline">
@@ -87,7 +86,7 @@
       <div class="row">
         <div class="span6 center">
           <div class="clearfix">
-            <label><%= _('Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los %{consejos_link}, las %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') % {consejos_link: link_to(_('Consejos de uso'), '/public/consejos-de-uso'), condiciones_link: link_to(_('Condiciones generales'), '/public/condiciones-generales'), privacy_link: link_to(_('Política de privacidad'), '/public/politica-de-privacidad')}%></label>
+            <label><%= _('Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') %  {condiciones_link: link_to(_('Terminos y condiciones generales'), terms_conditions_path, target: "_blank"), privacy_link: link_to(_('Política de privacidad'), privacy_policy_path, target: "_blank")}%></label>
           </div>
           <div class="clearfix">
             <%= f.check_box :newsletter_optin, checked: true %>
