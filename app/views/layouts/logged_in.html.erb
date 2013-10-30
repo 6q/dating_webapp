@@ -61,6 +61,7 @@
     <%= render 'shared/user/modal_upgrade' %>
     <%= render 'shared/modal_progress' %>
     <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
+    <%= render 'shared/scripts' %>
   </body>
   <% unless current_user.has_role?(:matchmaker) %>
     <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
