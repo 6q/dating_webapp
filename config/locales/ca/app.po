@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-30 17:43+0100\n"
+"POT-Creation-Date: 2013-10-30 18:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
@@ -171,6 +171,10 @@ msgstr "Afins prop teu..."
 
 msgid "Ahora mismo estoy"
 msgstr "Ara estic"
+
+#, fuzzy
+msgid "Ahora online"
+msgstr "Videochat online"
 
 #, fuzzy
 msgid "Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos"
@@ -1242,6 +1246,9 @@ msgstr "Nou missatge"
 #, fuzzy
 msgid "Nuevo mensaje recibido"
 msgstr "Nou missatge"
+
+msgid "Nunca"
+msgstr ""
 
 msgid "OBLIGACIONES"
 msgstr ""
@@ -2934,6 +2941,10 @@ msgstr "Ètnia"
 
 msgid "Índice Cellove"
 msgstr "Índex Cellove"
+
+#, fuzzy
+msgid "Última conexión"
+msgstr "Últimes converses"
 
 msgid "Últimas conversaciones"
 msgstr "Últimes converses"

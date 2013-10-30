@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-30 17:43+0100\n"
+"POT-Creation-Date: 2013-10-30 18:30+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -175,6 +175,9 @@ msgid "Afines cerca de ti..."
 msgstr ""
 
 msgid "Ahora mismo estoy"
+msgstr ""
+
+msgid "Ahora online"
 msgstr ""
 
 msgid "Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos"
@@ -1225,6 +1228,9 @@ msgid "Nuevo Mensaje"
 msgstr ""
 
 msgid "Nuevo mensaje recibido"
+msgstr ""
+
+msgid "Nunca"
 msgstr ""
 
 msgid "OBLIGACIONES"
@@ -2887,6 +2893,9 @@ msgid "Étnia"
 msgstr ""
 
 msgid "Índice Cellove"
+msgstr ""
+
+msgid "Última conexión"
 msgstr ""
 
 msgid "Últimas conversaciones"
