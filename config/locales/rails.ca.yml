@@ -3,7 +3,7 @@
 # contributors:
 #  - Tsutomu Kuroda - http://github.com/kuroda (t-kuroda@oiax.jp)
 
-"es":
+"ca":
   date:
     formats:
       default: "%d/%m/%Y"
