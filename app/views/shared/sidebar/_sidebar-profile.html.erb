@@ -30,12 +30,16 @@
     </li>
 		<li class="profile">
       <a href="<%= profile_path %>">
-        <%= _('Tu perfil <em>(%{progress}%% completo)</em>') % {progress: current_user.progress_status.to_s} %>
+        <%= _('Tu perfil') %> <em>(<%=current_user.progress_status.to_s %>% <%= _('completo') %>)</em>
         <div class="progress">
           <div class="bar" style="width:<%= current_user.progress_status %>%"></div>
         </div>
       </a>
     </li>
-    <li><%= link_to((_('Te gustan <em>(%{count})</em>') % {count: current_user.likes.length.to_s}), user_likes_of_mine_path) %></li>
+    <li>
+      <a href="<%= user_likes_of_mine_path %>">
+        <%= _('Te gustan') %> <em>(<%=current_user.likes.length.to_s %>)</em>
+      </a>
+    </li>
 	</ul>
 </section>
