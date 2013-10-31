@@ -1,6 +1,6 @@
 #encoding: utf-8
 class UserMailer < ActionMailer::Base
-  default from: "Cellove.com <no-reply@cellove.com>"
+  default from: "Cellove.com <mail@cellove.com>"
 
   def prevent_delivery_to_unconfirmed
     if (@user && !@user.confirmed?) || (@recipient && !@recipient.confirmed?)

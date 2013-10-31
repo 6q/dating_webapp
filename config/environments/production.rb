@@ -71,9 +71,9 @@ Cellove::Application.configure do
 
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
-    :port      => 25,
-    :user_name => ENV["MANDRILL_USERNAME"],
-    :password  => ENV["MANDRILL_API_KEY"]
+    :port      => 587,
+    :user_name => ENV["francesc@cellove.com"],
+    :password  => ENV["pOXqz6e8hM8pTs3OnpdddA"]
   }
 
   # Log the query plan for queries taking more than this (works
@@ -81,6 +81,6 @@ Cellove::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.middleware.use ExceptionNotifier,
                         :email_prefix => '[Cellove]',
-                        :sender_address => 'no-reply@cellove.com',
+                        :sender_address => 'mail@cellove.com',
                         :exception_recipients => %w{error@cellove.com}
 end
