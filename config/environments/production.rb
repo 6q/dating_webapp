@@ -72,8 +72,8 @@ Cellove::Application.configure do
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
     :port      => 587,
-    :user_name => ENV["francesc@cellove.com"],
-    :password  => ENV["pOXqz6e8hM8pTs3OnpdddA"]
+    :user_name => "francesc@cellove.com",
+    :password  => "pOXqz6e8hM8pTs3OnpdddA"
   }
 
   # Log the query plan for queries taking more than this (works
