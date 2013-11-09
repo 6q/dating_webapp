@@ -236,7 +236,7 @@ class User < ActiveRecord::Base
 
   #Validations only performed on regular users, not matchmakers
   validates_presence_of :gender, if: regular_user
-  validates_presence_of :postal_code, :city, if: regular_user
+  validates_presence_of :city, if: regular_user
   validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year, if: regular_user
 
   validates :birth_date, presence: true, minimum_age: true, if: regular_user
