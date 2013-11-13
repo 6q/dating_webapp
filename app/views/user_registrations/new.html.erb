@@ -60,8 +60,7 @@
     <div class="control-group">
       <%= f.label :city, _('Y vivo en') %>
       <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %> ,  
-      <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %> .
-      <%= f.text_field :postal_code, class: "span1", value: '00000' %> 
+      <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %> . 
     </div>
   </fieldset>
   <div class="nofloat">
