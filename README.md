@@ -22,6 +22,7 @@ Requirements
   The arrowchat software is stored in extras/arrowchat directory.
 
   Apache/PHP Setup on Mountain Lion: http://jason.pureconcepts.net/2012/10/install-apache-php-mysql-mac-os-x/
+  Other: http://geryit.com/blog/installing-mysql-with-rails-on-mac-os-x-snow-leopard/
   sudo apachectl start/stop/restart
 
   User the config located in doc/config/apache2 to configure a vhost in your local machine that can run Arrowcaht and the app as a reverse proxy.
