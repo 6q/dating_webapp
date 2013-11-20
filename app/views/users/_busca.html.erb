@@ -19,7 +19,7 @@
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Edad') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= "entre #{@user.lf_age_from} y #{@user.lf_age_to}" %></div>
+			<div class="txt"><%= "#{_('entre')} #{@user.lf_age_from} #{_('y')} #{@user.lf_age_to}" %></div>
 		</div>
 	<% end %>
 	<% if @user.lf_relationship.present? %>
@@ -61,14 +61,14 @@
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Altura') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= "entre #{@user.lf_height_between} y #{@user.lf_height_to} cms" %></div>
+			<div class="txt"><%= "#{_('entre')} #{@user.lf_height_between} #{_('y')} #{@user.lf_height_to} cms" %></div>
 		</div>
 	<% end %>
 	<% unless @user.lf_weight_between.blank? || @user.lf_weight_to.blank? %>
 		<% busca = 1 %>
 		<div class="key span3"><%= _('Peso') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= "entre #{@user.lf_weight_between} y #{@user.lf_weight_to}" %></div>
+			<div class="txt"><%= "#{_('entre')} #{@user.lf_weight_between} #{_('y')} #{@user.lf_weight_to}" %></div>
 		</div>
 	<% end %>
 	<% if @user.lf_complexion.present? %>
