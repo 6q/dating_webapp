@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-30 18:30+0100\n"
+"POT-Creation-Date: 2013-11-20 14:06+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -255,6 +255,9 @@ msgstr ""
 msgid "Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste."
 msgstr ""
 
+msgid "Añade el correo mail@cellove.com a tu lista de contactos"
+msgstr ""
+
 msgid "Añadir nota"
 msgstr ""
 
@@ -349,6 +352,9 @@ msgid "Cambia tu foto de perfil"
 msgstr ""
 
 msgid "Cambiar configuración"
+msgstr ""
+
+msgid "Cambiar mi contraseña"
 msgstr ""
 
 msgid "Cambios guardados."
@@ -454,6 +460,9 @@ msgid "Configuración"
 msgstr ""
 
 msgid "Configuración actualizada"
+msgstr ""
+
+msgid "Configuración de cuenta"
 msgstr ""
 
 msgid "Confirmados"
@@ -609,6 +618,9 @@ msgstr ""
 msgid "El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos."
 msgstr ""
 
+msgid "El equipo de Cellove"
+msgstr ""
+
 msgid "El matrimonio es algo maravilloso"
 msgstr ""
 
@@ -691,6 +703,12 @@ msgid "Encuentra tu nueva pareja en Cellove"
 msgstr ""
 
 msgid "English"
+msgstr ""
+
+msgid "Entra en Cellove.com"
+msgstr ""
+
+msgid "Entrar<br>\\n\t                                        directamente<br>\\n\t                                        a mi perfil"
 msgstr ""
 
 msgid "Enviados"
@@ -876,6 +894,12 @@ msgstr ""
 msgid "Has desactivado esta recomendación."
 msgstr ""
 
+msgid "Has pedido cambiar tu contraseña de Cellove.com. Puedes hacelo siguiendo el siguiente enlace:"
+msgstr ""
+
+msgid "Has recibido este correo de Cellove Social Network porque tu correo está registrado a Cellove.com. Si no deseas seguir recibiendo correos, modifica tu configuración de usuario dentro en Cellove.com."
+msgstr ""
+
 msgid "Has recibido una recomendación"
 msgstr ""
 
@@ -886,6 +910,9 @@ msgid "Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que
 msgstr ""
 
 msgid "Hijos"
+msgstr ""
+
+msgid "Hola"
 msgstr ""
 
 msgid "Hábitos"
@@ -1497,6 +1524,9 @@ msgstr ""
 msgid "Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos."
 msgstr ""
 
+msgid "Recuperación de contraseña"
+msgstr ""
+
 msgid "Recuperar contraseña"
 msgstr ""
 
@@ -1597,6 +1627,9 @@ msgid "Ser Celestino es muy fácil, el destinatario recibirá un e-mail para que
 msgstr ""
 
 msgid "Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes mejorar tu Índice Cellove y aprovecharte de sus beneficios."
+msgstr ""
+
+msgid "Si no has pedido este cambio, porfavor ignora este correo."
 msgstr ""
 
 msgid "Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!"
@@ -1713,6 +1746,9 @@ msgstr ""
 msgid "Tengo un cuerpo "
 msgstr ""
 
+msgid "Terminos y condiciones"
+msgstr ""
+
 msgid "Terminos y condiciones generales"
 msgstr ""
 
@@ -1753,6 +1789,9 @@ msgid "Tu"
 msgstr ""
 
 msgid "Tu contraseña"
+msgstr ""
+
+msgid "Tu contraseña no va a cambiar hasta que accedas al enlace y crees una nueva."
 msgstr ""
 
 msgid "Tu correo"
@@ -2707,6 +2746,9 @@ msgid "¡Conviértete en Celestin@!"
 msgstr ""
 
 msgid "¡Conviértete en usuari@!"
+msgstr ""
+
+msgid "¡Disfruta!"
 msgstr ""
 
 msgid "¡Es totalmente gratis!"
