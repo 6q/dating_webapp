@@ -39,6 +39,8 @@ gem 'client_side_validations'
 gem "typus", :git => "git://github.com/fesplugas/typus.git", :branch => "features/3-2-stable-bootstrap"
 gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
+gem 'newrelic_rpm'
+
 
 group :test do
   gem 'sqlite3'
@@ -56,10 +58,6 @@ group :development do
   gem 'capistrano-ext'
   gem 'capistrano_colors'
   gem 'capistrano-unicorn', :require => false
-end
-
-group :production do
-  gem 'newrelic_rpm'
 end
 
 group :test, :development do
