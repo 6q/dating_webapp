@@ -58,6 +58,10 @@ group :development do
   gem 'capistrano-unicorn', :require => false
 end
 
+group :production do
+  gem 'newrelic_rpm'
+end
+
 group :test, :development do
   gem 'commands'
   #gem 'rack-proxy', git: 'git://github.com/sportngin/rack-proxy.git'
