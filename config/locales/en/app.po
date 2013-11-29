@@ -1,12 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: version 0.0.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-20 14:06+0100\n"
+"Project-Id-Version: VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +32,7 @@ msgid " y soy de étnia"
 msgstr "my ethnic group is"
 
 msgid " | Cellove.com"
-msgstr "| Cellove.com\n"
+msgstr "| Cellove.com"
 
 msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
 msgstr "%{link} now in Cellove , it´s easy and fast. ¡Give wings to the love!"
@@ -76,7 +74,7 @@ msgid "* Cellove recomienda utilizar tu nombre real para tener más posibilidade
 msgstr "* Cellove recommends you to use your real name in order to have more possibilities to find contacts and Celestines. Let this gap empty for you to write your real name."
 
 msgid "* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán."
-msgstr "* Important ! The users that have the age you choose in this zone are the ones that will be able to see and keep in touch with you. The other ones will never know about you."
+msgstr "* Important ! The users that have the age you choose in this gap are the ones that will be able to see and keep in touch with you. The other ones will never know about you."
 
 msgid ","
 msgstr ","
@@ -108,15 +106,14 @@ msgstr "47,4 €/ year"
 msgid "<b>¿Quieres ayudar a un familiar, amig@ o ex pareja?</b> No lo dudes y échale una mano. Con Cellove puedes ayudar a quien desees a que encuentre su <b>pareja ideal</b>."
 msgstr "<b> Would you like to help a relative , a friend or a former partner? </b> Don´t hesitate and help them. With Cellove you can help people you want him/her to find his/her <b> ideal partner </b>."
 
-#, fuzzy
-msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
-msgstr "&lt;p&gt; We are sure that Cellove can make you live new experiences, meet that person, the one to have a special connection, and we want you to know that this is like the life, you need to be there at a particular time and make it possible =) &lt;/p&gt;\\n\\n\\n&lt;p&gt; Our advices to use Cellove are the following: &lt;/p&gt;\\n\\n\\n&lt;p&gt; &lt;h3&gt; &#039;Give the maximum information about you&#039; &lt;/h3&gt;\\nFill in the maximum information of your profile, it´s your presentation and the door to get to you &lt;/p&gt;\\n\\n\\n&lt;p&gt; &lt;h3&gt; &#039;Be active&#039; &lt;/h3&gt;\\nMove and be dynamic inside the page, send messages, purpose conversations with the others, make the others know about you and answer to your requests &lt;/p&gt;\\n\\n&lt;p&gt; &lt;h3&gt; &#039;Make the others know what you look like&#039; &lt;/h3&gt;\\nBe yourself in the relationships like in the real life, or even better! Be accessible and ready to open doors.&lt;/p&gt;\\n&lt;p&gt; &lt;h3&gt; &#039;Improve your Cellove rating&#039; &lt;/h3&gt;\\nUse the big tool that are your Celestines. We all have close friends, people ready to help and talk about you to the other users, and with some other details, this will improve your Cellove rating &lt;/p&gt;\\n&lt;p&gt; &lt;h3&gt;\\n&#039;And use us like your new way to refill your life with new and interesting people, and share good time with them&#039; &lt;/h3&gt; &lt;/p&gt;"
+msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\n\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\n\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\n\n    <p><h3>‘Sé activo’</h3>\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\n\n    <p><h3>‘Muéstrate tal como eres’</h3>\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\n    <p><h3>\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
+msgstr "<p> We are sure that Cellove can make you live new experiences, meet that person, the one to have a special connection, and we want you to know that this is like the life, you need to be there at a particular time and make it possible =) </p>\\n\\n\\n<p> Our advices to use Cellove are the following: </p>\\n\\n\\n<p> <h3> 'Give the maximum information about you' </h3>\\nFill in the maximum information of your profile, it´s your presentation and the door to get to you </p>\\n\\n\\n<p> <h3> 'Be active' </h3>\\nMove and be dynamic inside the page, send messages, purpose conversations with the others, make the others know about you and answer to your requests </p>\\n\\n<p> <h3> 'Make the others know what you look like' </h3>\\nBe yourself in the relationships like in the real life, or even better! Be accessible and ready to open doors.</p>\\n<p> <h3> 'Improve your Cellove rating' </h3>\\nUse the big tool that are your Celestines. We all have close friends, people ready to help and talk about you to the other users, and with some other details, this will improve your Cellove rating </p>\\n<p> <h3>\\n'And use us like your new way to refill your life with new and interesting people, and share good time with them' </h3> </p>"
 
 msgid "A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®."
 msgstr "For the purposes of what is provided in these terms of use and conditions,will be understood that the information or content that is incorporated by a user to Cellove ® can be public when they reproduce, distribute, transform, communicate or put publicly available through Cellove ® within their places of free access of the community of users Cellove ®."
 
 msgid "A través de Cellove podrás comunicarte con quien desees, mediante nuestro Chat o Mensajes privados, y dispondrás de otras funciones para interactuar con los usuarios que te interesen, como enviar propuestas de actividad, comprobar si hacéis buena pareja, etc."
-msgstr "Through Cellove you can communicate with friends and family through our chat or private messages, and you will have other functions to interact with users that you are interested in, and send business purposals, check if you could get on well with somebody, etc."
+msgstr "Through Cellove you can communicate with friends and family through our chat or private messages, and you will have other functions to interact with users that you are interested in, and send business purposals, check if you make a good couple with somebody, etc."
 
 msgid "ATENCIÓN A LOS USUARIOS"
 msgstr "Attention users"
@@ -167,14 +164,10 @@ msgid "Acuse de recibo de mensajes"
 msgstr "Acknowledgement messages"
 
 msgid "Afines cerca de ti..."
-msgstr "Related people near you..."
+msgstr "Related people near from you..."
 
 msgid "Ahora mismo estoy"
 msgstr "I am here now"
-
-#, fuzzy
-msgid "Ahora online"
-msgstr "Online videochat "
 
 msgid "Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos"
 msgstr "When you become a Cellove user you certify that you are an adult and you have read an accept the %{condiciones_link} and %{privacy_link} of the site and the services described"
@@ -183,7 +176,7 @@ msgid "Alcohol"
 msgstr "Alcohol"
 
 msgid "Alguien cree que hace buena pareja contigo"
-msgstr "somebody thinks that you can get on well"
+msgstr "Somebody thinks that you can make a good couple"
 
 msgid "Alguien ha visitado tu perfil"
 msgstr "Somebody visited your profile"
@@ -192,7 +185,7 @@ msgid "Algun@s usuari@s registrad@s en Cellove"
 msgstr "Some users registered on Cellove"
 
 msgid "Alta<br>Celestin@<br>Gratis"
-msgstr "Alta&lt;br&gt;Celestine&lt;br&gt;Free"
+msgstr "Alta<br>Celestine<br>Free"
 
 msgid "Altura"
 msgstr "Height"
@@ -222,7 +215,7 @@ msgid "Animales"
 msgstr "Animals"
 
 msgid "Anna & Joan"
-msgstr "Ann &amp; John"
+msgstr "Ann & John"
 
 msgid "Anterior"
 msgstr "Previous"
@@ -250,9 +243,6 @@ msgstr "Adventurer"
 
 msgid "Ayuda a esa persona a encontrar alguien interesante aportándole más visibilidad, popularidad y fiabilidad, sin ningún coste."
 msgstr "Help to this person to find someone interesting giving him more visibility , popularity and reliability, with no cost"
-
-msgid "Añade el correo mail@cellove.com a tu lista de contactos"
-msgstr ""
 
 msgid "Añadir nota"
 msgstr "Add note"
@@ -288,7 +278,7 @@ msgid "Borrar mensajes"
 msgstr "Delete messages"
 
 msgid "Buena pareja"
-msgstr "Get on very well"
+msgstr "Good couple"
 
 msgid "Busca"
 msgstr "Search"
@@ -350,10 +340,6 @@ msgstr "Change your profile photo"
 msgid "Cambiar configuración"
 msgstr "Change settings "
 
-#, fuzzy
-msgid "Cambiar mi contraseña"
-msgstr "Your password"
-
 msgid "Cambios guardados."
 msgstr "Changes saved"
 
@@ -364,7 +350,7 @@ msgid "Capacidad ilimitada"
 msgstr "Ilimited capacity"
 
 msgid "Carlos & Maite"
-msgstr "Charles &amp; May"
+msgstr "Charles & May"
 
 msgid "Castellano"
 msgstr "Spanish"
@@ -382,7 +368,7 @@ msgid "Cellove es una red social GRATIS de contactos online donde fácilmente pu
 msgstr "Cellove is a free social network of online contacts where you can easily meet new people, interact, expand your circle of friends and find the partner you have always dreamed in."
 
 msgid "Cellove te ofrece todas las herramientas y todo su potencial para encontar pareja o amistad completamente GRATIS. Sin duda,  podrás hacer realidad tu objetivo más íntimo y emocional, encontrar esa persona especial, sea amor o amistad duradera."
-msgstr "Cellove gives you all the tools and their potential in order to find a partner or friend completely free. There´s  no doubt you realize your goal more intimate and emotional, to find that special person,to find that personthat will be whether love or lasting friendship."
+msgstr "Cellove gives you all the tools and their potential in order to find a partner or friend completely free. There´s  no doubt you realize your goal more intimate and emotional, to find that special person,to find that person that will be whether love or lasting friendship."
 
 msgid "Cellove® es Marca registrada de CELLOVE SOCIAL NETWORK, S.L."
 msgstr "Cellove ® is a registered trademark of CELLOVE SOCIAL NETWORK, SL"
@@ -436,7 +422,7 @@ msgid "Comunicaciones de Cellove®"
 msgstr "Cellove communications"
 
 msgid "Con Cellove, ¡tus citas ya no serán a ciegas!"
-msgstr "With Cellove, ¡Your dates won´t be blind!"
+msgstr "With Cellove, Your dates won´t be blind!"
 
 msgid "Con estudios"
 msgstr "With studies"
@@ -458,10 +444,6 @@ msgstr "Settings"
 
 msgid "Configuración actualizada"
 msgstr "Settings updated"
-
-#, fuzzy
-msgid "Configuración de cuenta"
-msgstr "Settings"
 
 msgid "Confirmados"
 msgstr "Confirmed"
@@ -512,7 +494,7 @@ msgid "Cualquier Usuario está obligado a no publicar contenidos no ajustados a 
 msgstr "Any user shall not post content unadjusted to them and / or personal reality. It is the duty of all users not to post personal or contact information of any other user. It is the obligation of all users to use Cellove ® only for personal and never for professional purposes . All users must keep secret the password provided by Cellove ®. It is forbidden the incorporation of information and contents:"
 
 msgid "Cuando alguien indique que Hacemos buena pareja"
-msgstr "When somebody  agrees that we can get on very well"
+msgstr "When somebody  agrees that we Make a good couple"
 
 msgid "Cuando alguien visite mi perfil"
 msgstr "When somebody visits my profile"
@@ -527,9 +509,7 @@ msgid "Cuando un celestino me recomiende"
 msgstr "When a Celestine recommends me"
 
 msgid "Cuanto más elevado sea tu <strong>Índice Cellove</strong>, tus probabilidades de encontrar exactamente lo que buscas mejoran. Cellove te proporciona continuamente esos perfiles que son más compatibles para ti y los perfiles que tengan más %{link}. Por eso, si tu consigues más %{link}, significa que Cellove te promocionará mejor y te ayudará a encontrar a esa persona especial con más efectividad."
-msgstr ""
-"The higher your <strong> Cellove rating</strong>is, the more probabilities to find what you are looking for.\n"
-"Cellove is continuously providing you that profiles that have the requirements you chose %{link} . For this reason if you get more %{link}, means that Cellove will promote better and will help you to find your special partner with more efficiently"
+msgstr "The higher your <strong> Cellove rating</strong>is, the more probabilities to find what you are looking for.\nCellove is continuously providing you that profiles that have the requirements you chose %{link} . For this reason if you get more %{link}, means that Cellove will promote better and help you to find your special partner with more efficiently"
 
 msgid "Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes."
 msgstr "It have a system that controls the popularity and the fiability of the users, with the objective to avoid profiles that don´t satisfy with your requirements,only presenting you that ones that they do and share important related with you"
@@ -565,7 +545,7 @@ msgid "Del Usuario"
 msgstr "From the user"
 
 msgid "Denunciar perfil a Cellove"
-msgstr "denounce profile to Cellove"
+msgstr "Denounce profile to Cellove"
 
 msgid "Deporte"
 msgstr "Sport"
@@ -580,7 +560,7 @@ msgid "Desactivar recomendación"
 msgstr "Unactive recommendation"
 
 msgid "Desconectar"
-msgstr "Disconnect"
+msgstr "Log out"
 
 msgid "Descripción"
 msgstr "Description"
@@ -617,10 +597,6 @@ msgstr "Cellove ® access and use is indefinite, subject to the terms of use. At
 
 msgid "El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos."
 msgstr "The device and the Internet connection, which allows the user access to Cellove ®, running on his behalf. The user can connect using any Internet browser, even Cellove ® is not responsible for the differences or display errors that may cause."
-
-#, fuzzy
-msgid "El equipo de Cellove"
-msgstr "Better Cellove rating"
 
 msgid "El matrimonio es algo maravilloso"
 msgstr "The marriage is something marvelous"
@@ -689,7 +665,7 @@ msgid "En mi tiempo libre me gusta:"
 msgstr "In my free time i enjoy:"
 
 msgid "Encontrar a tu pareja ideal es muy fácil. Sólo tienes que %{register_link}, especificar qué características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que mejor encajen con tu perfil ¡para que seas tú quién elija!"
-msgstr "Finding your ideal partner it´s easy. You only have to %{register_link}, specify what the person you are looknig for looks like and Cellove will do it. ¡Easy as it seems! We will show you the people that connects better with your profile ¡for you to choose!"
+msgstr "Finding your ideal partner it´s easy. You only have to %{register_link}, specify what the person you are looking for looks like and Cellove will do it. Easy as it seems! We will show you the people that connects better with your profile ¡for you to choose!"
 
 msgid "Encontrarás un montón de utilidades únicas para que tus citas no sean a ciegas."
 msgstr "You will find a lot of unique facilities to avoid making blind dates"
@@ -705,13 +681,6 @@ msgstr "Find your new partner in Cellove"
 
 msgid "English"
 msgstr "English"
-
-#, fuzzy
-msgid "Entra en Cellove.com"
-msgstr "| Cellove.com\n"
-
-msgid "Entrar<br>\\n\t                                        directamente<br>\\n\t                                        a mi perfil"
-msgstr ""
 
 msgid "Enviados"
 msgstr "Sent"
@@ -780,7 +749,7 @@ msgid "Estar visible solo para los usuari@s con franja de edad indicada en: \"Ed
 msgstr "Be visible only for the users with the age range suggested in : \"Edit profile\" + \"What are you looking for? \""
 
 msgid "Esther & Victor"
-msgstr "Esther &amp; Victor"
+msgstr "Esther & Victor"
 
 msgid "Estilo"
 msgstr "Style"
@@ -789,7 +758,7 @@ msgid "Estudios"
 msgstr "Studies"
 
 msgid "Estás a punto de eliminar a un Celestin@ de tu lista. Si lo haces, lo que ha dicho sobre ti desaparecerá de tu perfil. ¿Te lo has pensado bien?"
-msgstr "You are about to remove a Celestine of your list. If you do, what he/she said about you will be removed from your profile too. ¿Have you thought it well?\n"
+msgstr "You are about to remove a Celestine of your list. If you do, what he/she said about you will be removed from your profile too. Have you thought it well?\n"
 
 msgid "Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil. ¿Te lo has pensado bien?"
 msgstr "You are about to remove a recommendation in your list. If you do, what you have said about him/her will be removed from his/her profile. Have you thought it carefully?"
@@ -825,7 +794,7 @@ msgid "Fisico"
 msgstr "Physical"
 
 msgid "Fran & Irene"
-msgstr "Fran &amp; Irene"
+msgstr "Fran & Irene"
 
 msgid "Francés"
 msgstr "French"
@@ -891,16 +860,10 @@ msgid "Hacemos buena pareja"
 msgstr "We make a good couple"
 
 msgid "Has bloqueado estos ususarios. ¿Has cambiado de opinión?"
-msgstr "You have blocked these users. ¿Have you changed your mind?"
+msgstr "You have blocked these users. Have you changed your mind?"
 
 msgid "Has desactivado esta recomendación."
 msgstr "You have deactivated this recommendation"
-
-msgid "Has pedido cambiar tu contraseña de Cellove.com. Puedes hacelo siguiendo el siguiente enlace:"
-msgstr ""
-
-msgid "Has recibido este correo de Cellove Social Network porque tu correo está registrado a Cellove.com. Si no deseas seguir recibiendo correos, modifica tu configuración de usuario dentro en Cellove.com."
-msgstr ""
 
 msgid "Has recibido una recomendación"
 msgstr "You have recieved a recommendation"
@@ -913,9 +876,6 @@ msgstr "There are another things that improve your Cellove rating, like the frie
 
 msgid "Hijos"
 msgstr "Sons"
-
-msgid "Hola"
-msgstr ""
 
 msgid "Hábitos"
 msgstr "Habits"
@@ -984,7 +944,7 @@ msgid "La finalidad del fichero comprende, a través de los servicios prestados 
 msgstr "The purpose of the file contains, through the services provided by www.cellove.com, facilitate and promote interpersonal relationships between users, including sending by CELLOVE SOCIAL NETWORK, SL, its users, data profiles by other users, recommendations with data from other users, and in general, communications to its users including data from other users in order to facilitate and promote relationships between them."
 
 msgid "Las presentes condiciones de uso, las Condiciones Particulares e instrucciones que, en su caso, CELLOVE SOCIAL NETWORK, S.L. a través de Cellove® establezca y, en general, las relaciones entre CELLOVE SOCIAL NETWORK, S.L. y los usuarios se encuentran sometidas a la legislación y jurisdicción españolas. Para cualquier divergencia surgida de las presentes condiciones de uso, ambas partes se someten expresamente a los juzgados y tribunales de la ciudad de Barcelona con renuncia a su propio fuero, si este fuese otro."
-msgstr "The present use conditions, the particular conditions and instructions, if any, CELLOVE SOCIAL NETWORK, SL through Cellove ® establish and, in general, the relations between CELLOVE SOCIAL NETWORK, SL and users are subject to Spanish legislation and jurisdiction. For any disagreement of these terms of use, bothwill be submited to the courts and tribunals of the city of Barcelona, waiving their own jurisdiction, if it were another.\n"
+msgstr "The present use conditions, the particular conditions and instructions, if any, CELLOVE SOCIAL NETWORK, SL through Cellove ® establish and, in general, the relations between CELLOVE SOCIAL NETWORK, SL and users are subject to Spanish legislation and jurisdiction. For any disagreement of these terms of use, both will be submited to the courts and tribunals of the city of Barcelona, waiving their own jurisdiction, if it were another."
 
 msgid "Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante."
 msgstr "The three modes of use will be valid during a year since the hire day, in the case that you haven´t use the resources offered in each mode. If you use them, you will be offered to buy it again a new use mode .\n"
@@ -999,7 +959,7 @@ msgid "Legal y conducta"
 msgstr "Legal and behaviour"
 
 msgid "Les he gustado"
-msgstr "I have liked "
+msgstr "I like to them"
 
 msgid "Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda."
 msgstr "We are sorry, in this moment there isn´t a result that is connected with your search. Try it later or broad the search."
@@ -1017,7 +977,7 @@ msgid "Logotipo"
 msgstr "Logo"
 
 msgid "Logotipo & Slogan"
-msgstr "Logo &amp; Slogan"
+msgstr "Logo & Slogan"
 
 msgid "Los derechos de propiedad intelectual e industrial sobre la plataforma tecnológica, los instrumentos técnicos, sistemas informáticos y contenidos de  (bases de datos, información, imágenes, diseños, gráficos, formatos y códigos en cualquier lenguaje de programación), excepción hecha de los contenidos incorporados por los Usuarios conforme a estas condiciones, corresponden a CELLOVE SOCIAL NETWORK, S.L. por ser de su propiedad o haber obtenido previamente las autorizaciones pertinentes. En consecuencia, queda prohibida su reproducción, distribución, comunicación pública y transformación sin su autorización expresa. Igualmente, queda prohibido todo tipo de uso de los nombres comerciales, marcas o signos distintivos de cualquier clase, titularidad de Cellove® o CELLOVE SOCIAL NETWORK, S.L., sin su autorización expresa. El registro como Usuario en Cellove® no otorga otro derecho, que el de uso de la plataforma conforme a las presentes condiciones de uso, sin conceder a los Usuarios ningún otro derecho que no esté expresamente contemplado en los presentes Términos y Condiciones de Uso."
 msgstr "Intellectual property rights and industrial technology platform , technical tools , and content systems (databases , information, images, designs, graphics , formats and codes in any programming language ) , except for the content posted by users under these conditions , are CELLOVE SOCIAL NETWORK, SL to be owned or having obtained the necessary authorizations . Consequently , any reproduction , distribution , public communication and transformation without your express permission. Also is banned all use of trade names , trademarks or distinctive signs of any kind, the ownership of Cellove ® or CELLOVE SOCIAL NETWORK, SL, without their express permission . Registration as a user in Cellove ® does not guarantee other rights, the use of the platform in accordance with these terms and conditions, without giving users any other rights not expressly stated in these terms and conditions of use."
@@ -1095,13 +1055,13 @@ msgid "Me llamo"
 msgstr "My name is"
 
 msgid "Media & Prensa"
-msgstr "Media &amp; Press"
+msgstr "Media & Press"
 
 msgid "Media & prensa"
-msgstr "Media &amp; Press"
+msgstr "Media & Press"
 
 msgid "Media<br>&<br>Prensa"
-msgstr "Media &lt;br&gt; &amp; &lt;br&gt; Press"
+msgstr "Media <br> & <br> Press"
 
 msgid "Mejor Índice Cellove"
 msgstr "Better Cellove rating"
@@ -1259,9 +1219,6 @@ msgstr "New message"
 msgid "Nuevo mensaje recibido"
 msgstr "A new message recieved"
 
-msgid "Nunca"
-msgstr ""
-
 msgid "OBLIGACIONES"
 msgstr "Obligations"
 
@@ -1347,13 +1304,13 @@ msgid "Podrás incluir tus datos y las características de la persona que buscas
 msgstr "You will be able to include your details and characteristics of the person you are looking for with no cost. Cellove will provide you free access to the profiles supported and related to you. You can browse unlimited by Cellove, 24 hours a day the 365 days of the year and see all the profiles you want to know their tastes and features, create activities, see if he/she has Celestines and talk to them ...Whatever you want!"
 
 msgid "Política de Privacidad"
-msgstr "Privacy Policy"
+msgstr "Privacy policy"
 
 msgid "Política de Privacidad y Protección de datos de Cellove"
-msgstr "Cellove´s Privacy Policy and Data Protection"
+msgstr "Cellove´s privacy policy and data protection"
 
 msgid "Política de privacidad"
-msgstr "Privacy Policy"
+msgstr "Privacy policy"
 
 msgid "Ponle alas al amor"
 msgstr "Give wings to the love"
@@ -1389,7 +1346,7 @@ msgid "Propuesta de actividad:"
 msgstr "An activity purpose"
 
 msgid "Propón nuevos %{link} para que te recomienden y así mejorar tu <strong>Índice Cellove</strong>."
-msgstr "Purpose new %{link} for you to be recommended and then improve your &lt;strong&gt; Cellove rating &lt;/strong&gt;."
+msgstr "Purpose new %{link} for you to be recommended and then improve your <strong> Cellove rating </strong>."
 
 msgid "Propón un nuevo celestin@ para que te recomiende y gana más puntos."
 msgstr "Purpose a new Celestine for you to be recommended by him/her and earn more points"
@@ -1452,7 +1409,7 @@ msgid "Quieres recomendar a una usuari@ registrad@ o alguien que no es usuari@?"
 msgstr "Would you like to recommend a registered user or somebody who is not a user?"
 
 msgid "Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?"
-msgstr "Would you recommend a registered user&lt;br&gt;or somebody who is not an user?"
+msgstr "Would you recommend a registered user<br>or somebody who is not an user?"
 
 msgid "Quieres ser el primero?"
 msgstr "Would you like to be te first one ?"
@@ -1515,7 +1472,7 @@ msgid "Recomendación negada"
 msgstr "Recommendation denied"
 
 msgid "Recomendar"
-msgstr "recommend"
+msgstr "Recommend"
 
 msgid "Recomendar Usuario"
 msgstr "Recommend user"
@@ -1525,10 +1482,6 @@ msgstr "Recommend user"
 
 msgid "Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos."
 msgstr "Recommend us a new user, if he/she registers, both will earn points"
-
-#, fuzzy
-msgid "Recuperación de contraseña"
-msgstr "Recover password"
 
 msgid "Recuperar contraseña"
 msgstr "Recover password"
@@ -1558,7 +1511,7 @@ msgid "Registro de usuario"
 msgstr "Sign up a user"
 
 msgid "Registro<br>Usuari@<br>Gratis!"
-msgstr "Sign up &lt;br&gt; user &lt;br&gt; for free!"
+msgstr "Sign up <br> user <br> for free!"
 
 msgid "Registros Celestin@ Gratis"
 msgstr "Sign up Celestines for free"
@@ -1612,10 +1565,10 @@ msgid "Salir de copas"
 msgstr "Go out to have something to drink"
 
 msgid "Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?"
-msgstr "The messages will be definitely removed. ¿Are you sure?"
+msgstr "The messages will be definitely removed. Are you sure?"
 
 msgid "Se ha denunciado al usuario. ¡Gracias por tu ayuda!"
-msgstr "The user has been reported. ¡Thanks for your help!"
+msgstr "The user has been reported. Thanks for your help!"
 
 msgid "Se han enamorado en Cellove %{link}"
 msgstr "They have fallen in love in Cellove %{link}"
@@ -1632,11 +1585,8 @@ msgstr "Be a Celestine is easy, the reciever will recieve an e-mail to confirm h
 msgid "Si estás buscando a alguien especial, quieres popularidad y que tus posibilidades de encontrar a esa persona deseada sean máximas y no quieres perder el tiempo, puedes mejorar tu Índice Cellove y aprovecharte de sus beneficios."
 msgstr "If you're looking for someone special, you want popularity and your chances of finding the person you want to be high and don´t want to waste your time, you can improve your index Cellove and take advantage of its benefits."
 
-msgid "Si no has pedido este cambio, porfavor ignora este correo."
-msgstr ""
-
 msgid "Si quieres conocer a alguien interesante y disfrutar juntos de vuestro tiempo libre o, quien sabe, ¡Encontrar tu media naranja!"
-msgstr "If you want to meet someone interesting and enjoy together of your leisure time or who knows, ¡Find your love!"
+msgstr "If you want to meet someone interesting and enjoy together of your leisure time or who knows, Find your love!"
 
 msgid "Si quieres proponer un %{link}, tanto una ex pareja, amigo especial, amigo o familiar, puedes hacerlo %{link2}."
 msgstr "If you want to purpose a %{link} friend, former partner, a close friend or a relative, you can do it %{link2}"
@@ -1672,10 +1622,10 @@ msgid "Solitario"
 msgstr "Lonely"
 
 msgid "Solo recibir chats de perfiles que me han gustado"
-msgstr "Only recieve chats from profiles that have liked me"
+msgstr "Only recieve chats from profiles that I liked to them "
 
 msgid "Solo recibir mensajes de perfiles que me han gustado"
-msgstr "Only recieve messages from profiles that have liked me"
+msgstr "Only recieve messages from profiles that I liked to them"
 
 msgid "Solteros Exigentes"
 msgstr "Discerning singles"
@@ -1684,7 +1634,7 @@ msgid "Solteros exigentes"
 msgstr "Discerning singles"
 
 msgid "Somos %{count} usuari@s. ¡Gracias por vuestra confianza!"
-msgstr "We are %{count} users.¡Thanks to your confidence!"
+msgstr "We are %{count} users.Thanks to your confidence!"
 
 msgid "Somos %{user_count} usuari@s. Gracias por vuesra confianza."
 msgstr "We are %{user_count} users. Thanks to your confidence."
@@ -1749,10 +1699,6 @@ msgstr "My nacionality"
 msgid "Tengo un cuerpo "
 msgstr "I am physically"
 
-#, fuzzy
-msgid "Terminos y condiciones"
-msgstr "Terms and conditions"
-
 msgid "Terminos y condiciones generales"
 msgstr "General conditions and terms"
 
@@ -1763,7 +1709,7 @@ msgid "Tipos de Usuarios"
 msgstr "Kinds of users"
 
 msgid "Todo usuario comprende y acepta que el uso de Cellove® comporta la aceptación de la aparición de anuncios de Usuarios mediante un gestor de anuncios y sistema de pago on-line para tal efecto, en los que los Usuarios que lo deseen, a través de su “anuncio”, pueden presentarse y darse a conocer para ser más visibles. Cellove® pondrá los medios que tenga a su alcance para que dichos anunciantes sean más visibles para los demás usuarios, para aumentar sus posibilidades de encontrar pareja.  Estas comunicaciones comerciales serán visibles para todos los usuarios de Cellove®."
-msgstr "Any user understands and agrees that the use of Cellove ® implies acceptance of the users ads by a managerof advertisments and payment system on-line for that purpose, in which users who wish through their \"announcement\", may come forward and be known to be more visible. Cellove ® will put the means at their disposal for the advertisers to be more visible to other road users, to increase their chances of finding a mate. These commercial communication shall be visible to all users Cellove ®."
+msgstr "Any user understands and agrees that the use of Cellove ® implies acceptance of the users ads by a manager of advertisments and payment system on-line for that purpose, in which users who wish through their \"announcement\", may come forward and be known to be more visible. Cellove ® will put the means at their disposal for the advertisers to be more visible to other road users, to increase their chances of finding a mate. These commercial communication shall be visible to all users Cellove ®."
 
 msgid "Todo usuario comprende y acepta que el uso de Cellove® comporta la aceptación de la aparición de anuncios de terceros durante la navegación. Estas comunicaciones comerciales serán visibles para los usuarios del Pase GRATIS, pero no para los usuarios del Pase VIP (en el apartado I se explica en qué consisten el Pase GRATIS y el Pase VIP)."
 msgstr "Any user understands and agrees that the use of Cellove ® implies acceptance of the emergence of ads while browsing. These commercial communications will be visible to users FREE pass, but not for users VIP Pass (in section I explain what they are for FREE and Pass VIP Pass)."
@@ -1794,9 +1740,6 @@ msgstr "Your"
 
 msgid "Tu contraseña"
 msgstr "Your password"
-
-msgid "Tu contraseña no va a cambiar hasta que accedas al enlace y crees una nueva."
-msgstr ""
 
 msgid "Tu correo"
 msgstr "Your mail"
@@ -1850,7 +1793,7 @@ msgid "Tus notas"
 msgstr "Your notes"
 
 msgid "Tus notas de %{name} <span>(tranquilo, él/ella no las verá)</span>"
-msgstr "Your notes of %{name} &lt;span&gt; (Don´t worry him/her won´t see them) &lt;/span&gt;"
+msgstr "Your notes of %{name} <span> (Don´t worry him/her won´t see them) </span>"
 
 msgid "Términos y condiciones"
 msgstr "Terms and conditions"
@@ -1922,7 +1865,7 @@ msgid "Visitas"
 msgstr "Views"
 
 msgid "Visité su perfil y le envié un mensaje, después de varias ocasiones escribiéndonos, decidimos quedar para cenar y desde entonces, ¡no nos hemos separado!."
-msgstr "I visited his/her profile and i sent him/her a message, after being chating in some occasions, we decided to have dinner together and since then, ¡We haven´t separated!."
+msgstr "I visited his/her profile and i sent him/her a message, after being chating in some occasions, we decided to have dinner together and since then, we haven´t separated!."
 
 msgid "Viva"
 msgstr "That he/she lives"
@@ -2006,7 +1949,7 @@ msgid "atractiv@"
 msgstr "Attractive"
 
 msgid "ayuda a tu mejor amig@ a que sea feliz encontrando a su media naranja, ¡apóyale en su búsqueda del amor! ¡Hazle de Ceslestino!"
-msgstr "Help your best friend to be happy finding a soul mate, support him/her in their pursuit of love ¡Be his/her Celestine!"
+msgstr "Help your best friend to be happy finding a soul mate, support him/her in their pursuit of love . Be his/her Celestine!"
 
 msgid "azul"
 msgstr "Blue"
@@ -2150,7 +2093,7 @@ msgid "el alcohol no me sienta bien"
 msgstr "The alcohol makes me feel sick"
 
 msgid "el cine<br>"
-msgstr "The cinema &lt;br&gt;"
+msgstr "The cinema <br>"
 
 msgid "el deporte<br>"
 msgstr "Sports <br>"
@@ -2186,13 +2129,13 @@ msgid "establecer una relación estable"
 msgstr "Stabilshing a permanent relationship"
 
 msgid "estar con la familia<br>"
-msgstr "Be with the family &lt;br&gt;"
+msgstr "Be with the family <br>"
 
 msgid "estar con sus amigos<br>"
-msgstr "Be with the friends &lt;br&gt;"
+msgstr "Be with the friends <br>"
 
 msgid "estar tranquil@ en casa<br>"
-msgstr "Stay at home relaxed &lt;br&gt;"
+msgstr "Stay at home relaxed <br>"
 
 msgid "estoy estudiando"
 msgstr "I am studying"
@@ -2285,13 +2228,13 @@ msgid "kosher"
 msgstr "Kosher"
 
 msgid "la lectura<br>"
-msgstr "The reading &lt;br&gt;"
+msgstr "The reading <br>"
 
 msgid "la montaña<br>"
-msgstr "The mountain &lt;br&gt;"
+msgstr "The mountain <br>"
 
 msgid "la playa<br>"
-msgstr "The beach &lt;br&gt;"
+msgstr "The beach <br>"
 
 msgid "la religión es esencial en su vida"
 msgstr "The religion is essential in his/her life"
@@ -2552,7 +2495,7 @@ msgid "para mi la religión es esencial en mi vida"
 msgstr "For me the religion is essential in my life"
 
 msgid "pasear<br>"
-msgstr "Go for a walk &lt;br&gt;"
+msgstr "Go for a walk <br>"
 
 msgid "pelirrojo"
 msgstr "Redhead"
@@ -2633,7 +2576,7 @@ msgid "si tiene hijos, y quiere tener mas "
 msgstr "He/she have children and wants to have more"
 
 msgid "si tienes algún amigo con el que siempre has tenido mucha química, algo especial, y quieres ayudarlo a que encuentre el amor... ¡Recomiéndalo en Cellove!"
-msgstr "if you have a friend you've always had something special, and you want to help him/her find love ... ¡Recommend him/her on Cellove!"
+msgstr "if you have a friend you've always had something special, and you want to help him/her find love ... Recommend him/her on Cellove!"
 
 msgid "siguiente"
 msgstr "Following"
@@ -2735,215 +2678,208 @@ msgid "ya ha estado casad@ y quiere repetir"
 msgstr "He/she has been married and wants to do it again"
 
 msgid "¡Buena pareja!"
-msgstr "¡Good couple!"
+msgstr "Good couple!"
 
 msgid "¡Celestin@ invitado!"
-msgstr "¡Celestine invited!"
+msgstr "Celestine invited!"
 
 msgid "¡Consigue más puntos!"
-msgstr "¡Earn more points!"
+msgstr "Earn more points!"
 
 msgid "¡Convertirte en usuari@ de Cellove es muy fácil!"
-msgstr "¡Become a Cellove user, it´s easy!"
+msgstr "Become a Cellove user, it´s easy!"
 
 msgid "¡Conviértete en Celestin@!"
-msgstr "¡Become a Celestine!"
+msgstr "Become a Celestine!"
 
 msgid "¡Conviértete en usuari@!"
-msgstr "¡Become a user!"
-
-msgid "¡Disfruta!"
-msgstr ""
+msgstr "Become a user!"
 
 msgid "¡Es totalmente gratis!"
-msgstr "¡It´s completely free!"
+msgstr "IIt´s completely free!"
 
 msgid "¡Estás a un paso de aceptar la propuesta de"
-msgstr "¡You are about to accept the purpose of"
+msgstr "You are about to accept the purpose of"
 
 msgid "¡Haz de Celestin@ gratis en Cellove!"
-msgstr "¡Be a follower for free in Cellove!"
+msgstr "Be a Celestine for free in Cellove!"
 
 msgid "¡Hola Celestin@!"
-msgstr "¡Hi Celestine!"
+msgstr "Hi Celestine!"
 
 msgid "¡Le gusta!"
-msgstr "¡He/she likes it!"
+msgstr "He/she likes!"
 
 msgid "¡Le gustas a alguien!"
-msgstr "¡Somebody likes you!"
+msgstr "Somebody likes you!"
 
 msgid "¡Les he gustado!"
-msgstr "¡They liked it!"
+msgstr "They liked it!"
 
 msgid "¡Me gusta!"
-msgstr "¡I like it!"
+msgstr "I like it!"
 
 msgid "¡Mejora tu Índice Cellove!"
-msgstr "¡Improve your Cellove rating!"
+msgstr "Improve your Cellove rating!"
 
 msgid "¡Mejora tu índice Cellove!"
-msgstr "¡Improve your Cellove rating!"
+msgstr "Improve your Cellove rating!"
 
 msgid "¡Mejora tu índice!"
-msgstr "¡Improve your Cellove rating!"
+msgstr "Improve your Cellove rating!"
 
 msgid "¡No dejes que tus citas sean a ciegas!"
-msgstr "¡Don´t let your dates being blind!"
+msgstr "Don´t let your dates being blind!"
 
 msgid "¡No me gusta!"
-msgstr "¡I don´t like!"
+msgstr "I don´t like!"
 
 msgid "¡Nuevo celestino!"
-msgstr "¡New Celestine!"
+msgstr "New Celestine!"
 
 msgid "¡Nuevo mensaje!"
-msgstr "¡New message!"
+msgstr "New message!"
 
 msgid "¡Nuevo visitante!"
-msgstr "¡New visitor!"
+msgstr "New visitor!"
 
 msgid "¡REGISTRARME GRATIS!"
-msgstr "¡Register me for free!"
+msgstr "Register me for free!"
 
 msgid "¡Registrarme Gratis!"
-msgstr "¡Register me for free!"
+msgstr "Register me for free!"
 
 msgid "¡Regístrate Gratis!"
-msgstr "¡Register for free!"
+msgstr "Register for free!"
 
 msgid "¡Regístrate ahora Gratis!"
-msgstr "¡Register now for free!"
+msgstr "Register now for free!"
 
 msgid "¡Regístrate como Celestin@!"
-msgstr "¡Register as a follower!"
+msgstr "Register as a Celestine!"
 
 msgid "¡Una pequeña descripción de cómo te ves a ti mismo ayudará a otros usuari@s a conocerte mejor!"
-msgstr "¡A little description about how you think you are will help other users to know about you better!"
+msgstr "A little description about how you think you are will help other users to know about you better!"
 
 msgid "¡Usuari@ invitado!"
-msgstr "¡User invited!"
+msgstr "User invited!"
 
 msgid "¿Como funciona?"
-msgstr "¿How it works?"
+msgstr "How it works?"
 
 msgid "¿Cuando?"
-msgstr "¿When?"
+msgstr "When?"
 
 msgid "¿Cómo consigo más popularidad?"
-msgstr "¿How can I get more popularity?"
+msgstr "How can I get more popularity?"
 
 msgid "¿Cómo consigo popularidad?"
-msgstr "¿How can i get popularity?"
+msgstr "How can i get popularity?"
 
 msgid "¿Cómo eres?"
-msgstr "¿Wha do you look like?"
+msgstr "What do you look like?"
 
 msgid "¿Cómo es?"
-msgstr "¿What he/she looks like?"
+msgstr "What he/she looks like?"
 
 msgid "¿Cómo funciona?"
-msgstr "¿How it works?"
+msgstr "How it works?"
 
 msgid "¿Cómo le describirías?"
-msgstr "¿How will you describe him/her?"
+msgstr "How will you describe him/her?"
 
 msgid "¿Cómo se calcula?"
-msgstr "¿How is it calculated?"
+msgstr "How is it calculated?"
 
 msgid "¿Cómo te consideras?"
-msgstr "¿How do you think you are?"
+msgstr "How do you think you are?"
 
 msgid "¿Cómo te describirias?"
-msgstr "¿How will you describe yourself?"
+msgstr "How will you describe yourself?"
 
 msgid "¿Deseas bloquear a este usuario?"
-msgstr "¿Do you want to block this user?"
+msgstr "Do you want to block this user?"
 
 msgid "¿Estas de seguro que quieres borrar la foto?"
-msgstr "¿Are you sure you want to remove this photo?"
+msgstr "Are you sure you want to remove this photo?"
 
 msgid "¿Estas seguro?"
-msgstr "¿Are you sure?"
+msgstr "Are you sure?"
 
 msgid "¿Estás seguro de que deseas eliminar esta búsqueda?"
-msgstr "¿Are you sure you want to remove this search?"
+msgstr "Are you sure you want to remove this search?"
 
 msgid "¿Hacéis buena pareja?"
-msgstr "¿Do you get on well with the other?"
+msgstr "Do you make a good couple?"
 
 msgid "¿Has olvidado tu contraseña?"
-msgstr "¿Have you forgotten your password?"
+msgstr "Have you forgotten your password?"
 
 msgid "¿Los servicios de Cellove® son gratuitos?"
-msgstr "¿Cellove services are free?"
+msgstr "Cellove services are free?"
 
 msgid "¿Que notificaciones quieres recibir?"
-msgstr "¿What notifications do you want to recieve?"
+msgstr "What notifications do you want to recieve?"
 
 msgid "¿Quien eres?"
-msgstr "¿Who are you?"
+msgstr "Who are you?"
 
 msgid "¿Quien quieres que te vea?"
-msgstr "¿Who do you want to see you?"
+msgstr "Who do you want to see you?"
 
 msgid "¿Quieres aumentar tu indice Cellove?"
-msgstr "¿Would you like to improve your Cellove rating?"
+msgstr "Would you like to improve your Cellove rating?"
 
 msgid "¿Quieres mejorarlo?"
-msgstr "¿Would you like to improve it?"
+msgstr "Would you like to improve it?"
 
 msgid "¿Quieres proponer un Celestin@?"
-msgstr "¿Would you like to purpose a Celestine?"
+msgstr "Would you like to purpose a Celestine?"
 
 msgid "¿Quieres recomendar a alguien? ¡Cuéntanos cómo es!"
-msgstr "¿Would you like to recommend somebody? ¡Tell us how is he/she!"
+msgstr "Would you like to recommend somebody? ¡Tell us how is he/she!"
 
 msgid "¿Quieres recomendar a un amig@, exnovi@ o familiar?"
-msgstr "¿Would you like to recommend a freind, a former boy/girlfriend or a relative?"
+msgstr "Would you like to recommend a freind, a former boy/girlfriend or a relative?"
 
 msgid "¿Quién eres?"
-msgstr "¿Who are you?"
+msgstr "Who are you?"
 
 msgid "¿Quiénes pueden ser usuarios de Cellove®?"
-msgstr "¿Who can be a Cellove user?"
+msgstr "Who can be a Cellove user?"
 
 msgid "¿Qué buscas?"
-msgstr "¿What are you looking for?"
+msgstr "What are you looking for?"
 
 msgid "¿Qué es Cellove?"
-msgstr "¿What is Cellove?"
+msgstr "What is Cellove?"
 
 msgid "¿Qué es Cellove®?"
-msgstr "¿What is Cellove?"
+msgstr "What is Cellove?"
 
 msgid "¿Qué es?"
-msgstr "¿What is it?"
+msgstr "What is it?"
 
 msgid "¿Qué relación tenéis?"
-msgstr "¿What is you relationship?"
+msgstr "What is you relationship?"
 
 msgid "¿Seguro que deseas eliminar el mensaje de"
-msgstr "¿Are you sure you want to remove the message sent by "
+msgstr "Are you sure you want to remove the message sent by "
 
 msgid "¿Te imaginas quedar con alguien que nunca has visto pero tener la sensación de que lo conoces de toda la vida? Ahora es posible gracias a Cellove. Podrás tener a tu alcance mucha más información de esa persona a través de su círculo más cercano y de una manera segura y fiable."
-msgstr "¿Can you imagine being with someone you've never met but have the feeling that you know him/her since a long time ago ? It is now possible thanks to Cellove. You have at your fingertips a lot of information about that person through his inner circle and in a safe and reliable way."
+msgstr "Can you imagine being with someone you've never met but have the feeling that you know him/her since a long time ago ? It is now possible thanks to Cellove. You have at your fingertips a lot of information about that person through his inner circle and in a safe and reliable way."
 
 msgid "¿Te imaginas quedar con alguien que nunca has visto y tener la sensación de que lo conoces de toda la vida? <b>Ahora es posible gracias a Cellove</b>"
 msgstr "Can you imagine being with someone you've never met and have the feeling that you know him/her since a long time ago? <b> Now it´s possible thanks to Cellove </b>"
 
 msgid "¿algún miembro de tu familia está buscando pareja o una amistad especial? ¿Tienes algún hermano, primo, o incluso a tu padre o tu madre les gustaría encontrar a alguien para compartir de nuevo su vida? ¡No lo dudes y ayúdales! ¡Recomiéndalos en Cellove!"
-msgstr "Did any member of your family is looking for a partner or a special friendship? Do you have a brother, cousin, or even your father or your mother would like to find someone to share his/her life again? ¡Don´t hesitate and help them! ¡Recommend them in Cellove!"
+msgstr "Did any member of your family is looking for a partner or a special friendship? Do you have a brother, cousin, or even your father or your mother would like to find someone to share his/her life again? Don´t hesitate and help them! Recommend them in Cellove!"
 
 msgid "Étnia"
 msgstr "Ethnic group"
 
 msgid "Índice Cellove"
 msgstr "Cellove rating"
-
-#, fuzzy
-msgid "Última conexión"
-msgstr "Last conversations"
 
 msgid "Últimas conversaciones"
 msgstr "Last conversations"
@@ -2956,3 +2892,4 @@ msgstr "Opera"
 
 msgid "€/año"
 msgstr "€/year"
+
