@@ -206,6 +206,7 @@ header[role="banner"]{
     padding-left:50px;
     margin-top:-20px;
     float:left;
+    position:relative;
 
     h1 {
       width:298px;
@@ -233,6 +234,16 @@ header[role="banner"]{
       font-size:2.2em;
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-weight: 400; 
+    }
+
+    .beta {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-weight: 400;
+      font-size:1.1em;
+      color: #5CABE8;
+      position:absolute;
+      right:10px;
+      letter-spacing:1px;
     }
   }
 
