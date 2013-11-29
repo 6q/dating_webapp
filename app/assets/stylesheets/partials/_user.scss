@@ -46,17 +46,17 @@
       }
 
       #lang-switcher {
+        position:relative;
         .picker {
           a {
-            padding-left:10px;
             margin-right:25px;
              i {
               width:16px;
               height:16px;
               position: absolute;
-              top: 7px;
               background:image-url('languages_icon.png') no-repeat; 
-              margin-left:10px; 
+              right: 7px;
+              top:7px;
             }
           }
         }

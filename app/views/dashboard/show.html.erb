@@ -5,9 +5,9 @@
 
   <hr class="thin">
 
-  <%= render partial: 'new_users_near_me', locals: { radius: 500 } %>
-  <%= render partial: 'could_interest_me', locals: { radius: 500 } %>
   <%= render partial: 'best_index', locals: { radius: 500 } %>
+  <%= render partial: 'could_interest_me', locals: { radius: 500 } %>
+  <%= render partial: 'new_users_near_me', locals: { radius: 500 } %>
 
   <section id="last-messages">
     <h4><%= _('Últimas conversaciones') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
