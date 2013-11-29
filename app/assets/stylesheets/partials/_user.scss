@@ -1179,6 +1179,9 @@ section.chat{
     }
 
     .location-search {
+      #postal_code {
+        display:none;
+      }
       .control-label {
         width:auto;
         float:none;
@@ -1194,6 +1197,7 @@ section.chat{
 
         &.zip {
           margin-left:10px;
+          display:none;
         }
       }
     }
@@ -1234,6 +1238,8 @@ section.chat{
       width:180px;
       padding:.3em .7em;
       margin-top:5px;
+      margin-bottom:10px;
+      margin-left:10px;
     }
 
     .checkbox input[type="checkbox"]{
