@@ -143,14 +143,13 @@ hr.thin {
 
     header {
       @include clearfix;
-      padding:10px;
-      margin-bottom:20px;
+      padding:15px;
       line-height: 1.9em;
-      border-bottom:#e0e0e0 1px solid;
+      //border-bottom:#e0e0e0 1px solid;
 
       h1 {
         color:$link-color;
-        font-size:1.4em;
+        font-size:17.5px;
         line-height: 1em;
         margin:0;
         margin-right: 10px;
