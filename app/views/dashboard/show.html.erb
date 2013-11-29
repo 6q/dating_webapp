@@ -4,9 +4,11 @@
   <%= render "quick_search" %>
 
   <hr class="thin">
+  
+  <%= render partial: 'could_interest_me', locals: { radius: 500 } %>
 
   <%= render partial: 'best_index', locals: { radius: 500 } %>
-  <%= render partial: 'could_interest_me', locals: { radius: 500 } %>
+
   <%= render partial: 'new_users_near_me', locals: { radius: 500 } %>
 
   <section id="last-messages">
