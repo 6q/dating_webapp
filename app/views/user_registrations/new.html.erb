@@ -37,7 +37,10 @@
     <legend><%= _('Sube tu foto') %></legend>
     <div class="row">
       <div class="span6">
-        <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+        <label class="photoupload">
+          <span><%=_('Sube tu foto') %></span>
+          <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+        </label>
         <div id="picture_gallery"></div>
       </div>
     </div>
