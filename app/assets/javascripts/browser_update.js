@@ -1,3 +1,10 @@
+
+var $buoop = {} 
+$buoop.ol = window.onload; 
+window.onload=function(){ 
+ try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
+} 
+
 //browser-update.org notification script, <browser-update.org>
 //Copyright (c) 2007-2009, MIT Style License <browser-update.org/LICENSE.txt>
 var $buo = function(op,test) {
