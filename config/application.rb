@@ -78,11 +78,3 @@ module Cellove
     config.assets.version = '1.0'
   end
 end
-module ActionDispatch
-  class Request < Rack::Request
-    alias :remote_ip_orig :remote_ip
-    def remote_ip
-      @remote_ip ||= (@env['HTTP_CF_CONNECTING_IP'] || remote_ip_orig)
-    end
-  end
-end
