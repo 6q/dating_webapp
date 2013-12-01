@@ -91,7 +91,7 @@
 
 		  		<div class="tab-pane" id="dicen">
 		  			<% if @user.confirmed_recommenders.empty? %>
-              <%= _('%{name} aún no tiene ningún celestino.') % {name: @user.name} %><%= link_to _('Quieres ser el primero?'), be_matchmaker_path %>
+              <%= _('%{name} aún no tiene ningún celestino.') % {name: @user.name} %> <%= link_to _('Quieres ser el primero?'), be_matchmaker_path %>
 		  			<% else %>
 		  				<% @user.confirmed_recommenders.each do |rec| %>
 								<%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>
