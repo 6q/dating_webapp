@@ -5,7 +5,7 @@ class UserRegistrationsController < Devise::RegistrationsController
   # Overrode this method to be able to test controller ~.~
   # See test/controllers/user_registrations_controller_test.rb
   def new
-    @geocoder = Geocoder.search(request.ip).first
+    @geocoder = Geocoder.search(request.env["HTTP_CF_CONNECTING_IP"]).first
     super
   end
 
