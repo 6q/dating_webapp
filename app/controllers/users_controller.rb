@@ -66,7 +66,7 @@ class UsersController < ApplicationController
   end
 
   def matchmaker_become_user
-    @geocoder = Geocoder.search(request.ip).first
+    @geocoder = Geocoder.search(request.env["HTTP_CF_CONNECTING_IP"]).first
   end
 
   def my_matchmakers
