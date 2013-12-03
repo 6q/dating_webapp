@@ -52,7 +52,7 @@
                                             <td valign="top" align="center" style="padding-top:10px;padding-right:40px;padding-bottom:30px;padding-left:40px;color:#373737;font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:150%;text-align:left">
                                                 <p><%= _('Hola') %> <%= @resource.email %>!</p>
 
-                                                <p>Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo.</p>
+                                                <p><%= _("Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo.") %></p>
                                                 <p><%= _('Solo tienes que acceder al siguiente enlace y ya está!') %></p>
 
                                                 <h3 align="center"><%= link_to _('Confirmar mi cuenta'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></h3>
