@@ -33,6 +33,7 @@ en:
     formats:
       default: ! '%Y-%m-%d'
       long: ! '%B %d, %Y'
+       medium: "%A, %Y-%m-%d"
       short: ! '%b %d'
     month_names:
     -
