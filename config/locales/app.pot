@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-20 14:06+0100\n"
+"POT-Creation-Date: 2013-12-03 11:19+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -192,6 +192,9 @@ msgstr ""
 msgid "Alguien ha visitado tu perfil"
 msgstr ""
 
+msgid "Alguien muy especial te ha recomendado para que uses Cellove.com, y puedas darle alas al amor."
+msgstr ""
+
 msgid "Algun@s usuari@s registrad@s en Cellove"
 msgstr ""
 
@@ -274,6 +277,9 @@ msgid "BLOQUEAR"
 msgstr ""
 
 msgid "Bienhumorado"
+msgstr ""
+
+msgid "Bienvenido a "
 msgstr ""
 
 msgid "Bienvenido a Cellove"
@@ -465,7 +471,13 @@ msgstr ""
 msgid "Configuración de cuenta"
 msgstr ""
 
+msgid "Confirmación de cuenta de correo"
+msgstr ""
+
 msgid "Confirmados"
+msgstr ""
+
+msgid "Confirmar mi cuenta"
 msgstr ""
 
 msgid "Conocerte de verdad"
@@ -597,10 +609,16 @@ msgstr ""
 msgid "Dieta"
 msgstr ""
 
+msgid "Disfruta y dale alas al amor"
+msgstr ""
+
 msgid "Distancia"
 msgstr ""
 
 msgid "ENVIAR"
+msgstr ""
+
+msgid "ERROR"
 msgstr ""
 
 msgid "Edad"
@@ -708,7 +726,7 @@ msgstr ""
 msgid "Entra en Cellove.com"
 msgstr ""
 
-msgid "Entrar<br>\\n\t                                        directamente<br>\\n\t                                        a mi perfil"
+msgid "Entrar<br>\\n                                            directamente<br>\\n                                            a mi perfil"
 msgstr ""
 
 msgid "Enviados"
@@ -726,7 +744,10 @@ msgstr ""
 msgid "Enviar preguntas a Celestinos"
 msgstr ""
 
-msgid "Era un poco excéptica pero mi hija me hizo de Celestina, conocí a Fran y a parte de ser grandes amigos, también compartimos muchas cosas, es una suerte habernos conocido."
+msgid "Era un poco escéptica pero mi hija me hizo de Celestina, conocí a Fran y a parte de ser grandes amigos, también compartimos muchas cosas, es una suerte habernos conocido."
+msgstr ""
+
+msgid "Error"
 msgstr ""
 
 msgid "Es fácil y gratis."
@@ -885,6 +906,12 @@ msgstr ""
 msgid "Ha dicho:"
 msgstr ""
 
+msgid "Ha habido un problema. Es provable que la página que buscabas no exista."
+msgstr ""
+
+msgid "Haceis buena pareja"
+msgstr ""
+
 msgid "Hacemos buena pareja"
 msgstr ""
 
@@ -901,6 +928,9 @@ msgid "Has recibido este correo de Cellove Social Network porque tu correo está
 msgstr ""
 
 msgid "Has recibido una recomendación"
+msgstr ""
+
+msgid "Has recibido una recomendación de un Celestino."
 msgstr ""
 
 msgid "Hay cuatro tipos de Celestin@s y su finalidad es mejorar el Índice Cellove de los usuarios registrados:"
@@ -955,6 +985,9 @@ msgid "Introduce el email con el que te registraste y te enviaremos las instrucc
 msgstr ""
 
 msgid "Invita a tus amigos"
+msgstr ""
+
+msgid "Invitación a Cellove.com"
 msgstr ""
 
 msgid "Ir acomer"
@@ -1254,10 +1287,16 @@ msgstr ""
 msgid "Nuevo Mensaje"
 msgstr ""
 
+msgid "Nuevo mensaje privado"
+msgstr ""
+
 msgid "Nuevo mensaje recibido"
 msgstr ""
 
 msgid "Nunca"
+msgstr ""
+
+msgid "O accede a través de la siguiente URL:"
 msgstr ""
 
 msgid "OBLIGACIONES"
@@ -1297,6 +1336,9 @@ msgid "Palabra clave"
 msgstr ""
 
 msgid "Para denunciar por ilegalidad o violación de los derechos de terceros un contenido transmitido o publicado al utilizar los Servicios de Cellove®, o desea protestar contra cualquier bloqueo o eliminación del contenido de Cellove® póngase en contacto con el departamento legal de Cellove®, en cellove@cellove.es."
+msgstr ""
+
+msgid "Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo."
 msgstr ""
 
 msgid "Pase GRATIS"
@@ -1503,6 +1545,9 @@ msgstr ""
 msgid "Recomendación acceptada"
 msgstr ""
 
+msgid "Recomendación de un Celestino"
+msgstr ""
+
 msgid "Recomendación enviada"
 msgstr ""
 
@@ -1545,6 +1590,9 @@ msgstr ""
 msgid "Registro Celestin@"
 msgstr ""
 
+msgid "Registro Celestin@ Gratis"
+msgstr ""
+
 msgid "Registro Gratis"
 msgstr ""
 
@@ -1555,9 +1603,6 @@ msgid "Registro de usuario"
 msgstr ""
 
 msgid "Registro<br>Usuari@<br>Gratis!"
-msgstr ""
-
-msgid "Registros Celestin@ Gratis"
 msgstr ""
 
 msgid "Regístrate"
@@ -1674,6 +1719,9 @@ msgstr ""
 msgid "Solo recibir mensajes de perfiles que me han gustado"
 msgstr ""
 
+msgid "Solo tienes que acceder al siguiente enlace y ya está!"
+msgstr ""
+
 msgid "Solteros Exigentes"
 msgstr ""
 
@@ -1729,6 +1777,9 @@ msgid "También hablo"
 msgstr ""
 
 msgid "Te gustan"
+msgstr ""
+
+msgid "Te has registrado correctamente a"
 msgstr ""
 
 msgid "Te propongo esta actividad"
@@ -1857,6 +1908,9 @@ msgstr ""
 msgid "Tímido"
 msgstr ""
 
+msgid "Un Celestino muy especial te ha recomendado para que uses Cellove.com, y puedas darle alas al amor."
+msgstr ""
+
 msgid "Una amiga me hizo de Celestina y lo probé, conocí a Carlos, después de hablar durante unos días, quedamos para tomar un café y ahora estamos saliendo juntos."
 msgstr ""
 
@@ -1869,7 +1923,7 @@ msgstr ""
 msgid "Usuari@s con mejor Índice Cellove"
 msgstr ""
 
-msgid "Usuari@s nuevos en tu zona"
+msgid "Usuari@s nuevos en tu franja de edad"
 msgstr ""
 
 msgid "Usuari@s que te pueden gustar"
@@ -2730,6 +2784,12 @@ msgstr ""
 msgid "ya ha estado casad@ y quiere repetir"
 msgstr ""
 
+msgid "¡A alguien le gustas!"
+msgstr ""
+
+msgid "¡Alguien cree que podeis hacer buena pareja!"
+msgstr ""
+
 msgid "¡Buena pareja!"
 msgstr ""
 
@@ -2751,10 +2811,34 @@ msgstr ""
 msgid "¡Disfruta!"
 msgstr ""
 
+msgid "¡Entra en Cellove para saber a quien le gustas y descubrir si tu también sientes lo mismo!"
+msgstr ""
+
+msgid "¡Entra en Cellove para saber quien ha sido y descubrir la revolución del amor!"
+msgstr ""
+
+msgid "¡Entra en Cellove para saber quien ha sido y ver lo que te dice!"
+msgstr ""
+
+msgid "¡Entra en Cellove para saber quien ha sido y ver que dice de ti!"
+msgstr ""
+
+msgid "¡Entra ya en Cellove para saber quien ha sido!"
+msgstr ""
+
+msgid "¡Entra ya y empieza a darle alas al amor!"
+msgstr ""
+
 msgid "¡Es totalmente gratis!"
 msgstr ""
 
 msgid "¡Estás a un paso de aceptar la propuesta de"
+msgstr ""
+
+msgid "¡Han visitado tu perfil mientras no estabas conectado!"
+msgstr ""
+
+msgid "¡Has recibido un nuevo mensaje!"
 msgstr ""
 
 msgid "¡Haz de Celestin@ gratis en Cellove!"
