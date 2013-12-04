@@ -230,16 +230,16 @@ class User < ActiveRecord::Base
   invited_user = lambda {|user| user.has_role?(:invited_user) }
 
   validates_presence_of :name
-  validates_presence_of :surname
+  validates_presence_of :surname, if: regular_user
   validates :email, presence: true
   validates :password, presence: true, on: :create
 
   #Validations only performed on regular users, not matchmakers
-  validates_presence_of :gender
-  validates_presence_of :city
-  validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year
+  validates_presence_of :gender, if: regular_user
+  validates_presence_of :city, if: regular_user
+  validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year, if: regular_user
 
-  validates :birth_date, presence: true, minimum_age: true
+  validates :birth_date, presence: true, minimum_age: true, if: regular_user
 
   geocoded_by :location
   after_validation :geocode
