@@ -11,7 +11,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    mail(:to => user.email, :subject => _('Bienvenido a Cellove')._(' | Cellove.com'))
+    mail(:to => user.email, :subject => _('Bienvenido a Cellove | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end
 
@@ -33,41 +33,41 @@ class UserMailer < ActionMailer::Base
   def receive_message(sender, recipient)
     @sender = sender
     @recipient = recipient
-    mail(:to => @recipient.email, :subject => _('Nuevo mensaje recibido')._(' | Cellove.com'))
+    mail(:to => @recipient.email, :subject => _('Nuevo mensaje recibido | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end
 
   def profile_visit(visitor, visited)
     @sender = visitor
     @recipient = visited
-    mail(:to => @recipient.email, :subject => _('Alguien ha visitado tu perfil')._(' | Cellove.com'))
+    mail(:to => @recipient.email, :subject => _('Alguien ha visitado tu perfil | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end
 
   def like(sender, recipient)
     @sender = sender
     @recipient = recipient
-    mail(:to => @recipient.email, :subject => _('¡Le gustas a alguien!')._(' | Cellove.com'))
+    mail(:to => @recipient.email, :subject => _('¡Le gustas a alguien! | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end
 
   def star_rating(sender, recipient)
     @sender = sender
     @recipient = recipient
-    mail(:to => @recipient.email, :subject => _('Alguien cree que hace buena pareja contigo')._(' | Cellove.com'))
+    mail(:to => @recipient.email, :subject => _('Alguien cree que hace buena pareja contigo | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end
 
   def celestino_recommendation(sender, recipient)
     @sender = sender
     @recipient = recipient
-    mail(:to => @recipient.email, :subject => _('Has recibido una recomendación')._(' | Cellove.com'))
+    mail(:to => @recipient.email, :subject => _('Has recibido una recomendación | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end
 
   def report(reporter, reported)
     @reporter = reporter
     @reported = reported
-    mail(to: 'cellove@cellove.com', subject: _('Perfil denunciado')._(' | Cellove.com'))
+    mail(to: 'cellove@cellove.com', subject: _('Perfil denunciado | Cellove.com'))
   end
 end
