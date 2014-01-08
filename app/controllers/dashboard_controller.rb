@@ -1,5 +1,9 @@
 class DashboardController < ApplicationController
   layout "logged_in"
+  
+  # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt 
+  # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
+  # before_filter :is_invited_user?
 
   def show
     @best_suited_near_me = current_user.best_suited_near_me
@@ -31,4 +35,15 @@ class DashboardController < ApplicationController
       end
     end
   end
+  
+  private
+  
+  # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt 
+  # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
+
+  #def is_invited_user?
+  #  if current_user.roles.include?(Role.find_by_name("invited_user")) # no és correcte, hauriem de mirar si té nom i dades de localització
+  #    redirect_to profile_url
+  #  end
+  #end
 end

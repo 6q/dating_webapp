@@ -246,28 +246,37 @@ section.list {
     color:#999;
     float: left;
 
-    span.page {
+    span.page, span.next, span.prev {
       display:block;
-      float:left;
+      float:left;			
 
-      a.prev, a.next {
-        background:$link_color;
+      a {			
+				font-size: 12px;
         display:inline-block;
         border-radius:5px;
         color:#fff;
-        padding:0 .5em;
+        padding: 3px 9px;
+				border: 1px solid #d3d3d3;
         text-decoration:none;
-        margin:0 8px;
+        margin:0 4px;
+				color: #333333;
         &:hover {
-          background:$link-hover-color;
+					background: #9fd3f3;
         }
       }
+    }
 
-      a.current {
-        font-size:1.1em;
-        font-weight:bold;
-        color:#666;
-      }
+		span.current {
+			font-size: 12px;
+      display:inline-block;
+      border-radius:5px;
+      color:#fff;
+      padding: 3px 9px;
+			border: 1px solid #d3d3d3;
+      text-decoration:none;
+      margin:0 4px;
+			color: #333333;
+			background: #9fd3f3;
     }
 
     span{
@@ -423,7 +432,7 @@ section.chat{
   }
 
   .unread {
-    background-color: #e0e0e0;
+    background-color: #cef5cf;
   }
 
   .pagination {
@@ -450,17 +459,21 @@ section.chat{
   .pic {
 
     float:left;
-    margin-right:10px;
+    margin-right: 10px;
 
-    img {
+    img {			
+			float: left;
       background:#fff;
-      border:#e0e0e0 1px solid;
+      border: #e0e0e0 1px solid;
       padding:3px;
     }
+		
   }
 
   .info {
-    margin-left:80px;
+		margin-top: 5px;
+		float: left;
+		width: 400px;
     display: block;
 
     .msg-data {
@@ -500,6 +513,10 @@ section.chat{
 
   }
 
+	.reply {
+		margin: 25px 10px 0 0;
+		float: right;
+	}
   .msg-reply {
     @include clearfix;
     background:#f2f2f2;

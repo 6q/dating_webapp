@@ -3,7 +3,7 @@
   <div class="boxed">
     <div class="boxed-inner">
       <header>
-        <h1 class="span3"><%= _('Tu perfil') %></h1>
+        <h1 class="pull-left section_title"><%= _('Tu perfil') %></h1>
         <div class="pull-right">
           <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to _('¡Mejora tu índice!'), my_matchmakers_path(anchor: 'tab_mejora') %> - <%= _('Perfil %{progress}%% completado') % {progress: current_user.progress_status} %>
         </div>
@@ -25,7 +25,7 @@
       <div class="boxed-inner">
         <fieldset>
           <header>
-            <h1><%= _('Datos de acceso a Cellove') %></h1>
+            <h1 class="section_title"><%= _('Datos de acceso a Cellove') %></h1>
             <p><%= _('Modifica aquí tus datos de acceso a Cellove') %></p>
           </header>
           <div>
@@ -62,7 +62,7 @@
       <div class="boxed-inner">
         <fieldset class="quien form-inline">
           <header>
-            <h1><%= _('¿Quien eres?') %></h1>
+            <h1 class="section_title"><%= _('¿Quien eres?') %></h1>
           </header>
           <div class="span9">
             <%= _('Me llamo') %>

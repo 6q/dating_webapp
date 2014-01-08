@@ -98,7 +98,7 @@
 <section class="list">
   <header>
     <div class="pull-left">
-      <h1><%= _('Resultados de la búsqueda') %></h1>
+      <h1 class="section_title"><%= _('Resultados de la búsqueda') %></h1>
     </div>
     <div class="pull-right">
       <div class="pull-left">
@@ -121,7 +121,7 @@
     <div class=""><strong><%= _('Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda.') %></strong></div>
   <% end %>
   <div class="pagination">
-    <%= pager_total(@users) %>
+    <%= total_users(@users).html_safe %>
   </div>
   <%= paginate @users %>
 </section>

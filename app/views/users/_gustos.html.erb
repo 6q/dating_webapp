@@ -11,86 +11,86 @@
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Tabaco') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::TP_SMOKE[@user.smoke].downcase %></div>
+			<div class="txt"><%= _(User::TP_SMOKE[@user.smoke].downcase) %></div>
 		</div>
 	<% end %>
 	<% if @user.alcohol.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Alcohol') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::TP_ALCOHOL[@user.alcohol] %></div>
+			<div class="txt"><%= _(User::TP_ALCOHOL[@user.alcohol]) %></div>
 		</div>
 	<% end %>
 	<% if @user.wedding_opinion.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Matrimonio') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::TP_WEDDING_OPINION[@user.wedding_opinion].downcase %></div>
+			<div class="txt"><%= _(User::TP_WEDDING_OPINION[@user.wedding_opinion].downcase) %></div>
 		</div>
 	<% end %>
 	<% if @user.animals.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Animales') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::TP_ANIMALS[@user.animals].downcase %></div>
+			<div class="txt"><%= _(User::TP_ANIMALS[@user.animals].downcase) %></div>
 		</div>
 	<% end %>
 	<% if @user.party.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Salir') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::TP_PARTY[@user.party].downcase %></div>
+			<div class="txt"><%= _(User::TP_PARTY[@user.party].downcase) %></div>
 		</div>
 	<% end %>
 	<% if @user.music.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Música') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::TP_MUSIC[@user.music].downcase %></div>
+			<div class="txt"><%= _(User::TP_MUSIC[@user.music].downcase) %></div>
 		</div>
 	<% end %>
 	<% if @user.music_genre.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Género muscial preferido') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::MUSIC_GENRE[@user.music_genre] %></div>
+			<div class="txt"><%= _(User::MUSIC_GENRE[@user.music_genre]) %></div>
 		</div>
 	<% end %>
 	<% if @user.cinema.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Cine') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::TP_CINEMA[@user.cinema].downcase %></div>
+			<div class="txt"><%= _(User::TP_CINEMA[@user.cinema].downcase) %></div>
 		</div>
 	<% end %>
 	<% if @user.cinema_frequency.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Frecuencia') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::CINEMA_FREQUENCY[@user.cinema_frequency] %></div>
+			<div class="txt"><%= _(User::CINEMA_FREQUENCY[@user.cinema_frequency]) %></div>
 		</div>
 	<% end %>
 	<% if @user.cinema_genre.present? %>
 		<% gustos = 1 %>
 		<div class="key span3"><%= _('Género preferido') %>:</div>
 		<div class="valor span6">
-			<div class="txt"><%= User::CINEMA_GENRE[@user.cinema_genre] %></div>
+			<div class="txt"><%= _(User::CINEMA_GENRE[@user.cinema_genre]) %></div>
 		</div>
 	<% end %>
-	<% unless @user.like_sport.blank? or (@user.like_sport=='0' and @user.like_read=="0" and @user.like_cinema=="0" and @user.like_quiet=="0" and @user.like_walk=="0" and @user.like_mountain=="0" and @user.like_beach=="0" and @user.like_family=="0" and @user.like_friends=="0") %>
+	<% unless @user.like_sport.blank? or (@user.like_sport==false and @user.like_read==false and @user.like_cinema==false and @user.like_quiet==false and @user.like_walk==false and @user.like_mountain==false and @user.like_beach==false and @user.like_family==false and @user.like_friends==false) %>
 	<% gustos = 1 %>
-		<div class="key span3">Le gusta:</div>
+		<div class="key span3"><%= _('Le gusta') %>:</div>
 		<div class="valor span6">
 			<div class="txt">
-				<%= _('el deporte<br>').html_safe if @user.like_sport=="1" %>
-				<%= _('la lectura<br>').html_safe if @user.like_read=="1" %>
-				<%= _('el cine<br>').html_safe if @user.like_cinema=="1" %>
-				<%= _('estar tranquil@ en casa<br>').html_safe if @user.like_quiet=="1" %>
-				<%= _('pasear<br>').html_safe if @user.like_walk=="1" %>
-				<%= _('la montaña<br>').html_safe if @user.like_mountain=="1" %>
-				<%= _('la playa<br>').html_safe if @user.like_beach=="1" %>
-				<%= _('estar con la familia<br>').html_safe if @user.like_family=="1" %>
-				<%= _('estar con sus amigos<br>').html_safe if @user.like_friends=="1" %>
+				<%= _('el deporte<br>').html_safe if @user.like_sport %>
+				<%= _('la lectura<br>').html_safe if @user.like_read %>
+				<%= _('el cine<br>').html_safe if @user.like_cinema %>
+				<%= _('estar tranquil@ en casa<br>').html_safe if @user.like_quiet %>
+				<%= _('pasear<br>').html_safe if @user.like_walk %>
+				<%= _('la montaña<br>').html_safe if @user.like_mountain %>
+				<%= _('la playa<br>').html_safe if @user.like_beach %>
+				<%= _('estar con la familia<br>').html_safe if @user.like_family %>
+				<%= _('estar con sus amigos<br>').html_safe if @user.like_friends %>
 			</div>
 		</div>
 	<% end %>	
