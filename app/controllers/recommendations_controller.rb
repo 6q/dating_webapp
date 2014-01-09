@@ -33,20 +33,32 @@ class RecommendationsController < ApplicationController
         @characteristic.creator_id = current_user.id
         @characteristic.save
         flash[:success] = _('Recomendación enviada')
-        redirect_to matchmaker_become_user_url
+        if current_user.roles.include?(Role.find_by_name("regular_user"))
+          redirect_to be_matchmaker_url
+        else
+          redirect_to matchmaker_become_user_url
+        end
       else
         flash[:error] = _('Datos incorrectos o faltantes')
         #@recommendation = Recommendation.new(params[:recommendation])
         #@characteristic = Characteristic.new(params[:characteristic])
         #render 'users/be_matchmaker'
-        redirect_to matchmaker_become_user_url
+        if current_user.roles.include?(Role.find_by_name("regular_user"))
+          redirect_to be_matchmaker_url
+        else
+          redirect_to matchmaker_become_user_url
+        end
       end
     else
       flash[:error] = _('Datos incorrectos o faltantes')
       #@recommendation = Recommendation.new(params[:recommendation])
       #@characteristic = Characteristic.new(params[:characteristic])
       #render 'users/be_matchmaker'
-      redirect_to matchmaker_become_user_url
+      if current_user.roles.include?(Role.find_by_name("regular_user"))
+        redirect_to be_matchmaker_url
+      else
+        redirect_to matchmaker_become_user_url
+      end
     end
   end
 

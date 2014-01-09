@@ -446,11 +446,11 @@ class User < ActiveRecord::Base
     like = self.likes.build({})
     like.user_id = user.id
     if like.save
+      send_notification_email(:like, user)
       return true
     else
       return false
     end
-    send_notification_email(:like, user)
   end
 
   def likes?(user)
