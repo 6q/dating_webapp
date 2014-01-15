@@ -23,6 +23,13 @@
       <div class="tab-content">
         <!-- begin tabs -->
         <div class="tab-pane active" id="confirmados">
+					
+					<% unless @confirmed_recommenders.any? %>
+						<div class="celestinos-empty">
+							<p><%= _('Actualmente no tienes ningún Celestin@ confirmado.') %></p>
+						</div>
+					<% end %>
+	
           <% @confirmed_recommenders.each do |rec| %>
             <%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>
           <% end %>
@@ -34,6 +41,12 @@
 
         <div class="tab-pane" id="confirmar">
           <% @type = 'por-confirmar' %>
+
+					<% unless @unconfirmed_recommenders.any? %>
+						<div class="celestinos-empty">
+							<p><%= _('Actualmente no tienes ningún Celestin@ pendiente de confirmar.') %></p>
+						</div>
+					<% end %>
 
           <% @unconfirmed_recommenders.each do |rec| %>
             <%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>

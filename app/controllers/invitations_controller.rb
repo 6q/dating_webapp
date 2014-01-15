@@ -18,7 +18,7 @@ class InvitationsController < ApplicationController
       end
     else
       # Something went wrong.
-      flash[:error] = _('Oops!')
+      flash[:error] = _('El email indicado ya está registrado en Cellove!')
     end
     redirect_to my_matchmakers_path(anchor: 'mejora')
   end

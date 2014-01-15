@@ -518,6 +518,7 @@ section.chat{
 		float: right;
 	}
   .msg-reply {
+		clear: both;
     @include clearfix;
     background:#f2f2f2;
     border-top:#e0e0e0 1px dashed;
@@ -1418,7 +1419,11 @@ section.messages{
 
     }
   }
-  
+  .celestinos-empty {
+		margin: 20px;
+		font-size: 14px;
+		color: #555;
+	}
   .white-box{
     text-align: center;
     background-color: white;

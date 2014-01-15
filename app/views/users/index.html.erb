@@ -121,7 +121,7 @@
     <div class=""><strong><%= _('Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda.') %></strong></div>
   <% end %>
   <div class="pagination">
-    <%=raw total_users(@users) %>
+    <%= pager_total(@users) %>
   </div>
   <%= paginate @users %>
 </section>

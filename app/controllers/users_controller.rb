@@ -77,19 +77,23 @@ class UsersController < ApplicationController
 
   # Interaction routes
   def nice_couple
+    @best_suited_near_me = current_user.best_suited_near_me
     @users = Kaminari::paginate_array(User.nice_couple(current_user, params[:order])).page(params[:page])
   end
 
   def likes
+    @best_suited_near_me = current_user.best_suited_near_me
     @users = Kaminari::paginate_array(User.people_who_like_me(current_user, params[:order])).page(params[:page])
   end
 
   def likes_of_mine
+    @best_suited_near_me = current_user.best_suited_near_me
     @users = Kaminari::paginate_array(User.people_i_like(current_user, params[:order])).page(params[:page])
   end
 
   def hits
-    @users = Kaminari::paginate_array(User.all_visitors(current_user, params[:order])).page(params[:page])
+    @best_suited_near_me = current_user.best_suited_near_me
+    @users = Kaminari::paginate_array(User.all_visitors(current_user, params[:order])).page(params[:page]).per(3)
   end
 
   def cellove_index

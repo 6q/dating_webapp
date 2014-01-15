@@ -25,8 +25,8 @@ module ApplicationHelper
 
     if paged_object.length > 0
       html = '<span class="total">' + _('Mostrando ') + "&nbsp;"
-      html += (paged_object.current_page * paged_object.length - paged_object.length + 1).to_s + "&nbsp;" + _(' a ') + "&nbsp;"
-      html += (paged_object.current_page * paged_object.length).to_s + "&nbsp;" + _(' de ') + "&nbsp;"
+      html += (paged_object.offset_value + 1).to_s + "&nbsp;" + _(' a ') + "&nbsp;"
+      html += ((paged_object.current_page * paged_object.limit_value) > paged_object.total_count ? paged_object.total_count : paged_object.current_page * paged_object.limit_value).to_s + "&nbsp;" + _(' de ') + "&nbsp;"
       html += paged_object.total_count.to_s + '.</span>'
     end
 

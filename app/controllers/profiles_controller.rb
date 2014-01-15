@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   skip_before_filter :matchmaker_user
   before_filter :skip_password_attribute, only: :update
 
-  def show
+  def show    
     @user = current_user
     if @user.has_role?(:matchmaker)
       render 'matchmaker_show'
