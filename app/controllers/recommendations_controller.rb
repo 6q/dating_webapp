@@ -22,7 +22,7 @@ class RecommendationsController < ApplicationController
       if user.nil?
         # User was not found. Create and invite a new one,
         # without validations (we have no password etc. yet)
-        user = User.new_invitee(params[:user])
+        user = User.new_invitee(params[:user], true)
         user.save(validate: false)
       end
 

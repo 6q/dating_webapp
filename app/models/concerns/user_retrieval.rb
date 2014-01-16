@@ -25,7 +25,8 @@ module UserRetrieval
     .where("users.id NOT IN (?)", not_in)
     .where("users.gender = ?", self.matching_gender)
     .where("users.lf_gender = ?", self.gender)
-    .reorder(order[order_type])
+    .where("attachable_id IS NOT NULL")
+    .reorder(order[order_type])    
     .limit(limit)
     .uniq
 

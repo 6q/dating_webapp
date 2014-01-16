@@ -51,8 +51,7 @@
                                         <tr>
                                             <td valign="top" align="center" style="padding-top:10px;padding-right:40px;padding-bottom:30px;padding-left:40px;color:#373737;font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:150%;text-align:left">
                                                 <p>
-                                                  <%= _('Te has registrado correctamente a') %> <%= link_to 'Cellove', root_url %>.
-                                                  You have successfully signed up to <%= link_to 'Cellove', root_url %>.<br/>
+                                                  <%= _('Te has registrado correctamente a') %> <%= link_to 'Cellove', root_url %>.                                                  
                                                 </p>
                                                 <p>
                                                   <%= _('¡Entra ya y empieza a darle alas al amor!') %> <%= @user.has_role?('matchmaker') ? new_user_session_url : new_user_session_url %>.
