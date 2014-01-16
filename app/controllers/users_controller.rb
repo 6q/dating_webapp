@@ -93,7 +93,7 @@ class UsersController < ApplicationController
 
   def hits
     @best_suited_near_me = current_user.best_suited_near_me
-    @users = Kaminari::paginate_array(User.all_visitors(current_user, params[:order])).page(params[:page]).per(3)
+    @users = Kaminari::paginate_array(User.all_visitors(current_user, params[:order])).page(params[:page])
   end
 
   def cellove_index
