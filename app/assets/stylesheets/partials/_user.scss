@@ -451,8 +451,7 @@ section.chat{
 }
 
 .msg-item {
-
-  @include clearfix;
+ 	
   background:#fff;
   position:relative;
 
@@ -516,6 +515,10 @@ section.chat{
 	.reply {
 		margin: 25px 10px 0 0;
 		float: right;
+		.tooltip {
+			z-index: 1000;
+			color: #ff0 !important;
+		}
 	}
   .msg-reply {
 		clear: both;
