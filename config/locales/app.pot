@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-04 09:06+0100\n"
+"POT-Creation-Date: 2014-01-17 18:14+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,9 +37,6 @@ msgid " y mi código postal es el"
 msgstr ""
 
 msgid " y soy de étnia"
-msgstr ""
-
-msgid " | Cellove.com"
 msgstr ""
 
 msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
@@ -168,6 +165,12 @@ msgstr ""
 msgid "Actualización a usuari@ premium se ha realizado correctamente"
 msgstr ""
 
+msgid "Actualmente no tienes ningún Celestin@ confirmado."
+msgstr ""
+
+msgid "Actualmente no tienes ningún Celestin@ pendiente de confirmar."
+msgstr ""
+
 msgid "Acuse de recibo de mensajes"
 msgstr ""
 
@@ -186,13 +189,22 @@ msgstr ""
 msgid "Alcohol"
 msgstr ""
 
-msgid "Alguien cree que hace buena pareja contigo"
+msgid "Alguien cree que hace buena pareja contigo | Cellove.com"
 msgstr ""
 
 msgid "Alguien ha visitado tu perfil"
 msgstr ""
 
+msgid "Alguien ha visitado tu perfil | Cellove.com"
+msgstr ""
+
 msgid "Alguien muy especial te ha recomendado para que uses Cellove.com, y puedas darle alas al amor."
+msgstr ""
+
+msgid "Alguien que te conoce muy bien cree que en Cellove puedes encontrar personas afines a ti y ¡quiere ser tu Celestin@!"
+msgstr ""
+
+msgid "Alguien que te conoce muy bien ¡quiere ser tu Celestin@!"
 msgstr ""
 
 msgid "Algun@s usuari@s registrad@s en Cellove"
@@ -282,7 +294,7 @@ msgstr ""
 msgid "Bienvenido a "
 msgstr ""
 
-msgid "Bienvenido a Cellove"
+msgid "Bienvenido a Cellove | Cellove.com"
 msgstr ""
 
 msgid "Bloquear"
@@ -636,6 +648,9 @@ msgstr ""
 msgid "El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos."
 msgstr ""
 
+msgid "El email indicado ya está registrado en Cellove!"
+msgstr ""
+
 msgid "El equipo de Cellove"
 msgstr ""
 
@@ -703,6 +718,9 @@ msgid "En mi día a día no tenía ocasion de conocer a gente interesante, en Ce
 msgstr ""
 
 msgid "En mi tiempo libre me gusta:"
+msgstr ""
+
+msgid "Encontrados %{numero} perfiles"
 msgstr ""
 
 msgid "Encontrar a tu pareja ideal es muy fácil. Sólo tienes que %{register_link}, especificar qué características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que mejor encajen con tu perfil ¡para que seas tú quién elija!"
@@ -927,10 +945,10 @@ msgstr ""
 msgid "Has recibido este correo de Cellove Social Network porque tu correo está registrado a Cellove.com. Si no deseas seguir recibiendo correos, modifica tu configuración de usuario dentro en Cellove.com."
 msgstr ""
 
-msgid "Has recibido una recomendación"
+msgid "Has recibido una recomendación de un Celestino."
 msgstr ""
 
-msgid "Has recibido una recomendación de un Celestino."
+msgid "Has recibido una recomendación | Cellove.com"
 msgstr ""
 
 msgid "Hay cuatro tipos de Celestin@s y su finalidad es mejorar el Índice Cellove de los usuarios registrados:"
@@ -1018,6 +1036,9 @@ msgid "Las presentes condiciones de uso, las Condiciones Particulares e instrucc
 msgstr ""
 
 msgid "Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante."
+msgstr ""
+
+msgid "Le gusta"
 msgstr ""
 
 msgid "Le guste"
@@ -1147,9 +1168,6 @@ msgid "Mensajes"
 msgstr ""
 
 msgid "Mensajes y actividades"
-msgstr ""
-
-msgid "Mi código postal es el"
 msgstr ""
 
 msgid "Mi estilo es"
@@ -1290,7 +1308,7 @@ msgstr ""
 msgid "Nuevo mensaje privado"
 msgstr ""
 
-msgid "Nuevo mensaje recibido"
+msgid "Nuevo mensaje recibido | Cellove.com"
 msgstr ""
 
 msgid "Nunca"
@@ -1362,7 +1380,7 @@ msgstr ""
 msgid "Perfil %{progress}%% completado"
 msgstr ""
 
-msgid "Perfil denunciado"
+msgid "Perfil denunciado | Cellove.com"
 msgstr ""
 
 msgid "Pero sobretodo, ven a menudo ;-)"
@@ -1777,6 +1795,9 @@ msgid "También hablo"
 msgstr ""
 
 msgid "Te gustan"
+msgstr ""
+
+msgid "Te ha recomendado en Cellove para ayudarte en tu búsqueda."
 msgstr ""
 
 msgid "Te has registrado correctamente a"
@@ -2775,9 +2796,6 @@ msgstr ""
 msgid "y nacionalidad"
 msgstr ""
 
-msgid "y vivo en"
-msgstr ""
-
 msgid "ya ha estado casad@ y no quiere repetir"
 msgstr ""
 
@@ -2856,7 +2874,7 @@ msgstr ""
 msgid "¡Le gusta!"
 msgstr ""
 
-msgid "¡Le gustas a alguien!"
+msgid "¡Le gustas a alguien! | Cellove.com"
 msgstr ""
 
 msgid "¡Les he gustado!"

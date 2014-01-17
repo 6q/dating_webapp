@@ -1,10 +1,12 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VERSION\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Project-Id-Version: version 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-17 18:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,9 +32,6 @@ msgstr "i el meu codi postal és "
 
 msgid " y soy de étnia"
 msgstr "i sóc d'ètnia"
-
-msgid " | Cellove.com"
-msgstr "| Cellove.com"
 
 msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
 msgstr "%{link} ara a Cellove, és més fàcil i ràpid. Posa-li ales al amor!"
@@ -106,7 +105,8 @@ msgstr "47,4 €/any"
 msgid "<b>¿Quieres ayudar a un familiar, amig@ o ex pareja?</b> No lo dudes y échale una mano. Con Cellove puedes ayudar a quien desees a que encuentre su <b>pareja ideal</b>."
 msgstr "<b> Vols ajudar a un familiar, amic o ex parella?</b> No ho dubtis i dóna-li un cop de mà. Amb Cellove pots ajudar a qui desitjis a que trobi a la seva <b>parella ideal</b>."
 
-msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\n\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\n\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\n\n    <p><h3>‘Sé activo’</h3>\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\n\n    <p><h3>‘Muéstrate tal como eres’</h3>\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\n    <p><h3>\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
+#, fuzzy
+msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
 msgstr "<p>Estem convençuts que Cellove et pot aportar noves experiències, conèixer a aquella persona amb la que pots tenir connexió especial, però també us diem que això és com qualsevol cosa en la vida, cal estar en el moment adequat perquè sorgeixi la flama =)</p>\\n\\n<p>Els nostres consells per a treure el màxim profit a Cellove són:</p>\\n\\n<p><h3>'Posa el màxim d'informació sobre tu'</h3> \\nEmplena tant com puguis l'informació del teu perfil, és la teva presentació i la porta d'accés ap a tu</p>\\n\\n<p><h3>'Sigues actiu'</h3>\\nMou-te i sigues dinàmic dins de la pàgina, deixa missatges, proposa converses, deixa empremta de la teva presenència i respon a les teves peticions</p>\\n\\n<p><h3>'Mostra't tal i com ets'</h3>\\nSigues tu mateix relacionant-te com en la teva vida social, o millor! Sigues accessible i disposat a obrir portes</p>\\n<p><h3>'Millora el teu Índez Cellove'</h3>\\nUtilitza la gran eina, que són els teus Celestins. Tots tenim grans amics, gent disposada a ajudar i contactes que poden parlar bé de tu i, junt amb altres detalls, això és el que farà que millori el teu Índex Cellove</p>\\n<p><h3>\\n'I utilitza'ns com el teu nou camí per a emplenar la teva vida de gent nova interessant i amb la que compartir grans moments'</h3></p>"
 
 msgid "A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®."
@@ -160,6 +160,14 @@ msgstr "Actualitza el teu compte premium per a poder disfrutar de totes les func
 msgid "Actualización a usuari@ premium se ha realizado correctamente"
 msgstr "Actualització a usuaris premium s'ha realitzat correctament"
 
+#, fuzzy
+msgid "Actualmente no tienes ningún Celestin@ confirmado."
+msgstr "%{name} encara  no té cap Celestí."
+
+#, fuzzy
+msgid "Actualmente no tienes ningún Celestin@ pendiente de confirmar."
+msgstr "La teva recomanació està pendent de confirmar"
+
 msgid "Acuse de recibo de mensajes"
 msgstr "Justificant de recepció de missatges"
 
@@ -178,14 +186,25 @@ msgstr "En fer-te usuari de Cellove certifiques que ets major d'edat i que has l
 msgid "Alcohol"
 msgstr "Alcohol"
 
-msgid "Alguien cree que hace buena pareja contigo"
+#, fuzzy
+msgid "Alguien cree que hace buena pareja contigo | Cellove.com"
 msgstr "Algú creu que feu bona parella"
 
 msgid "Alguien ha visitado tu perfil"
 msgstr "Algú ha visitat el teu perfil"
 
+#, fuzzy
+msgid "Alguien ha visitado tu perfil | Cellove.com"
+msgstr "Algú ha visitat el teu perfil"
+
 msgid "Alguien muy especial te ha recomendado para que uses Cellove.com, y puedas darle alas al amor."
 msgstr "Algú molt especial t'ha recomanat perquè utilitzis Cellove.com, i puguis donar-li ales a l'amor."
+
+msgid "Alguien que te conoce muy bien cree que en Cellove puedes encontrar personas afines a ti y ¡quiere ser tu Celestin@!"
+msgstr ""
+
+msgid "Alguien que te conoce muy bien ¡quiere ser tu Celestin@!"
+msgstr ""
 
 msgid "Algun@s usuari@s registrad@s en Cellove"
 msgstr "Alguns usuaris registrats del teu perfil"
@@ -274,7 +293,8 @@ msgstr "Sempre de bon humor"
 msgid "Bienvenido a "
 msgstr "Benvingut a "
 
-msgid "Bienvenido a Cellove"
+#, fuzzy
+msgid "Bienvenido a Cellove | Cellove.com"
 msgstr "Benvingut a Cellove"
 
 msgid "Bloquear"
@@ -628,6 +648,9 @@ msgstr "L'accés i ús de Cellove® té una duració indefinida, amb subjecció 
 msgid "El dispositivo y la conexión a Internet, que permita al Usuario el acceso a Cellove®, corre por cuenta de éste. El Usuario puede conectarse utilizando cualquier navegador de Internet, aunque Cellove® no se hace responsable de las diferencias o errores de visualización que puedan provocar estos."
 msgstr "El dispositiu i la connexió a Internet, que permet a l'Usuari l'accés a Cellove®, corre per compte d'aquest. L'Usuari pot connectar-se utilitzant qualsevol navegador d'Internet, encara que Cellove® no es fa responsable de les diferències o errors de visualització que puguin probocar aquests."
 
+msgid "El email indicado ya está registrado en Cellove!"
+msgstr ""
+
 msgid "El equipo de Cellove"
 msgstr "L'equip de Cellove"
 
@@ -641,7 +664,9 @@ msgid "El uso de este servicio está libre de pago y permite el uso ilimitado de
 msgstr "L'ús d'aquest servei està lliure de pagament i permet l'ús il·limitat de missatges privats, dos (2) Xats simultanis, accés vint-i-quatre (24) hores i navegació il·limitada en www.cellove.com, amb publicitat en la navegació. L'usuari entén i accepta de forma expressa que, amb la finalitat de prestar cada vegada millor servei als seus usuaris, Cellove® cada cert temps podrà modificar i/o adaptar els serveis que incorpora aquest Pase. En aquest cas informarà als usuaris d'aquelles condicions i/o requeriments que hagin estat introduïts, que hauran de ser acceptats pels Usuaris a fi de seguir fent ús del servei."
 
 msgid "El uso de este servicio permite el uso ilimitado de mensajes privados y de Chats simultáneos, acceso las veinticuatro (24) horas y navegación ilimitada y navegación oculta, previa activación, en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase VIP es de cuarenta y siete euros con cuarenta céntimos (47,4 €) al año (IVA incluido)."
-msgstr "L'ús d'aquest servei permet l'ús il·limitat de missatges privats i de Xats simultanis, accés les vint-i-quatre (24) hores i navegació il·limitada i navegació oculta, prèvia activació, en www.cellove.com, sense publicitat en la navegació. El preu aplicable en contractar el Pase VIP és de quaranta-set euros amb quaranta cèntims (47,4 €) a l'any (IVA inclòs).\n\n"
+msgstr ""
+"L'ús d'aquest servei permet l'ús il·limitat de missatges privats i de Xats simultanis, accés les vint-i-quatre (24) hores i navegació il·limitada i navegació oculta, prèvia activació, en www.cellove.com, sense publicitat en la navegació. El preu aplicable en contractar el Pase VIP és de quaranta-set euros amb quaranta cèntims (47,4 €) a l'any (IVA inclòs).\n"
+"\n"
 
 msgid "El uso de servicios de pago habilitados por Cellove® son los siguientes"
 msgstr "L'ús de serveis de pagament habilitats per Cellove® són els següents"
@@ -697,6 +722,9 @@ msgstr "En el meu dia a dia no tenia ocasió de conèixer gent interessant. El v
 msgid "En mi tiempo libre me gusta:"
 msgstr "En el meu temps lliure m'agrada:"
 
+msgid "Encontrados %{numero} perfiles"
+msgstr ""
+
 msgid "Encontrar a tu pareja ideal es muy fácil. Sólo tienes que %{register_link}, especificar qué características buscas en una persona y Cellove se encarga del resto. ¡Así de fácil! Te proporcionaremos las personas que mejor encajen con tu perfil ¡para que seas tú quién elija!"
 msgstr "Trobar a la teva parella ideal és molt fàcil. Només has de %{register_link}, especificar quines característiques busques en una persona y Cellove s'encarrega de la resta. Així de fàcil! Et proporcionarem les persones que millor encaixin amb el teu perfil perquè siguis tu qui triï!"
 
@@ -718,7 +746,8 @@ msgstr "English"
 msgid "Entra en Cellove.com"
 msgstr "Entra a Cellove.com"
 
-msgid "Entrar<br>\n                                            directamente<br>\n                                            a mi perfil"
+#, fuzzy
+msgid "Entrar<br>\\n                                            directamente<br>\\n                                            a mi perfil"
 msgstr "Entra<br>\\ndirectament<br>\\nal meu perfil"
 
 msgid "Enviados"
@@ -919,10 +948,11 @@ msgstr "Has demanat canviar la teva contrasenya de Cellove.com. Pots fer-ho segu
 msgid "Has recibido este correo de Cellove Social Network porque tu correo está registrado a Cellove.com. Si no deseas seguir recibiendo correos, modifica tu configuración de usuario dentro en Cellove.com."
 msgstr "Has rebut aquest correu de Cellove Social Network perquè el teu correu està registrat a Cellove.com. Si no desitges seguir rebent correus, modifica la teva configuració d'usuari dins en Cellove.com."
 
-msgid "Has recibido una recomendación"
-msgstr "Has rebut una recomanació."
-
 msgid "Has recibido una recomendación de un Celestino."
+msgstr "Has rebut una recomanació d'un Celestí."
+
+#, fuzzy
+msgid "Has recibido una recomendación | Cellove.com"
 msgstr "Has rebut una recomanació d'un Celestí."
 
 msgid "Hay cuatro tipos de Celestin@s y su finalidad es mejorar el Índice Cellove de los usuarios registrados:"
@@ -1011,6 +1041,10 @@ msgstr "Les presents condicions d'ús, les Condicions Particulars i instruccions
 
 msgid "Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante."
 msgstr "Les tres modalitats d'ús estaran vigents durant un any a partir del dia de la contractació, en el cas que no hagis consumit els recursos ofertats en cada modalitat. Si consumeixes els recursos de la modalitat que contractis, podràs tornar a contractar una nova modalitat d'ús a l'instant."
+
+#, fuzzy
+msgid "Le gusta"
+msgstr "Li agradi"
 
 msgid "Le guste"
 msgstr "Li agradi"
@@ -1140,9 +1174,6 @@ msgstr "Missatges"
 
 msgid "Mensajes y actividades"
 msgstr "Missatges i activitats"
-
-msgid "Mi código postal es el"
-msgstr "El meu codi postal és el"
 
 msgid "Mi estilo es"
 msgstr "El meu estil és"
@@ -1282,7 +1313,8 @@ msgstr "Nou missatge"
 msgid "Nuevo mensaje privado"
 msgstr "Nou missatge privat"
 
-msgid "Nuevo mensaje recibido"
+#, fuzzy
+msgid "Nuevo mensaje recibido | Cellove.com"
 msgstr "Nou missatge rebut"
 
 msgid "Nunca"
@@ -1354,7 +1386,8 @@ msgstr "Pendent"
 msgid "Perfil %{progress}%% completado"
 msgstr "Perfil %{progress}%% complet"
 
-msgid "Perfil denunciado"
+#, fuzzy
+msgid "Perfil denunciado | Cellove.com"
 msgstr "Perfil denunciat"
 
 msgid "Pero sobretodo, ven a menudo ;-)"
@@ -1730,7 +1763,9 @@ msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para fa
 msgstr "Som un equip jove i amb vocació de donar el millor de nosaltres per a facilitar i millorar les relacions personals d'amor i amistat."
 
 msgid "Son las personas del entorno del usuario registrado que ayudan a encontrar con más confianza y seguridad a esa persona perfecta. Disponen de un panel privado y totalmente Gratis para recomendar a sus usuarios y otorgarle atributos y virtudes que serán visibles por los otros usuarios registrados afines a este."
-msgstr "\nSón les persones de l'entorn de l'usuari registrat que ajuden a trobar amb més confiança i seguretat a la persona desitjada. Disposen d'un panell privat i totalment Gratis per recomanar als seus usuaris i atorgar-li atributs i virtuts que seran visibles pels altres usuaris registrats afins a aquest."
+msgstr ""
+"\n"
+"Són les persones de l'entorn de l'usuari registrat que ajuden a trobar amb més confiança i seguretat a la persona desitjada. Disposen d'un panell privat i totalment Gratis per recomanar als seus usuaris i atorgar-li atributs i virtuts que seran visibles pels altres usuaris registrats afins a aquest."
 
 msgid "Soy"
 msgstr "Sóc"
@@ -1770,6 +1805,9 @@ msgstr "També parlo"
 
 msgid "Te gustan"
 msgstr "T'agraden"
+
+msgid "Te ha recomendado en Cellove para ayudarte en tu búsqueda."
+msgstr ""
 
 msgid "Te has registrado correctamente a"
 msgstr "T'has registrat correctament a"
@@ -2767,9 +2805,6 @@ msgstr "el meu nivel de guanys és"
 msgid "y nacionalidad"
 msgstr "i nacionalitat"
 
-msgid "y vivo en"
-msgstr "i visc a "
-
 msgid "ya ha estado casad@ y no quiere repetir"
 msgstr "Ja ha estat casat/da i no vol repetir"
 
@@ -2848,7 +2883,8 @@ msgstr "Hola!"
 msgid "¡Le gusta!"
 msgstr "Li agrada!"
 
-msgid "¡Le gustas a alguien!"
+#, fuzzy
+msgid "¡Le gustas a alguien! | Cellove.com"
 msgstr "Li agrades a algú!"
 
 msgid "¡Les he gustado!"
@@ -3034,3 +3070,14 @@ msgstr "òpera"
 msgid "€/año"
 msgstr "€/any"
 
+#~ msgid " | Cellove.com"
+#~ msgstr "| Cellove.com"
+
+#~ msgid "Has recibido una recomendación"
+#~ msgstr "Has rebut una recomanació."
+
+#~ msgid "Mi código postal es el"
+#~ msgstr "El meu codi postal és el"
+
+#~ msgid "y vivo en"
+#~ msgstr "i visc a "
