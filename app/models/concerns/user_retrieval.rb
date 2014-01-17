@@ -3,10 +3,10 @@ module UserRetrieval
 
   def build_query(not_in, limit = 20, order_type = :by_visits)
     order = {
-      :by_visits => 'p.main IS NULL, distance ASC, visits_count DESC, likes_count DESC, cellove_index DESC',
-      :by_likes => 'p.main IS NULL, distance ASC, likes_count DESC, visits_count DESC, cellove_index DESC',
-      :by_index => 'p.main IS NULL, distance ASC, cellove_index DESC, likes_count DESC, visits_count DESC',
-      :by_recent => 'p.main IS NULL, distance ASC, users.created_at DESC, likes_count DESC, visits_count DESC, cellove_index DESC',
+      :by_visits => 'p.main IS NULL, distance ASC, visits_count DESC, pictures_count DESC, likes_count DESC, cellove_index DESC',
+      :by_likes => 'p.main IS NULL, distance ASC, likes_count DESC, pictures_count DESC, visits_count DESC, cellove_index DESC',
+      :by_index => 'p.main IS NULL, distance ASC, cellove_index DESC, pictures_count DESC, likes_count DESC, visits_count DESC',
+      :by_recent => 'p.main IS NULL, distance ASC, users.created_at DESC, pictures_count DESC, likes_count DESC, visits_count DESC, cellove_index DESC',
     }
 
       # Ordre original
@@ -27,7 +27,6 @@ module UserRetrieval
     .where("users.gender = ?", self.matching_gender)
     .where("users.lf_gender = ?", self.gender)    
     .reorder(order[order_type])   
-    .order("pictures_count desc") 
     .limit(limit)
     .uniq
 
