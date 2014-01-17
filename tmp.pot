@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-15 22:38+0100\n"
-"PO-Revision-Date: 2014-01-15 22:38+0100\n"
+"POT-Creation-Date: 2014-01-17 16:56+0100\n"
+"PO-Revision-Date: 2014-01-17 16:56+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -1591,23 +1591,27 @@ msgstr ""
 msgid "Hola"
 msgstr ""
 
-#: app/views/devise/mailer/confirmation_instructions.html.erb:55
-msgid "Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo."
-msgstr ""
-
 #: app/views/devise/mailer/confirmation_instructions.html.erb:56
-msgid "Solo tienes que acceder al siguiente enlace y ya está!"
-msgstr ""
-
-#: app/views/devise/mailer/confirmation_instructions.html.erb:58
-msgid "Confirmar mi cuenta"
+msgid "Alguien que te conoce muy bien cree que en Cellove puedes encontrar personas afines a ti y ¡quiere ser tu Celestin@!"
 msgstr ""
 
 #: app/views/devise/mailer/confirmation_instructions.html.erb:59
+msgid "Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo."
+msgstr ""
+
+#: app/views/devise/mailer/confirmation_instructions.html.erb:61
+msgid "Solo tienes que acceder al siguiente enlace y ya está!"
+msgstr ""
+
+#: app/views/devise/mailer/confirmation_instructions.html.erb:63
+msgid "Confirmar mi cuenta"
+msgstr ""
+
+#: app/views/devise/mailer/confirmation_instructions.html.erb:64
 msgid "O accede a través de la siguiente URL:"
 msgstr ""
 
-#: app/views/devise/mailer/confirmation_instructions.html.erb:69
+#: app/views/devise/mailer/confirmation_instructions.html.erb:74
 #: app/views/shared/mail/_mail-footer.html.erb:8
 #: app/views/user_mailer/invite_celestino.html.erb:71
 #: app/views/user_mailer/invite_user.html.erb:70
@@ -1615,11 +1619,11 @@ msgstr ""
 #: app/views/user_mailer/profile_visit.html.erb:71
 #: app/views/user_mailer/receive_message.html.erb:71
 #: app/views/user_mailer/star_rating.html.erb:71
-#: app/views/user_mailer/welcome_email.html.erb:67
+#: app/views/user_mailer/welcome_email.html.erb:66
 msgid "Disfruta y dale alas al amor"
 msgstr ""
 
-#: app/views/devise/mailer/confirmation_instructions.html.erb:71
+#: app/views/devise/mailer/confirmation_instructions.html.erb:76
 #: app/views/devise/mailer/reset_password_instructions.html.erb:70
 #: app/views/shared/mail/_mail-footer.html.erb:10
 #: app/views/user_mailer/invite_celestino.html.erb:73
@@ -1628,11 +1632,11 @@ msgstr ""
 #: app/views/user_mailer/profile_visit.html.erb:73
 #: app/views/user_mailer/receive_message.html.erb:73
 #: app/views/user_mailer/star_rating.html.erb:73
-#: app/views/user_mailer/welcome_email.html.erb:69
+#: app/views/user_mailer/welcome_email.html.erb:68
 msgid "El equipo de Cellove"
 msgstr ""
 
-#: app/views/devise/mailer/confirmation_instructions.html.erb:89
+#: app/views/devise/mailer/confirmation_instructions.html.erb:94
 #: app/views/devise/mailer/reset_password_instructions.html.erb:88
 #: app/views/shared/mail/_mail-footer.html.erb:28
 #: app/views/user_mailer/invite_celestino.html.erb:91
@@ -1641,11 +1645,11 @@ msgstr ""
 #: app/views/user_mailer/profile_visit.html.erb:91
 #: app/views/user_mailer/receive_message.html.erb:91
 #: app/views/user_mailer/star_rating.html.erb:91
-#: app/views/user_mailer/welcome_email.html.erb:87
+#: app/views/user_mailer/welcome_email.html.erb:86
 msgid "Has recibido este correo de Cellove Social Network porque tu correo está registrado a Cellove.com. Si no deseas seguir recibiendo correos, modifica tu configuración de usuario dentro en Cellove.com."
 msgstr ""
 
-#: app/views/devise/mailer/confirmation_instructions.html.erb:100
+#: app/views/devise/mailer/confirmation_instructions.html.erb:105
 #: app/views/devise/mailer/reset_password_instructions.html.erb:99
 #: app/views/shared/mail/_mail-footer.html.erb:39
 #: app/views/user_mailer/invite_celestino.html.erb:102
@@ -1654,11 +1658,11 @@ msgstr ""
 #: app/views/user_mailer/profile_visit.html.erb:102
 #: app/views/user_mailer/receive_message.html.erb:102
 #: app/views/user_mailer/star_rating.html.erb:102
-#: app/views/user_mailer/welcome_email.html.erb:98
+#: app/views/user_mailer/welcome_email.html.erb:97
 msgid "Terminos y condiciones"
 msgstr ""
 
-#: app/views/devise/mailer/confirmation_instructions.html.erb:105
+#: app/views/devise/mailer/confirmation_instructions.html.erb:110
 #: app/views/devise/mailer/reset_password_instructions.html.erb:104
 #: app/views/shared/mail/_mail-footer.html.erb:44
 #: app/views/user_mailer/invite_celestino.html.erb:107
@@ -1667,11 +1671,11 @@ msgstr ""
 #: app/views/user_mailer/profile_visit.html.erb:107
 #: app/views/user_mailer/receive_message.html.erb:107
 #: app/views/user_mailer/star_rating.html.erb:107
-#: app/views/user_mailer/welcome_email.html.erb:103
+#: app/views/user_mailer/welcome_email.html.erb:102
 msgid "Entra en Cellove.com"
 msgstr ""
 
-#: app/views/devise/mailer/confirmation_instructions.html.erb:110
+#: app/views/devise/mailer/confirmation_instructions.html.erb:115
 #: app/views/devise/mailer/reset_password_instructions.html.erb:109
 #: app/views/shared/mail/_mail-footer.html.erb:49
 #: app/views/user_mailer/invite_celestino.html.erb:112
@@ -1680,7 +1684,7 @@ msgstr ""
 #: app/views/user_mailer/profile_visit.html.erb:112
 #: app/views/user_mailer/receive_message.html.erb:112
 #: app/views/user_mailer/star_rating.html.erb:112
-#: app/views/user_mailer/welcome_email.html.erb:108
+#: app/views/user_mailer/welcome_email.html.erb:107
 msgid "Configuración de cuenta"
 msgstr ""
 
@@ -3803,13 +3807,20 @@ msgid "¡Hola!"
 msgstr ""
 
 #: app/views/user_mailer/celestino_recommendation.html.erb:10
-#: app/views/user_mailer/celestino_recommendation.text.erb:3
-msgid "Has recibido una recomendación de un Celestino."
+msgid "Alguien que te conoce muy bien ¡quiere ser tu Celestin@!"
 msgstr ""
 
 #: app/views/user_mailer/celestino_recommendation.html.erb:11
+msgid "Te ha recomendado en Cellove para ayudarte en tu búsqueda."
+msgstr ""
+
+#: app/views/user_mailer/celestino_recommendation.html.erb:12
 #: app/views/user_mailer/celestino_recommendation.text.erb:4
 msgid "¡Entra en Cellove para saber quien ha sido y ver que dice de ti!"
+msgstr ""
+
+#: app/views/user_mailer/celestino_recommendation.text.erb:3
+msgid "Has recibido una recomendación de un Celestino."
 msgstr ""
 
 #: app/views/user_mailer/invite_celestino.html.erb:47
@@ -3882,7 +3893,7 @@ msgstr ""
 msgid "Te has registrado correctamente a"
 msgstr ""
 
-#: app/views/user_mailer/welcome_email.html.erb:58
+#: app/views/user_mailer/welcome_email.html.erb:57
 msgid "¡Entra ya y empieza a darle alas al amor!"
 msgstr ""
 
@@ -4329,19 +4340,27 @@ msgstr ""
 msgid "Mejora tu índice Cellove"
 msgstr ""
 
-#: app/views/users/my_matchmakers.html.erb:54
+#: app/views/users/my_matchmakers.html.erb:29
+msgid "Actualmente no tienes ningún Celestin@ confirmado."
+msgstr ""
+
+#: app/views/users/my_matchmakers.html.erb:47
+msgid "Actualmente no tienes ningún Celestin@ pendiente de confirmar."
+msgstr ""
+
+#: app/views/users/my_matchmakers.html.erb:67
 msgid "¿Quieres aumentar tu indice Cellove?"
 msgstr ""
 
-#: app/views/users/my_matchmakers.html.erb:55
+#: app/views/users/my_matchmakers.html.erb:68
 msgid "Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos."
 msgstr ""
 
-#: app/views/users/my_matchmakers.html.erb:64
+#: app/views/users/my_matchmakers.html.erb:77
 msgid "¿Quieres proponer un Celestin@?"
 msgstr ""
 
-#: app/views/users/my_matchmakers.html.erb:65
+#: app/views/users/my_matchmakers.html.erb:78
 msgid "Propón un nuevo celestin@ para que te recomiende y gana más puntos."
 msgstr ""
 

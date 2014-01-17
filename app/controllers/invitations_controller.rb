@@ -12,7 +12,7 @@ class InvitationsController < ApplicationController
         flash[:success] = _('¡Usuari@ invitado!')
       elsif params[:invitation][:user_type] == 'celestino'
         # Send celestino invitation email
-        current_user.add_to_cellove_index(1)
+        current_user.add_to_cellove_index(2)
         UserMailer.invite_celestino(current_user, params[:invitation][:invited_email], invitation.invitation_code).deliver
         flash[:success] = _('¡Celestin@ invitado!')
       end
