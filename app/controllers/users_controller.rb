@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   before_filter :set_visit_seen, only: [:hits]
   before_filter :set_likes_seen, only: [:likes]
   before_filter :set_rates_seen, only: [:nice_couple]
-  before_filter :set_best_suited_near_me, only:[:index, :cellove_index]
+  before_filter :set_best_suited_near_me, only:[:index, :cellove_index, :nice_couple, :likes, :likes_of_mine, :hits]
 
   def set_best_suited_near_me
     if session[:best_suited_near_me].present?
@@ -77,22 +77,18 @@ class UsersController < ApplicationController
 
   # Interaction routes
   def nice_couple
-    @best_suited_near_me = current_user.best_suited_near_me
     @users = Kaminari::paginate_array(User.nice_couple(current_user, params[:order])).page(params[:page])
   end
 
   def likes
-    @best_suited_near_me = current_user.best_suited_near_me
     @users = Kaminari::paginate_array(User.people_who_like_me(current_user, params[:order])).page(params[:page])
   end
 
   def likes_of_mine
-    @best_suited_near_me = current_user.best_suited_near_me
     @users = Kaminari::paginate_array(User.people_i_like(current_user, params[:order])).page(params[:page])
   end
 
   def hits
-    @best_suited_near_me = current_user.best_suited_near_me
     @users = Kaminari::paginate_array(User.all_visitors(current_user, params[:order])).page(params[:page])
   end
 

@@ -17,6 +17,7 @@ class ProfilesController < ApplicationController
     @user = current_user
     @user.assign_attributes(params[:user])
     if @user.save
+      session[:best_suited_near_me] = nil
       if @user.has_role?(:matchmaker)
         @recommendation = Recommendation.new
         @characteristic = Characteristic.new
