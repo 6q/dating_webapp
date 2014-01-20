@@ -56,14 +56,14 @@ ca:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: aproximadament 1 hora
-        other: aproximadament %{count} hores
+        one: "aprox. 1 hora"
+        other: "aprox. %{count} hores"
       about_x_months:
-        one: aproximadament 1 mes
-        other: aproximadament %{count} mesos
+        one: "aprox. 1 mes"
+        other: "aprox. %{count} mesos"
       about_x_years:
-        one: aproximadament 1 any
-        other: aproximadament %{count} anys
+        one: "aprox. 1 any"
+        other: "aprox %{count} anys"
       almost_x_years:
         one: quasi 1 any
         other: quasi %{count} anys

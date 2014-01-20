@@ -33,7 +33,7 @@ module UserRetrieval
 
     if self.lf_age_from.present? && self.lf_age_to.present?
       query = query.where('birth_date <= ?', self.lf_age_from.to_i.years.ago.beginning_of_year)
-      query = query.where('birth_date >= ?', self.lf_age_to.to_i.years.ago.end_of_year)
+      query = query.where('birth_date >= ?', self.lf_age_to.to_i.years.ago.end_of_year)      
     end
 
     query

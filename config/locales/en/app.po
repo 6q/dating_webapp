@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-20 17:56+0100\n"
+"POT-Creation-Date: 2014-01-20 23:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
@@ -51,6 +51,9 @@ msgstr "%{name} You haven´t still introduced your description"
 msgid "%{name} aún no tiene ningún celestino."
 msgstr "%{name} You haven´t still a Celestine."
 
+msgid "%{name} está %{marital_status}"
+msgstr ""
+
 msgid "%{name} te invita a usar Cellove"
 msgstr "%{name} invites you to use Cellove"
 
@@ -89,6 +92,9 @@ msgstr ", i enjoy"
 
 msgid ", mido"
 msgstr ", my height is"
+
+msgid "- %{height} cms de altura"
+msgstr ""
 
 msgid ". Con ojos de color"
 msgstr ". My eyes are"
@@ -316,6 +322,10 @@ msgstr "Good couple"
 
 msgid "Busca"
 msgstr "Search"
+
+#, fuzzy
+msgid "Busca %{gender}"
+msgstr "Searching"
 
 msgid "Buscando"
 msgstr "Searching"
@@ -1425,9 +1435,6 @@ msgstr "Weight"
 msgid "Playa"
 msgstr "Beach"
 
-msgid "Población y código postal"
-msgstr "Location and postcode\n"
-
 msgid "Podrá ser usuario de Cellove® cualquier persona que sea mayor de edad según la legislación de su país. Para adquirir la condición de usuario, la persona que así lo desee, debe completar todos los datos requeridos en los formularios de registro. Siendo esta la única forma de acceder a los servicios gratuitos de Cellove®. Los servicios de pago de Cellove® requerirán, además de todo lo exigido para los servicios gratuitos, el pago del precio correspondiente a cada producto que el Usuario contrate."
 msgstr "You may be Cellove ® user anyone who has the age according to the laws of his country. To become a user, the person who desires, must complete all required information on the registration forms. Since this is the only way to access the Cellove ®  free services. The Cellove ® payment services require, in addition to all the free services required for the payment of the price for each product that the user contracts."
 
@@ -2116,6 +2123,10 @@ msgstr "Help your best friend to be happy finding a soul mate, support him/her i
 msgid "azul"
 msgstr "Blue"
 
+#, fuzzy
+msgid "años"
+msgstr "Years"
+
 msgid "años."
 msgstr "Years"
 
@@ -2217,6 +2228,9 @@ msgstr "From"
 
 msgid "de entre"
 msgstr "Beetwen"
+
+msgid "de entre %{age_from} y %{age_to} años"
+msgstr ""
 
 msgid "de todo un poco"
 msgstr "A little of everything"
@@ -2653,6 +2667,9 @@ msgstr "Another"
 msgid "para"
 msgstr "For"
 
+msgid "para %{tipo_relacion}"
+msgstr ""
+
 msgid "para mi la religión es esencial en mi vida"
 msgstr "For me the religion is essential in my life"
 
@@ -2829,6 +2846,9 @@ msgstr "And my earnings are"
 
 msgid "y nacionalidad"
 msgstr "My nacionality is"
+
+msgid "y que esté cerca de %{city}, %{country}"
+msgstr ""
 
 msgid "ya ha estado casad@ y no quiere repetir"
 msgstr "He/she has been married and don´t want to do it again"
@@ -3101,6 +3121,9 @@ msgstr "€/year"
 
 #~ msgid "Mi código postal es el"
 #~ msgstr "My postcode is"
+
+#~ msgid "Población y código postal"
+#~ msgstr "Location and postcode\n"
 
 #~ msgid "y vivo en"
 #~ msgstr "I live in"

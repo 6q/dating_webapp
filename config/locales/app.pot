@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-20 17:56+0100\n"
+"POT-Creation-Date: 2014-01-20 23:09+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,6 +57,9 @@ msgstr ""
 msgid "%{name} aún no tiene ningún celestino."
 msgstr ""
 
+msgid "%{name} está %{marital_status}"
+msgstr ""
+
 msgid "%{name} te invita a usar Cellove"
 msgstr ""
 
@@ -94,6 +97,9 @@ msgid ", me gusta el"
 msgstr ""
 
 msgid ", mido"
+msgstr ""
+
+msgid "- %{height} cms de altura"
 msgstr ""
 
 msgid ". Con ojos de color"
@@ -313,6 +319,9 @@ msgid "Buena pareja"
 msgstr ""
 
 msgid "Busca"
+msgstr ""
+
+msgid "Busca %{gender}"
 msgstr ""
 
 msgid "Buscando"
@@ -1404,9 +1413,6 @@ msgstr ""
 msgid "Playa"
 msgstr ""
 
-msgid "Población y código postal"
-msgstr ""
-
 msgid "Podrá ser usuario de Cellove® cualquier persona que sea mayor de edad según la legislación de su país. Para adquirir la condición de usuario, la persona que así lo desee, debe completar todos los datos requeridos en los formularios de registro. Siendo esta la única forma de acceder a los servicios gratuitos de Cellove®. Los servicios de pago de Cellove® requerirán, además de todo lo exigido para los servicios gratuitos, el pago del precio correspondiente a cada producto que el Usuario contrate."
 msgstr ""
 
@@ -2091,6 +2097,9 @@ msgstr ""
 msgid "azul"
 msgstr ""
 
+msgid "años"
+msgstr ""
+
 msgid "años."
 msgstr ""
 
@@ -2191,6 +2200,9 @@ msgid "de "
 msgstr ""
 
 msgid "de entre"
+msgstr ""
+
+msgid "de entre %{age_from} y %{age_to} años"
 msgstr ""
 
 msgid "de todo un poco"
@@ -2628,6 +2640,9 @@ msgstr ""
 msgid "para"
 msgstr ""
 
+msgid "para %{tipo_relacion}"
+msgstr ""
+
 msgid "para mi la religión es esencial en mi vida"
 msgstr ""
 
@@ -2803,6 +2818,9 @@ msgid "y mi nivel de ganancias es"
 msgstr ""
 
 msgid "y nacionalidad"
+msgstr ""
+
+msgid "y que esté cerca de %{city}, %{country}"
 msgstr ""
 
 msgid "ya ha estado casad@ y no quiere repetir"

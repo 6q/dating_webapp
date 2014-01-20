@@ -14,7 +14,7 @@
               </div>
             </div>
             <div class="overflow-show control-group">
-              <label><%= _('Población y código postal') %></label>
+              <label><%= _('Localidad') %></label>
               <div class="controls">
                 <%= select_tag :city, options_for_select([current_user.city], current_user.city), { include_blank: _('Localidad...'), class: 'city', 'data-placeholder' => _('Localidad...') } %>
                 <%= text_field_tag :postal_code, current_user.postal_code, placeholder: _('CP'), class: 'span1' %>

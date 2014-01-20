@@ -19,25 +19,26 @@
 				<div class="description">
           <h5 class="<%= @user.online? ? "online" : "" %>"><%= "#{@user.name} #{@user.surname}" + (@user.screen_name.present? ? " (#{@user.screen_name}) " : " ") + "| " %><span><%= "#{@user.city}, #{CountrySelect::COUNTRIES[@user.country]}" %></span></h5>
 						<p class="small">
-							<%= "#{User::GENDER[@user.gender].capitalize} - #{@user.age} #{_('años')} " %>
+							<%= _(User::GENDER[@user.gender]).capitalize %> <%= @user.age %> <%= _("años")%>
 							<% if @user.height %>
-                <%= "- #{@user.height} #{_('cms de altura')}" %>
+								<%= _('- %{height} cms de altura') % {:height => @user.height} %>
 							<% end %>
 						</p>
-						<p class="small"><%= "#{@user.name} está #{User::MARITAL_STATUS[@user.marital_status]}"%> 
+						<p class="small">
+							<%= _('%{name} está %{marital_status}') % {:name => @user.name, :marital_status => _(User::MARITAL_STATUS[@user.marital_status])} %>
 							<% if @user.child.present? %>
-                <%= "#{_('y')} #{User::TP_CHILD[@user.child]}." %>
+								<%= _('i %{tp_child}') % {:tp_child => _(User::TP_CHILD[@user.child])} %>.
 							<% end %>
 							<% if @user.lf_gender.present? %>
-                <%= "#{_('Busca')} #{User::GENDER[@user.lf_gender]} "%> 
-								<% if @user.lf_age_from.present? and @user.lf_age_to.present? %>
-                  <%= "#{_('de entre')} #{@user.lf_age_from} #{_('y')} #{@user.lf_age_to} #{_('años')}" %>
+								<%= _('Busca %{gender}') % {:gender => _(User::GENDER[@user.lf_gender])} %>
+								<% if @user.lf_age_from.present? and @user.lf_age_to.present? %>                
+									<%= _('de entre %{age_from} y %{age_to} años') % {:age_from => @user.lf_age_from, :age_to => @user.lf_age_to} %>
 								<% end %>
 								<% if @user.lf_relationship.present? %>
-                  <%= "#{_('para')} #{User::LF_RELATIONSHIP[@user.lf_relationship]}" %>
+									<%= _('para %{tipo_relacion}') % { :tipo_relacion => _(User::LF_RELATIONSHIP[@user.lf_relationship]) } %>
 								<% end %>
 								<% if @user.city.present? %>
-                  <%= "#{_('y que esté cerca de')} #{@user.city}, #{@user.country}" %>
+									<%= _('y que esté cerca de %{city}, %{country}') % {:city => @user.city, :country => @user.country} %>
 								<% end %>
 							<% end %>
 						</p>
