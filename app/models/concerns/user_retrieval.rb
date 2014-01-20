@@ -7,6 +7,7 @@ module UserRetrieval
       :by_likes => 'p.main IS NULL, distance ASC, likes_count DESC, pictures_count DESC, visits_count DESC, cellove_index DESC',
       :by_index => 'p.main IS NULL, distance ASC, cellove_index DESC, pictures_count DESC, likes_count DESC, visits_count DESC',
       :by_recent => 'p.main IS NULL, distance ASC, users.created_at DESC, pictures_count DESC, likes_count DESC, visits_count DESC, cellove_index DESC',
+      :by_pictures => 'p.main IS NULL, distance ASC, pictures_count DESC, users.created_at DESC, likes_count DESC, visits_count DESC, cellove_index DESC',
     }
 
       # Ordre original
@@ -48,7 +49,7 @@ module UserRetrieval
   end
 
   def best_suited_near_me
-    retrieve_users(12)
+    retrieve_users(12, :by_pictures)
   end
 
   def could_interest_me(limit = 20)
