@@ -33,10 +33,10 @@ class ProfilesController < ApplicationController
         @recommendation = Recommendation.new
         @characteristic = Characteristic.new
 
-        flash[:success] = _('No se ha podido guardar.')
+        flash[:alert] = _('No se ha podido guardar.')
         render 'matchmaker_show'
       else
-        flash[:success] = _('No se ha podido guardar.')
+        flash[:alert] = _('No se ha podido guardar.')
         render 'show'
       end
     end

@@ -1,0 +1,57 @@
+<section class="profile">
+	
+	<div class="boxed">
+    <div class="boxed-inner">
+      <header>
+				<h1 class="pull-left section_title"><%= _('Completa tu perfil para poder usar Cellove') %></h1>
+			</header>
+		</div>
+		
+		<%= form_for @user, :url => update_complete_fields_path do |user| %>
+			
+				<fieldset class="quien form-inline">
+					<div class="span9">
+         	 <%= _('Me llamo') %>
+	         <%= user.text_field :name, :class => 'input-small' %>
+	         <%= user.text_field :surname, :class => 'input-small' %>
+	         <%= _('pero quiero que mi nombre para mostrar sea') %>
+	         <%= user.text_field :screen_name, :class => 'input-small' %>
+	         <small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small>
+					</div>
+				</fieldset>
+        <article class="form-inline" id="complete_fields">
+					<hr class="thin">
+			
+				  <%= user.label :gender, _('Soy') %>
+			    <%= user.select :seeking, seeking_options  %>
+			    <%= user.label :marital_status, _('y') %>
+			    <%= user.select :marital_status, marital_status_options %>
+			
+				  <hr class="thin">
+				  <%= user.label :birth_date, _('Nací el') %>
+				  <%= user.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
+				  <%= user.label :birth_date_year, _('de') %>
+				  <%= user.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
+		 
+				 	<hr class="thin">
+
+				  <%= user.label :country, _('Vivo en') %>
+				  <%= localized_country_select(:user, :country, [], {}, { class: "span2" }) %>
+				  <%= user.label :postal_code, _(' y mi código postal es el') %>
+				  <%= user.text_field :postal_code, placeholder: _('CP'), :class => 'input-mini' %>
+				  <%= user.label :city, _('de') %>
+				  <%= user.select :city, [@user.city], { selected: @user.city }, { class: 'location span2', 'data-placeholder' => _('Localidad...')} %>
+				
+					<hr class="thin">
+
+				</article>
+			
+				<div class="center">
+        	<%= user.submit _('Guardar'), :class => 'btn btn-info' %>
+        	<hr class="thin">    
+				</div>
+ 
+		<% end %>
+
+	</div>
+</section>

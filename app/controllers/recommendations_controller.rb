@@ -2,7 +2,9 @@
 class RecommendationsController < ApplicationController
   skip_before_filter :matchmaker_user, only: [:index, :create, :deny, :creator_toggle]
   before_filter :correct_user, only: [:accept, :deny, :creator_toggle]
-  after_filter :add_to_cellove_index, only: [:accept]
+  after_filter :add_to_cellove_index, only: [:accept]  
+  
+  
   layout 'logged_in'
   EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
 

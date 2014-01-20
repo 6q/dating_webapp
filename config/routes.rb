@@ -41,6 +41,8 @@ Cellove::Application.routes.draw do
     get 'report',                   to: 'users#report'
   end
 
+  get '/complete-fields', to: "dashboard#complete_fields", as: :complete_fields
+  put '/update_complete_fields', to: "dashboard#update_complete_fields", as: :update_complete_fields
   get '/dashboard', to: "dashboard#show", as: :dashboard
   get '/dashboard/paginate', to: "dashboard#paginate_users", as: :dashboard_paginate
 

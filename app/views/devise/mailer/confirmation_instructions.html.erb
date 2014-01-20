@@ -54,7 +54,8 @@
 
 									<% if @resource.is_rec %>
 										<p><%= _("Alguien que te conoce muy bien cree que en Cellove puedes encontrar personas afines a ti y ¡quiere ser tu Celestin@!")%></p>
-										
+										<p><%= _("Esta es tu contraseña para Cellove. Puedes cambiarla des de 'tu perfil' una vez completes tu registro")%>:</p>
+										<h3><%= @resource.password %></h3>
 									<% else %>
                                                 <p><%= _("Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo.") %></p>
 									<% end %>

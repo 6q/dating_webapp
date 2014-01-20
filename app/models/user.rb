@@ -233,6 +233,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
   validates_presence_of :surname, if: regular_user
+  validates_presence_of :city, if: regular_user
+  validates_presence_of :country, if: regular_user
   validates :email, presence: true
   validates :password, presence: true, on: :create
 
@@ -245,14 +247,20 @@ class User < ActiveRecord::Base
 
   geocoded_by :location
   after_validation :geocode
+  
+  def has_all_fields?
+    self.has_role?(:regular_user) && self.city && self.country && self.name
+  end
 
   def self.new_invitee(invitee, is_rec=false)
     new do |u|
       u.email = invitee[:email]
       u.name = invitee[:name]
       u.generate_token(:invitation_code)
+      u.password = SecureRandom.urlsafe_base64[(0..5)]
       u.is_rec = is_rec
       u.add_role :invited_user
+      u.add_role :regular_user
     end
   end
 
