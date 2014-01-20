@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-20 11:25+0100\n"
+"POT-Creation-Date: 2014-01-20 17:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
@@ -444,6 +444,10 @@ msgstr "La Clàudia ha quedat amb el meu pare per a una cita"
 msgid "Completa tu perfil"
 msgstr "Completa el teu perfil"
 
+#, fuzzy
+msgid "Completa tu perfil para poder usar Cellove"
+msgstr "Completa el teu perfil"
+
 msgid "Complexión"
 msgstr "Complexió"
 
@@ -581,6 +585,9 @@ msgstr "De cabell"
 
 msgid "De étnia"
 msgstr "D'ètnia"
+
+msgid "Debes completar tus datos para poder usar Cellove"
+msgstr ""
 
 msgid "Debes ser mayor de edad."
 msgstr "Has de ser major d'edat."
@@ -794,6 +801,9 @@ msgstr "Esperem que la propera vegada funcioni."
 
 msgid "Espontáneo"
 msgstr "Espontani"
+
+msgid "Esta es tu contraseña para Cellove. Puedes cambiarla des de 'tu perfil' una vez completes tu registro"
+msgstr ""
 
 msgid "Esta función es completamente Gratis y siempre lo será."
 msgstr "Aquesta funció és completament Gratis i sempre ho serà."

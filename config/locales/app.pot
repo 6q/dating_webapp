@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-20 11:25+0100\n"
+"POT-Creation-Date: 2014-01-20 17:56+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -444,6 +444,9 @@ msgstr ""
 msgid "Completa tu perfil"
 msgstr ""
 
+msgid "Completa tu perfil para poder usar Cellove"
+msgstr ""
+
 msgid "Complexión"
 msgstr ""
 
@@ -580,6 +583,9 @@ msgid "De pelo"
 msgstr ""
 
 msgid "De étnia"
+msgstr ""
+
+msgid "Debes completar tus datos para poder usar Cellove"
 msgstr ""
 
 msgid "Debes ser mayor de edad."
@@ -790,6 +796,9 @@ msgid "Esperamos que la próxima vez funcione."
 msgstr ""
 
 msgid "Espontáneo"
+msgstr ""
+
+msgid "Esta es tu contraseña para Cellove. Puedes cambiarla des de 'tu perfil' una vez completes tu registro"
 msgstr ""
 
 msgid "Esta función es completamente Gratis y siempre lo será."
