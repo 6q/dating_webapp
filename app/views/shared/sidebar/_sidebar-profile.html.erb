@@ -38,7 +38,7 @@
     </li>
     <li>
       <a href="<%= user_likes_of_mine_path %>">
-        <%= _('Te gustan') %> <em>(<%=current_user.likes.length.to_s %>)</em>
+        <%= _('Te gustan') %> <em>(<%= User.people_i_like(current_user, params[:order]).count %>)</em>
       </a>
     </li>
 	</ul>
