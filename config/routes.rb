@@ -11,7 +11,8 @@ Cellove::Application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'sessions',
     registrations: 'user_registrations',
-    passwords: 'passwords'
+    passwords: 'passwords',
+    confirmations: 'user_confirmations'
   } do
       post 'users/recover', to: 'user_registrations#recover', as: :recover_user_registration
   end

@@ -298,10 +298,10 @@ class User < ActiveRecord::Base
     [city, country].compact.join(', ')
   end
 
-  ransacker :years_start, :formatter => proc { |age| age.to_i.years.ago.beginning_of_year + 1.year } do |parent|
+  ransacker :years_start, :formatter => proc { |age| age.to_i.years.ago } do |parent|
     parent.table[:birth_date]
   end
-  ransacker :years_end, :formatter => proc { |age| age.to_i.years.ago.end_of_year - 1.year } do |parent|
+  ransacker :years_end, :formatter => proc { |age| age.to_i.years.ago - 1.year } do |parent|
     parent.table[:birth_date]
   end
 

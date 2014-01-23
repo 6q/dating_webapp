@@ -27,7 +27,7 @@
 						<p class="small">
 							<%= _('%{name} está %{marital_status}') % {:name => @user.name, :marital_status => _(User::MARITAL_STATUS[@user.marital_status])} %>
 							<% if @user.child.present? %>
-								<%= _('i %{tp_child}') % {:tp_child => _(User::TP_CHILD[@user.child])} %>.
+								<%= _('y %{tp_child}') % {:tp_child => _(User::TP_CHILD[@user.child])} %>.
 							<% end %>
 							<% if @user.lf_gender.present? %>
 								<%= _('Busca %{gender}') % {:gender => _(User::GENDER[@user.lf_gender])} %>

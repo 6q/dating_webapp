@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-20 23:09+0100\n"
+"POT-Creation-Date: 2014-01-23 20:47+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -879,6 +879,9 @@ msgstr ""
 msgid "Fisico"
 msgstr ""
 
+msgid "Foto"
+msgstr ""
+
 msgid "Fran & Irene"
 msgstr ""
 
@@ -889,6 +892,9 @@ msgid "Frecuencia"
 msgstr ""
 
 msgid "Fumador"
+msgstr ""
+
+msgid "Fumo"
 msgstr ""
 
 msgid "Fumo pero lo dejaría por mi pareja"
@@ -1257,7 +1263,13 @@ msgstr ""
 msgid "No enviar notificaciones si estoy online"
 msgstr ""
 
+msgid "No fumo"
+msgstr ""
+
 msgid "No hay ninguna conversación."
+msgstr ""
+
+msgid "No hemos podido confirmar tu cuenta. Si ya la habías confirmado identificate para continuar."
 msgstr ""
 
 msgid "No le veo"
@@ -1774,6 +1786,9 @@ msgid "Son las personas del entorno del usuario registrado que ayudan a encontra
 msgstr ""
 
 msgid "Soy"
+msgstr ""
+
+msgid "Soy antitabaco"
 msgstr ""
 
 msgid "Soy fumador social"
@@ -2304,6 +2319,9 @@ msgstr ""
 msgid "fuma pero lo dejaría por su pareja"
 msgstr ""
 
+msgid "fume"
+msgstr ""
+
 msgid "fume pero lo dejaría por su pareja"
 msgstr ""
 
@@ -2523,6 +2541,9 @@ msgstr ""
 msgid "no cree en el matrimonio"
 msgstr ""
 
+msgid "no fume"
+msgstr ""
+
 msgid "no le gusta la música"
 msgstr ""
 
@@ -2703,6 +2724,9 @@ msgstr ""
 msgid "se adapte fácilmente"
 msgstr ""
 
+msgid "sea antitabaco"
+msgstr ""
+
 msgid "sea bebedor"
 msgstr ""
 
@@ -2812,6 +2836,9 @@ msgid "x"
 msgstr ""
 
 msgid "y"
+msgstr ""
+
+msgid "y %{tp_child}"
 msgstr ""
 
 msgid "y mi nivel de ganancias es"
