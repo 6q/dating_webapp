@@ -40,6 +40,9 @@ msgstr "Li agrades a algú!"
 msgid "Población y código postal"
 msgstr "Població i codi postal"
 
+msgid "Con foto"
+msgstr "Amb foto"
+
 msgid " a "
 msgstr "a"
 
@@ -495,9 +498,6 @@ msgstr "Amb Cellove, les teves cites ja no seran a cegues!"
 
 msgid "Con estudios"
 msgstr "Amb estudis"
-
-msgid "Con foto"
-msgstr "Amb foto"
 
 msgid "Con hijos"
 msgstr "Amb fills"
@@ -2302,6 +2302,9 @@ msgstr "en"
 msgid "en pareja"
 msgstr "en parella"
 
+msgid "es antitabaco"
+msgstr "és antitabac"
+
 msgid "es bebedor"
 msgstr "és bevedor"
 
@@ -2337,6 +2340,9 @@ msgstr "formal"
 
 msgid "fuerte"
 msgstr "fort"
+
+msgid "fuma"
+msgstr "fuma"
 
 msgid "fuma pero lo dejaría por su pareja"
 msgstr "fuma però ho deixaria per la seva parella"
@@ -2562,6 +2568,9 @@ msgstr "no bec alcohol"
 
 msgid "no cree en el matrimonio"
 msgstr "no creu en el matrimoni"
+
+msgid "no fuma"
+msgstr "no fuma"
 
 msgid "no fume"
 msgstr "no fumi"

@@ -13,7 +13,7 @@ module UserConstants
   HAIR = {'blond' => _('rubio'),'redhead' => _('pelirrojo'),'gray' => _('gris'),'brown' => _('marrón'),'black' => _('negro')}
   HAIR_STYLE = {'short' => _('corto'),'very short' => _('muy corto'),'large' => _('largo'),'shaved' => _('afeitado'), 'hairless' => _('sin pelo')}
   COMPLEXION = {'thin' => _('delgado'), 'normal' => _('normal'), 'nice' => _('muy bien'), 'athletic' => _('atlético'), 'strong' => _('fuerte'),  'curvy' => _('con curvas'), 'obese' => _('obeso')}
-  SMOKE = {'smoker' => 'Fumo', 'non-smoker' => 'No fumo', 'smoker-hater' => 'Soy antitabaco','not-mind-smoke' => _('No me molesta el humo'), 'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
+  SMOKE = {'smoker' => _('Fumo'), 'non-smoker' => _('No fumo'), 'smoker-hater' => _('Soy antitabaco'),'not-mind-smoke' => _('No me molesta el humo'), 'smoke-leave-couple' => _('Fumo pero lo dejaría por mi pareja'), 'social-smoker' => _('Soy fumador social')}
   RELIGION = {'agnostic' => _('agnóstico'), 'atheist' => _('ateo'), 'christian' => _('cristiano'), 'jewish' => _('judío'), 'catholic' => _('católico'), 'muslim' => _('musulmán'), 'hindu' => _('indú'), 'buddhist' => _('budista')}
   ETHNICITY = {'hispanic' => _('hispana'), 'arab' => _('árabe'), 'indian' => _('india'), 'european' => _('europea'), 'african' => _('africana'), 'asian' => _('asiática') }
   STUDY_LEVEL = {'school' => _('instituto o inferior'), 'high-school' => _('bachillerato'),'certified' => _('diplomado'), 'professional' => _('módulo profesional'), 'graduate' => _('licenciado o superior')}
@@ -36,7 +36,7 @@ module UserConstants
   # LOOKING FOR OPTIONS
   LF_RELATIONSHIP = {'friends' => _('hacer nuevas amistades'), 'fun' => _('salir y pasarlo bien'), 'couple' => _('establecer una relación estable'), 'marry' => _('casarme')}
   LF_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'), 'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@')}
-  LF_SMOKE = {'smoker' => 'fume', 'non-smoker' => 'no fume', 'smoker-hater' => 'sea antitabaco','not-mind-smoke' => _('no le moleste el humo'), 'smoke-leave-couple' => _('fume pero lo dejaría por su pareja'), 'social-smoker' => _('sea fumador social')}
+  LF_SMOKE = {'smoker' => _('fume'), 'non-smoker' => _('no fume'), 'smoker-hater' => _('sea antitabaco'), 'not-mind-smoke' => _('no le moleste el humo'), 'smoke-leave-couple' => _('fume pero lo dejaría por su pareja'), 'social-smoker' => _('sea fumador social')}
   LF_ALCOHOL = {'when-go-out' => _('le guste beber solo cuando salga'), 'not-drink' => _('no beba alcohol'), 'occasionally' => _('beba ocasionalmente'), 'drinker' => _('sea bebedor'), 'meke-me-sick' => _('el alcohol no le sienta bien')}
   LF_PARTY = {'like-out' => _('le guste mucho salir'), 'not-like-out' => _('no le guste salir'), 'like-bars' => _('le guste ir de bares'), 'like-disco' => _('le guste ir a la discoteca'), 'like-drink-friends' => _('le guste ir a tomar algo con amigos'),'love-party' => _('le encante la fiesta'), 'not-like-party' => _('no le guste nada la fiesta')}
   LF_DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'), 'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('sea muy maniátic@ con la comida'), 'like-all' => _('le guste todo'), 'adapt' => _('se adapte fácilmente')}
@@ -47,7 +47,7 @@ module UserConstants
   # THIRD PERSON OPTIONS
   TP_CHILD = { 'have-children' => _('tiene hijos'),'no-children' => _('no tiene hijos'),'no-want-children' => _('no tiene hijos, y no quiere tener'), 'no-kids-i-want' => _('no tiene hijos, pero quiere tener'),'have-children-no-want-more' => _('tiene hijos, y no quiere tener mas '), 'have-children-want-more' => _('si tiene hijos, y quiere tener mas '),'no-like-kids' => _('no le gustan los niños')}
   TP_HOUSE = {'alone' => _('sol@'),'couple' => _('en pareja'),'with-kids' => _('con sus hijos'), 'occasionally-with-children' => _('ocasionalmente con sus hijos'),'accompanied' => _('acompañad@'), 'with-parents' => _('con sus padres')}
-  TP_SMOKE = {'smoker' => 'fuma', 'non-smoker' => 'no fuma', 'smoker-hater' => 'es antitabaco', 'not-mind-smoke' => _('no le molesta el humo'), 'smoke-leave-couple' => _('fuma pero lo dejaría por su pareja'), 'social-smoker' => _('es fumador social')}
+  TP_SMOKE = {'smoker' => _('fuma'), 'non-smoker' => _('no fuma'), 'smoker-hater' => _('es antitabaco'), 'not-mind-smoke' => _('no le molesta el humo'), 'smoke-leave-couple' => _('fuma pero lo dejaría por su pareja'), 'social-smoker' => _('es fumador social')}
   TP_DIET = {'vegetarian' => _('vegetariana'), 'vegan' => _('vegana'), 'japanese' => _('japonesa'), 'mediterranean' => _('mediterránea'), 'italian' => _('italiana'), 'kosher' => _('kosher'), 'halal' => _('halal'), 'obsessive-food' => _('es muy maniátic@ con la comida'),
     'like-all' => _('le gusta todo'), 'adapt' => _('se adapta fácilmente')}
   TP_ALCOHOL = {'when-go-out' => _('le gusta beber solo cuando sale'), 'not-drink' => _('no bebe alcohol'), 'occasionally' => _('bebe ocasionalmente'), 'drinker' => _('es bebedor'), 'meke-me-sick' => _('el alcohol no le sienta bien')}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-23 20:47+0100\n"
+"POT-Creation-Date: 2014-01-24 19:08+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -472,9 +472,6 @@ msgid "Con Cellove, ¡tus citas ya no serán a ciegas!"
 msgstr ""
 
 msgid "Con estudios"
-msgstr ""
-
-msgid "Con foto"
 msgstr ""
 
 msgid "Con hijos"
@@ -2280,6 +2277,9 @@ msgstr ""
 msgid "en pareja"
 msgstr ""
 
+msgid "es antitabaco"
+msgstr ""
+
 msgid "es bebedor"
 msgstr ""
 
@@ -2314,6 +2314,9 @@ msgid "formal"
 msgstr ""
 
 msgid "fuerte"
+msgstr ""
+
+msgid "fuma"
 msgstr ""
 
 msgid "fuma pero lo dejaría por su pareja"
@@ -2539,6 +2542,9 @@ msgid "no bebo alcohol"
 msgstr ""
 
 msgid "no cree en el matrimonio"
+msgstr ""
+
+msgid "no fuma"
 msgstr ""
 
 msgid "no fume"

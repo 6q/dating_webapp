@@ -40,6 +40,9 @@ msgstr "Somebody likes you!"
 msgid "Población y código postal"
 msgstr "Location and postcode\n"
 
+msgid "Con foto"
+msgstr "With photo"
+
 msgid " a "
 msgstr "in"
 
@@ -495,9 +498,6 @@ msgstr "With Cellove, your dates will be no longer blind!"
 
 msgid "Con estudios"
 msgstr "With studies"
-
-msgid "Con foto"
-msgstr "With photo"
 
 msgid "Con hijos"
 msgstr "With sons"
@@ -2302,6 +2302,9 @@ msgstr "In"
 msgid "en pareja"
 msgstr "In a relationship"
 
+msgid "es antitabaco"
+msgstr "is anti-smoking"
+
 msgid "es bebedor"
 msgstr "Drinks alcohol"
 
@@ -2337,6 +2340,9 @@ msgstr "Formal"
 
 msgid "fuerte"
 msgstr "Strong"
+
+msgid "fuma"
+msgstr "smokes"
 
 msgid "fuma pero lo dejaría por su pareja"
 msgstr "He/she smokes but he will give it up for his partner"
@@ -2562,6 +2568,9 @@ msgstr "I don´t drink alcohol"
 
 msgid "no cree en el matrimonio"
 msgstr "Don´t believe in the marriage"
+
+msgid "no fuma"
+msgstr "doesn't smoke"
 
 msgid "no fume"
 msgstr "nonsmoker"
