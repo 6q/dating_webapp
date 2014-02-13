@@ -86,7 +86,7 @@ hr.thin {
 }
 
 .flat-celestinos {
-  
+
   blockquote {
     padding-left:5px;
     i {
@@ -97,7 +97,7 @@ hr.thin {
       margin-right:15px;
       float:left;
       margin-top: 2px;
-      margin-bottom: 10px;  
+      margin-bottom: 10px;
     }
     .heart-especial {
       background-position:-42px 0;
@@ -127,7 +127,7 @@ hr.thin {
     background:#fff;
 
     [class*="span"] {
-      margin-left:10px;      
+      margin-left:10px;
     }
 
 
@@ -231,7 +231,7 @@ header[role="banner"]{
       color:#FFF;
       font-size:2.2em;
       font-family: 'Yanone Kaffeesatz', sans-serif;
-      font-weight: 400; 
+      font-weight: 400;
     }
 
     .beta {
@@ -410,10 +410,10 @@ section[role="main"] {
     background-image:-o-linear-gradient(top,#78BFF2,#5CABE8);
     background-image:linear-gradient(to bottom,#78BFF2,#5CABE8);
     background-repeat:repeat-x;border-color:#78BFF2 #78BFF2 #5CABE8;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#78BFF2',endColorstr='#5CABE8',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false); 
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#78BFF2',endColorstr='#5CABE8',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;    
+    border-radius: 5px;
     border: solid 1px #78BFF2;
   }
   a.more:hover {
@@ -426,7 +426,7 @@ section[role="main"] {
     text-decoration:none;
     border: solid 1px #78BFF2;
 
-  }  
+  }
 
 }
 
@@ -663,7 +663,7 @@ height:100%;
 width:100%;
 background: #000;
 display: none;
-} 
+}
 #fast-signup {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 5px 5px 5px 5px;
@@ -735,7 +735,7 @@ display: none;
     outline: medium none;
     padding: 8px;
     width: 263px;
-  }  
+  }
   .txt-fld input:focus, .txt-fld textarea:focus {
     background-color: #FAF9DC;
   }
@@ -770,4 +770,23 @@ section.list {
 			font-size: 17.5px !important;
 		}
 	}
+}
+
+.fixed-message-bottom {
+  font-size: 0.7em;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  margin-bottom: 0;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .icon-remove {
+    float: right;
+    margin-left: 4px;
+    cursor: pointer;
+  }
 }

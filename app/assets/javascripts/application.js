@@ -32,4 +32,10 @@ $(function() {
     }, 500);
 
   }
+
+  $('.icon-remove').click(function() {
+    $(this).parent().hide(500);
+    return false;
+  });
+
 });
