@@ -9,7 +9,7 @@
 		<%= user.label :lf_age_from, _('de entre') %>
     <%= user.select :lf_age_from, 18..99, {}, :class => 'input-mini' %>
 		<%= user.label :lf_age_to, 'y' %>
-    <%= user.select :lf_age_to, 18..99, {}, :class => 'input-mini' %>
+    <%= user.select :lf_age_to, 18..99, {:selected => 99}, :class => 'input-mini' %>
 		<%= user.label :lf_relationship, _('años. Para') %>
 		<%= user.select :lf_relationship, lf_relationship_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
 		<small><%= _('* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán.') %></small>
@@ -28,7 +28,7 @@
     <hr class="thin">
 		<%= user.label :lf_postal_code, _(' cerca del código postal') %>
 		<%= user.text_field :lf_postal_code, placeholder:_( 'CP'), :class => 'input-mini' %>.
-							
+
 		<hr>
 		<%= user.label :lf_physical_desc, _('Que sea') %>
 		<%= user.select :lf_physical_desc, physical_desc_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>
@@ -65,13 +65,13 @@
 		<hr class="thin">
 		<%= user.label :lf_diet,_( 'Con una dieta')%>
 		<%= user.select :lf_diet, lf_diet_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
-								
+
 		<hr>
 		<%= user.label :lf_ethnicity,_('De étnia') %>
 		<%= user.select :lf_ethnicity, ethnicity_options, {include_blank: _('No quiero decirlo')} %>
 		<%= user.label :lf_citizenship, _('y nacionalidad') %>
 		<%= user.text_field :lf_citizenship %>
-								
+
 		<hr class="thin">
 		<%= user.label :lf_religion, _('Que sea') %>
 		<%= user.select :lf_religion, religion_options, {include_blank: _('No quiero decirlo')}, :class => 'span2' %>

@@ -1,11 +1,11 @@
 #encoding: utf-8
 module RegistrationsHelper
   def gender_options
-    {'male' => _('hombre'), 'female' => _('mujer')}.map {|k,v| [v,k]} 
+    {'male' => _('hombre'), 'female' => _('mujer')}.map {|k,v| [v,k]}
   end
 
   def seeking_options
-    [[_('hombre buscando una mujer'), 'man seeking woman' ], [_('mujer buscando un hombre'), 'woman seeking man' ], [_('hombre buscando un hombre'), 'man seeking man' ], [_('mujer buscando una mujer'), 'woman seeking woman']]
+    [[_('mujer buscando un hombre'), 'woman seeking man' ], [_('hombre buscando una mujer'), 'man seeking woman' ], [_('mujer buscando una mujer'), 'woman seeking woman'], [_('hombre buscando un hombre'), 'man seeking man' ]]
   end
 
   def marital_status_options
@@ -29,7 +29,7 @@ module RegistrationsHelper
   end
 
   def physical_style_options
-    [[_('bohemio'), 'bohemian'], [_('clásico'), 'classic'],[_('indie/casual'), 'indie/casual'], [_('deportivo'),'sport'], [_('formal'), 'formal'], [_('a la moda'), 'trendy'], [_('rockero'), 'rocker'], [_('pijo'), 'preppy']]    
+    [[_('bohemio'), 'bohemian'], [_('clásico'), 'classic'],[_('indie/casual'), 'indie/casual'], [_('deportivo'),'sport'], [_('formal'), 'formal'], [_('a la moda'), 'trendy'], [_('rockero'), 'rocker'], [_('pijo'), 'preppy']]
   end
 
   def eyes_options
@@ -61,11 +61,11 @@ module RegistrationsHelper
   end
 
   def language_options
-    { 'english' => _('Inglés'), 'spanish' => _('Español'), 'french' => _('Francés'), 'italian' => _('Italiano'), 'other' => _('otro') }.map {|k,v| [v,k]} 
+    { 'english' => _('Inglés'), 'spanish' => _('Español'), 'french' => _('Francés'), 'italian' => _('Italiano'), 'other' => _('otro') }.map {|k,v| [v,k]}
   end
 
   def language_level_options
-    { 'low' => _('bajo'), 'medium' => _('medio'), 'hight' => _('alto') }.map {|k,v| [v,k]} 
+    { 'low' => _('bajo'), 'medium' => _('medio'), 'hight' => _('alto') }.map {|k,v| [v,k]}
   end
 
   def study_level_options
