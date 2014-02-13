@@ -1,7 +1,15 @@
 class DashboardController < ApplicationController
   layout "logged_in"
+  
+  before_filter :check_if_must_complete_fields, :only => :show
+  before_filter :skip_password_attribute, only: :update_complete_fields
+  
+  # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt 
+  # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
+  # before_filter :is_invited_user?
 
   def show
+    
     @best_suited_near_me = current_user.best_suited_near_me
 
     could_interest_me = current_user.could_interest_me.sample(20)
@@ -31,4 +39,43 @@ class DashboardController < ApplicationController
       end
     end
   end
+  
+  def complete_fields
+    @user = current_user
+  end
+  
+  def update_complete_fields
+    @user = current_user
+    @user.assign_attributes(params[:user])
+    if @user.save      
+      flash[:success] = _('Cambios guardados.')
+      redirect_to profile_url
+    else     
+      flash[:alert] = _('No se ha podido guardar.')
+      render 'complete_fields'
+    end
+  end
+  
+  private
+  
+  def check_if_must_complete_fields    
+    if current_user && !current_user.has_all_fields? 
+      redirect_to complete_fields_url, :alert => _('Debes completar tus datos para poder usar Cellove') and return
+    end
+  end
+  
+  def skip_password_attribute
+    if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
+      params[:user].except!(:password, :password_confirmation)
+    end
+  end
+  
+  # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt 
+  # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
+
+  #def is_invited_user?
+  #  if current_user.roles.include?(Role.find_by_name("invited_user")) # no és correcte, hauriem de mirar si té nom i dades de localització
+  #    redirect_to profile_url
+  #  end
+  #end
 end

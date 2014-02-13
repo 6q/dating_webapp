@@ -1,12 +1,12 @@
 <nav role="navigation">
   <ul class="clearfix">
-    <li class="<%= active_if_current(new_user_registration_path) %>">
+    <li class="<%= active_if_current(new_user_registration_path) %> <%= active_if_current(root_path) %>">
       <%= link_to _('Registro Gratis'), new_user_registration_path %>
     </li>
     <li class="<%= active_if_current(new_matchmaker_registration_path) %>">
       <%= link_to _('Celestin@s'), new_matchmaker_registration_path %>
     </li>
-    <li class="<%= active_if_current(users_path) %>">
+    <li class="<%= active_if_current(view_users_path) %>">
       <%= link_to _('Ver usuarios'), view_users_path %>
     </li>
     <li class="<%= active_if_current(tv_spot_path(1)) %>">

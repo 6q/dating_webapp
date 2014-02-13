@@ -5,7 +5,7 @@ class ConversationsController < ApplicationController
   before_filter :check_current_subject_in_conversation, :only => [:show, :update, :destroy]
 
   layout "logged_in"
-  
+
   def index
     if params[:activities] == 'show' 
       @conversations_inbox = @mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }
@@ -23,7 +23,7 @@ class ConversationsController < ApplicationController
       @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(10)
       @conversations_trash = @mailbox.trash.page(params[:page]).per(10)
     end
-     
+
     @search = User.search(params[:q])
 
     respond_to do |format|
@@ -36,7 +36,7 @@ class ConversationsController < ApplicationController
     @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(10)
     @conversations_trash = @mailbox.trash.page(params[:page]).per(10)
     @search = User.search(params[:q])
-    
+
     if @box.eql? 'trash'
       @receipts = @mailbox.receipts_for(@conversation).trash
     else

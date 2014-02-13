@@ -9,8 +9,9 @@
     </div>
     <% unless @box.eql?'trash' %>
       <div class="reply">
-        <%= link_to _('Eliminar'), "#delete-confirm-#{conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'delete' %>
-        <%= link_to _('Responder'), "#fast-reply-#{conversation.id.to_s}", 'data-toggle' => 'modal' unless @tab == 'deleted-messages' %>
+        <%= link_to _('Eliminar'), "#delete-confirm-#{conversation.id.to_s}", :"data-toggle" => 'modal', :class => 'delete delete-msg-btn', :title => _('Eliminar') %>
+        <%= link_to _('Responder'), "#fast-reply-#{conversation.id.to_s}", :"data-toggle" => 'modal', 
+"title" => _('Responder'), :class => "reply-msg-btn" unless @tab == 'deleted-messages' %>
       </div>
     <% end %>
   </div>

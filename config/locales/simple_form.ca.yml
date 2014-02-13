@@ -1,0 +1,35 @@
+es:
+  simple_form:
+    "yes": 'Sí'
+    "no": 'No'
+    required:
+      text: 'necessari'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Si us plau, revisa els següents camps:"
+    labels:
+      password: 'Contrasenya'
+      user:
+        name: 'Nom'
+        surname: 'Cognoms'
+        screen_name: 'Nick per mostrar'
+        gender: 'Sóc'
+        birth_date: 'Vaig néixer el'
+        country: 'y visc a'
+        address: 'Direcció'
+        website: 'Pàgina web'
+        email: 'Email'
+        postal_code: 'El meu codi postal és el'
+        city_id: 'Població'
+        password: 'Contrasenya'
+        password_confirmation: 'Confirmar contrasenya'
+
+    hints:
+      username: "Nom d'usuari per entrar"
+      password: 'No estan permesos els caràcters especials'
+
+
+

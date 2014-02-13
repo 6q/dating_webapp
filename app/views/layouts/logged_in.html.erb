@@ -11,6 +11,7 @@
       <div class="container">
         <%= render 'shared/user/header-actions' %>
         <div id="logo">
+          <span class="beta">beta</span>
           <h1><%= link_to "Cellove", dashboard_path %></h1>
           <h2><%= _('Ponle alas al amor') %></h2>
         </div>
@@ -19,30 +20,49 @@
     </header>
     <div class="container">
       <section role="main">
-        <div class="row">
-          <div class="span3">
-            <% if current_user.has_role?(:matchmaker) %>
-              <%= render 'shared/sidebar_matchmaker' %>
-            <% else %>
-              <%= render 'shared/sidebar' %>
-            <% end %>
+        <% unless params[:controller] == 'flat_pages' %>
+          <div class="row">
+            <div class="span3">
+              <% if current_user.has_role?(:matchmaker) %>
+                <%= render 'shared/sidebar_matchmaker' %>
+              <% else %>
+                <%= render 'shared/sidebar' %>
+              <% end %>
+            </div>
+            <div class="span9">
+              <%= render 'shared/confirmation_pending_form' unless current_user.confirmed? || (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
+              <%= yield %>
+            </div>
           </div>
-
-          <div class="span9">
-            <%= render 'shared/confirmation_pending_form' unless current_user.confirmed? || (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
+        <% else %>
+          <% if @sidebar %>
+            <div class="row">
+              <div class="span3">
+                <%= render 'shared/flat-sidebar' %>
+              </div>
+              <div class="span9">
+                <div class="box">
+                  <div class="box-content">
+                    <%= yield %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% else %>
             <%= yield %>
-          </div>
-        </section>
-      </div>
-      <%= render 'shared/footer' %>
+          <% end %>
+        <% end %>
+      </section>
     </div>
 
+    <%= render 'shared/footer' %>
     <%= render 'shared/user/notifications' %>
     <%= render 'layouts/messages' %>
 
     <%= render 'shared/user/modal_upgrade' %>
     <%= render 'shared/modal_progress' %>
     <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
+    <%= render 'shared/scripts' %>
   </body>
   <% unless current_user.has_role?(:matchmaker) %>
     <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>

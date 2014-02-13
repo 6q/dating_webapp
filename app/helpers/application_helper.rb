@@ -24,13 +24,20 @@ module ApplicationHelper
     html = ""
 
     if paged_object.length > 0
-      html = '<span class="total">' + _('Mostrando ')
-      html += (paged_object.current_page * paged_object.length - paged_object.length + 1).to_s + _(' a ')
-      html += (paged_object.current_page * paged_object.length).to_s + _(' de ')
+      html = '<span class="total">' + _('Mostrando ') + "&nbsp;"
+      html += (paged_object.offset_value + 1).to_s + "&nbsp;" + _(' a ') + "&nbsp;"
+      html += ((paged_object.current_page * paged_object.limit_value) > paged_object.total_count ? paged_object.total_count : paged_object.current_page * paged_object.limit_value).to_s + "&nbsp;" + _(' de ') + "&nbsp;"
       html += paged_object.total_count.to_s + '.</span>'
     end
 
     html.html_safe
+  end
+  
+  def total_users(users)
+    html = ""
+    if users.length > 0
+      html = '<span class="total">' + _('Encontrados %{numero} perfiles') % {:numero => users.length} + '</span>'
+    end
   end
 
   def time_ago_in_words_or_date(from_time, include_seconds_or_options = {})
@@ -40,4 +47,5 @@ module ApplicationHelper
       I18n.l(from_time.to_date, format: :medium)
     end
   end
+
 end

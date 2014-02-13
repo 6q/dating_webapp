@@ -1,6 +1,7 @@
 <%= content_for :title do %>
   <%= _('Quiero encontrar') %>
 <% end %>
+<article>
 
 <header class="bg clearfix">
   <h1><%= _('Registro<br>Usuari@<br>Gratis!') %></h1>
@@ -20,22 +21,32 @@
         <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre') %>
         <%= f.text_field :surname, placeholder: _('Apellidos') %>
         <p>
-        <%= f.text_field :screen_name, placeholder: _('Nickname') %>
-        <small class="span3"><%= _('* Te recomendamos dejar este campo vacío para tener más posibilidades de contactos y Celestin@s.') %></small>
+        <%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)') %>
       </fieldset>
     </div>
 
-    <div class="span8">
-      <p><%= _('Regístrate GRATIS en Cellove y encuentra a tu pareja ideal o una amistad duradera: conversa con usuari@s, enviarles mensajes, propón actividades e, incluso, podrás comprobar si hacéis buena pareja... ') %></p>
-      <p><%= _('Cellove es una red social de contactos online donde encontrarás exactamente a la persona que estás buscando.  Sabemos lo importante que es dar con tu media naranja; por eso, ofrecemos confianza total  y seguridad en tu búsqueda.  ¡No dejes que tus citas sean “a ciegas” y regístrate GRATIS en Cellove!') %></p> 
-      <p><%= _('¿Te imaginas quedar con alguien que nunca has visto pero teniendo la sensación de que lo conoces de toda la vida? Ahora es posible gracias a Cellove. No volverás a ir a una cita “a ciegas”. Podrás tener a tu alcance mucha más información de esa persona a través de su círculo más cercano y de una manera segura y con confianza. <b>¡Regístrate GRATIS!</b> Conoce gente nueva, amplía tu círculo de amistades y encuentra al amor verdadero que siempre has soñado.') %></p> 
-      <p><%= _('Tendrás acceso a perfiles afines a ti. Cuéntanos cuales son tus gustos, cómo eres, cómo es tu pareja ideal... y ¡Cellove se encarga del resto!') %></p> 
-      <p><b><%= _('Cellove cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuarios, con el objetivo de que encuentres exactamente lo que buscas') %></b></p> 
-      <p><%= _('¡Y lo mejor es que, gracias a nuestro sistema de Celestinos, podrás comunicarte con sus ex, sus amigos e incluso con sus familiares! Encuentra con confianza y seguridad a esa persona especial. ¡Sabrás lo que ellos cuentan de la persona que te interesa con confianza!') %></p>
-      <p><%= _('Pídele a tus ex, amigos y familiares que sean tus Celestinos y te recomienden. Pídeles que te ayuden a encontrar a esa persona especial y tus citas ya no serán a ciegas.') %></p>
+    <div class="register-text">
+      <p><%= _('Regístrate en Cellove, la red social GRATIS para encontrar el <b>amor y amistad</b> de forma fácil y rápida. <b>Chatea</b> con los usuari@s, enviales mensajes, <b>propónles actividades</b> e incluso podrás comprobar si hacéis buena pareja.') %></p>
+      <p><%= _('Gracias a nuestro <b>sistema de Celestinos</b>, podrás comunicarte con sus familiares, amig@s o ex parejas.') %></p> 
+      <p><%= _('¿Te imaginas quedar con alguien que nunca has visto y tener la sensación de que lo conoces de toda la vida? <b>Ahora es posible gracias a Cellove</b>') %></p> 
+      <h3><%= _('¡No dejes que tus citas sean a ciegas!') %></h3>
+
     </div>
   </div>
- <fieldset id="orientation" class="form-inline">
+  <fieldset id="photo" class="clearfix form-inline">
+    <legend><%= _('Sube tu foto') %></legend>
+    <div class="row">
+      <div class="span6">
+        <label class="photoupload">
+          <span><%=_('Sube tu foto') %></span>
+          <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+        </label>
+        <div id="picture_gallery"></div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset id="orientation" class="form-inline">
+    <legend><%= _('¿Cómo eres?') %></legend>
     <div class="control-group">
       <%= f.label :gender, _('Soy') %>
       <%= f.select :seeking, seeking_options  %>
@@ -47,44 +58,29 @@
       <%= f.label :birth_date, _('Nací el') %>
       <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
       <%= f.label :birth_date_year, _('de') %>
-      <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
-      <%= f.label :country, _('y vivo en') %>
-      <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %>
+      <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %> .
+
     </div>
     <div class="control-group">
-      <%= f.label :postal_code, _("Mi codigo postal es el") %>
-      <%= f.text_field :postal_code, class: "span1", value: (@geocoder ? @geocoder.data['zipcode'] : resource.postal_code) %>
-      <%= f.label :city, _('de') %>
-      <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %>
+      <%= f.label :city, _('Y vivo en') %>
+      <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %> ,  
+      <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %> . 
     </div>
   </fieldset>
-  <fieldset id="photo" class="clearfix form-inline">
-    <legend><%= _('¿Cómo eres?') %></legend>
-    <div class="row">
-      <div class="span6">
-        <label class="control-label photo"><%= _('Sube tu foto') %></label>
-        <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
-        <div id="picture_gallery"></div>
-      </div>
-      <div class="span6">
-        <%= f.check_box :image_not_uploaded %>
-        <%= f.label :image_not_uploaded, _("¡Subir imagen más adelante!") %>
-        <small>* <%= _('Te recomendamos que subas una imagen para tener más posibilidades de contacto y Celestin@s.') %></small>
-      </div>
-    </div>
-  </fieldset>
+  <div class="nofloat">
+  </div>
   <fieldset id="access" class="clearfix form-horizontal">
     <legend><%= _('Datos de acceso a Cellove') %></legend>
     <div class="row">
       <div class="span6">
         <div class="control-group">
-          <%= f.label :email, "Email", class: 'control-label' %>
+          <%= f.label :email, _("Email"), class: 'control-label' %>
           <%= f.email_field :email %>
         </div>
       </div>
       <div class="span6">
         <div class="control-group">
-          <%= f.label :password, "Contraseña", class: "control-label" %>
+          <%= f.label :password, _("Contraseña"), class: "control-label" %>
           <%= f.password_field :password %>
         </div>
       </div>
@@ -93,7 +89,7 @@
       <div class="row">
         <div class="span6 center">
           <div class="clearfix">
-            <label><%= _('Al hacerte usuari@ de Cellove certifico que soy mayor de edad y que he leído y acepto los %{consejos_link}, las %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') % {consejos_link: link_to(_('Consejos de uso'), '/public/consejos-de-uso'), condiciones_link: link_to(_('Condiciones generales'), '/public/condiciones-generales'), privacy_link: link_to(_('Política de privacidad'), '/public/politica-de-privacidad')}%></label>
+            <label><%= _('Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') %  {condiciones_link: link_to(_('Terminos y condiciones generales'), terms_conditions_path, target: "_blank"), privacy_link: link_to(_('Política de privacidad'), privacy_policy_path, target: "_blank")}%></label>
           </div>
           <div class="clearfix">
             <%= f.check_box :newsletter_optin, checked: true %>
@@ -110,3 +106,4 @@
 <% end %>
 
 <div id="crop_modal_wrapper"></div>
+</article>

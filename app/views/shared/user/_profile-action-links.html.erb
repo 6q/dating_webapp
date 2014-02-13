@@ -34,7 +34,7 @@
     <% is_blocked = !current_user.user_blocks.where("blocked_user_id = ?", @user.id).first.nil? %>
     <% is_hidden = !current_user.user_hides.where("hidden_user_id = ?", @user.id).first.nil? %>
     <li class="block">
-      <%= link_to ('<i class=' + ((is_blocked || is_hidden) ? "disabled" : "") + '></i>Bloquear').html_safe, block_modal_id, "data-toggle" => "modal" %>
+      <%= link_to ('<i class=' + ((is_blocked || is_hidden) ? "disabled" : "") + '></i>').html_safe + _('Bloquear'), block_modal_id, "data-toggle" => "modal" %>
     </li>
 	</ul>
 </article>

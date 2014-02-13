@@ -2,6 +2,10 @@
 // All this logic will automatically be available in application.js.
 
 $(function() {
+	
+	$(".delete-msg-btn").tooltip();
+	
+	$(".reply-msg-btn").tooltip();
 
   $('.message-body').keydown(function() {
     ab = $(this).closest('.modal').next('.activity-proposal').find('.activity-body')

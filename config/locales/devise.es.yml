@@ -48,11 +48,11 @@ es:
       failure: 'Vaya, parece que no logramos completar la autenticación desde tu cuenta de %{kind}. El mensaje de error devuelto fué: %{reason}.'
     mailer:
       confirmation_instructions:
-        subject: 'Instrucciones de confirmación'
+        subject: 'Instrucciones de confirmación | Cellove.com'
       reset_password_instructions:
-        subject: 'Instrucciones de cambio de contraseña'
+        subject: 'Instrucciones de cambio de contraseña | Cellove.com'
       unlock_instructions:
-        subject: 'Instrucciones de desbloqueo'
+        subject: 'Instrucciones de desbloqueo | Cellove.com'
     user_registrations:
       user:
         signed_up: 'Bienvenido! Te has registrado correctamente.'

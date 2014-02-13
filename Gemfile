@@ -36,9 +36,11 @@ gem 'faker'
 gem 'factory_girl_rails', '>= 4.2.0'
 gem "mail_view", "~> 1.0.3"
 gem 'client_side_validations'
-gem "typus", :git => "git://github.com/fesplugas/typus.git", :branch => "features/3-2-stable-bootstrap"
+gem "typus", :git => "git://github.com/fesplugas/typus.git", :ref => "b5832511f034a0e422203c6e6de0872b281c9bca"
 gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
+gem 'newrelic_rpm'
+
 
 group :test do
   gem 'sqlite3'

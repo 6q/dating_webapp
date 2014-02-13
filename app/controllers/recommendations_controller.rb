@@ -2,7 +2,9 @@
 class RecommendationsController < ApplicationController
   skip_before_filter :matchmaker_user, only: [:index, :create, :deny, :creator_toggle]
   before_filter :correct_user, only: [:accept, :deny, :creator_toggle]
-  after_filter :add_to_cellove_index, only: [:accept]
+  after_filter :add_to_cellove_index, only: [:accept]  
+  
+  
   layout 'logged_in'
   EMAIL_REGEX = /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/
 
@@ -22,7 +24,7 @@ class RecommendationsController < ApplicationController
       if user.nil?
         # User was not found. Create and invite a new one,
         # without validations (we have no password etc. yet)
-        user = User.new_invitee(params[:user])
+        user = User.new_invitee(params[:user], true)
         user.save(validate: false)
       end
 
@@ -33,20 +35,32 @@ class RecommendationsController < ApplicationController
         @characteristic.creator_id = current_user.id
         @characteristic.save
         flash[:success] = _('Recomendación enviada')
-        redirect_to be_matchmaker_path
+        if current_user.roles.include?(Role.find_by_name("regular_user"))
+          redirect_to be_matchmaker_url
+        else
+          redirect_to matchmaker_become_user_url
+        end
       else
         flash[:error] = _('Datos incorrectos o faltantes')
         #@recommendation = Recommendation.new(params[:recommendation])
         #@characteristic = Characteristic.new(params[:characteristic])
         #render 'users/be_matchmaker'
-        redirect_to be_matchmaker_path
+        if current_user.roles.include?(Role.find_by_name("regular_user"))
+          redirect_to be_matchmaker_url
+        else
+          redirect_to matchmaker_become_user_url
+        end
       end
     else
       flash[:error] = _('Datos incorrectos o faltantes')
       #@recommendation = Recommendation.new(params[:recommendation])
       #@characteristic = Characteristic.new(params[:characteristic])
       #render 'users/be_matchmaker'
-      redirect_to be_matchmaker_path
+      if current_user.roles.include?(Role.find_by_name("regular_user"))
+        redirect_to be_matchmaker_url
+      else
+        redirect_to matchmaker_become_user_url
+      end
     end
   end
 

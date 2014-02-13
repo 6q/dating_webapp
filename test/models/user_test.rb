@@ -105,8 +105,8 @@ describe User do
 
   # Class method tests
   it 'must have a correct location' do
-    u = create(:regular_user, postal_code: '08009', city: 'Barcelona', country: 'Spain')
-    u.location.must_equal '08009, Barcelona, Spain'
+    u = create(:regular_user, city: 'Barcelona', country: 'Spain')
+    u.location.must_equal 'Barcelona, Spain'
   end
 
   it 'must have a correct calculated age' do

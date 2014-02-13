@@ -7,16 +7,18 @@ class InvitationsController < ApplicationController
     if invitation.save
       if params[:invitation][:user_type] == 'regular_user'
         # Send regular user invitation email
+        current_user.add_to_cellove_index(2)
         UserMailer.invite_user(current_user, params[:invitation][:invited_email], invitation.invitation_code).deliver
         flash[:success] = _('¡Usuari@ invitado!')
       elsif params[:invitation][:user_type] == 'celestino'
         # Send celestino invitation email
+        current_user.add_to_cellove_index(2)
         UserMailer.invite_celestino(current_user, params[:invitation][:invited_email], invitation.invitation_code).deliver
         flash[:success] = _('¡Celestin@ invitado!')
       end
     else
       # Something went wrong.
-      flash[:error] = _('Oops!')
+      flash[:error] = _('El email indicado ya está registrado en Cellove!')
     end
     redirect_to my_matchmakers_path(anchor: 'mejora')
   end

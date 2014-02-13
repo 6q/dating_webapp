@@ -71,10 +71,10 @@ $(document).ready(function() {
       smooth: true,
       round: 0,
       skin: "plastic",
-      dimension: "&nbsp;años",
+      dimension: "&nbsp;",
       scale: ['|','|','|','|','|','|','|','|'],
       onstatechange: function(){
-        $('#years').parent().parent().find('label span').text(' entre ' + $("#years").val().split(';')[0] + ' y ' + $("#years").val().split(';')[1]);
+        $('#years').parent().parent().find('label span').text(' ' + $("#years").val().split(';')[0] + ' - ' + $("#years").val().split(';')[1]);
         var years = $("#years").val().split(';');
         $('#q_years_start_lteq').val(years[0]);
         $('#q_years_end_gteq').val(years[1]);

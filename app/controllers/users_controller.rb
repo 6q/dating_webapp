@@ -2,6 +2,7 @@
 class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
+  before_filter :check_if_must_complete_fields, only: [:show, :index, :likes, :likes_of_mine, :hits, :nice_couple, :cellove_index]
 
   layout 'logged_in', :except => 'view'
 
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
   before_filter :set_visit_seen, only: [:hits]
   before_filter :set_likes_seen, only: [:likes]
   before_filter :set_rates_seen, only: [:nice_couple]
-  before_filter :set_best_suited_near_me, only:[:index, :cellove_index]
+  before_filter :set_best_suited_near_me, only:[:index, :cellove_index, :nice_couple, :likes, :likes_of_mine, :hits]
 
   def set_best_suited_near_me
     if session[:best_suited_near_me].present?
@@ -66,7 +67,7 @@ class UsersController < ApplicationController
   end
 
   def matchmaker_become_user
-    @geocoder = Geocoder.search(request.ip).first
+    @geocoder = Geocoder.search(request.env["HTTP_CF_CONNECTING_IP"]).first
   end
 
   def my_matchmakers
@@ -128,6 +129,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def report
+    reported = User.find(params[:user_id])
+    UserMailer.report(current_user, reported).deliver
+    redirect_to :back, notice: _('Se ha denunciado al usuario. ¡Gracias por tu ayuda!')
+  end
+
   private
     def user_visit
       if @user && current_user != @user
@@ -171,7 +178,7 @@ class UsersController < ApplicationController
 
       @search = ordered.near(center.empty? ? current_user : center.join(','), distance.to_i, { :units => :km }).search(params[:q])
       if @search.sorts.empty?
-        @search.sorts = ['pictures_main desc', 'distance asc']
+        @search.sorts = ['created_at desc']
       end
 
       if special = params[:special]
@@ -189,4 +196,11 @@ class UsersController < ApplicationController
 
       params[:q].except!(:id_in)
     end
+    
+    def check_if_must_complete_fields    
+      if current_user && !current_user.has_all_fields? 
+        redirect_to complete_fields_url, :alert => _('Debes completar tus datos para poder usar Cellove') and return
+      end
+    end
+    
 end

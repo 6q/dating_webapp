@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  </head>
-  <body>
-    <h1>Welcome to example.com, <%= @recipient.name %></h1>
-    <p>
-      You have successfully signed up to example.com.<br/>
-    </p>
-    <p>
-      To login to the site, just follow this link.
-    </p>
-    <p>Thanks for joining and have a great day!</p>
-  </body>
-</html>
+<%= render 'shared/mail/mail-header' %>
+                                                    <%= _('Recomendación de un Celestino') %>
+                                                </h2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="center" style="padding-top:10px;padding-right:40px;padding-bottom:30px;padding-left:40px;color:#373737;font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:150%;text-align:left">
+                                                <p><%= _('¡Hola!') %></p>
+
+																								<p><%= _("Alguien que te conoce muy bien ¡quiere ser tu Celestin@!") %><br />                               
+																								<%= _("Te ha recomendado en Cellove para ayudarte en tu búsqueda.") %></p>
+                                                <p><%= _("¡Entra en Cellove para saber quien ha sido y ver que dice de ti!") %></p>
+
+
+																								 
+																								
+<%= render 'shared/mail/mail-footer' %>

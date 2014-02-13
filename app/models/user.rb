@@ -224,32 +224,43 @@ class User < ActiveRecord::Base
     :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
     :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to, :lf_relationship,
     :characteristics_attributes, :my_characteristics_attributes, :fake, :banned
+    
+  attr_accessor :is_rec # if user is created by reccomendation
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
   premium_user = lambda {|user| user.has_role?(:premium_user) }
   invited_user = lambda {|user| user.has_role?(:invited_user) }
 
   validates_presence_of :name
-  validates_presence_of :surname, unless: invited_user
+  validates_presence_of :surname, if: regular_user
+  validates_presence_of :city, if: regular_user
+  validates_presence_of :country, if: regular_user
   validates :email, presence: true
   validates :password, presence: true, on: :create
 
   #Validations only performed on regular users, not matchmakers
   validates_presence_of :gender, if: regular_user
-  validates_presence_of :postal_code, :city, if: regular_user
+  validates_presence_of :city, if: regular_user
   validates_presence_of :birth_date_month, :birth_date_day, :birth_date_year, if: regular_user
 
   validates :birth_date, presence: true, minimum_age: true, if: regular_user
 
   geocoded_by :location
   after_validation :geocode
+  
+  def has_all_fields?
+    self.has_role?(:regular_user) && self.city && self.country && self.name
+  end
 
-  def self.new_invitee(invitee)
+  def self.new_invitee(invitee, is_rec=false)
     new do |u|
       u.email = invitee[:email]
       u.name = invitee[:name]
       u.generate_token(:invitation_code)
+      u.password = SecureRandom.urlsafe_base64[(0..5)]
+      u.is_rec = is_rec
       u.add_role :invited_user
+      u.add_role :regular_user
     end
   end
 
@@ -287,10 +298,10 @@ class User < ActiveRecord::Base
     [city, country].compact.join(', ')
   end
 
-  ransacker :years_start, :formatter => proc { |age| age.to_i.years.ago.beginning_of_year + 1.year } do |parent|
+  ransacker :years_start, :formatter => proc { |age| age.to_i.years.ago } do |parent|
     parent.table[:birth_date]
   end
-  ransacker :years_end, :formatter => proc { |age| age.to_i.years.ago.end_of_year - 1.year } do |parent|
+  ransacker :years_end, :formatter => proc { |age| age.to_i.years.ago - 1.year } do |parent|
     parent.table[:birth_date]
   end
 
@@ -446,11 +457,11 @@ class User < ActiveRecord::Base
     like = self.likes.build({})
     like.user_id = user.id
     if like.save
+      send_notification_email(:like, user)
       return true
     else
       return false
     end
-    send_notification_email(:like, user)
   end
 
   def likes?(user)

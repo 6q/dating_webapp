@@ -1,7 +1,7 @@
 #home-highlights {
 
   h1 {
-    font-size:120%;
+    font-size:110%;
     margin:0;
     background:image-url('sprite.png') -431px -76px no-repeat;
     padding-left:45px;
@@ -9,6 +9,7 @@
 
   header {
     margin-bottom:15px;
+    padding-right:20px;
   }
 }
 
@@ -278,7 +279,9 @@ section.direct-search {
       position: relative;
       padding-bottom: 10px;
       margin-top: 0px;
-  
+      #postal_code {
+        display:none;
+      }
       fieldset{
         padding-top: 10px;
       }

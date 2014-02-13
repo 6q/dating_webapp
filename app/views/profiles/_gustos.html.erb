@@ -6,7 +6,7 @@
   <%= user.select :diet, diet_options, {include_blank: _('No quiero decirlo')} %>
 	<hr>
 	<h5><%= _('Hábitos') %></h5>
-  <%= user.select :smoke, smoke_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %> y 
+  <%= user.select :smoke, smoke_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %> <%= _('y') %> 
   <%= user.select :alcohol, alcohol_options, {include_blank: _('No quiero decirlo')} %>
 	<hr>
 	<h5><%= _('Matrimonio') %></h5>
