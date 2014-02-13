@@ -5,7 +5,7 @@
     <%= render "layouts/common_head" %>
     <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
   </head>
-  <body class="user">
+  <body class="user <%= action_name %>">
     <%= render "layouts/changing_background" %>
     <header role="banner" class="clearfix">
       <div class="container">
@@ -66,7 +66,7 @@
   </body>
   <% unless current_user.has_role?(:matchmaker) %>
     <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
-    <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script> 
+    <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
     <script type="text/javascript">
       setTimeout(getNotifications, 5000);
       c_video_chat = <%= current_user.has_role?(:premium_user) ? '1' : '0' %>;
