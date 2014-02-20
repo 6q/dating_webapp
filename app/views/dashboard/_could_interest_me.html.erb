@@ -1,4 +1,5 @@
 <% self.formats = [:html] %>
+<section id="could-interest-me" class="home-users">
 <div class="clearfix list-header">
   <h4 class="pull-left"><%= _('Usuari@s que te pueden gustar') %></h4>
   <div class="pull-right"><%= link_to_previous_page @could_interest_me, '< ' + _('Anterior'), class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %>&nbsp;<%= link_to_next_page @could_interest_me, _('Siguiente') + ' >', class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %> | <%= link_to _("Ver más"), users_path(special: :by_likes) %></div>
@@ -6,3 +7,4 @@
 <ul class="user-list clearfix">
   <%= render @could_interest_me %>
 </ul>
+</section>
