@@ -11,9 +11,9 @@
 
   <%#= render partial: 'new_users_near_me', locals: { radius: 500 } %>
 
-  <section id="could-interest-me" class="home-users"></section>
-  <section id="best-index" class="home-users"></section>
-  <section id="new-users-near-me" class="home-users"></section>
+  <section id="could-interest-me" class="home-users"><%= image_tag('/assets/ajax-loader.gif', :style => 'margin-top: 65px; margin-left: 365px') %></section>
+  <section id="best-index" class="home-users"><%= image_tag('/assets/ajax-loader.gif', :style => 'margin-top: 65px; margin-left: 365px') %></section>
+  <section id="new-users-near-me" class="home-users"><%= image_tag('/assets/ajax-loader.gif', :style => 'margin-top: 65px; margin-left: 365px') %></section>
 
   <section id="last-messages">
     <h4><%= _('Últimas conversaciones') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
