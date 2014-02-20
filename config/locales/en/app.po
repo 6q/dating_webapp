@@ -1097,7 +1097,7 @@ msgid "Legal y conducta"
 msgstr "Legal and behaviour"
 
 msgid "Les he gustado"
-msgstr "I like to them"
+msgstr "They like me"
 
 msgid "Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda."
 msgstr "We are sorry, in this moment there isn´t a result that is connected with your search. Try it later or broad the search."
@@ -1206,6 +1206,9 @@ msgstr "Better Cellove rating"
 
 msgid "Mejora tu índice Cellove"
 msgstr "Improve your Cellove rating"
+
+msgid "Mensaje"
+msgstr "Message"
 
 msgid "Mensaje enviado"
 msgstr "Message sent"
@@ -1391,7 +1394,7 @@ msgid "Opc. de privacidad avanzadas"
 msgstr "Advanced options of privacity"
 
 msgid "Ordenar por..."
-msgstr "Classify by..."
+msgstr "Order by..."
 
 msgid "Orgulloso"
 msgstr "Proud of"
@@ -2010,6 +2013,9 @@ msgstr "User disconnected"
 
 msgid "Usuarios bloqueados"
 msgstr "Blocked users"
+
+msgid "Utilizamos cookies propias y de terceros para mejorar nuestros servicios y su experiencia. Si continua navegando, consideramos que acepta dicho uso. Puede cambiar la configuración u obtener más información en "
+msgstr "Use their own and other cookies to improve our services and experience. If you continue to browse, consider accepting such use. You can change the settings or get more information"
 
 msgid "VIP 3,95€/mes"
 msgstr "VIP 3,95€/month"
@@ -2963,7 +2969,7 @@ msgid "¡Le gustas a alguien! | Cellove.com"
 msgstr "Someone likes you! | Cellove.com"
 
 msgid "¡Les he gustado!"
-msgstr "They liked it!"
+msgstr "They like me!"
 
 msgid "¡Me gusta!"
 msgstr "I like it!"

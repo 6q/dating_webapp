@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-24 19:08+0100\n"
+"POT-Creation-Date: 2014-02-18 10:29+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1182,6 +1182,9 @@ msgstr ""
 msgid "Mejora tu índice Cellove"
 msgstr ""
 
+msgid "Mensaje"
+msgstr ""
+
 msgid "Mensaje enviado"
 msgstr ""
 
@@ -1984,6 +1987,9 @@ msgid "Usuario desconectado"
 msgstr ""
 
 msgid "Usuarios bloqueados"
+msgstr ""
+
+msgid "Utilizamos cookies propias y de terceros para mejorar nuestros servicios y su experiencia. Si continua navegando, consideramos que acepta dicho uso. Puede cambiar la configuración u obtener más información en "
 msgstr ""
 
 msgid "VIP 3,95€/mes"

@@ -4,12 +4,16 @@
   <%= render "quick_search" %>
 
   <hr class="thin">
-  
-  <%= render partial: 'could_interest_me', locals: { radius: 500 } %>
 
-  <%= render partial: 'best_index', locals: { radius: 500 } %>
+  <%#= render partial: 'could_interest_me', locals: { radius: 500 } %>
 
-  <%= render partial: 'new_users_near_me', locals: { radius: 500 } %>
+  <%#= render partial: 'best_index', locals: { radius: 500 } %>
+
+  <%#= render partial: 'new_users_near_me', locals: { radius: 500 } %>
+
+  <section id="could-interest-me" class="home-users"></section>
+  <section id="best-index" class="home-users"></section>
+  <section id="new-users-near-me" class="home-users"></section>
 
   <section id="last-messages">
     <h4><%= _('Últimas conversaciones') %> <%= link_to _('(Ver todos los mensajes)'), conversations_path %></a></h4>
@@ -17,3 +21,15 @@
     <%= _("No hay ninguna conversación.") if current_user.mailbox.conversations.count == 0 %>
   </section>
 </section>
+
+  <script>
+    $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'could_interest_me') %>", function( data ) {
+      $( "#could-interest-me" ).html( data );
+    });
+    $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'best_index') %>", function( data ) {
+      $( "#best-index" ).html( data );
+    });
+    $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'new_users_near_me') %>", function( data ) {
+      $( "#new-users-near-me" ).html( data );
+    });
+  </script>

@@ -177,7 +177,7 @@ class User < ActiveRecord::Base
   has_many :hidden_users, through: :user_hides, source: :hidden_user
 
   # rates that the user has done
-  has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id 
+  has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id
   # ratings that have been received by the user
   has_many :rates, :class_name => "Rate", :foreign_key => :rateable_id, :dependent => :destroy
   # List of people that has given a rating to this user
@@ -208,23 +208,23 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password,
     :remember_me, :surname, :screen_name, :gender, :orientation, :seeking, :marital_status,
     :birth_date, :country, :postal_code, :city,
-    :newsletter_optin, :image_not_uploaded, :terms_and_conditions, 
-    :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house, 
+    :newsletter_optin, :image_not_uploaded, :terms_and_conditions,
+    :physical_desc, :physical_style, :height, :weight, :complexion, :child,  :house,
     :eyes, :hair, :hair_style, :religion_activity, :citizenship, :ethnicity, :language_level,
-    :smoke, :diet, :alcohol, :drugs, :drug_frequency, :religion, :religion_opinion, 
-    :study_level, :language, :job, :salary, :wedding_opinion, :animals, :music_genre, 
-    :cinema_frequency, :cinema_genre, :like_sport, :like_read, :like_cinema, :like_walk, 
+    :smoke, :diet, :alcohol, :drugs, :drug_frequency, :religion, :religion_opinion,
+    :study_level, :language, :job, :salary, :wedding_opinion, :animals, :music_genre,
+    :cinema_frequency, :cinema_genre, :like_sport, :like_read, :like_cinema, :like_walk,
     :like_beach, :like_mountain, :like_quiet, :like_family, :like_friends,
-    :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation, 
+    :description, :hobbies, :party, :music, :cinema, :lf_gender, :lf_orientation,
     :lf_marital_status, :lf_age_from, :lf_age_to, :lf_city, :lf_country, :lf_postal_code,
     :lf_physical_desc, :lf_physical_style, :lf_height_between, :lf_weight_to, :lf_weight_between,
-    :lf_complexion, :lf_child, :lf_smoke, :lf_diet, :lf_alcohol, :lf_drugs, :lf_religion, 
-    :lf_study_level, :lf_language, :lf_job, :lf_salary,:lf_house, :lf_hair, :lf_hair_style, 
-    :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals, 
-    :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain, 
+    :lf_complexion, :lf_child, :lf_smoke, :lf_diet, :lf_alcohol, :lf_drugs, :lf_religion,
+    :lf_study_level, :lf_language, :lf_job, :lf_salary,:lf_house, :lf_hair, :lf_hair_style,
+    :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals,
+    :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain,
     :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to, :lf_relationship,
     :characteristics_attributes, :my_characteristics_attributes, :fake, :banned
-    
+
   attr_accessor :is_rec # if user is created by reccomendation
 
   regular_user = lambda {|user| user.has_role?(:regular_user) }
@@ -247,7 +247,7 @@ class User < ActiveRecord::Base
 
   geocoded_by :location
   after_validation :geocode
-  
+
   def has_all_fields?
     self.has_role?(:regular_user) && self.city && self.country && self.name
   end
@@ -354,7 +354,7 @@ class User < ActiveRecord::Base
       total = 0
       recommendations.each do |rec|
         c = rec.characteristic
-        if c 
+        if c
           total += c.send(characteristic.to_sym)
         end
       end

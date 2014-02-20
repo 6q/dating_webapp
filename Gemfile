@@ -58,6 +58,8 @@ group :development do
   gem 'capistrano-ext'
   gem 'capistrano_colors'
   gem 'capistrano-unicorn', :require => false
+  gem 'rack-mini-profiler'
+  gem 'flamegraph'
 end
 
 group :test, :development do

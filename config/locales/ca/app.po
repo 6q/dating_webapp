@@ -1207,6 +1207,9 @@ msgstr "Millor Índex Cellove"
 msgid "Mejora tu índice Cellove"
 msgstr "Millora el teu Índex Cellove"
 
+msgid "Mensaje"
+msgstr "Missatge"
+
 msgid "Mensaje enviado"
 msgstr "Missatge enviat"
 
@@ -2010,6 +2013,9 @@ msgstr "Ususari desconnectat"
 
 msgid "Usuarios bloqueados"
 msgstr "Usuaris bloquejats"
+
+msgid "Utilizamos cookies propias y de terceros para mejorar nuestros servicios y su experiencia. Si continua navegando, consideramos que acepta dicho uso. Puede cambiar la configuración u obtener más información en "
+msgstr "Utilitzem cookies pròpies i de tercers per millorar els nostres serveis i la seva experiència. Si contínua navegant, considerem que accepta aquest ús. Pot canviar la configuració o obtenir més informació en "
 
 msgid "VIP 3,95€/mes"
 msgstr "VIP 3,95€/mes"

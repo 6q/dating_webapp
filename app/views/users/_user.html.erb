@@ -8,7 +8,7 @@
       <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>
-      <% if user_signed_in? 
+      <% if user_signed_in?
         block_modal_id = '#user-block-' + user.id.to_s %>
         <div class="block <%= (current_user.blocked?(user) || current_user.hidden?(user)) ? "disabled" : "" %> " data-toggle="tooltip" title="<%= _('Bloquear')%>">
           <%= link_to _('x'), block_modal_id, "data-toggle" => "modal" %>
