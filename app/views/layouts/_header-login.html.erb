@@ -1,5 +1,5 @@
 <div id="header-actions-homepage">
-  <div id="lang-switcher" class="header-switcher">   
+  <div id="lang-switcher" class="header-switcher">
     <ul>
       <li class="picker"><a href="#"><%= _('Idioma') %> <i></i></a></li>
       <li class="leaf"><%= link_to _('Castellano'), root_path(locale: :es) %><i></i></li>
@@ -19,5 +19,5 @@
       <%= f.button :submit, _('Login'), :class => 'btn btn-success' %>
     <% end %>
   </fieldset>
-  <p id="user-count"><%= _('Somos %{user_count} usuari@s. Gracias por vuesra confianza.') % {user_count: number_with_delimiter(User.count + 60000)} %></p>
+  <p id="user-count"><%= _('Somos %{user_count} usuari@s. Gracias por vuestra confianza.') % {user_count: number_with_delimiter(User.count + 60000)} %></p>
 </div>

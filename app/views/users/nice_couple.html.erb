@@ -16,7 +16,9 @@
   </header>
   <% @interactions = true %>
   <% @timestamp = true %>
-  
+
+  <%= render "empty-list" %>
+
   <ul class="user-list clearfix">
     <%= render @users %>
   </ul>

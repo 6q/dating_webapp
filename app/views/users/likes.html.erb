@@ -2,7 +2,7 @@
 <section class="list">
   <header>
     <h1 class="pull-left section_title"><%= _('Les he gustado') %></h1>
-    <div class="sort-gustado"> 
+    <div class="sort-gustado">
       <div class="dropdown sort">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= _('Ordenar por...') %></a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -14,7 +14,9 @@
     </div>
     <div class="clearfix"></div>
   </header>
-  
+
+  <%= render "empty-list" %>
+
   <ul class="user-list clearfix">
     <%= render @users %>
   </ul>

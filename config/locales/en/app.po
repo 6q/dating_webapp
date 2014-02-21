@@ -1,47 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: VERSION\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Project-Id-Version: version 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-21 08:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid " | Cellove.com"
-msgstr "| Cellove.com"
-
-msgid "Alguien cree que hace buena pareja contigo"
-msgstr "Somebody thinks that you can make a good couple"
-
-msgid "Bienvenido a Cellove"
-msgstr "Welcome to Cellove"
-
-msgid "Has recibido una recomendación"
-msgstr "You have recieved a recommendation"
-
-msgid "Mi código postal es el"
-msgstr "My postcode is"
-
-msgid "Nuevo mensaje recibido"
-msgstr "A new message recieved"
-
-msgid "Perfil denunciado"
-msgstr "Profile reported"
-
-msgid "y vivo en"
-msgstr "I live in"
-
-msgid "¡Le gustas a alguien!"
-msgstr "Somebody likes you!"
-
-msgid "Población y código postal"
-msgstr "Location and postcode\n"
-
-msgid "Con foto"
-msgstr "With photo"
 
 msgid " a "
 msgstr "in"
@@ -142,7 +111,8 @@ msgstr "47,4 €/ year"
 msgid "<b>¿Quieres ayudar a un familiar, amig@ o ex pareja?</b> No lo dudes y échale una mano. Con Cellove puedes ayudar a quien desees a que encuentre su <b>pareja ideal</b>."
 msgstr "<b> Would you like to help a relative , a friend or a former partner? </b> Don´t hesitate and help them. With Cellove you can help people you want him/her to find his/her <b> ideal partner </b>."
 
-msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\n\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\n\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\n\n    <p><h3>‘Sé activo’</h3>\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\n\n    <p><h3>‘Muéstrate tal como eres’</h3>\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\n    <p><h3>\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
+#, fuzzy
+msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
 msgstr "<p> We are sure that Cellove can make you live new experiences, meet that person, the one to have a special connection, and we want you to know that this is like the life, you need to be there at a particular time and make it possible =) </p>\\n\\n\\n<p> Our advices to use Cellove are the following: </p>\\n\\n\\n<p> <h3> 'Give the maximum information about you' </h3>\\nFill in the maximum information of your profile, it´s your presentation and the door to get to you </p>\\n\\n\\n<p> <h3> 'Be active' </h3>\\nMove and be dynamic inside the page, send messages, purpose conversations with the others, make the others know about you and answer to your requests </p>\\n\\n<p> <h3> 'Make the others know what you look like' </h3>\\nBe yourself in the relationships like in the real life, or even better! Be accessible and ready to open doors.</p>\\n<p> <h3> 'Improve your Cellove rating' </h3>\\nUse the big tool that are your Celestines. We all have close friends, people ready to help and talk about you to the other users, and with some other details, this will improve your Cellove rating </p>\\n<p> <h3>\\n'And use us like your new way to refill your life with new and interesting people, and share good time with them' </h3> </p>"
 
 msgid "A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®."
@@ -196,6 +166,10 @@ msgstr "Upgrade to premium your account  to enjoy all Cellove functions"
 msgid "Actualización a usuari@ premium se ha realizado correctamente"
 msgstr "The premium user updating has been correctly done"
 
+#, fuzzy
+msgid "Actualmente no hay ningún perfil en este apartado"
+msgstr "You haven’t yet confirmed a Celestine."
+
 msgid "Actualmente no tienes ningún Celestin@ confirmado."
 msgstr "You haven’t yet confirmed a Celestine."
 
@@ -233,7 +207,10 @@ msgid "Alguien muy especial te ha recomendado para que uses Cellove.com, y pueda
 msgstr "Someone special recommended you for you to use Cellove.com and give wings to the love."
 
 msgid "Alguien que te conoce muy bien cree que en Cellove puedes encontrar personas afines a ti y ¡quiere ser tu Celestin@!"
-msgstr "Someone who knows you well , feels like in Cellove you may find people you can relate to and wants to be your Celestine!\n\n\n"
+msgstr ""
+"Someone who knows you well , feels like in Cellove you may find people you can relate to and wants to be your Celestine!\n"
+"\n"
+"\n"
 
 msgid "Alguien que te conoce muy bien ¡quiere ser tu Celestin@!"
 msgstr "Someone who knows you well wants to be your Celestine!\n"
@@ -587,7 +564,9 @@ msgid "Cuando un celestino me recomiende"
 msgstr "When a Celestine recommends me"
 
 msgid "Cuanto más elevado sea tu <strong>Índice Cellove</strong>, tus probabilidades de encontrar exactamente lo que buscas mejoran. Cellove te proporciona continuamente esos perfiles que son más compatibles para ti y los perfiles que tengan más %{link}. Por eso, si tu consigues más %{link}, significa que Cellove te promocionará mejor y te ayudará a encontrar a esa persona especial con más efectividad."
-msgstr "The higher your <strong> Cellove rating</strong>is, the more probabilities to find what you are looking for.\nCellove is continuously providing you that profiles that have the requirements you chose %{link} . For this reason if you get more %{link}, means that Cellove will promote better and help you to find your special partner with more efficiently"
+msgstr ""
+"The higher your <strong> Cellove rating</strong>is, the more probabilities to find what you are looking for.\n"
+"Cellove is continuously providing you that profiles that have the requirements you chose %{link} . For this reason if you get more %{link}, means that Cellove will promote better and help you to find your special partner with more efficiently"
 
 msgid "Cuenta con un sistema que gradúa la popularidad y fiabilidad de los usuari@s, con el objetivo de evitar perfiles que no cumplan con tus requisitos y perspectivas, presentarte solo aquellos que si lo hacen y puedas tener afinidades importantes."
 msgstr "It have a system that controls the popularity and the fiability of the users, with the objective to avoid profiles that don´t satisfy with your requirements,only presenting you that ones that they do and share important related with you"
@@ -697,10 +676,12 @@ msgstr "The marriage is something marvelous"
 msgid "El uso de Cellove® puede incluir ciertas comunicaciones de Cellove®, tales como anuncios de servicio, mensajes administrativos y boletines informativos. Usted entiende que estas comunicaciones se consideran parte de la utilización de Cellove®. Como parte de nuestra política para ofrecerle total privacidad, ponemos a su disposición la opción de optar por dejar de recibir boletines de noticias. Sin embargo, el usuario no podrá optar por dejar de recibir anuncios de servicio y/o mensajes administrativos, en tanto que no se dé de baja según lo establecido en el apartado H. Estas comunicaciones comerciales serán visibles para todos los usuarios de Cellove®."
 msgstr "Using Cellove ®, may include certain communications from Cellove ®, such as service announcements, administrative messages and newsletters. You understand that these communications are considered part of using Cellove ®. As part of our policy to provide you total privacy, we offer the option not to receive newsletters. However, you may not have the option to avoid  receiving service announcements and / or administrative messages while not withdraws as provided in paragraph H. These commercial communication have to be visible to all Cellove ® users."
 
-msgid "El uso de este servicio está libre de pago y permite el uso ilimitado de mensajes privados, dos (2) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, con publicidad en la navegación. El usuario entiende y acepta de forma expresa que con el fin de prestar cada vez mejor servicio a sus usuarios, Cellove® cada tanto tiempo podrá modificar y/o adaptar los servicios que incorpora este Pase, en cuyo caso informará a los usuarios de aquellas condiciones y/o requerimientos que hayan sido introducidos, que deberán ser aceptados por los Usuarios a fin de seguir haciendo uso del servicio."
+#, fuzzy
+msgid "El uso de este servicio está libre de pago y permite el uso de cinco (5) mensajes privados al día, dos (2) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, con publicidad en la navegación. El usuario entiende y acepta de forma expresa que con el fin de prestar cada vez mejor servicio a sus usuarios, Cellove® cada tanto tiempo podrá modificar y/o adaptar los servicios que incorpora este Pase, en cuyo caso informará a los usuarios de aquellas condiciones y/o requerimientos que hayan sido introducidos, que deberán ser aceptados por los Usuarios a fin de seguir haciendo uso del servicio."
 msgstr "Using this payment service is free and allows unlimited use of private messages, two (2) Chats simultaneous access twenty-four (24) hours and www.cellove.com unlimited browsing with navigation advertising. You understand and expressly agree that in order to provide a better service to its users, Cellove ® will often modify and / or adapt services incorporating this pass, in which case users will inform those conditions and / or requirements that have been introduced, which should be accepted by the users in order to continue using the service."
 
-msgid "El uso de este servicio permite el uso ilimitado de mensajes privados y de Chats simultáneos, acceso las veinticuatro (24) horas y navegación ilimitada y navegación oculta, previa activación, en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase VIP es de cuarenta y siete euros con cuarenta céntimos (47,4 €) al año (IVA incluido)."
+#, fuzzy
+msgid "El uso de este servicio permite el uso ilimitado de mensajes privados y de Chats simultáneos, acceso las veinticuatro (24) horas y navegación ilimitada y navegación oculta, previa activación, en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase VIP es de cuatro euros con noventa y nueve (4,99 €) al mes (IVA incluido)."
 msgstr "Using this service allows unlimited use of private messages and Chats simultaneous access twenty-four (24) hours and unlimited browsing and in private searchings upon activation, in www.cellove.com, ad in navigation. The price applicable to the contract the VIP Pass is forty-seven euros and forty cents (€ 47.4) per year (including IVA)."
 
 msgid "El uso de servicios de pago habilitados por Cellove® son los siguientes"
@@ -708,6 +689,9 @@ msgstr "Using the payment services enabled by Cellove®  are the following ones"
 
 msgid "El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de los Términos y Condiciones y esta política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas."
 msgstr "You understand and expressly agree that your registration in www.cellove.com involves to express acceptance of the terms and conditions and this privacy policy and data protection, and the inclusion of your personal data described in the file,  CELLOVE SOCIAL NETWORK, SL which will be managed by traditional means or by electronic means in the conditions indicated."
+
+msgid "El usuario que haya ejercitado el derecho de desistimiento no deberá indemnizar a CELLOVE SOCIAL NETWORK, S.L. por el uso del servicio realiazado antes del ejercicio del citado derecho."
+msgstr ""
 
 msgid "El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L., es la prestación de los servicios de www.cellove.com, descritos con detalle en los Términos y Condiciones. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente."
 msgstr "The registered user understands and expressly agrees that the purpose of the personal information you provide voluntarily to CELLOVE SOCIAL NETWORK, SL, is the benefit of services of www.cellove.com, described in detail in the terms and conditions . The receiver of the personal information of all registered users are CELLOVE SOCIAL NETWORK, SL, and other users of www.cellove.com. The personal data of registered users will be saved in the CELLOVE SOCIAL NETWORK, SL file, in accordance with current legislation."
@@ -781,7 +765,8 @@ msgstr "English"
 msgid "Entra en Cellove.com"
 msgstr "Enter in Cellove.com"
 
-msgid "Entrar<br>\n                                            directamente<br>\n                                            a mi perfil"
+#, fuzzy
+msgid "Entrar<br>\\n                                            directamente<br>\\n                                            a mi perfil"
 msgstr "Enter <br>\\nDirectly <br>\\nTo my profile"
 
 msgid "Enviados"
@@ -830,7 +815,15 @@ msgid "Espontáneo"
 msgstr "Spontaneous"
 
 msgid "Esta es tu contraseña para Cellove. Puedes cambiarla des de 'tu perfil' una vez completes tu registro"
-msgstr "This is your Cellove password. You can change it from “your profile” section once your registration is complete.\n\n\n\n\n\n\n\n"
+msgstr ""
+"This is your Cellove password. You can change it from “your profile” section once your registration is complete.\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
 
 msgid "Esta función es completamente Gratis y siempre lo será."
 msgstr "This function is completely free and always will"
@@ -1066,14 +1059,15 @@ msgstr "Italian"
 msgid "LEGISLACIÓN APLICABLE Y JURISDICCIÓN"
 msgstr "Law and jurisdiction"
 
-msgid "La baja de un usuario VIP no interrumpe el servicio anual, este queda activo hasta su vencimiento, sin que quepa por parte de los usuarios reclamar la recuperación de los importes ya abonados o parte proporcional de los mismos, salvo en caso de incumplimiento debidamente probado, e injustificado, de los servicios que corresponde prestar a Cellove®, según se describen en estos Términos y Condiciones."
+#, fuzzy
+msgid "La baja de un usuario VIP no interrumpe el servicio mensual, este queda activo hasta su vencimiento, sin que quepa por parte de los usuarios reclamar la recuperación de los importes ya abonados o parte proporcional de los mismos, salvo en caso de incumplimiento debidamente probado, e injustificado, de los servicios que corresponde prestar a Cellove®, según se describen en estos Términos y Condiciones."
 msgstr "If a VIP user gives up Cellove, this doesn´t interrupt the annual service, it remains active until maturity, avoiding the users claim the recovery of amounts already paid or proportionate part , except in case of failure properly tested, and unjustified corresponding services lend by Cellove ®, as described in these terms and conditions."
 
 msgid "La compra se realizará mediante plataforma de pago vía tarjeta de crédito, PAYPAL o transferencia bancaria o cualquier otro sistema que Cellove® implante a tal efecto."
 msgstr "The payment will be done by credit card, PAYPAL or bank transfer or another system that  Cellove® implant."
 
-msgid "La contratación es anual y sin posibilidad de retorno del importe pagado si durante el periodo de contratación el Usuario VIP decide dejar de usar el servicio, este seguirá activo hasta la fecha de vencimiento. El pago es anual y el sistema de Cellove® pondrá en aviso al Usuario VIP para su renovación antes de su vencimiento."
-msgstr "The contract is annual and no return of the amount paid if during the period of hiring the VIP User decides to stop using the service, this will remain active until the expiration date. The payment is annual and Cellove ® system will alert the user VIP for renewal before expiration."
+msgid "La contratación es mensual y sin posibilidad de retorno del importe pagado si durante el periodo de contratación el Usuario VIP decide dejar de usar el servicio, este seguirá activo hasta la fecha de vencimiento. El pago es mensual y el cliente que desee dejar de disfrutar de los servicios VIP establecidos y pagar la cuota, podrá darse de baja a través del envío de un correo electrónico a cellove@cellove.com con expresión de su petición de baja, sin más formalidades que expresar de forma clara su voluntad de darse de baja y su identificación. A falta de la comunicación del Usuario VIP de su baja, el Usuario VIP entiende y acepta que su Pase VIP se mantendrá activo y sus pases mensuales se renovarán automáticamente, en tanto que no haya sido dado de baja."
+msgstr ""
 
 msgid "La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos."
 msgstr "The purpose of the file contains, through the services provided by www.cellove.com, facilitate and promote interpersonal relationships between users, including sending by CELLOVE SOCIAL NETWORK, SL, its users, data profiles by other users, recommendations with data from other users, and in general, communications to its users including data from other users in order to facilitate and promote relationships between them."
@@ -1098,6 +1092,9 @@ msgstr "Legal and behaviour"
 
 msgid "Les he gustado"
 msgstr "They like me"
+
+msgid "Lo estipulado en los dos párrafos anteriores es sin perjuicio del derecho de desistimiento que asiste al usuario para dejar sin efecto el contrato, derecho que el usuario podrá ejercitar notificándoselo así a CELLOVE SOCIAL NETWORK, S.L. en un plazo no superior a siete (7) días hábiles, a contar a partir de la celebración del contrato. El ejercicio por el usuario de este derecho podrá efectuarse sin necesidad de justificar su decisión y sin penalización a aquel."
+msgstr ""
 
 msgid "Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda."
 msgstr "We are sorry, in this moment there isn´t a result that is connected with your search. Try it later or broad the search."
@@ -1410,6 +1407,12 @@ msgstr "Keyword"
 
 msgid "Para denunciar por ilegalidad o violación de los derechos de terceros un contenido transmitido o publicado al utilizar los Servicios de Cellove®, o desea protestar contra cualquier bloqueo o eliminación del contenido de Cellove® póngase en contacto con el departamento legal de Cellove®, en cellove@cellove.es."
 msgstr "To report illegality or violation of other user rights transmitted or posted content using Cellove ® Services, or want to protest any Cellove ®  blocking or removal of content, contact legal department Cellove ®, in cellove @ cellove.es."
+
+msgid "Para ejercitar el derecho de desistimiento el usuario remitirá a CELLOVE SOCIAL NETWORK, S.L. un documento manifestando el ejercicio de dicho derecho, que podrá enviar a la dirección de correo postal o electrónico indicadas en las presentes condiciones, a efectos de notificaciones."
+msgstr ""
+
+msgid "Para el ejercicio del derecho de desistimiento, CELLOVE SOCIAL NETWORK, S.L. le enviará al usuario un documento de desistimiento, identificado como tal, con los datos de identificación del contrato y de los contratantes, así como expresión del nombre y dirección de la persona a quien el usuario deberá enviarlo, en el caso de querer ejercitar dicho derecho."
+msgstr ""
 
 msgid "Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo."
 msgstr "For using all Cellove potential, you have to confirm your email account."
@@ -1801,7 +1804,8 @@ msgstr "Discerning singles"
 msgid "Somos %{count} usuari@s. ¡Gracias por vuestra confianza!"
 msgstr "We are %{count} users.Thanks to your confidence!"
 
-msgid "Somos %{user_count} usuari@s. Gracias por vuesra confianza."
+#, fuzzy
+msgid "Somos %{user_count} usuari@s. Gracias por vuestra confianza."
 msgstr "We are %{user_count} users. Thanks to your confidence."
 
 msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad."
@@ -1989,6 +1993,9 @@ msgstr "A friend of mine was my Celestine and i tried, i met Carlos, after being
 
 msgid "Una persona muy especial y cercana a tí, quiere que le hagas de Celestino y le recomiendes en Cellove.com para que pueda conocer a su amor verdadero."
 msgstr "A special and nearby person , wants you to be his/her Celestine and that you recommend him/her in Cellove.com for being able to find his/hers truely love."
+
+msgid "Una vez ejercitado el derecho de desistimiento de conformidad con lo establecido en estas condiciones y en la legislación vigente, CELLOVE SOCIAL NETWORK, S.L. le devolverá al usuario el importe del pago realizado por el servicio contratado y objeto de desistimiento, sin retención de gastos y sin repercutir gastos al usuario, realizándose la devolución lo antes posible y, en todo caso, en un plazo máximo de 30 días a contar desde el desistimiento."
+msgstr ""
 
 msgid "Usted entiende y acepta que el uso del servicio de Cellove® se realiza bajo su propio riesgo. Cellove® NO garantiza bajo ningún concepto la seguridad de sus usuarios en los casos de encuentros personales y/o virtuales, y recomienda adoptar las medidas de seguridad habituales en este tipo de encuentros. Cellove® presta el servicio de forma TAL CUAL y, según disponibilidad. CELLOVE SOCIAL NETWORK, S.L. no garantiza que el servicio no sea  interrumpido, oportuno, seguro o libre de virus. El uso de cualquier material descargado u obtenido a través de los servicios de Cellove® se realiza por su propia cuenta y riesgo y usted será el único responsable de cualquier daño a su sistema informático, teléfono móvil, dispositivo inalámbrico o pérdida o deterioro de datos. Ningún consejo o información, oral o escrita, obtenida por usted de Cellove®, o sus empleados o representantes será una garantía fuera de lo expresamente contenido en estos términos y condiciones. Usted como Usuario, acepta que CELLOVE SOCIAL NETWORK, S.L., en ningún caso, se hace responsable por los daños accidentales, indirectos, especiales, punitivos, o daño alguno, como pueden ser los daños por difamación, daños morales o violación de su intimidad, o de otro tipo de pérdida o daños, derivados desde o causados por su uso o imposibilidad de usar el servicio de Cellove®. CELLOVE SOCIAL NETWORK, S.L. no responderá en caso de daños y perjuicios ocasionados, por negligencia en el uso y custodia de la clave de acceso o mala gestión de la misma por su usuario titular incluyendo los daños por un uso no autorizado por terceros. CELLOVE SOCIAL NETWORK, S.L. no responderá por casos de fuerza mayor. CELLOVE SOCIAL NETWORK, S.L. se exonera de toda responsabilidad por la información y contenidos que los Usuarios incorporen a Cellove®, y por la utilización que de los mismos realicen otros Usuarios o terceros ajenos a la red de Cellove®."
 msgstr "You understand and agree that the use of Cellove ® service is done at your own risk. Cellove ® NOT under any circumstances guarantee the safety of its members in cases of personal meetings and / or virtual , and should take the usual safety measures such meetings . Cellove ® provides the service for AS IS and subject to availability. CELLOVE SOCIAL NETWORK , SL not guarantee that the service will be uninterrupted , timely, secure or free from viruses. The use of any material downloaded or otherwise obtained through Cellove ® services is at your own risk and you will be solely responsible for any damage to your computer system, mobile telephone , wireless device or data loss or damage . No advice or information , oral or written, obtained by you from Cellove ® , or its employees or representatives will be a guarantee other than as expressly contained in these terms and conditions. You, as a user , you agree that CELLOVE SOCIAL NETWORK, SL, in any event , be responsible for incidental, indirect, special , punitive, or damage , such as libel damages , moral damages or violation of their privacy, or other loss or damage resulting from or arising out of your use or inability to use the Cellove ® service . CELLOVE SOCIAL NETWORK , SL isn´t responsible in case of damages caused by negligence in the use and custody of the password or mismanagement by its user the same holder including damages for unauthorized use by other ones . CELLOVE SOCIAL NETWORK , SL isn´t responsible for force majeure . CELLOVE SOCIAL NETWORK , SL disclaims all responsability for information and content that users join Cellove ® , and the use made ​​thereof other users or others outside Cellove ® network ."
@@ -3151,3 +3158,38 @@ msgstr "Opera"
 msgid "€/año"
 msgstr "€/year"
 
+#~ msgid " | Cellove.com"
+#~ msgstr "| Cellove.com"
+
+#~ msgid "Alguien cree que hace buena pareja contigo"
+#~ msgstr "Somebody thinks that you can make a good couple"
+
+#~ msgid "Bienvenido a Cellove"
+#~ msgstr "Welcome to Cellove"
+
+#~ msgid "Con foto"
+#~ msgstr "With photo"
+
+#~ msgid "Has recibido una recomendación"
+#~ msgstr "You have recieved a recommendation"
+
+#~ msgid "La contratación es anual y sin posibilidad de retorno del importe pagado si durante el periodo de contratación el Usuario VIP decide dejar de usar el servicio, este seguirá activo hasta la fecha de vencimiento. El pago es anual y el sistema de Cellove® pondrá en aviso al Usuario VIP para su renovación antes de su vencimiento."
+#~ msgstr "The contract is annual and no return of the amount paid if during the period of hiring the VIP User decides to stop using the service, this will remain active until the expiration date. The payment is annual and Cellove ® system will alert the user VIP for renewal before expiration."
+
+#~ msgid "Mi código postal es el"
+#~ msgstr "My postcode is"
+
+#~ msgid "Nuevo mensaje recibido"
+#~ msgstr "A new message recieved"
+
+#~ msgid "Perfil denunciado"
+#~ msgstr "Profile reported"
+
+#~ msgid "Población y código postal"
+#~ msgstr "Location and postcode\n"
+
+#~ msgid "y vivo en"
+#~ msgstr "I live in"
+
+#~ msgid "¡Le gustas a alguien!"
+#~ msgstr "Somebody likes you!"

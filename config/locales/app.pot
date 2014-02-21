@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-18 10:29+0100\n"
+"POT-Creation-Date: 2014-02-21 08:47+0100\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -169,6 +169,9 @@ msgid "Actualiza tu cuenta a premium ahora para poder disfrutar de todas las fun
 msgstr ""
 
 msgid "Actualización a usuari@ premium se ha realizado correctamente"
+msgstr ""
+
+msgid "Actualmente no hay ningún perfil en este apartado"
 msgstr ""
 
 msgid "Actualmente no tienes ningún Celestin@ confirmado."
@@ -672,16 +675,19 @@ msgstr ""
 msgid "El uso de Cellove® puede incluir ciertas comunicaciones de Cellove®, tales como anuncios de servicio, mensajes administrativos y boletines informativos. Usted entiende que estas comunicaciones se consideran parte de la utilización de Cellove®. Como parte de nuestra política para ofrecerle total privacidad, ponemos a su disposición la opción de optar por dejar de recibir boletines de noticias. Sin embargo, el usuario no podrá optar por dejar de recibir anuncios de servicio y/o mensajes administrativos, en tanto que no se dé de baja según lo establecido en el apartado H. Estas comunicaciones comerciales serán visibles para todos los usuarios de Cellove®."
 msgstr ""
 
-msgid "El uso de este servicio está libre de pago y permite el uso ilimitado de mensajes privados, dos (2) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, con publicidad en la navegación. El usuario entiende y acepta de forma expresa que con el fin de prestar cada vez mejor servicio a sus usuarios, Cellove® cada tanto tiempo podrá modificar y/o adaptar los servicios que incorpora este Pase, en cuyo caso informará a los usuarios de aquellas condiciones y/o requerimientos que hayan sido introducidos, que deberán ser aceptados por los Usuarios a fin de seguir haciendo uso del servicio."
+msgid "El uso de este servicio está libre de pago y permite el uso de cinco (5) mensajes privados al día, dos (2) Chats simultáneos, acceso veinticuatro (24) horas y navegación ilimitada en www.cellove.com, con publicidad en la navegación. El usuario entiende y acepta de forma expresa que con el fin de prestar cada vez mejor servicio a sus usuarios, Cellove® cada tanto tiempo podrá modificar y/o adaptar los servicios que incorpora este Pase, en cuyo caso informará a los usuarios de aquellas condiciones y/o requerimientos que hayan sido introducidos, que deberán ser aceptados por los Usuarios a fin de seguir haciendo uso del servicio."
 msgstr ""
 
-msgid "El uso de este servicio permite el uso ilimitado de mensajes privados y de Chats simultáneos, acceso las veinticuatro (24) horas y navegación ilimitada y navegación oculta, previa activación, en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase VIP es de cuarenta y siete euros con cuarenta céntimos (47,4 €) al año (IVA incluido)."
+msgid "El uso de este servicio permite el uso ilimitado de mensajes privados y de Chats simultáneos, acceso las veinticuatro (24) horas y navegación ilimitada y navegación oculta, previa activación, en www.cellove.com, sin publicidad en la navegación. El precio aplicable al contratar el Pase VIP es de cuatro euros con noventa y nueve (4,99 €) al mes (IVA incluido)."
 msgstr ""
 
 msgid "El uso de servicios de pago habilitados por Cellove® son los siguientes"
 msgstr ""
 
 msgid "El usuario comprende y acepta de forma expresa que su registro en www.cellove.com comporta su aceptación expresa de los Términos y Condiciones y esta política de privacidad y protección de datos, y de la inclusión de sus datos personales en el fichero descrito, que podrá CELLOVE SOCIAL NETWORK, S.L. gestionar por medios tradicionales o por medios electrónicos en los condiciones indicadas."
+msgstr ""
+
+msgid "El usuario que haya ejercitado el derecho de desistimiento no deberá indemnizar a CELLOVE SOCIAL NETWORK, S.L. por el uso del servicio realiazado antes del ejercicio del citado derecho."
 msgstr ""
 
 msgid "El usuario registrado comprende y acepta de forma expresa que la finalidad de los datos personales que ha suministrado de forma voluntaria a CELLOVE SOCIAL NETWORK, S.L., es la prestación de los servicios de www.cellove.com, descritos con detalle en los Términos y Condiciones. Los destinatarios de los datos personales de todo usuario registrado son CELLOVE SOCIAL NETWORK, S.L., y los otros usuarios de www.cellove.com. Los datos personales de los usuarios registrados quedarán incorporados al fichero de CELLOVE SOCIAL NETWORK, S.L. de conformidad con la legislación vigente."
@@ -1041,13 +1047,13 @@ msgstr ""
 msgid "LEGISLACIÓN APLICABLE Y JURISDICCIÓN"
 msgstr ""
 
-msgid "La baja de un usuario VIP no interrumpe el servicio anual, este queda activo hasta su vencimiento, sin que quepa por parte de los usuarios reclamar la recuperación de los importes ya abonados o parte proporcional de los mismos, salvo en caso de incumplimiento debidamente probado, e injustificado, de los servicios que corresponde prestar a Cellove®, según se describen en estos Términos y Condiciones."
+msgid "La baja de un usuario VIP no interrumpe el servicio mensual, este queda activo hasta su vencimiento, sin que quepa por parte de los usuarios reclamar la recuperación de los importes ya abonados o parte proporcional de los mismos, salvo en caso de incumplimiento debidamente probado, e injustificado, de los servicios que corresponde prestar a Cellove®, según se describen en estos Términos y Condiciones."
 msgstr ""
 
 msgid "La compra se realizará mediante plataforma de pago vía tarjeta de crédito, PAYPAL o transferencia bancaria o cualquier otro sistema que Cellove® implante a tal efecto."
 msgstr ""
 
-msgid "La contratación es anual y sin posibilidad de retorno del importe pagado si durante el periodo de contratación el Usuario VIP decide dejar de usar el servicio, este seguirá activo hasta la fecha de vencimiento. El pago es anual y el sistema de Cellove® pondrá en aviso al Usuario VIP para su renovación antes de su vencimiento."
+msgid "La contratación es mensual y sin posibilidad de retorno del importe pagado si durante el periodo de contratación el Usuario VIP decide dejar de usar el servicio, este seguirá activo hasta la fecha de vencimiento. El pago es mensual y el cliente que desee dejar de disfrutar de los servicios VIP establecidos y pagar la cuota, podrá darse de baja a través del envío de un correo electrónico a cellove@cellove.com con expresión de su petición de baja, sin más formalidades que expresar de forma clara su voluntad de darse de baja y su identificación. A falta de la comunicación del Usuario VIP de su baja, el Usuario VIP entiende y acepta que su Pase VIP se mantendrá activo y sus pases mensuales se renovarán automáticamente, en tanto que no haya sido dado de baja."
 msgstr ""
 
 msgid "La finalidad del fichero comprende, a través de los servicios prestados por www.cellove.com, facilitar y promover las relaciones interpersonales entre sus usuarios, incluyendo el envío por parte de CELLOVE SOCIAL NETWORK, S.L., a sus usuarios, de perfiles con datos de otros usuarios, recomendaciones con datos de otros usuarios, y, en general, comunicaciones a sus usuarios incluyendo datos de otros usuarios con el fin de facilitar y promover las relaciones interpersonales entre aquellos."
@@ -1072,6 +1078,9 @@ msgid "Legal y conducta"
 msgstr ""
 
 msgid "Les he gustado"
+msgstr ""
+
+msgid "Lo estipulado en los dos párrafos anteriores es sin perjuicio del derecho de desistimiento que asiste al usuario para dejar sin efecto el contrato, derecho que el usuario podrá ejercitar notificándoselo así a CELLOVE SOCIAL NETWORK, S.L. en un plazo no superior a siete (7) días hábiles, a contar a partir de la celebración del contrato. El ejercicio por el usuario de este derecho podrá efectuarse sin necesidad de justificar su decisión y sin penalización a aquel."
 msgstr ""
 
 msgid "Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda."
@@ -1384,6 +1393,12 @@ msgid "Palabra clave"
 msgstr ""
 
 msgid "Para denunciar por ilegalidad o violación de los derechos de terceros un contenido transmitido o publicado al utilizar los Servicios de Cellove®, o desea protestar contra cualquier bloqueo o eliminación del contenido de Cellove® póngase en contacto con el departamento legal de Cellove®, en cellove@cellove.es."
+msgstr ""
+
+msgid "Para ejercitar el derecho de desistimiento el usuario remitirá a CELLOVE SOCIAL NETWORK, S.L. un documento manifestando el ejercicio de dicho derecho, que podrá enviar a la dirección de correo postal o electrónico indicadas en las presentes condiciones, a efectos de notificaciones."
+msgstr ""
+
+msgid "Para el ejercicio del derecho de desistimiento, CELLOVE SOCIAL NETWORK, S.L. le enviará al usuario un documento de desistimiento, identificado como tal, con los datos de identificación del contrato y de los contratantes, así como expresión del nombre y dirección de la persona a quien el usuario deberá enviarlo, en el caso de querer ejercitar dicho derecho."
 msgstr ""
 
 msgid "Para poder usar todo el potencial de Cellove, debes confirmar tu cuenta de correo."
@@ -1776,7 +1791,7 @@ msgstr ""
 msgid "Somos %{count} usuari@s. ¡Gracias por vuestra confianza!"
 msgstr ""
 
-msgid "Somos %{user_count} usuari@s. Gracias por vuesra confianza."
+msgid "Somos %{user_count} usuari@s. Gracias por vuestra confianza."
 msgstr ""
 
 msgid "Somos un equipo joven y con vocación de dar lo mejor de nosotr@s para facilitar y mejorar las relaciones personales de amor y amistad."
@@ -1963,6 +1978,9 @@ msgid "Una amiga me hizo de Celestina y lo probé, conocí a Carlos, después de
 msgstr ""
 
 msgid "Una persona muy especial y cercana a tí, quiere que le hagas de Celestino y le recomiendes en Cellove.com para que pueda conocer a su amor verdadero."
+msgstr ""
+
+msgid "Una vez ejercitado el derecho de desistimiento de conformidad con lo establecido en estas condiciones y en la legislación vigente, CELLOVE SOCIAL NETWORK, S.L. le devolverá al usuario el importe del pago realizado por el servicio contratado y objeto de desistimiento, sin retención de gastos y sin repercutir gastos al usuario, realizándose la devolución lo antes posible y, en todo caso, en un plazo máximo de 30 días a contar desde el desistimiento."
 msgstr ""
 
 msgid "Usted entiende y acepta que el uso del servicio de Cellove® se realiza bajo su propio riesgo. Cellove® NO garantiza bajo ningún concepto la seguridad de sus usuarios en los casos de encuentros personales y/o virtuales, y recomienda adoptar las medidas de seguridad habituales en este tipo de encuentros. Cellove® presta el servicio de forma TAL CUAL y, según disponibilidad. CELLOVE SOCIAL NETWORK, S.L. no garantiza que el servicio no sea  interrumpido, oportuno, seguro o libre de virus. El uso de cualquier material descargado u obtenido a través de los servicios de Cellove® se realiza por su propia cuenta y riesgo y usted será el único responsable de cualquier daño a su sistema informático, teléfono móvil, dispositivo inalámbrico o pérdida o deterioro de datos. Ningún consejo o información, oral o escrita, obtenida por usted de Cellove®, o sus empleados o representantes será una garantía fuera de lo expresamente contenido en estos términos y condiciones. Usted como Usuario, acepta que CELLOVE SOCIAL NETWORK, S.L., en ningún caso, se hace responsable por los daños accidentales, indirectos, especiales, punitivos, o daño alguno, como pueden ser los daños por difamación, daños morales o violación de su intimidad, o de otro tipo de pérdida o daños, derivados desde o causados por su uso o imposibilidad de usar el servicio de Cellove®. CELLOVE SOCIAL NETWORK, S.L. no responderá en caso de daños y perjuicios ocasionados, por negligencia en el uso y custodia de la clave de acceso o mala gestión de la misma por su usuario titular incluyendo los daños por un uso no autorizado por terceros. CELLOVE SOCIAL NETWORK, S.L. no responderá por casos de fuerza mayor. CELLOVE SOCIAL NETWORK, S.L. se exonera de toda responsabilidad por la información y contenidos que los Usuarios incorporen a Cellove®, y por la utilización que de los mismos realicen otros Usuarios o terceros ajenos a la red de Cellove®."
