@@ -11,8 +11,8 @@
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
-
-					<a <%= "href=#{@user.profile_picture.image.jpg.url} class=grouped_elements " if @user.profile_picture %> rel="group1">
+					<% image_url = current_user.profile_picture && @user.profile_picture ? @user.profile_picture.image.jpg.url : images_profile_path %>
+					<a <%= "href=#{image_url} class=grouped_elements " if @user.profile_picture %> rel="group1">
 						<%= profile_pic(@user) %>
 					</a>
 				</div>
@@ -31,7 +31,7 @@
 							<% end %>
 							<% if @user.lf_gender.present? %>
 								<%= _('Busca %{gender}') % {:gender => _(User::GENDER[@user.lf_gender])} %>
-								<% if @user.lf_age_from.present? and @user.lf_age_to.present? %>                
+								<% if @user.lf_age_from.present? and @user.lf_age_to.present? %>
 									<%= _('de entre %{age_from} y %{age_to} años') % {:age_from => @user.lf_age_from, :age_to => @user.lf_age_to} %>
 								<% end %>
 								<% if @user.lf_relationship.present? %>
@@ -50,7 +50,8 @@
 						<div class="jcarousel">
 							<ul>
 								<% @user.pictures.each do |p| %>
-									<li><a class="grouped_elements" rel="user-pictures" href="<%= p.image.jpg.url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
+									<% image_url = current_user.profile_picture ? p.image.jpg.url : images_profile_path %>
+									<li><a class="grouped_elements" rel="user-pictures" href="<%= image_url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
 								<% end %>
 							</ul>
 						</div>
@@ -70,7 +71,7 @@
 	<% end %>
 
 <article class="basic-tabs tabs-container">
-		
+
 		<ul class="nav nav-tabs" id="basic-tabs">
   		<li class="active"><a href="#desc"><%= _('Descripción') %></a></li>
 		  <li><a href="#dicen"><%= _('Sus Celestin@s') %></a></li>
@@ -121,7 +122,7 @@
 		  					</div>
 		  				<% end %>
 		  			</div>
-		  					  
+
 		  		</div>
 				</div>
 			</div>
@@ -130,7 +131,7 @@
 
 
 	<article class="profile-tabs tabs-container">
-		
+
 		<ul class="nav nav-tabs" id="myTab">
   		<li class="active"><a href="#como"><%= _('¿Cómo es?') %></a></li>
 		  <li><a href="#gustos"><%= _('Sus gustos') %></a></li>

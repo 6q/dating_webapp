@@ -4,13 +4,18 @@ class ProfilesController < ApplicationController
   skip_before_filter :matchmaker_user
   before_filter :skip_password_attribute, only: :update
 
-  def show    
+  def show
     @user = current_user
     if @user.has_role?(:matchmaker)
       render 'matchmaker_show'
     else
       render 'show'
     end
+  end
+
+  def images
+    @user = current_user
+    render :partial => 'profiles/pictures_needed', :formats => [:html]
   end
 
   def update
@@ -45,7 +50,7 @@ class ProfilesController < ApplicationController
   def pay
   end
 
-  def 
+  def
   def pay_confirmation
     if true # Do some token/payment/what ever check here
       current_user.upgrade_to_premium

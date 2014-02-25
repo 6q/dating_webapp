@@ -22,7 +22,9 @@ Cellove::Application.routes.draw do
     registrations: 'matchmaker_registrations'
   }
 
-  resource :profile, only: [:show, :update]
+  resource :profile, only: [:show, :update] do
+    get 'images', to: 'profiles#images', as: :images
+  end
   resources :notes, only: [:create, :destroy]
 
   resources :pictures, only: [:create, :destroy, :show, :update]
