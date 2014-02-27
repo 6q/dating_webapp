@@ -9,7 +9,7 @@ class DashboardController < ApplicationController
   # before_filter :is_invited_user?
 
   def show
-    @best_suited_near_me = current_user.best_suited_near_me
+    @best_suited_near_me = current_user.best_suited_near_me(6)
     @search = User.search
   end
 

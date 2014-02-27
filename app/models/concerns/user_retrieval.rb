@@ -11,7 +11,7 @@ module UserRetrieval
     }
 
       # Ordre original
-      # 
+      #
       # :by_visits => 'p.main IS NULL, visits_count DESC, likes_count DESC, distance ASC, messages_count DESC, cellove_index DESC',
       # :by_likes => 'p.main IS NULL, likes_count DESC, visits_count DESC, messages_count DESC, distance ASC, cellove_index DESC',
       # :by_index => 'p.main IS NULL, cellove_index DESC, likes_count DESC, visits_count DESC, messages_count DESC, distance ASC',
@@ -26,14 +26,14 @@ module UserRetrieval
     .joins('LEFT JOIN pictures p ON p.attachable_id = users.id')
     .where("users.id NOT IN (?)", not_in)
     .where("users.gender = ?", self.matching_gender)
-    .where("users.lf_gender = ?", self.gender)    
-    .reorder(order[order_type])   
+    .where("users.lf_gender = ?", self.gender)
+    .reorder(order[order_type])
     .limit(limit)
     .uniq
 
     if self.lf_age_from.present? && self.lf_age_to.present?
       query = query.where('birth_date <= ?', self.lf_age_from.to_i.years.ago.beginning_of_year)
-      query = query.where('birth_date >= ?', self.lf_age_to.to_i.years.ago.end_of_year)      
+      query = query.where('birth_date >= ?', self.lf_age_to.to_i.years.ago.end_of_year)
     end
 
     query
@@ -48,8 +48,8 @@ module UserRetrieval
     result
   end
 
-  def best_suited_near_me
-    retrieve_users(12, :by_pictures)
+  def best_suited_near_me(limit = 12)
+    retrieve_users(limit, :by_pictures)
   end
 
   def could_interest_me(limit = 20)
