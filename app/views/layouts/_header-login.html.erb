@@ -7,6 +7,9 @@
       <li class="leaf"><%= link_to _('English'), root_path(locale: :en) %></li>
     </ul>
   </div>
+  <div id="fb-auth" class="header-switcher">
+    <%= link_to _('Facebook'), "/auth/facebook", id: "sign_in" %>
+  </div>
 </div>
 <div id="login-box">
   <h4><%= _('Acceso de usuarios registrados') %></h4>

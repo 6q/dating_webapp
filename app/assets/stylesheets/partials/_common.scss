@@ -25,7 +25,7 @@ a {
 .list {
   header{
    overflow: visible !important;
-  }  
+  }
 }
 
 
@@ -230,7 +230,7 @@ ul.miniSlider {
             width:155px;
             padding:4px;
             border:#ccc 1px solid;
-          }  
+          }
         }
       }
     }
@@ -239,7 +239,7 @@ ul.miniSlider {
         @include user-actions;
     }
 
-  }    
+  }
 
   header {
 
@@ -265,13 +265,13 @@ ul.miniSlider {
         font-weight:bold;
         font-size:1.1em;
       }
-      
+
       span {
         font-size:.9em;
       }
     }
   }
-} 
+}
 */
 /*
 .public-user-list {
@@ -448,9 +448,9 @@ aside {
           &:hover {
             background:#f1f1f1;
             i {
-              opacity:1;  
+              opacity:1;
             }
-            
+
           }
         }
 
@@ -507,16 +507,25 @@ aside {
       #header-preface {
         position:absolute;
         top:-40px;
-        right:0; 
+        right:0;
         width:800px;
         z-index:900;
       }
 
 
-      #lang-switcher {
+      #lang-switcher, #fb-auth {
         float:right;
         width:100px;
         margin-left:5px;
+      }
+
+      #fb-auth {
+        margin:0;
+        padding:0;
+        padding:5px;
+        a {
+          text-decoration:none;
+        }
       }
 
       #user-count {
@@ -571,10 +580,10 @@ aside {
                 height:16px;
                 position: absolute;
                 top: 7px;
-                background:image-url('languages_icon.png') no-repeat; 
-                margin-left:10px; 
+                background:image-url('languages_icon.png') no-repeat;
+                margin-left:10px;
               }
-              
+
             }
 
             &.leaf {
@@ -602,9 +611,9 @@ aside {
   -webkit-border-bottom-left-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-bottomleft: 5px;
-  -moz-border-radius-bottomright: 5px; 
+  -moz-border-radius-bottomright: 5px;
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
 }
 #html5-lightbox-cellove {
   display:block;

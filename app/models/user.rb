@@ -120,6 +120,10 @@
 #  progress_status        :integer          default(1)
 #  fake                   :boolean
 #  banned                 :boolean
+#  provider               :string(255)
+#  uid                    :string(255)
+#  oauth_token            :string(255)
+#  oauth_expires_at       :datetime
 
 require_dependency 'minimum_age_validator'
 
@@ -223,7 +227,8 @@ class User < ActiveRecord::Base
     :lf_eyes, :lf_party, :lf_ethnicity, :lf_citizenship, :lf_religion_activity, :lf_animals,
     :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain,
     :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to, :lf_relationship,
-    :characteristics_attributes, :my_characteristics_attributes, :fake, :banned
+    :characteristics_attributes, :my_characteristics_attributes, :fake, :banned,
+    :provider, :uid, :oauth_token, :oauth_expires_at
 
   attr_accessor :is_rec # if user is created by reccomendation
 

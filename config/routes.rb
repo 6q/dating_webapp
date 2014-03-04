@@ -22,6 +22,10 @@ Cellove::Application.routes.draw do
     registrations: 'matchmaker_registrations'
   }
 
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
   resource :profile, only: [:show, :update] do
     get 'images', to: 'profiles#images', as: :images
   end

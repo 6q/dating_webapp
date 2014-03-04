@@ -40,7 +40,7 @@ gem "typus", :git => "git://github.com/fesplugas/typus.git", :ref => "b5832511f0
 gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
 gem 'newrelic_rpm'
-
+gem 'omniauth-facebook'
 
 group :test do
   gem 'sqlite3'
