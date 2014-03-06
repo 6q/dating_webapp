@@ -1,0 +1,25 @@
+<%= content_for :title do %>
+  <%= _('Quiero encontrar') %>
+<% end %>
+<article>
+
+<header class="bg clearfix">
+  <h1><%= _('Registro<br>Usuari@<br>Gratis!') %></h1>
+  <ul class="miniSlider">
+    <li class="item active"><%= image_tag 'teaser-user.jpg' %></li>
+    <li class="item"><%= image_tag 'teaser-user2.jpg' %></li>
+  </ul>
+</header>
+
+Test de recuperació de dades de facebook<br>
+<ul>
+  <li><%= @sn.info.name %></li>
+  <li><%= @sn.info.nickname %></li>
+  <li><%= @sn.info.email %></li>
+  <li><%= @sn.info.location %></li>
+  <li><%= @sn.extra.raw_info.gender %></li>
+  <li><img src="<%= @sn.info.image %>"></li>
+</ul>
+
+<div id="crop_modal_wrapper"></div>
+</article>

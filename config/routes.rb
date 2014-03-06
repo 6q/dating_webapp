@@ -22,9 +22,11 @@ Cellove::Application.routes.draw do
     registrations: 'matchmaker_registrations'
   }
 
-  match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
-  match 'signout', to: 'sessions#destroy', as: 'signout'
+  devise_scope :user do
+    match 'auth/:provider/callback', to: 'social_networks#new'
+    match 'auth/failure', to: redirect('/')
+    match 'signout', to: 'sessions#destroy', as: 'signout'
+  end
 
   resource :profile, only: [:show, :update] do
     get 'images', to: 'profiles#images', as: :images
