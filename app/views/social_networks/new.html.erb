@@ -12,14 +12,65 @@
 </header>
 
 Test de recuperació de dades de facebook<br>
-<ul>
-  <li><%= @sn.info.name %></li>
-  <li><%= @sn.info.nickname %></li>
-  <li><%= @sn.info.email %></li>
-  <li><%= @sn.info.location %></li>
-  <li><%= @sn.extra.raw_info.gender %></li>
-  <li><img src="<%= @sn.info.image %>"></li>
-</ul>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'register-form', :multipart => true}, validate: true) do |f| %>
+  <%= display_base_errors resource %>
+  <div class="row">
+    <div class="span4">
+      <fieldset id="name" class="clearfix">
+        <legend><%= _('¿Quién eres?') %></legend>
+        <p><%= _('Me llamo') %><br>
+        <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre'), :value => @sn.info.first_name %>
+        <%= f.text_field :surname, placeholder: _('Apellidos'), :value => @sn.extra.raw_info.middle_name || @sn.info.last_name %>
+        <p>
+        <%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)'), :value => @sn.info.nickname %>
+      </fieldset>
+    </div>
+
+    <fieldset id="photo" class="clearfix form-inline">
+      <legend><%= _('Sube tu foto') %></legend>
+      <div class="row">
+        <div class="span6">
+          <label class="photoupload">
+            <span><%=_('Sube tu foto') %></span>
+            <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+          </label>
+          <div id="picture_gallery"><img src="<%= @sn.info.image %>"></div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <div class="nofloat">
+  </div>
+  <fieldset id="access" class="clearfix form-horizontal">
+    <legend><%= _('Datos de acceso a Cellove') %></legend>
+    <div class="row">
+      <div class="span6">
+        <div class="control-group">
+          <%= f.label :email, _("Email"), class: 'control-label' %>
+          <%= f.email_field :email, :value => @sn.info.email %>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="row">
+        <div class="span6 center">
+          <div class="clearfix">
+            <label><%= _('Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') %  {condiciones_link: link_to(_('Terminos y condiciones generales'), terms_conditions_path, target: "_blank"), privacy_link: link_to(_('Política de privacidad'), privacy_policy_path, target: "_blank")}%></label>
+          </div>
+          <div class="clearfix">
+            <%= f.check_box :newsletter_optin, checked: true %>
+            <label><%= _('Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.') %></label>
+          </div>
+        </div>
+        <div class="span6 center">
+          <%= f.hidden_field :invitation_code, :value => params['invitation_code'] %>
+          <%#= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+<% end %>
 
 <div id="crop_modal_wrapper"></div>
 </article>
