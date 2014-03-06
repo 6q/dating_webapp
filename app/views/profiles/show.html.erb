@@ -19,7 +19,7 @@
 
   <hr class="thin">
 
-  
+
   <%= form_for @user, :url => profile_path, :html => {:class => "form-horizontal"} do |f| %>
     <section class="boxed">
       <div class="boxed-inner">
@@ -98,7 +98,7 @@
             <%= render 'como' %>
           </div>
 
-          <div class="tab-pane" id="gustos">  
+          <div class="tab-pane" id="gustos">
             <%= render 'gustos' %>
           </div>
 
@@ -118,6 +118,7 @@
     <% else %>
       <%= link_to _('Desactivar cuenta'), user_registration_path, method: :delete, confirm: _('¿Estas seguro?') %>
     <% end %>
+  </article>
 </section>
 
 <script type="text/javascript">

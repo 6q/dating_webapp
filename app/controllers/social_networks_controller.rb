@@ -5,14 +5,7 @@ class SocialNetworksController < Devise::RegistrationsController
 
   def new
     @geocoder = Geocoder.search(request.env["HTTP_CF_CONNECTING_IP"]).first
-
-    # user = User.from_omniauth(env["omniauth.auth"])
-    # session[:user_id] = user.id
-    # redirect_to root_url
-
-    auth = env["omniauth.auth"]
-
-    @sn = auth
+    @sn       = env["omniauth.auth"]
   end
 
 end
