@@ -64,7 +64,7 @@
                                                 <h3 align="center"><%= link_to _('Confirmar mi cuenta'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></h3>
                                                 <p><%= _('O accede a través de la siguiente URL:') %></p>
 
-                                                <p><%= link_to confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+                                                <p><%= link_to confirmation_url(@resource, :confirmation_token => @resource.confirmation_token), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -93,7 +93,7 @@
                                         <tr>
                                             <td valign="top" align="center" style="color:#FFFFFF;font-family:Helvetica,Arial,sans-serif;font-size:11px;line-height:125%;padding:10px;text-align:center">
                                                 <%= _('Has recibido este correo de Cellove Social Network porque tu correo está registrado a Cellove.com. Si no deseas seguir recibiendo correos, modifica tu configuración de usuario dentro en Cellove.com.') %>
-                                                
+
                                             </td>
                                         </tr>
                                         <tr>

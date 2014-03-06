@@ -30,7 +30,7 @@
               <% end %>
             </div>
             <div class="span9">
-              <%= render 'shared/confirmation_pending_form' unless current_user.confirmed? || (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
+              <%= render 'shared/confirmation_pending_form' unless (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
               <%= yield %>
             </div>
           </div>
