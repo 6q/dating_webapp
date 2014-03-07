@@ -753,4 +753,8 @@ class User < ActiveRecord::Base
       true
     end
   end
+
+  def self.from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).first
+  end
 end

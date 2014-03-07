@@ -61,6 +61,10 @@
         </div>
         <div class="span6 center">
           <%= f.hidden_field :invitation_code, :value => params['invitation_code'] %>
+          <%= f.hidden_field :provider %>
+          <%= f.hidden_field :uid %>
+          <%= f.hidden_field :oauth_token %>
+          <%= f.hidden_field :oauth_expires_at %>
           <%= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
         </div>
       </div>

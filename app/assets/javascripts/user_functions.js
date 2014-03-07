@@ -17,7 +17,7 @@ $(document).ready(function() {
       data: {
         background: number
       },
-      success: function(data) { 
+      success: function(data) {
         var bg = '/assets/bg/main-bg' + data + '.jpg';
         $('header[role="banner"]').css('background','url(' + bg + ') top left no-repeat');
       }
@@ -94,7 +94,7 @@ $(document).ready(function() {
     }
   });
 
-  jQuery("#altura").slider({ 
+  jQuery("#altura").slider({
     from: 150,
     to: 220,
     step: 5,
@@ -156,7 +156,7 @@ $(document).ready(function() {
 
   var hash = document.location.hash;
   var prefix = "tab_";
-  if (hash) {
+  if (hash && hash != '#_=_') {
       $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
       if(hash != '#tab_confirmados') {
         $('.indice').slideUp('fast');

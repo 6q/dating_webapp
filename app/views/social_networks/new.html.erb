@@ -20,7 +20,7 @@
     <div class="boxed-inner">
       <div class="tab-content">
         <div class="tab-pane active" id="user">
-        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'register-form', :multipart => true}, validate: true) do |f| %>
+        <%= form_for(@user, :as => :user, :url => registration_path(:user), :html => { :class => 'register-form', :multipart => true}, validate: true) do |f| %>
           <%= display_base_errors resource %>
           <div class="row">
             <div class="span4">
@@ -29,17 +29,21 @@
                 <p><%= _('Me llamo') %><br>
                 <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre'), :value => @sn.info.first_name %>
                 <%= f.text_field :surname, placeholder: _('Apellidos'), :value => @sn.extra.raw_info.middle_name || @sn.info.last_name %>
-                <p>
+                <br>
+                <%= f.label :screen_name, _("Nick (no obligatorio)"), class: 'control-label' %>
                 <%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)'), :value => @sn.info.nickname %>
+                <br>
+                <%= f.label :email, _("Email"), class: 'control-label' %>
+                <%= f.email_field :email, :value => @sn.info.email %>
               </fieldset>
             </div>
-
-            <div class="register-text">
-              <p><%= _('Regístrate en Cellove, la red social GRATIS para encontrar el <b>amor y amistad</b> de forma fácil y rápida. <b>Chatea</b> con los usuari@s, enviales mensajes, <b>propónles actividades</b> e incluso podrás comprobar si hacéis buena pareja.') %></p>
-              <p><%= _('Gracias a nuestro <b>sistema de Celestinos</b>, podrás comunicarte con sus familiares, amig@s o ex parejas.') %></p>
-              <p><%= _('¿Te imaginas quedar con alguien que nunca has visto y tener la sensación de que lo conoces de toda la vida? <b>Ahora es posible gracias a Cellove</b>') %></p>
-              <h3><%= _('¡No dejes que tus citas sean a ciegas!') %></h3>
-
+            <div class="span8">
+              <div class="register-text">
+                <p><%= _('Regístrate en Cellove, la red social GRATIS para encontrar el <b>amor y amistad</b> de forma fácil y rápida. <b>Chatea</b> con los usuari@s, enviales mensajes, <b>propónles actividades</b> e incluso podrás comprobar si hacéis buena pareja.') %></p>
+                <p><%= _('Gracias a nuestro <b>sistema de Celestinos</b>, podrás comunicarte con sus familiares, amig@s o ex parejas.') %></p>
+                <p><%= _('¿Te imaginas quedar con alguien que nunca has visto y tener la sensación de que lo conoces de toda la vida? <b>Ahora es posible gracias a Cellove</b>') %></p>
+                <h3><%= _('¡No dejes que tus citas sean a ciegas!') %></h3>
+              </div>
             </div>
           </div>
           <fieldset id="photo" class="clearfix form-inline">
@@ -72,22 +76,13 @@
             </div>
             <div class="control-group">
               <%= f.label :city, _('Y vivo en') %>
-              <%= f.select :city, [], { selected: (@geocoder.present? ? @geocoder.city : '') }, { class: 'location', 'data-placeholder' => _('Localidad...')} %> ,
+              <%= f.select :city, ([nil]), { selected: (@geocoder ? @geocoder.city : nil) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %> ,
               <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %> .
             </div>
           </fieldset>
           <div class="nofloat">
           </div>
           <fieldset id="access" class="clearfix form-horizontal">
-            <legend><%= _('Datos de acceso a Cellove') %></legend>
-            <div class="row">
-              <div class="span6">
-                <div class="control-group">
-                  <%= f.label :email, _("Email"), class: 'control-label' %>
-                  <%= f.email_field :email, :value => @sn.info.email %>
-                </div>
-              </div>
-            </div>
             <div class="actions">
               <div class="row">
                 <div class="span6 center">
@@ -101,8 +96,12 @@
                 </div>
                 <div class="span6 center">
                   <%= f.hidden_field :invitation_code, :value => params['invitation_code'] %>
-                  <%= _('¡REGISTRARME GRATIS!') %>
-                  <%#= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
+                  <%= f.hidden_field :password, :value => SecureRandom.urlsafe_base64(n=6) %>
+                  <%= f.hidden_field :provider, :value => @sn.provider %>
+                  <%= f.hidden_field :uid, :value => @sn.uid %>
+                  <%= f.hidden_field :oauth_token, :value => @sn.credentials.token %>
+                  <%= f.hidden_field :oauth_expires_at, :value => Time.at(@sn.credentials.expires_at) %>
+                  <%= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
                 </div>
               </div>
             </div>
@@ -110,7 +109,7 @@
         <% end %>
         </div>
         <div class="tab-pane" id="celestine">
-        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'register-form' }) do |f| %>
+        <%= simple_form_for(@user, :as => :matchmaker, :url => registration_path(:matchmaker), :html => {:class => 'register-form' }) do |f| %>
           <%= display_base_errors resource %>
           <div class="row">
             <div class="span4">
@@ -119,29 +118,25 @@
                 <p><%= _('Me llamo') %><br>
                 <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre'), :value => @sn.info.first_name %>
                 <%= f.text_field :surname, placeholder: _('Apellidos'), :value => @sn.extra.raw_info.middle_name || @sn.info.last_name %>
-                <p>
+                <br>
+                <%= f.label :screen_name, _("Nick (no obligatorio)"), class: 'control-label' %>
                 <%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)'), :value => @sn.info.nickname %>
+                <br>
+                <%= f.label :email, _("Email"), class: 'control-label' %>
+                <%= f.email_field :email, :value => @sn.info.email %>
               </fieldset>
             </div>
-
-            <div class="register-text">
+            <div class="span8">
+              <div class="register-text">
               <p><%= _('<b>¿Quieres ayudar a un familiar, amig@ o ex pareja?</b> No lo dudes y échale una mano. Con Cellove puedes ayudar a quien desees a que encuentre su <b>pareja ideal</b>.') %></p>
               <p><%= _('Con nuestra función <b>Celestin@</b> podrás hacerlo de forma <b>gratuita</b>, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad.') %></p>
               <p><%= _('Ser Celestino es muy fácil, el destinatario recibirá un e-mail para que confirme su <b>registro gratuito</b> como usuario en Cellove. A partir de aquí ya contará con tu ayuda y podrá acceder a todos los usuari@s y funciones que desee.') %></p>
               <h3><%= _('¡Haz de Celestin@ gratis en Cellove!') %></h3>
+              </div>
             </div>
           </div>
 
           <fieldset id="access" class="clearfix form-horizontal">
-            <legend><%= _('Datos de acceso a Cellove') %></legend>
-            <div class="row">
-              <div class="span6">
-                <div class="control-group">
-                  <%= f.label :email, "Email", class: 'control-label' %>
-                  <%= f.email_field :email, :value => @sn.info.email %>
-                </div>
-              </div>
-            </div>
             <div class="actions">
               <div class="row">
                 <div class="span6 center">
@@ -155,8 +150,12 @@
                 </div>
                 <div class="span6 center">
                   <%= f.hidden_field :invitation_code, :value => params['invitation_code'] %>
-                  <%= _('¡REGISTRARME GRATIS!') %>
-                  <%#= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
+                  <%= f.hidden_field :password, :value => SecureRandom.urlsafe_base64(n=6) %>
+                  <%= f.hidden_field :provider, :value => @sn.provider %>
+                  <%= f.hidden_field :uid, :value => @sn.uid %>
+                  <%= f.hidden_field :oauth_token, :value => @sn.credentials.token %>
+                  <%= f.hidden_field :oauth_expires_at, :value => Time.at(@sn.credentials.expires_at) %>
+                  <%= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
                 </div>
               </div>
             </div>
