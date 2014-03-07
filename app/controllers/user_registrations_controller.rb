@@ -36,11 +36,11 @@ class UserRegistrationsController < Devise::RegistrationsController
           invitation.save
         end
         @user = User.new(params[:user])
-        register_user
+        register_user(params[:picture])
       end
     else
       @user = User.new(params[:user])
-      register_user
+      register_user(params[:picture])
     end
   end
 
@@ -72,16 +72,21 @@ class UserRegistrationsController < Devise::RegistrationsController
 
   private
 
-    def register_user
+    def register_user(picture = nil)
       @user.add_role :regular_user
       if @user.save
         Characteristic.create(user_id: @user.id, creator_id: @user.id)
         GeneralSetting.create(user_id: @user.id)
 
         if session[:registration_image]
-          @user.pictures << Picture.find(session[:registration_image]) 
-          session[:registration_image] = nil
+          @user.pictures << Picture.find(session[:registration_image])
+        elsif !picture.empty? # From Facebook or other social networks
+          @picture        = Picture.new(image: Dragonfly[:images].fetch_url(picture))
+          @picture.image  = @picture.image.thumb("500x500").tempfile
+          @picture.main   = true
+          @user.pictures << @picture if @picture.save
         end
+        session[:registration_image] = nil
 
         UserMailer.welcome_email(@user).deliver
         if @user.active_for_authentication?

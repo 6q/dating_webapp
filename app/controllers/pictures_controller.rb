@@ -44,8 +44,8 @@ class PicturesController < ApplicationController
         template: render_to_string(partial: 'pictures/picture_gallery', locals: {user: current_user}),
       }
     else
-      render json: { 
-        template: render_to_string(partial: 'pictures/registration_thumb', locals: { picture: @picture }) 
+      render json: {
+        template: render_to_string(partial: 'pictures/registration_thumb', locals: { picture: @picture })
       }
     end
   end

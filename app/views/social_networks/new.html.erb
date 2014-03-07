@@ -52,7 +52,7 @@
               <div class="span6">
                 <label class="photoupload">
                   <span><%=_('Sube tu foto') %></span>
-                  <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+                  <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered', value: @sn.info.image %>
                 </label>
                 <div id="picture_gallery"><img src="<%= @sn.info.image %>"></div>
               </div>
