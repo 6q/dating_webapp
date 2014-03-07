@@ -522,9 +522,26 @@ aside {
       #fb-auth {
         margin:0;
         padding:0;
-        padding:5px;
+        padding:6px;
+        background-color: #435fad;
         a {
+          float:right;
           text-decoration:none;
+          margin-right:15px;
+          i {
+            width:16px;
+            height:16px;
+            position: absolute;
+            top: 6px;
+            background:image-url('fb-icon.png') no-repeat;
+            left:10px;
+          }
+          &:hover {
+            background:#435fad;
+          }
+        }
+        &:hover {
+          opacity:.9;
         }
       }
 
