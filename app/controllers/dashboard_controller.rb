@@ -11,6 +11,7 @@ class DashboardController < ApplicationController
   def show
     @best_suited_near_me = current_user.best_suited_near_me(6)
     @search = User.search
+    session[:shown_ids] = @best_suited_near_me.map(&:id) # Needed because of ajax loading
   end
 
   def show_users
@@ -18,17 +19,20 @@ class DashboardController < ApplicationController
 
       case params[:partial]
       when "could_interest_me"
-        could_interest_me           = current_user.could_interest_me.sample(20)
+        could_interest_me           = current_user.could_interest_me(20, session[:shown_ids]).sample(20)
         @could_interest_me          = Kaminari.paginate_array(could_interest_me).page(params[:page]).per(5)
         session[:could_interest_me] = could_interest_me.map(&:id)
+        session[:shown_ids]        += session[:could_interest_me]
       when "best_index"
-        best_index            = current_user.best_index.sample(20)
+        best_index            = current_user.best_index(20, session[:shown_ids]).sample(20)
         @best_index           = Kaminari.paginate_array(best_index).page(params[:page]).per(5)
         session[:best_index]  = best_index.map(&:id)
+        session[:shown_ids]  += session[:best_index]
       when "new_users_near_me"
-        new_users_near_me           = current_user.new_users_near_me.sample(20)
+        new_users_near_me           = current_user.new_users_near_me(20, session[:shown_ids]).sample(20)
         @new_users_near_me          = Kaminari.paginate_array(new_users_near_me).page(params[:page]).per(5)
         session[:new_users_near_me] = new_users_near_me.map(&:id)
+        session[:shown_ids]        += session[:new_users_near_me]
       else
         return nil
       end

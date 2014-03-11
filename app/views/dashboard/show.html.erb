@@ -26,13 +26,13 @@
     $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'could_interest_me') %>", function( data ) {
       $( "#container_could_interest_me" ).html( data );
       $( "#container_could_interest_me article[data-toggle='tooltip']" ).tooltip({html:true});
-    });
-    $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'best_index') %>", function( data ) {
-      $( "#container_best_index" ).html( data );
-      $( "#container_best_index article[data-toggle='tooltip']" ).tooltip({html:true});
-    });
-    $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'new_users_near_me') %>", function( data ) {
-      $( "#container_new_users_near_me" ).html( data );
-      $( "#container_new_users_near_me article[data-toggle='tooltip']" ).tooltip({html:true});
+      $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'best_index') %>", function( data ) {
+        $( "#container_best_index" ).html( data );
+        $( "#container_best_index article[data-toggle='tooltip']" ).tooltip({html:true});
+        $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'new_users_near_me') %>", function( data ) {
+          $( "#container_new_users_near_me" ).html( data );
+          $( "#container_new_users_near_me article[data-toggle='tooltip']" ).tooltip({html:true});
+        });
+      });
     });
   </script>

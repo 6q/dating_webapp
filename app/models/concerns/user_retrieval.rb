@@ -39,9 +39,9 @@ module UserRetrieval
     query
   end
 
-  def retrieve_users(limit = 20, order_type = :by_visits)
+  def retrieve_users(limit = 20, order_type = :by_visits, exclude = [])
     @last_query ||= []
-    result = build_query(self.get_all_invisible_to_me + @last_query, limit, order_type)
+    result = build_query(self.get_all_invisible_to_me + @last_query + exclude, limit, order_type)
 
     result_ids = result.map(&:id)
     @last_query += result_ids
@@ -52,15 +52,15 @@ module UserRetrieval
     retrieve_users(limit, :by_pictures)
   end
 
-  def could_interest_me(limit = 20)
-    retrieve_users(limit, :by_likes)
+  def could_interest_me(limit = 20, exclude = [])
+    retrieve_users(limit, :by_likes, exclude)
   end
 
-  def best_index(limit = 20)
-    retrieve_users(limit, :by_index)
+  def best_index(limit = 20, exclude = [])
+    retrieve_users(limit, :by_index, exclude)
   end
 
-  def new_users_near_me(limit = 20)
-    retrieve_users(limit, :by_recent)
+  def new_users_near_me(limit = 20, exclude = [])
+    retrieve_users(limit, :by_recent, exclude)
   end
 end
