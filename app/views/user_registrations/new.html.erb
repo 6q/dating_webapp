@@ -17,6 +17,9 @@
     <div class="span4">
       <fieldset id="name" class="clearfix">
         <legend><%= _('¿Quién eres?') %></legend>
+        <div id="fb-auth-button">
+          <%= link_to raw('<i></i> ') + _('Facebook'), "/auth/facebook", id: "sign_in" %>
+        </div>
         <p><%= _('Me llamo') %><br>
         <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre') %>
         <%= f.text_field :surname, placeholder: _('Apellidos') %>
