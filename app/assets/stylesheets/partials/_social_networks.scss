@@ -12,9 +12,22 @@
     margin-top: 60px;
   }
 
-  .register-form #access {
-    margin-bottom: 0px;
-    margin-left: 20px;
+  .register-form {
+    #orientation {
+      select, input, #user_city_chzn a {
+        border: 1px solid red;
+      }
+      #user_city_chzn a {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    }
+
+    #access {
+      margin-bottom: 0px;
+      margin-left: 20px;
+    }
   }
 
 }
