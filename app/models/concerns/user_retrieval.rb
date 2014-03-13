@@ -41,6 +41,7 @@ module UserRetrieval
 
   def retrieve_users(limit = 20, order_type = :by_visits, exclude = [])
     @last_query ||= []
+    exclude     ||= []
     result = build_query(self.get_all_invisible_to_me + @last_query + exclude, limit, order_type)
 
     result_ids = result.map(&:id)
@@ -48,8 +49,8 @@ module UserRetrieval
     result
   end
 
-  def best_suited_near_me(limit = 12)
-    retrieve_users(limit, :by_pictures)
+  def best_suited_near_me(limit = 12, exclude = [])
+    retrieve_users(limit, :by_pictures, exclude)
   end
 
   def could_interest_me(limit = 20, exclude = [])
