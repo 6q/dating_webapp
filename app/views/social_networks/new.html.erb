@@ -21,7 +21,7 @@
     <div class="boxed-inner">
       <div class="tab-content">
         <div class="tab-pane active" id="user">
-        <%= form_for(@user, :as => :user, :url => registration_path(:user), :html => { :class => 'register-form', :multipart => true}, validate: true) do |f| %>
+        <%= form_for(@user, :as => :user, :url => registration_path(:user, :picture => @sn.info.image), :html => { :class => 'register-form', :multipart => true}, validate: true) do |f| %>
           <%= display_base_errors resource %>
           <div class="row">
             <div class="span4">
