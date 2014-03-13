@@ -41,6 +41,8 @@ gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
 gem 'newrelic_rpm'
 gem 'omniauth-facebook'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe_event'
 
 group :test do
   gem 'sqlite3'

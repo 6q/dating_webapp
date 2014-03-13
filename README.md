@@ -113,6 +113,18 @@ Admin interface access using /admin
 Username: admin
 Pass: columbia
 
+Payments
+--------
+
+Payments are provided by Stripe, http://stripe.com
+
+References:
+[https://stripe.com/docs/checkout/guides/rails]
+[https://stripe.com/docs/api?lang=ruby#intro]
+[https://github.com/RailsApps/rails-stripe-membership-saas]
+[https://github.com/integrallis/stripe_event]
+[http://www.rackspace.com/blog/integrating-stripe-with-your-rails-app/]
+[http://railscasts.com/episodes/288-billing-with-stripe]
 
 Extra
 -----
