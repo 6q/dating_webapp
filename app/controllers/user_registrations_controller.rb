@@ -80,7 +80,7 @@ class UserRegistrationsController < Devise::RegistrationsController
 
         if session[:registration_image]
           @user.pictures << Picture.find(session[:registration_image])
-        elsif !picture.empty? # From Facebook or other social networks
+        elsif !picture.nil? && !picture.empty? # From Facebook or other social networks
           @picture        = Picture.new(image: Dragonfly[:images].fetch_url(picture))
           @picture.image  = @picture.image.thumb("500x500").tempfile
           @picture.main   = true
