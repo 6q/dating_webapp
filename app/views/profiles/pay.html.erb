@@ -1,15 +1,14 @@
 <section id="pay" class="boxed">
   <div class="boxed-inner">
   <header>
-    <h1><%= _('Modalidades de uso') %></h1>
+    <h1><%= _('Hazte usuari@ VIP de Cellove') %></h1>
   </header>
 
 
   <article>
       <h2><%= _('Elige entre uno de nuestros planes:') %></h2>
       <p><%= _('Contrata una de nuestras tres modalidades de uso en Cellove para sacarle el máximo partido de todas las herramientas, facilidades que te ofrecemos. Elije la modalidad que mejor se adapte a tus necesidades y disfruta de Cellove sin limitaciones ni restricciones de ningún tipo.') %></p>
-      
-      <form>
+
         <fieldset class="clearfix">
             <div class="payment">
               <h3><%= _('GRATIS') %></h3>
@@ -24,7 +23,7 @@
             </div>
 
             <div class="payment plan2">
-              <h3><%= _('VIP 3,95€/mes') %></h3>
+              <h3><%= _('VIP 4,99€/mes') %></h3>
               <ul>
                 <li><%= _('Ilimitada navegación') %></li>
                 <li><%= _('Ilimitados mensajes privados') %></li>
@@ -36,12 +35,26 @@
                 <li><%= _('Navegación oculta') %></li>
               </ul>
               <div class="call">
-                Contratar por: <%= link_to _('3,95 €/ mes'), pay_confirmation_path, class: 'btn btn-info' %>
-                <%= link_to _('47,4 €/año'), pay_confirmation_path, class: 'btn btn-info' %>
+                <% if current_user.has_role? :premium_user %>
+                  <%= _('Actualmente eres VIP') %> <%= link_to 'Cancelar', pay_cancellation_path, class: 'btn btn-info' %>
+                <% else %>
+                <%= form_tag pay_confirmation_path do %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-name="Cellove"
+                          data-image="<%= asset_path('logo-cellove-square.jpg') %>"
+                          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                          data-description="<%= _('Subscripción mensual') %>"
+                          data-label="<%= _('Confirmar') %>"
+                          data-currency="EUR"
+                          data-panel-label="<%= _('Pagar') %>"
+                          data-email="<%= current_user.email %>"
+                          data-allow-remember-me="false"
+                          data-amount="499"></script>
+                <% end %>
+                <% end %>
               </div>
             </div>
         </fieldset>
-      </form>
 
       <p><%= _('Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante.') %></p>
 

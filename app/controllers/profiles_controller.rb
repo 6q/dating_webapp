@@ -50,15 +50,43 @@ class ProfilesController < ApplicationController
   def pay
   end
 
-  def
   def pay_confirmation
-    if true # Do some token/payment/what ever check here
-      current_user.upgrade_to_premium
-      flash[:success] = _('Actualización a usuari@ premium se ha realizado correctamente')
-    else
-      flash[:error] = _('Oops!')
-    end
+    # Amount in cents
+    @amount = 499
+
+    customer = Stripe::Customer.create(
+      :email => current_user.email,
+      :description => 'Cellove monthly payment from ' + current_user.email,
+      :card  => params[:stripeToken],
+      :plan  => 'CELLOVE-VIP'
+    )
+
+    current_user.upgrade_to_premium # TODO: Add Stripe information
+    flash[:success] = _('Actualización a usuari@ VIP se ha realizado correctamente')
     redirect_to root_path
+
+  rescue Stripe::CardError => e
+    flash[:error] = _('Oops!') + e.message
+    redirect_to pay_path
+  end
+
+  def pay_cancellation
+    # TODO: Cancel Stripe subscription
+    # unless customer_id.nil?
+    #   customer = Stripe::Customer.retrieve(customer_id)
+    #   unless customer.nil? or customer.respond_to?('deleted')
+    #     if customer.subscription.status == 'active'
+    #       customer.cancel_subscription
+    #     end
+    #   end
+    # end
+    current_user.remove_premium
+    flash[:success] = _('Cancelación de usuari@ VIP se ha realizado correctamente')
+    redirect_to root_path
+
+  rescue Stripe::StripeError => e
+    flash[:error] = _('Oops!') + e.message
+    redirect_to pay_path
   end
 
   private

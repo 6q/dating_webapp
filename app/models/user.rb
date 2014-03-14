@@ -254,7 +254,7 @@ class User < ActiveRecord::Base
   after_validation :geocode
 
   def has_all_fields?
-    self.has_role?(:regular_user) && self.city && self.country && self.name
+    (self.has_role?(:regular_user) || self.has_role?(:premium_user)) && self.city && self.country && self.name
   end
 
   def self.new_invitee(invitee, is_rec=false)
@@ -665,6 +665,14 @@ class User < ActiveRecord::Base
     if self.has_role?(:regular_user)
       self.remove_role :regular_user
       self.add_role :premium_user
+      self.save
+    end
+  end
+
+  def remove_premium
+    if self.has_role?(:premium_user)
+      self.remove_role :premium_user
+      self.add_role :regular_user
       self.save
     end
   end

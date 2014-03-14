@@ -29,10 +29,17 @@
 
 	</div>
 
+  <div class="avatar">
+      <% if current_user.has_role? :premium_user %>
+        <%= link_to image_tag('vip-sq.png'), pay_path %>
+      <% else %>
+        <%= link_to image_tag('vip-price-sq.png'), pay_path %>
+      <% end %>
+  </div>
 	<div class="avatar">
   	<%= link_to(profile_pic(current_user, options = {width: 60, height: 60}), profile_path) %>
   </div>
-	
+
 	<div class="user-actions">
 		<p>
 			<%= link_to _('Editar mi perfil'), profile_path %> |
@@ -49,6 +56,6 @@
 			<%= current_user.name ? current_user.name + ' ' + current_user.surname : "" %>
 		</p>
   </div>
-	<div class="clearfix"></div>  
+	<div class="clearfix"></div>
 
 </div>
