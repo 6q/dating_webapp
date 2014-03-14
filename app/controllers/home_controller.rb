@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   skip_before_filter :matchmaker_user
 
   def index
-    @users = User.all
+    #@users = User.all
   end
 end
