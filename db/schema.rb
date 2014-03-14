@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140304083915) do
+ActiveRecord::Schema.define(:version => 20140314072049) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -224,6 +224,9 @@ ActiveRecord::Schema.define(:version => 20140304083915) do
     t.datetime "updated_at",                         :null => false
   end
 
+  add_index "cellove_notifications", ["receiver_id", "seen", "created_at"], :name => "receiver_id"
+  add_index "cellove_notifications", ["receiver_id", "seen", "created_at"], :name => "receiver_seen_created"
+
   create_table "characteristics", :force => true do |t|
     t.integer  "user_id"
     t.integer  "creator_id"
@@ -299,6 +302,9 @@ ActiveRecord::Schema.define(:version => 20140304083915) do
     t.boolean  "age_restriction",                  :default => true
   end
 
+  add_index "general_settings", ["user_id"], :name => "index_general_settings_on_user_id"
+  add_index "general_settings", ["user_id"], :name => "user_id"
+
   create_table "invitations", :force => true do |t|
     t.integer  "invitor_id"
     t.string   "invited_email"
@@ -316,6 +322,11 @@ ActiveRecord::Schema.define(:version => 20140304083915) do
     t.datetime "updated_at",                    :null => false
     t.boolean  "seen",       :default => false
   end
+
+  add_index "likes", ["created_at", "user_id"], :name => "index_likes_on_created_at_and_user_id"
+  add_index "likes", ["created_at", "user_id"], :name => "user_id"
+  add_index "likes", ["creator_id", "user_id"], :name => "creator_id"
+  add_index "likes", ["creator_id", "user_id"], :name => "index_likes_on_creator_id_and_user_id"
 
   create_table "notes", :force => true do |t|
     t.integer  "user_id"
@@ -354,6 +365,9 @@ ActiveRecord::Schema.define(:version => 20140304083915) do
     t.datetime "updated_at",                         :null => false
     t.boolean  "main",            :default => false
   end
+
+  add_index "pictures", ["attachable_id", "attachable_type", "main"], :name => "attachable_id"
+  add_index "pictures", ["attachable_id", "attachable_type", "main"], :name => "index_pictures_on_attachable_id_and_attachable_type_and_main"
 
   create_table "rates", :force => true do |t|
     t.integer  "rater_id"
@@ -471,6 +485,8 @@ ActiveRecord::Schema.define(:version => 20140304083915) do
     t.boolean  "seen",       :default => false
   end
 
+  add_index "user_visits", ["created_at"], :name => "created_at"
+  add_index "user_visits", ["created_at"], :name => "index_user_visits_on_created_at"
   add_index "user_visits", ["user_id"], :name => "index_user_visits_on_user_id"
   add_index "user_visits", ["visitor_id"], :name => "index_user_visits_on_visitor_id"
 
@@ -605,8 +621,11 @@ ActiveRecord::Schema.define(:version => 20140304083915) do
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["created_at"], :name => "index_users_on_created_at"
+  add_index "users", ["deleted_at"], :name => "deleted_at"
+  add_index "users", ["deleted_at"], :name => "index_users_on_deleted_at"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["invitation_code"], :name => "index_users_on_invitation_code", :unique => true
+  add_index "users", ["latitude", "longitude", "gender", "lf_gender"], :name => "lat_long"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "users_roles", :id => false, :force => true do |t|
