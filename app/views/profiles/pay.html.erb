@@ -1,14 +1,16 @@
-<section id="pay" class="boxed">
+<section id="pay_header" class="boxed">
   <div class="boxed-inner">
   <header>
     <h1><%= _('Hazte usuari@ VIP de Cellove') %></h1>
   </header>
-
-
+  </div>
+</section>
+<section id="pay_subheader">
+  <h2><%= _('Utiliza todo el potencial que te ofrece Cellove') + raw('<br>') + _('¡No pongas límites!')%></h2>
+</section>
+<section id="pay" class="boxed">
+  <div class="boxed-inner">
   <article>
-      <h2><%= _('Elige entre uno de nuestros planes:') %></h2>
-      <p><%= _('Contrata una de nuestras tres modalidades de uso en Cellove para sacarle el máximo partido de todas las herramientas, facilidades que te ofrecemos. Elije la modalidad que mejor se adapte a tus necesidades y disfruta de Cellove sin limitaciones ni restricciones de ningún tipo.') %></p>
-
         <fieldset class="clearfix">
             <div class="payment">
               <h3><%= _('GRATIS') %></h3>
@@ -56,15 +58,13 @@
             </div>
         </fieldset>
 
-      <p><%= _('Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante.') %></p>
-
-    <div class="center">
-      <%= image_tag "payments.png" %>
-      <br>&nbsp;
-    </div>
-
   </article>
 
 </div>
 
+</section>
+
+<section id="why">
+  <h4><%= _('¿Por qué tengo que pagar para utilizar Cellove?') %></h4>
+  <p><%= _('Cellove ha sido diseñado y creado como una red social de contactos gratis para todos los usuari@s, con las funciones y herramientas necesarias para fidelizar y convertirnos en tu red social de contactos de confianza. Para mantener la plataforma y ofrecer nuestro servicio con garantías, es necesario disponer de un sistema de micropagos solo para usuari@s que quieran utilizar Cellove sin limitaciones.') %></p>
 </section>

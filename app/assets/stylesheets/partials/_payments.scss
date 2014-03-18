@@ -1,3 +1,13 @@
+section#pay_subheader {
+  text-align: center;
+  padding: 10px 0;
+  h2 {
+    color: #6cc36c;
+    font-size: 17.5px;
+    line-height: 1.2em;
+  }
+}
+
 section#pay {
 
   fieldset {
@@ -68,5 +78,15 @@ section#pay {
       }
     }
 
+  }
+}
+
+section#why {
+  margin-top: 30px;
+  font-size: 0.8em;
+  h4 {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1em;
   }
 }
