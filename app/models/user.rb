@@ -661,20 +661,48 @@ class User < ActiveRecord::Base
     self.notes.where(evaluated_id: user.id)
   end
 
-  def upgrade_to_premium
+  def upgrade_to_premium(stripe_token)
     if self.has_role?(:regular_user)
+      # Amount in cents
+      @amount = 499
+
+      customer = Stripe::Customer.create(
+        :email => self.email,
+        :description => 'Cellove monthly payment from ' + self.email,
+        :card  => stripe_token,
+        :plan  => 'CELLOVE-VIP'
+      )
+
       self.remove_role :regular_user
       self.add_role :premium_user
+      self.last_4_digits = customer.cards.data.first["last4"]
+      self.customer_id   = customer.id
       self.save
+      return true
     end
+    false
+  rescue Stripe::CardError => e
+    false
   end
 
   def remove_premium
-    if self.has_role?(:premium_user)
+    if self.has_role?(:premium_user) && !customer_id.nil?
+      customer = Stripe::Customer.retrieve(customer_id)
+      unless customer.nil? or customer.respond_to?('deleted')
+        #if customer.subscription.status == 'active'
+          customer.cancel_subscription
+        #end
+      end
       self.remove_role :premium_user
       self.add_role :regular_user
+      self.last_4_digits = nil
+      self.customer_id   = nil
       self.save
+      return true
     end
+    false
+  rescue Stripe::StripeError => e
+    false
   end
 
   # TODO: Refactor to other class

@@ -36,7 +36,7 @@
               </ul>
               <div class="call">
                 <% if current_user.has_role? :premium_user %>
-                  <%= _('Actualmente eres VIP') %> <%= link_to 'Cancelar', pay_cancellation_path, class: 'btn btn-info' %>
+                  <%= _('Actualmente eres VIP') %> <%= link_to 'Cancelar', pay_cancellation_path, class: 'btn btn-info', confirm: _('¿Estas seguro?') %>
                 <% else %>
                 <%= form_tag pay_confirmation_path do %>
                   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"

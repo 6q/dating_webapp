@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140314072049) do
+ActiveRecord::Schema.define(:version => 20140318070744) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -616,6 +616,8 @@ ActiveRecord::Schema.define(:version => 20140314072049) do
     t.string   "uid"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "customer_id"
+    t.string   "last_4_digits"
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"
