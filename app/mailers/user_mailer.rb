@@ -70,4 +70,17 @@ class UserMailer < ActionMailer::Base
     @reported = reported
     mail(to: 'cellove@cellove.com', subject: _('Perfil denunciado | Cellove.com'))
   end
+
+  def vip(user)
+    @user = user
+    mail(:to => user.email, :subject => _('Eres VIP | Cellove.com'))
+    prevent_delivery_to_unconfirmed
+  end
+
+  def no_vip(user)
+    @user = user
+    mail(:to => user.email, :subject => _('Dejaste de ser VIP | Cellove.com'))
+    prevent_delivery_to_unconfirmed
+  end
+
 end

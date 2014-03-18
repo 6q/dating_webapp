@@ -678,6 +678,7 @@ class User < ActiveRecord::Base
       self.last_4_digits = customer.cards.data.first["last4"]
       self.customer_id   = customer.id
       self.save
+      UserMailer.vip(self).deliver
       return true
     end
     false
@@ -689,15 +690,16 @@ class User < ActiveRecord::Base
     if self.has_role?(:premium_user) && !customer_id.nil?
       customer = Stripe::Customer.retrieve(customer_id)
       unless customer.nil? or customer.respond_to?('deleted')
-        #if customer.subscription.status == 'active'
+        if customer.subscriptions.count > 0
           customer.cancel_subscription
-        #end
+        end
       end
       self.remove_role :premium_user
       self.add_role :regular_user
       self.last_4_digits = nil
       self.customer_id   = nil
       self.save
+      UserMailer.no_vip(self).deliver
       return true
     end
     false

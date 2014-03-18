@@ -109,4 +109,6 @@ Cellove::Application.routes.draw do
 
   get :cities, to: 'cities#index'
 
+  mount StripeEvent::Engine => '/stripe'
+
 end
