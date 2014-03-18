@@ -8,6 +8,6 @@ Stripe.api_key = Rails.configuration.stripe[:secret_key]
 StripeEvent.setup do
   subscribe 'customer.subscription.deleted' do |event|
     user = User.find_by_customer_id(event.data.object.customer)
-    user.remove_premium
+    user.remove_premium unless user.nil?
   end
 end
