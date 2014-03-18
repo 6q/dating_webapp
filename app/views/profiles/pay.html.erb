@@ -13,28 +13,29 @@
   <article>
         <fieldset class="clearfix">
             <div class="payment">
-              <h3><%= _('GRATIS') %></h3>
+              <h3><%= _('PASE') + raw('<br>') + _('GRATIS') %></h3>
               <ul>
                 <li><%= _('Ilimitada navegación') %></li>
-                <li><%= _('Ilimitados mensajes privados') %></li>
-                <li><%= _('2 chats simultáneos') %></li>
-                <li><%= _('Enviar preguntas a Celestinos') %></li>
+                <li><%= _('Ilimitada recepción mensajes') %></li>
+                <li><%= _('Envío 5 mensajes diarios') %></li>
+                <li><%= _('2 Chats simultáneos') %></li>
+                <li><%= _('Limitación opciones avanz.') %></li>
                 <li><%= _('Publicidad en navegación') %></li>
                 <li>&nbsp;</li>
               </ul>
             </div>
 
             <div class="payment plan2">
-              <h3><%= _('VIP 4,99€/mes') %></h3>
+              <h3><%= _('PASE') + raw('<br>') + _('VIP') %></h3>
+              <h4><%= _('4,99€/mes') %></h4>
               <ul>
                 <li><%= _('Ilimitada navegación') %></li>
-                <li><%= _('Ilimitados mensajes privados') %></li>
-                <li><%= _('Capacidad ilimitada') %></li>
-                <li><%= _('Ilimitados chats simultáneos') %></li>
-                <li><%= _('Videochat online') %></li>
-                <li><%= _('Opc. de privacidad avanzadas') %></li>
-                <li><%= _('Acuse de recibo de mensajes') %></li>
+                <li><%= _('Ilimitada recepción mensajes') %></li>
+                <li><%= _('Ilimitados envíos mensajes') %></li>
+                <li><%= _('Acuse recibo mensajes') %></li>
+                <li><%= _('Ilimitados Chats simultáneos') %></li>
                 <li><%= _('Navegación oculta') %></li>
+                <li><%= _('Opciones avanzadas libres') %></li>
               </ul>
               <div class="call">
                 <% if current_user.has_role? :premium_user %>

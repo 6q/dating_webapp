@@ -20,7 +20,7 @@ section#pay {
 
     z-index:2;
     width:240px;
-    background:#fff;
+    background:#6d7b87;
     border-radius:5px;
     box-shadow:0px 5px 5px rgba(0,0,0,.2);
     margin-left: auto;
@@ -29,6 +29,7 @@ section#pay {
 
     ul {
       li {
+        color: #fff;
         font-size:.8em;
         line-height:1.2em;
         margin-bottom:1em;
@@ -37,7 +38,7 @@ section#pay {
     }
 
     h3 {
-      background:$link-color;
+      background:#586066;
       margin:0;
       color:#fff;
       margin-bottom:.5em;
@@ -60,6 +61,7 @@ section#pay {
 
     &.plan2 {
       font-size:1.2em;
+      background:#fff;
       width:350px;
       margin-top:-13px;
       z-index:3;
@@ -67,10 +69,15 @@ section#pay {
 
       ul {
         margin-top:20px;
+        li {
+          color: $link-color;
+        }
       }
 
-      h3 {
-        background:#51A351;
+      h3, h4 {
+        margin: 0;
+        color:#fff;
+        background:#7298b8;
       }
 
       button {
