@@ -71,15 +71,17 @@
       setTimeout(getNotifications, 5000);
       c_video_chat = <%= current_user.has_role?(:premium_user) ? '1' : '0' %>;
 
-      <% unless current_user.has_role?(:premium_user) %>
       function chatWith(id) {
+      <% unless current_user.has_role?(:premium_user) %>
         if ($('#arrowchat_chatboxes_wide .arrowchat_bar_right').size() < 2) {
           jqac.arrowchat.chatWith(id);
         } else {
           $('#upgrade-account-modal').click();
         }
-      }
+      <% else %>
+        jqac.arrowchat.chatWith(id);
       <% end %>
+      }
     </script>
   <% end %>
 </html>

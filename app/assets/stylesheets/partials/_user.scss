@@ -487,6 +487,14 @@ section.chat{
         font-size:1.2em;
         font-weight:bold;
       }
+      .readed {
+        font-style: italic;
+
+        a {
+          font-size:1em;
+          font-weight:bold;
+        }
+      }
     }
 
     .msg-date {
