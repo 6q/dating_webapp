@@ -771,6 +771,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def can_message?
+    self.has_role?(:premium_user) || 5 > (self.mailbox.conversations.map { |c| c.receipts.where(mailbox_type: "sentbox").where(c.receipts.arel_table[:created_at].gt(1.days.ago)) }.flatten.length)
+  end
+
   def can_message_to?(user)
     if user.general_settings.receive_messages_only_from_likes
       if self.liker?(user)
