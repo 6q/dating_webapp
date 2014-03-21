@@ -124,6 +124,8 @@
 #  uid                    :string(255)
 #  oauth_token            :string(255)
 #  oauth_expires_at       :datetime
+#  customer_id            :string(255)
+#  last_4_digits          :string(255)
 
 require_dependency 'minimum_age_validator'
 
@@ -694,6 +696,7 @@ class User < ActiveRecord::Base
           customer.cancel_subscription
         end
       end
+      self.general_settings.update_attributes({anonymous_browsing: 0, newsletter: 1}, {as: :premium_user})
       self.remove_role :premium_user
       self.add_role :regular_user
       self.last_4_digits = nil

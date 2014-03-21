@@ -106,6 +106,7 @@ class UsersController < ApplicationController
         flash[:error] = _('Oops!')
       end
     else
+      params[:general_setting].except!(:newsletter, :anonymous_browsing)
       if current_user.general_settings.update_attributes(params[:general_setting])
         flash[:success] = _('Configuración actualizada')
       else
@@ -196,11 +197,11 @@ class UsersController < ApplicationController
 
       params[:q].except!(:id_in)
     end
-    
-    def check_if_must_complete_fields    
-      if current_user && !current_user.has_all_fields? 
+
+    def check_if_must_complete_fields
+      if current_user && !current_user.has_all_fields?
         redirect_to complete_fields_url, :alert => _('Debes completar tus datos para poder usar Cellove') and return
       end
     end
-    
+
 end
