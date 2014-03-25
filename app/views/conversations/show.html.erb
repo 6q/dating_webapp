@@ -42,16 +42,28 @@
                 <div class="pic"><%= link_to profile_pic(current_user, width: 60, height: 60), current_user %></div>
 
                 <div class="msg-actions">
-                  <%= link_to _('Responder'), '#', class: 'action-reply' %><%= (' - ' + link_to(_('Proponer actividad'), "#activity-proposal-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal')).html_safe unless @conversation.activity %> - <%= link_to 'Bloquear', "#user-block-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal' %>
+                  <%= link_to _('Responder'), '#', class: 'action-reply' %><%= (' - ' + link_to(_('Proponer actividad'), "#activity-proposal-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal', class: 'action-proposal')).html_safe unless @conversation.activity %> - <%= link_to 'Bloquear', "#user-block-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal' %>
                   <%= link_to _('Eliminar hilo'), "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
                 </div>
 
+                <% if current_user.can_message? %>
                 <div class="reply-form">
                   <%= simple_form_for @conversation.messages.new, url: conversation_path(@conversation), method: :put do |f| %>
                     <%= f.input_field :body %>
                     <%= f.submit _('Responder'), class: 'btn btn-info pull-right' %>
                   <% end %>
                 </div>
+                <% else %>
+                <script type="text/javascript">
+                $(function() {
+                  $('.action-reply').unbind('click').click(function(event) {
+                    event.preventDefault();
+                    $('#upgrade-account-modal').click();
+                  });
+                });
+                </script>
+
+                <% end %>
               </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+<% if current_user.can_message? %>
+
 <!-- Modal -->
 <% user = sender_or_recipient(conversation) %>
 <div id="fast-reply-<%= conversation.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -23,3 +25,15 @@
   <% end %>
 </div>
 <%= render partial: 'conversations/modal_activity', locals: { user: user }%>
+
+<% else %>
+<script type="text/javascript">
+$(function() {
+  $('.reply-msg-btn').unbind('click').click(function(event) {
+    event.preventDefault();
+    $('#upgrade-account-modal').click();
+  });
+});
+</script>
+
+<% end %>
