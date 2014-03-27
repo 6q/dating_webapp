@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140318070744) do
+ActiveRecord::Schema.define(:version => 20140325112349) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -483,6 +483,7 @@ ActiveRecord::Schema.define(:version => 20140318070744) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
     t.boolean  "seen",       :default => false
+    t.boolean  "invisible",  :default => false
   end
 
   add_index "user_visits", ["created_at"], :name => "created_at"

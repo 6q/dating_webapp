@@ -21,7 +21,7 @@
   <%= render "empty-list" %>
 
   <ul class="user-list clearfix">
-    <%= render @users %>
+    <%= render @users, invisibles: true %>
   </ul>
   <div class="pagination">
     <%= pager_total(@users) %>
@@ -29,3 +29,14 @@
   <%= paginate @users %>
 
 </section>
+
+<% unless current_user.has_role?(:premium_user) %>
+<script type="text/javascript">
+$(function() {
+  $('article.anonymous').unbind('click').click(function(event) {
+    event.preventDefault();
+    $('#upgrade-account-modal').click();
+  });
+});
+</script>
+<% end %>

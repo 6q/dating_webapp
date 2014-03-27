@@ -529,16 +529,17 @@ class User < ActiveRecord::Base
   # If a tuple (user_id, visitor_id) already exists in UserVisit,
   # the visited_at attribute is updated
   def visited(user)
+    invisible = self.general_settings.anonymous_browsing
     visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
     if visit
-      visit.update_attributes({ visited_at: Time.now, seen: false })
+      visit.update_attributes({ visited_at: Time.now, seen: false, invisible: invisible })
     else
-      visit = user.user_visits.build({ visited_at: Time.now })
+      visit = user.user_visits.build({ visited_at: Time.now, invisible: invisible })
       visit.visitor_id = self.id
       visit.save
     end
 
-    if visit && !self.general_settings.anonymous_browsing
+    if visit && !invisible
       user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
       send_notification_email(:profile_visit, user)
     end
