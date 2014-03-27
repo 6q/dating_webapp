@@ -53,6 +53,10 @@
         }
       }
     }
+
+    .logo {
+      margin: 40px;
+    }
   }
 
   .modal-footer {
@@ -69,6 +73,22 @@
       left: 0;
       margin-left: 15px;
     }
+  }
+
+  .modal-footer.col2 {
+    div {
+      width: 50%;
+      text-align: center;
+    }
+
+    .left {
+      float:left;
+    }
+
+    .right {
+      float:right;
+    }
+
   }
 }
 
