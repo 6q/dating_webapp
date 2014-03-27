@@ -14,6 +14,10 @@ class FlatPagesController < ApplicationController
   def contact_form
     c = ContactForm.new(params[:contact_form])
     c.deliver
+    flash[:success] = _('Gracias por contactar con Cellove')
+    redirect_to root_path
+  rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+    flash[:alert] = _('Error en el envío')
     redirect_to new_contact_form_path
   end
 
