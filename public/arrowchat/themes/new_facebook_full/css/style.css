@@ -358,7 +358,7 @@
 }
 .arrowchat_tabpopup {
     border-bottom:1px solid #BAC0CD;
-    background-color:#fff;
+    background-color:transparent;
     position:fixed;
     width:230px;
     font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
