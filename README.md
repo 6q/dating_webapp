@@ -80,6 +80,7 @@ Other useful commands:
 
 cap [staging|production] deploy:restart
 cap staging|production] deploy:migrations
+cap -T (for full task list)
 
 Translations
 ------------
