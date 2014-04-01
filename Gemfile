@@ -41,6 +41,7 @@ gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
 gem 'newrelic_rpm'
 gem 'omniauth-facebook'
+gem 'open_uri_redirections' # fixes bug when redirecting gtom http to https (facebook issue)
 gem 'json', '~> 1.8.1' # min. version for stripe
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'stripe_event'
