@@ -20,7 +20,8 @@ gem 'compass_twitter_bootstrap'
 gem 'compass-rails'
 gem "geocoder", "~> 1.1.3"
 gem 'friendly_id'
-gem 'dragonfly', '~>0.9.14'
+#gem 'dragonfly', '~>0.9.14'
+gem 'dragonfly', :git => 'git://github.com/fleveque/dragonfly.git', :branch => 'https_redirects'
 gem 'country_select', github: 'stefanpenner/country_select'
 gem 'localized_country_select', '>= 0.9.3'
 gem 'kaminari'
@@ -41,7 +42,6 @@ gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
 gem 'newrelic_rpm'
 gem 'omniauth-facebook'
-gem 'open_uri_redirections' # fixes bug when redirecting gtom http to https (facebook issue)
 gem 'json', '~> 1.8.1' # min. version for stripe
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'stripe_event'
