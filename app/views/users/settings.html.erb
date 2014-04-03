@@ -11,10 +11,9 @@
         <%= fields_for current_user.general_settings do |f1| %>
 
           <article class="clearfix">
+            <h5><%= _('Visibilidad') %></h5>
+            <p><%= _('¿Quien quieres que te vea?') %></p>
             <div class="col">
-              <h5><%= _('Visibilidad') %></h5>
-              <p><%= _('¿Quien quieres que te vea?') %></p>
-
               <div class="control-group clearfix">
                 <div class="span3 right"><strong><%= _('Activar navegación oculta') %></strong></div>
                 <div class="checkbox">
@@ -22,6 +21,8 @@
                   <%= f1.label :anonymous_browsing %>
                 </div>
               </div>
+            </div>
+            <div class="col">
               <div class="control-group clearfix">
                 <div class="span3 right"><strong><%= _('Estar visible solo para los usuari@s con franja de edad indicada en: "Editar perfil" + "Que buscas"') %></strong></div>
                 <div class="checkbox">
@@ -29,26 +30,13 @@
                   <%= f1.label :age_restriction %>
                 </div>
               </div>
-              <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Solo recibir mensajes de perfiles que me han gustado') %></strong></div>
-                <div class="checkbox">
-                  <%= f1.check_box :receive_messages_only_from_likes %>
-                  <%= f1.label :receive_messages_only_from_likes %>
-                </div>
-              </div>
-              <div class="control-group clearfix">
-                <div class="span3 right"><strong><%= _('Solo recibir chats de perfiles que me han gustado') %></strong></div>
-                <div class="checkbox">
-                  <%= f1.check_box :allow_chat_only_from_likes %>
-                  <%= f1.label :allow_chat_only_from_likes %>
-                </div>
-              </div>
             </div>
+          </article>
+          <article class="clearfix">
+            <h5><%= _('Notificaciones por email') %></h5>
+            <p><%= _('¿Que notificaciones quieres recibir?') %></p>
 
             <div class="col">
-              <h5><%= _('Notificaciones por email') %></h5>
-              <p><%= _('¿Que notificaciones quieres recibir?') %></p>
-
               <div class="control-group clearfix">
                 <div class="span3 right"><strong><%= _('No enviar notificaciones si estoy online') %></strong></div>
                   <div class="checkbox">
@@ -77,6 +65,8 @@
                     <%= f1.label :receive_message %>
                 </div>
               </div>
+            </div>
+            <div class="col">
               <div class="control-group clearfix">
                 <div class="span3 right"><strong><%= _('Cuando alguien indique que Hacemos buena pareja') %> </strong><%= _('(votaciones de 3 ó 5 estrellas)') %></div>
                   <div class="checkbox">
