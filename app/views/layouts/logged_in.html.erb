@@ -69,7 +69,7 @@
     <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
     <script type="text/javascript">
       setTimeout(getNotifications, 5000);
-      c_video_chat = <%= current_user.has_role?(:premium_user) ? '1' : '0' %>;
+      <%# c_video_chat = <%= current_user.has_role?(:premium_user) ? '1' : '0' %><%#;%>
 
       function chatWith(id) {
       <% unless current_user.has_role?(:premium_user) %>
