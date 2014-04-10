@@ -19,21 +19,25 @@ module UserRetrieval
 
     #.joins('LEFT JOIN (SELECT receiver_id, COUNT(*) AS cnt FROM receipts WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY receiver_id) r ON r.receiver_id = users.id')
 
-    query = self.nearbys(100000).select('COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(d.cnt, 0) as pictures_count')
-    .joins('LEFT JOIN (SELECT attachable_id, COUNT(*) AS cnt FROM pictures GROUP BY attachable_id) d ON d.attachable_id = users.id')
-    .joins('LEFT JOIN (SELECT user_id, COUNT(*) AS cnt FROM user_visits WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) v ON v.user_id = users.id')
-    .joins('LEFT JOIN (SELECT user_id, COUNT(*) AS cnt FROM likes WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) l ON l.user_id = users.id')
-    .joins('LEFT JOIN pictures p ON p.attachable_id = users.id')
-    .where("users.id NOT IN (?)", not_in)
-    .where("users.gender = ?", self.matching_gender)
-    .where("users.lf_gender = ?", self.gender)
-    .reorder(order[order_type])
-    .limit(limit)
-    .uniq
+    if self.nearbys(100000).nil?
+      query = []
+    else
+      query = self.nearbys(100000).select('COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(d.cnt, 0) as pictures_count')
+      .joins('LEFT JOIN (SELECT attachable_id, COUNT(*) AS cnt FROM pictures GROUP BY attachable_id) d ON d.attachable_id = users.id')
+      .joins('LEFT JOIN (SELECT user_id, COUNT(*) AS cnt FROM user_visits WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) v ON v.user_id = users.id')
+      .joins('LEFT JOIN (SELECT user_id, COUNT(*) AS cnt FROM likes WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) l ON l.user_id = users.id')
+      .joins('LEFT JOIN pictures p ON p.attachable_id = users.id')
+      .where("users.id NOT IN (?)", not_in)
+      .where("users.gender = ?", self.matching_gender)
+      .where("users.lf_gender = ?", self.gender)
+      .reorder(order[order_type])
+      .limit(limit)
+      .uniq
 
-    if self.lf_age_from.present? && self.lf_age_to.present?
-      query = query.where('birth_date <= ?', self.lf_age_from.to_i.years.ago.beginning_of_year)
-      query = query.where('birth_date >= ?', self.lf_age_to.to_i.years.ago.end_of_year)
+      if self.lf_age_from.present? && self.lf_age_to.present?
+        query = query.where('birth_date <= ?', self.lf_age_from.to_i.years.ago.beginning_of_year)
+        query = query.where('birth_date >= ?', self.lf_age_to.to_i.years.ago.end_of_year)
+      end
     end
 
     query
