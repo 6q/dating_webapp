@@ -837,11 +837,15 @@ section.chat{
           h5 {
 
             font-size: 1.5em;
-            &.online {
-              border-left:#6BC36C 10px solid;
-              padding-left:10px;
-              border-radius:3px;
-              padding-top:3px;
+
+            .online {
+              display: block;
+              float: left;
+              margin-right: 10px;
+              border-radius: 50%;
+              width: 20px;
+              height: 20px;
+              background:#6BC36C;
             }
 
             span {
