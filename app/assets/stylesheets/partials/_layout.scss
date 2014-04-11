@@ -497,6 +497,43 @@ footer {
       color:#747474;
     }
   }
+
+  #social-networks {
+    text-align: center;
+    width: 120px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+
+    a {
+      display:block;
+      float:left;
+      width:36px;
+      height:30px;
+      background:image-url('sprite-social.png') top left no-repeat;
+      font-size:.8em;
+      color:#666;
+
+      &:first-child {
+        margin-left:10px;
+      }
+
+      &:hover {
+        text-decoration:none;
+        color:#000;
+      }
+    }
+
+    $i: 0;
+    $sns:'facebook','twitter','youtube';
+    @each $sn in $sns {
+      a.#{$sn} {
+        background-position: -36px*$i 0;
+        opacity: 0.4;
+        $i: $i+1;
+      }
+    }
+  }
 }
 
 /* Flash messages */
