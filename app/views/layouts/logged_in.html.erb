@@ -73,11 +73,11 @@
 
       <% unless current_user.has_role?(:premium_user) %>
       function chatWith(id) {
-        if ($('#arrowchat_chatboxes_wide .arrowchat_bar_right').size() < 2) {
+        //if ($('#arrowchat_chatboxes_wide .arrowchat_bar_right').size() < 2) {
           jqac.arrowchat.chatWith(id);
-        } else {
+        /*} else {
           $('#upgrade-account-modal').click();
-        }
+        }*/
       }
       <% end %>
     </script>
