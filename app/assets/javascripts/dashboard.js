@@ -10,6 +10,7 @@ $(function() {
         section = $('#' + data.id)
         section.replaceWith(data.template);
         likes_bind();
+        $( "[data-toggle='tooltip']" ).tooltip({html:true});
       }
     });
   })
