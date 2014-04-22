@@ -9,3 +9,7 @@ role :db, domain, :primary => true
 ssh_options[:port] = 22
 
 require 'capistrano-unicorn'
+
+set :whenever_environment, defer { stage }
+set :whenever_identifier, defer { "#{application}_#{stage}" }
+require "whenever/capistrano"

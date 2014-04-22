@@ -70,4 +70,12 @@ class UserMailer < ActionMailer::Base
     @reported = reported
     mail(to: 'cellove@cellove.com', subject: _('Perfil denunciado | Cellove.com'))
   end
+
+  def custom_newsletter(user, users_lists)
+    @user         = user
+    @users_lists  = users_lists
+    mail(:to => user.email, :subject => _('Newsletter | Cellove.com'))
+    prevent_delivery_to_unconfirmed
+  end
+
 end
