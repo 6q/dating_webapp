@@ -44,6 +44,8 @@ gem 'omniauth-facebook'
 gem 'json', '~> 1.8.1' # min. version for stripe
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'stripe_event'
+gem 'daemons', '~> 1.1.9'
+gem 'delayed_job_active_record', '~> 4.0.1'
 
 group :test do
   gem 'sqlite3'

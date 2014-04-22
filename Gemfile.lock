@@ -89,7 +89,13 @@ GEM
       compass (>= 0.12.2, < 0.14)
     compass_twitter_bootstrap (2.3.1)
       compass
+    daemons (1.1.9)
     database_cleaner (1.0.1)
+    delayed_job (4.0.1)
+      activesupport (>= 3.0, < 4.2)
+    delayed_job_active_record (4.0.1)
+      activerecord (>= 3.0, < 4.2)
+      delayed_job (>= 3.0, < 4.1)
     devise (2.2.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -334,7 +340,9 @@ DEPENDENCIES
   compass-rails
   compass_twitter_bootstrap
   country_select!
+  daemons (~> 1.1.9)
   database_cleaner
+  delayed_job_active_record (~> 4.0.1)
   devise (>= 2.2.3)
   dragonfly (~> 0.9.14)
   exception_notification

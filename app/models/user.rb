@@ -803,4 +803,16 @@ class User < ActiveRecord::Base
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first
   end
+
+  def self.custom_newsletters
+    users = where(email: 'info@quantic.cat')
+    users.each do |user|
+      could_interest_me = user.could_interest_me(4).sample(4)
+      best_index        = user.best_index(4).sample(4)
+      new_users_near_me = user.new_users_near_me(4).sample(4)
+      users_lists       = {could_interest_me: could_interest_me, best_index: best_index, new_users_near_me: new_users_near_me}
+
+      UserMailer.custom_newsletter(user, users_lists).deliver
+    end
+  end
 end
