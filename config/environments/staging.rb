@@ -76,6 +76,10 @@ Cellove::Application.configure do
     :password  => ENV["MANDRILL_API_KEY"]
   }
 
+  # Absolute urls on assets for mailer
+  config.action_controller.asset_host = 'http://staging.cellove.com'
+  config.action_mailer.asset_host = config.action_controller.asset_host
+
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5

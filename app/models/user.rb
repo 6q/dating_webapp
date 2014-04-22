@@ -766,7 +766,7 @@ class User < ActiveRecord::Base
       new_users_near_me = user.new_users_near_me(4).sample(4)
       users_lists       = {could_interest_me: could_interest_me, best_index: best_index, new_users_near_me: new_users_near_me}
 
-      UserMailer.custom_newsletter(user, users_lists).deliver
+      UserMailer.custom_newsletter(user, users_lists).deliver if (could_interest_me.count + best_index.count + new_users_near_me.count) >= 4
     end
   end
 end
