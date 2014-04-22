@@ -1,5 +1,6 @@
 #encoding: utf-8
 class UserMailer < ActionMailer::Base
+  helper :user
   default from: "Cellove.com <mail@cellove.com>"
 
   def prevent_delivery_to_unconfirmed

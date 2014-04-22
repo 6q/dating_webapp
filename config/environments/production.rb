@@ -76,6 +76,10 @@ Cellove::Application.configure do
     :password  => "pOXqz6e8hM8pTs3OnpdddA"
   }
 
+  # Absolute urls on assets for mailer
+  config.action_controller.asset_host = 'http://cellove.com'
+  config.action_mailer.asset_host = config.action_controller.asset_host
+
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5

@@ -50,24 +50,34 @@
                                         </tr>
                                         <tr>
                                             <td valign="top" align="center" style="padding-top:10px;padding-right:40px;padding-bottom:30px;padding-left:40px;color:#373737;font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:150%;text-align:left">
-                                                <p>
-                                                    <% @users_lists[:could_interest_me].each do |u| %>
-                                                        <%= link_to profile_pic(u), u %>
-                                                        <%= link_to truncate(u.display_name, length: 16), u %>
-                                                    <% end %>
-                                                </p>
-                                                <p>
-                                                    <% @users_lists[:best_index].each do |u| %>
-                                                        <%= link_to profile_pic(u), u %>
-                                                        <%= link_to truncate(u.display_name, length: 16), u %>
-                                                    <% end %>
-                                                </p>
-                                                <p>
-                                                    <% @users_lists[:new_users_near_me].each do |u| %>
-                                                        <%= link_to profile_pic(u), u %>
-                                                        <%= link_to truncate(u.display_name, length: 16), u %>
-                                                    <% end %>
-                                                </p>
+                                                <table cellspacing="10" cellpadding="10" border="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <% @users_lists[:could_interest_me].each do |u| %>
+                                                            <td>
+                                                                <%= link_to profile_pic(u), user_url(u) %><br>
+                                                                <%= link_to truncate(u.display_name, length: 16), user_url(u) %>
+                                                            </td>
+                                                            <% end %>
+                                                        </tr>
+                                                        <tr>
+                                                            <% @users_lists[:best_index].each do |u| %>
+                                                            <td>
+                                                                <%= link_to profile_pic(u), user_url(u) %><br>
+                                                                <%= link_to truncate(u.display_name, length: 16), user_url(u) %>
+                                                            </td>
+                                                            <% end %>
+                                                        </tr>
+                                                        <tr>
+                                                            <% @users_lists[:new_users_near_me].each do |u| %>
+                                                            <td>
+                                                                <%= link_to profile_pic(u), user_url(u) %><br>
+                                                                <%= link_to truncate(u.display_name, length: 16), user_url(u) %>
+                                                            </td>
+                                                            <% end %>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </td>
                                         </tr>
                                         <tr>
