@@ -1,7 +1,7 @@
 module UserRetrieval
   extend ActiveSupport::Concern
 
-  def build_query(not_in, limit = 20, order_type = :by_visits)
+  def build_query(not_in, limit = 20, order_type = :by_visits, radius = 100000)
     order = {
       :by_visits => 'p.main IS NULL, distance ASC, visits_count DESC, pictures_count DESC, likes_count DESC, cellove_index DESC',
       :by_likes => 'p.main IS NULL, distance ASC, likes_count DESC, pictures_count DESC, visits_count DESC, cellove_index DESC',
@@ -19,10 +19,10 @@ module UserRetrieval
 
     #.joins('LEFT JOIN (SELECT receiver_id, COUNT(*) AS cnt FROM receipts WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY receiver_id) r ON r.receiver_id = users.id')
 
-    if self.nearbys(100000).nil?
+    if self.nearbys(radius).nil?
       query = []
     else
-      query = self.nearbys(100000).select('COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(d.cnt, 0) as pictures_count')
+      query = self.nearbys(radius).select('COALESCE(v.cnt, 0) as visits_count, COALESCE(l.cnt, 0) as likes_count, COALESCE(d.cnt, 0) as pictures_count')
       .joins('LEFT JOIN (SELECT attachable_id, COUNT(*) AS cnt FROM pictures GROUP BY attachable_id) d ON d.attachable_id = users.id')
       .joins('LEFT JOIN (SELECT user_id, COUNT(*) AS cnt FROM user_visits WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) v ON v.user_id = users.id')
       .joins('LEFT JOIN (SELECT user_id, COUNT(*) AS cnt FROM likes WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 50 day) GROUP BY user_id) l ON l.user_id = users.id')
@@ -43,29 +43,29 @@ module UserRetrieval
     query
   end
 
-  def retrieve_users(limit = 20, order_type = :by_visits, exclude = [])
+  def retrieve_users(limit = 20, order_type = :by_visits, exclude = [], radius = 100000)
     @last_query ||= []
     exclude     ||= []
-    result = build_query(self.get_all_invisible_to_me + @last_query + exclude, limit, order_type)
+    result = build_query(self.get_all_invisible_to_me + @last_query + exclude, limit, order_type, radius)
 
     result_ids = result.map(&:id)
     @last_query += result_ids
     result
   end
 
-  def best_suited_near_me(limit = 12, exclude = [])
-    retrieve_users(limit, :by_pictures, exclude)
+  def best_suited_near_me(limit = 12, exclude = [], radius = 100000)
+    retrieve_users(limit, :by_pictures, exclude, radius)
   end
 
-  def could_interest_me(limit = 20, exclude = [])
-    retrieve_users(limit, :by_likes, exclude)
+  def could_interest_me(limit = 20, exclude = [], radius = 100000)
+    retrieve_users(limit, :by_likes, exclude, radius)
   end
 
-  def best_index(limit = 20, exclude = [])
-    retrieve_users(limit, :by_index, exclude)
+  def best_index(limit = 20, exclude = [], radius = 100000)
+    retrieve_users(limit, :by_index, exclude, radius)
   end
 
-  def new_users_near_me(limit = 20, exclude = [])
-    retrieve_users(limit, :by_recent, exclude)
+  def new_users_near_me(limit = 20, exclude = [], radius = 100000)
+    retrieve_users(limit, :by_recent, exclude, radius)
   end
 end

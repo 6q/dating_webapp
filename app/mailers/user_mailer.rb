@@ -84,9 +84,9 @@ class UserMailer < ActionMailer::Base
     prevent_delivery_to_unconfirmed
   end
 
-  def custom_newsletter(user, users_lists)
-    @user         = user
-    @users_lists  = users_lists
+  def custom_newsletter(user, users_list)
+    @user       = user
+    @users_list = users_list
     mail(:to => user.email, :subject => _('Newsletter | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end

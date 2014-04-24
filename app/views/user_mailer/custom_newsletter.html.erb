@@ -44,7 +44,7 @@
                                         <tr>
                                             <td valign="top" align="center" style="padding-top:30px;padding-right:40px;padding-bottom:10px;padding-left:40px">
                                                 <h2 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:26px;font-weight:bold;line-height:115%;margin:0;padding:0;text-align:left;color:#373737!important;text-decoration:none!important">
-                                                    <%= _('Que hay de nuevo en ') %> <%= link_to 'Cellove', root_url %>, <%= @user.name %>
+                                                    <%= _('Perfiles que podrían interesarte en ') %> <%= link_to 'Cellove', root_url %>, <%= @user.name %>
                                                 </h2>
                                             </td>
                                         </tr>
@@ -52,30 +52,16 @@
                                             <td valign="top" align="center" style="padding-top:10px;padding-right:40px;padding-bottom:30px;padding-left:40px;color:#373737;font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:150%;text-align:left">
                                                 <table cellspacing="10" cellpadding="10" border="0">
                                                     <tbody>
+                                                        <% @users_list.each_slice(3) do |slice| %>
                                                         <tr>
-                                                            <% @users_lists[:could_interest_me].each do |u| %>
+                                                            <% slice.each do |u| %>
                                                             <td>
                                                                 <%= link_to profile_pic(u), user_url(u) %><br>
                                                                 <%= link_to truncate(u.display_name, length: 16), user_url(u) %>
                                                             </td>
                                                             <% end %>
                                                         </tr>
-                                                        <tr>
-                                                            <% @users_lists[:best_index].each do |u| %>
-                                                            <td>
-                                                                <%= link_to profile_pic(u), user_url(u) %><br>
-                                                                <%= link_to truncate(u.display_name, length: 16), user_url(u) %>
-                                                            </td>
-                                                            <% end %>
-                                                        </tr>
-                                                        <tr>
-                                                            <% @users_lists[:new_users_near_me].each do |u| %>
-                                                            <td>
-                                                                <%= link_to profile_pic(u), user_url(u) %><br>
-                                                                <%= link_to truncate(u.display_name, length: 16), user_url(u) %>
-                                                            </td>
-                                                            <% end %>
-                                                        </tr>
+                                                        <% end %>
                                                     </tbody>
                                                 </table>
                                             </td>
