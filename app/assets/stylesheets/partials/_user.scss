@@ -89,6 +89,8 @@
 
               a {
                 text-decoration:none;
+                white-space: nowrap;
+                overflow: hidden;
               }
 
           span {
@@ -1732,7 +1734,7 @@ section.list {
 
       small {
         color: #5caae8;
-        font-size: .7em;
+        font-size: .6em;
         display: block;
         margin-top: -5px;
       }

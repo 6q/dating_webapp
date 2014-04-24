@@ -254,7 +254,7 @@ class User < ActiveRecord::Base
   after_validation :geocode
 
   def has_all_fields?
-    self.has_role?(:regular_user) && self.city && self.country && self.name
+    (self.has_role?(:regular_user) || self.has_role?(:premium_user)) && self.city && self.country && self.name
   end
 
   def self.new_invitee(invitee, is_rec=false)

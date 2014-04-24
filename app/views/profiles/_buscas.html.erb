@@ -9,7 +9,7 @@
 		<%= user.label :lf_age_from, _('de entre') %>
     <%= user.select :lf_age_from, 18..99, {}, :class => 'input-mini' %>
 		<%= user.label :lf_age_to, 'y' %>
-    <%= user.select :lf_age_to, 18..99, {:selected => 99}, :class => 'input-mini' %>
+    <%= user.select :lf_age_to, 18..99, {:selected => @user.lf_age_to || 99}, :class => 'input-mini' %>
 		<%= user.label :lf_relationship, _('años. Para') %>
 		<%= user.select :lf_relationship, lf_relationship_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
 		<small><%= _('* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán.') %></small>
