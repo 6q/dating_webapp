@@ -12,6 +12,6 @@ end
 # end
 
 # every :thursday, :at => '10am' do
-every 10.minutes do
+every 1.hour do
   runner "User.custom_newsletters"
 end
