@@ -1,5 +1,6 @@
 #encoding: utf-8
 class UserMailer < ActionMailer::Base
+  helper :user
   default from: "Cellove.com <mail@cellove.com>"
 
   def prevent_delivery_to_unconfirmed
@@ -80,6 +81,13 @@ class UserMailer < ActionMailer::Base
   def no_vip(user)
     @user = user
     mail(:to => user.email, :subject => _('Dejaste de ser VIP | Cellove.com'))
+    prevent_delivery_to_unconfirmed
+  end
+
+  def custom_newsletter(user, users_list)
+    @user       = user
+    @users_list = users_list
+    mail(:to => user.email, :subject => _('Newsletter | Cellove.com'))
     prevent_delivery_to_unconfirmed
   end
 

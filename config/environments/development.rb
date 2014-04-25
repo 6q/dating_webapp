@@ -27,6 +27,10 @@ Cellove::Application.configure do
     :password  => ENV["MANDRILL_API_KEY"]
   }
 
+  # Absolute urls on assets for mailer
+  config.action_controller.asset_host = 'http://localhost:3000'
+  config.action_mailer.asset_host = config.action_controller.asset_host
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 

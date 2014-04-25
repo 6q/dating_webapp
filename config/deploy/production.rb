@@ -7,3 +7,7 @@ role :web, domain
 role :db, domain, :primary => true
 
 require 'capistrano-unicorn'
+
+set :whenever_environment, defer { stage }
+set :whenever_identifier, defer { "#{application}_#{stage}" }
+require "whenever/capistrano"

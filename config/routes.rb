@@ -109,6 +109,8 @@ Cellove::Application.routes.draw do
 
   get :cities, to: 'cities#index'
 
+  get 'send_newsletters' => 'users#send_newsletters', as: :send_newsletters # Only for testing! remove!
+
   mount StripeEvent::Engine => '/stripe'
 
 end
