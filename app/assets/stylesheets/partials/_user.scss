@@ -86,11 +86,10 @@
           margin:0;
           padding:0;
           padding:5px;
+          white-space: nowrap;
 
               a {
                 text-decoration:none;
-                white-space: nowrap;
-                overflow: hidden;
               }
 
           span {
@@ -99,6 +98,11 @@
           li {
 
             &.picker {
+
+              a {
+                white-space: nowrap;
+                overflow: hidden;
+              }
 
               i {
                 display:inline-block;
