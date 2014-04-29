@@ -7,7 +7,7 @@
         <%= f.select :lf_age_from, 18..99, {}, class: 'input-mini', maxlength: 2 %>
         <label for="user[lf_age_to]"><%= _('a') %></label>
         <%= f.select :lf_age_to, 18..99, {:selected => 99}, class: 'input-mini', maxlength: 2 %>
-        <%= _('años.') %>
+        <label><%= _('años.') %></label>
         <%= f.submit _('Guardar'), class: 'btn btn-success' %>
       <% end %>
       <div class="clearfix"></div>
