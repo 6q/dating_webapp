@@ -3,7 +3,7 @@ module UserHelper
   def profile_pic_url(user, options)
     size = "#{options[:width]}x#{options[:height]}#"
     url = nil
-    if profile_pic = user.profile_picture
+    if user && profile_pic = user.profile_picture
       url = profile_pic.image.thumb(size).url
     else
       app = Dragonfly[:images]
@@ -36,7 +36,7 @@ module UserHelper
       return ""
     end
     html = '<div class="user-detail clearfix">'
-    html += user_link_with_picture(user) 
+    html += user_link_with_picture(user)
     html += "<div class=\"data\">#{link_to(user.name, user)}, #{user.age} Años - #{user.city}</div>"
     html += '</div>'
 
