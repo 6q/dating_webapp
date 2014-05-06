@@ -108,7 +108,7 @@ Cellove::Application.routes.draw do
 
   get :cities, to: 'cities#index'
 
-  match '/404' => 'errors#error_404'
-  match '/422' => 'errors#error_422'
-  match '/500' => 'errors#error_500'
+  # match '/404' => 'errors#error_404'
+  # match '/422' => 'errors#error_422'
+  # match '/500' => 'errors#error_500'
 end
