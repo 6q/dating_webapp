@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render partial: "layouts/common_head" %>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %>">
+    <%= render partial: "layouts/changing_background" %>
+    <header role="banner" class="clearfix">
+      <div class="container">
+        <%#= render 'layouts/header-login' %>
+        <div id="logo">
+          <span class="beta">beta</span>
+          <h1><%= link_to "Cellove", root_path, :class => 'brand' %></h1>
+          <h2><%= _('Ponle alas al amor') %></h2>
+        </div>
+        <%#= render 'layouts/navigation' %>
+      </div>
+    </header>
+    <div class="container">
+      <section role="main">
+        <% if @sidebar %>
+          <div class="row">
+            <div class="span3">
+              <%= render 'shared/flat-sidebar' %>
+            </div>
+            <div class="span9">
+              <div class="box">
+                <div class="box-content">
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <%= yield %>
+        <% end %>
+      </section>
+    </div>
+    <%= render 'shared/in_love' %>
+    <%= render 'shared/footer' %>
+    <%= render 'layouts/messages' %>
+    <%= render 'shared/modal_progress' %>
+    <%= render 'shared/cookies' %>
+    </div>
+    <%= render 'shared/scripts' %>
+  </body>
+</html>

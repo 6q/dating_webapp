@@ -9,7 +9,11 @@
   <div class="modal-body">
     <div class="center">
       <% s_or_r = sender_or_recipient(conversation) %>
-      <p><%= _('¿Seguro que deseas eliminar el mensaje de') %> <strong><%= link_to s_or_r.name, s_or_r %></strong>?</p>
+      <% if s_or_r %>
+        <p><%= _('¿Seguro que deseas eliminar el mensaje de') %> <strong><%= link_to s_or_r.name, s_or_r %></strong>?</p>
+      <% else %>
+        <p><%= _('¿Seguro que deseas eliminar el mensaje') %></p>
+      <% end %>
     </div>
   </div>
   <div class="modal-footer center">

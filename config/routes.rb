@@ -113,4 +113,8 @@ Cellove::Application.routes.draw do
 
   mount StripeEvent::Engine => '/stripe'
 
+  # match '/404' => 'errors#error_404'
+  # match '/422' => 'errors#error_422'
+  # match '/500' => 'errors#error_500'
+
 end
