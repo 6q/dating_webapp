@@ -761,9 +761,9 @@ class User < ActiveRecord::Base
   def self.custom_newsletters
     users = where(email: 'info@quantic.cat')
     users.each do |user|
-      new_users_near_me = user.new_users_near_me(12, [], 50)#.sample(12) # TODO: Pass exclude param to not send same users again
+      new_inedit_users_near_me = user.new_inedit_users_near_me(12, 50)
 
-      UserMailer.custom_newsletter(user, new_users_near_me).deliver if new_users_near_me.count >= 4
+      UserMailer.custom_newsletter(user, new_inedit_users_near_me).deliver if new_inedit_users_near_me.count >= 4
     end
   end
 end
