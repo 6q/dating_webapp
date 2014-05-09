@@ -140,8 +140,12 @@ class UsersController < ApplicationController
 
   # Just for testing, remove it or move to another controller
   def send_newsletters
-    User.custom_newsletters
-    redirect_to :root, notice: _('Ok, newsletter en proceso')
+    if User.custom_newsletters
+        flash[:success] = _('Ok, newsletter en proceso')
+    else
+      flash[:error] = _('Oops!')
+    end
+    redirect_to :root
   end
 
   private

@@ -70,7 +70,7 @@ module UserRetrieval
   end
 
   def new_inedit_users_near_me(limit = 20, radius = 100000)
-    exclude = []
+    exclude = self.user_mailings.map(&:sent_user_id)
     new_users_near_me(limit, exclude, radius)
   end
 end
