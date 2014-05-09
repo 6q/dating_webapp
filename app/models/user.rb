@@ -182,6 +182,9 @@ class User < ActiveRecord::Base
   has_many :user_hides
   has_many :hidden_users, through: :user_hides, source: :hidden_user
 
+  has_many :user_mailings
+  has_many :mailed_users, through: :user_mailings, source: :mailed_user
+
   # rates that the user has done
   has_many :ratings_given, :class_name => "Rate", :foreign_key => :rater_id
   # ratings that have been received by the user
@@ -806,10 +809,21 @@ class User < ActiveRecord::Base
 
   def self.custom_newsletters
     users = where(email: 'info@quantic.cat')
+    #User.find_each(:batch_size => 200) do |user|
     users.each do |user|
       new_inedit_users_near_me = user.new_inedit_users_near_me(12, 50)
+      if new_inedit_users_near_me.count >= 4
+        user.add_mailing_sent_users new_inedit_users_near_me
+        UserMailer.custom_newsletter(user, new_inedit_users_near_me).deliver
+      end
+    end
+  # rescue
+  #   false
+  end
 
-      UserMailer.custom_newsletter(user, new_inedit_users_near_me).deliver if new_inedit_users_near_me.count >= 4
+  def add_mailing_sent_users(users)
+    users.each do |user|
+      self.user_mailings.create({ sent_user_id: user.id })
     end
   end
 end
