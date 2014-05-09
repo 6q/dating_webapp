@@ -68,4 +68,9 @@ module UserRetrieval
   def new_users_near_me(limit = 20, exclude = [], radius = 100000)
     retrieve_users(limit, :by_recent, exclude, radius)
   end
+
+  def new_inedit_users_near_me(limit = 20, radius = 100000)
+    exclude = []
+    new_users_near_me(limit, exclude, radius)
+  end
 end
