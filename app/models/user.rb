@@ -762,17 +762,13 @@ class User < ActiveRecord::Base
   end
 
   def self.custom_newsletters
-    users = where(email: 'info@quantic.cat')
-    #User.find_each(:batch_size => 200) do |user|
-    users.each do |user|
+    User.where('confirmation_token is NULL').find_each(:batch_size => 200) do |user|
       new_inedit_users_near_me = user.new_inedit_users_near_me(12, 50)
       if new_inedit_users_near_me.count >= 4
         user.add_mailing_sent_users new_inedit_users_near_me
         UserMailer.custom_newsletter(user, new_inedit_users_near_me).deliver
       end
     end
-  # rescue
-  #   false
   end
 
   def add_mailing_sent_users(users)
