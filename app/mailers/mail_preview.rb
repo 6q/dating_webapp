@@ -15,4 +15,13 @@ class MailPreview < MailView
     email = 'info@quantic.es'
     mail = UserMailer.invite_celestino(user, email, 'invitation_code_2')
   end
+
+  def custom_newsletter
+    user = User.new do |u|
+      u.name = 'Jill Smith'
+      u.email = 'name@example.com'
+    end
+    users_list = User.order("RAND()").first(12)
+    mail = UserMailer.custom_newsletter(user, users_list)
+  end
 end
