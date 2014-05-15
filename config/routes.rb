@@ -1,6 +1,7 @@
 Cellove::Application.routes.draw do
   if Rails.env.development? || Rails.env.test?
     mount MailPreview => 'mail_view'
+    get 'send_newsletters' => 'users#send_newsletters', as: :send_newsletters # Only for testing!
   end
 
   authenticated :user do
@@ -107,7 +108,6 @@ Cellove::Application.routes.draw do
   resources :searches, only: [:create, :destroy, :show]
 
   get :cities, to: 'cities#index'
-
 
   # match '/404' => 'errors#error_404'
   # match '/422' => 'errors#error_422'
