@@ -4,73 +4,86 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <title>Cellove Newsletter</title>
   </head>
-  <body>
+<body style="background-color:#ffffff">
+    <div style="background-color:#ffffff;margin:0;padding:0;min-height:100%!important;width:100%!important">
+        <center>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" height="100%" style="background-color:#ffffff;margin:0;padding:0;border-collapse:collapse!important;height:100%!important;width:100%!important">
+                <tbody>
+                  <tr>
+                    <td valign="top" align="center" style="padding:30px 20px 30px 20px;margin:0;height:100%!important;width:100%!important">
+                        <table cellspacing="0" cellpadding="0" border="0" style="width:630px;border-collapse:collapse!important">
+                            <tbody>
+                              <tr>
+                                <td align="center">
+                                  <div style="border:#d5dae4 1px solid; width:630px;">
+                                    <table border="0" cellpadding="30" cellspacing="0" width="630px" bgcolor="#e5f2fb" align="center">
+                                      <tr>
+                                        <td>
+                                          <p align="right" style="font-family:Arial; font-size:12px; margin-top:0; margin-bottom:12px; color:#626670;"><%= _('Atención! Añade la dirección mail@cellove.com a tu lista de contactos') %>.</p>
+                                        <!-- begin email container -->
 
-    <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
-      <tr>
-        <td align="center">
-          <div style="border:#d5dae4 1px solid; width:630px;">
-            <table border="0" cellpadding="30" cellspacing="0" width="100%" bgcolor="#e5f2fb" align="center">
-              <tr>
-                <td>
-                  <p align="right" style="font-family:Arial; font-size:12px; margin-top:0; margin-bottom:12px; color:#626670;"><%= _('Atención! Añade la dirección mail@cellove.com a tu lista de contactos') %>.</p>
-                <!-- begin email container -->
+                                          <!-- header -->
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%" height="190">
+                                            <tr>
+                                              <td width="400" align="center" valign="middle" bgcolor="#5cabe8"><a href="#"><img src="<%= root_url %>email/header.jpg"></a></td>
+                                              <td width="200" align="center" valign="middle" bgcolor="#626670"><p align="center" style="font-family:Arial; font-size:23px; margin: 10px 20px; color:#ffffff;"><%= _('Entrar directamente a mi perfil') %></p><p><a href="<%= root_url %>"><span style="background-color:#000000; padding: 5px 10px; border-left: 2px solid #555555; border-top: 2px solid #555555"><span href="<%= root_url %>" style="font-family:Arial; font-size:15px; color:#ffffff; text-decoration: none"><%= _('Entrar') %></span></span></a></p></td>
+                                            </tr>
+                                          </table>
+                                          <!-- end header -->
 
-                  <!-- header -->
-                  <table border="0" cellpadding="0" cellspacing="0" width="100%" height="190">
-                    <tr>
-                      <td width="400" align="center" valign="middle" bgcolor="#5cabe8"><a href="#"><img src="<%= root_url %>email/header.jpg"></a></td>
-                      <td align="center" valign="middle" bgcolor="#626670"><a href="<%= root_url %>"><img src="<%= root_url %>email/entrar-directo.jpg"></a></td>
+                                          <!-- begin main content -->
+
+                                          <div style="border:#d5dae4 1px solid;">
+                                            <table border="0" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff" align="center">
+                                                <tr>
+                                                    <td colspan="4">
+                                                      <p align="center" style="font-family:Arial; font-size:14px; margin-top:10px; margin-bottom:10px; color:#626673;"><%= _('Hola') %> <strong><%= @user.name %></strong>, <%= _('esta semana te sugerimos los siguientes usuari@s') %>.<br><%= _('Accede a tu perfil para ver todos los usuari@s e interactuar con ell@s') %>.</p>
+                                                    </td>
+                                                </tr>
+                                                <% @users_list.each_slice(4) do |slice| %>
+                                                <tr>
+                                                    <% slice.each do |u| %>
+                                                    <td width="25%">
+                                                        <div style="border:#d5dae4 1px solid;">
+                                                            <table border="0" cellpadding="5" cellspacing="0" bgcolor="#ffffff">
+                                                                <tr>
+                                                                    <td><%= link_to profile_pic(u, {width: 110, height: 110}), user_url(u) %></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <%= link_to truncate(u.name + ' ' + u.surname, length: 16), user_url(u), {style: "font-family:Arial; color:#5caae8; font-size:12px; font-weight:bold;"} %><br>
+                                                                        <span style="font-family:Arial; font-size:11px;"><%= truncate(u.city, length: 20) %></span><br>
+                                                                        <span style="font-family:Arial; font-size:11px;"><%= u.age %> <%= _("años")%></span><br>
+                                                                    </td>
+                                                                </tr>
+                                                        </table>
+                                                        </div>
+                                                    </td>
+                                                    <% end %>
+                                                </tr>
+                                                <% end %>
+                                            </table>
+                                          </div>
+
+                                          <!-- end main content -->
+
+                                          <p align="center">
+                                            <p align="center" style="font-family:Arial; font-size:13px; margin-top:0; margin-bottom:10px; color:#626670;"><%= _('Para no volver a recibir más este email, por favor, modifica este parámetro en tu configuración dentro de Cellove.com. No respondas a este email, tu respuesta no será leída. Si tienes alguna duda, contáctanos a través del sitio web de Cellove.com') %></p>
+
+                                        <!-- end email container -->
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                            </table>
+                        </td>
                     </tr>
-                  </table>
-                  <!-- end header -->
-
-                  <!-- begin main content -->
-
-                  <div style="border:#d5dae4 1px solid;">
-                    <table border="0" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff" align="center">
-                        <tr>
-                            <td colspan="4">
-                              <p align="center" style="font-family:Arial; font-size:14px; margin-top:10px; margin-bottom:10px; color:#626673;"><%= _('Hola') %> <strong><%= @user.name %></strong>, <%= _('esta semana te sugerimos los siguientes usuari@s') %>.<br><%= _('Accede a tu perfil para ver todos los usuari@s e interactuar con ell@s') %>.</p>
-                            </td>
-                        </tr>
-                        <% @users_list.each_slice(4) do |slice| %>
-                        <tr>
-                            <% slice.each do |u| %>
-                            <td width="25%">
-                                <div style="border:#d5dae4 1px solid;">
-                                    <table border="0" cellpadding="5" cellspacing="0" bgcolor="#ffffff">
-                                        <tr>
-                                            <td><%= link_to profile_pic(u, {width: 100, height: 100}), user_url(u) %></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <%= link_to truncate(u.name + ' ' + u.surname, length: 16), user_url(u), {style: "font-family:Arial; color:#5caae8; font-size:14px; font-weight:bold;"} %><br>
-                                                <span style="font-family:Arial; font-size:12px;"><%= u.city %></span><br>
-                                                <span style="font-family:Arial; font-size:12px;"><%= u.age %> <%= _("años")%></span><br>
-                                            </td>
-                                        </tr>
-                                </table>
-                                </div>
-                            </td>
-                            <% end %>
-                        </tr>
-                        <% end %>
-                    </table>
-                  </div>
-
-                  <!-- end main content -->
-
-                  <p align="right">
-                    <p align="right" style="font-family:Arial; font-size:13px; margin-top:0; margin-bottom:10px; color:#626670;"><%= _('Para no volver a recibir más este email, por favor, modifica este parámetro en tu configuración dentro de Cellove.com. No respondas a este email, tu respuesta no será leída. Si tienes alguna duda, contáctanos a través del sitio web de Cellove.com') %></p>
-
-                <!-- end email container -->
-                </td>
-              </tr>
+                </tbody>
             </table>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </body>
+        </center>
+    </div>
+</body>
 </html>
