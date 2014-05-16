@@ -19,6 +19,9 @@ class UsersController < ApplicationController
       @best_suited_near_me = current_user.best_suited_near_me
       session[:best_suited_near_me] = @best_suited_near_me.map(&:id)
     end
+  rescue ActiveRecord::RecordNotFound # Solves a problem when a user is deleted. TODO refactor (DRY)
+    @best_suited_near_me = current_user.best_suited_near_me
+    session[:best_suited_near_me] = @best_suited_near_me.map(&:id)
   end
 
   def index
