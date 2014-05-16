@@ -19,6 +19,9 @@ class UsersController < ApplicationController
       @best_suited_near_me = current_user.best_suited_near_me
       session[:best_suited_near_me] = @best_suited_near_me.map(&:id)
     end
+  rescue ActiveRecord::RecordNotFound # Solves a problem when a user is deleted. TODO refactor (DRY)
+    @best_suited_near_me = current_user.best_suited_near_me
+    session[:best_suited_near_me] = @best_suited_near_me.map(&:id)
   end
 
   def index
@@ -196,11 +199,11 @@ class UsersController < ApplicationController
 
       params[:q].except!(:id_in)
     end
-    
-    def check_if_must_complete_fields    
-      if current_user && !current_user.has_all_fields? 
+
+    def check_if_must_complete_fields
+      if current_user && !current_user.has_all_fields?
         redirect_to complete_fields_url, :alert => _('Debes completar tus datos para poder usar Cellove') and return
       end
     end
-    
+
 end
