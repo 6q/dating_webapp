@@ -16,7 +16,7 @@ module UserHelper
     url
   end
 
-  def profile_pic(user = current_user, options = {width: 210, height: 210, invisible: false}, img_options = nil)
+  def profile_pic(user = current_user, options = {width: 210, height: 210, invisible: false}, img_options = {})
     image_tag(profile_pic_url(user, options), img_options)
   end
 
