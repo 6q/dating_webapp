@@ -25,7 +25,7 @@
                                           <!-- header -->
                                           <table border="0" cellpadding="0" cellspacing="0" width="100%" height="190">
                                             <tr>
-                                              <td width="400" align="center" valign="middle" bgcolor="#5cabe8"><a href="#"><img src="<%= root_url %>email/header-no-slogan.jpg"></a></td>
+                                              <td width="400" align="center" valign="middle" bgcolor="#5cabe8"><a href="#"><img src="<%= root_url %>email/header-no-slogan.jpg" border="0"></a></td>
                                               <td width="200" align="center" valign="middle" bgcolor="#626670"><p align="center" style="font-family:Arial; font-size:23px; margin: 10px 20px; color:#ffffff;"><%= _('Entrar directamente a mi perfil') %></p><p><a href="<%= root_url %>"><span style="background-color:#000000; padding: 5px 10px;"><span href="<%= root_url %>" style="font-family:Arial; font-size:15px; color:#ffffff; text-decoration: none; margin: 5px 10px;"><%= _('Entrar') %></span></span></a></p></td>
                                             </tr>
                                           </table>
@@ -47,7 +47,7 @@
                                                         <div style="border:#d5dae4 1px solid;">
                                                             <table border="0" cellpadding="5" cellspacing="0" bgcolor="#ffffff">
                                                                 <tr>
-                                                                    <td><%= link_to profile_pic(u, {width: 110, height: 110}), user_url(u) %></td>
+                                                                    <td><%= link_to profile_pic(u, {width: 110, height: 110}, {border: 0}), user_url(u) %></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>

@@ -16,8 +16,8 @@ module UserHelper
     url
   end
 
-  def profile_pic(user = current_user, options = {width: 210, height: 210})
-    image_tag(profile_pic_url(user, options))
+  def profile_pic(user = current_user, options = {width: 210, height: 210, invisible: false}, img_options = nil)
+    image_tag(profile_pic_url(user, options), img_options)
   end
 
   def user_action_links
