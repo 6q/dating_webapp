@@ -2,7 +2,7 @@
 
 Picture:
   fields:
-    default: image, attachable_id, main
+    default: image, attachable_id, main, created_at
     form: image, attachable_id, main
   order_by: -created_at
   relationships: 
