@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   private :user_activity
 
   def authenticate
-    if Rails.env.staging?
+    if Rails.env.staging? or Rails.env.mobile?
       authenticate_or_request_with_http_basic do |username, password|
         username == 'cellove' && password == 'c3ll0v3'
       end
