@@ -23,18 +23,26 @@
                                         <!-- begin email container -->
 
                                           <!-- header -->
-                                          <table border="0" cellpadding="0" cellspacing="0" width="100%" height="190">
-                                            <tr>
-                                              <td width="400" align="center" valign="middle" bgcolor="#5cabe8"><a href="#"><img src="<%= root_url %>email/header-no-slogan.jpg" border="0"></a></td>
-                                              <td width="200" align="center" valign="middle" bgcolor="#626670"><p align="center" style="font-family:Arial; font-size:23px; margin: 10px 20px; color:#ffffff;"><%= _('Entrar directamente a mi perfil') %></p><p><a href="<%= root_url %>"><span style="background-color:#000000; padding: 5px 10px;"><span href="<%= root_url %>" style="font-family:Arial; font-size:15px; color:#ffffff; text-decoration: none; margin: 5px 10px;"><%= _('Entrar') %></span></span></a></p></td>
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%" height="190px">
+                                            <tr height="190px">
+                                              <td width="400" height="190px" align="center" valign="middle" bgcolor="#5cabe8"><a href="#"><img src="<%= root_url %>email/header-no-slogan.jpg" border="0"></a></td>
+                                              <td width="200" height="190px" align="center" valign="middle" bgcolor="#626670"><p align="center" style="font-family:Arial; font-size:23px; margin: 10px 20px; color:#ffffff;"><%= _('Entrar directamente a mi perfil') %></p>
+                                                <p>
+                                                  <table>
+                                                    <tr>
+                                                      <td align="center" width="100" bgcolor="#262931" style="background: #262931; padding-top: 6px; padding-right: 10px; padding-bottom: 6px; padding-left: 10px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; color: #fff; font-size:13px; font-weight: bold; text-decoration: none; font-family: Helvetica, Arial, sans-serif; display: block;"><a href="<%= root_url %>" style="color: #fff; text-decoration: none;"><%= _('Entrar') %></a></td>
+                                                    </tr>
+                                                  </table>
+                                                </p>
+                                              </td>
                                             </tr>
                                           </table>
                                           <!-- end header -->
 
                                           <!-- begin main content -->
 
-                                          <div style="border:#d5dae4 1px solid; margin: 0; padding: 0">
-                                            <table border="0" cellpadding="10" cellspacing="0" width="600px" bgcolor="#ffffff" align="center">
+
+                                            <table style="border:#d5dae4 1px solid;" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff" align="center">
                                                 <tr>
                                                     <td colspan="4">
                                                       <p align="center" style="font-family:Arial; font-size:14px; margin-top:10px; margin-bottom:10px; color:#626673;"><%= _('Hola') %> <strong><%= @user.name %></strong>, <%= _('esta semana te sugerimos los siguientes usuari@s') %>.<br><%= _('Accede a tu perfil para ver todos los usuari@s e interactuar con ell@s') %>.</p>
@@ -63,7 +71,7 @@
                                                 </tr>
                                                 <% end %>
                                             </table>
-                                          </div>
+
 
                                           <!-- end main content -->
 
