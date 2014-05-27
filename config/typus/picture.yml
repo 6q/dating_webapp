@@ -7,3 +7,7 @@ Picture:
   order_by: -created_at
   relationships: 
   application: Application
+  options:
+    default_action_on_item: show
+    form_rows: 48
+    per_page: 48
