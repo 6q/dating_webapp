@@ -4,5 +4,6 @@ Picture:
   fields:
     default: image, attachable_id, main
     form: image, attachable_id, main
+  order_by: -created_at
   relationships: 
   application: Application

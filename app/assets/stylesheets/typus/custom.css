@@ -1,0 +1,9 @@
+
+.fancybox img {
+    width: 100px;
+}
+
+tr[id^="picture_"] {
+	float:left;
+	width:25%;
+}
