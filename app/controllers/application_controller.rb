@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   after_filter :user_activity
   before_filter :authenticate
   before_filter :set_gettext_locale
+  before_filter :force_tablet_html
+  before_filter :force_mobile_format # Force mobile layout and templates for testing (remove true to disable)
+
+  has_mobile_fu
 
   protect_from_forgery
 
@@ -15,6 +19,11 @@ class ApplicationController < ActionController::Base
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => exception.message
+  end
+
+  # Continue rendering HTML for tablets (no mobile views yet)
+  def force_tablet_html
+      session[:tablet_view] = false
   end
 
   def set_session
