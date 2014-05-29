@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140314072049) do
+ActiveRecord::Schema.define(:version => 20140509071650) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity_type"
@@ -275,6 +275,22 @@ ActiveRecord::Schema.define(:version => 20140314072049) do
     t.datetime "updated_at",                 :null => false
   end
 
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0, :null => false
+    t.integer  "attempts",   :default => 0, :null => false
+    t.text     "handler",                   :null => false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
   create_table "general_settings", :force => true do |t|
     t.integer  "user_id"
     t.boolean  "no_email_online",                  :default => true
@@ -475,6 +491,15 @@ ActiveRecord::Schema.define(:version => 20140314072049) do
   end
 
   add_index "user_hides", ["hidden_user_id"], :name => "index_user_hides_on_hidden_user_id"
+
+  create_table "user_mailings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "sent_user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "user_mailings", ["user_id"], :name => "index_user_mailings_on_user_id"
 
   create_table "user_visits", :force => true do |t|
     t.integer  "user_id"

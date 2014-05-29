@@ -138,6 +138,16 @@ class UsersController < ApplicationController
     redirect_to :back, notice: _('Se ha denunciado al usuario. ¡Gracias por tu ayuda!')
   end
 
+  # Just for testing, remove it or move to another controller
+  def send_newsletters
+    if User.custom_newsletters
+        flash[:success] = _('Ok, newsletter en proceso')
+    else
+      flash[:error] = _('Oops!')
+    end
+    redirect_to :root
+  end
+
   private
     def user_visit
       if @user && current_user != @user

@@ -1,5 +1,6 @@
 #encoding: utf-8
 class UserMailer < ActionMailer::Base
+  helper :user
   default from: "Cellove.com <mail@cellove.com>"
 
   def prevent_delivery_to_unconfirmed
@@ -70,4 +71,12 @@ class UserMailer < ActionMailer::Base
     @reported = reported
     mail(to: 'cellove@cellove.com', subject: _('Perfil denunciado | Cellove.com'))
   end
+
+  def custom_newsletter(user, users_list)
+    @user       = user
+    @users_list = users_list
+    mail(:to => user.email, :subject => _('Sugerencias | Cellove.com'))
+    prevent_delivery_to_unconfirmed
+  end
+
 end

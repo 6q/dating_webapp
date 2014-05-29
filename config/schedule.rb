@@ -4,4 +4,14 @@ job_type :unicorn_start, 'cd :path && /usr/local/bin/bundle exec unicorn -c :pat
 
 every :reboot do
   unicorn_start 'application'
+  #script "cd :path && RAILS_ENV=production script/delayed_job start"
+end
+
+# every 24.hours do
+#   command "cd :path && RAILS_ENV=production script/delayed_job restart"
+# end
+
+every :thursday, :at => '10:00am' do
+#every 1.hour do
+  runner "User.custom_newsletters"
 end

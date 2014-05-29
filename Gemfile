@@ -41,6 +41,8 @@ gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
 gem 'newrelic_rpm'
 gem 'omniauth-facebook'
+gem 'daemons', '~> 1.1.9'
+gem 'delayed_job_active_record', '~> 4.0.1'
 
 group :test do
   gem 'sqlite3'
