@@ -1,130 +1,84 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Cellove Email</title>
-</head>
-<body style="background-color:#5cabe8">
-    <div style="background-color:#5cabe8;margin:0;padding:0;min-height:100%!important;width:100%!important">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <title>Cellove Email</title>
+  </head>
+<body style="background-color:#ffffff">
+    <div style="background-color:#ffffff;margin:0;padding:0;min-height:100%!important;width:100%!important">
         <center>
-            <table width="100%" cellspacing="0" cellpadding="0" border="0" height="100%" style="background-color:#5cabe8;margin:0;padding:0;border-collapse:collapse!important;height:100%!important;width:100%!important">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" height="100%" style="background-color:#ffffff;margin:0;padding:0;border-collapse:collapse!important;height:100%!important;width:100%!important">
                 <tbody>
-                <tr>
+                  <tr>
                     <td valign="top" align="center" style="padding:30px 20px 30px 20px;margin:0;height:100%!important;width:100%!important">
-                        <table cellspacing="0" cellpadding="0" border="0" style="width:600px;border-collapse:collapse!important">
+                        <table cellspacing="0" cellpadding="0" border="0" style="width:630px;border-collapse:collapse!important">
                             <tbody>
-                            <tr>
-                                <td valign="top" align="right" style="color:#FFFFFF;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:125%;padding-bottom:10px;text-align:right" colspan="2">
-                                    <%= _('Añade el correo mail@cellove.com a tu lista de contactos') %>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top" align="center" style="padding:10px;text-align:center;background-color:#5cabe8;vertical-align:middle;" width="400px" valign="middle">
-                                    <a target="_blank" style="text-decoration:none" title="Cellove.com" href="http://www.cellove.com">
-                                        <img alt="Cellove.com" src="http://static.cellove.com/images/cellove-mail.png">
-                                    </a>
-                                </td>
-                                <td align="center" style="padding:10px;text-align:center;background-color:#FFFFFF;border-radius:4px">
-                                    <a target="_blank" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight:bold;line-height:150%;margin:0;padding:0;text-align:center;color:#5cabe8!important;text-decoration:none!important;text-align:center;" href="http://www.cellove.com">
-                                        <h3>
-                                            <%= _('Entrar<br>
-                                            directamente<br>
-                                            a mi perfil') %>
-                                        </h3>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="background-color:#5cabe8"><br></td>
-                            </tr>
-                            <tr>
-                                <td valign="top" align="center" style="padding-top:0px;padding-bottom:20px" colspan="2">
-                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff;border-collapse:separate!important;border-radius:4px">
-                                        <tbody>
-                                        <tr>
-                                            <td valign="top" align="center" style="padding-top:30px;padding-right:40px;padding-bottom:10px;padding-left:40px">
-                                                <h2 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:26px;font-weight:bold;line-height:115%;margin:0;padding:0;text-align:left;color:#373737!important;text-decoration:none!important">
-                                                    <%= _('Alguien ha visitado tu perfil') %>
-                                                </h2>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" align="center" style="padding-top:10px;padding-right:40px;padding-bottom:30px;padding-left:40px;color:#373737;font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:150%;text-align:left">
-                                                <p>
-                                                  <%= _('Hola') %> <%= @recipient.name %>!
-                                                </p>
+                              <tr>
+                                <td align="center">
+                                  <div style="border:#d5dae4 1px solid; width:630px;">
+                                    <table border="0" cellpadding="30" cellspacing="0" width="630px" bgcolor="#e5f2fb" align="center">
+                                      <tr>
+                                        <td>
+                                          <p align="right" style="font-family:Arial; font-size:12px; margin-top:0; margin-bottom:12px; color:#626670;"><%= _('Atención! Añade la dirección mail@cellove.com a tu lista de contactos') %>.</p>
+                                        <!-- begin email container -->
 
+                                          <!-- header -->
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%" height="190px">
+                                            <tr height="190px">
+                                              <td width="400" height="190px" align="center" valign="middle" bgcolor="#5cabe8"><a href="#"><img src="<%= root_url %>email/header-no-slogan.jpg" border="0"></a></td>
+                                              <td width="200" height="190px" align="center" valign="middle" bgcolor="#626670"><p align="center" style="font-family:Arial; font-size:23px; margin: 10px 20px; color:#ffffff;"><%= _('Entrar directamente a mi perfil') %></p>
                                                 <p>
-                                                  <%= _("¡Han visitado tu perfil mientras no estabas conectado!") %>
-                                                </p>
-                                                <p>
-                                                  <%= _("¡Entra ya en Cellove para saber quien ha sido!") %>
-                                                </p>
-                                                <h3><%= link_to _('Me han visitado'), user_hits_url %></h3>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" align="center">
-                                                <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse!important">
-                                                    <tbody><tr>
-                                                        <td valign="top" style="padding-top:30px;padding-right:40px;padding-bottom:40px;padding-left:40px;border-top:solid 2px #f2f2f2;color:#373737;font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:150%;text-align:left">
-                                                            <%= _('Disfruta y dale alas al amor') %>
-                                                            <br>
-                                                            <%= _('El equipo de Cellove') %>
-                                                        </td>
-                                                    </tr>
-                                                </tbody></table>
-                                            </td>
-                                        </tr>
-                                    </tbody></table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="background-color:#5cabe8"></td>
-                            </tr>
-                            <tr>
-                                <td valign="top" align="center" colspan="2">
-                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse!important;border-radius:5px;background-color:#2C2C2C">
-                                        <tbody>
-                                        <tr>
-                                            <td valign="top" align="center" style="color:#FFFFFF;font-family:Helvetica,Arial,sans-serif;font-size:11px;line-height:125%;padding:10px;text-align:center">
-                                                <%= _('Has recibido este correo de Cellove Social Network porque tu correo está registrado a Cellove.com. Si no deseas seguir recibiendo correos, modifica tu configuración de usuario dentro en Cellove.com.') %>
-                                                
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" align="center">
-                                                <table cellspacing="0" cellpadding="5" border="0" style="border-collapse:collapse!important">
-                                                    <tbody>
+                                                  <table>
                                                     <tr>
-                                                        <td valign="top" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:125%;padding:10px">
-                                                            <a target="_blank" style="color:#FFFFFF;text-decoration:none!important" href="http://www.cellove.com/terms-and-conditions">
-                                                                <%= _('Terminos y condiciones') %>
-                                                            </a>
-                                                        </td>
-                                                        <td valign="top" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:125%;padding:10px">
-                                                             <b><a target="_blank" style="color:#FFFFFF;text-decoration:none!important" href="http://www.cellove.com">
-                                                                <%= _('Entra en Cellove.com') %>
-                                                             </a></b>
-                                                        </td>
-                                                        <td valign="top" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:125%;padding:10px">
-                                                            <a target="_blank" style="color:#FFFFFF;text-decoration:none!important" href="http://www.cellove.com/user/settings/">
-                                                                <%= _('Configuración de cuenta') %>
-                                                            </a>
-                                                        </td>
+                                                      <td align="center" width="100" bgcolor="#262931" style="background: #262931; padding-top: 6px; padding-right: 10px; padding-bottom: 6px; padding-left: 10px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; color: #fff; font-size:13px; font-weight: bold; text-decoration: none; font-family: Helvetica, Arial, sans-serif; display: block;"><a href="<%= root_url %>" style="color: #fff; text-decoration: none;"><%= _('Entrar') %></a></td>
                                                     </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        </tbody>
+                                                  </table>
+                                                </p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                          <!-- end header -->
+
+                                          <!-- begin main content -->
+
+
+                                            <table style="border:#d5dae4 1px solid;" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff" align="center">
+                                                <tr>
+                                                    <td colspan="4" style="font-family:Arial; font-size:14px; margin-top:10px; margin-bottom:10px; color:#626673;">
+                                                        <h2 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:26px;font-weight:bold;line-height:115%;margin:0;padding:0;text-align:left;color:#373737!important;text-decoration:none!important">
+                                                        <%= _('Alguien ha visitado tu perfil') %></h2>
+                                                        <p>
+                                                          <%= _('Hola') %> <%= @recipient.name %>!
+                                                        </p>
+
+                                                        <p>
+                                                          <%= _("¡Han visitado tu perfil mientras no estabas conectado!") %>
+                                                        </p>
+                                                        <p>
+                                                          <%= _("¡Entra ya en Cellove para saber quien ha sido!") %>
+                                                        </p>
+                                                        <h3><%= link_to _('Me han visitado'), user_hits_url %></h3>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                          <!-- end main content -->
+
+                                          <p align="center">
+                                            <p align="center" style="font-family:Arial; font-size:13px; margin-top:0; margin-bottom:10px; color:#626670;"><%= _('Para no volver a recibir más este email, por favor, modifica este parámetro en tu configuración dentro de Cellove.com. No respondas a este email, tu respuesta no será leída. Si tienes alguna duda, contáctanos a través del sitio web de Cellove.com') %></p>
+
+                                        <!-- end email container -->
+                                        </td>
+                                      </tr>
                                     </table>
+                                  </div>
                                 </td>
-                            </tr>
+                              </tr>
                             </tbody>
-                        </table>
-                    </td>
-                </tr>
+                            </table>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </center>
