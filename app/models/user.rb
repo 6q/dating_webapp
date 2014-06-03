@@ -762,7 +762,7 @@ class User < ActiveRecord::Base
   end
 
   def self.custom_newsletters
-    User.where('confirmation_token is NULL').find_each(:batch_size => 200) do |user|
+    User.joins(:general_settings).where(confirmation_token: nil, general_settings: { user_suggestions: true }).find_each(:batch_size => 200) do |user|
       new_inedit_users_near_me = user.new_inedit_users_near_me(12, 50)
       if new_inedit_users_near_me && new_inedit_users_near_me.count >= 4
         user.add_mailing_sent_users new_inedit_users_near_me
