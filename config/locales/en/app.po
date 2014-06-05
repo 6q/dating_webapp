@@ -136,6 +136,9 @@ msgstr "Only recieve messages from profiles that I liked to them"
 msgid "Newsletter | Cellove.com"
 msgstr "Newsletter | Cellove.com"
 
+msgid "2 Chats simultáneos"
+msgstr "2 Chats at the same time"
+
 msgid " a "
 msgstr "in"
 
@@ -223,8 +226,8 @@ msgstr "%{height} cms height"
 msgid ". Con ojos de color"
 msgstr ". My eyes are"
 
-msgid "2 Chats simultáneos"
-msgstr "2 Chats at the same time"
+msgid "1 Chat simultáneo"
+msgstr "1 chat at the same time"
 
 msgid "4,99€/mes"
 msgstr "4.99 € / month"

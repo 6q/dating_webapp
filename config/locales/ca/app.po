@@ -136,6 +136,9 @@ msgstr "Solament rebre missatges de perfils que m'han agradat"
 msgid "Newsletter | Cellove.com"
 msgstr "Newsletter | Cellove.com"
 
+msgid "2 Chats simultáneos"
+msgstr "2 Xats simultanis"
+
 msgid " a "
 msgstr "a"
 
@@ -223,8 +226,8 @@ msgstr "- %{height} cms d'alçada"
 msgid ". Con ojos de color"
 msgstr ". Amb ulls de color"
 
-msgid "2 Chats simultáneos"
-msgstr "2 Xats simultanis"
+msgid "1 Chat simultáneo"
+msgstr "1 xat simultani"
 
 msgid "4,99€/mes"
 msgstr "4,99€/mes"
