@@ -11,7 +11,7 @@ end
 #   command "cd :path && RAILS_ENV=production script/delayed_job restart"
 # end
 
-every :tuesday, :at => '13:10pm' do
+every :friday, :at => '13:40pm' do
 #every 1.hour do
   runner "User.custom_newsletters"
 end
