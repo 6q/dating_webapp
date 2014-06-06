@@ -1,0 +1,13 @@
+#demo {
+    width: 100%;
+    text-align: center;
+}
+
+#demo img {
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
+
+#demo img.active {
+    opacity: 1;
+}
