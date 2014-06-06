@@ -30,7 +30,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if current_user.get_all_invisible_to_me.include? params[:id].to_i
+      redirect_to :back, :alert => _('No tienes acceso a este perfil')
+    else
+      @user = User.find(params[:id])
+    end
+  rescue ActionController::RedirectBackError
+    redirect_to :root
   end
 
   def update
