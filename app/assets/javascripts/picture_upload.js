@@ -35,7 +35,7 @@ $(function () {
         name: 'authenticity_token',
         value: $('meta[name="csrf-token"]').attr('content')
       }, {name: 'main', value: $('#picture_main').val()}],
-      acceptFileTypes: /(\.|\/)(bmp|gif|jpe?g|png)$/i,
+      acceptFileTypes: /(\.|\/)(jpe?g|png)$/i,
       done: function(event, data) {
         showModalAndCrop(event, data);
         $('#progress_modal').modal('hide');
