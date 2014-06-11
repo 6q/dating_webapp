@@ -2,7 +2,9 @@
 
 UserBlock:
   fields:
-    default: user_id, blocked_user_id
+    default: user_id, blocked_user_id, created_at
     form: user_id, blocked_user_id
   relationships: 
   application: Application
+  search: user_id, blocked_user_id
+  order_by: -created_at
