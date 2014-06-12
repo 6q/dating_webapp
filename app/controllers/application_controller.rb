@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   after_filter :user_activity
   before_filter :authenticate
   before_filter :set_gettext_locale
+  before_filter :check_if_disabled
 
   protect_from_forgery
 

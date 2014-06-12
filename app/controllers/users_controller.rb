@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
   before_filter :check_if_must_complete_fields, only: [:show, :index, :likes, :likes_of_mine, :hits, :nice_couple, :cellove_index]
-  skip_before_filter :check_if_disabled
 
   layout 'logged_in', :except => 'view'
 
