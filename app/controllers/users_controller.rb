@@ -116,6 +116,7 @@ class UsersController < ApplicationController
         flash[:error] = _('Oops!')
       end
     else
+      params[:general_setting].except!(:newsletter, :anonymous_browsing)
       if current_user.general_settings.update_attributes(params[:general_setting])
         flash[:success] = _('Configuración actualizada')
       else
@@ -223,7 +224,7 @@ class UsersController < ApplicationController
       end
     end
     def check_if_disabled
-      if current_user && current_user.deleted_at?
+      if current_user.deleted_at.present?
         redirect_to complete_fields_url, :alert => _('Tu cuenta está desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
       end
     end
