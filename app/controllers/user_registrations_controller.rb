@@ -2,7 +2,6 @@ class UserRegistrationsController < Devise::RegistrationsController
   skip_before_filter :require_no_authentication, only: :update
   skip_before_filter :matchmaker_user
   skip_before_filter :check_if_must_complete_fields
-  skip_before_filter :check_if_disabled
 
   # Overrode this method to be able to test controller ~.~
   # See test/controllers/user_registrations_controller_test.rb
