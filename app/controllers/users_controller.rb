@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   skip_before_filter :authenticate_user!, only: :view
   skip_before_filter :matchmaker_user, only: [:matchmaker_become_user]
   before_filter :check_if_must_complete_fields, only: [:show, :index, :likes, :likes_of_mine, :hits, :nice_couple, :cellove_index]
+  skip_before_filter :check_if_disabled
 
   layout 'logged_in', :except => 'view'
 
@@ -220,6 +221,11 @@ class UsersController < ApplicationController
     def check_if_must_complete_fields
       if current_user && !current_user.has_all_fields?
         redirect_to complete_fields_url, :alert => _('Debes completar tus datos para poder usar Cellove') and return
+      end
+    end
+    def check_if_disabled
+      if current_user && current_user.deleted_at?
+        redirect_to complete_fields_url, :alert => _('Tu cuenta está desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
       end
     end
 
