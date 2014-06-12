@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
 
   before_filter :check_if_must_complete_fields, :only => :show
   before_filter :skip_password_attribute, only: :update_complete_fields
+  skip_before_filter :check_if_disabled
 
   # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt
   # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
