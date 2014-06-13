@@ -224,7 +224,7 @@ class UsersController < ApplicationController
     end
     def check_if_disabled
       if current_user.deleted_at.present?
-        redirect_to profile_url, :alert => _('Tu cuenta está desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
+        redirect_to profile_path, :alert => _('Tu cuenta está desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
       end
     end
 
