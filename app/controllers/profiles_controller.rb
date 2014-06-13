@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
   layout 'logged_in'
   skip_before_filter :matchmaker_user
   before_filter :skip_password_attribute, only: :update
+  skip_before_filter :check_if_disabled
 
   def show
     @user = current_user
