@@ -1,4 +1,4 @@
-env :MAILTO, 'info@quantic.es'
+env :MAILTO, 'help@cellove.com'
 
 job_type :unicorn_start, 'cd :path && /usr/local/bin/bundle exec unicorn -c :path/config/unicorn/:environment.rb -E :environment -D'
 
