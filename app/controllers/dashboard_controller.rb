@@ -85,6 +85,7 @@ class DashboardController < ApplicationController
     end
   end
 
+
   # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt
   # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
 
