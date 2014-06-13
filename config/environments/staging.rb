@@ -87,5 +87,5 @@ Cellove::Application.configure do
   config.middleware.use ExceptionNotifier,
                         :email_prefix => '[Cellove]',
                         :sender_address => 'noreply@cellove.com',
-                        :exception_recipients => %w{info@quantic.es}
+                        :exception_recipients => %w{help@cellove.com}
 end

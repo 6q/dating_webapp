@@ -12,7 +12,7 @@ class MailPreview < MailView
       u.name = 'Jill Smith'
       u.email = 'name@example.com'
     end
-    email = 'info@quantic.es'
+    email = 'help@cellove.com'
     mail = UserMailer.invite_user(user, email, 'invitation_code_1')
   end
 
@@ -21,7 +21,7 @@ class MailPreview < MailView
       u.name = 'Jill Smith'
       u.email = 'name@example.com'
     end
-    email = 'info@quantic.es'
+    email = 'help@cellove.com'
     mail = UserMailer.invite_celestino(user, email, 'invitation_code_2')
   end
 
@@ -30,7 +30,7 @@ class MailPreview < MailView
       u.name = 'Jill Smith'
       u.email = 'name@example.com'
     end
-    email = 'info@quantic.es'
+    email = 'help@cellove.com'
     mail = UserMailer.like(user, user)
   end
 
@@ -39,7 +39,7 @@ class MailPreview < MailView
       u.name = 'Jill Smith'
       u.email = 'name@example.com'
     end
-    email = 'info@quantic.es'
+    email = 'help@cellove.com'
     mail = UserMailer.profile_visit(user, user)
   end
 
@@ -48,7 +48,7 @@ class MailPreview < MailView
       u.name = 'Jill Smith'
       u.email = 'name@example.com'
     end
-    email = 'info@quantic.es'
+    email = 'help@cellove.com'
     mail = UserMailer.receive_message(user, user)
   end
 
@@ -57,7 +57,7 @@ class MailPreview < MailView
       u.name = 'Jill Smith'
       u.email = 'name@example.com'
     end
-    email = 'info@quantic.es'
+    email = 'help@cellove.com'
     mail = UserMailer.star_rating(user, user)
   end
 
@@ -66,7 +66,7 @@ class MailPreview < MailView
       u.name = 'Jill Smith'
       u.email = 'name@example.com'
     end
-    email = 'info@quantic.es'
+    email = 'help@cellove.com'
     mail = UserMailer.celestino_recommendation(user, user)
   end
 
