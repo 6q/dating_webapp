@@ -18,7 +18,7 @@
   </div>
     <% if current_user.deleted_at.present? %>
       <div class="reactivar-cuenta">
-        <%= link_to _('Reactivar cuenta'), recover_user_registration_path, method: :post, confirm: _('¿Estas seguro?') %>
+        <%= link_to _('Reactivar cuenta'), recover_user_registration_path, method: :post, confirm: _('¿Estas seguro?'), :class => 'btn btn-info' %>
       </div>
     <% end %>
   <hr class="thin">
