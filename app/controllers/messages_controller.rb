@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_filter :get_mailbox, :get_box
   after_filter :add_to_cellove_index, only: [:create]
+  before_filter :check_if_disabled
 
   def index
     redirect_to conversations_path(:box => @box)

@@ -38,7 +38,7 @@ es:
       signed_up_but_locked: 'Te has registrado correctamente, pero tu cuenta está bloqueada.'
       updated: 'Actualizaste tu cuenta correctamente.'
       update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu email. Revisa tu correo para confirmar la dirección."
-      destroyed: 'Adiós, tu cuenta ha sido eliminada. Esperamos verte de vuelta pronto!'
+      destroyed: 'Adiós, tu cuenta ha sido desactivada. Esperamos verte de vuelta pronto!'
     unlocks:
       send_instructions: 'Recibirás un email con instrucciones para desbloquear tu cuenta en unos minutos'
       unlocked: 'Tu cuenta ha sido desbloqueada. Inicia sesión para continuar.'
@@ -61,7 +61,7 @@ es:
         signed_up_but_locked: 'Te has registrado correctamente, pero tu cuenta está bloqueada.'
         updated: 'Actualizaste tu cuenta correctamente.'
         update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu email. Revisa tu correo para confirmar la dirección."
-        destroyed: 'Adiós, tu cuenta ha sido eliminada. Esperamos verte de vuelta pronto!'
+        destroyed: 'Adiós, tu cuenta ha sido desactivada. Esperamos verte de vuelta pronto!'
     matchmaker_registrations:
       matchmaker:
         signed_up: 'Bienvenido! Te has registrado correctamente.'
@@ -70,4 +70,4 @@ es:
         signed_up_but_locked: 'Te has registrado correctamente, pero tu cuenta está bloqueada.'
         updated: 'Actualizaste tu cuenta correctamente.'
         update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu email. Revisa tu correo para confirmar la dirección."
-        destroyed: 'Adiós, tu cuenta ha sido eliminada. Esperamos verte de vuelta pronto!'
+        destroyed: 'Adiós, tu cuenta ha sido desactivada. Esperamos verte de vuelta pronto!'
