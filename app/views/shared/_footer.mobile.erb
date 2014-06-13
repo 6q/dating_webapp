@@ -1,0 +1,14 @@
+<footer>
+    <div class="container-fluid">
+        <nav class="row-fluid">
+            <%= link_to _('Idioma'), 'javascript:void(0)', id:'link_idioma' %> |
+            <%= link_to _('Legal y conducta'), 'javascript:void(0)', id:'link_legal' %> 
+        </nav>
+    </div>
+</footer>
+
+<div id="legalBox" class="hidden">
+    <%= link_to _('Consejos de uso'), usage_path %>
+    <%= link_to _('Términos y condiciones'), terms_conditions_path %>
+    <%= link_to _('Política de Privacidad'), privacy_policy_path %>
+</div>

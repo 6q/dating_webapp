@@ -10,5 +10,32 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require mobile/demo
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require functions
+//= require jquery.flexslider-min
+//= require jquery.datepicker.min
+//= require user_functions
+//= require chosen.jquery.min
+//= require rails.validations
+//= require ajax-chosen.min
 //= require_tree .
+
+$(function() {
+  // hide flash messages afer 3 seconds
+  if ($('#flash-messages').length){
+    setTimeout(function() {
+      left = ($(window).width()/2)-($('#flash-messages').width()/2);
+      $('#flash-messages').css('left', left+'px');
+      $('#flash-messages').fadeIn('slow').delay(3000).fadeOut('slow');
+    }, 500);
+
+  }
+
+  $('.icon-remove').click(function() {
+    $(this).parent().hide(500);
+    return false;
+  });
+
+});

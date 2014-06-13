@@ -4,7 +4,13 @@
     <%= render partial: "layouts/common_head" %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <h1>MOBILE LAYOUT</h1>
-    <%= yield %>
+    <%= render partial: "layouts/changing_background" %>
+    <div class="container-fluid">
+        <section role="main">
+            <%= yield %>
+        </section>
+    </div>
+    
+    <%= render 'shared/footer' %>
   </body>
 </html>

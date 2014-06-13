@@ -1,0 +1,39 @@
+<% if @page == 'home' %>
+  <style>
+    #home-background {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -9999;
+      background-color:#000;
+    }
+    .image-bg {
+      position: absolute;
+      top: 0;
+      height:100% !important;
+      z-index: -9999;
+    }
+  </style>
+  <div id="home-background">
+    <img class="image-bg" src="<%= asset_path("bg/main-bg1.jpg") %>">
+    <img class="image-bg" src="<%= asset_path("bg/main-bg3.jpg") %>">
+    <img class="image-bg" src="<%= asset_path("bg/main-bg5.jpg") %>">
+  </div>
+  <script>
+    $(function() {
+        $('#home-background').cycle({   
+            fx: 'fade', 
+            pause: 1, 
+            speed: 1800, 
+            timeout: 3500 
+        });
+    });
+  </script>
+<% else %>
+  <style>
+    header[role="banner"] {
+      background:url('<%= current_user && current_user.background.present? ? asset_path("bg/main-bg#{current_user.background}.jpg") : asset_path("bg/main-bg5.jpg") %>') top left no-repeat;
+    }
+  </style>
+<% end %>
