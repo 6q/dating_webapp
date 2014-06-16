@@ -66,8 +66,13 @@
         }
       }
       
+      img {
+        vertical-align: top;
+      }
+
       .main {
-        border: 5px solid #8ccc8c;
+        background: #8CCC8C;
+        padding: 4px;
       }
     }
   }
