@@ -3,6 +3,7 @@ class ConversationsController < ApplicationController
 
   before_filter :get_mailbox, :get_box
   before_filter :check_current_subject_in_conversation, :only => [:show, :update, :destroy]
+  before_filter :check_if_disabled
 
   layout "logged_in"
 
