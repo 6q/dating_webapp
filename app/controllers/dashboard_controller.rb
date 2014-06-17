@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
 
   before_filter :check_if_must_complete_fields, :only => :show
   before_filter :skip_password_attribute, only: :update_complete_fields
-  before_filter :check_if_disabled
+  before_filter :check_if_disabled, :only => :show
 
   # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt
   # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
@@ -73,18 +73,23 @@ class DashboardController < ApplicationController
 
   private
 
-  def check_if_must_complete_fields
-    if current_user && !current_user.has_all_fields?
-      redirect_to complete_fields_url, :alert => _('Debes completar tus datos para poder usar Cellove') and return
+    def check_if_must_complete_fields
+      if current_user && !current_user.has_all_fields?
+        redirect_to complete_fields_url, :alert => _('Debes completar tus datos para poder usar Cellove') and return
+      end
     end
-  end
 
-  def skip_password_attribute
-    if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
-      params[:user].except!(:password, :password_confirmation)
+    def skip_password_attribute
+      if params[:user][:password].blank? && params[:user][:password_confirmation].blank?
+        params[:user].except!(:password, :password_confirmation)
+      end
     end
-  end
 
+    def check_if_disabled
+      if current_user && current_user.disabled?
+        redirect_to profile_path, :alert => _('Tu cuenta se encuentra desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
+      end
+    end
 
   # moure això a l'application_controller quan tinguem el formulari de usuari invitat apunt
   # obligar-lo a omplir nom i cognoms i dades de localització per evitar errors a l'app
