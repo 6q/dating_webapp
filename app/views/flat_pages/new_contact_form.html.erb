@@ -14,7 +14,7 @@
       </div>
 
       <div class="span6">
-        <%= simple_form_for @contact_form, url: contact_form_path, :html => {:class => 'form-horizontal' } do |f| %>
+        <%= simple_form_for @contact_form, url: contact_form_path, :html => {:class => 'form-horizontal', :honeypot => true  } do |f| %>
           <fieldset id="contact" class="clearfix form-horizontal">
             <p><%= _('Si tienes cualquier duda o pregunta sobre Cellove, su funcionamiento o, simplemente quieres ponerte en contacto con nosotr@s, hazlo a través del siguiente formulario:') %></p>
             <%= f.input :name,    :label => _('Nombre'),    :input_html => { :value => current_user && current_user.name    ? current_user.name     : "" } %>
