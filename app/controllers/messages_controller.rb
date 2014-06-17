@@ -80,4 +80,10 @@ class MessagesController < ApplicationController
       end
     end
 
+    def check_if_disabled
+      if current_user && current_user.disabled?
+        redirect_to profile_path, :alert => _('Tu cuenta se encuentra desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
+      end
+    end
+
 end
