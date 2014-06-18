@@ -47,6 +47,7 @@ gem 'stripe_event'
 gem 'daemons', '~> 1.1.9'
 gem 'delayed_job_active_record', '~> 4.0.1'
 gem 'mobile-fu', '~> 1.3.1'
+gem 'honeypot-captcha'
 
 group :test do
   gem 'sqlite3'
@@ -58,6 +59,7 @@ end
 gem 'minitest-rails', group: [:test, :development]
 
 group :development do
+  gem 'thin'
   gem "guard-rails"
   gem "rb-fsevent"
   gem 'capistrano'

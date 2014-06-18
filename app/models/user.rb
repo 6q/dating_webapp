@@ -568,6 +568,10 @@ class User < ActiveRecord::Base
     updated_at > 30.seconds.ago
   end
 
+  def disabled?
+    deleted_at.present?
+  end
+
   ransacker :smoker, :formatter => proc { |v| v.split } do |parent|
     parent.table[:smoke]
   end
