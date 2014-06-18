@@ -3,6 +3,7 @@ class ConversationsController < ApplicationController
 
   before_filter :get_mailbox, :get_box
   before_filter :check_current_subject_in_conversation, :only => [:show, :update, :destroy]
+  before_filter :check_if_disabled
 
   layout "logged_in"
 
@@ -133,5 +134,12 @@ class ConversationsController < ApplicationController
     return
     end
   end
+
+  def check_if_disabled
+    if current_user && current_user.disabled?
+      redirect_to profile_path, :alert => _('Tu cuenta se encuentra desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
+    end
+  end
+
 
 end

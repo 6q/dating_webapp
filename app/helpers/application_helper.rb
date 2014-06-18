@@ -54,9 +54,5 @@ module ApplicationHelper
     html  = '<div class="alert alert-info alert-block"><i class="icon-remove"></i>' + _("Utilizamos cookies propias y de terceros para mejorar nuestros servicios y su experiencia. Si continua navegando, consideramos que acepta dicho uso. Puede cambiar la configuración u obtener más información en ") + url + '</div>'
     html.html_safe
   end
-  def check_if_disabled
-    if current_user.deleted_at.present?
-      redirect_to profile_path, :alert => _('Tu cuenta está desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove.') and return
-    end
-  end
+
 end
