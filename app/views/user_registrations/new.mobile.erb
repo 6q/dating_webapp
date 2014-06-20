@@ -1,0 +1,118 @@
+<% title = _("Consejos de uso") %>
+<% content_for(:title) {title} %>
+<%= render 'shared/flat-header' %>
+
+<div class="container-fluid rounded-box page-content">
+  <div class="content row-fluid">
+    <div class="container-fluid nopadding">
+      <div class="row-fluid text-center">
+        <h1><%= title %></h1>
+      </div>
+
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'register-form', :multipart => true, :honeypot => true }, validate: true) do |f| %>
+          <%= display_base_errors resource %>
+          <div class="row">
+            <div class="span4">
+              <fieldset id="name" class="clearfix">
+                <legend><%= _('¿Quién eres?') %></legend>
+                <div id="fb-auth-button">
+                  <%= link_to raw('<i></i> ') + _('Facebook'), "/auth/facebook", id: "sign_in" %>
+                </div>
+                <p><%= _('Me llamo') %><br>
+                <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre') %>
+                <%= f.text_field :surname, placeholder: _('Apellidos') %>
+                <p>
+                <%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)') %>
+              </fieldset>
+            </div>
+
+            <div class="register-text">
+              <p><%= _('Regístrate en Cellove, la red social GRATIS para encontrar el <b>amor y amistad</b> de forma fácil y rápida. <b>Chatea</b> con los usuari@s, enviales mensajes, <b>propónles actividades</b> e incluso podrás comprobar si hacéis buena pareja.') %></p>
+              <p><%= _('Gracias a nuestro <b>sistema de Celestinos</b>, podrás comunicarte con sus familiares, amig@s o ex parejas.') %></p>
+              <p><%= _('¿Te imaginas quedar con alguien que nunca has visto y tener la sensación de que lo conoces de toda la vida? <b>Ahora es posible gracias a Cellove</b>') %></p>
+              <h3><%= _('¡No dejes que tus citas sean a ciegas!') %></h3>
+
+            </div>
+          </div>
+          <fieldset id="photo" class="clearfix form-inline">
+            <legend><%= _('Sube tu foto') %></legend>
+            <div class="row">
+              <div class="span6">
+                <label class="photoupload">
+                  <span><%=_('Sube tu foto') %></span>
+                  <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+                </label>
+                <div id="picture_gallery"></div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="orientation" class="form-inline">
+            <legend><%= _('¿Cómo eres?') %></legend>
+            <div class="control-group">
+              <%= f.label :gender, _('Soy') %>
+              <%= f.select :seeking, seeking_options  %>
+              <%= f.label :marital_status, _('y') %>
+              <%= f.select :marital_status, marital_status_options %>
+              .
+            </div>
+            <div class="control-group">
+              <%= f.label :birth_date, _('Nací el') %>
+              <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
+              <%= f.label :birth_date_year, _('de') %>
+              <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %> .
+
+            </div>
+            <div class="control-group">
+              <%= f.label :city, _('Y vivo en') %>
+              <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %> ,
+              <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %> .
+            </div>
+          </fieldset>
+          <div class="nofloat">
+          </div>
+          <fieldset id="access" class="clearfix form-horizontal">
+            <legend><%= _('Datos de acceso a Cellove') %></legend>
+            <div class="row">
+              <div class="span6">
+                <div class="control-group">
+                  <%= f.label :email, _("Email"), class: 'control-label' %>
+                  <%= f.email_field :email %>
+                </div>
+              </div>
+              <div class="span6">
+                <div class="control-group">
+                  <%= f.label :password, _("Contraseña"), class: "control-label" %>
+                  <%= f.password_field :password %>
+                </div>
+              </div>
+            </div>
+            <div class="actions">
+              <div class="row">
+                <div class="span6 center">
+                  <div class="clearfix">
+                    <label><%= _('Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') %  {condiciones_link: link_to(_('Terminos y condiciones generales'), terms_conditions_path, target: "_blank"), privacy_link: link_to(_('Política de privacidad'), privacy_policy_path, target: "_blank")}%></label>
+                  </div>
+                  <div class="clearfix">
+                    <%= f.check_box :newsletter_optin, checked: true %>
+                    <label><%= _('Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.') %></label>
+                  </div>
+                </div>
+                <div class="span6 center">
+                  <%= f.hidden_field :invitation_code, :value => params['invitation_code'] %>
+                  <%= f.hidden_field :provider %>
+                  <%= f.hidden_field :uid %>
+                  <%= f.hidden_field :oauth_token %>
+                  <%= f.hidden_field :oauth_expires_at %>
+                  <%= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        <% end %>
+
+<div id="crop_modal_wrapper"></div>
+
+<%= render "shared/conversions" %>
+    </div>
+  </div>
+</div>

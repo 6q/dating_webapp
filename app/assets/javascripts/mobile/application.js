@@ -40,27 +40,27 @@ $(function() {
 
     $('#link_language').click(function(e){
         e.preventDefault();
-        $('#languageBox').show();
+        $('#languageBox').fadeIn(1000);
         $('.page-content').hide();
         $('footer .footer-links').hide();
     }); 
 
     $('#cancel_language').click(function(e){
         $('#languageBox').hide();
-        $('.page-content').show();
-        $('footer .footer-links').show();
+        $('.page-content').fadeIn(1000);
+        $('footer .footer-links').fadeIn(1000);
     });   
 
     $('footer #link_legal').click(function(e){
         e.preventDefault();
-        $('#legalBox').show();
+        $('#legalBox').fadeIn(1000);
         $('.page-content').hide();
         $('footer .footer-links').hide();
     }); 
 
     $('#cancel_legal').click(function(e){
         $('#legalBox').hide();
-        $('.page-content').show();
-        $('footer .footer-links').show();
+        $('.page-content').fadeIn(1000);
+        $('footer .footer-links').fadeIn(1000);
     });  
 });
