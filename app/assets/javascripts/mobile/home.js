@@ -9,4 +9,16 @@ $(function() {
         $('.home #loginBox').hide();
         $('.home #buttonBox').show();
     });
+
+    $('.home #link_language').click(function(e){
+        e.preventDefault();
+        $('.home #languageBox').show();
+        $('.home #loginBox').hide();
+        $('.home #buttonBox').hide();
+    }); 
+
+    $('.home #cancel_language').click(function(e){
+        $('.home #languageBox').hide();
+        $('.home #buttonBox').show();
+    });   
 }); 
