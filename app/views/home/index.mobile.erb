@@ -1,33 +1,23 @@
 <% @page = 'home' %>
 <% content_for(:title) { _("Ponle alas al amor") } %>
 
-<header role="banner" class="container-fluid">
-    <div id="logo" class="row-fluid">
-        <span class="beta">beta</span>
-        <h1><%= link_to "Cellove", root_path, :class => 'brand' %></h1>
-        <h2><%= _('Ponle alas al amor') %></h2>
-    </div>
-</header>
+<%= render 'shared/flat-header' %>
 
-<div id="buttonBox" class="container-fluid">
+<div id="buttonBox" class="container-fluid page-content">
     <div class="row-fluid text-center">
         <%= link_to _('Identificarte'), 'javascript:void(0)', id: 'link_login', class: 'more'  %>
     </div>
     <div class="row-fluid text-center">
-        <%= link_to _('Registro Usuario Gratis'), new_user_registration_path, class: 'more'  %>
-    </div>
-    <div class="row-fluid text-center">
+       <%= link_to _('Registro Usuario Gratis'), new_user_registration_path, class: 'more'  %>
+   </div>
+   <div class="row-fluid text-center">
         <%= link_to _('¿Como funciona?'), how_it_works_path, class: 'more'  %>
     </div>
 </div>
 
-<div id="loginBox" class="container-fluid hidden">
+
+<div id="loginBox" class="container-fluid hidden rounded-box">
     <div class="content row-fluid">
         <%= render 'layouts/header-login' %>
-    </div>
-</div>
-<div id="languageBox" class="container-fluid hidden">
-    <div class="content row-fluid">
-        <%= render 'layouts/header-language' %>
     </div>
 </div>

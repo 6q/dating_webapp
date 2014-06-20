@@ -1,0 +1,11 @@
+<div class="container-fluid nopadding">
+    <div class="row-fluid text-center">
+        <h4><%= _('Seleccionar Idioma') %></h4>
+    </div>
+    
+	<li><%= link_to _('Consejos de uso'), usage_path, class: 'more' %></li>
+	<li><%= link_to _('Términos y condiciones'), terms_conditions_path, class: 'more' %></li>
+	<li><%= link_to _('Política de Privacidad'), privacy_policy_path, class: 'more' %></li>
+    <%= link_to _('Cancelar'), 'javascript:void(0)', :id => 'cancel_legal', :class => 'cancel' %>
+	    
+</div>
