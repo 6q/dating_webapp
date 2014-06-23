@@ -1,0 +1,28 @@
+<% title = _('Cambia tu contraseña') %>
+<% content_for(:title) {title} %>
+<%= render 'shared/flat-header' %>
+
+<div class="container-fluid rounded-box page-content">
+  <div class="content row-fluid">
+    <div class="container-fluid nopadding">
+      <div class="row-fluid text-center">
+        <h1><%= title %></h1>
+      </div>
+
+		<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+		  <%= f.error_notification %>
+
+		  <%= f.input :reset_password_token, :as => :hidden %>
+		  <%= f.full_error :reset_password_token %>
+
+		  <div class="form-inputs">
+		    <%= f.input :password, :label => _('Tu nueva contraseña'), :required => true, :autofocus => true, class: 'width95 text-center' %>
+		    <%= f.input :password_confirmation, :label => _('Confirma tu nueva contraseña'), :required => true, class: 'width95 text-center' %>
+		  </div>
+
+		  <%= f.button :submit, _('Cambiar mi contraseña'), class: 'btn btn-info width96' %>
+
+		<% end %>
+    </div>
+  </div>
+</div>
