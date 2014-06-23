@@ -27,13 +27,11 @@
           <fieldset id="photo" class="clearfix form-inline">
             <legend><%= _('Sube tu foto') %></legend>
             <div class="row">
-              <div class="span6">
                 <label class="photoupload">
                   <span><%=_('Sube tu foto') %></span>
                   <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
                 </label>
                 <div id="picture_gallery"></div>
-              </div>
             </div>
           </fieldset>
           <fieldset id="orientation" class="form-inline">
@@ -41,29 +39,32 @@
             <div class="control-group">
               <p>
                 <%= f.label :gender, _('Soy') %>
-                <%= f.select :seeking, seeking_options  %>
+                <%= f.select :seeking, seeking_options, {}, { :class => 'width95 text-center' } %>
               </p>
               <p>
-                <%= f.label :marital_status, _('y estoy') %>
-                <%= f.select :marital_status, marital_status_options %>
+                <%= f.label :marital_status, _('y estoy') %> 
+                <%= f.select :marital_status, marital_status_options, {}, { :class => 'width95 text-center' } %>
               </p>
             </div>
             <div class="control-group">
               <p>
                 <%= f.label :birth_date, _('Nací el') %>
-                <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
-                <%= f.label :birth_date_year, _('de') %>
-                <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
+              </p>
+              <p>
+                <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'width45' %>
+              </p>
+              <p>
+                <%= f.text_field :birth_date_year, placeholder: _('Año'), class: 'width95 text-center' %>
               </p>
 
             </div>
             <div class="control-group">
               <p>
                 <%= f.label :city, _('Y vivo en') %>
-                <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %>
+                <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location width95', 'data-placeholder' => _('Localidad...')} %>
               </p>
               <p>
-                <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %>
+                <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]', class: 'width95 text-center')  %>
               </p>
             </div>
           </fieldset>
