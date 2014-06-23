@@ -12,6 +12,7 @@
 
       <%= form_for(resource, :as => resource_name,
                     :url => password_path(resource_name), :method => :post) do |f| %>
+
             <p>
               <%= f.label :email, _('Tu correo electrónico') %>
               <%= f.text_field :email, :autofocus => true, type: 'email', class: 'width95 text-center' %>
