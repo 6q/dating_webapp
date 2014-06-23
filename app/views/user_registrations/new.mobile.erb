@@ -1,10 +1,10 @@
-<% title = _("Consejos de uso") %>
+<% title = _("Registro Usuari@ Gratis") %>
 <% content_for(:title) {title} %>
 <%= render 'shared/flat-header' %>
 
 <div class="container-fluid rounded-box page-content">
   <div class="content row-fluid">
-    <div class="container-fluid nopadding">
+    <div class="container-fluid nopadding text-center">
       <div class="row-fluid text-center">
         <h1><%= title %></h1>
       </div>
@@ -18,10 +18,10 @@
                   <%= link_to raw('<i></i> ') + _('Facebook'), "/auth/facebook", id: "sign_in" %>
                 </div>
                 <p><%= _('Me llamo') %><br>
-                <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre') %><br>
-                <%= f.text_field :surname, placeholder: _('Apellidos') %>
+                <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre'), class: 'width95 text-center' %><br>
+                <%= f.text_field :surname, placeholder: _('Apellidos'), class: 'width95 text-center' %>
                 </p>
-                <p><%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)') %></p>
+                <p><%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)'), class: 'width95 text-center' %></p>
               </fieldset>
 
           <fieldset id="photo" class="clearfix form-inline">
@@ -39,23 +39,32 @@
           <fieldset id="orientation" class="form-inline">
             <legend><%= _('¿Cómo eres?') %></legend>
             <div class="control-group">
-              <%= f.label :gender, _('Soy') %>
-              <%= f.select :seeking, seeking_options  %><br>
-              <%= f.label :marital_status, _('y') %>
-              <%= f.select :marital_status, marital_status_options %>
-              .
+              <p>
+                <%= f.label :gender, _('Soy') %>
+                <%= f.select :seeking, seeking_options  %>
+              </p>
+              <p>
+                <%= f.label :marital_status, _('y estoy') %>
+                <%= f.select :marital_status, marital_status_options %>
+              </p>
             </div>
             <div class="control-group">
-              <%= f.label :birth_date, _('Nací el') %>
-              <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
-              <%= f.label :birth_date_year, _('de') %>
-              <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %> .
+              <p>
+                <%= f.label :birth_date, _('Nací el') %>
+                <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'span2' %>
+                <%= f.label :birth_date_year, _('de') %>
+                <%= f.text_field :birth_date_year, placeholder: _('Año'), class: "span1" %>
+              </p>
 
             </div>
             <div class="control-group">
-              <%= f.label :city, _('Y vivo en') %>
-              <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %> ,<br>
-              <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %> .
+              <p>
+                <%= f.label :city, _('Y vivo en') %>
+                <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location', 'data-placeholder' => _('Localidad...')} %>
+              </p>
+              <p>
+                <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]') %>
+              </p>
             </div>
           </fieldset>
           <div class="nofloat">
@@ -65,12 +74,12 @@
 
 
                 <div class="control-group">
-                  <%= f.label :email, _("Email"), class: 'control-label' %>
-                  <%= f.email_field :email %>
+                  <%= f.label :email, _("Email") %>
+                  <%= f.email_field :email, class: 'width95 text-center' %>
                 </div>
                 <div class="control-group">
-                  <%= f.label :password, _("Contraseña"), class: "control-label" %>
-                  <%= f.password_field :password %>
+                  <%= f.label :password, _("Contraseña") %>
+                  <%= f.password_field :password, class: 'width95 text-center' %>
                 </div>
  
                   <div class="clearfix">
@@ -86,7 +95,7 @@
                   <%= f.hidden_field :uid %>
                   <%= f.hidden_field :oauth_token %>
                   <%= f.hidden_field :oauth_expires_at %>
-                  <%= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit' %>
+                  <%= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit width96' %>
 
 
           </fieldset>
