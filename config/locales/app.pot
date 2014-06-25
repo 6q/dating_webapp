@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-05 10:59+0200\n"
+"POT-Creation-Date: 2014-06-25 11:31+0200\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,9 +112,6 @@ msgid "4,99€/mes"
 msgstr ""
 
 msgid "<b>¿Quieres ayudar a un familiar, amig@ o ex pareja?</b> No lo dudes y échale una mano. Con Cellove puedes ayudar a quien desees a que encuentre su <b>pareja ideal</b>."
-msgstr ""
-
-msgid "<p>Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)</p>\\n\\n    <p>Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:</p>\\n\\n    <p><h3>‘Pon el máximo de información sobre ti’</h3>\\nRellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti</p>\\n\\n    <p><h3>‘Sé activo’</h3>\\nMuévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones</p>\\n\\n    <p><h3>‘Muéstrate tal como eres’</h3>\\nSé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas</p>\\n    <p><h3>‘Mejora tu Índice Cellove’</h3>\\nUtiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove</p>\\n    <p><h3>\\n‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’</h3></p>"
 msgstr ""
 
 msgid "A los efectos de lo que se dispone en los presentes términos de uso y condiciones generales, se entenderá que una información o contenido que se incorpora por un Usuario a Cellove® puede tener carácter público cuando se reproduzca, distribuya, transforme, comunique o se ponga a disposición del público a través de Cellove® dentro de sus lugares de acceso libre a la comunidad de Usuarios de Cellove®."
@@ -384,6 +381,9 @@ msgstr ""
 msgid "CUESTIONES PRELIMINARES"
 msgstr ""
 
+msgid "Cambia tu contraseña"
+msgstr ""
+
 msgid "Cambia tu foto de perfil"
 msgstr ""
 
@@ -501,13 +501,16 @@ msgstr ""
 msgid "Con una dieta"
 msgstr ""
 
+msgid "ConfiguraciÃ³n actualizada"
+msgstr ""
+
 msgid "Configuración"
 msgstr ""
 
-msgid "Configuración actualizada"
+msgid "Configuración de cuenta"
 msgstr ""
 
-msgid "Configuración de cuenta"
+msgid "Confirma tu nueva contraseña"
 msgstr ""
 
 msgid "Confirmación de cuenta de correo"
@@ -852,6 +855,9 @@ msgstr ""
 msgid "Estado: "
 msgstr ""
 
+msgid "Estamos convencidos que Cellove puede aportarte nuevas experiencias, conocer a esa persona con la que puedes tener una conexión especial, pero también os diremos que esto es como la vida misma, hay que estar en el momento adecuado y hacer que surja la chispa =)"
+msgstr ""
+
 msgid "Estar con la familia"
 msgstr ""
 
@@ -1048,6 +1054,9 @@ msgid "Hábitos"
 msgstr ""
 
 msgid "INCUMPLIMIENTO DE LAS CONDICIONES DE USO"
+msgstr ""
+
+msgid "Identificarte"
 msgstr ""
 
 msgid "Idioma"
@@ -1293,6 +1302,9 @@ msgstr ""
 msgid "Mostrando "
 msgstr ""
 
+msgid "Muévete y sé dinámico dentro de la página, deja mensajes, propón conversaciones, deja huella de tu presencia y responde a tus peticiones"
+msgstr ""
+
 msgid "Más cercanos"
 msgstr ""
 
@@ -1386,6 +1398,9 @@ msgstr ""
 msgid "No tengo animales de compañía y soy alérgico"
 msgstr ""
 
+msgid "No tienes acceso a este perfil"
+msgstr ""
+
 msgid "No tienes permiso para borrar esta foto"
 msgstr ""
 
@@ -1399,6 +1414,9 @@ msgid "Nombre"
 msgstr ""
 
 msgid "Notificaciones por email"
+msgstr ""
+
+msgid "Nuestros consejos para sacar el máximo partido de Cellove son los siguientes:"
 msgstr ""
 
 msgid "Nueva nota"
@@ -1740,6 +1758,9 @@ msgstr ""
 msgid "Registro Gratis"
 msgstr ""
 
+msgid "Registro Usuari@ Gratis"
+msgstr ""
+
 msgid "Registro Usuario Gratis"
 msgstr ""
 
@@ -1765,6 +1786,9 @@ msgid "Relación"
 msgstr ""
 
 msgid "Religión"
+msgstr ""
+
+msgid "Rellena tanto como puedas la información de tu perfil, es tu presentación y la puerta de acceso hacia ti"
 msgstr ""
 
 msgid "Reservado"
@@ -1800,13 +1824,16 @@ msgstr ""
 msgid "Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?"
 msgstr ""
 
-msgid "Se ha denunciado al usuario. ¡Gracias por tu ayuda!"
+msgid "Se ha denunciado al usuario. Â¡Gracias por tu ayuda!"
 msgstr ""
 
 msgid "Se han enamorado en Cellove %{link}"
 msgstr ""
 
 msgid "Selecciona una propuesta para compartir..."
+msgstr ""
+
+msgid "Seleccionar Idioma"
 msgstr ""
 
 msgid "Sensible"
@@ -1914,6 +1941,9 @@ msgstr ""
 msgid "Sus gustos"
 msgstr ""
 
+msgid "Sé tú mismo relacionándote como en tu vida social, o mejor! Sé accesible y dispuesto a abrir puertas"
+msgstr ""
+
 msgid "Sí"
 msgstr ""
 
@@ -2004,6 +2034,12 @@ msgstr ""
 msgid "Tu correo"
 msgstr ""
 
+msgid "Tu correo electrónico"
+msgstr ""
+
+msgid "Tu cuenta se encuentra desactivada. Debes reactivar la cuenta antes de volver a utilizar Cellove."
+msgstr ""
+
 msgid "Tu dices:"
 msgstr ""
 
@@ -2017,6 +2053,9 @@ msgid "Tu nota se ha borrado."
 msgstr ""
 
 msgid "Tu nota se ha guardado."
+msgstr ""
+
+msgid "Tu nueva contraseña"
 msgstr ""
 
 msgid "Tu panel de control como usuario registrado va actualizándose a tiempo real, si recibes visitas nuevas a tu perfil, nuevos mensajes, chats,  propuestas de actividad, etc. De esta forma estarás al corriente de todo, podrás interactuar al instante y sacar máximo provecho de Cellove."
@@ -2104,6 +2143,9 @@ msgid "Usuario inexistente o inactivo"
 msgstr ""
 
 msgid "Usuarios bloqueados"
+msgstr ""
+
+msgid "Utiliza la gran herramienta que son tus Celestin@s. Tod@s tenemos  amigos del alma, gente dispuesta a ayudar y contactos que pueden hablar bien de ti, y junto con otros detalles, esto es lo que hará que mejore tu Índice Cellove"
 msgstr ""
 
 msgid "Utiliza todo el potencial que te ofrece Cellove"
@@ -2976,6 +3018,9 @@ msgstr ""
 msgid "y %{tp_child}"
 msgstr ""
 
+msgid "y estoy"
+msgstr ""
+
 msgid "y mi nivel de ganancias es"
 msgstr ""
 
@@ -3253,6 +3298,21 @@ msgid "árabe"
 msgstr ""
 
 msgid "ópera"
+msgstr ""
+
+msgid "‘Mejora tu Índice Cellove’"
+msgstr ""
+
+msgid "‘Muéstrate tal como eres’"
+msgstr ""
+
+msgid "‘Pon el máximo de información sobre ti’"
+msgstr ""
+
+msgid "‘Sé activo’"
+msgstr ""
+
+msgid "‘Y utilízanos como tu nuevo camino para rellenar tu vida de nueva gente interesante y con la que compartir grandes momentos’"
 msgstr ""
 
 msgid "€/año"
