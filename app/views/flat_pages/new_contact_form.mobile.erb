@@ -1,0 +1,24 @@
+<% title = _("Contacta") %>
+<% content_for(:title) {title} %>
+<%= render 'shared/flat-header' %>
+
+<div class="container-fluid rounded-box page-content">
+  <div class="content row-fluid">
+    <div class="container-fluid nopadding">
+      <div class="row-fluid text-center">
+        <h1><%= title %></h1>
+      </div>
+
+      <%= simple_form_for @contact_form, url: contact_form_path, :html => {:class => '', :honeypot => true  } do |f| %>
+        <fieldset id="contact" class="clearfix">
+          <%= f.input :nickname,    :label => _('Nombre') %>
+          <%= f.text_field :name, :autofocus => true, :placeholder => _('Nombre'), :input_html => { :value => current_user && current_user.name    ? current_user.name     : "" }, :class => 'width95 text-center' %>
+          <%= f.text_field :surname, :placeholder => _('Apellidos'), :input_html => { :value => current_user && current_user.surname ? current_user.surname  : "" }, class: 'width95 text-center' %>
+          <%= f.text_field :email,   :placeholder => _('Email'),     :input_html => { :value => current_user && current_user.email   ? current_user.email    : "" }, class: 'width95 text-center' %>
+          <%= f.text_area :message, :placeholder => _('Mensaje'), as: :text, size: '50x10', class: 'width95' %>
+          <p><%= f.button :submit, class: 'btn btn-info btn-large width96', value: _('ENVIAR') %></p>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>
