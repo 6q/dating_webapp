@@ -2,14 +2,14 @@
 <% content_for(:title) {title} %>
 <%= render 'shared/flat-header' %>
 
-<div class="container-fluid rounded-box page-content">
+<div class="container-fluid rounded-box page-content register-form">
   <div class="content row-fluid">
     <div class="container-fluid nopadding text-center">
       <div class="row-fluid text-center">
         <h1><%= title %></h1>
       </div>
 
-        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'register-form text-center', :multipart => true, :honeypot => true }, validate: true) do |f| %>
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :multipart => true, :honeypot => true }, validate: true) do |f| %>
           <%= display_base_errors resource %>
 
 
@@ -52,7 +52,7 @@
                 <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'width40' %>
               </p>
               <p>
-                <%= f.text_field :birth_date_year, placeholder: _('Año'), class: 'width95 text-center' %>
+                <%= f.number_field :birth_date_year, placeholder: _('Año'), in: 1900...Time.now.year, class: 'width95 text-center' %>
               </p>
 
 

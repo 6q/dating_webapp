@@ -172,8 +172,11 @@ fieldset {
 
 .register-form {
 
-  text-align:justify;
+  text-align:center;
 
+  h1 {
+    font-size:18px;
+  }
   fieldset {
     margin:0;
     legend {
@@ -227,6 +230,7 @@ fieldset {
       padding:0.5em 1em;
       text-decoration:none;
       color:#FFFFFF;
+      margin: 10px auto;
       [type=file] {
         cursor: inherit;
         display: block;
