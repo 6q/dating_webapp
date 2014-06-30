@@ -89,8 +89,8 @@ Cellove::Application.routes.draw do
   get 'privacy-policy' => 'flat_pages#privacy_policy', as: :privacy_policy
   get 'usage' => 'flat_pages#usage', as: :usage
   get 'robots.txt' => 'flat_pages#robots'
-  get 'contact-us' => 'flat_pages#new_contact_form', as: :new_contact_form
   post 'contact' => 'flat_pages#contact_form', as: :contact_form
+  get 'contact-us' => 'flat_pages#new_contact_form', as: :new_contact_form
   get 'media-press' => 'flat_pages#media_press', as: :media_press
   get 'error' => 'flat_pages#error', as: :error
   get 'tv-spot/:id' => 'flat_pages#tv_spot', as: :tv_spot
