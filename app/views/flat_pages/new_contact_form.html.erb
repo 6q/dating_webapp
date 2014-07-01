@@ -14,14 +14,15 @@
       </div>
 
       <div class="span6">
-        <%= simple_form_for @contact_form, url: contact_form_path, :html => {:class => 'form-horizontal', :honeypot => true  } do |f| %>
+        <%= simple_form_for @contact_form, url: contact_form_path, :html => {:class => 'form-horizontal', :honeypot => true  }, validate: true do |f| %>
           <fieldset id="contact" class="clearfix form-horizontal">
             <p><%= _('Si tienes cualquier duda o pregunta sobre Cellove, su funcionamiento o, simplemente quieres ponerte en contacto con nosotr@s, hazlo a través del siguiente formulario:') %></p>
-            <%= f.input :nickname,    :label => _('Nombre') %>
-            <%= f.input :name,    :label => _('Nombre'),    :input_html => { :value => current_user && current_user.name    ? current_user.name     : "" } %>
-            <%= f.input :surname, :label => _('Apellidos'), :input_html => { :value => current_user && current_user.surname ? current_user.surname  : "" } %>
-            <%= f.input :email,   :label => _('Email'),     :input_html => { :value => current_user && current_user.email   ? current_user.email    : "" } %>
-            <%= f.input :message, :label => _('Mensaje'), as: :text, input_html: {rows: '2'} %>
+
+            <%= f.input :name,    :label => _('Nombre'), :required => true, :input_html => { :value => current_user && current_user.name    ? current_user.name     : "" } %>
+            <%= f.input :surname, :label => _('Apellidos'), :required => true, :input_html => { :value => current_user && current_user.surname ? current_user.surname  : "" } %>
+            <%= f.input :email,   :label => _('Email'), :required => true, :input_html => { :value => current_user && current_user.email   ? current_user.email    : "" } %>
+            <%= f.input :message, :label => _('Mensaje'), :required => true, as: :text, input_html: {rows: '2'} %>
+
             <div class="actions">
               <%= f.button :submit, class: 'btn btn-info btn-large', value: _('ENVIAR') %>
             </div>
