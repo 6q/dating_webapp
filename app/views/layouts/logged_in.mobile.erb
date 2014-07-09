@@ -3,17 +3,45 @@
   <head>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
     <%= render "layouts/common_head" %>
-    <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
   </head>
   <body class="user <%= controller_name %> <%= action_name %>">
-  	<%= render "layouts/changing_background" %>
     <header role="banner" class="clearfix">
       <div class="container">
-    	<%= render 'shared/user/header-actions' %>
-    	<h1>MOBILE SIGNED IN LAYOUT</h1>
+        <%= render 'shared/user/header-actions' %>
+        <div id="logo">
+          <h1><%= link_to "Cellove", dashboard_path %></h1>
+        </div>
       </div>
     </header>
-    <%= yield %>
+    <div class="container">
+      <section role="main">
+        <% if current_user.has_role?(:matchmaker) %>
+          <%= _('Lo sentimos pero la web móvil no está disponible para celestinos.') %>
+        <% else %>
+          <% unless params[:controller] == 'flat_pages' %>
+            <div class="row">
+              <div class="span3">              
+                  <%= render 'shared/sidebar' %>
+              </div>
+              <div class="span9">
+                <%= render 'shared/confirmation_pending_form' unless (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
+                <%= yield %>
+              </div>
+            </div>
+          <% else %>
+            <%= yield %>
+          <% end %>
+        <% end %><!-- Matchmakers -->
+      </section>
+    </div>
 
+    <%= render 'shared/footer' %>
+    <%= render 'shared/user/notifications' %>
+    <%= render 'layouts/messages' %>
+
+    <%= render 'shared/user/modal_upgrade' %>
+    <%= render 'shared/modal_progress' %>
+    <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
+    <%= render 'shared/scripts' %>
   </body>
 </html>
