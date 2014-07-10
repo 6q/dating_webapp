@@ -112,14 +112,14 @@ class UsersController < ApplicationController
   def general_settings
     if current_user.has_role?(:premium_user)
       if current_user.general_settings.update_attributes(params[:general_setting], {as: :premium_user})
-        flash[:success] = _('ConfiguraciÃ³n actualizada')
+        flash[:success] = _('Configuración actualizada')
       else
         flash[:error] = _('Oops!')
       end
     else
       params[:general_setting].except!(:newsletter, :anonymous_browsing)
       if current_user.general_settings.update_attributes(params[:general_setting])
-        flash[:success] = _('ConfiguraciÃ³n actualizada')
+        flash[:success] = _('Configuración actualizada')
       else
         flash[:error] = _('Oops!')
       end
@@ -144,7 +144,7 @@ class UsersController < ApplicationController
   def report
     reported = User.find(params[:user_id])
     UserMailer.report(current_user, reported).deliver
-    redirect_to :back, notice: _('Se ha denunciado al usuario. Â¡Gracias por tu ayuda!')
+    redirect_to :back, notice: _('Se ha denunciado al usuario. ¡Gracias por tu ayuda!')
   end
 
   # Just for testing, remove it or move to another controller
