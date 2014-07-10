@@ -244,7 +244,6 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :surname
   validates_presence_of :email
-  validates_presence_of :password
 
   #Validations only performed on regular users, not matchmakers
   validates_presence_of :gender, if: regular_user
