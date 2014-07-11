@@ -61,7 +61,10 @@ body {
 header[role="banner"]{
 
   /* random background here in default */
-
+  padding-top:20px;
+  position:relative;
+  padding-bottom:12px;
+  
   #logo {
     width:100%;
     max-width: 286px;

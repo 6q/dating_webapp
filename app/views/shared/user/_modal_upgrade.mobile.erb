@@ -1,0 +1,17 @@
+<!-- Modal -->
+<div id="upgrade-account" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <span class='heart'>&#9829;</span> <%= _('Hazte VIP') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body center">
+    <%= image_tag('logo-cellove-blue.png', class: :logo) %>
+    <p><%= _('Hazte VIP ahora para poder disfrutar de todas las ventajas y funcionalidades de Cellove.') %></p>
+  </div>
+  <div class="modal-footer col2">
+    <div class="left"><%= link_to(_('Hacerme VIP'), pay_path) %></div>
+    <div class="right"><%= link_to _('Cancelar'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %></div>
+  </div>
+</div>

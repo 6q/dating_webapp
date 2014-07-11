@@ -9,9 +9,9 @@
     }
 
     #header-actions {
-      position:absolute;
-      right:0;
-      top:-20px;
+      position:relative;
+      float:right;
+
       font-size:.8em;
       color:#fff;
       text-align:right;
@@ -45,97 +45,14 @@
         text-align:right;
       }
 
-      #lang-switcher {
-        position:relative;
-        .picker {
-          a {
-            margin-right:25px;
-             i {
-              width:16px;
-              height:16px;
-              position: absolute;
-              background:image-url('languages_icon.png') no-repeat;
-              right: 7px;
-              top:7px;
-            }
-          }
-        }
-        .leaf {
-          a {
-            padding-left:10px;
-          }
-        }
-      }
-
-      .header-switcher {
-
-        text-align:center;
-        background:#000;
-        z-index:999;
-        border-bottom-right-radius:5px;
-        border-bottom-left-radius:5px;
-
-        :hover {
-          background:#292A29;
-          border-bottom-right-radius:5px;
-          border-bottom-left-radius:5px;
-        }
-
-        ul {
-
-          margin:0;
-          padding:0;
-          padding:5px;
-          white-space: nowrap;
-
-              a {
-                text-decoration:none;
-              }
-
-          span {
-            display:none;
-          }
-          li {
-
-            &.picker {
-
-              a {
-                white-space: nowrap;
-                overflow: hidden;
-              }
-
-              i {
-                display:inline-block;
-                width:14px;
-                height:9px;
-                margin-left:5px;
-                background:image-url('sprite.png') -359px -165px no-repeat;
-              }
-
-            }
-
-            &.leaf {
-
-              display:none;
-              margin:5px 0;
-
-              text-align:left;
-              img {
-                margin-right:10px;
-                width:28px;
-                height:28px;
-              }
-            }
-
-          }
-        }
-      }
 
       .avatar {
         float: right;
         padding-left: 10px;
-        margin-top: 6px;
+
         img{
+          width: 40px;
+          height: 40px;
           border-radius: 4px;
         }
       }
