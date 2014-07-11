@@ -7,13 +7,16 @@
   <body class="user <%= controller_name %> <%= action_name %>">
     <header role="banner" class="clearfix">
       <div class="container">
-        <%= render 'shared/user/header-actions' %>
+        <div id="open-menu">
+          <a id="open-main-sidebar" href="#main-sidebar">X</a> 
+        </div>
         <div id="logo">
           <h1><%= link_to "Cellove", dashboard_path %></h1>
         </div>
+        <%= render 'shared/user/header-actions' %>
       </div>
     </header>
-    <div class="container">
+
       <section role="main">
         <% if current_user.has_role?(:matchmaker) %>
           <%= _('Lo sentimos pero la web móvil no está disponible para celestinos.') %>
@@ -33,7 +36,7 @@
           <% end %>
         <% end %><!-- Matchmakers -->
       </section>
-    </div>
+
 
     <%= render 'shared/footer' %>
     <%= render 'shared/user/notifications' %>

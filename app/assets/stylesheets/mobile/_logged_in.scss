@@ -14,10 +14,19 @@ header[role="banner"]{
   height:40px;
   background:black;
 
+  #open-menu {
+    float:left;
+    a {
+      height:40px;
+      width:40px;
+      background:red;
+    }
+  }
+
   #logo {
     width: 133px;
     height: 40px;
-    float:none;
+    float:left;
     position:relative;
     padding:0px;
     h1 {
