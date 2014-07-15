@@ -1,0 +1,67 @@
+<% if current_user.can_message? %>
+
+<!-- Modal -->
+<div id="activity-proposal-<%= user.id %>" class="activity-proposal modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><%= _('Proponer una actividad') %></h3>
+    <%= user_detail(user) %>
+  </div>
+  <%= simple_form_for Activity.new, url: activities_path do |f| %>
+    <div class="modal-body">
+
+      <p><%= _('Selecciona una propuesta para compartir...') %></p>
+      <br>
+      <ul id="activity-types">
+        <% Activity::ACTIVITY_TYPE.each do |k, v| %>
+          <li class="<%= k %>"><%= link_to v, '#' %></li>
+        <% end %>
+      </ul>
+      <%= f.input :activity_type, as: :hidden %>
+      <div class="reply">
+        <%= f.input_field :body, class: 'activity-body' %>
+        <%= hidden_field_tag :recipient, user.id %>
+        <%= hidden_field_tag :conversation_id, (defined?(conversation) ? conversation.id : nil) %>
+      </div>
+      <br>
+      <div id="activity-date" class="form-inline">
+        <div class="control-group">
+          <label><%= _('¿Cuando?') %></label> <%= f.input_field :date, as: :string, placeholder: 'dd/mm/aaaa', id: "activity-datepicker-#{user.id}" , class: "input-small" %>
+          <label class="checkbox">
+            <input type="checkbox"> <%= _('No quiero especificar cuando') %>
+          </label>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <%= link_to _('Cancelar'), '#fast-reply', 'data-toggle' => 'modal', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+      <%= f.submit _('Proponer'), class: 'btn btn-info' %>
+    </div>
+  <% end %>
+</div>
+<script>
+  $(function() {
+    var dnShort = new Array("Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa");
+    var mn = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+
+    $("#activity-datepicker-<%= user.id %>").datepicker({
+      dateFormat: 'dd/mm/yy',
+      firstDay: 1,
+      dayNamesMin: dnShort,
+      monthNames: mn
+    });
+  });
+</script>
+
+<% else %>
+<script type="text/javascript">
+$(function() {
+  $('.action-proposal').unbind('click').click(function(event) {
+    event.preventDefault();
+    $('#upgrade-account-modal').click();
+  });
+});
+</script>
+
+<% end %>

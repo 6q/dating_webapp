@@ -11,7 +11,7 @@
     #header-actions {
       position:relative;
       float:right;
-
+      margin-right: 20px;
       font-size:.8em;
       color:#fff;
       text-align:right;
@@ -27,15 +27,7 @@
         position:absolute;
         top:-40px;
         right:0;
-        width:800px;
         z-index:900;
-      }
-
-
-      #color-switcher, #lang-switcher {
-        float:right;
-        width:100px;
-        margin-left:5px;
       }
 
       #user-count {

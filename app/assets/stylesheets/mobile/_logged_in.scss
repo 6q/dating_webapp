@@ -19,7 +19,14 @@ header[role="banner"]{
     a {
       height:40px;
       width:40px;
-      background:red;
+      position: relative;
+      padding-left: 10px;
+      font-size:30px;
+      display:block;
+      padding-right:10px;
+    }
+    a:hover {
+      text-decoration:none;
     }
   }
 
@@ -47,4 +54,11 @@ header[role="banner"]{
     }
 
   }
+}
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 100%;
 }

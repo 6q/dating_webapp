@@ -1,0 +1,23 @@
+<!-- Modal -->
+<div id="delete-confirm-<%= conversation.id.to_s %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <%= _('Borrar mensajes') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body">
+    <div class="center">
+      <% s_or_r = sender_or_recipient(conversation) %>
+      <% if s_or_r %>
+        <p><%= _('¿Seguro que deseas eliminar el mensaje de') %> <strong><%= link_to s_or_r.name, s_or_r %></strong>?</p>
+      <% else %>
+        <p><%= _('¿Seguro que deseas eliminar el mensaje') %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="modal-footer center">
+    <%= link_to _('No, me lo he pensado mejor'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= link_to _('Eliminar conversación'), conversation_path(conversation), method: :delete, class: 'btn btn-danger'  %>
+  </div>
+</div>
