@@ -1,0 +1,87 @@
+<% 
+  num = recommendation.relationship
+  heart_class = ''
+%>
+
+<%
+  if num == 1 
+    heart_class = 'ex'
+    relationship = _('Ex pareja')
+  end
+
+  if num == 2 
+    heart_class = 'special'
+    relationship = _('Amigo Especial')
+  end
+
+  if num == 3 
+    heart_class = 'friend'
+    relationship = _('Amigo')
+  end
+
+  if num == 4 
+    heart_class = 'family'
+    relationship = _('Familiar')
+  end
+%>
+
+<article class="celes-item heart-<%= heart_class %>">
+  <div class="clearfix">
+    <%= profile_pic((is_creator ? recommendation.user : recommendation.creator), { width: 100, height: 100 }) %>
+    <header>
+      <% if is_creator %>
+        <% if recommendation.user.sign_in_count == 0 # This indicates it's an invited user %>
+          <%= recommendation.creator.email %>
+        <% else %>
+          <%= link_to recommendation.user.name, user_path(recommendation.user) %>
+        <% end %>
+      <% else %>
+        <%= link_to recommendation.creator.name, user_path(recommendation.creator) %>
+      <% end %>
+      <span><i class="heart"></i><%= relationship %></span>
+      <% eliminar_celestino_id = '#delete-celestino-' + recommendation.id.to_s %>
+      <% if recommendation.user_id == current_user.id %>
+        <%= link_to _('Eliminar celestin@'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
+      <% elsif recommendation.creator_id == current_user.id %>
+        <% if recommendation.deleted_at.blank? %>
+          <%= link_to _('Desactivar recomendación'), eliminar_celestino_id, 'data-toggle' => 'modal' %>
+        <% else %>
+          <%= link_to _('Reactivar recomendación'), recommendation_creator_toggle_path(recommendation), method: :post %>
+        <% end %>
+      <% end %>
+      <span class="date"><%= time_ago_in_words_or_date(recommendation.updated_at) %></span>
+    </header>
+
+    <p><%= recommendation.description %></p>
+  </div>
+
+  <% if is_creator %>
+    <div class="status">
+      <%= _('Estado: ') %>
+      <% recommendation.tap do |r| %>
+        <% if r.deleted_at.present? %>
+          <%= _('Has desactivado esta recomendación.') %>
+        <% else %>
+          <% if !r.confirmed? && !r.denied? %>
+            <%= _('Tu recomendación está pendiente de confirmar.') %>
+          <% elsif r.denied? && r.confirmed? %>
+            <%= _('Tu recomendación ha sido eliminada.') %>
+          <% elsif !r.confirmed? && r.denied? %>
+            <%= _('Tu recomendación ha sido rechazada.') %>
+          <% elsif r.confirmed? && !r.denied? %>
+            <%= _('Tu recomendación ha sido aceptada.')  %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if !is_creator && !recommendation.confirmed? %>
+    <div class="choose">
+      <%= link_to '<i class="icon-ok icon-white"></i> '.html_safe + _('Aceptar'), recommendation_accept_path(recommendation.id), class: 'btn btn-success', :method => :post %>
+      <%= link_to '<i class="icon-remove icon-white"></i> '.html_safe + _('Rechazar'), recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+    </div>
+  <% end %>
+</article>
+
+<%= render 'shared/user/modal_delete-celestino', recommendation: recommendation, is_creator: is_creator %>

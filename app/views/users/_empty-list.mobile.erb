@@ -1,0 +1,7 @@
+  <% unless @users.any? %>
+  <section class="boxed">
+    <div class="users-empty boxed-inner">
+      <p><%= _('Actualmente no hay ningún perfil en este apartado') %>.</p>
+    </div>
+  </section>
+  <% end %>

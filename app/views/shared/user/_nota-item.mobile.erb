@@ -1,0 +1,7 @@
+<div class="nota-item">
+	<div class="heading">
+		<small class="pull-left"><%= note.updated_at %></small>
+		<%= link_to '<i class="icon icon-remove pull-right"></i>'.html_safe, note, method: :delete %>
+	</div>
+	<%= note.content %>
+</div>

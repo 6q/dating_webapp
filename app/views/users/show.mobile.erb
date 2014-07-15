@@ -1,0 +1,189 @@
+<section class="user-profile">
+	<article class="boxed">
+		<div class="boxed-inner">
+      <% if current_user.can_interact_with?(@user) %>
+        <div id="nice-couple" class="">
+          <i></i>
+          <p><%= _('¿Hacéis buena pareja?') %></p>
+          <%= rating_for(@user, current_user, readonly: false) %>
+        </div>
+      <% end %>
+
+			<div class="user-detail-container clearfix">
+				<div class="photo">
+					<% image_url = current_user.profile_picture && @user.profile_picture ? @user.profile_picture.image.jpg.url : images_profile_path %>
+					<a <%= "href=#{image_url} class=grouped_elements " if @user.profile_picture %> rel="group1">
+						<%= profile_pic(@user) %>
+					</a>
+				</div>
+				<div class="description">
+          <h5><div class="<%= @user.online? ? "online" : "" %>"></div><%= "#{@user.name} #{@user.surname}" + (@user.screen_name.present? ? " (#{@user.screen_name}) " : " ") + "| " %><span><%= "#{@user.city}, #{CountrySelect::COUNTRIES[@user.country]}" %></span></h5>
+						<p class="small">
+							<%= _(User::GENDER[@user.gender]).capitalize %> <%= @user.age %> <%= _("años")%>
+							<% if @user.height %>
+								<%= _('- %{height} cms de altura') % {:height => @user.height} %>
+							<% end %>
+						</p>
+						<p class="small">
+							<%= _('%{name} está %{marital_status}') % {:name => @user.name, :marital_status => _(User::MARITAL_STATUS[@user.marital_status])} %>
+							<% if @user.child.present? %>
+								<%= _('y %{tp_child}') % {:tp_child => _(User::TP_CHILD[@user.child])} %>.
+							<% end %>
+							<% if @user.lf_gender.present? %>
+								<%= _('Busca %{gender}') % {:gender => _(User::GENDER[@user.lf_gender])} %>
+								<% if @user.lf_age_from.present? and @user.lf_age_to.present? %>
+									<%= _('de entre %{age_from} y %{age_to} años') % {:age_from => @user.lf_age_from, :age_to => @user.lf_age_to} %>
+								<% end %>
+								<% if @user.lf_relationship.present? %>
+									<%= _('para %{tipo_relacion}') % { :tipo_relacion => _(User::LF_RELATIONSHIP[@user.lf_relationship]) } %>
+								<% end %>
+								<% if @user.city.present? %>
+									<%= _('y que esté cerca de %{city}, %{country}') % {:city => @user.city, :country => @user.country} %>
+								<% end %>
+							<% end %>
+						</p>
+				</div>
+
+				<% if @user.pictures.count > 1 %>
+					<div id="user-profile-thumbs">
+
+						<div class="jcarousel">
+							<ul>
+								<% @user.pictures.each do |p| %>
+									<% image_url = current_user.profile_picture ? p.image.jpg.url : images_profile_path %>
+									<li><a class="grouped_elements" rel="user-pictures" href="<%= image_url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
+								<% end %>
+							</ul>
+						</div>
+						<% if @user.pictures.count > 6 %>
+							<a href="#" class="jcarousel-prev"><%= _('anterior') %></a>
+							<a href="#" class="jcarousel-next"><%= _('siguiente') %></a>
+						<% end %>
+					</div>
+				<% end %>
+
+			</div>
+		</div>
+	</article>
+
+	<% unless @user == current_user %>
+		<%= render 'shared/user/profile-action-links' %>
+	<% end %>
+
+<article class="basic-tabs tabs-container">
+
+		<ul class="nav nav-tabs" id="basic-tabs">
+  		<li class="active"><a href="#desc"><%= _('Descripción') %></a></li>
+		  <li><a href="#dicen"><%= _('Sus Celestin@s') %></a></li>
+		  <li><a href="#atributos"><%= _('Sus Atributos') %></a></li>
+		  <li class="last"><a href="#notas"><%= _('Tus notas') %></a></li>
+		</ul>
+
+		<div class="boxed">
+			<div class="boxed-inner">
+				<div class="tab-content">
+
+		  		<div class="tab-pane active" id="desc">
+		  			<% if @user.description.blank? %>
+              <%= _('%{name} aún no ha introducido su descripción.') % {name: @user.name} %>
+		  			<% else %>
+							<p><%= @user.description %></p>
+					<% end %>
+		  		</div>
+
+		  		<div class="tab-pane" id="dicen">
+		  			<% if @user.confirmed_recommenders.empty? %>
+              <%= _('%{name} aún no tiene ningún celestino.') % {name: @user.name} %> <%= link_to _('Quieres ser el primero?'), be_matchmaker_path %>
+		  			<% else %>
+		  				<% @user.confirmed_recommenders.each do |rec| %>
+								<%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>
+							<% end %>
+		  			<% end %>
+		  		</div>
+
+		  		<div class="tab-pane" id="atributos">
+		  			<%= render 'atributes', user: @user %>
+		  		</div>
+
+		  		<div class="tab-pane" id="notas">
+            <h4><%= _('Tus notas de %{name} <span>(tranquilo, él/ella no las verá)</span>') % {name: @user.name} %></h4>
+		  			<hr>
+		  			<% current_user.my_notes(@user).each do |note| %>
+		  				<%= render 'shared/user/nota-item', note: note %>
+		  			<% end %>
+
+		  			<div class="new-nota">
+		  				<%= form_for :note, :url => '/notes' do |n| %>
+		  					<%= n.text_area :content, :placeholder => _('Nueva nota') %>
+		  					<%= n.hidden_field :user_id, :value => current_user.id %>
+		  					<%= n.hidden_field :evaluated_id, :value => @user.id %>
+		  					<div class="pull-right controls">
+		  						<button type="submit" class="btn btn-info"><%= _('Añadir nota') %></button>
+		  					</div>
+		  				<% end %>
+		  			</div>
+
+		  		</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+	<article class="profile-tabs tabs-container">
+
+		<ul class="nav nav-tabs" id="myTab">
+  		<li class="active"><a href="#como"><%= _('¿Cómo es?') %></a></li>
+		  <li><a href="#gustos"><%= _('Sus gustos') %></a></li>
+		  <li><a href="#busca"><%= _('Qué busca') %></a></li>
+		</ul>
+
+		<div class="boxed">
+			<div class="boxed-inner">
+				<div class="tab-content">
+
+		  		<div class="tab-pane active" id="como">
+		  			<%= render 'como' %>
+		  		</div>
+
+		  		<div class="tab-pane" id="gustos">
+		  			<%= render 'gustos' %>
+		  		</div>
+
+		  		<div class="tab-pane" id="busca">
+		  			<%= render 'busca' %>
+		  		</div>
+
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<% unless @user == current_user %>
+		<%= render 'shared/user/profile-action-links' %>
+	<% end %>
+  <div class="report small">
+    <%= link_to _('Denunciar perfil a Cellove'), user_report_path(@user) %>
+  </div>
+
+</section>
+
+<script type="text/javascript">
+  // tabs
+  $('.nav-tabs a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+  })
+  // carousel
+    $('.jcarousel').jcarousel({
+      animation: 'slow'
+    });
+
+    $('.jcarousel-prev').click(function() {
+        $('.jcarousel').jcarousel('scroll', '-=5');
+    });
+
+    $('.jcarousel-next').click(function() {
+        $('.jcarousel').jcarousel('scroll', '+=5');
+    });
+</script>

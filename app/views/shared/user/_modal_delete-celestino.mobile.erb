@@ -1,0 +1,26 @@
+<!-- Modal -->
+<div id="delete-celestino-<%= recommendation.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <span class='heart'>&#9829;</span> <%= _('Eliminar Recomendación') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body">
+    <div class="center">
+      <% if is_creator %>
+        <p><%= _('Estás a punto de eliminar a una recomendación de tu lista. Si lo haces, lo que has dicho sobre el desaparecerá de su perfil. ¿Te lo has pensado bien?') %></p>
+      <% else %>
+        <p><%= _('Estás a punto de eliminar a un Celestin@ de tu lista. Si lo haces, lo que ha dicho sobre ti desaparecerá de tu perfil. ¿Te lo has pensado bien?') %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="modal-footer center">
+    <%= link_to _('No, creo que lo consideraré de nuevo'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <% if is_creator %>
+      <%= link_to _('Si, quiero eliminarla'), recommendation_creator_toggle_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+    <% else %>
+      <%= link_to _('Si, quiero eliminarlo'), recommendation_deny_path(recommendation.id), class: 'btn btn-danger', :method => :post %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<section class="celestinos">
+  <article class="boxed headless">
+    <div class="boxed-inner">
+      <header>
+      <h1 class="pull-left section_title"><%= _('Mis Celestin@s') %> | <span><%= _('Tu índice es del %{index}%% y tienes %{count} Celestin@s.') % {index: current_user.cellove_percentage, count: current_user.confirmed_recommenders.count.to_s } %></span></h1>
+        <%= link_to _('¡Mejora tu índice Cellove!') , "#mejora", :class => 'pull-right' %>
+        <div class="clearfix"></div>
+      </header>
+    </div>
+  </article>
+
+  <hr class="thin"> 
+
+  <ul class="nav nav-tabs" id="celestinos-tab">
+    <li class="active"><a href="#confirmados"><%= _('Confirmados') %></a></li>
+    <li><a href="#confirmar"><%= _('Por confirmar') %></a></li>
+    <li><a href="#attributes"><%= _('Atributos') %></a></li>
+    <li><a href="#mejora"><%= _('Mejora tu índice Cellove') %></a></li>
+  </ul>
+  
+  <div class="boxed">
+    <div class="boxed-inner">
+      <div class="tab-content">
+        <!-- begin tabs -->
+        <div class="tab-pane active" id="confirmados">
+					
+					<% unless @confirmed_recommenders.any? %>
+						<div class="celestinos-empty">
+							<p><%= _('Actualmente no tienes ningún Celestin@ confirmado.') %></p>
+						</div>
+					<% end %>
+	
+          <% @confirmed_recommenders.each do |rec| %>
+            <%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>
+          <% end %>
+          <div class="pagination">
+            <%= pager_total(@confirmed_recommenders) %>
+          </div>
+          <%= paginate @confirmed_recommenders %>
+        </div>
+
+        <div class="tab-pane" id="confirmar">
+          <% @type = 'por-confirmar' %>
+
+					<% unless @unconfirmed_recommenders.any? %>
+						<div class="celestinos-empty">
+							<p><%= _('Actualmente no tienes ningún Celestin@ pendiente de confirmar.') %></p>
+						</div>
+					<% end %>
+
+          <% @unconfirmed_recommenders.each do |rec| %>
+            <%= render 'shared/user/celes-item', recommendation: rec, is_creator: false %>
+          <% end %>
+          <div class="pagination">
+            <%= pager_total(@unconfirmed_recommenders) %>
+          </div>
+          <%= paginate @unconfirmed_recommenders %>
+        </div>
+
+        <div class="tab-pane" id="attributes">
+          <%= render 'profiles/dicen', user: current_user, show_footer: false %>
+        </div>
+
+        <div class="tab-pane" id="mejora">
+          <div class="clearfix">
+            <div class="white-box">
+              <h4><%= _('¿Quieres aumentar tu indice Cellove?') %></h4>
+              <p><%= _('Recomiéndanos un nuevo usuari@, si se registra, ambos ganaréis puntos.') %></p>
+              <%= form_for @invitation, :html => {:class => "form-inline"} do |f| %>
+                <%= f.text_field :invited_email, class: 'input-medium', placeholder: 'Email' %>
+                <%= f.hidden_field 'user_type', value: 'regular_user' %>
+                <%= f.submit 'OK', class: 'btn btn-info' %>
+              <% end %>
+            </div>
+
+            <div class="white-box">
+              <h4><%= _('¿Quieres proponer un Celestin@?') %></h4>
+              <p><%= _('Propón un nuevo celestin@ para que te recomiende y gana más puntos.') %></p>
+              <%= form_for @invitation, :html => {:class => "form-inline"} do |f| %>
+                <%= f.text_field :invited_email, class: 'input-medium', placeholder: 'Email' %>
+                <%= f.hidden_field 'user_type', value: 'celestino' %>
+                <%= f.submit 'OK', class: 'btn btn-info' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <!-- end tabs -->
+      </div>
+
+    </div>
+  </div>
+</section>

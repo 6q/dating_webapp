@@ -1,0 +1,136 @@
+<!-- Modal -->
+<!-- Modal -->
+<div id="recommend-user" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <span class='heart'>&#9829;</span> <%= _('Recomendar Usuario') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3><%= _('¡Conviértete en Celestin@!') %></h3>
+    <p><%= _('¿Quieres recomendar a alguien? ¡Cuéntanos cómo es!') %></p>
+  </div>
+  <div class="modal-body">
+    <h5><%= _('Sus datos') %></h5>
+
+    <%= form_for @recommendation do |f| %>
+      <div id="user-data" class="form-inline">
+        <div class="control-group">
+          <label for="user[name]"><%= _('Su Email') %></label> <input type="text" class="input-small" placeholder="<%= _('Su Email') %>" name="user[email]">
+        </div>
+      </div>
+
+      <h5><%= _('¿Qué relación tenéis?') %></h5>
+      <ul>
+        <li class="red-heart">
+          <%= f.radio_button :relationship, 1, checked: true %>
+          <%= f.label :relationship, _('Ex Pareja'), value: 1, class: 'radio' %>
+        </li>
+
+        <li class="violet-heart">
+          <%= f.radio_button :relationship, 2 %>
+          <%= f.label :relationship, _('Amigo Especial'), value: 2, class: 'radio' %>
+        </li>
+
+        <li class="green-heart">
+          <%= f.radio_button :relationship, 3 %>
+          <%= f.label :relationship, _('Amigo'), value: 3, class: 'radio' %>
+        </li>
+
+        <li class="yellow-heart">
+          <%= f.radio_button :relationship, 4 %>
+          <%= f.label :relationship, _('Familiar'), value: 4, class: 'radio' %>
+        </li>
+      </ul>
+
+      <div class="description">
+        <h5><%= _('¿Cómo le describirías?') %></h5>
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="attributes">
+        <h5><%= _('Sus atributos') %></h5>
+        <div class="row">
+          <div class="span3">
+            <%= fields_for(@characteristic) do |builder| %>
+              <%= builder.label :romantic, _('Romántico') %>
+              <%= builder.text_field :romantic, class: 'points', type: 'slider' %>
+
+              <%= builder.label :adventurer, _('Aventurero') %>
+              <%= builder.text_field :adventurer, class: 'points', type: 'slider' %>
+
+              <%= builder.label :friendly, _('Amable') %>
+              <%= builder.text_field :friendly, class: 'points', type: 'slider' %>
+
+              <%= builder.label :familiar, _('Familiar') %>
+              <%= builder.text_field :familiar, class: 'points', type: 'slider' %>
+
+              <%= builder.label :hardWorking, _('Trabajador') %>
+              <%= builder.text_field :hardWorking, class: 'points', type: 'slider' %>
+
+              <%= builder.label :extroverted, _('Extrovertido') %>
+              <%= builder.text_field :extroverted, class: 'points', type: 'slider' %>
+
+              <%= builder.label :generous, _('Generoso') %>
+              <%= builder.text_field :generous, class: 'points', type: 'slider' %>
+
+              <%= builder.label :reserved, _('Reservado') %>
+              <%= builder.text_field :reserved, class: 'points', type: 'slider' %>
+
+              <%= builder.label :sociable, _('Sociable') %>
+              <%= builder.text_field :sociable, class: 'points', type: 'slider' %>
+
+              <%= builder.label :quiet, _('Tranquilo') %>
+              <%= builder.text_field :quiet, class: 'points', type: 'slider' %>
+
+              <%= builder.label :demanding, _('Exigente') %>
+              <%= builder.text_field :demanding, class: 'points', type: 'slider' %>
+
+              <%= builder.label :prideful, _('Orgulloso') %>
+              <%= builder.text_field :prideful, class: 'points', type: 'slider' %>
+          </div>
+          <div class="span3">
+              <%= builder.label :solitary, _('Solitario') %>
+              <%= builder.text_field :solitary, class: 'points', type: 'slider' %>
+
+              <%= builder.label :tenacious, _('Tenaz') %>
+              <%= builder.text_field :tenacious, class: 'points', type: 'slider' %>
+
+              <%= builder.label :attentive, _('Atento') %>
+              <%= builder.text_field :attentive, class: 'points', type: 'slider' %>
+
+              <%= builder.label :goodHumored, _('Bienhumorado') %>
+              <%= builder.text_field :goodHumored, class: 'points', type: 'slider' %>
+
+              <%= builder.label :spontaneous, _('Espontáneo') %>
+              <%= builder.text_field :spontaneous, class: 'points', type: 'slider' %>
+
+              <%= builder.label :restless, _('Inquieto') %>
+              <%= builder.text_field :restless, class: 'points', type: 'slider' %>
+
+              <%= builder.label :sensitive, _('Sensible') %>
+              <%= builder.text_field :sensitive, class: 'points', type: 'slider' %>
+
+              <%= builder.label :shy, _('Tímido') %>
+              <%= builder.text_field :shy, class: 'points', type: 'slider' %>
+
+              <%= builder.label :possessive, _('Posesivo') %>
+              <%= builder.text_field :possessive, class: 'points', type: 'slider' %>
+
+              <%= builder.label :jealous, _('Celoso') %>
+              <%= builder.text_field :jealous, class: 'points', type: 'slider' %>
+
+              <%= builder.label :faithful, _('Fiel') %>
+              <%= builder.text_field :faithful, class: 'points', type: 'slider' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <%= link_to _('Cancelar'), 'data-dismiss' => 'modal' %>
+        <%= f.submit _('Recomendar usuari@'), class: 'btn btn-info' %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

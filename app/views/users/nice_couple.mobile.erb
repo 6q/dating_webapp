@@ -1,0 +1,30 @@
+<%= render "shared/best_suited_near_me" %>
+<section class="list">
+  <header>
+    <h1 class="pull-left section_title"><%= _('Hacemos buena pareja') %></h1>
+    <div class="sort-gustado">
+      <div class="dropdown sort">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= _('Ordenar por...') %></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+          <li><%= link_to _("Online"), nice_couple_path(order: 'rates_updated_at desc') %></li>
+          <li><%= link_to _("Mejor Índice Cellove"), nice_couple_path(order: 'cellove_index desc') %></li>
+          <li><%= link_to _('Más cercanos'), nice_couple_path(order: 'distance asc') %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </header>
+  <% @interactions = true %>
+  <% @timestamp = true %>
+
+  <%= render "empty-list" %>
+
+  <ul class="user-list clearfix">
+    <%= render @users %>
+  </ul>
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
+  <%= paginate @users %>
+
+</section>
