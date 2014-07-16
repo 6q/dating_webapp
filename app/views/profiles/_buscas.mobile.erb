@@ -1,0 +1,153 @@
+<article class="form-inline">
+	<fieldset>
+	<hr class="thin">
+	<%= form_for @user, :url => profile_path do |user| %>
+    <%= _("Busco") + ' ' + User::GENDER[@user.lf_gender] %>
+   	<%= user.select :lf_marital_status, marital_status_options, {include_blank: _('No quiero decirlo')}, { :class => 'span2' } %>
+   	,
+		<hr class="thin">
+		<%= user.label :lf_age_from, _('de entre') %>
+    <%= user.select :lf_age_from, 18..99, {}, :class => 'input-mini' %>
+		<%= user.label :lf_age_to, 'y' %>
+    <%= user.select :lf_age_to, 18..99, {:selected => @user.lf_age_to || 99}, :class => 'input-mini' %>
+		<%= user.label :lf_relationship, _('años. Para') %>
+		<%= user.select :lf_relationship, lf_relationship_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+		<small><%= _('* Importante! Los usuarios con la franja de edad que marques en esta zona son los únicos que te verán y tendrán acceso a ti. Los demás nunca te conocerán.') %></small>
+		<hr class="thin">
+
+		<hr class="thin">
+		<%= user.label :lf_child, _('Que ') %>
+		<%= user.select :lf_child, lf_child_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+    <hr class="thin">
+    <%= user.label :lf_house, _('Que viva') %>
+    <%= user.select :lf_house, lf_house_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+    <%= user.label :lf_city, _('en') %>
+    <%= user.text_field :lf_city, :class=> 'span2' %>
+    <%= user.label :lf_country, _(',') %>
+    <%= localized_country_select(:user, :lf_country, [], {}, { class: "span2" }) %>
+    <hr class="thin">
+		<%= user.label :lf_postal_code, _(' cerca del código postal') %>
+		<%= user.text_field :lf_postal_code, placeholder:_( 'CP'), :class => 'input-mini' %>.
+
+		<hr>
+		<%= user.label :lf_physical_desc, _('Que sea') %>
+		<%= user.select :lf_physical_desc, physical_desc_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>
+		<%= user.label :lf_physical_style, _(', con estilo') %>
+		<%= user.select :lf_physical_style, physical_style_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>.
+		<hr class="thin">
+		<%= user.label :lf_height_between, _('Que mida entre') %>
+		<%= user.text_field :lf_height_between, :class => 'input-mini' %>
+		<%= user.label :lf_height_to, _('y') %>
+		<%= user.text_field :lf_height_to, :class => 'input-mini' %>
+		<%= user.label :lf_weight_between, _('cms. y pese entre ') %>
+		<%= user.text_field :lf_weight_between, :class => 'input-mini' %>
+		<%= user.label :lf_weight_to, _('y') %>
+		<%= user.text_field :lf_weight_to, :class => 'input-mini' %>
+		kg.,<hr class="thin">
+		<%= user.label :lf_complexion, _('con un cuerpo ') %>
+		<%= user.select :lf_complexion, complexion_options, {include_blank: _('No quiero decirlo')}, :class => 'span2' %>.
+		<hr class="thin">
+		<%= user.label :lf_hair, _('De pelo') %>
+		<%= user.select :lf_hair, hair_options, {include_blank: _('No quiero decirlo')}, :class=>"span2" %>
+		<%= user.label :lf_hair_style, _('y') %>
+		<%= user.select :lf_hair_style, hair_style_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>
+		<%= user.label :lf_eyes, _('. Con ojos de color') %>
+		<%= user.select :lf_eyes, eyes_options, {include_blank: _('No quiero decirlo')}, :class=>'span2' %>
+		<hr>
+
+		<%= user.label :lf_smoke,_( 'Que')%>
+		<%= user.select :lf_smoke, lf_smoke_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+		<%= user.label :lf_alcohol, ','%>
+		<%= user.select :lf_alcohol, lf_alcohol_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+		<hr class="thin">
+		<%= user.label :lf_party, _('y') %>
+		<%= user.select :lf_party, lf_party_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+		<hr class="thin">
+		<%= user.label :lf_diet,_( 'Con una dieta')%>
+		<%= user.select :lf_diet, lf_diet_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+
+		<hr>
+		<%= user.label :lf_ethnicity,_('De étnia') %>
+		<%= user.select :lf_ethnicity, ethnicity_options, {include_blank: _('No quiero decirlo')} %>
+		<%= user.label :lf_citizenship, _('y nacionalidad') %>
+		<%= user.text_field :lf_citizenship %>
+
+		<hr class="thin">
+		<%= user.label :lf_religion, _('Que sea') %>
+		<%= user.select :lf_religion, religion_options, {include_blank: _('No quiero decirlo')}, :class => 'span2' %>
+		<%= user.label :lf_religion_activity,_('y') %>
+		<%= user.select :lf_religion_activity, lf_religion_activity_options, {include_blank: _('No quiero decirlo')}, :class=>'span4' %>
+		<hr class="thin">
+		<%= user.label :lf_animals, _('Que') %>
+		<%= user.select :lf_animals, lf_animals_options, {include_blank: _('No quiero decirlo')}, :class=>'span5' %>
+		<hr class="thin">
+    <div><%= _('Que en su tiempo libre le guste:') %></div>
+
+		<div class="checkbox-group">
+			<div class="span2">
+				<div>
+					<%= user.check_box :lf_like_sport %>
+					<%= user.label :lf_like_sport,_('Deporte') %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_read %>
+					<%= user.label :lf_like_read,_('Lectura') %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_cinema %>
+					<%= user.label :lf_like_cinema,_('Cine') %>
+				</div>
+			</div>
+			<div class="span2">
+				<div>
+					<%= user.check_box :lf_like_walk %>
+					<%= user.label :lf_like_walk,_('Pasear') %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_beach %>
+					<%= user.label :lf_like_beach,_('Playa') %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_mountain %>
+					<%= user.label :lf_like_mountain,_('Montaña') %>
+				</div>
+			</div>
+			<div class="span3">
+				<div>
+					<%= user.check_box :lf_like_quiet %>
+					<%= user.label :lf_like_quiet,_('Estar tranquilo en casa') %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_family %>
+					<%= user.label :lf_like_family,_('Estar con la familia') %>
+				</div>
+				<div>
+					<%= user.check_box :lf_like_friends %>
+					<%= user.label :lf_like_friends,_('Estar con mis amigos') %>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<hr>
+		<%= user.label :lf_study_level, _('Con estudios') %>
+		<%= user.select :lf_study_level, study_level_options, {include_blank: _('No quiero decirlo')} %>
+		<hr class="thin">
+		<%= user.label :lf_language,_('Que domine') %>
+		<%= user.select :lf_language, language_options, {include_blank: _('No quiero decirlo')}, :class => 'span2'  %>
+		<%= user.label :lf_language_level,_('idiomas a nivel') %>
+		<%= user.select :lf_language_level, language_level_options, {include_blank: _('No quiero decirlo')}, :class => 'span1' %>
+		<hr class="thin">
+		<%= user.label :lf_job, _('Que trabaje en el sector') %>
+		<%= user.select :lf_job, job_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
+		con ganancias
+		<hr class="thin">
+		<%= user.label :lf_salary, _('anuales de') %>
+    <%= user.text_field :lf_salary, :class =>'span1' %><%= _('€/año') %>
+</fieldset>
+</article>
+<hr>
+<div class="center">
+  <button class="btn btn-info btn-large"><%= _('Guardar preferencias') %></button>
+</div>
+<% end %>
+<hr class="thin">
