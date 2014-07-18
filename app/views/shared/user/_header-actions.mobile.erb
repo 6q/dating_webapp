@@ -1,12 +1,11 @@
 <div id="header-actions">
 
   <div class="avatar">
-    <%= link_to image_tag((current_user.has_role? :premium_user) ? 'vip-sq.png' : 'vip-price-sq.png'), pay_path %>
-  </div>
-	<div class="avatar">
   	<%= link_to(profile_pic(current_user, options = {width: 60, height: 60}), profile_path) %>
   </div>
-  
+  <div class="avatar">
+    <%= link_to image_tag((current_user.has_role? :premium_user) ? 'vip-sq.png' : 'vip-price-sq.png'), pay_path %>
+  </div>  
   <div class="clearfix"></div>
 
 </div>

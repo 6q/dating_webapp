@@ -1,10 +1,9 @@
 <section id="related-list">
   <div class="boxed">
     <div class="boxed-inner">
-      <h4><%= _('Afines cerca de ti...') %></h4>
       <ul class="clearfix">
-        <% @best_suited_near_me.sample(6).each do |user| %>
-          <li class="<%= user.online? ? "online" : "" %>">
+        <% @best_suited_near_me.sample(10).each do |user| %>
+          <li class="<%= user.online? ? "online" : "" %> is-related">
             <%= link_to user, "data-toggle" => 'tooltip', title: "<strong>#{user.name}</strong><br>#{user.city}<br>#{user.age} #{_('años')}" do %>
               <%= profile_pic(user, width: 80, height: 80) %>
             <% end %>
