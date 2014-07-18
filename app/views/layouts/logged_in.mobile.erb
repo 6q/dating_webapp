@@ -22,15 +22,12 @@
           <%= _('Lo sentimos pero la web móvil no está disponible para celestinos.') %>
         <% else %>
           <% unless params[:controller] == 'flat_pages' %>
-            <div class="row">
-              <div class="span3">              
-                  <%= render 'shared/sidebar' %>
-              </div>
-              <div class="span9">
-                <%= render 'shared/confirmation_pending_form' unless (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
-                <%= yield %>
-              </div>
-            </div>
+            
+            <%= render 'shared/sidebar' %>
+
+            <%= render 'shared/confirmation_pending_form' unless (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
+            <%= yield %>
+
           <% else %>
             <%= yield %>
           <% end %>
@@ -45,6 +42,5 @@
     <%= render 'shared/user/modal_upgrade' %>
     <%= render 'shared/modal_progress' %>
     <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
-    <%= render 'shared/scripts' %>
   </body>
 </html>

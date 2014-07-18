@@ -760,13 +760,18 @@ section.chat{
         margin-right:20px;
         padding-right:5px;
         background:#fff;
+        height:160px;
+        width:160px;
+        img {
+          width:100%;
+        }
       }
 
       .description{
           margin: 0;
           padding: 0 10px;
           float:left;
-          width:440px;
+          width: calc(100% - 210px);
 
           h5 {
 
@@ -1576,14 +1581,12 @@ section.list {
     list-style:none;
     margin:0;
     padding:0;
-    margin-left:-12px;
+
 
     li {
-      width:130px;
-      border:#dbdbdb 1px solid;
+      width:100%;
+      border-top:#dbdbdb 1px solid;
       float:left;
-      margin-left:10px;
-      margin-bottom:10px;
 
       li {
         float:none;
@@ -1625,13 +1628,14 @@ section.list {
       &.pics {
 
         position:relative;
-        width:124px;
-        height:131px;
+        width:134px;
+        height:124px;
         overflow:hidden;
         margin:0;
         padding:0;
         margin: 0 auto;
         padding-top: 3px;
+        float:left;
 
         li {
           margin:0;
@@ -1657,6 +1661,9 @@ section.list {
 
       &.actions {
         @include user-actions;
+        float:left;
+        width: calc(100% - 154px);
+        padding:10px;
       }
 
     }
@@ -1667,6 +1674,8 @@ section.list {
       border:0;
       margin:0;
       overflow: visible;
+      float:left;
+      width: calc(100% - 154px);
 
       small {
         color: #5caae8;

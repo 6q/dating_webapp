@@ -1,9 +1,6 @@
 <li>
 <% if defined?(invisibles) && current_user.visitor?(user).invisible %>
-<article class="user-card anonymous" data-toggle="tooltip" title="
-    <strong><%= _('Anónimo') %></strong><br>
-    <%= _('Última conexión') %>:
-    <%= user.current_sign_in_at ? (user.online? ? _('Ahora online') : time_ago_in_words_or_date(user.current_sign_in_at)) : _('Nunca') %>">
+<article class="user-card anonymous">
     <ul class="pics">
       <li><%= profile_pic(user, {width: 210, height: 210, invisible: true}) %></li>
       <li><%= profile_pic(user, {width: 210, height: 210, invisible: true}) %></li>
@@ -44,31 +41,25 @@
       <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>
-      <% if user_signed_in?
-        block_modal_id = '#user-block-' + user.id.to_s %>
-        <div class="block <%= (current_user.blocked?(user) || current_user.hidden?(user)) ? "disabled" : "" %> " data-toggle="tooltip" title="<%= _('Bloquear')%>">
-          <%= link_to _('x'), block_modal_id, "data-toggle" => "modal" %>
-        </div>
-      <% end %>
-        <%=
-          if user_signed_in?
-            case params[:action]
-              when 'hits'
-                ('<small>' + time_ago_in_words_or_date(current_user.visitor?(user).visited_at) + '</small>').html_safe if current_user.visitor?(user)
-              when 'likes'
-                ('<small>' + time_ago_in_words_or_date(current_user.liker?(user).created_at) + '</small>').html_safe if current_user.liker?(user)
-              when 'nice_couple'
-                if rate = current_user.ratings_given.where(rateable_id: user.id).first || rate = current_user.rates.where(rater_id: user.id).first
-                  ('<small>' + time_ago_in_words_or_date(rate.updated_at) + '</small>').html_safe
-                end
-            end
-          end %>
       <h1>
         <div class="username">
           <%= link_to truncate(user.display_name, length: 16), user %>
         </div>
-        <span><%= truncate(user.city, length: 20) %></span>
-        <br /><%= "#{user.age} #{_('Años')}" %>
+        <span><strong><%= "#{user.age} #{_('Años')}" %></strong>, <%= truncate(user.city, length: 20) %></span>
+        <br>
+        <%=
+          if user_signed_in?
+            case params[:action]
+              when 'hits'
+                time_ago_in_words_or_date(current_user.visitor?(user).visited_at).html_safe if current_user.visitor?(user)
+              when 'likes'
+                time_ago_in_words_or_date(current_user.liker?(user).created_at).html_safe if current_user.liker?(user)
+              when 'nice_couple'
+                if rate = current_user.ratings_given.where(rateable_id: user.id).first || rate = current_user.rates.where(rater_id: user.id).first
+                  time_ago_in_words_or_date(rate.updated_at).html_safe
+                end
+            end
+          end %>        
       </h1>
     </header>
     <ul class="actions clearfix">
