@@ -133,4 +133,18 @@ body.inside {
       width:20%;
     }
   }
+  footer {
+    a {
+      color:#000;
+    }
+  }
+  #user-sidebar 
+    em {
+      font-size: 0.8em;
+      line-height: 15px;
+      color: gray;
+    }
+    .progress {
+      margin-bottom:15px !important;
+    }
 }
