@@ -499,7 +499,7 @@ section.chat{
       display:none;
 
       textarea {
-        width:585px;
+        width: calc(100% - 20px);
         margin:10px 0;
         height:80px;
       }
@@ -604,7 +604,7 @@ section.chat{
     }
 
     textarea {
-      width:665px;
+      width: calc(100% - 20px);
       height:100px;
       margin:20px 0;
     }
@@ -1010,9 +1010,9 @@ section.chat{
 
       .new-nota {
         textarea{
-          width:665px;
+          width: calc(100% - 20px);
           height:100px;
-          margin-bottom:20px;
+          margin:20px;
         }
         .controls{
           margin-bottom:20px;
@@ -1021,14 +1021,17 @@ section.chat{
     }
     #como, #gustos, #busca{
       .key{
-        width:26%;
-        margin-left: 30px;
+        clear:both;
+        width:calc(50% - 15px);
+        float:left;
         border-bottom: 1px #fff solid;
         text-align: right;
         padding: 10px 15px 10px 0;
         background-color:#E5F2FB;
       }
       .valor{
+        width:50%;
+        float:left;
         border-bottom: 1px solid #f1f1f1;
         margin-left: 0px;
         padding-top: 10px;

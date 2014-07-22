@@ -35,7 +35,7 @@
               <p><%= _('Modifica aquí tus datos de acceso a Cellove') %></p>
             </header>
             <div>
-              <div class="span4 left">
+              <div class="left">
                 <div class="control-group">
                   <%= f.label :email, _('Email'), :class => 'control-label' %>
                   <div class="controls">
@@ -43,14 +43,12 @@
                   </div>
                 </div>
               </div>
-              <div class="span4">
                 <div class="control-group">
                   <%= f.label :password, _('Contraseña'), :class => 'control-label' %>
                   <div class="controls">
                     <%= f.password_field :password, :class => 'span2' %>
                   </div>
                 </div>
-              </div>
               <div class="center">
                 <%= f.submit _('Modificar datos de acceso'), :class => 'btn btn-info' %>
                 <hr class="thin">
@@ -70,14 +68,12 @@
             <header>
               <h1 class="section_title"><%= _('¿Quien eres?') %></h1>
             </header>
-            <div class="span9">
               <%= _('Me llamo') %>
               <%= user.text_field :name, :class => 'input-small' %>
               <%= user.text_field :surname, :class => 'input-small' %>
               <%= _('pero quiero que mi nombre para mostrar sea') %>
               <%= user.text_field :screen_name, :class => 'input-small' %>
               <small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small>
-            </div>
             <div class="center">
                 <%= user.submit _('Modificar datos personales'), :class => 'btn btn-info' %>
                 <hr class="thin">
