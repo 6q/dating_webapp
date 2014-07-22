@@ -1,8 +1,12 @@
-<div class="container-fluid nopadding">
-   
-	<li><%= link_to _('Consejos de uso'), usage_path, class: 'more' %></li>
-	<li><%= link_to _('Términos y condiciones'), terms_conditions_path, class: 'more' %></li>
-	<li><%= link_to _('Política de Privacidad'), privacy_policy_path, class: 'more' %></li>
-    <%= link_to _('Cancelar'), 'javascript:void(0)', :id => 'cancel_legal', :class => 'cancel' %>
-	    
+<div id="legalBox" class="container-fluid hidden rounded-box">
+    <div class="content row-fluid">
+		<div class="container-fluid nopadding">
+		   
+			<li><%= link_to _('Consejos de uso'), usage_path, class: 'more' %></li>
+			<li><%= link_to _('Términos y condiciones'), terms_conditions_path, class: 'more' %></li>
+			<li><%= link_to _('Política de Privacidad'), privacy_policy_path, class: 'more' %></li>
+		    <%= link_to _('Cancelar'), 'javascript:void(0)', :id => 'cancel_legal', :class => 'cancel' %>
+			    
+		</div>
+    </div>
 </div>

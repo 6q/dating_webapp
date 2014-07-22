@@ -398,7 +398,7 @@ section.chat{
   .info {
 		margin-top: 5px;
 		float: left;
-		width: 530px;
+    width: calc(100% - 79px);
     display: block;
 
     .msg-data {
@@ -618,10 +618,6 @@ section.chat{
       font-size: 0.8em;
       line-height: 15px;
       color: gray;
-  }
-
-  .checkbox-group{
-    margin: 20px 0 20px 110px;
   }
 
   #gustos {
@@ -1012,7 +1008,7 @@ section.chat{
         textarea{
           width: calc(100% - 20px);
           height:100px;
-          margin:20px;
+          margin:20px 0;
         }
         .controls{
           margin-bottom:20px;
@@ -1777,6 +1773,29 @@ section.list {
   }
 
 
+  }
+
+}
+
+
+.profile-tabs {
+
+  form {
+    text-align:center;
+    select {
+      width:99%;
+      text-align:center;
+    }
+    input {
+      width:95%;
+      text-align:center;
+    }
+    label {
+      width:95%;
+    }
+  }
+  article {
+    text-align:center;
   }
 
 }

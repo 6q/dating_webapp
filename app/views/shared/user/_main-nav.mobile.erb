@@ -1,1 +1,29 @@
-NONE
+<div id="hidden-boxes">
+	<div id="main_box" class="container-fluid hidden rounded-box">
+	    <div class="content row-fluid">
+			<div class="container-fluid nopadding">
+			   	<li>
+					<%= link_to _('Editar mi perfil'), profile_path, class: 'more' %>
+				</li>
+				<li>
+					<% if current_user.has_role? :matchmaker %>
+			      		<%= link_to _('Conviértete en usuari@'), matchmaker_become_user_path, class: 'more' %> |
+			    	<% else %>
+			      		<%= link_to _('Cambiar configuración'), '/user/settings/', class: 'more' %><%= ' (' + _('Oculto') + ')' if current_user.general_settings.try(:anonymous_browsing) %>
+			    	<% end %>
+				</li>
+				<li><%= link_to _('Legal y conducta'), 'javascript:void(0)', id:'link_legal', class: 'more' %></li>
+				<li>
+			    	<%= link_to _('Idioma'), 'javascript:void(0)', id:'language_link', class: 'more' %>
+			    </li>
+				<li>
+			    	<%= link_to _('Desconectar'), destroy_user_session_path, method: :delete, class: 'more' %>
+			    </li>
+			    <%= link_to _('Cancelar'), 'javascript:void(0)', :id => 'main_cancel', :class => 'cancel' %>
+				    
+			</div>
+		</div>
+	</div>
+	<%= render 'shared/footer/footer-language' %>
+	<%= render 'shared/footer/footer-legal' %>
+</div>

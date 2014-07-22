@@ -92,7 +92,8 @@
 
   <%= user.fields_for :my_characteristics do |my| %>
 
-  <div class="span3 offset1 pull-left">
+  <div class="center">
+
     <h5><%= _('Romántico') %></h5>
     <%= my.text_field :romantic, :class =>"points" %>
 
@@ -128,14 +129,7 @@
 
     <h5><%= _('Orgulloso') %></h5>
     <%= my.text_field :prideful, :class =>"points" %>
-  </div>
 
-
-  <div class="span1">
-    &nbsp;
-  </div>
-
-  <div class="span3">
     <h5><%= _('Solitario') %></h5>
     <%= my.text_field :solitary, :class =>"points" %>
 

@@ -38,29 +38,67 @@ $(function() {
     return false;
   });
 
-    $('#link_language').click(function(e){
-        e.preventDefault();
-        $('#languageBox').fadeIn(1000);
-        $('.page-content').hide();
-        $('footer .footer-links').hide();
-    }); 
+  $('footer #link_language').click(function(e){
+    e.preventDefault();
+    $('#languageBox').fadeIn(1000);
+    $('.page-content').hide();
+    $('footer .footer-links').hide();
+  }); 
 
-    $('#cancel_language').click(function(e){
-        $('#languageBox').hide();
-        $('.page-content').fadeIn(1000);
-        $('footer .footer-links').fadeIn(1000);
-    });   
+  $('footer #cancel_language').click(function(e){
+    e.preventDefault();
+    $('#languageBox').hide();
+    $('.page-content').fadeIn(1000);
+    $('footer .footer-links').fadeIn(1000);
+  });   
 
-    $('footer #link_legal').click(function(e){
-        e.preventDefault();
-        $('#legalBox').fadeIn(1000);
-        $('.page-content').hide();
-        $('footer .footer-links').hide();
-    }); 
+  $('#link_legal').click(function(e){
+    e.preventDefault();
+    $('#legalBox').fadeIn(1000);
+    $('.page-content').hide();
+    $('footer .footer-links').hide();
+  }); 
 
-    $('#cancel_legal').click(function(e){
-        $('#legalBox').hide();
-        $('.page-content').fadeIn(1000);
-        $('footer .footer-links').fadeIn(1000);
-    });  
+  $('#cancel_legal').click(function(e){
+    e.preventDefault();
+    $('#legalBox').hide();
+    $('.page-content').fadeIn(1000);
+    $('footer .footer-links').fadeIn(1000);
+  });
+
+  /* INSIDE */
+
+  $('#main_link').click(function(e){
+    e.preventDefault();
+    $('#main_box').fadeIn(1000);
+    $('#languageBox').hide();
+    $('#legalBox').hide();
+  }); 
+
+  $('#hidden-boxes #main_cancel').click(function(e){
+    e.preventDefault();
+    $('#main_box').hide();
+  });
+
+  $('#hidden-boxes #language_link').click(function(e){
+    e.preventDefault();
+    $('#languageBox').fadeIn(1000);
+    $('#main_box').hide();
+  }); 
+
+  $('#hidden-boxes #cancel_language').click(function(e){
+    e.preventDefault();
+    $('#languageBox').hide();
+  });  
+
+  $('#hidden-boxes #link_legal').click(function(e){
+    e.preventDefault();
+    $('#legalBox').fadeIn(1000);
+    $('#main_box').hide();
+  }); 
+
+  $('#hidden-boxes #cancel_legal').click(function(e){
+    e.preventDefault();
+    $('#legalBox').hide();
+  });
 });
