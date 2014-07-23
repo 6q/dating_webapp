@@ -138,7 +138,7 @@ body.inside {
       color:#000;
     }
   }
-  #user-sidebar 
+  #user-sidebar {
     em {
       font-size: 0.8em;
       line-height: 15px;
@@ -147,17 +147,13 @@ body.inside {
     .progress {
       margin-bottom:15px !important;
     }
-}
-
-.footer-links a {
-  color:#000;
-}
-
-#main_box,#legalBox,#languageBox {
-  position:fixed;
-  width: calc(100% - 40px);
-  padding:20px;
-  background:#fff;
-  top:60px;
-  left:0;
+  }
+  #main_box,#legalBox,#languageBox {
+    position:fixed;
+    width: calc(100% - 40px);
+    padding:20px;
+    background:#fff;
+    top:60px;
+    left:0;
+  }
 }

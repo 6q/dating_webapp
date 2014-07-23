@@ -7,7 +7,8 @@
     <%= render partial: "layouts/changing_background" %>
     <div class="container-fluid">
         <section role="main">
-            <%= yield %>
+          <%= render 'shared/flat-header' %>
+          <%= yield %>
         </section>
     </div>
     <%= render 'shared/footer' %>

@@ -22,16 +22,13 @@
           <% if current_user.has_role?(:matchmaker) %>
             <%= _('Lo sentimos pero la web móvil no está disponible para celestinos.') %>
           <% else %>
-            <% unless params[:controller] == 'flat_pages' %>
-              
-              <%= render 'shared/sidebar' %>
 
-              <%= render 'shared/confirmation_pending_form' unless (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
-              <%= yield %>
+            <%= render 'shared/sidebar' %>
 
-            <% else %>
-              <%= yield %>
-            <% end %>
+            <%= render 'shared/confirmation_pending_form' unless (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
+            
+            <%= yield %>
+
           <% end %><!-- Matchmakers -->
         </div>
       </section>
