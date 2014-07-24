@@ -18,16 +18,24 @@ body.inside {
       #open-menu {
         float:left;
         a {
-          height:40px;
-          width:40px;
+          width: 26px;
           position: relative;
           margin-left: 20px;
-          display:block;
-          margin-right:10px;
+          margin-right: 10px;
+          margin: 7px 20px 0 20px;
+          display: block;
+          font-size: 0;
+          padding: 6px 0;
+          border-top: 5px solid white !important;
+          height: 4px;
+          border-bottom: 5px solid white !important;
+          background-clip: content-box;
+          background-color: white;
         }
         a:hover {
           text-decoration:none;
         }
+        /*
         a:before {
           background-clip: content-box;
           background-color: #5CABE9;
@@ -41,6 +49,7 @@ body.inside {
           position: absolute;
           width: 1em;
         }
+        */
       }
 
       #logo {
