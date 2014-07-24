@@ -756,8 +756,8 @@ section.chat{
         margin-right:20px;
         padding-right:5px;
         background:#fff;
-        height:160px;
-        width:160px;
+        height:140px;
+        width:140px;
         img {
           width:100%;
         }
@@ -765,13 +765,12 @@ section.chat{
 
       .description{
           margin: 0;
-          padding: 0 10px;
           float:left;
-          width: calc(100% - 210px);
+          width: calc(100% - 170px);
 
           h5 {
 
-            font-size: 1.5em;
+            font-size: 1.1em;
 
             .online {
               display: block;
@@ -901,7 +900,7 @@ section.chat{
 
       li {
         float:left;
-        margin:0 20px;
+        margin:0;
 
 
         &.message {

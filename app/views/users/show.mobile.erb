@@ -11,15 +11,15 @@
 				<div class="description">
           			<h5>
 	          			<div class="<%= @user.online? ? "online" : "" %>"></div>
-	          			<%= "#{@user.name} #{@user.surname}" + (@user.screen_name.present? ? " (#{@user.screen_name}) " : " ") %>
+	          			<%= "#{@user.name} #{@user.surname}" %><br>
+	          			<small><%= (@user.screen_name.present? ? " (#{@user.screen_name}) " : " ") %></small>
           			</h5>
           			<p class="small">
-          				<%= "#{@user.city}, #{CountrySelect::COUNTRIES[@user.country]}" %>
-          			</p>
-					<p class="small">
+          				<%= "#{@user.city}, #{CountrySelect::COUNTRIES[@user.country]}" %><br>
+
 						<%= _(User::GENDER[@user.gender]).capitalize %> <%= @user.age %> <%= _("años")%>
 						<% if @user.height %>
-							<%= _('- %{height} cms de altura') % {:height => @user.height} %>
+							<br><%= _('%{height} cms de altura') % {:height => @user.height} %>
 						<% end %>
 					</p>
 					<% unless @user == current_user %>
