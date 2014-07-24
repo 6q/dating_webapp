@@ -21,13 +21,25 @@ body.inside {
           height:40px;
           width:40px;
           position: relative;
-          padding-left: 20px;
-          font-size:30px;
+          margin-left: 20px;
           display:block;
-          padding-right:10px;
+          margin-right:10px;
         }
         a:hover {
           text-decoration:none;
+        }
+        a:before {
+          background-clip: content-box;
+          background-color: #5CABE9;
+          border-bottom: 0.16em solid #5CABE9;
+          border-top: 0.16em solid #5CABE9;
+          content: "";
+          height: 0.16em;
+          left: 0;
+          padding: 0.2em 0;
+          top: 0.25em;
+          position: absolute;
+          width: 1em;
         }
       }
 

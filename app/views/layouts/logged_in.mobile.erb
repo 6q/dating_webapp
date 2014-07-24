@@ -8,7 +8,7 @@
     <header role="banner" class="clearfix">
       <div class="container">
         <div id="open-menu">
-          <a id="open-main-sidebar" href="#main-sidebar">&#9776;</a> 
+          <a id="open-main-sidebar" href="#main-sidebar"></a> 
         </div>
         <div id="logo">
           <h1><%= link_to "Cellove", dashboard_path %></h1>
@@ -24,8 +24,6 @@
           <% else %>
 
             <%= render 'shared/sidebar' %>
-
-            <%= render 'shared/confirmation_pending_form' unless (current_user.lf_age_from.present? && current_user.lf_age_to.present?) || current_user.has_role?(:matchmaker) || (params[:controller] == 'users' && params[:action] == 'show')%>
             
             <%= yield %>
 
