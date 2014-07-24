@@ -7,12 +7,12 @@
       <h1><%= _('Encuentra personas afines a tí') %></h1>
     </header>
     
-    <%= search_form_for @search, class: 'span9 form-horizontal overflow-show' do |f| %>
+    <%= search_form_for @search, class: 'form-horizontal overflow-show' do |f| %>
       <div class="row">
-        <div class="span7">
+        <div class="">
           <div class="control-group slider">
             <label class="control-label"><%= _('Edad') %></label>
-            <div class="span5">
+            <div class="controls">
               <input id="years" type="slider" value="<%= params[:q][:years_start_lteq] || (current_user.lf_age_from.blank? ? '18' : current_user.lf_age_from) %>;<%= params[:q][:years_end_gteq] || (current_user.lf_age_to.blank? ? '80' : current_user.lf_age_to) %>"/>
               <%= f.hidden_field :years_start_lteq %>
               <%= f.hidden_field :years_end_gteq %>
@@ -28,7 +28,7 @@
 
           <div class="clearfix">
 
-            <div class="searchcol1">
+            <div class="">
               <div class="control-group slider">
                 <label class="control-label"><%= _('Distancia') %></label>
                 <div class="controls">
@@ -37,7 +37,7 @@
               </div>
             </div>
 
-            <div class="searchcol2">
+            <div class="">
               <div class="control-group">
                 <%= f.label :description_cont, _('Palabra clave'), class: 'control-label' %>
                 <div class="controls">
@@ -48,7 +48,7 @@
           </div>
 
           <div id="adv-search" class="clearfix collapse<%= 'in' if @search.complexion_eq.present? || @search.height_gteq.present? %>">
-            <div class="searchcol1">
+            <div class="">
               <div class="control-group slider">
                 <label class="control-label"><%= _('Altura') %></label>
                 <div class="controls">
@@ -58,7 +58,7 @@
                 </div>
               </div>
             </div>
-            <div class="searchcol2">
+            <div class="">
               <div class="control-group">
                 <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
                 <div class="controls">
@@ -67,13 +67,6 @@
               </div>
             </div>
           </div>
-
-          <div class="right span8">
-            <a href="#adv-search" class="small" data-toggle="collapse"><%= _('Búsqueda avanzada') %></a>
-            <%= f.submit _('Buscar'), class: 'btn btn-info' %>
-          </div>
-        </div>
-
         <div>
           <label class="checkbox">
             <%= f.check_box :pictures_main_not_null, {}, 1, '' %><%= _('Foto') %>
@@ -88,6 +81,13 @@
             <%= f.check_box :children_in, {}, User.have_children, '' %><%= _('Con hijos') %>
           </label>
         </div>
+          <div class="">
+            <a href="#adv-search" class="small" data-toggle="collapse"><%= _('Búsqueda avanzada') %></a>
+            <%= f.submit _('Buscar'), class: 'btn btn-info' %>
+          </div>
+        </div>
+
+
       </div>
     <% end %>
   </div>
@@ -96,22 +96,8 @@
 <hr class="thin">
 
 <section class="list">
-  <header>
-    <div class="pull-left">
+  <header class="center">
       <h1 class="section_title"><%= _('Resultados de la búsqueda') %></h1>
-    </div>
-    <div class="pull-right">
-      <div class="pull-left">
-        <% if params[:q] %>
-          <%= render 'shared/user/modal_save-search' %>
-          <%= link_to _('Guarda búsqueda'), '#save-search', "data-toggle" => "modal", class: 'btn btn-info' %>
-        <% end %>
-      </div>
-      <div class="pull-right sort-gustado"> 
-        <%= render 'shared/user/sorting' %>
-      </div>
-    </div>
-    <div class="clearfix"></div>
   </header>
   <% if @users.present? %>
     <ul class="user-list clearfix">

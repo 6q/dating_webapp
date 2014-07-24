@@ -1099,9 +1099,13 @@ section.chat{
 .search{
   display: inline-block;
   padding: 0px;
+  width:100%;
 
   form {
-
+    text-align:center;
+    input {
+      width: calc(100% - 10px);
+    }
     margin:0;
 
     label {
@@ -1171,7 +1175,7 @@ section.chat{
         float:left;
 
         &.location {
-          width:200px;
+          width:100%;
           margin-left:10px;
           margin-right:10px;
         }
@@ -1198,7 +1202,7 @@ section.chat{
 
     input.btn {
       font-size:1.1em;
-      width:180px;
+      width:100%;
       padding:.3em .7em;
       margin-top:5px;
       margin-bottom:10px;
@@ -1798,4 +1802,17 @@ section.list {
     text-align:center;
   }
 
+}
+
+
+.boxed-inner {
+  padding:0 30px;
+}
+#related-list .boxed-inner {
+  padding:0;
+}
+
+h1 {
+  font-size:24px;
+  text-align:center;
 }
