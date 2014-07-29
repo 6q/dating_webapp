@@ -137,16 +137,10 @@ body.inside {
     background: linear-gradient(to bottom, #5CABE8 0%,#60abf8 44%,#4096ee 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5CABE8', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
     .right {
-      width:91px;
-      height:25px;
-      background-image:url('cellove-white.png');
-      display: block;
-      position: absolute;
-      right: 15px;
-      top:15px;
     }
     .heart {
       font-size:24px;
+      display:none;
     }
   }
   #related-list ul {

@@ -169,8 +169,31 @@ section.list {
   .pagination {
     @include clearfix;
     font-size:.8em;
-    color:#999;
+    color:#fff;
     float: left;
+    margin:0;
+    background:#5caae8;
+    /* IE10 Consumer Preview */ 
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, #5CAAE8 0%, #58A3DE 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #5CAAE8 0%, #58A3DE 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, #5CAAE8 0%, #58A3DE 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 447, color-stop(0, #5CAAE8), color-stop(1, #58A3DE));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #5CAAE8 0%, #58A3DE 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: radial-gradient(ellipse farthest-corner at center, #5CAAE8 0%, #58A3DE 100%);
+        text-align:center;
+    padding:20px 0;
+    width:100%;
+    font-weight:bold;
 
     span.page, span.next, span.prev {
       display:block;
@@ -747,6 +770,7 @@ section.chat{
   article {
     position: inherit;
   }
+  font-size: 12px;
   .user-detail-container {
 
       position:relative;
@@ -756,8 +780,8 @@ section.chat{
         margin-right:20px;
         padding-right:5px;
         background:#fff;
-        height:140px;
-        width:140px;
+        height:120px;
+        width:120px;
         img {
           width:100%;
         }
@@ -766,11 +790,11 @@ section.chat{
       .description{
           margin: 0;
           float:left;
-          width: calc(100% - 170px);
+          width: calc(100% - 150px);
 
           h5 {
 
-            font-size: 1.1em;
+            font-size: 1em;
 
             .online {
               display: block;
@@ -852,11 +876,9 @@ section.chat{
   }
 
   article.action-links{
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
     background:$link-color;
-    padding:15px;
+    padding:5px;
     margin:10px 0;
     margin-left:-10px;
 
@@ -1636,7 +1658,6 @@ section.list {
         margin:0;
         padding:0;
         margin: 0 auto;
-        padding-top: 3px;
         float:left;
 
         li {
@@ -1664,8 +1685,14 @@ section.list {
       &.actions {
         @include user-actions;
         float:left;
-        width: calc(100% - 154px);
-        padding:10px;
+
+        padding:5px 20px;
+        margin-top:10px;
+        border-radius:5px;
+        background:#E5F2FB;
+        li {
+          margin:0 5px !important;
+        }
       }
 
     }
@@ -1703,9 +1730,10 @@ section.list {
         font-size:.8em;
         line-height:1.2em;
         font-weight:normal;
-        margin:0;
+        margin-top:14px;
         padding:0;
         color:#333;
+        text-align:left;
 
         .username {
           width:100%;
@@ -1719,7 +1747,7 @@ section.list {
         }
 
         span {
-          font-size:.9em;
+
         }
       }
     }
