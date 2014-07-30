@@ -876,10 +876,10 @@ section.chat{
 
   article.action-links{
     border-radius: 2px;
-    background:$link-color;
+    background:#E5F2FB;
     padding:5px;
     margin:10px 0;
-    margin-left:-10px;
+    width: 100%;
 
     .message {
       margin-top: -8px;
@@ -892,6 +892,10 @@ section.chat{
       color:#fff;
       line-height:30px;
       font-weight:bold;
+      float:none;
+      display:block;
+      margin:0 auto;
+      width:30px;
     }
 
     a:hover {
@@ -912,7 +916,6 @@ section.chat{
       float:left;
       width:30px;
       height:30px;
-      margin-right:5px;
     }
 
     ul {
@@ -922,7 +925,8 @@ section.chat{
       li {
         float:left;
         margin:0;
-
+        width:25%;
+        text-align:center;
 
         &.message {
           i {
@@ -1630,7 +1634,7 @@ section.list {
 
     li {
       width:100%;
-      border-top:#dbdbdb 1px solid;
+      border-bottom:#dbdbdb 1px solid;
       float:left;
 
       li {
@@ -1673,8 +1677,8 @@ section.list {
       &.pics {
 
         position:relative;
-        width:134px;
-        height:124px;
+        width:130px;
+        height:120px;
         overflow:hidden;
         margin:0;
         padding:0;
@@ -1695,8 +1699,8 @@ section.list {
           a {
 
             img {
-              width:124px;
-              height:124px;
+              width:120px;
+              height:120px;
             }
           }
         }
@@ -1758,7 +1762,7 @@ section.list {
         font-size:.8em;
         line-height:1.2em;
         font-weight:normal;
-        margin-top:14px;
+        margin-top:10px;
         padding:0;
         color:#333;
         text-align:left;

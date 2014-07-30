@@ -126,7 +126,7 @@ section[role="main"] {
     h1.section_title {
       font-size:1.2em !important;
       line-height:25px;
-      padding:10px 0;
+      padding:8px 0;
       vertical-align: middle;
       background:#5caae8;
       /* IE10 Consumer Preview */ 
@@ -149,6 +149,7 @@ section[role="main"] {
       color:#fff !important;
       margin:0 !important;
       width:100%;
+      border:0 !important;
     }
   }
 }

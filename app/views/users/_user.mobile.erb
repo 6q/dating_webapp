@@ -42,7 +42,7 @@
         <div class="username">
           <%= link_to truncate(user.display_name, length: 25), user %>
         </div>
-        <span><strong><%= "#{user.age} #{_('Años')}" %></strong>, <%= truncate(user.city, length: 21) %></span>
+        <span><%= "#{user.age} #{_('Años')}" %>, <%= truncate(user.city, length: 17) %></span>
         <br>
         <%=
           if user_signed_in?
