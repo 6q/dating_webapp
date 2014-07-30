@@ -1121,6 +1121,10 @@ section.chat{
   padding: 0px;
   width:100%;
 
+  .row {
+    margin:20px;
+  }
+
   form {
     text-align:center;
     input {
@@ -1130,6 +1134,32 @@ section.chat{
 
     label {
       font-size:.8em;
+      &.checkbox {
+        float:left;
+        width:40%;
+        input {
+          width:100%;
+        }
+      }
+    }
+    .checkboxes {
+      display: block;
+      float: left;
+      width: 100%;
+      &:before {
+        clear:both;
+      }
+      label.checkbox {
+        float:left;
+        width:40%;
+        input[type="checkbox"]{
+          float: none;
+          margin-left: 0px;
+          margin-right: 7px;
+          margin-top: -2px;
+          width:100%;
+        }
+      }
     }
 
     .slider {
@@ -1162,7 +1192,7 @@ section.chat{
       margin-left: 130px;
     }
     .control-label{
-      width:120px;
+      width:100px;
     }
 
     .location-search {
@@ -1176,7 +1206,7 @@ section.chat{
 
         &.location-label {
           display:block;
-          width:120px;
+          width:100px;
           text-align:right;
           margin-right:10px;
           float:left;
@@ -1223,18 +1253,10 @@ section.chat{
     input.btn {
       font-size:1.1em;
       width:100%;
-      padding:.3em .7em;
-      margin-top:5px;
-      margin-bottom:10px;
-      margin-left:10px;
+      padding:.3em 0;
+      margin:5px 0 10px;
     }
 
-    .checkbox input[type="checkbox"]{
-      float: none;
-      margin-left: 0px;
-      margin-right: 7px;
-      margin-top: -2px;
-    }
   }
 }
 
