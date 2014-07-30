@@ -191,7 +191,7 @@ section.list {
     /* W3C Markup, IE10 Release Preview */ 
     background-image: radial-gradient(ellipse farthest-corner at center, #5CAAE8 0%, #58A3DE 100%);
         text-align:center;
-    padding:20px 0;
+    padding:10px 0;
     width:100%;
     font-weight:bold;
 
@@ -722,8 +722,7 @@ section.chat{
     li {
       line-height: 1em;
       border: none!important;
-      width: 530px!important;
-      float: none!important;
+      width: auto !important;
       margin-bottom:0px!important;
 
       a {
@@ -1686,12 +1685,19 @@ section.list {
         @include user-actions;
         float:left;
 
-        padding:5px 20px;
+        padding:5px 0;
         margin-top:10px;
         border-radius:5px;
         background:#E5F2FB;
+        width: calc(100% - 140px);
         li {
-          margin:0 5px !important;
+          width:33%;
+          text-align:center;
+          margin: 0 !important;
+          a {
+            float:none;
+            margin: 0 auto;
+          }
         }
       }
 
@@ -1754,28 +1760,44 @@ section.list {
   }
 
   .interactions {
-    padding:10px;
+    padding:10px 0 5px;
     font-size:.8em;
+    clear:both;
+    float:left;
+    width:100%;
+    background:#E5F2FB;
 
     .punctuations {
-      @include clearfix;
       margin-bottom:5px;
+      float:left;
+      width: 350px;
 
       strong {
         font-weight:normal;
         display:block;
         float:left;
         font-size:.9em;
+        width:70px;
+        margin-left:15px;
+      }
+      a {
+        float:left;
+        wifth:60px;
+        margin-right:20px;
       }
     }
-
-    .stars {
+    a {
+      margin-right:20px;
       float:right;
+    }
+    .stars {
+      float:left;
       background:image-url('sprite.png') 0 -200px no-repeat;
       display:inline-block;
       width:60px;
       text-indent:-999em;
       overflow:hidden;
+      margin-right:10px;
 
       @for $i from 0 through 4 {
         &.stars-#{$i + 1} {

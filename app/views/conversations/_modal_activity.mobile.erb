@@ -2,9 +2,11 @@
 
 <!-- Modal -->
 <div id="activity-proposal-<%= user.id %>" class="activity-proposal modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <%= _('Proponer una actividad') %>
+  </div>
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3><%= _('Proponer una actividad') %></h3>
     <%= user_detail(user) %>
   </div>
   <%= simple_form_for Activity.new, url: activities_path do |f| %>
