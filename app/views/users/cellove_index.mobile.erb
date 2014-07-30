@@ -1,13 +1,12 @@
 <%= render 'shared/best_suited_near_me' %>
 <section class="boxed">
+  <header>
+    <h1 class="section_title"><%= _('Índice Cellove') %></h1>
+  </header>
   <div class="boxed-inner">
-    <header>
-      <h1><%= _('Índice Cellove') %></h1>
-    </header>
-
-    <div class="clearfix">
+    <div class="clearfix center">
       <div><%= _('Tu indice Cellove es') %> <%= current_user.cellove_percentage %>/100</div>
-      <div class="progress width95">
+      <div class="progress width100">
           <div class="bar" style="width: <%= current_user.cellove_percentage %>%;"></div>
       </div>
     </div>

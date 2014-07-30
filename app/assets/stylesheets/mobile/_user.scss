@@ -1887,3 +1887,16 @@ h1 {
   font-size:24px;
   text-align:center;
 }
+
+#user-pictures {
+    margin: 0 !important;
+    padding: 0 !important;
+  .pic-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    ul li {
+      margin:0 7px 7px 0 !important;
+    }
+  }
+
+}

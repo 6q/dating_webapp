@@ -1,12 +1,14 @@
+<header>
+  <h1 class="section_title"><%= _('Configuración') %></h1>
+</header>
 <section class="settings">
 
   <section class="boxed">
     <div class="boxed-inner">
 
-      <header>
-        <h1><%= _('Configuración') %></h1>
-        <div><%= _('Desde aquí podrás configurar tus parámetros en Cellove') %></div>
-      </header>
+
+        <p><%= _('Desde aquí podrás configurar tus parámetros en Cellove') %></p>
+
       <%= form_for(current_user, url: general_settings_path, :method => :put, class: 'form-inline') do |f| %>
         <%= fields_for current_user.general_settings do |f1| %>
 

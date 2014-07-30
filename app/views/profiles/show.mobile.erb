@@ -5,16 +5,15 @@
       <%= link_to _('Reactivar cuenta'), recover_user_registration_path, method: :post, confirm: _('¿Estas seguro?'), :class => 'btn btn-info' %>
     </div>
   <% else %>
+        <header>
+          <h1 class="section_title"><%= _('Tu perfil') %></h1>
 
+        </header>
     <div class="boxed">
       <div class="boxed-inner">
-        <header>
-          <h1 class="pull-left section_title"><%= _('Tu perfil') %></h1>
-          <div class="pull-right">
-            <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to _('¡Mejora tu índice!'), my_matchmakers_path(anchor: 'tab_mejora') %> - <%= _('Perfil %{progress}%% completado') % {progress: current_user.progress_status} %>
+          <div class="center">
+            <p><%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to _('¡Mejora tu índice!'), my_matchmakers_path(anchor: 'tab_mejora') %> - <%= _('Perfil %{progress}%% completado') % {progress: current_user.progress_status} %></p>
           </div>
-          <div class="clearfix"></div>
-        </header>
         <div id="user-pictures">
           <div id="picture_gallery">
             <%= render partial: 'pictures/picture_gallery', locals: {user: @user} %>
@@ -25,15 +24,14 @@
 
     <hr class="thin">
 
-
+    <header>
+      <h1 class="section_title"><%= _('Datos de acceso a Cellove') %></h1>
+    </header>
     <%= form_for @user, :url => profile_path, :html => {:class => "form-horizontal"} do |f| %>
       <section class="boxed">
         <div class="boxed-inner">
           <fieldset>
-            <header>
-              <h1 class="section_title"><%= _('Datos de acceso a Cellove') %></h1>
-              <p><%= _('Modifica aquí tus datos de acceso a Cellove') %></p>
-            </header>
+            <p><%= _('Modifica aquí tus datos de acceso a Cellove') %></p>
             <div>
               <div class="left">
                 <div class="control-group">
@@ -59,20 +57,20 @@
       </section>
     <% end %>
 
-    <hr class="thin">
+    <header>
+      <h1 class="section_title"><%= _('¿Quien eres?') %></h1>
+    </header>
 
     <%= form_for @user, :url => profile_path do |user| %>
       <section class="boxed">
         <div class="boxed-inner">
           <fieldset class="quien form-inline">
-            <header>
-              <h1 class="section_title"><%= _('¿Quien eres?') %></h1>
-            </header>
-              <%= _('Me llamo') %>
+
+              <p><%= _('Me llamo') %><br>
               <%= user.text_field :name, :class => 'input-small' %>
-              <%= user.text_field :surname, :class => 'input-small' %>
-              <%= _('pero quiero que mi nombre para mostrar sea') %>
-              <%= user.text_field :screen_name, :class => 'input-small' %>
+              <%= user.text_field :surname, :class => 'input-small' %></p>
+              <p><%= _('pero quiero que mi nombre para mostrar sea') %><br>
+              <%= user.text_field :screen_name, :class => 'input-small' %></p>
               <small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small>
             <div class="center">
                 <%= user.submit _('Modificar datos personales'), :class => 'btn btn-info' %>
