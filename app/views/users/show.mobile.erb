@@ -1,6 +1,9 @@
 <section class="user-profile">
+	<header>
+		<h1 class="section_title"><%= _('Perfil de Usuari@') %></h1>
+	</header>
 	<article class="boxed">
-		<div class="boxed-inner">
+
 			<div class="user-detail-container clearfix">
 				<div class="photo">
 					<% image_url = current_user.profile_picture && @user.profile_picture ? @user.profile_picture.image.jpg.url : images_profile_path %>
@@ -45,7 +48,9 @@
 
 
 			<% unless @user == current_user %>
-				<%= render 'shared/user/profile-action-links' %>
+				<div class="boxed-inner">
+					<%= render 'shared/user/profile-action-links' %>
+				</div>
 			<% end %>
 			
 			<p class="small">
@@ -67,7 +72,6 @@
 				<% end %>
 			</p>
 
-		</div>
 	</article>
 
   <script>
