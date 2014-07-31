@@ -11,7 +11,7 @@ $(document).ready(function() {
 	  	<ul>
 		    <%
 		      number_of_visits = current_user.user_visits.unseen.count
-		      visit_str = ('<span>' + number_of_visits.to_s + '</span>').html_safe unless number_of_visits == 0
+		      visit_str = ('<em>' + number_of_visits.to_s + '</em>').html_safe unless number_of_visits == 0
 		    %>
 		    <li><%= link_to (_('Me han visitado') + (!visit_str.nil? ? visit_str : '')).html_safe, user_hits_path %></li>
 		    <li><%= link_to (_('Les he gustado') + indicate(current_user.likers.unseen.count)).html_safe, user_likes_path %></li>
@@ -19,11 +19,11 @@ $(document).ready(function() {
 		    <li><%= link_to (_('Hacemos buena pareja') + indicate(current_user.rates.unseen.count)).html_safe, nice_couple_path %></li>
 		    <li>
 		      <a href="<%= user_likes_of_mine_path %>">
-		        <%= _('Te gustan') %> <em>(<%= User.people_i_like(current_user, params[:order]).count %>)</em>
+		        <%= _('Te gustan') %> <em><%= User.people_i_like(current_user, params[:order]).count %></em>
 		      </a>
 		    </li>
 			<li>
-		      <a href="/user/cellove-index"><%= _('Índice Cellove') %> <em>(<%= current_user.cellove_percentage %>/100)</em>
+		      <a href="/user/cellove-index"><%= _('Índice Cellove') %> <em><%= current_user.cellove_percentage %>/100</em>
 		        <div class="progress">
 		          <div class="bar" style="width:<%= current_user.cellove_percentage %>%"></div>
 		        </div>
@@ -31,7 +31,7 @@ $(document).ready(function() {
 		    </li>
 				<li class="profile">
 		      <a href="<%= profile_path %>">
-		        <%= _('Tu perfil') %> <em>(<%=current_user.progress_status.to_s %>% <%= _('completo') %>)</em>
+		        <%= _('Tu perfil') %> <em><%=current_user.progress_status.to_s %>% <%= _('completo') %></em>
 		        <div class="progress">
 		          <div class="bar" style="width:<%= current_user.progress_status %>%"></div>
 		        </div>

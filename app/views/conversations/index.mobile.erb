@@ -1,41 +1,40 @@
 <section class="messages">
-  <header>
-    <h1 class="section_title"><%= _('Mensajes y actividades') %></h1>
-    <div class="clearfix"></div>
-  </header>
+	<header>
+		<h1 class="section_title"><%= _('Mensajes y actividades') %></h1>
+	</header>
 
-  <div class="tabs">
-    <ul class="nav nav-tabs" id="messages-tab">
-      <li class="active"><a href="#inbox"><%= _('Recibidos') %><%= " (#{@conversations_inbox.total_count})" if @conversations_inbox.total_count > 0 %></a></li>
-      <li><a href="#sentbox"><%= _('Enviados') %><%= " (#{@conversations_sentbox.total_count})" if @conversations_sentbox.total_count > 0 %></a></li>
-      <li><a href="#trash"><%= _('Eliminados') %><%= " (#{@conversations_trash.total_count})" if @conversations_trash.total_count > 0 %></a></li>
-    </ul>
-  </div>
-  <div class="boxed">
-    <div class="boxed-inner">
-      <div class="tab-content">
-        <!-- begin tabs -->
-        <div class="tab-pane<%= ' active' if @box.eql? 'inbox' %>" id="inbox">
-          <%= render partial: 'conversations', locals: {conversations: @conversations_inbox, activities: @activities} %>
-        </div>
+	<div class="tabs">
+		<ul class="nav nav-tabs" id="messages-tab">
+			<li class="active"><a href="#inbox"><%= _('Recibidos') %><%= " (#{@conversations_inbox.total_count})" if @conversations_inbox.total_count > 0 %></a></li>
+			<li><a href="#sentbox"><%= _('Enviados') %><%= " (#{@conversations_sentbox.total_count})" if @conversations_sentbox.total_count > 0 %></a></li>
+			<li><a href="#trash"><%= _('Eliminados') %><%= " (#{@conversations_trash.total_count})" if @conversations_trash.total_count > 0 %></a></li>
+		</ul>
+	</div>
+	<div class="boxed">
+		<div class="boxed-inner">
+			<div class="tab-content">
+				<!-- begin tabs -->
+				<div class="tab-pane<%= ' active' if @box.eql? 'inbox' %>" id="inbox">
+					<%= render partial: 'conversations', locals: {conversations: @conversations_inbox, activities: @activities} %>
+				</div>
 
-        <div class="tab-pane<%= ' active' if @box.eql? 'sentbox' %>" id="sentbox">
-          <%= render partial: 'conversations', locals: {conversations: @conversations_sentbox} %>
-        </div>
+				<div class="tab-pane<%= ' active' if @box.eql? 'sentbox' %>" id="sentbox">
+					<%= render partial: 'conversations', locals: {conversations: @conversations_sentbox} %>
+				</div>
 
-        <div class="tab-pane<%= ' active' if @box.eql? 'trash' %>" id="trash">
-          <div><%= link_to _('Vaciar papelera'), destroy_all_conversations_path, method: :delete, confirm: _('Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?') %></div>
-          <%= render partial: 'conversations', locals: {conversations: @conversations_trash} %>
-        </div>
-        <!-- end tabs -->
-      </div>
-    </div>
-  </div>
-  <script>
-    $(document).on('click', '#sentbox .pagination a', function(e) {
-      $.get(e.target.href, function(data) {
-        $('#sentbox').html(data);
-      });
-      return false; 
-    });
-  </script>
+				<div class="tab-pane<%= ' active' if @box.eql? 'trash' %>" id="trash">
+					<div><%= link_to _('Vaciar papelera'), destroy_all_conversations_path, method: :delete, confirm: _('Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?') %></div>
+					<%= render partial: 'conversations', locals: {conversations: @conversations_trash} %>
+				</div>
+				<!-- end tabs -->
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).on('click', '#sentbox .pagination a', function(e) {
+			$.get(e.target.href, function(data) {
+				$('#sentbox').html(data);
+			});
+			return false; 
+		});
+	</script>

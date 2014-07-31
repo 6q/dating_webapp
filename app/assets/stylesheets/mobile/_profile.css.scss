@@ -9,9 +9,8 @@ input{
 /* user pictures */
 
 #user-pictures {
-  padding:20px;
-  padding-top:0;
-  padding-bottom:0;
+  padding:0 10px 10px 10px;
+  text-align:center;
 
   @import 'partials/picture_gallery';
 
@@ -21,7 +20,18 @@ input{
     color:$link-color;
     font-weight:normal;
   }
-
+  .pic-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width:100%;
+    max-width:100% !important;
+    ul {
+      max-width:100%;
+      li {
+        margin:0 7px 7px 0 !important;
+      }
+    }
+  }
 }
 
 #crop_modal {
