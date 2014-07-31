@@ -1,5 +1,4 @@
 <% if user.my_characteristics %>
-	<div class="width95">
 	    <h5><%= _('Romántico') %></h5>
 			<div class="progress">
 				<div class="bar" style="<%= "width: #{user.my_charact_percent('romantic')}%" %>"></div>
@@ -114,7 +113,6 @@
 			<div class="progress">
 				<div class="bar" style="<%= "width: #{user.my_charact_percent('faithful')}%" %>"></div>
 			</div>
-	</div>
 <% else %>
     <%= _('%{name} aún no ha definido sus atributos') % {name: user.name} %>
 <% end %>

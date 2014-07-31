@@ -766,10 +766,22 @@ section.chat{
 /* user-profile */
 
 .user-profile{
+  font-size: 14px;
   article {
     position: inherit;
   }
-  font-size: 12px;
+  .report {
+    margin:20px;
+    text-align:center;
+    a {
+      color:red;
+    }
+  }
+  .small {
+    margin-top:20px;
+    text-align:center;
+  }
+
   .user-detail-container {
 
       position:relative;
@@ -793,7 +805,7 @@ section.chat{
 
           h5 {
 
-            font-size: 1em;
+            font-size: 14px;
 
             .online {
               display: block;
@@ -806,14 +818,16 @@ section.chat{
             }
 
             span {
-              font-size: .8em;
+              font-size: 14px;
               font-weight: normal;
             }
           }
         }
 
       .small{
-        font-size: .8em;
+        font-size: 14px;
+        margin:0;
+        text-align:left;
       }
 
     #user-profile-thumbs {
@@ -967,8 +981,7 @@ section.chat{
     }
 
     &.basic-tabs {
-      margin-bottom:40px;
-      margin-top: 20px;
+      margin:20px;
     }
 
     .nav{margin-bottom: 0px;}
