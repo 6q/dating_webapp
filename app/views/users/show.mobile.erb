@@ -1,14 +1,22 @@
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
+</script>
 <section class="user-profile">
 	<header>
 		<h1 class="section_title"><%= _('Perfil de Usuari@') %></h1>
 	</header>
+
 	<article class="boxed">
 
 			<div class="user-detail-container clearfix">
 				<div class="photo">
 					<% image_url = current_user.profile_picture && @user.profile_picture ? @user.profile_picture.image.jpg.url : images_profile_path %>
-					<a <%= "href=#{image_url} class=grouped_elements " if @user.profile_picture %> rel="group1">
-						<% if @user.pictures.count > 0 %><div class="more-photos">+fotos</div><% end %>
+					<a <%= "href=#{image_url} class=swipebox " if @user.profile_picture %> title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>">
+						<% if @user.pictures.count > 1 %><div class="more-photos"><%= @user.pictures.count %> &#xf030;</div><% end %>
 						<%= profile_pic(@user) %>
 					</a>
 				</div>
@@ -36,14 +44,10 @@
 						<ul>
 							<% @user.pictures.each do |p| %>
 								<% image_url = current_user.profile_picture ? p.image.jpg.url : images_profile_path %>
-								<li><a class="grouped_elements" rel="group1" href="<%= image_url %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
+								<li><a class="swipebox" href="<%= image_url %>" title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
 							<% end %>
 						</ul>
 					</div>
-					<% if @user.pictures.count > 6 %>
-						<a href="#" class="jcarousel-prev"><%= _('anterior') %></a>
-						<a href="#" class="jcarousel-next"><%= _('siguiente') %></a>
-					<% end %>
 				</div>
 			<% end %>
 

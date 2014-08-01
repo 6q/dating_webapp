@@ -1686,12 +1686,8 @@ section.list {
 		background:#fff;
 
 		&.online {
-			.pics {
-				li {
-					background: $online-color;
-					border-bottom-left-radius:3px;
-					border-bottom-right-radius:3px;
-				}
+			li {
+				background: $online-color;
 			}
 		}
 
@@ -1709,12 +1705,11 @@ section.list {
 			&.pics {
 
 				position:relative;
-				width:130px;
-				height:120px;
+				width:110px;
+				height:110px;
 				overflow:hidden;
-				margin:0;
+				margin:0 10px 0 0;
 				padding:0;
-				margin: 0 auto;
 				float:left;
 
 				li {
@@ -1731,8 +1726,8 @@ section.list {
 					a {
 
 						img {
-							width:120px;
-							height:120px;
+							width:110px;
+							height:110px;
 						}
 					}
 				}
