@@ -48,6 +48,7 @@ gem 'daemons', '~> 1.1.9'
 gem 'delayed_job_active_record', '~> 4.0.1'
 gem 'mobile-fu', '~> 1.3.1'
 gem 'honeypot-captcha'
+gem 'font-awesome-sass'
 
 group :test do
   gem 'sqlite3'

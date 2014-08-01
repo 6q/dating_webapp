@@ -129,6 +129,8 @@ GEM
       rails (>= 3, < 5)
     flamegraph (0.0.5)
       fast_stack
+    font-awesome-sass (4.1.0)
+      sass (~> 3.2)
     foreigner (1.5.0)
       activerecord (>= 3.0.0)
     formatador (0.2.4)
@@ -361,6 +363,7 @@ DEPENDENCIES
   faker
   figaro (>= 0.6.3)
   flamegraph
+  font-awesome-sass
   friendly_id
   geocoder (~> 1.1.3)
   gettext (~> 2.3.9)
