@@ -106,5 +106,10 @@ $(function() {
 		heightStyle: "content",
 		collapsible: true
 	});
+  
+  $( '.swipebox' ).swipebox({
+    hideBarsOnMobile : false, // false will show the caption and navbar on mobile devices
+    hideBarsDelay : 10000
+  });
 
 });
