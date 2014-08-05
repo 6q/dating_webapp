@@ -17,9 +17,9 @@ function likes_bind() {
   $(".ajax_like_trigger").unbind('ajax:success').bind("ajax:success",
     function(evt, user_id, status, xhr) {
       var firstEl, secondEl;
-      $(".user_like").addClass('loading-icon');
+      $(".user_like").addClass('hidden');
       $(".user_dislike").removeClass('hidden');
-     // $(".user_like").removeClass('loading-icon');
+      $(".user_like").removeClass('loading-icon');
       firstEl = $('.like.active').find('[data-id=' + user_id + ']').parent();
       secondEl = $('.like.hidden').find('[data-id=' + user_id + ']').parent();
       firstEl.removeClass('disabled').removeClass('active').addClass('hidden');

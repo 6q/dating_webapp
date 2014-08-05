@@ -19,16 +19,16 @@
   <%= user.select :party, party_options, {include_blank: _('No quiero decirlo')}, {:class => 'span4'} %>
 	<hr class="thin">
   <%= user.select :music, music_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %>
-	<%= user.label :music_genre, _(', me gusta el') %>
+	<%= user.label :music_genre, _('me gusta el') %>
   <%= user.select :music_genre, music_genre_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
 	<hr class="thin">
   <%= user.select :cinema, cinema_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %>
   <%= user.select :cinema_frequency, cinema_frequency_options, {include_blank: _('No quiero decirlo')}, {:class => 'span3'} %>
-	<%= user.label :cinema_genre, _(', de género') %>
+	<%= user.label :cinema_genre, _('de género') %>
   <%= user.select :cinema_genre, cinema_genre_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
 	<hr class="thin">
 
-	<div class="span4"><%= _('En mi tiempo libre me gusta:') %></div>
+	<p><%= _('En mi tiempo libre me gusta:') %></p>
 	<div class="clearfix"></div>
 
 	<div class="checkbox-group">

@@ -29,7 +29,7 @@
             <div>
                 <%= form_for @user, :url => profile_path, :html => {:class => "form-horizontal"} do |f| %>
 
-                            <fieldset>
+                            <fieldset class="datos_acceso">
                                 <p><%= _('Modifica aquí tus datos de acceso a Cellove') %></p>
 
                                 <p><%= _('Email') %></p>
@@ -48,23 +48,21 @@
             <h3><%= _('¿Quien eres?') %></h1>
             <div>
                 <%= form_for @user, :url => profile_path do |user| %>
-                    <section class="boxed">
-                        <div class="boxed-inner">
+
                             <fieldset class="quien form-inline">
 
-                                    <p><%= _('Me llamo') %><br>
-                                    <%= user.text_field :name, :class => 'input-small' %>
-                                    <%= user.text_field :surname, :class => 'input-small' %></p>
-                                    <p><%= _('pero quiero que mi nombre para mostrar sea') %><br>
-                                    <%= user.text_field :screen_name, :class => 'input-small' %></p>
-                                    <small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small>
+                                    <p><%= _('Me llamo') %></p>
+                                    <p><%= user.text_field :name, :class => 'input-small' %></p>
+                                    <p><%= user.text_field :surname, :class => 'input-small' %></p>
+                                    <p><%= _('pero quiero que mi nombre para mostrar sea') %></p>
+                                    <p><%= user.text_field :screen_name, :class => 'input-small' %></p>
+                                    <p><small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small></p>
                                 <div class="center">
                                         <%= user.submit _('Modificar datos personales'), :class => 'btn btn-info' %>
                                         <hr class="thin">
                                     </div>
                             </fieldset>
-                        </div>
-                    </section>
+
                 <% end %>
             </div>
 

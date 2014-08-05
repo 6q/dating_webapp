@@ -27,15 +27,15 @@
   <%= user.select :house, house_options, {include_blank: _('No quiero decirlo')}, {:class=> 'span4'} %><br>  
 
   <hr>
-  <%= user.label :physical_desc, _('Me considero ') %><br>
+  <%= user.label :physical_desc, _('Me considero') %><br>
   <%= user.select :physical_desc, physical_desc_options, {include_blank: _('No quiero decirlo')} , {:class => 'span2'} %><br>
   <%= user.label :height, _('mido') %><br>
   <%= user.text_field :height, :class => 'input-mini' %><br>
-  <%= user.label :weight, _('cms. Y peso ') %><br>
+  <%= user.label :weight, _('cms. Y peso') %><br>
   <%= user.text_field :weight, :class => 'input-mini' %><br>
   <%=_("kg.") %>
   <hr class="thin">
-  <%= user.label :complexion, _('Tengo un cuerpo ') %><br>
+  <%= user.label :complexion, _('Tengo un cuerpo') %><br>
   <%= user.select :complexion, complexion_options, {include_blank: _('No quiero decirlo')}, {:class => 'span2'} %>
   <hr class="thin">
   <%= user.label :eyes, _('Mis ojos son de color') %><br>

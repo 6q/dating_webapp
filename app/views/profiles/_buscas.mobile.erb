@@ -23,17 +23,16 @@
     <%= user.select :lf_house, lf_house_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
     <%= user.label :lf_city, _('en') %>
     <%= user.text_field :lf_city, :class=> 'span2' %>
-    <%= user.label :lf_country, _(',') %>
     <%= localized_country_select(:user, :lf_country, [], {}, { class: "span2" }) %>
     <hr class="thin">
 		<%= user.label :lf_postal_code, _(' cerca del código postal') %>
-		<%= user.text_field :lf_postal_code, placeholder:_( 'CP'), :class => 'input-mini' %>.
+		<%= user.text_field :lf_postal_code, placeholder:_( 'CP'), :class => 'input-mini' %>
 
 		<hr>
 		<%= user.label :lf_physical_desc, _('Que sea') %>
 		<%= user.select :lf_physical_desc, physical_desc_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>
-		<%= user.label :lf_physical_style, _(', con estilo') %>
-		<%= user.select :lf_physical_style, physical_style_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>.
+		<%= user.label :lf_physical_style, _('con estilo') %>
+		<%= user.select :lf_physical_style, physical_style_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>
 		<hr class="thin">
 		<%= user.label :lf_height_between, _('Que mida entre') %>
 		<%= user.text_field :lf_height_between, :class => 'input-mini' %>
@@ -45,19 +44,18 @@
 		<%= user.text_field :lf_weight_to, :class => 'input-mini' %>
 		kg.,<hr class="thin">
 		<%= user.label :lf_complexion, _('con un cuerpo ') %>
-		<%= user.select :lf_complexion, complexion_options, {include_blank: _('No quiero decirlo')}, :class => 'span2' %>.
+		<%= user.select :lf_complexion, complexion_options, {include_blank: _('No quiero decirlo')}, :class => 'span2' %>
 		<hr class="thin">
 		<%= user.label :lf_hair, _('De pelo') %>
 		<%= user.select :lf_hair, hair_options, {include_blank: _('No quiero decirlo')}, :class=>"span2" %>
 		<%= user.label :lf_hair_style, _('y') %>
 		<%= user.select :lf_hair_style, hair_style_options, {include_blank: _('No quiero decirlo')}, :class =>"span2" %>
-		<%= user.label :lf_eyes, _('. Con ojos de color') %>
+		<%= user.label :lf_eyes, _('Con ojos de color') %>
 		<%= user.select :lf_eyes, eyes_options, {include_blank: _('No quiero decirlo')}, :class=>'span2' %>
 		<hr>
 
 		<%= user.label :lf_smoke,_( 'Que')%>
 		<%= user.select :lf_smoke, lf_smoke_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
-		<%= user.label :lf_alcohol, ','%>
 		<%= user.select :lf_alcohol, lf_alcohol_options, {include_blank: _('No quiero decirlo')}, :class => 'span4' %>
 		<hr class="thin">
 		<%= user.label :lf_party, _('y') %>
