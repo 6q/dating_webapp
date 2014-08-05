@@ -46,9 +46,9 @@
 
 
 			<% unless @user == current_user %>
-				<div class="boxed-inner">
-					<%= render 'shared/user/profile-action-links' %>
-				</div>
+
+				<%= render 'shared/user/profile-action-links' %>
+
 			<% end %>
 			
 			<p class="small">
@@ -113,9 +113,9 @@
 		  					<%= n.text_area :content, :placeholder => _('Nueva nota') %>
 		  					<%= n.hidden_field :user_id, :value => current_user.id %>
 		  					<%= n.hidden_field :evaluated_id, :value => @user.id %>
-		  					<div class="pull-right controls">
+
 		  						<button type="submit" class="btn btn-info"><%= _('Añadir nota') %></button>
-		  					</div>
+
 		  				<% end %>
 		  			</div>
 
