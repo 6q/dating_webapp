@@ -409,6 +409,10 @@ section.chat{
 	background:#fff;
 	position:relative;
 
+  .clearfix {
+    position:relative;
+  }
+
 	.pic {
 
 		float:left;
@@ -475,8 +479,9 @@ section.chat{
 	}
 
 	.reply {
-		margin: 25px 10px 0 0;
-		float: right;
+		position:absolute;
+    bottom:5px;
+    right:5px;
 		.tooltip {
 			z-index: 1000;
 			color: #ff0 !important;

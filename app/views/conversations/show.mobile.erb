@@ -10,11 +10,9 @@
       <li><a href="<%= url_for(conversations_path(anchor: 'sentbox')) %>"><%= _('Enviados') %><%= " (#{@conversations_sentbox.total_count})" if @conversations_sentbox.total_count > 0 %></a></li>
       <li><a href="<%= url_for(conversations_path(anchor: 'trash')) %>"><%= _('Eliminados') %><%= " (#{@conversations_trash.total_count})" if @conversations_trash.total_count > 0 %></a></li>
     </ul>
-    <%= render 'shared/user/sorting' %>
   </div>
 
   <div class="boxed">
-    <div class="boxed-inner">
 
       <div class="msg-item">
         <div class="clearfix">
@@ -73,7 +71,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </section>
 <%= render partial: 'modal_delete', locals: { conversation: @conversation } %>

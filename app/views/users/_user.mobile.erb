@@ -131,7 +131,6 @@
           <strong><%= _("Tu dices:") %></strong> <%= stars_for(user, current_user) %>
           <strong><%= _("Ha dicho:") %></strong> <%= stars_for(current_user, user) %>
         </div>
-        <%= link_to 'Proponer actividad', "#activity-proposal-#{user.id}" ,'data-toggle' => 'modal' %>
       </div>
 
     <% end %>
