@@ -1176,13 +1176,21 @@ section.chat{
 	display: inline-block;
 	padding: 0px;
 	width:100%;
-
+  text-align:center;
+  .search-box {
+    margin:15px 20px 0;
+  }
 	.row {
 		margin:20px;
 	}
+  .btn {
+    padding-left:0;
+    padding-right:0;
+  }
 
 	form {
 		text-align:center;
+    margin-top:20px;
 		input {
 			width: calc(100% - 10px);
 		}
@@ -1245,10 +1253,10 @@ section.chat{
 		}
 
 		.controls{
-			margin-left: 130px;
+			margin-left: 100px;
 		}
 		.control-label{
-			width:100px;
+			width:70px;
 		}
 
 		.location-search {
@@ -1262,7 +1270,7 @@ section.chat{
 
 				&.location-label {
 					display:block;
-					width:100px;
+					width:40px;
 					text-align:right;
 					margin-right:10px;
 					float:left;
@@ -1983,4 +1991,8 @@ h1 {
 #notas h4 {
   font-size:14px;
   text-align:center;
+}
+
+.cellove_index .boxed-inner {
+  margin:20px 0;
 }
