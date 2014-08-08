@@ -82,43 +82,87 @@
     <div><%= _('Que en su tiempo libre le guste:') %></div>
 
 		<div class="checkbox-group">
-
-				<div>
-					<%= user.check_box :lf_like_sport %>
-					<%= user.label :lf_like_sport,_('Deporte') %>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Deporte</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_sport %>
+						<%= user.label :lf_like_sport,_('Deporte') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_read %>
-					<%= user.label :lf_like_read,_('Lectura') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Lectura</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_read %>
+						<%= user.label :lf_like_read,_('Lectura') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_cinema %>
-					<%= user.label :lf_like_cinema,_('Cine') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Cine</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_cinema %>
+						<%= user.label :lf_like_cinema,_('Cine') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_walk %>
-					<%= user.label :lf_like_walk,_('Pasear') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Pasear</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_walk %>
+						<%= user.label :lf_like_walk,_('Pasear') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_beach %>
-					<%= user.label :lf_like_beach,_('Playa') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearboth">
+					<div class="span3 right">Playa</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_beach %>
+						<%= user.label :lf_like_beach,_('Playa') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_mountain %>
-					<%= user.label :lf_like_mountain,_('Montaña') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Montaña</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_mountain %>
+						<%= user.label :lf_like_mountain,_('Montaña') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_quiet %>
-					<%= user.label :lf_like_quiet,_('Estar tranquilo en casa') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Estar tranquilo en casa</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_quiet %>
+						<%= user.label :lf_like_quiet,_('Estar tranquilo en casa') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_family %>
-					<%= user.label :lf_like_family,_('Estar con la familia') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Estar con la familia</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_family %>
+						<%= user.label :lf_like_family,_('Estar con la familia') %>
+					</div>
 				</div>
-				<div>
-					<%= user.check_box :lf_like_friends %>
-					<%= user.label :lf_like_friends,_('Estar con mis amigos') %>
+			</div>
+			<div class="col">
+				<div class="control-group clearfix">
+					<div class="span3 right">Estar con mis amigos</div>
+					<div class="checkbox">
+						<%= user.check_box :lf_like_friends %>
+						<%= user.label :lf_like_friends,_('Estar con mis amigos') %>
+					</div>
 				</div>
+			</div>
 				
 			<div class="clearfix"></div>
 		</div>

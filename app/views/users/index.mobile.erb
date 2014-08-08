@@ -67,18 +67,36 @@
               </div>
 
         <div class="checkboxes">
-          <label class="checkbox">
-            <%= f.check_box :pictures_main_not_null, {}, 1, '' %><%= _('Foto') %>
-          </label>
-          <label class="checkbox">
-            <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %><%= _('Online') %>
-          </label>
-          <label class="checkbox">
-            <%= f.check_box :smoker_in, {}, User.is_smoker, '' %><%= _('Fumador') %>
-          </label>
-          <label class="checkbox">
-            <%= f.check_box :children_in, {}, User.have_children, '' %><%= _('Con hijos') %>
-          </label>
+          <div class="col">
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Foto') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :pictures_main_not_null, {}, 1, '' %>
+                <%= f.label :pictures_main_not_null,_('Foto') %>
+              </div>
+            </div>
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Online') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %>
+                <%= f.label :updated_at_gteq,_('Online') %>
+              </div>
+            </div>
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Fumador') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :smoker_in, {}, User.is_smoker, '' %>
+                <%= f.label :smoker_in,_('Fumador') %>
+              </div>
+            </div>
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Con hijos') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :children_in, {}, User.have_children, '' %>
+                <%= f.label :children_in,_('Con hijos') %>
+              </div>
+            </div>
+          </div>
         </div>
 
         <%= f.submit _('Buscar'), class: 'btn btn-info' %>

@@ -1177,6 +1177,10 @@ section.chat{
 
 /* search */
 
+#adv-search {
+  margin-top:20px;
+}
+
 .search{
 	display: inline-block;
 	padding: 0px;
@@ -1198,6 +1202,8 @@ section.chat{
     margin-top:20px;
 		input {
 			width: calc(100% - 10px);
+      padding:4px 0;
+      text-align:center;
 		}
 		margin:0;
 
@@ -1217,17 +1223,6 @@ section.chat{
 			width: 100%;
 			&:before {
 				clear:both;
-			}
-			label.checkbox {
-				float:left;
-				width:40%;
-				input[type="checkbox"]{
-					float: none;
-					margin-left: 0px;
-					margin-right: 7px;
-					margin-top: -2px;
-					width:100%;
-				}
 			}
 		}
 
@@ -1597,7 +1592,7 @@ section.messages{
 
 /* settings */
 
-.settings{
+.settings,.checkbox-group, .checkboxes{
 
 	.col{
 		width:100%;
@@ -1608,6 +1603,7 @@ section.messages{
 
     .span3 {
       width:calc(100% - 120px);
+      font-weight:bold;
     }
 
 		.text-right {
@@ -1634,7 +1630,7 @@ section.messages{
 		}
 
 		.control-group {
-			margin-bottom:25px;
+			margin-bottom:15px;
 			line-height:1em;
 		}
 
@@ -1645,26 +1641,7 @@ section.messages{
 			}
 		}
 
-		input[type=checkbox] {
-			display: none;
-		}
 
-		input[type=checkbox] + label {
-			text-indent: -9999px;
-			display: block;
-			width: 68px;
-			height: 21px;
-			line-height: 21px;
-			background: transparent image-url('checkbox.png') no-repeat -39px 0;
-			-webkit-transition: background-position 0.3s ease-in-out;
-			-moz-transition: background-position 0.3s ease-in-out;
-		}
-
-		input[type=checkbox]:checked + label{
-			-webkit-transition: background-position 0.3s ease-in-out;
-			-moz-transition: background-position 0.3s ease-in-out;
-			background-position: 0px 0;
-		}
 	}
 
 	.blocked{
@@ -1950,7 +1927,6 @@ section.list {
 	article {
 		text-align:center;
 	}
-
 }
 
 
@@ -1974,10 +1950,7 @@ h1 {
   cursor: default;
 }
 .checkbox-group {
-  div {
-    width:50%;
-    float:left;
-  }
+
   .clearfix {
     clear:both;
   }
@@ -2000,4 +1973,8 @@ h1 {
 
 .cellove_index .boxed-inner {
   margin:20px 0;
+}
+
+.jslider {
+  width:95%;
 }
