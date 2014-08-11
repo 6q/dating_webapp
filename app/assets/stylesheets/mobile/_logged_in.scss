@@ -9,7 +9,8 @@ body.inside {
 		height:60px;
 		background:black;
 		z-index: 1000;
-
+    	margin:0 !important;
+    	padding:0 !important;
 		.container {
 			width: 100%;
 			padding:10px 0;
