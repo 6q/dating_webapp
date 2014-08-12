@@ -8,8 +8,7 @@ class ApplicationController < ActionController::Base
   after_filter :user_activity
   before_filter :authenticate
   before_filter :set_gettext_locale
-  before_filter :force_tablet_html
-  before_filter :force_mobile_format # Force mobile layout and templates for testing (remove true to disable)
+  before_filter :prepare_for_mobile
 
   has_mobile_fu
 
@@ -54,6 +53,19 @@ class ApplicationController < ActionController::Base
     end
   end
   private :authenticate
+
+  def prepare_for_mobile
+    session[:mobile_view] = is_mobile_device? if session[:mobile_view].present?
+    session[:mobile_view] = params[:mobile] if params[:mobile].present?
+
+    if session[:mobile_view]
+      request.format = :mobile
+    else
+      request.format = :html
+    end
+    #request.format = :mobile if is_mobile_view?
+
+  end
 
   def layout_from_resource
     if user_signed_in?

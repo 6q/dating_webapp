@@ -136,13 +136,12 @@
 		  			<%= render 'busca' %>
 		  		</div>
 
+				<h3><%= _('Denunciar perfil') %></h3>
+		  		<div class="tab-pane report" id="denunciar">
+		  			<%= link_to _('Denunciar perfil a Cellove'), user_report_path(@user) %>
+		  		</div>
 
 	</article>
-
-
-  <div class="report small">
-    <%= link_to _('Denunciar perfil a Cellove'), user_report_path(@user) %>
-  </div>
 
 </section>
 
