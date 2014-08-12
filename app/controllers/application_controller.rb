@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_gettext_locale
   before_filter :prepare_for_mobile
 
-  has_mobile_fu
+  has_mobile_fu 
 
   protect_from_forgery
 
@@ -55,15 +55,16 @@ class ApplicationController < ActionController::Base
   private :authenticate
 
   def prepare_for_mobile
-    session[:mobile_view] = is_mobile_device? if session[:mobile_view].present?
-    session[:mobile_view] = params[:mobile] if params[:mobile].present?
 
-    if session[:mobile_view]
+    session[:mobile_view] = is_mobile_device? if session[:mobile_view].nil?
+
+    session[:mobile_view] = params[:mobile] if params[:mobile].present?
+    
+    if session[:mobile_view] == 'true'
       request.format = :mobile
     else
       request.format = :html
     end
-    #request.format = :mobile if is_mobile_view?
 
   end
 
