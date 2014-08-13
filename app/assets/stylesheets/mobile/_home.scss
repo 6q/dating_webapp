@@ -111,4 +111,15 @@ body.outside {
       }
     }
   }
+  .footer-links {
+    margin:20px 0;
+    
+    a {
+      font: #FFF;
+    }
+    a:hover {
+        font:#FFF !important;
+      }
+    
+  }
 }
