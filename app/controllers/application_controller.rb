@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_gettext_locale
   before_filter :prepare_for_mobile
 
-  has_mobile_fu 
+  has_mobile_fu false
 
   protect_from_forgery
 

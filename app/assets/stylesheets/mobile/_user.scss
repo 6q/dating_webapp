@@ -144,8 +144,6 @@ section.list {
 	header {
 
 		@include clearfix;
-		margin-bottom:10px;
-		padding-bottom:10px;
 
 		h1 {
 			margin:0;
@@ -201,8 +199,7 @@ section.list {
 		font-weight:bold;
 
 		span.page, span.next, span.prev {
-			display:block;
-			float:left;
+			display:inline;
 
 			a {
 				font-size: 12px;
@@ -235,14 +232,13 @@ section.list {
 
 		span{
 			a {
-				float:left;
 				margin:0 3px;
 			}
 		}
 	}
 
 	nav.pagination{
-		float: right;
+
 	}
 }
 
@@ -1773,7 +1769,6 @@ section.list {
 
 		header {
 
-			padding:10px;
 			border:0;
 			margin:0;
 			overflow: visible;
