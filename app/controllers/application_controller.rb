@@ -55,7 +55,6 @@ class ApplicationController < ActionController::Base
   private :authenticate
 
   def prepare_for_mobile
-    session[:mobile_view] = true
 
     session[:mobile_view] = is_mobile_device? if session[:mobile_view].nil?
       
@@ -64,7 +63,6 @@ class ApplicationController < ActionController::Base
     elsif params[:mobile] == 'false'
       session[:mobile_view] = false
     end
-
 
     if session[:mobile_view] == true  && !request.xhr?
       request.format = :mobile
