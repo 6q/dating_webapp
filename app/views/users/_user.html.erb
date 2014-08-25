@@ -41,7 +41,6 @@
     <%= user.current_sign_in_at ? (user.online? ? _('Ahora online') : time_ago_in_words_or_date(user.current_sign_in_at)) : _('Nunca') %>">
     <ul class="pics">
       <li><%= link_to profile_pic(user), user %></li>
-      <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>
       <% if user_signed_in?
@@ -139,7 +138,7 @@
       <% end %>
     </ul>
 
-    <% if @interactions == true %>
+    <% if @interactions == false %>
 
       <div class="interactions">
         <div class="punctuations">
@@ -150,6 +149,7 @@
       </div>
 
     <% end %>
+
   </article>
   <% end %>
   </li>

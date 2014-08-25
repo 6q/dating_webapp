@@ -3,7 +3,6 @@
 <article class="user-card anonymous">
     <ul class="pics">
       <li><%= profile_pic(user, {width: 210, height: 210, invisible: true}) %></li>
-      <li><%= profile_pic(user, {width: 210, height: 210, invisible: true}) %></li>
     </ul>
     <header>
         <%=
@@ -34,7 +33,6 @@
 <% else %>
 <article class="user-card <%= user.online? ? "online" : "" %>">
     <ul class="pics">
-      <li><%= link_to profile_pic(user), user %></li>
       <li><%= link_to profile_pic(user), user %></li>
     </ul>
     <header>

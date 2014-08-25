@@ -175,11 +175,70 @@ body.inside {
 	}
 	#main_box,#legalBox,#languageBox {
 		position:fixed;
-		width: calc(100% - 40px);
+		width: calc(100%-40px);
 		padding:20px;
 		background:#fff;
 		top:60px;
 		left:0;
 		z-index:99;
 	}
+}
+
+
+#could-interest-me {
+  width: calc(100% - 80px);
+  padding:20px 40px 0;
+  .block {
+    display: none;
+  }
+  h4 {
+  	width:100%;
+  	text-align:center;
+  	margin-top:0;
+  }
+  .pull-right {
+  	width:100%;
+  	margin-bottom:10px;
+  	text-align:center;
+  	.paginate-users {
+  		margin-right:10px;
+  		font-weight:bold;
+
+  	}
+  }
+  ul {
+    margin:0;
+    .pics {
+
+    	a {
+    		width:100%;
+    		img {
+    			width: 100%;
+    		}
+    	}
+    }
+    h1 {
+    	display:none;
+    	text-align:center;
+    }
+    .actions {
+				@include user-actions;
+				float:left;
+
+				padding:5px 0;
+				margin-top:10px;
+				border-radius:5px;
+				background:#E5F2FB;
+				width: 100%;
+				li {
+					width:25%;
+					text-align:center;
+					margin: 0 !important;
+					a {
+						float:none;
+						margin: 0 auto;
+					}
+				}
+			}
+  }
 }
