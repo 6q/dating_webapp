@@ -403,7 +403,7 @@ fieldset {
     input[type=checkbox] + label {
       text-indent: -9999px;
       display: block;
-      width: 68px;
+      width: 68px!important;
       height: 21px;
       line-height: 21px;
       background: transparent image-url('checkbox.png') no-repeat -39px 0;
