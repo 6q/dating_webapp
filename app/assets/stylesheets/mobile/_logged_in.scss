@@ -192,6 +192,15 @@ body.inside {
   .block {
     display: none;
   }
+  .tooltip {
+  	display:none;
+  }
+  .tooltip-inner {
+  	display:none;
+  }
+  .tooltip-arrow {
+  	display:none;
+  }
   h4 {
   	width:100%;
   	text-align:center;
