@@ -104,9 +104,6 @@
     <% end %>
   </div>
 </section>
-
-<hr class="thin">
-
 <section class="list">
   <header class="center">
       <h1 class="section_title"><%= _('Resultados de la búsqueda') %></h1>
@@ -116,7 +113,7 @@
       <%= render @users %>
     </ul>
   <% else %>
-    <div class=""><strong><%= _('Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda.') %></strong></div>
+    <div class="failed_search"><strong><%= _('Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda.') %></strong></div>
   <% end %>
   <div class="pagination">
     <%= pager_total(@users) %>
