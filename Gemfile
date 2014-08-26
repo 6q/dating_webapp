@@ -60,7 +60,7 @@ end
 gem 'minitest-rails', group: [:test, :development]
 
 group :development do
-  gem 'thin'
+  #gem 'thin'
   gem "guard-rails"
   gem "rb-fsevent"
   gem 'capistrano'
