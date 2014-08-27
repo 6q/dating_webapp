@@ -868,21 +868,21 @@
 	//************* MSSQL CLASS **********************
 	class QuickMSDB
 	{
-		var $con 			= null;		// for db connection
-		var $dbselect		= null;		// for db selection
-		var $result 		= null;		// for mssql result resource id
-		var $row 			= null;		// for fetched row
-		var $rows 			= null;		// for number of rows fetched
-		var $affected 		= null;		// for number of rows affected
-		var $insert_id 		= null;		// for last inserted id
-		var $query 			= null;		// for the last run query
-		var $show_errors 	= null;		// for knowing whether to display errors
-		var $emsg 			= null;		// for mssql error description
-		var $eno 			= null;		// for mssql error number
+		public $con 			= null;		// for db connection
+		public $dbselect		= null;		// for db selection
+		private $result 		= null;		// for mssql result resource id
+		private $row 			= null;		// for fetched row
+		private $rows 			= null;		// for number of rows fetched
+		private $affected 		= null;		// for number of rows affected
+		private $insert_id 		= null;		// for last inserted id
+		private $query 			= null;		// for the last run query
+		private $show_errors 	= null;		// for knowing whether to display errors
+		private $emsg 			= null;		// for mssql error description
+		private $eno 			= null;		// for mssql error number
 		
 		
 		// Intialize the class with connection to db
-		function __construct($host, $user, $password, $db, $persistent = false, $show_errors = false)
+		public function __construct($host, $user, $password, $db, $persistent = false, $show_errors = false)
 		{
 			if ($show_errors == true)
 			{
@@ -901,9 +901,6 @@
 			if ($this->con)
 			{
 				$this->dbselect = $result = mssql_select_db($db, $this->con);
-				mssql_query("SET NAMES utf8");
-				mssql_query("SET CHARACTER SET utf8");
-				mssql_query("SET COLLATION_CONNECTION = 'utf8_general_ci'");
 				return $result;
 			}
 			else
@@ -913,20 +910,20 @@
 		}
 		
 		// Close the connection to database
-		function __destruct()
+		public function __destruct()
 		{
 			$this->close();
 		}
 
 		// Close the connection to database
-		function close()
+		public function close()
 		{
 			$result = @mssql_close($this->con);
 			return $result;
 		}
 	
 		// stores mssql errors
-		function setError($msg, $no)
+		private function setError($msg, $no)
 		{
 			$this->emsg = $msg;
 			$this->eno = $no;
@@ -945,8 +942,13 @@
 		#################################################
 	
 		// Runs the SQL query (general execute query function)
-		function execute($command)
-		{
+		public function execute($command)
+		{	
+			$command = $this->convert_reserved($command);
+			$command = $this->convert_limits($command);
+			$command = $this->convert_count($command);
+			$command = $this->convert_on_duplicate($command);
+			
 			# Params:
 			# 		$command = query command
 			
@@ -965,19 +967,18 @@
 				(stripos($command, "replace ") !== false)
 				)
 			{
-				$this->result = mssql_query($command) or $this->setError(mssql_error(), mssql_errno());
+				$this->result = mssql_query($command);
 
 				if (stripos($command, "insert ") !== false)
 				{
 					if ($this->result)
 					{
-						$this->insert_id = intval(mssql_insert_id());
+						
 					}
 				}
 
 				if ($this->result)
 				{
-					$this->affected = intval(mssql_affected_rows());
 					// return the number of rows affected
 					return $this->result;
 				}
@@ -985,7 +986,7 @@
 			else
 			{
 				// For Selection query
-				$this->result = mssql_query($command) or $this->setError(mssql_error(), mssql_errno());
+				$this->result = mssql_query($command);
 				if ($this->result)
 				{
 					$this->rows = @intval(mssql_num_rows($this->result));
@@ -994,9 +995,97 @@
 				}
 			}
 		}	
+		
+		// Convert reserved words
+		public function convert_reserved($command)
+		{
+			$command = str_replace(".from", ".[from]", $command);
+			$command = str_replace(".read", ".[read]", $command);
+			$command = str_replace(".to", ".[to]", $command);
+			$command = str_replace(".name", ".[name]", $command);
+			$command = str_replace(".type", ".[type]", $command);
+			$command = str_replace(".date", ".[date]", $command);
+			$command = str_replace(".default", ".[default]", $command);
+			
+			return $command;
+		}
+		
+		// Convert count
+		public function convert_count($command)
+		{
+			$command = preg_replace('/ COUNT(\([a-zA-Z._]+\))/', ' COUNT$1 AS [COUNT$1] ', $command);
+
+			return $command;
+		}
+		
+		// Convert on duplicate key
+		public function convert_on_duplicate($command)
+		{
+			if (preg_match('/([^\?]*)ON DUPLICATE KEY([^\?]*)/', $command, $matches))
+			{
+				$insert_sql = $matches[1];
+				$insert_sql = str_replace("\n", '', $insert_sql);
+				$insert_sql = preg_replace('/\s+/', ' ', $insert_sql);
+				
+				preg_match('/INSERT INTO ([a-zA-Z._]+) \(/', $command, $matches);
+				$table_name = $matches[1];
+				
+				preg_match('/INSERT INTO ([a-zA-Z._]+) \([\n\r\s\t]+([a-zA-Z._]+),/', $command, $matches);
+				$key_name = $matches[2];
+				
+				preg_match("/VALUES \([\n\r\s\t]+'([a-zA-Z0-9._]+)',/", $command, $matches);
+				$value_name = $matches[1];
+				
+				$update_sql = preg_replace('/([^\?]*)ON DUPLICATE KEY/', '', $command);
+				$update_sql = preg_replace('/UPDATE/', 'UPDATE ' . $table_name . ' SET', $update_sql);
+				
+				$command = "IF EXISTS (SELECT * FROM " . $table_name . " WHERE " . $key_name . " = '" . $value_name . "') " . trim($update_sql) . " WHERE " . $key_name . " = '" . $value_name . "' ELSE BEGIN " . trim($insert_sql) . " END";
+			}
+
+			return $command;
+		}
+		
+		// Convert limits
+		public function convert_limits($command)
+		{
+			if (preg_match('/LIMIT ([0-9]+), ([0-9]+)/', $command, $matches))
+			{
+				$lower_limit = $matches[1];
+				$upper_limit = $matches[2];
+				$and_limit = $upper_limit + $lower_limit;
+				
+				preg_match('/FROM ([a-zA-Z._]+)/', $command, $matches);
+				$table_name = $matches[1];
+				
+				preg_match('/ORDER BY ([a-zA-Z._]+)/', $command, $matches);
+				$id = $matches[1];
+				
+				$command = preg_replace('/LIMIT ([0-9]+), ([0-9]+)/', '', $command);
+				$command = preg_replace('/SELECT /', 'SELECT TOP ' . $upper_limit . ' ', $command);
+				
+				if (preg_match('/WHERE /', $command))
+				{
+					$command = preg_replace('/FROM ([a-zA-Z._]+) /', 'FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY ' . $id . ' DESC) AS RowNum FROM $1 ) AS ' . $table_name . ' ', $command);
+					$command = preg_replace('/WHERE /', 'WHERE ' . $table_name . '.RowNum BETWEEN ' . $lower_limit . ' AND ' . $and_limit . ' AND ', $command);
+				}
+				else
+				{
+					$command = preg_replace('/FROM ([a-zA-Z._]+) /', 'FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY ' . $id . ' DESC) AS RowNum FROM $1 ) AS ' . $table_name . ' WHERE ' . $table_name . '.RowNum BETWEEN ' . $lower_limit . ' AND ' . $and_limit . ' ', $command);
+				}
+			}
+			else if (preg_match('/LIMIT ([0-9]+)/', $command, $matches))
+			{
+				$upper_limit = $matches[1];
+				
+				$command = preg_replace('/LIMIT ([0-9]+)/', '', $command);
+				$command = preg_replace('/SELECT /', 'SELECT TOP ' . $upper_limit . ' ', $command);
+			}
+
+			return $command;
+		}
 
 		// Gets records from table
-		function select($table, $rows = "*", $condition = null, $order = null)
+		public function select($table, $rows = "*", $condition = null, $order = null)
 		{
 			# Params:
 			# 		$table = the name of the table
@@ -1021,7 +1110,7 @@
 			}
 
 			$this->query = $sql;
-			$this->result = mssql_query($sql) or $this->setError(mssql_error(), mssql_errno());
+			$this->result = mssql_query($sql);
 
 			if ($this->result)
 			{
@@ -1033,7 +1122,7 @@
 
 
 		// Inserts records
-		function insert($table, $data)
+		public function insert($table, $data)
 		{
 			# Params:
 			# 		$table = the name of the table
@@ -1043,13 +1132,12 @@
 			{
 				if ($data)
 				{
-					$this->result = mssql_query("insert into $table set $data") or $this->setError(mssql_error(), mssql_errno());
+					$this->result = mssql_query("insert into $table set $data");
 					$this->query = "insert into $table set $data";
 
 					if ($this->result)
 					{
-						$this->affected = intval(mssql_affected_rows());
-						$this->insert_id = intval(mssql_insert_id());
+
 						// return the number of rows affected
 						return $this->affected;
 					}
@@ -1066,7 +1154,7 @@
 		}
 
 		// Updates records
-		function update($table, $data, $condition)
+		public function update($table, $data, $condition)
 		{
 			# Params:
 			# 		$table = the name of the table
@@ -1079,12 +1167,11 @@
 				{
 					if ($condition)
 					{
-						$this->result = mssql_query("update $table set $data where $condition") or $this->setError(mssql_error(), mssql_errno());
+						$this->result = mssql_query("update $table set $data where $condition");
 						$this->query = "update $table set $data where $condition";
 
 						if ($this->result)
 						{
-							$this->affected = intval(mssql_affected_rows());
 							// return the number of rows affected
 							return $this->affected;
 						}
@@ -1106,7 +1193,7 @@
 		}
 
 		// Deletes records
-		function delete($table, $condition)
+		public function delete($table, $condition)
 		{
 			# Params:
 			# 		$table = the name of the table
@@ -1116,12 +1203,11 @@
 			{
 				if ($condition)
 				{
-					$this->result = mssql_query("delete from $table where $condition") or $this->setError(mssql_error(), mssql_errno());
+					$this->result = mssql_query("delete from $table where $condition");
 					$this->query = "delete from $table where $condition";
 
 					if ($this->result)
 					{
-						$this->affected = intval(mssql_affected_rows());
 						// return the number of rows affected
 						return $this->affected;
 					}
@@ -1138,7 +1224,7 @@
 		}
 
 		// returns table data in array
-		function load_array()
+		public function load_array()
 		{
 			$arr = array();
 			
@@ -1152,7 +1238,7 @@
 
 
 		// print a complete table from the specified table
-		function get_html($command, $display_field_headers = true, $table_attribs = 'border="0" cellpadding="3" cellspacing="2" style="padding-bottom:5px; border:1px solid #cccccc; font-size:13px; font-family:verdana;"')
+		public function get_html($command, $display_field_headers = true, $table_attribs = 'border="0" cellpadding="3" cellspacing="2" style="padding-bottom:5px; border:1px solid #cccccc; font-size:13px; font-family:verdana;"')
 		{
 			if (!$command)
 			{
@@ -1160,7 +1246,7 @@
 			}
 
 			$this->query = $command;
-			$this->result = mssql_query($command) or $this->setError(mssql_error(), mssql_errno());
+			$this->result = mssql_query($command);
 			
 			if ($this->result)
 			{
@@ -1199,24 +1285,34 @@
 			}
 		}
 		
-		
-		function last_insert_id()
+		public function last_insert_id()
 		{
-			if ($this->insert_id)
+			$result_id = @mssql_query('SELECT SCOPE_IDENTITY()');
+
+			if ($result_id)
 			{
-				return $this->insert_id;
+				if ($row = @mssql_fetch_assoc($result_id))
+				{
+					@mssql_free_result($result_id);
+					
+					return $row['computed'];
+				}
+				
+				@mssql_free_result($result_id);
 			}
+			
+			return 0;
 		}
 		
 		// Counts all records from a table
-		function count_all($table)
+		public function count_all($table)
 		{
 			if (!$table)
 			{
 				exit("No Table Specified !!");
 			}
 			
-			$this->result = mssql_query("select count(*) as total from $table") or $this->setError(mssql_error(), mssql_errno());
+			$this->result = mssql_query("select count(*) as total from $table");
 			$this->query = "select count(*) as total from $table";
 
 			if ($this->result)
@@ -1227,7 +1323,7 @@
 		}
 		
 		// Counts records based on specified criteria
-		function count_rows($command)
+		public function count_rows($command)
 		{
 			# Params:
 			# 		$command = query command
@@ -1238,7 +1334,7 @@
 			}
 		
 			$this->query = $command;
-			$this->result = mssql_query($command) or $this->setError(mssql_error(), mssql_errno());
+			$this->result = mssql_query($command);
 
 			if ($this->result)
 			{
@@ -1247,7 +1343,7 @@
 		}
 
 		// Updates a row if it exists or adds if it doesn't already exist.
-		function insert_update($table, $data, $condition)
+		public function insert_update($table, $data, $condition)
 		{
 			# Params:
 			# 		$table = the name of the table
@@ -1262,25 +1358,22 @@
 					{
 						if ($this->row_exists("select * from $table where $condition"))
 						{
-							$this->result = mssql_query("update $table set $data where $condition") or $this->setError(mssql_error(), mssql_errno());
+							$this->result = mssql_query("update $table set $data where $condition");
 							$this->query = "update $table set $data where $condition";
 
 							if ($this->result)
 							{
-								$this->affected = intval(mssql_affected_rows());
 								// return the number of rows affected
 								return $this->affected;
 							}
 						}
 						else
 						{
-							$this->result = mssql_query("insert into $table set $data") or $this->setError(mssql_error(), mssql_errno());
+							$this->result = mssql_query("insert into $table set $data");
 							$this->query = "insert into $table set $data";
 
 							if ($this->result)
 							{
-								$this->insert_id = intval(mssql_insert_id());
-								$this->affected = intval(mssql_affected_rows());
 								// return the number of rows affected
 								return $this->affected;
 							}
@@ -1304,7 +1397,7 @@
 
 
 		// Runs the sql query with claus "limit x, x"
-		function select_limited($table, $start, $return_count, $condition = null, $order = null)
+		public function select_limited($table, $start, $return_count, $condition = null, $order = null)
 		{
 			# Params:
 			# 		$start = starting row for limit clause
@@ -1318,12 +1411,12 @@
 				{
 					if ($order)
 					{
-						$this->result = mssql_query("select * from $table where $condition order by $order limit $start, $return_count") or $this->setError(mssql_error(), mssql_errno());
+						$this->result = mssql_query("select * from $table where $condition order by $order limit $start, $return_count");
 						$this->query = "select * from $table where $condition order by $order limit $start, $return_count";
 					}
 					else
 					{
-						$this->result = mssql_query("select * from $table where $condition limit $start, $return_count") or $this->setError(mssql_error(), mssql_errno());
+						$this->result = mssql_query("select * from $table where $condition limit $start, $return_count");
 						$this->query = "select * from $table where $condition limit $start, $return_count";
 					}
 				}
@@ -1331,12 +1424,12 @@
 				{
 					if ($order)
 					{
-						$this->result = mssql_query("select * from $table order by $order limit $start, $return_count") or $this->setError(mssql_error(), mssql_errno());
+						$this->result = mssql_query("select * from $table order by $order limit $start, $return_count");
 						$this->query = "select * from $table order by $order limit $start, $return_count";
 					}
 					else
 					{
-						$this->result = mssql_query("select * from $table limit $start, $return_count") or $this->setError(mssql_error(), mssql_errno());
+						$this->result = mssql_query("select * from $table limit $start, $return_count");
 						$this->query = "select * from $table limit $start, $return_count";
 					}
 				}
@@ -1360,19 +1453,19 @@
 		#################################################
 		
 		// Fetchs array
-		function fetch_array($result)
+		public function fetch_array($result)
 		{
 			return mssql_fetch_array($result);
 		}
 		
 		// Gets table name
-		function table_name($result, $i)
+		public function table_name($result, $i)
 		{
 			return mssql_tablename($result, $i);
 		}
 
 		// Counts rows from last Select query
-		function count_select()
+		public function count_select()
 		{
 			if ($this->rows)
 			{
@@ -1381,7 +1474,7 @@
 		}
 
 		// Gets the number of affected rows after Operational query has executed
-		function count_affected()
+		public function count_affected()
 		{
 			if ($this->affected)
 			{
@@ -1390,7 +1483,7 @@
 		}
 
 		// Checks whether a table has records		
-		function has_rows($table)
+		public function has_rows($table)
 		{
 			$rows = $this->count_all($table);
 			
@@ -1405,7 +1498,7 @@
 		}
 		
 		// Checks whether or not a row exists with specified criteria
-		function row_exists($command)
+		public function row_exists($command)
 		{
 			# Params:
 			# 		$command = query command
@@ -1416,7 +1509,7 @@
 			}
 		
 			$this->query = $command;
-			$this->result = mssql_query($command) or $this->setError(mssql_error(), mssql_errno());
+			$this->result = mssql_query($command);
 
 			if ($this->result)
 			{
@@ -1432,7 +1525,7 @@
 		}
 
 		// Returns single fetched row
-		function fetch_row($command)
+		public function fetch_row($command)
 		{
 
 			if (!$command)
@@ -1441,7 +1534,7 @@
 			}
 
 			$this->query = $command;
-			$this->result = mssql_query($command) or $this->setError(mssql_error(), mssql_errno());
+			$this->result = mssql_query($command);
 
 			if ($this->result)
 			{
@@ -1453,7 +1546,7 @@
 		
 		
 		// Returns single field value
-		function fetch_value($table, $field, $condition = null)
+		public function fetch_value($table, $field, $condition = null)
 		{
 
 			if (!$table || !$field)
@@ -1469,7 +1562,7 @@
 			}
 			
 			$this->query = $query;
-			$this->result = mssql_query($query) or $this->setError(mssql_error(), mssql_errno());
+			$this->result = mssql_query($query);
 
 			if ($this->result)
 			{
@@ -1481,7 +1574,7 @@
 		
 		
 		// Returns the last run query
-		function last_query()
+		public function last_query()
 		{
 			if ($this->query)
 			{
@@ -1491,7 +1584,7 @@
 		
 		
 		// Gets today's date
-		function get_date($format = null)
+		public function get_date($format = null)
 		{
 			# Params:
 			#		$format = date format like Y-m-d
@@ -1509,7 +1602,7 @@
 		}
 		
 		// Gets currents time
-		function get_time($format = null)
+		public function get_time($format = null)
 		{
 			# Params:
 			#		$format = date format like H:m:s
@@ -1527,7 +1620,7 @@
 		}
 
 		// Adds slash to the string irrespective of the setting of getmagicquotesgpc
-		function escape_string($value)
+		public function escape_string($value)
 		{
 			if (is_string($value))
 			{
@@ -1552,7 +1645,7 @@
 			}
 		*/
 		
-		function is_valid($input)
+		public function is_valid($input)
 		{
 			$input = strtolower($input);
 			
@@ -1592,7 +1685,7 @@
 		}
 	
 		// lists tables of database
-		function list_tables()
+		public function list_tables()
 		{
 			$this->result = mssql_query("show tables");
 			$this->query = "show tables";
@@ -1614,7 +1707,7 @@
 
 
 		// provides info about given table
-		function table_info($table)
+		public function table_info($table)
 		{
 			if ($table)
 			{
@@ -1648,7 +1741,7 @@
 
 
 		// displays any mssql errors generated
-		function display_errors()
+		public function display_errors()
 		{
 			if ($this->show_errors == false)
 			{
@@ -1668,7 +1761,7 @@
 		}
 
 		// to display success message
-		function success_msg($msg)
+		public function success_msg($msg)
 		{
 			print '	<br /><br /><div align="center" style="background:#EEFDD7; padding:5px; font-size:13px; font-family:verdana; border:1px solid #8DD607;">
 					' . $msg . '
@@ -1676,7 +1769,7 @@
 		}
 	
 		// to display failure message
-		function failure_msg($msg)
+		public function failure_msg($msg)
 		{
 			print '	<br /><br /><div align="center" style="background:#FFF2F2; padding:5px; font-size:13px; font-family:verdana; border:1px solid #FF8080;">
 					' . $msg . '
@@ -1684,7 +1777,7 @@
 		}
 
 		// to display general alert message
-		function alert_msg($msg)
+		public function alert_msg($msg)
 		{
 			print '	<br /><br /><div align="center" style="background:#FFFFCC; padding:5px; font-size:13px; font-family:verdana; border:1px solid #CCCC33;">
 					' . $msg . '

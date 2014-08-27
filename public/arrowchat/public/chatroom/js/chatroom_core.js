@@ -39,19 +39,19 @@
 		}
 		function chatroomUserOptions(data, is_admin) {
 			a("#arrowchat_chatroom_make_mod_" + data.id).click(function () {
-				a.post(k + "includes/json/send/send_settings.php", {
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
 					chatroom_mod: data.id,
 					chatroom_id: Ccr
 				}, function () {});
 			});
 			a("#arrowchat_chatroom_remove_mod_" + data.id).click(function () {
-				a.post(k + "includes/json/send/send_settings.php", {
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
 					chatroom_remove_mod: data.id,
 					chatroom_id: Ccr
 				}, function () {});
 			});
 			a("#arrowchat_chatroom_block_user_" + data.id).click(function () {
-				a.post(k + "includes/json/send/send_settings.php", {
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
 					block_chat: data.id
 				}, function (json_data) {
 					if (json_data != "-1") {
@@ -65,7 +65,7 @@
 			a("#arrowchat_chatroom_ban_user_" + data.id).click(function () {
 				var ban_length = prompt(lang[57]);
 				if (ban_length != null && ban_length != "" && !(isNaN(ban_length))) {
-					a.post(k + "includes/json/send/send_settings.php", {
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
 						chatroom_ban: data.id,
 						chatroom_id: Ccr,
 						chatroom_ban_length: ban_length
@@ -102,22 +102,37 @@
 					}, 15000);
 				}
 				msgcount++;
-				if (msgcount > 4) {
+				if (msgcount > 4 && chatroom_admin != 1 && chatroom_mod != 1) {
 					displayMessage("arrowchat_chatroom_message_flyout", lang[51], "error");
 				} else {
 					var i = $element.val();
 					i = i.replace(/^\s+|\s+$/g, "");
 					$element.val("");
 					$element.focus();
-					i != "" && a.post(k + "includes/json/send/send_message_chatroom.php", {
-						userid: u_id,
-						username: u_name,
-						chatroomid: Ccr,
-						message: i
-					}, function (e) {
-						if (e) {
+					i != "" && a.ajax({
+						url: c_ac_path + "includes/json/send/send_message_chatroom.php",
+						type: "post",
+						cache: false,
+						dataType: "json",
+						data: {
+							userid: u_id,
+							username: u_name,
+							chatroomid: Ccr,
+							message: i
+						},
+						beforeSend: function () {
+							a(".arrowchat_popout_convo_input").addClass("arrowchat_message_sending_popout");
+						},
+						error: function () {
+							a(".arrowchat_popout_convo_input").removeClass("arrowchat_message_sending_popout");
+							displayMessage("arrowchat_chatroom_message_flyout", lang[135], "error");
+						},
+						success: function (e) {
+							a(".arrowchat_popout_convo_input").removeClass("arrowchat_message_sending_popout");
+							if (e) {
 							addMessageToChatroom(e, u_name, i);
 							a(".arrowchat_popout_convo").scrollTop(6E4);
+						}
 						}
 					});
 					return false
@@ -125,12 +140,17 @@
 			}
 		}
 		function addMessageToChatroom(b, c, d) {
+			var title = "";
+			if (chatroom_mod == 1)
+				title = lang[137];
+			if (chatroom_admin == 1)
+				title = lang[136];
 			d = d.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>").replace(/\"/g, "&quot;");
 			d = replaceURLWithHTMLLinks(d);
 			d = smileyreplace(d);
 			if (a("#arrowchat_chatroom_message_" + b).length > 0) a("#arrowchat_chatroom_message_" + b + " .arrowchat_chatroom_message_content").html(formatTimestamp(new Date(Math.floor((new Date).getTime() / 1E3) * 1E3)) + d);
 			else {
-				a(".arrowchat_popout_convo").append('<div class="arrowchat_chatroom_box_message" id="arrowchat_chatroom_message_' + b + '"><img class="arrowchat_chatroom_message_avatar" src="'+u_avatar+'" alt="" /><div class="arrowchat_chatroom_message_name">' + c + ':</div><div class="arrowchat_chatroom_message_content  arrowchat_self">' + formatTimestamp(new Date(Math.floor((new Date).getTime() / 1E3) * 1E3)) + d + "</div></div>");
+				a(".arrowchat_popout_convo").append('<div class="arrowchat_chatroom_box_message" id="arrowchat_chatroom_message_' + b + '"><img class="arrowchat_chatroom_message_avatar" src="'+u_avatar+'" alt="" /><div class="arrowchat_chatroom_message_name">' + c + title + ':</div><div class="arrowchat_chatroom_message_content  arrowchat_self">' + formatTimestamp(new Date(Math.floor((new Date).getTime() / 1E3) * 1E3)) + d + "</div></div>");
 				a(".arrowchat_popout_convo").scrollTop(5E4)
 			}
 			showChatroomTime();
@@ -140,8 +160,10 @@
 			var global_mod = 0,
 				global_admin = 0,
 				admin_markup = "";
+			chatroom_mod = 0;
+			chatroom_admin = 0;
             a.ajax({
-                url: k + "includes/json/receive/receive_chatroom.php?popoutroom=1",
+                url: c_ac_path + "includes/json/receive/receive_chatroom.php?popoutroom=1",
                 cache: false,
                 type: "post",
 				data: {
@@ -166,10 +188,12 @@
 								if (i == "user_title") {
 									a.each(e, function (l, f) {
 										if (f.admin == 1) {
-											global_admin = 1
+											global_admin = 1;
+											chatroom_admin = 1;
 										}
 										if (f.mod == 1) {
-											global_mod = 1
+											global_mod = 1;
+											chatroom_mod = 1;
 										}
 									})
 								}
@@ -180,13 +204,13 @@
 										if ((global_admin == 1 || global_mod == 1) && (f.t == 1)) {
 											admin_markup = '<div class="arrowchat_chatroom_options_padding"><div id="arrowchat_chatroom_make_mod_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + lang[52] + '</div></div><div class="arrowchat_chatroom_options_padding"><div id="arrowchat_chatroom_ban_user_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + lang[53] + '</div></div>';
 										}
-										longname = f.n;
-										f.n = f.n.length > 16 ? f.n.substr(0, 16) + "..." : f.n;
+										longname = renderHTMLString(f.n);
+										f.n = renderHTMLString(f.n).length > 16 ? renderHTMLString(f.n).substr(0, 16) + "..." : f.n;
 										a("<div/>").attr("id", "arrowchat_chatroom_user_" + f.id).css("position", "relative").mouseover(function () {
 											a(this).addClass("arrowchat_chatroom_list_hover");
 										}).mouseout(function () {
 											a(this).removeClass("arrowchat_chatroom_list_hover");
-										}).addClass("arrowchat_chatroom_room_list").html('<img class="arrowchat_chatroom_avatar" src="' + f.a + '"/><span class="arrowchat_chatroom_room_name">' + f.n + '</span><span class="arrowchat_userscontentdot arrowchat_' + f.status + '"></span>').appendTo("#arrowchat_popout_friends");
+										}).addClass("arrowchat_chatroom_room_list").addClass('arrowchat_chatroom_admin_' + f.t).html('<img class="arrowchat_chatroom_avatar" src="' + f.a + '"/><span class="arrowchat_chatroom_room_name">' + f.n + '</span><span class="arrowchat_userscontentdot arrowchat_' + f.status + '"></span>').appendTo("#arrowchat_popout_friends");
 										a("<div/>").attr("id", "arrowchat_chatroom_users_flyout_" + f.id).css("right", "0px").css("top", "28px").addClass("arrowchat_chatroom_users_flyout").html('<div class="arrowchat_chatroom_title_padding"><div id="arrowchat_chatroom_title_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + longname + '<br/>' + lang[43] + '</div></div><hr class="arrowchat_options_divider"/><div class="arrowchat_chatroom_options_padding"><div id="arrowchat_chatroom_visit_profile_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + lang[42] + '</div></div><div class="arrowchat_chatroom_options_padding"><div id="arrowchat_chatroom_block_user_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + lang[84] + '</div></div>' + admin_markup).appendTo(a("#arrowchat_chatroom_user_" + f.id));
 										if (f.t == 2) {
 											a("#arrowchat_chatroom_title_" + f.id).html(longname + '<br/>' + lang[44])
@@ -196,7 +220,9 @@
 										addHover(a(".arrowchat_chatroom_options_padding"), "arrowchat_options_padding_hover");
 										chatroomUserOptions(f, global_admin);
 										uc_avatar[f.id] = f.a;
-									})
+									});
+									a(".arrowchat_chatroom_admin_3").css("background-color", "#"+c_admin_bg);
+									a(".arrowchat_chatroom_admin_3").css("color", "#"+c_admin_txt);
 								}
 							});
 							if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
@@ -215,9 +241,11 @@
 			var global_mod = 0,
 				global_admin = 0,
 				admin_markup = "";
+			chatroom_mod = 0;
+			chatroom_admin = 0;
 			chatroomreceived = 1;
 			a.ajax({
-				url: k + "includes/json/receive/receive_chatroom_room.php",
+				url: c_ac_path + "includes/json/receive/receive_chatroom_room.php",
 				data: {
 					chatroomid: b,
 					chatroom_window: u_chatroom_open,
@@ -252,10 +280,12 @@
 								if (i == "user_title") {
 									a.each(e, function (l, f) {
 										if (f.admin == 1) {
-											global_admin = 1
+											global_admin = 1;
+											chatroom_admin = 1;
 										}
 										if (f.mod == 1) {
-											global_mod = 1
+											global_mod = 1;
+											chatroom_mod = 1;
 										}
 									});
 								}
@@ -276,13 +306,13 @@
 										if (global_admin == 1 && f.t == 2) {
 											admin_markup = '<div class="arrowchat_chatroom_options_padding"><div id="arrowchat_chatroom_remove_mod_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + lang[54] + '</div></div>';
 										}
-										longname = f.n;
-										f.n = f.n.length > 16 ? f.n.substr(0, 16) + "..." : f.n;
+										longname = renderHTMLString(f.n);
+										f.n = renderHTMLString(f.n).length > 16 ? renderHTMLString(f.n).substr(0, 16) + "..." : f.n;
 										a("<div/>").attr("id", "arrowchat_chatroom_user_" + f.id).css("position", "relative").mouseover(function () {
 											a(this).addClass("arrowchat_chatroom_list_hover");
 										}).mouseout(function () {
 											a(this).removeClass("arrowchat_chatroom_list_hover");
-										}).addClass("arrowchat_chatroom_room_list").html('<img class="arrowchat_chatroom_avatar" src="' + f.a + '"/><span class="arrowchat_chatroom_room_name">' + f.n + '</span><span class="arrowchat_userscontentdot arrowchat_' + f.status + '"></span>').appendTo("#arrowchat_popout_friends");
+										}).addClass("arrowchat_chatroom_room_list").addClass('arrowchat_chatroom_admin_' + f.t).html('<img class="arrowchat_chatroom_avatar" src="' + f.a + '"/><span class="arrowchat_chatroom_room_name">' + f.n + '</span><span class="arrowchat_userscontentdot arrowchat_' + f.status + '"></span>').appendTo("#arrowchat_popout_friends");
 										a("<div/>").attr("id", "arrowchat_chatroom_users_flyout_" + f.id).css("right", "0px").css("top", "28px").addClass("arrowchat_chatroom_users_flyout").html('<div class="arrowchat_chatroom_title_padding"><div id="arrowchat_chatroom_title_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + longname + '<br/>' + lang[43] + '</div></div><hr class="arrowchat_options_divider"/><div class="arrowchat_chatroom_options_padding"><div id="arrowchat_chatroom_visit_profile_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + lang[42] + '</div></div><div class="arrowchat_chatroom_options_padding"><div id="arrowchat_chatroom_block_user_' + f.id + '" class="arrowchat_chatroom_flyout_text">' + lang[84] + '</div></div>' + admin_markup).appendTo(a("#arrowchat_chatroom_user_" + f.id));
 										if (f.t == 2) {
 											a("#arrowchat_chatroom_title_" + f.id).html(longname + '<br/>' + lang[44]);
@@ -291,12 +321,19 @@
 										}
 										addHover(a(".arrowchat_chatroom_options_padding"), "arrowchat_options_padding_hover");
 										chatroomUserOptions(f, global_admin);
-									})
+									});
+									a(".arrowchat_chatroom_admin_3").css("background-color", "#"+c_admin_bg);
+									a(".arrowchat_chatroom_admin_3").css("color", "#"+c_admin_txt);
 								}
 								if (i == "chat_history") {
 									d = "";
 									a.each(e, function (l, f) {
 										if (typeof(blockList[f.userid]) == "undefined") {
+											var title = "";
+											if (f.mod == 1)
+												title = lang[137];
+											if (f.admin == 1)
+												title = lang[136];
 											l = "";
 											fromname = f.n;
 											if (f.n == u_name) {
@@ -306,7 +343,7 @@
 											if (f.global == 1) {
 												d += '<div class="arrowchat_chatroom_box_message" id="arrowchat_chatroom_message_' + f.id + '"><div class="arrowchat_chatroom_message_content' + l + ' arrowchat_global_chatroom_message">' + formatTimestamp(sent_time) + f.m + "</div></div>"
 											} else {
-												d += '<div class="arrowchat_chatroom_box_message" id="arrowchat_chatroom_message_' + f.id + '"><img class="arrowchat_chatroom_message_avatar" src="'+f.a+'" alt="" /><div class="arrowchat_chatroom_message_name">' + fromname + ':</div><div class="arrowchat_chatroom_message_content' + l + '">' + formatTimestamp(sent_time) + f.m + "</div></div>"
+												d += '<div class="arrowchat_chatroom_box_message" id="arrowchat_chatroom_message_' + f.id + '"><img class="arrowchat_chatroom_message_avatar" src="'+f.a+'" alt="" /><div class="arrowchat_chatroom_message_name">' + fromname + title + ':</div><div class="arrowchat_chatroom_message_content' + l + '">' + formatTimestamp(sent_time) + f.m + "</div></div>"
 											}
 										}
 									});
@@ -378,13 +415,13 @@
         }
         function replaceURLWithHTMLLinks(text) {
             var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-            return text.replace(exp, "<a href='$1'>$1</a>");
+            return text.replace(exp, "<a target='_blank' href='$1'>$1</a>");
         }
         function smileyreplace(mess) {
             for (i = 0; i < Smiley.length; i++) {
                 check_emoticon = mess.lastIndexOf(Smiley[i][1]);
                 if (check_emoticon != -1) {
-                    mess = mess.replace(Smiley[i][1], '<img class="arrowchat_smiley" height="16" width="16" src="' + k + "themes/" + u_theme + '/images/smilies/' + Smiley[i][0] + '.gif" alt="" />');
+                    mess = mess.replace(Smiley[i][1], '<img class="arrowchat_smiley" height="16" width="16" src="' + c_ac_path + "themes/" + u_theme + '/images/smilies/' + Smiley[i][0] + '.gif" alt="" />');
                 }
             }
             return mess;
@@ -418,10 +455,10 @@
             b.slice(0, -1)
         }
 		function M() {
-			a(".arrowchat_popout_convo").css("height", a(window).height() - a("#arrowchat_popout_open_chats").height() - 120);
+			a(".arrowchat_popout_convo").css("height", a(window).height() - a(".arrowchat_popout_input_container").height() - 20);
 		}
         function playNewMessageSound() {
-            swfobject.embedSWF(k + "themes/" + u_theme + "/sounds/new%5Fmessage.player.swf?soundswf="+k+"themes/" + u_theme + "/sounds/new%5Fmessage.swf&autoplay=1&loops=0", "arrowchat_sound_player_holder", "1", "1", "9.0.0");
+            swfobject.embedSWF(c_ac_path + "themes/" + u_theme + "/sounds/new%5Fmessage.player.swf?soundswf="+c_ac_path+"themes/" + u_theme + "/sounds/new%5Fmessage.swf&autoplay=1&loops=0", "arrowchat_sound_player_holder", "1", "1", "9.0.0");
         }
         function ha(b) {
             var c = "am",
@@ -453,7 +490,7 @@
 				push.subscribe({ "channel" : "chatroom"+ac_chatroom_id, "callback" : function(data) { pushReceive(data); } });
 			}
 		}
-		function addChatroomMessage(id, name, message, userid, sent, global) {
+		function addChatroomMessage(id, name, message, userid, sent, global, mod, admin) {
 			if (userid == u_id) {
 				uc_avatar[u_id] = u_avatar;
 			}
@@ -462,7 +499,7 @@
 			var sent_time = new Date(sent * 1E3);
 			if (typeof(uc_avatar[u_id]) == "undefined") {
 				a.ajax({
-					url: k + "includes/json/receive/receive_user.php",
+					url: c_ac_path + "includes/json/receive/receive_user.php",
 					data: {
 						userid: userid
 					},
@@ -472,22 +509,27 @@
 					success: function (data) {
 						if (data) {
 							uc_avatar[userid] = data.a;
-							chatroomDiv(id, uc_avatar[userid], name, sent_time, message, global);
+							chatroomDiv(id, uc_avatar[userid], name, sent_time, message, global, mod, admin);
 						}
 					}
 				});
 			} else {
-				chatroomDiv(id, uc_avatar[userid], name, sent_time, message, global);
+				chatroomDiv(id, uc_avatar[userid], name, sent_time, message, global, mod, admin);
 			}
 			count++;	
 		}
-		function chatroomDiv(id, image, name, time, message, global) {
+		function chatroomDiv(id, image, name, time, message, global, mod, admin) {
+			var title = "";
+			if (mod == 1)
+				title = lang[137];
+			if (admin == 1)
+				title = lang[136];
 			if (a("#arrowchat_chatroom_message_" + id).length > 0) {
 			} else {
 				if (global == 1) {
 					a("<div/>").attr("id", "arrowchat_chatroom_message_" + id).addClass("arrowchat_chatroom_box_message").html('<div class="arrowchat_chatroom_message_content arrowchat_global_chatroom_message">' + formatTimestamp(time) + message + "</div>").appendTo(a(".arrowchat_popout_convo"));
 				} else {
-					a("<div/>").attr("id", "arrowchat_chatroom_message_" + id).addClass("arrowchat_chatroom_box_message").html('<img class="arrowchat_chatroom_message_avatar" src="'+image+'" alt="" /><div class="arrowchat_chatroom_message_name">' + name + ':</div><div class="arrowchat_chatroom_message_content">' + formatTimestamp(time) + message + "</div>").appendTo(a(".arrowchat_popout_convo"));
+					a("<div/>").attr("id", "arrowchat_chatroom_message_" + id).addClass("arrowchat_chatroom_box_message").html('<img class="arrowchat_chatroom_message_avatar" src="'+image+'" alt="" /><div class="arrowchat_chatroom_message_name">' + name + title + ':</div><div class="arrowchat_chatroom_message_content">' + formatTimestamp(time) + message + "</div>").appendTo(a(".arrowchat_popout_convo"));
 				}
 			}
 			if (c_disable_avatars == 1) {
@@ -508,9 +550,9 @@
 			if ("chatroommessage" in data) {
 				if (typeof(blockList[data.chatroommessage.userid]) == "undefined")
 				{
-					addChatroomMessage(data.chatroommessage.id, data.chatroommessage.name, data.chatroommessage.message, data.chatroommessage.userid, data.chatroommessage.sent, data.chatroommessage.global);
+					addChatroomMessage(data.chatroommessage.id, data.chatroommessage.name, data.chatroommessage.message, data.chatroommessage.userid, data.chatroommessage.sent, data.chatroommessage.global, data.chatroommessage.mod, data.chatroommessage.admin);
 					if (data.chatroommessage.userid != u_id) {
-						u_chatroom_sound == 1 && playNewMessageSound();
+						u_chatroom_sound == 1 && !a(".arrowchat_popout_convo_input").is(":focus") && playNewMessageSound();
 					}
 				}
 			}
@@ -525,7 +567,7 @@
 		}
 		function receiveCore() {
 			cancelJSONP();
-			var url = k + "includes/json/receive/receive_core.php?hash=" + u_hash_id + "&init=" + acsi + "&room=" + Ccr;
+			var url = c_ac_path + "includes/json/receive/receive_core.php?hash=" + u_hash_id + "&init=" + acsi + "&room=" + Ccr;
 			xOptions = a.ajax({
 				url: url,
 				dataType: "jsonp",
@@ -545,7 +587,7 @@
 									d2 = "";
 								a.each(l, function (f, h) {
 									if (typeof(blockList[h.userid]) == "undefined") {
-										addChatroomMessage(h.id, h.n, h.m, h.userid, h.t, h.global);
+										addChatroomMessage(h.id, h.n, h.m, h.userid, h.t, h.global, h.mod, h.admin);
 									}
 									d2 = h;
 									d1++;
@@ -554,7 +596,7 @@
 									if (typeof(blockList[d2.userid]) == "undefined") {
 										showChatroomTime();
 										if (d2.userid != u_id) {
-											u_chatroom_sound == 1 && playNewMessageSound();
+											u_chatroom_sound == 1 && !a(".arrowchat_popout_convo_input").is(":focus") && playNewMessageSound();
 										}
 									}
 								}
@@ -583,10 +625,19 @@
 				}, CHT);
 			}
 		}
+		function renderHTMLString(string) {
+			var render = a("<div/>").attr("id", "arrowchat_render").html(string).appendTo('body');
+			var new_render = a("#arrowchat_render").html()
+			render.remove();
+			return new_render;
+		}
         var bounce = 0,
             bounce2 = 0,
+			chatroom_mod = 0,
+			chatroom_admin = 0,
             count = 0,
             V = {},
+			uc_avatar = {},
             dtit = document.title,
             dtit2 = 1,
             dtit3, window_focus = true,
@@ -635,7 +686,7 @@
             _ts = _ts + "<option value=\"" + Themes[d][0] + "\" " + _ts2 + ">" + Themes[d][1] + "</option>";
         }
         arguments.callee.videoWith = function (b) {
-            var win = window.open(k + 'video_chat.php?rid=' + b, 'audiovideochat', "status=no,toolbar=no,menubar=no,directories=no,resizable=no,location=no,scrollbars=no,width=650,height=610");
+            var win = window.open(c_ac_path + 'video_chat.php?rid=' + b, 'audiovideochat', "status=no,toolbar=no,menubar=no,directories=no,resizable=no,location=no,scrollbars=no,width=650,height=610");
             win.focus();
         };
 		function Xa() {

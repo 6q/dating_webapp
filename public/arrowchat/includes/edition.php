@@ -1,1 +1,1 @@
-<?php define('ARROWCHAT_EDITION', 'business'); ?>
+<?php define('ARROWCHAT_EDITION', 'premium'); ?>

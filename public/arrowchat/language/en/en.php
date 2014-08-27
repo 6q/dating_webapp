@@ -45,6 +45,7 @@
 	$language[80]			=	"months ago";								// Displayed after the time in notifications (months)
 	$language[81]			=	"year ago";									// Displayed after the time in notifications (year)
 	$language[82]			=	"years ago";								// Displayed after the time in notifications (years)
+	$language[144]			=	"New message from ";						// DISPLAYS USERNAME AFTER - The title for HTML5 notifications
 
 	// ######################### BUDDY LIST ###########################
 	$language[4]			=	"Chat"; 									// Displayed in the title bar of the buddy list popup
@@ -62,6 +63,10 @@
 	$language[123]			=	"You cannot change your name again.";		// Error message when user trys to change guest name again
 	$language[124]			=	"That name already exists.";				// Error message when duplicate guest name is selected
 	$language[125]			=	"The name cannot be more than 25 characters.";// Error message when guest name is too long
+	$language[140]			=	"Connect to Facebook";						// Text to connect to Facebook
+	$language[141]			=	"Logout from Facebook";						// Text to logout from Facebook
+	$language[142]			=	"Site Users";								// Text to display for site user's group
+	$language[143]			=	"Facebook Friends";							// Text to display for facebook friend's group
 
 	// ########################### OPTIONS ############################
 	$language[5]			=	"Available to Chat";						// Option to go offline text
@@ -115,6 +120,8 @@
 	$language[90]			=	"You";																	// Displays on mosueover of your own chat text
 	$language[102]			=	"Message not sent.  This user has blocked you.";						// Displays this when a user tries to send a message to another user who has them blocked
 	$language[103]			=	"The user has been blocked. Messages by the user will no longer be received."; // Displays when a user is blocked
+	$language[134]			=	"Scroll down to see new messages.";										// Displays when a chat window is not scrolled down on a new message
+	$language[135]			=	"There was an error sending your message. Try again later.";			// Error message when a message fails to send
 
 	// ######################### CHAT ROOMS #############################
 	$language[19]			=	"Chat Rooms";								// Displayed in the chatrooms popup and tab
@@ -145,7 +152,7 @@
 	$language[55]			=	"You are banned from this chat room permanently.";					// Shown when a user is permanently banned
 	$language[56]			=	"You are banned from this chat room for this many minutes: ";		// DISPLAYS MINUTES AFTER - shown when a user is kicked
 	$language[57]			=	"Enter the number in minutes that the user should be banned for.  Enter 0 for a permanent ban.";	// Message to show when banning a user.  Typing 0 will permanently ban the user
-	$language[91]			=	"Enter the name of the chat room you would like to create.";		// Message to display when creating a chat room
+	$language[91]			=	"Enter the name of the chat room you'd like to create.";		// Message to display when creating a chat room
 	$language[92]			=	"Leave Chat Room";							// Tooltip when mousover the leave chat room icon
 	$language[93]			=	"Create a new chat room";					// Tooltip when mouseover the create chat room icon
 	$language[94]			=	"Change the chat theme";					// Tooltip when mouseover the change theme icon
@@ -156,6 +163,9 @@
 	$language[106]			=	" has been made a moderator by ";			// DISPLAYS USERNAME FIRST/MODERATOR AFTER - Shown after a user is made a moderator
 	$language[107]			=	" has been kicked from the chat room by ";	// DISPLAYS USERNAME FIRST/MODERATOR AFTER - Shown after a user is kicked
 	$language[117]			=	"Popout chat room";							// Option to pop out the chat room
+	$language[127]			=	"There are too many users in this chat room.  Please try again later.";	// Displayed when a user tries to enter a chat room with too many online.
+	$language[136]			=	" (Admin)";									// Will display after a username when an administrator
+	$language[137]			=	" (Mod)";									// Will display after a username when a moderator
 	
 	// ######################### MOBILE CHAT #############################
 	$language[110]			=	"Mobile Chat";			// Displays in the header of the mobile chat
@@ -165,5 +175,14 @@
 	$language[114]			=	"Send";					// Text for the send button
 	$language[115]			=	"New";					// Text to display when a new message is received
 	$language[116]			=	"You must login before using mobile chat";	// Text to display when user is not logged in using mobile
+	$language[126]			=	"Home";					// Displays as a button to return to the website when in mobile chat
+	$language[128]			=	"Chat Rooms";			// Displays in the header for the chat room list
+	$language[129]			=	"Settings";				// Displays in the header for the settings
+	$language[130]			=	"Show chat rooms list";	// The option to show chat rooms
+	$language[131]			=	"Show idle user list";	// The option to show idle users
+	$language[132]			=	"On";					// The on option for a toggle
+	$language[133]			=	"Off";					// The off option for a toggle
+	$language[138]			=	"Enter the room's password:";	// Text to display for the chat room password input
+	$language[139]			=	"Enter Chat Room";		// The submit button to enter a chat room
 
 ?>

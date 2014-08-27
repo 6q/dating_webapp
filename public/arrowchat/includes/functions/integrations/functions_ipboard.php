@@ -23,6 +23,8 @@
 	 */
 	function get_user_id() 
 	{
+		global $db;
+		
 		$userid = NULL;
 		
 		foreach ($_COOKIE as $key => $val)
@@ -31,11 +33,27 @@
 			{
 				$cookie_name = $key;
 			}
+			
+			if (preg_match("/pass_hash/", $key))
+			{
+				$cookie_pass = $key;
+			}
 		}
-		
-		if (isset($_COOKIE[$cookie_name]) AND !empty($_COOKIE[$cookie_name]))
+
+		if (isset($_COOKIE[$cookie_name]) AND !empty($_COOKIE[$cookie_name])) 
 		{
-			$userid = $_COOKIE[$cookie_name];
+			$result = $db->execute("
+				SELECT " . DB_USERTABLE_USERID . " userid
+				FROM " . TABLE_PREFIX . DB_USERTABLE . "
+				WHERE member_id = '" . $db->escape_string($_COOKIE[$cookie_name]) . "'
+					AND member_login_key = '" . $db->escape_string($_COOKIE[$cookie_pass]) . "'
+			");
+
+			if ($row = $db->fetch_array($result))
+			{
+				if (!empty($row['userid']))
+					$userid = $row['userid'];
+			}
 		}
 
 		return $userid;

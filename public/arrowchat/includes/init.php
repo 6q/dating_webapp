@@ -19,6 +19,7 @@
 	
 	// ############################ INITILIZATION ############################
 	$userid 				= get_user_id();
+	$status					= '';
 	$settings 				= '';
 	$popout					= '99';
 	$hide_bar				= '0';

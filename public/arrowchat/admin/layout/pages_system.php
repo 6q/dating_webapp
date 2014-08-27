@@ -218,6 +218,17 @@
 								</p>
 							</dd>
 						</dl>
+						<dl class="selectionBox">
+							<dt>
+								<label for="config_login_url">Login URL</label>
+							</dt>
+							<dd>
+								<input type="text" id="config_login_url" class="selectionText" name="config_login_url" value="<?php echo $login_url; ?>" />
+								<p class="explain">
+									Enter the full URL (with http) to your site's login page.  If this is set, the message telling people to login will take them to the login page.
+								</p>
+							</dd>
+						</dl>
 					</fieldset>
 					<fieldset>
 						<dl class="selectionBox">
@@ -421,6 +432,201 @@ This feature will not overwrite any files or modification you've made; it attemp
 								<a class="fwdbutton" onclick="document.forms[0].submit(); return false">
 									<span>Repair Database</span>
 								</a>
+								<input type="hidden" name="repair_submit" value="1" />
+							</div>
+						</dd>
+					</dl>
+<?php
+	}
+?>
+
+<?php
+	if ($do == "maintenance") 
+	{
+?>
+					<div class="subtitle">ArrowChat Maintenance</div>
+                    <div class="subExplain">
+                        <i>Your database can start to get large after running ArrowChat for a while with all the messages, guest users, etc.  It is highly recommended that you clear all this data out periodicly to make ArrowChat run like the first day you installed it.</i>
+                    </div>
+					<fieldset>
+						<dl class="selectionBox">
+							<dt>
+								<label for="clean_private_messages"><b>Messages</b></label>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="clean_private_messages">
+											<input type="checkbox" id="clean_private_messages" name="clean_private_messages" checked="checked" value="1" />
+											Clean Private Messages
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									This will remove read messages more than 2 weeks old and unread messages more than 4 weeks old.
+								</p>
+							</dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<dl class="selectionBox">
+							<dt>
+								<label for="clean_inactive_guests"><b>Users</b></label>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="clean_inactive_guests">
+											<input type="checkbox" id="clean_inactive_guests" name="clean_inactive_guests" checked="checked" value="1" />
+											Clean Inactive Guests
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									This will remove all guest accounts (they will be assisgned a new number if they come back later) that have been inactive for 2 weeks or more.
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt></dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="clean_inactive_users">
+											<input type="checkbox" id="clean_inactive_users" name="clean_inactive_users" checked="checked" value="1" />
+											Clean Inactive Users
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									This will remove all inactive users accounts for 4 weeks or more.  If they come back, they'll lose their settings (hide bar, chat sounds, etc).
+								</p>
+							</dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<dl class="selectionBox">
+							<dt>
+								<label for="clean_cr_messages"><b>Chat Rooms</b></label>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="clean_cr_messages">
+											<input type="checkbox" id="clean_cr_messages" name="clean_cr_messages" checked="checked" value="1" />
+											Clean Chat Room Messages
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									This will remove all chat room messages more than a week old.
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt></dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="clean_cr_rooms">
+											<input type="checkbox" id="clean_cr_rooms" name="clean_cr_rooms" checked="checked" value="1" />
+											Clean User Created Chat Rooms
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									Removes all inactive user created chat rooms.
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt></dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="clean_cr_users">
+											<input type="checkbox" id="clean_cr_users" name="clean_cr_users" checked="checked" value="1" />
+											Clean Inactive Chat Room Users
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									Removes all inactive chat rooms users more than 2 weeks old.
+								</p>
+							</dd>
+						</dl>
+					</fieldset>
+					<fieldset>
+						<dl class="selectionBox">
+							<dt>
+								<label for="admin_confirm_password"><b>Miscellaneous</b></label>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="clean_notifications">
+											<input type="checkbox" id="clean_notifications" name="clean_notifications" checked="checked" value="1" />
+											Clean Notifications
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									Removes all notifications more than 4 weeks old.
+								</p>
+							</dd>
+						</dl>
+					</fieldset>
+					<dl class="selectionBox submitBox">
+						<dt>
+                        </dt>
+						<dd>
+							<div class="floatr" style="float: right;">
+								<a class="fwdbutton" onclick="document.forms[0].submit(); return false">
+									<span>Clean Database</span>
+								</a>
+								<input type="hidden" name="maintenance_submit" value="1" />
+							</div>
+						</dd>
+					</dl>
+<?php
+	}
+?>
+
+<?php
+	if ($do == "maintenance2") 
+	{
+?>
+				<?php
+					if(!empty($_SESSION['counter'])) {
+				?>
+					<script type="text/javascript">
+						setTimeout(function () {
+						   window.location.href= 'system.php?do=maintenance2';
+						},1000);
+					</script>
+				<?php
+					}
+				?>
+					<div class="subtitle">ArrowChat Maintenance</div>
+                    <div class="subExplain" style="text-align:center">
+					<?php if(empty($_SESSION['counter'])) { ?>
+						<p style="margin: 25px 0 15px">
+							<img src="./images/img-check.png" alt="Done" width="48" height="48" />
+						</p>
+						<p style="margin: 0 0 25px">Your database has been cleaned.</p>
+					<?php } else { ?>
+						<p style="margin: 25px 0 15px">
+							<img src="./images/img-loading.gif" alt="Loading" width="32" height="32" />
+						</p>
+						<p style="margin: 20px 0 5px"><?php echo $cleaning_message; ?> (<?php echo $cleaning_percent; ?>%)...</p>
+						<p style="margin: 0 0 25px">Cleaning the database. Do not change or refresh the page.</p>
+					<?php } ?>
+                    </div>
+					<dl class="selectionBox submitBox">
+						<dt>
+                        </dt>
+						<dd>
+							<div class="floatr" style="float: right;">
 								<input type="hidden" name="repair_submit" value="1" />
 							</div>
 						</dd>

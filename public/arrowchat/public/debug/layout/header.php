@@ -26,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>public/debug/css/style.css"> 
 <link rel="shortcut icon" href="<?php echo $base_url; ?>public/debug/images/favicon.ico" />
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script> 
 <script type="text/javascript" src="<?php echo $base_url; ?>public/debug/js/vtip-min.js"></script> 
 
 </head>

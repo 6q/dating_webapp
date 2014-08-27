@@ -103,6 +103,7 @@
 		
 			if ($not_expired AND ($chatroom['type'] != 3 OR ($chatroom['type'] == 3 AND $is_admin == 1))) 
 			{
+				$chatroom['name'] = str_replace("\\'", "'", $chatroom['name']);
 				$chatrooms[] = array('id' => $chatroom['id'], 'n' => $chatroom['name'], 't' => $chatroom['type'], 'c' => $count['COUNT(user_id)']);
 			}
 		}

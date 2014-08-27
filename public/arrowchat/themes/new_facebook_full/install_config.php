@@ -5,7 +5,6 @@
 	 *	Designed By: ArrowChat Team
 	 *	Support: support@arrowchat.com
 	 *	Date: 1/14/2010
-	 *	Version: 2.2
 	 *	
 	 *	This file is for installation only, and can be deleted after the application is installed.
 	 *
@@ -18,7 +17,7 @@
 	
 	// REQUIRED
 	// The application version.
-	$theme_version = "3.2";
+	$theme_version = "4.0";
 	
 	// REQUIRED
 	// Update link for the application.  Provided by ArrowChat.

@@ -923,6 +923,11 @@
 		// Runs the SQL query (general execute query function)
 		public function execute($command)
 		{	
+			$command = $this->convert_reserved($command);
+			$command = $this->convert_limits($command);
+			$command = $this->convert_count($command);
+			$command = $this->convert_on_duplicate($command);
+			
 			# Params:
 			# 		$command = query command
 			
@@ -969,6 +974,94 @@
 				}
 			}
 		}	
+		
+		// Convert reserved words
+		public function convert_reserved($command)
+		{
+			$command = str_replace(".from", ".[from]", $command);
+			$command = str_replace(".read", ".[read]", $command);
+			$command = str_replace(".to", ".[to]", $command);
+			$command = str_replace(".name", ".[name]", $command);
+			$command = str_replace(".type", ".[type]", $command);
+			$command = str_replace(".date", ".[date]", $command);
+			$command = str_replace(".default", ".[default]", $command);
+			
+			return $command;
+		}
+		
+		// Convert count
+		public function convert_count($command)
+		{
+			$command = preg_replace('/ COUNT(\([a-zA-Z._]+\))/', ' COUNT$1 AS [COUNT$1] ', $command);
+
+			return $command;
+		}
+		
+		// Convert on duplicate key
+		public function convert_on_duplicate($command)
+		{
+			if (preg_match('/([^\?]*)ON DUPLICATE KEY([^\?]*)/', $command, $matches))
+			{
+				$insert_sql = $matches[1];
+				$insert_sql = str_replace("\n", '', $insert_sql);
+				$insert_sql = preg_replace('/\s+/', ' ', $insert_sql);
+				
+				preg_match('/INSERT INTO ([a-zA-Z._]+) \(/', $command, $matches);
+				$table_name = $matches[1];
+				
+				preg_match('/INSERT INTO ([a-zA-Z._]+) \([\n\r\s\t]+([a-zA-Z._]+),/', $command, $matches);
+				$key_name = $matches[2];
+				
+				preg_match("/VALUES \([\n\r\s\t]+'([a-zA-Z0-9._]+)',/", $command, $matches);
+				$value_name = $matches[1];
+				
+				$update_sql = preg_replace('/([^\?]*)ON DUPLICATE KEY/', '', $command);
+				$update_sql = preg_replace('/UPDATE/', 'UPDATE ' . $table_name . ' SET', $update_sql);
+				
+				$command = "IF EXISTS (SELECT * FROM " . $table_name . " WHERE " . $key_name . " = '" . $value_name . "') " . trim($update_sql) . " WHERE " . $key_name . " = '" . $value_name . "' ELSE BEGIN " . trim($insert_sql) . " END";
+			}
+
+			return $command;
+		}
+		
+		// Convert limits
+		public function convert_limits($command)
+		{
+			if (preg_match('/LIMIT ([0-9]+), ([0-9]+)/', $command, $matches))
+			{
+				$lower_limit = $matches[1];
+				$upper_limit = $matches[2];
+				$and_limit = $upper_limit + $lower_limit;
+				
+				preg_match('/FROM ([a-zA-Z._]+)/', $command, $matches);
+				$table_name = $matches[1];
+				
+				preg_match('/ORDER BY ([a-zA-Z._]+)/', $command, $matches);
+				$id = $matches[1];
+				
+				$command = preg_replace('/LIMIT ([0-9]+), ([0-9]+)/', '', $command);
+				$command = preg_replace('/SELECT /', 'SELECT TOP ' . $upper_limit . ' ', $command);
+				
+				if (preg_match('/WHERE /', $command))
+				{
+					$command = preg_replace('/FROM ([a-zA-Z._]+) /', 'FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY ' . $id . ' DESC) AS RowNum FROM $1 ) AS ' . $table_name . ' ', $command);
+					$command = preg_replace('/WHERE /', 'WHERE ' . $table_name . '.RowNum BETWEEN ' . $lower_limit . ' AND ' . $and_limit . ' AND ', $command);
+				}
+				else
+				{
+					$command = preg_replace('/FROM ([a-zA-Z._]+) /', 'FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY ' . $id . ' DESC) AS RowNum FROM $1 ) AS ' . $table_name . ' WHERE ' . $table_name . '.RowNum BETWEEN ' . $lower_limit . ' AND ' . $and_limit . ' ', $command);
+				}
+			}
+			else if (preg_match('/LIMIT ([0-9]+)/', $command, $matches))
+			{
+				$upper_limit = $matches[1];
+				
+				$command = preg_replace('/LIMIT ([0-9]+)/', '', $command);
+				$command = preg_replace('/SELECT /', 'SELECT TOP ' . $upper_limit . ' ', $command);
+			}
+
+			return $command;
+		}
 
 		// Gets records from table
 		public function select($table, $rows = "*", $condition = null, $order = null)
@@ -1171,13 +1264,23 @@
 			}
 		}
 		
-		
 		public function last_insert_id()
 		{
-			if ($this->insert_id)
+			$result_id = @mssql_query('SELECT SCOPE_IDENTITY()');
+
+			if ($result_id)
 			{
-				return $this->insert_id;
+				if ($row = @mssql_fetch_assoc($result_id))
+				{
+					@mssql_free_result($result_id);
+					
+					return $row['computed'];
+				}
+				
+				@mssql_free_result($result_id);
 			}
+			
+			return 0;
 		}
 		
 		// Counts all records from a table

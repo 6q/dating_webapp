@@ -28,30 +28,36 @@
 			$chatbox = get_var('chatbox');
 			
 			$result = $db->execute("
-				SELECT last_message 
+				SELECT clear_chats
 				FROM arrowchat_status 
 				WHERE userid = '" . $db->escape_string($userid) . "'
 			");
 
 			$row = $db->fetch_array($result);
 			
-			$last_message = $row['last_message'];
+			$clear_chats = unserialize($row['clear_chats']);
 			
-			if (!empty($last_message)) 
+			if (!empty($clear_chats)) 
 			{
-				if (preg_match("#:$chatbox/[0-9]+#", $last_message, $matches)) 
+				if (array_key_exists($chatbox, $clear_chats))
 				{
-					$matches2 = explode("/", $matches[0]);
-					$time_check = (int)$matches2[1] - 3600;
+					$time_check = $clear_chats[$chatbox];
 				} 
 				else 
 				{
-					$time_check = time() - 3600;
+					$time_check = 0;
 				}
 			} 
 			else 
 			{
-				$time_check = time() - 3600;
+				$time_check = 0;
+			}
+			
+			$lower_limit = 0;
+			
+			if (!empty($_POST['history']) AND is_numeric($_POST['history']))
+			{
+				$lower_limit = 20 * ($_POST['history'] - 1);
 			}
 			
 			$result = $db->execute("
@@ -60,10 +66,12 @@
 				WHERE ((arrowchat.to = '" . $db->escape_string($userid) . "' 
 							AND arrowchat.from = '" . $db->escape_string($chatbox) . "') 
 						OR (arrowchat.from = '" . $db->escape_string($userid) . "' 
-							AND arrowchat.to = '" . $db->escape_string($chatbox) . "')) 
+							AND arrowchat.to = '" . $db->escape_string($chatbox) . "'))  
 					AND (arrowchat.sent > " . $time_check . " 
-						OR arrowchat.user_read = '0') 
-				ORDER BY arrowchat.id
+						OR (arrowchat.user_read = '0'
+								AND arrowchat.to = '" . $db->escape_string($userid) . "')) 
+				ORDER BY arrowchat.id DESC
+				LIMIT " . $db->escape_string($lower_limit) . ", 20
 			");
 		 
 			while ($chat = $db->fetch_array($result)) 
@@ -104,7 +112,7 @@
 		
 		if (!empty($messages)) 
 		{
-			$response['messages'] = $messages;
+			$response['messages'] = array_reverse($messages);
 		}
 	}
 
