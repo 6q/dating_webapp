@@ -142,6 +142,14 @@
 		  		</div>
 
 	</article>
+      <% if current_user.can_interact_with?(@user) %>
+        <div id="nice-couple" class="">
+        	<div class="center">
+          		<span><%= _('¿Hacéis buena pareja?') %></span>
+          		<%= rating_for(@user, current_user, readonly: false) %>
+          	</div>
+        </div>
+      <% end %>
 
 </section>
 

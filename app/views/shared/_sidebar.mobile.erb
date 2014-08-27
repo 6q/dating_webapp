@@ -40,6 +40,9 @@ $(document).ready(function() {
 		    <li>
 		    	<%= link_to _('Búsquedas'), search_path(q: { years_lteq: current_user.lf_age_from, years_gteq: current_user.lf_age_to, city_eq: current_user.city }) %>
 		    </li>
+		    <li>
+		    	<a href="/arrowchat/public/mobile/"><%= _('Chat') %></a>
+		    </li>
 		</ul>
 	</section>
 </aside>

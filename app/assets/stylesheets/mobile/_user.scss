@@ -796,6 +796,7 @@ section.chat{
 
 .user-profile{
 	font-size: 14px;
+	padding-bottom:40px;
 	article {
 		position: inherit;
 	}
@@ -1117,15 +1118,15 @@ section.chat{
 	}
 
 	#nice-couple {
-		position:absolute;
+		position:fixed;
 		z-index:999;
-		left:150px;
-		top:20px;
+		left:0;
+		bottom:0;
+		width:100%;
 		background:#fff;
 		background:rgba(255,255,255,.8);
-		border-radius:5px;
-		width:130px;
 		padding:10px 0;
+		text-align:center;
 
 		p {
 			font-size:.7em;
@@ -1133,22 +1134,36 @@ section.chat{
 		}
 
 		i {
-			display:block;
+			display:none;
 			background: image-url('sprite.png') -432px -76px no-repeat;
 			width:35px;
 			height:35px;
 			margin:0px auto;
 			margin-bottom:10px;
 		}
-
-		.star {
-			margin:0px auto;
+		.center {
+			display: block;
+			width: 260px;
+			margin: 0 auto;
+		}
+		span {
+			float:left;
+			width:80px;
+			font-weight:bold;
+			font-size:12px;
+			margin-right:15px;
 		}
 
+		.star {
+			width:auto !important;
+			float:left;
+		}
+		img {
+			width:30px;
+		}
 		ul {
 
 			@include clearfix;
-			width:100px;
 			margin:0 auto;
 			padding:0;
 
@@ -1164,6 +1179,7 @@ section.chat{
 					&:hover, &.active {
 						background-position:-355px -136px;
 					}
+
 				}
 			}
 		}
