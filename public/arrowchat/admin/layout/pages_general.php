@@ -92,12 +92,28 @@
 									<li>
 										<label for="enable_mobile">
 											<input type="checkbox" id="enable_mobile" name="enable_mobile" <?php if($enable_mobile == 1) echo 'checked="checked"';  ?> value="1" />
-											Enable Mobile Chat
+											Enable Chat Bar on Mobile Devices
 										</label>
 									</li>
 								</ul>
 								<p class="explain">
-									Allows users to use the bar when on a mobile device.
+									Warning: This will allow mobile devices to see the full bar when going to your website.  Although this works with some phones, it will not work very well on others.  The full mobile application for your site is located <a href="../mobile/">here</a>.
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt></dt>
+							<dd>
+								<ul>
+									<li>
+										<label for="desktop_notifications">
+											<input type="checkbox" id="desktop_notifications" name="desktop_notifications" <?php if($desktop_notifications == 1) echo 'checked="checked"';  ?> value="1" />
+											Enable Desktop Notifications
+										</label>
+									</li>
+								</ul>
+								<p class="explain">
+									If enabled, users on Google Chrome will receive desktop notifications when a new message is received.
 								</p>
 							</dd>
 						</dl>
@@ -662,6 +678,24 @@ value="1" />
 								</p>
 							</dd>
 						</dl>
+					<?php
+						if (ARROWCHAT_EDITION == "premium" OR ARROWCHAT_EDITION == "business")
+						{
+					?>
+						<dl class="selectionBox">
+							<dt>
+								<label for="facebook_app_id">Facebook App ID</label>
+							</dt>
+							<dd>
+								<input type="text" id="facebook_app_id" class="selectionText" name="facebook_app_id" value="<?php echo $facebook_app_id; ?>" />
+								<p class="explain">
+									If you would like your users to be able to connect to Facebook and chat with their Facebook friends enter your Facebook app ID here.  <a target="_blank" href="http://www.arrowchat.com/documentation/?p=facebook-integration">Click here for instructions on how to get and setup your Facebook app</a>.  Leave this BLANK if you do not want to use Facebook integration.
+								</p>
+							</dd>
+						</dl>
+					<?php
+						}
+					?>
 					</fieldset>
 					<fieldset>
 						<dl class="selectionBox">
@@ -736,6 +770,17 @@ value="1" />
 								<input type="text" id="search_number" class="selectionText" name="search_number" value="<?php echo $search_number; ?>" />
 								<p class="explain">
 									The amount of users that need to be online before the chat will show the search in the buddy list.
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt>
+								<label for="blocked_words">Blocked Words</label>
+							</dt>
+							<dd>
+								<input type="text" id="blocked_words" class="selectionText" name="blocked_words" value="<?php echo $blocked_words; ?>" />
+								<p class="explain">
+									SEPARATE WITH COMMAS. Enter the word in square brackets for an exact match. For example, entering ass would also block grass but entering [ass] would only block that word.
 								</p>
 							</dd>
 						</dl>
@@ -826,6 +871,8 @@ value="1" />
 <?php
 	if ($do == "chatstyle") {
 ?>
+					<link rel="stylesheet" href="includes/css/colorpicker.css" type="text/css" media="screen">
+					<script type="text/javascript" src="includes/js/colorpicker.js"></script> 
 					<script type="text/javascript">
 						$(document).ready(function() {
 							$( "#bar_left, #bar_right" ).sortable({
@@ -894,6 +941,40 @@ value="1" />
 									$('#bar_padding_amt2').html( ui.value );
 								}
 							});
+							$('#admin_background_color').ColorPicker({
+								onSubmit: function(hsb, hex, rgb, el) {
+									$(el).val(hex);
+									$(el).ColorPickerHide();
+								},
+								onBeforeShow: function() {
+									$(this).ColorPickerSetColor(this.value);
+								},
+								onChange: function (hsb, hex, rgb) {
+									$('#admin_background_color').css('backgroundColor', '#' + hex);
+									$('#admin_background_color').val(hex);
+								}
+							}).bind('keyup', function() {
+								$(this).ColorPickerSetColor(this.value);
+								$('#admin_background_color').css('backgroundColor', '#' + this.value);
+							});
+							$('#admin_text_color').ColorPicker({
+								onSubmit: function(hsb, hex, rgb, el) {
+									$(el).val(hex);
+									$(el).ColorPickerHide();
+								},
+								onBeforeShow: function() {
+									$(this).ColorPickerSetColor(this.value);
+								},
+								onChange: function (hsb, hex, rgb) {
+									$('#admin_text_color').css('backgroundColor', '#' + hex);
+									$('#admin_text_color').val(hex);
+								}
+							}).bind('keyup', function() {
+								$(this).ColorPickerSetColor(this.value);
+								$('#admin_text_color').css('backgroundColor', '#' + this.value);
+							});
+							$('#admin_text_color').css('backgroundColor', '#<?php echo $admin_text_color; ?>');
+							$('#admin_background_color').css('backgroundColor', '#<?php echo $admin_background_color; ?>');
 						});
 					</script>
 					<style type="text/css">
@@ -1051,6 +1132,28 @@ value="1" />
 								</ul>
 								<p class="explain">
 									Checking this will enable animations when chat messages are received.
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt>
+								<label for="admin_background_color">Admin Background Color</label>
+							</dt>
+							<dd>
+								<input type="text" id="admin_background_color" class="selectionText" name="admin_background_color" value="<?php echo $admin_background_color; ?>" />
+								<p class="explain">
+									Specify a special background color for ArrowChat admins in the buddy list.  This should be in hex format without a leading #.  Leave blank for no special distinction.  Further customization can be done with the "arrowchat_buddylist_admin_1" CSS class.
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt>
+								<label for="admin_text_color">Admin Text Color</label>
+							</dt>
+							<dd>
+								<input type="text" id="admin_text_color" class="selectionText" name="admin_text_color" value="<?php echo $admin_text_color; ?>" />
+								<p class="explain">
+									Specify a special text color for ArrowChat admins in the buddy list.  This should be in hex format without a leading #.  Leave blank for no special distinction.  Further customization can be done with the "arrowchat_buddylist_admin_1" CSS class.
 								</p>
 							</dd>
 						</dl>

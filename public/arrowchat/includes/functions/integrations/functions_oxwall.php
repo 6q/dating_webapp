@@ -25,11 +25,9 @@
 	{
 		$userid = NULL;
 
-		$data = OW::getUser()->getId();
-		
-		if (!empty($data)) 
+		if (!empty($_SESSION['userId']))
 		{
-			$userid = $data;
+			$userid = $_SESSION['userId'];
 		}
 
 		return $userid;

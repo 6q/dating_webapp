@@ -255,7 +255,7 @@
 				'" . $db->escape_string($focus_chat) . "'
 			) 
 			ON DUPLICATE KEY 
-				UPDATE focus_chat = '" . $db->escape_string($focus_chat) . "', unfocus_chat = '" . $db->escape_string($unfocus_chat) . "'
+				UPDATE focus_chat = '" . $db->escape_string(trim($focus_chat)) . "', unfocus_chat = '" . $db->escape_string(trim($unfocus_chat)) . "'
 		");
 
 		echo "1";
@@ -304,7 +304,7 @@
 				'" . $db->escape_string($focus_chat) . "'
 			) 
 			ON DUPLICATE KEY 
-				UPDATE focus_chat = '" . $db->escape_string($focus_chat) . "', unfocus_chat = '" . $db->escape_string($unfocus_chat) . "'
+				UPDATE focus_chat = '" . $db->escape_string(trim($focus_chat)) . "', unfocus_chat = '" . $db->escape_string(trim($unfocus_chat)) . "'
 		");
 
 		echo "1";
@@ -371,7 +371,7 @@
 	if (!empty($_POST['clear_chat'])) 
 	{	
 		$result = $db->execute("
-			SELECT last_message 
+			SELECT clear_chats
 			FROM arrowchat_status 
 			WHERE userid = '" . $db->escape_string($userid) . "'
 		");
@@ -380,39 +380,32 @@
 		{
 			$row = $db->fetch_array($result);
 			
-			$last_message = $row['last_message'];
-			$new_time = time() + 3600;
+			$clear_chats = $row['clear_chats'];
 			
-			if (empty($last_message)) 
+			if (empty($clear_chats)) 
 			{
-				$last_message = ":".$clear_user."/".$new_time;
+				$new_clear_chats = array($clear_user => time());
 			} 
 			else 
 			{
-				$old_data = $last_message;
-				
-				if (preg_match("#:$clear_user/[0-9]+#", $old_data, $matches)) 
-				{
-					$last_message = str_replace($matches[0], ":".$clear_user."/".$new_time."", $old_data);
-				} 
-				else 
-				{
-					$last_message .= ":".$clear_user."/".$new_time;
-				}
+				$new_clear_chats = unserialize($clear_chats);
+				$new_clear_chats[$clear_user] = time();
 			}
 		}
+		
+		$new_clear_chats = serialize($new_clear_chats);
 		
 		$db->execute("
 			INSERT INTO arrowchat_status (
 				userid, 
-				last_message
+				clear_chats
 			) 
 			VALUES (
 				'" . $db->escape_string($userid) . "', 
-				'" . $db->escape_string($last_message) . "'
+				'" . $db->escape_string($new_clear_chats) . "'
 			) 
 			ON DUPLICATE KEY 
-				UPDATE last_message = '" . $db->escape_string($last_message) . "'
+				UPDATE clear_chats = '" . $db->escape_string($new_clear_chats) . "'
 		");
 
 		echo "1";

@@ -37,15 +37,22 @@
 			
 			if ($row = $db->fetch_array($result))
 			{
-				preg_match_all('/\"user_id\"\;i:(.*?)\;/', $row['session_data'], $matches);
+				$data = unserialize($row['session_data']);
+				$userid = $data['user_id'];
 				
-				foreach ($matches[1] as $match) 
+				$result = $db->execute("
+					SELECT is_banned, user_state
+					FROM " . TABLE_PREFIX . DB_USERTABLE . "
+					WHERE " . DB_USERTABLE_USERID . " = '" . $userid . "'
+				");
+				
+				if ($row = $db->fetch_array($result))
 				{
-					if (is_numeric($match)) 
+					if ($row['is_banned'] == 1 OR $row['user_state'] == 'email_confirm' OR $row['user_state'] == 'moderated')
 					{
-						$userid = $match;
+						$userid = NULL;
 					}
-				} 
+				}
 			}
 		}
 
@@ -157,9 +164,16 @@
 	{
 		global $base_url;
 		
-		if (is_file(dirname(dirname(dirname(__FILE__))) . '/data/avatars/s/0/' . $image . '.jpg')) 
+		$group = floor($user_id / 1000);
+		
+		if (!empty($image))
 		{
-			return $base_url . '../data/avatars/s/0/' . $image . '.jpg';
+			$md5 = md5(strtolower(trim($image)));
+			return 'https://secure.gravatar.com/avatar/' . $md5 . '?s=50';
+		}
+		else if (is_file(dirname(dirname(dirname(__FILE__))) . '/data/avatars/s/' . $group . '/' . $user_id . '.jpg')) 
+		{
+			return $base_url . '../data/avatars/s/' . $group . '/' . $user_id . '.jpg';
 		} 
 		else 
 		{

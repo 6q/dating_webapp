@@ -33,6 +33,25 @@
 	{
 		if (logged_in($userid)) 
 		{
+			$chatroom_admin = 0;
+			$chatroom_mod = 0;
+			
+			$result = $db->execute("
+				SELECT is_admin, is_mod
+				FROM arrowchat_chatroom_users
+				WHERE user_id = '" . $db->escape_string($userid) . "'
+					AND chatroom_id = '" . $db->escape_string($chatroomid) . "'
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				if ($row['is_admin'] == 1 OR $is_admin == 1)
+					$chatroom_admin = 1;
+					
+				if ($row['is_mod'] == 1)
+					$chatroom_mod = 1;
+			}
+			
 			$db->execute("
 				INSERT INTO arrowchat_chatroom_messages (
 					chatroom_id,
@@ -40,6 +59,8 @@
 					username,
 					message,
 					global_message,
+					is_mod,
+					is_admin,
 					sent
 				) 
 				VALUES (
@@ -48,6 +69,8 @@
 					'" . $db->escape_string($username) . "',
 					'" . $db->escape_string($s_message) . "',
 					'0',
+					'" . $db->escape_string($chatroom_mod) . "',
+					'" . $db->escape_string($chatroom_admin) . "',
 					'" . time() . "'
 				)
 			");
@@ -122,7 +145,7 @@
 			{
 				$arrowpush->publish(array(
 					'channel' => 'chatroom' . $chatroomid,
-					'message' => array('chatroommessage' => array("id" => $last_id, "name" => $username, "message" => $s_message, "userid" => $userid, "sent" => time(), "global" => '0'))
+					'message' => array('chatroommessage' => array("id" => $last_id, "name" => $username, "message" => $s_message, "userid" => $userid, "sent" => time(), "global" => '0', "mod" => $chatroom_mod, "admin" => $chatroom_admin, "chatroomid" => $chatroomid))
 				));
 			}
 

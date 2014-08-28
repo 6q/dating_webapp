@@ -139,7 +139,10 @@
 	$days_since = (time() - $install_time->config_value) / 86400;
 	$messages_day = $num_messages / $days_since;
 	$users_day = $num_users / $days_since;
-	$database_size = CalcFullDatabaseSize(DB_NAME);
+	if (MSSQL_DATABASE == 1)
+		$database_size = "N/A";
+	else
+		$database_size = CalcFullDatabaseSize(DB_NAME);
 	
 	// Process Smarty template
 	$smarty->assign('msg', $msg);

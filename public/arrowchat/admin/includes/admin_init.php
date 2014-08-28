@@ -62,7 +62,7 @@
 	// Check if logged in as admin
 	admin_check_login($error);
 	
-	session_write_close();
+	//session_write_close();
 	
 	// Various admin checks
 	$theme = convert_numeric_theme($theme);

@@ -37,7 +37,8 @@
 				WHEN config_name = 'enable_mobile' THEN '" . get_var('enable_mobile') . "'
 				WHEN config_name = 'video_chat' THEN '" . get_var('video_chat') . "'
 				WHEN config_name = 'file_transfer_on' THEN '" . get_var('file_transfer_on') . "' 
-			END WHERE config_name IN ('hide_bar_on', 'chatrooms_on', 'notifications_on', 'applications_on', 'popout_chat_on', 'theme_change_on', 'enable_mobile', 'video_chat', 'file_transfer_on')
+				WHEN config_name = 'desktop_notifications' THEN '" . get_var('desktop_notifications') . "' 
+			END WHERE config_name IN ('hide_bar_on', 'chatrooms_on', 'notifications_on', 'applications_on', 'popout_chat_on', 'theme_change_on', 'enable_mobile', 'video_chat', 'file_transfer_on', 'desktop_notifications')
 		");
 					
 		if ($result) 
@@ -51,6 +52,7 @@
 			$enable_mobile = get_var('enable_mobile');
 			$video_chat = get_var('video_chat');
 			$file_transfer_on = get_var('file_transfer_on');
+			$desktop_notifications = get_var('desktop_notifications');
 		
 			update_config_file();
 			$msg = "Your settings were successfully saved.";
@@ -85,7 +87,9 @@
 				WHEN config_name = 'show_full_username' THEN '" . get_var('show_full_username') . "'
 				WHEN config_name = 'us_time' THEN '" . get_var('us_time') . "'
 				WHEN config_name = 'hide_admins_buddylist' THEN '" . get_var('hide_admins_buddylist') . "'
-			END WHERE config_name IN ('disable_avatars', 'disable_smilies', 'disable_arrowchat', 'disable_buddy_list', 'search_number', 'chat_maintenance', 'admin_chat_all', 'admin_view_maintenance', 'guests_can_view', 'guests_can_chat', 'guests_chat_with', 'guest_name_change', 'guest_name_duplicates', 'guest_name_bad_words', 'users_chat_with', 'show_full_username', 'us_time', 'hide_admins_buddylist')
+				WHEN config_name = 'blocked_words' THEN '" . get_var('blocked_words') . "'
+				WHEN config_name = 'facebook_app_id' THEN '" . get_var('facebook_app_id') . "'
+			END WHERE config_name IN ('disable_avatars', 'disable_smilies', 'disable_arrowchat', 'disable_buddy_list', 'search_number', 'chat_maintenance', 'admin_chat_all', 'admin_view_maintenance', 'guests_can_view', 'guests_can_chat', 'guests_chat_with', 'guest_name_change', 'guest_name_duplicates', 'guest_name_bad_words', 'users_chat_with', 'show_full_username', 'us_time', 'hide_admins_buddylist', 'blocked_words', 'facebook_app_id')
 		");
 					
 		if ($result) 
@@ -108,6 +112,8 @@
 			$show_full_username = get_var('show_full_username');
 			$us_time = get_var('us_time');
 			$hide_admins_buddylist = get_var('hide_admins_buddylist');
+			$blocked_words = get_var('blocked_words');
+			$facebook_app_id = get_var('facebook_app_id');
 			
 			update_config_file();
 			include_once(dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . AC_FOLDER_CACHE . DIRECTORY_SEPARATOR . 'data_admin_options.php');
@@ -158,7 +164,9 @@
 					WHEN config_name = 'bar_fixed_alignment' THEN '" . get_var('bar_fixed_alignment') . "'
 					WHEN config_name = 'bar_padding' THEN '" . get_var('bar_padding') . "'
 					WHEN config_name = 'enable_chat_animations' THEN '" . get_var('enable_chat_animations') . "'
-				END WHERE config_name IN ('width_buddy_list', 'width_chatrooms', 'width_applications', 'bar_fixed', 'bar_fixed_width', 'bar_fixed_alignment', 'bar_padding', 'enable_chat_animations')
+					WHEN config_name = 'admin_background_color' THEN '" . get_var('admin_background_color') . "'
+					WHEN config_name = 'admin_text_color' THEN '" . get_var('admin_text_color') . "'
+				END WHERE config_name IN ('width_buddy_list', 'width_chatrooms', 'width_applications', 'bar_fixed', 'bar_fixed_width', 'bar_fixed_alignment', 'bar_padding', 'enable_chat_animations', 'admin_background_color', 'admin_text_color')
 			");
 						
 			if ($result) 
@@ -171,6 +179,8 @@
 				$bar_fixed_alignment = get_var('bar_fixed_alignment');
 				$bar_padding = get_var('bar_padding');
 				$enable_chat_animations = get_var('enable_chat_animations');
+				$admin_background_color = get_var('admin_background_color');
+				$admin_text_color = get_var('admin_text_color');
 				
 				update_config_file();
 				$msg = "Your settings were successfully saved.";

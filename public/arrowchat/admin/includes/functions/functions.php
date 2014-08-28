@@ -190,6 +190,7 @@
 	*/
 	function get_folders($directory)
 	{
+		$directorylist = array();
 		$startdir = dirname(dirname(dirname(dirname(__FILE__)))) . DIRECTORY_SEPARATOR . $directory . DIRECTORY_SEPARATOR;
 		
 		$ignoredDirectory[] = '.'; 

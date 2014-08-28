@@ -544,6 +544,11 @@
 			$error = "The chatroom length must be a number only.  Specify in minutes.";
 		}
 		
+		if (!is_numeric($_POST['chatroom_max_users']))
+		{
+			$error = "The chatroom max users must be a number only.  Enter 0 for unlimited users.";
+		}
+		
 		if (empty($error)) 
 		{				
 			$result = $db->execute("
@@ -553,6 +558,7 @@
 					type, 
 					password, 
 					length, 
+					max_users,
 					session_time
 				) 
 				VALUES (
@@ -561,6 +567,7 @@
 					'" . get_var('add_chatroom_type') . "', 
 					'" . get_var('add_chatroom_password') . "', 
 					'" . get_var('add_chatroom_length') . "', 
+					'" . get_var('chatroom_max_users') . "',
 					'" . time() . "'
 				)
 			");
@@ -630,6 +637,11 @@
 			$error = "The chatroom length must be a number only.  Specify in minutes.";
 		}
 		
+		if (!is_numeric($_POST['chatroom_max_users']))
+		{
+			$error = "The chatroom max users must be a number only.  Enter 0 for unlimited users.";
+		}
+		
 		if (empty($error)) 
 		{	
 			$usernames = get_var('unban_username');
@@ -651,7 +663,8 @@
 				SET name = '" . get_var('edit_chatroom_name') . "', 
 					type = '" . get_var('edit_chatroom_type') . "', 
 					password = '" . get_var('edit_chatroom_password') . "', 
-					length = '" . get_var('edit_chatroom_length') . "' 
+					length = '" . get_var('edit_chatroom_length') . "',
+					max_users = '" . get_var('chatroom_max_users') . "'
 				WHERE id = '" . get_var('chatroom_id') . "'
 			");
 
