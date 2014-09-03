@@ -21,7 +21,7 @@ class DashboardController < ApplicationController
       case params[:partial]
       when "could_interest_me"
         if session[:mobile_view] == true
-          could_interest_me           = current_user.could_interest_me(20, session[:shown_ids]).sample(20)
+          could_interest_me           = current_user.could_interest_me(100, session[:shown_ids]).sample(100)
           @could_interest_me          = Kaminari.paginate_array(could_interest_me).page(params[:page]).per(1)
         else 
           could_interest_me           = current_user.could_interest_me(20, session[:shown_ids]).sample(20)

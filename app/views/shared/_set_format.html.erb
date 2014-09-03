@@ -1,3 +1,5 @@
-<div class="center switch-mobile">
-    <%= link_to _("Cambiar a la Versión Móvil"), :mobile => true %>
-</div>
+<% if is_mobile_device? %>
+	<div class="center switch-mobile hidden">
+	    <%= link_to _("Cambiar a la Versión Móvil"), :mobile => true %>
+	</div>
+<% end %>

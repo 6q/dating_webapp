@@ -223,7 +223,7 @@ body.inside {
 
   }
   .pull-right {
-  	width:60%;
+  	width:70%;
   	float:right;
   	position:fixed;
   	bottom:0;
@@ -236,11 +236,11 @@ body.inside {
   	a {
   		margin-right:5px;
   		font-weight:bold;
-  		font-size:10px;
+  		font-size:14px;
   		background:#5AA7E3;
   		color:#fff;
   		border-radius:10px;
-  		padding:12px 15px;
+  		padding:15px 25px;
   	}
   	a:hover {
   		text-decoration:none;
@@ -251,51 +251,52 @@ body.inside {
   	}
 
   }
-  .user-list {
-  	width:100%;
-  }
-  ul {
-    margin:0;
-    .pics {
+	.user-list {
+		width:100%;
+	}
+	ul {
+	    margin:0;
+	    .pics {
 
-    	a {
-    		width:100%;
-    		img {
-    			width: 100%;
-    		}
-    	}
-    }
-    h1 {
-    	display:none;
-    	text-align:center;
-    }
-    .actions {
-				@include user-actions;
-				float:left;
-				position:fixed;
-				bottom:0;
-				left:0;
-				padding:15px 0;
-				background:#E5F2FB;
-				width: 40%;
-				height:26px;
-				li {
-					width:50%;
-					text-align:center;
-					margin: 0 !important;
-					a {
-						float:none;
-						margin: 0 auto;
-					}
+	    	a {
+	    		width:100%;
+	    		img {
+	    			width: 100%;
+	    		}
+	    	}
+	    }
+	    h1 {
+	    	display:none;
+	    	text-align:center;
+	    }
+	    .actions {
+			@include user-actions;
+			float:left;
+			position:fixed;
+			bottom:0;
+			left:0;
+			padding:15px 0;
+			background:#E5F2FB;
+			width: 30%;
+			height:26px;
+			li {
+				width:50%;
+				text-align:center;
+				margin: 0 !important;
+				a {
+					float:none;
+					margin: 0 auto;
 				}
 			}
+		
 			li.chat {
 				display:none;
 			}
 			li.message {
 				display:none;
 			}
-  }
+		}
+	}
 
 }
   .failed_search {
