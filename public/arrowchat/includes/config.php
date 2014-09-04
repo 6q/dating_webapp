@@ -30,6 +30,11 @@ if ($_SERVER['HTTP_HOST'] == 'staging.cellove.com') {
 	define('DB_USERNAME','cellove');
 	define('DB_PASSWORD','12345');
   define('DB_NAME','cellove_production');
+} elseif ($_SERVER['HTTP_HOST'] == 'mobile.cellove.com') {
+  define('DB_SERVER','127.0.0.1');
+	define('DB_USERNAME','cellove');
+	define('DB_PASSWORD','12345');
+  define('DB_NAME','cellove_mobile');
 } else {
   define('DB_SERVER','192.168.1.4');
 	define('DB_USERNAME','dbuser');
