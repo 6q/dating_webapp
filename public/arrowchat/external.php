@@ -17,6 +17,7 @@
 	require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'functions/functions_mobile.php');
 
 	$type = get_var('type');
+	$mobile = get_var('mobile');
 
 	// ############################ OPTIMIZATION #############################
 	if (!ob_start("ob_gzhandler"))
@@ -99,11 +100,15 @@
 	// This is the primary CSS file for ArrowChat
 	if ($type == "css") 
 	{
+
 		header ("Content-type: text/css; charset: UTF-8");
 		header('Expires: ' . gmdate("D, d M Y H:i:s", time() + 3600*24*7) . ' GMT');
 
-		require_once (dirname(__FILE__) . '/themes/' . $theme . '/css/style.css');
-		
+		if ($mobile == "true") {
+			require_once (dirname(__FILE__) . '/themes/' . $theme . '/css/style_mobile.css');			
+		} else {
+			require_once (dirname(__FILE__) . '/themes/' . $theme . '/css/style.css');	
+		}
 		close_session();
 		exit;
 	}
