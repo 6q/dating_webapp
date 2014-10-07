@@ -3,9 +3,9 @@
 
 $(function() {
 	
-	$(".delete-msg-btn").tooltip();
+	$(".delete-msg-btn").tooltip('disable');
 	
-	$(".reply-msg-btn").tooltip();
+	$(".reply-msg-btn").tooltip('disable');
 
   $('.message-body').keydown(function() {
     ab = $(this).closest('.modal').next('.activity-proposal').find('.activity-body')
