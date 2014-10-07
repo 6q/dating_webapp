@@ -151,7 +151,7 @@
 	$language[117]			=	"Convertir en ventana";							// Option to pop out the chat room
 	
 	// ######################### MOBILE CHAT #############################
-	$language[110]			=	"Chat m&oacute;vil";			// Displays in the header of the mobile chat
+	$language[110]			=	"Cellove Chat";			// Displays in the header of the mobile chat
 	$language[111]			=	"Usuarios conectados";			// Displays in the header for the online user list
 	$language[112]			=	"Usuarios inactivos";			// Displays in the header for the idle user list
 	$language[113]			=	"Volver";					// Displays on the back button when viewing a chat
