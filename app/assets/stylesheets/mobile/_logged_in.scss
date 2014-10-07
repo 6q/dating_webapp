@@ -342,3 +342,12 @@ body.inside {
   	margin:20px;
   	text-align:center;
   }
+
+.mobile-chat {
+	height:50px;
+	width:50px;
+	z-index:1040;
+	position:fixed;
+	top:10px;
+	right:60px;
+}

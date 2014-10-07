@@ -53,23 +53,23 @@ new_facebook_full
 .arrowchat_tab_name a:visited{font-weight:bold}
 .arrowchat_tabmouseover{}
 .arrowchat_tabmouseovertext{}
-.arrowchat_tab_offline{background: none !important;background-color:#d8d8d8 !important;border-right:1px solid transparent !important}
-.arrowchat_tab_new_message{background:none !important;background-color:#6D84B4 !important;color:#fff !important;border-left:1px solid #3A5997 !important;border-right:1px solid #3A5997 !important;border-top:1px solid #3A5997;margin-top:-1px}
+.arrowchat_tab_offline{background: none !important;background-color:red !important;border-right:1px solid transparent !important}
+.arrowchat_tab_new_message{background:none !important;background-color:red !important;color:#fff !important;border-left:1px solid #3A5997 !important;border-right:1px solid #3A5997 !important;border-top:1px solid #3A5997;margin-top:-1px}
 .arrowchat_tab_new_message div{color:#fff}
 .arrowchat_tab_new_message .arrowchat_available{background-position:-16px -68px;text-align:left}
 .arrowchat_tab_new_message .arrowchat_away{background-position:-31px -68px;text-align:left}
 .arrowchat_tab_new_message .arrowchat_busy{background-position:-48px -68px;text-align:left}
 .arrowchat_tab_new_message .arrowchat_offline{background-position:0px -68px;text-align:left}
 .arrowchat_bar_button{cursor:pointer;height:32px;padding:4px;width:32px;position:relative;z-index:1026}
-#arrowchat_base{border:none;bottom:0px;left:0!important;width:100%!important;display:block;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;height:40px;position:fixed;text-align:left;z-index:1028;margin-top:8px}
+#arrowchat_base{border:none;top:20px !important;right:40px !important;width:20px !important;display:block;height:20px;position:fixed;;z-index:1028;}
 .arrowchat_bar_right{float:right}
 .arrowchat_bar_left{float:left}
 .arrowchat_tab{margin-top:1px;height:18px;border-left:1px solid #999;border-right:1px solid transparent;float:right;height:25px;cursor:pointer;font-weight:normal;width:140px;color:#444;line-height:1.2em;text-align:left}
 .arrowchat_icons{background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;display:inline-block;height:16px;width:16px}
-.arrowchat_tabclick{background:none !important;background-color:#fff !important;border-left:1px solid #b2b2b2 !important;border-right:1px solid #b2b2b2 !important;border-top:0px !important;color:#333 !important;text-align:left;position:relative !important;bottom: 1px !important;z-index:1029;padding-top:2px}
-.arrowchat_tabpopup{border-bottom:1px solid #B2B2B2;background-color:#fff;position:fixed;width:100%!important;margin-bottom:40px;height:calc(100% - 40px)!important;left:0!important;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;text-align:left;z-index:9999;line-height:normal;top:0 !important}
-.arrowchat_tabopen{display:block !important;text-align:left}
-.arrowchat_tabopen_hidden{display:block !important;visibility:hidden}
+.arrowchat_tabclick{}
+.arrowchat_tabpopup{display:none!important;border-bottom:1px solid #B2B2B2;background-color:#fff;position:fixed;width:100%!important;margin-bottom:40px;height:calc(100% - 40px)!important;left:0!important;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;text-align:left;z-index:9999;line-height:normal;top:0 !important}
+.arrowchat_tabopen{display:none!important;text-align:left}
+.arrowchat_tabopen_hidden{display:none !important;visibility:hidden}
 .arrowchat_tabtitle{border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#6D84B4 !important;padding-right:0px;text-align:left;height:23px}
 .arrowchat_tabsubtitle{border-right:1px solid #777;border-left:1px solid #777;background-color:#eee;padding:3px;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:9px;color:#666;line-height:1.3em !important;text-align:left;height:30px}
 .arrowchat_message{margin-left:57px}
@@ -95,7 +95,8 @@ new_facebook_full
 #arrowchat_buddy_list_tab{background:#EBEEF4;padding-right:5px;white-space:nowrap;width:140px!important;overflow:hidden;height:40px;display:none;}
 .arrowchat_userstabtitle_button_click{}
 .arrowchat_hide_avatars{display:none !important}
-.arrowchat_user_tab{background:#EBEEF4;padding:5px;white-space:nowrap;width:30px!important;overflow:hidden;height:30px!important;border-radius:20px 20px 0 0;border:1px solid #bac0cd;margin:0 5px;}
+.arrowchat_user_tab{background:#dbdbdb;border:3px solid #fff !important; font-size:0.1px; position:fixed;top:38px;right:88px;height:10px;width:10px;padding:0; margin:0; border-radius:10px;}
+.arrowchat_user_tab div{display: none;}
 #arrowchat_userstab_popup{text-align:left;z-index:1024;width: 100%;
 height: calc(100% - 40px);
 position: fixed;
@@ -130,7 +131,7 @@ display:none!important; visibility:hidden;}
 /* CHAT */
 .arrowchat_closebox{width:22px;height:23px;background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:-264px -37px;float:right;text-align:left;margin-right:3px}
 .arrowchat_closebox_bottom{width:10px;height:9px;background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:-304px -44px;float:right;text-align:left;display:none;}
-.arrowchat_tab_new_message .arrowchat_closebox_bottom{background-position:-287px -44px}
+.arrowchat_tab_new_message .arrowchat_closebox_bottom{background:red;}
 .arrowchat_closebox_bottom_click{background-position:-304px -44px !important;text-align:left}
 .arrowchat_closebox_bottomhover{background-position:-321px -44px !important;text-align:left}
 .arrowchat_chatboxmouseoverclose{background-position:-281px -37px !important;text-align:left}
@@ -275,12 +276,12 @@ display:none!important; visibility:hidden;}
 .arrowchat_chatroom_title_padding{padding:0px 0px 6px;cursor:default}
 
 /* HIDE CHAT */
-.arrowchat_hide_icon{height:32px !important;width:32px !important;background:url(themes/<?php echo $theme; ?>/images/chat.png) no-repeat top left;z-index:1001;}
-.arrowchat_show_icon{height:32px !important;width:32px !important;background:url(themes/<?php echo $theme; ?>/images/chat.png) no-repeat top left;z-index:1001;}
+.arrowchat_hide_icon{height:42px !important;width:43px !important;background:url(themes/<?php echo $theme; ?>/images/chat.png) no-repeat top left;z-index:1001;}
+.arrowchat_show_icon{height:42px !important;width:43px !important;background:url(themes/<?php echo $theme; ?>/images/chat.png) no-repeat top left;z-index:1001;}
 #arrowchat_hide_bar_button{border:0px solid transparent;
 position: fixed;
-top: 10px;
-right: 60px;
+top: 5px;
+right: 65px;
 z-index:1001;
 }
 #arrowchat_show_bar_button{bottom:0px;z-index:1015;display:none;display:none;padding:4;height:32px;width:32px;opacity:0.7;

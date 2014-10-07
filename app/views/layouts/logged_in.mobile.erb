@@ -39,6 +39,10 @@
     <%= render 'shared/modal_progress' %>
     <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
     <%= render 'shared/user/main-nav' %>
+
+
+    <a href="/arrowchat/public/mobile/" class="mobile-chat"> </a>
+    
   <% unless current_user.has_role?(:matchmaker) %>
     <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
     <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
