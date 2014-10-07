@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_session
-    unless user_signed_in? or session[:cookies_accepted]
+    unless user_signed_in? or session[:cookies_accepted] or session[:mobile_view]
       @show_cookies_warning       = true
       session[:cookies_accepted]  = true
     end
