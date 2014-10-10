@@ -27,7 +27,7 @@
 #arrowchat_applications_button_popup{width:230px;text-align:left}
 .arrowchat_traypopup{border-bottom:1px solid #333;background-color:#fff;z-index:1014;position:fixed;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;text-align:left}
 .arrowchat_apppopup{line-height:normal;border-bottom:1px solid #B2B2B2;background-color:#fff;z-index:1013;position:fixed;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;text-align:left;z-index:1010;bottom:28px !important}
-.arrowchat_traytitle{border-right:1px solid #11648f;border-left:1px solid #11648f;border-top:1px solid #11648f;background-color:#6D84B4  !important;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;text-align:left;height:23px}
+.arrowchat_traytitle{border-right:1px solid #11648f;border-left:1px solid #11648f;border-top:1px solid #11648f;background-color:#5caae8  !important;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;text-align:left;height:23px}
 .arrowchat_traycontent{border-right:1px solid #b2b2b2;border-left:1px solid #b2b2b2;background-color:#fff;padding-bottom:1px;color:#333;overflow-x:hidden;overflow-y:auto;text-align:left}
 .arrowchat_traycontent a{color:#287197 !important;text-decoration:none}
 .arrowchat_traycontent a:hover{text-decoration:underline}
@@ -53,7 +53,7 @@
 .arrowchat_tabmouseover{background:none !important;background-color:#fff !important;text-align:left}
 .arrowchat_tabmouseovertext{text-decoration:underline;text-align:left;font-weight:bold}
 .arrowchat_tab_offline{background: none !important;background-color:#d8d8d8 !important;border-right:1px solid transparent !important}
-.arrowchat_tab_new_message{background:none !important;background-color:#6D84B4 !important;color:#fff !important;border-left:1px solid #3A5997 !important;border-right:1px solid #3A5997 !important;border-top:1px solid #3A5997;margin-top:-1px}
+.arrowchat_tab_new_message{background:none !important;background-color:#5caae8 !important;color:#fff !important;border-left:1px solid #3A5997 !important;border-right:1px solid #3A5997 !important;border-top:1px solid #3A5997;margin-top:-1px}
 .arrowchat_tab_new_message div{color:#fff}
 .arrowchat_tab_new_message .arrowchat_available{background-position:-16px -68px;text-align:left}
 .arrowchat_tab_new_message .arrowchat_away{background-position:-31px -68px;text-align:left}
@@ -69,7 +69,7 @@
 .arrowchat_tabpopup{border-bottom:1px solid #B2B2B2;background-color:#fff;position:fixed;width:230px;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;text-align:left;z-index:1025;line-height:normal;bottom:28px !important}
 .arrowchat_tabopen{display:block !important;text-align:left}
 .arrowchat_tabopen_hidden{display:block !important;visibility:hidden}
-.arrowchat_tabtitle{border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#6D84B4 !important;padding-right:0px;text-align:left;height:23px}
+.arrowchat_tabtitle{border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#5caae8 !important;padding-right:0px;text-align:left;height:23px}
 .arrowchat_tabsubtitle{border-right:1px solid #777;border-left:1px solid #777;background-color:#eee;padding:3px;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:9px;color:#666;line-height:1.3em !important;text-align:left;height:30px}
 .arrowchat_message{margin-left:57px}
 .arrowchat_tooltip_content{background-color:#333;color:#fff;padding:5px;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;white-space:nowrap;text-align:left;line-height:normal}
@@ -96,7 +96,7 @@
 .arrowchat_hide_avatars{display:none !important}
 .arrowchat_user_tab{background:#EBEEF4;padding-right:5px;white-space:nowrap;width:135px}
 #arrowchat_userstab_popup{width:202px;text-align:left;z-index:1024}
-.arrowchat_userstabtitle{line-height:normal;margin:0px;text-align:left;border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#6D84B4;text-align:left;height:23px}
+.arrowchat_userstabtitle{line-height:normal;margin:0px;text-align:left;border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background-color:#5caae8;text-align:left;height:23px}
 .arrowchat_tabsubtitle_userlist{height:20px;border-right:1px solid #b2b2b2;border-left:1px solid #b2b2b2;border-bottom:1px solid #C9D0DA;background-color:#eee;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:9px;color:#666;line-height:1.3em !important;text-align:left}
 .arrowchat_userlist_hover{background-color:#e0e4ee !important;text-align:left;border-top:1px solid transparent !important;border-bottom:1px solid transparent !important}
 .arrowchat_userlist_hover2{background-color:#e0e4ee !important;text-align:left}
@@ -176,7 +176,7 @@
 .arrowchat_more_popout{background:#FFF;border:1px solid #777777;border-bottom:2px solid #293E6A;position:absolute;right:auto;top:100%;left:0;bottom:auto;max-width:340px;min-width:100%;margin:0 0 30px;padding:5px 0 5px;z-index:1090 !important;display:none;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;color:#000}
 .arrowchat_video_chat{cursor:pointer;padding:2px 16px 2px 22px;white-space:nowrap;font-weight:normal;border-top:1px solid transparent;border-bottom:1px solid transparent}
 .arrowchat_more_divider{background-color:#ccc;border:0px;color:#ccc;height:1px;margin:0px 7px 0px 7px;padding:0px}
-.arrowchat_more_hover{background-color:#6d84b4;color:#fff !important;border-top:1px solid #3b5998 !important;border-bottom:1px solid #3b5998 !important}
+.arrowchat_more_hover{background-color:#5caae8;color:#fff !important;border-top:1px solid #3b5998 !important;border-bottom:1px solid #3b5998 !important}
 .arrowchat_more_hover a{color:#fff !important;background-position:0 -56px}
 .arrowchat_more_button{width:22px;height:23px;background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:-202px -86px;float:right;text-align:left;position:relative;z-index:1090 !important}
 .arrowchat_more_anchor{display:block;width:22px;height:23px}
@@ -201,7 +201,7 @@
 #arrowchat_chatrooms_button{padding-right:5px;white-space:nowrap;width:100px}
 #arrowchat_chatrooms_icon{background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:-154px -90px;float:left;height:16px;margin:1px 2px 0px 0px;width:16px}
 #arrowchat_chatrooms_popup{width:500px;text-align:left}
-.arrowchat_chatrooms_title{line-height:normal;margin:0px;text-align:left;border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background:#6D84B4;text-align:left;height:23px}
+.arrowchat_chatrooms_title{line-height:normal;margin:0px;text-align:left;border:1px solid #3c5998;border-bottom:0px;color:#fff;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;cursor:pointer;background:#5caae8;text-align:left;height:23px}
 .arrowchat_chatroom_content{position:relative;border-right:1px solid #b2b2b2;border-left:1px solid #b2b2b2;background-color:#fff;background-repeat:no-repeat;background-position:left bottom;padding-bottom:1px;color:#333;overflow-x:hidden;overflow-y:auto;line-height:1.3em !important;text-align:left;min-height:285px;max-height:368px}
 .arrowchat_chatroom_content a{color:#3B5998;text-align:left}
 .arrowchat_chatroom_list{font-size:13px;cursor:pointer;height:26px;text-align:left;line-height:100%;color:#333;border-top:1px solid #fff;border-bottom:1px solid #fff}
@@ -333,10 +333,10 @@ html[xmlns] .arrowchat_clearfix {display: block;}
 #arrowchat_options_item2{font-weight:bold;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;display:block;line-height:11px}
 .arrowchat_panel_icon{background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:-64px -45px;height:8px;width:8px;overflow:hidden;margin:2px 3px 0px 5px;float:left}
 .arrowchat_panel_icon2{background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:-98px -45px;height:8px;width:8px;overflow:hidden;margin:2px 3px 0px 5px;float:left}
-.arrowchat_panel_flyout_open{background-image:none !important;background-color:#6D84B4 !important}
-.arrowchat_panel_flyout_open2{background-image:none !important;background-color:#6D84B4 !important}
-.arrowchat_panel_flyout_open3{background-image:none !important;background-color:#6D84B4 !important}
-.arrowchat_panel_flyout_open4{background-image:none !important;background-color:#6D84B4 !important}
+.arrowchat_panel_flyout_open{background-image:none !important;background-color:#5caae8 !important}
+.arrowchat_panel_flyout_open2{background-image:none !important;background-color:#5caae8 !important}
+.arrowchat_panel_flyout_open3{background-image:none !important;background-color:#5caae8 !important}
+.arrowchat_panel_flyout_open4{background-image:none !important;background-color:#5caae8 !important}
 .arrowchat_panel_flyout_icon{background-position:-64px -68px !important}
 .arrowchat_panel_flyout_icon2{background-position:-98px -68px !important}
 .arrowchat_panel_flyout_icon3{background-position:-64px -68px !important}
@@ -360,7 +360,7 @@ html[xmlns] .arrowchat_clearfix {display: block;}
 .arrowchat_options_divider{background-color:#ccc;border:0px;color:#ccc;height:1px;margin:0px 8px 4px;padding:0px;display:block}
 .arrowchat_optionsdot{float:left;background-repeat:no-repeat;background-position:0px 2px;width:8px;height:8px;margin:5px 0px 0px 11px;text-align:left;overflow:hidden}
 .arrowchat_options_padding{padding:2px 0px 2px;cursor:pointer}
-.arrowchat_options_padding_hover{background-color:#6D84B4 !important;color:#fff !important;border-top:1px solid #3B5998 !important;border-bottom:1px solid #3B5998 !important}
+.arrowchat_options_padding_hover{background-color:#5caae8 !important;color:#fff !important;border-top:1px solid #3B5998 !important;border-bottom:1px solid #3B5998 !important}
 .arrowchat_options_actions{padding:0px 0px 2px}
 .arrowchat_flyout_span{display:block;padding:2px 8px 3px 26px}
 .arrowchat_themeswitcher{width:100px;height:17px;font-size:10px}
@@ -427,4 +427,4 @@ html[xmlns] .arrowchat_clearfix {display: block;}
 .uploadify-queue-item .cancel a{background:url(includes/js/uploadify/cancel.png) 0 0 no-repeat;float:right;height:16px;width:16px;text-indent:-9999px;}
 .uploadify-queue-item.completed{background-color:#E5E5E5}
 .uploadify-progress{background-color:#E5E5E5;margin-top:10px;width:100%}
-.uploadify-progress-bar{background-color:#6D84B4;height:3px;width:1px}
+.uploadify-progress-bar{background-color:#5caae8;height:3px;width:1px}

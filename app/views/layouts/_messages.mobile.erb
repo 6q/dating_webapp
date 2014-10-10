@@ -1,9 +1,17 @@
-<% flash.each do |name, msg| %>
 <div id="flash-messages">
+<% flash.each do |name, msg| %>
   <div class="alert alert-<%= (name == :notice || name == :success) ? "success" : "error" %>">
   	<button type="button" class="close" data-dismiss="alert">×</button>
     	<div class="flash-txt" id="<%= "flash_#{name}" %>"><%= msg %></div>
   	</div>
-	</div>
-</div>
 <% end %>
+</div>
+
+
+    <div class="alert alert-success fade alert_chat_show">
+      <strong>Chat Activado</strong>
+    </div>
+
+    <div class="alert alert-danger fade alert_chat_hide">
+      <strong>Chat desactivado</strong>
+    </div>

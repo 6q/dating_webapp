@@ -106,10 +106,21 @@ $(function() {
 		heightStyle: "content",
 		collapsible: true
 	});
-  
-  $( '.swipebox' ).swipebox({
-    hideBarsOnMobile : false, // false will show the caption and navbar on mobile devices
-    hideBarsDelay : 10000
-  });
+
+	$( '.swipebox' ).swipebox({
+		hideBarsOnMobile : false, // false will show the caption and navbar on mobile devices
+		hideBarsDelay : 10000
+	});
+
+	$("i.arrowchat_inner_button").click(function() {
+		alert('asdas');
+		$(".alert_chat_hide").removeClass("in").show();
+		$(".alert_chat_hide").delay(200).addClass("in").fadeOut(2000);
+	});
+
+	$("i.arrowchat_show_icon").click(function() {
+		$(".alert_chat_show").removeClass("in").show();
+		$(".alert_chat_show").delay(200).addClass("in").fadeOut(2000);
+	});
 
 });
