@@ -985,7 +985,7 @@ section.chat{
 
 				&.message {
 					i {
-						background-position:-205px -156px;
+						background-position:4px -156px;
 					}
 
 				}
@@ -1713,10 +1713,13 @@ section.list {
 
 	.user-card {
 		background:#fff;
+		float:left;
+		width:100%;
 
 		&.online {
+			background: #f2fff4;
 			li {
-				background: $online-color;
+				/*background: $online-color;*/
 			}
 		}
 

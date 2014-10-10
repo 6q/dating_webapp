@@ -35,9 +35,9 @@
     <%= render 'shared/user/notifications' %>
     <%= render 'layouts/messages' %>
 
-    <%= render 'shared/user/modal_upgrade' %>
+    <%#= render 'shared/user/modal_upgrade' %>
     <%= render 'shared/modal_progress' %>
-    <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
+    <%#= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
     <%= render 'shared/user/main-nav' %>
     
   <% unless current_user.has_role?(:matchmaker) %>
