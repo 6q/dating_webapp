@@ -42,9 +42,9 @@
 
                 <div class="msg-actions">
                   <% if interlocutor %>
-                    <%= link_to _('Responder'), '#', class: 'action-reply' %><%= (' - ' + link_to(_('Proponer actividad'), "#activity-proposal-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal')).html_safe unless @conversation.activity %> - <%= link_to 'Bloquear', "#user-block-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal' %>
+                    <%= link_to _('Responder'), '#', class: 'action-reply' %>
                   <% end %>
-                  <%= link_to _('Eliminar hilo'), "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
+
                 </div>
 
                 <% if current_user.can_message? %>

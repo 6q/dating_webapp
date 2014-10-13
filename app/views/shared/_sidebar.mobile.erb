@@ -24,24 +24,15 @@ $(document).ready(function() {
 		    </li>
 			<li>
 		      <a href="/user/cellove-index"><%= _('Índice Cellove') %> <em><%= current_user.cellove_percentage %>/100</em>
-		        <div class="progress">
-		          <div class="bar" style="width:<%= current_user.cellove_percentage %>%"></div>
-		        </div>
 		      </a>
 		    </li>
 				<li class="profile">
 		      <a href="<%= profile_path %>">
 		        <%= _('Tu perfil') %> <em><%=current_user.progress_status.to_s %>% <%= _('completo') %></em>
-		        <div class="progress">
-		          <div class="bar" style="width:<%= current_user.progress_status %>%"></div>
-		        </div>
 		      </a>
 		    </li>
 		    <li>
 		    	<%= link_to _('Búsquedas'), search_path(q: { years_lteq: current_user.lf_age_from, years_gteq: current_user.lf_age_to, city_eq: current_user.city }) %>
-		    </li>
-		    <li>
-		    	<a href="/arrowchat/public/mobile/"><%= _('Chat') %></a>
 		    </li>
 		</ul>
 	</section>

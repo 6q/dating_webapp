@@ -180,7 +180,7 @@ body.inside {
 		background:#fff;
 		top:60px;
 		left:0;
-		z-index:99;
+		z-index:9999;
 	}
 }
 
@@ -351,3 +351,6 @@ body.inside {
 	.alert_chat_show, .alert_chat_hide {
 		position:fixed;top:12px;left:60px;z-index:3000;text-align:center
 	}
+.fade {
+	display:none;
+}

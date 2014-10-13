@@ -26,7 +26,7 @@ new_facebook_full
 	border: 1px solid #8c8c8c;
 	background-color: #fff;
 	color: #333;
-	font-family: "Bitstream Vera Sans",Arial,Verdana,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	text-align: left;
 	line-height: normal;
@@ -108,7 +108,7 @@ new_facebook_full
 	background-color: #fff;
 	z-index: 1014;
 	position: fixed;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	text-align: left;
 }
@@ -119,7 +119,7 @@ new_facebook_full
 	background-color: #fff;
 	z-index: 1013;
 	position: fixed;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	text-align: left;
 	z-index: 1010;
@@ -132,7 +132,7 @@ new_facebook_full
 	border-top: 1px solid #11648f;
 	background-color: #5caae8  !important;
 	color: #fff;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-weight: bold;
 	cursor: pointer;
 	text-align: left;
@@ -250,7 +250,7 @@ new_facebook_full
 	border-left: 1px solid #b2b2b2;
 	border-bottom: 1px solid #C9D0DA;
 	background-color: #f4f4f4;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 10px;
 	color: #888;
 	text-shadow: 1px 1px 0 white;
@@ -281,6 +281,7 @@ new_facebook_full
 	color: #fff;
 	text-align: left;
 	line-height: 1.5em;
+	font-size:16px;
 }
 
 .arrowchat_tab_name a:link {
@@ -355,7 +356,7 @@ new_facebook_full
 	top: 60px!important;
 	width: 180px!important;
 	display: block;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	height: auto;
 	text-align: left;
@@ -419,7 +420,7 @@ new_facebook_full
 	margin-bottom: 40px;
 	height: calc(100% - 60px)!important;
 	left: 0!important;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	text-align: left;
 	z-index: 9999;
@@ -439,7 +440,7 @@ new_facebook_full
 }
 
 .arrowchat_tabtitle {
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-weight: bold;
 	cursor: pointer;
 	background-color: #5caae8 !important;
@@ -455,7 +456,7 @@ new_facebook_full
 	border-left: 1px solid #777;
 	background-color: #eee;
 	padding: 3px;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 9px;
 	color: #666;
 	line-height: 1.3em !important;
@@ -471,7 +472,7 @@ new_facebook_full
 	background-color: #333;
 	color: #fff;
 	padding: 5px;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	white-space: nowrap;
 	text-align: left;
@@ -506,7 +507,7 @@ new_facebook_full
 }
 
 .arrowchat_tabalert {
-	font-family: 'lucida grande',tahoma,verdana;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -526,7 +527,7 @@ new_facebook_full
 }
 
 .arrowchat_tabalertnf {
-	font-family: 'lucida grande',tahoma,verdana;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -542,7 +543,7 @@ new_facebook_full
 }
 
 .arrowchat_tabalertlr {
-	font-family: 'lucida grande',tahoma,verdana;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -667,7 +668,7 @@ new_facebook_full
 	border: 1px solid #5caae8;
 	border-bottom: 0px;
 	color: #fff;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-weight: bold;
 	cursor: pointer;
 	background-color: #5caae8;
@@ -681,7 +682,7 @@ new_facebook_full
 	border-left: 1px solid #b2b2b2;
 	border-bottom: 1px solid #C9D0DA;
 	background-color: #eee;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 9px;
 	color: #666;
 	line-height: 1.3em !important;
@@ -769,7 +770,7 @@ new_facebook_full
 }
 
 .arrowchat_nofriends {
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	padding-left: 6px;
 	padding-bottom: 5px;
@@ -794,7 +795,7 @@ new_facebook_full
 #arrowchat_search_friends input {
 	border-radius: 0;
 	-webkit-box-sizing: content-box;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	font-weight: normal;
 	width: 206px;
@@ -969,10 +970,10 @@ new_facebook_full
 	background: none;
 	width: 100%;
 	border: 1px solid gray;
-	height: 22px !IMPORTANT;
+	height: 22px !important;
 	padding: 1px 0px 0px 0px;
 	overflow: hidden;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #444;
 	background-color: #fff;
@@ -1023,6 +1024,8 @@ new_facebook_full
 	display: block;
 	max-width: 150px;
 	overflow: hidden;
+	font-size:16px;
+	margin-top: 3px;
 }
 
 .arrowchat_tab_name a:hover {
@@ -1050,7 +1053,7 @@ new_facebook_full
 
 .arrowchat_ts {
 	display: none;
-	font-family: 'Trebuchet MS',Helvetica,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	color: #808080;
 	font-size: 10px;
 	position: absolute;
@@ -1082,7 +1085,7 @@ new_facebook_full
 }
 
 .arrowchat_offline_send_text {
-	font-family: 'lucida grande',tahoma;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 9px;
 	color: #000;
 	padding-left: 15px;
@@ -1231,7 +1234,7 @@ new_facebook_full
 	padding: 5px 0 5px;
 	z-index: 1090 !important;
 	display: none;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #000;
 }
@@ -1381,7 +1384,7 @@ new_facebook_full
 	display: none;
 	border-bottom: 1px solid #C9D0DA;
 	background-color: #f4f4f4;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 9px;
 	color: #888;
 	padding: 3px;
@@ -1436,7 +1439,7 @@ new_facebook_full
 	border: 1px solid #5caae8;
 	border-bottom: 0px;
 	color: #fff;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-weight: bold;
 	cursor: pointer;
 	background: #5caae8;
@@ -1605,7 +1608,7 @@ new_facebook_full
 	height: 18px;
 	padding: 3px 5px 0px 2px;
 	overflow: hidden;
-	font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #444;
 	background-color: #fff;
@@ -1770,7 +1773,7 @@ new_facebook_full
 	max-width: 340px;
 	z-index: 1090 !important;
 	display: none;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #000;
 	padding: 3px 0px 4px;
@@ -1790,7 +1793,7 @@ new_facebook_full
 	width: 172px;
 	z-index: 1090 !important;
 	display: none;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #000;
 	padding: 8px 0px 6px;
@@ -1803,7 +1806,7 @@ new_facebook_full
 	position: absolute;
 	width: 172px;
 	z-index: 1090 !important;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #000;
 	padding: 6px 8px 10px 0px;
@@ -1857,7 +1860,7 @@ new_facebook_full
 
 #arrowchat_chatroom_selection {
 	font-weight: bold;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	display: block;
 	line-height: 11px;
@@ -1865,7 +1868,7 @@ new_facebook_full
 
 #arrowchat_chatroom_selection2 {
 	font-weight: bold;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	display: block;
 	line-height: 11px;
@@ -1873,7 +1876,7 @@ new_facebook_full
 
 #arrowchat_chatroom_selection3 {
 	font-weight: bold;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	display: block;
 	line-height: 11px;
@@ -1992,7 +1995,7 @@ new_facebook_full
 	border-left: 1px solid #b2b2b2;
 	border-bottom: 1px solid #C9D0DA;
 	background-color: #f4f4f4;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 9px;
 	color: #888;
 	padding: 3px;
@@ -2018,7 +2021,7 @@ new_facebook_full
 }
 
 #arrowchat_base div {
-	font-size: 11px;
+	font-size: 14px;
 }
 
 .arrowchat_tabpopup div {
@@ -2109,7 +2112,7 @@ html[xmlns] .arrowchat_clearfix {
 	border-left: 1px solid #b2b2b2;
 	border-bottom: 1px solid #C9D0DA;
 	background-color: #f4f4f4;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 9px;
 	color: #666;
 	padding: 3px;
@@ -2229,7 +2232,7 @@ html[xmlns] .arrowchat_clearfix {
 	background-color: #d9e0ea;
 	color: #000000;
 	padding: 10px;
-	font-family: "Bitstream Vera Sans",Arial,Verdana,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	text-align: left;
 	line-height: normal;
@@ -2309,7 +2312,7 @@ html[xmlns] .arrowchat_clearfix {
 
 #arrowchat_options_item {
 	font-weight: bold;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	display: block;
 	line-height: 11px;
@@ -2317,7 +2320,7 @@ html[xmlns] .arrowchat_clearfix {
 
 #arrowchat_options_item2 {
 	font-weight: bold;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	display: block;
 	line-height: 11px;
@@ -2456,7 +2459,7 @@ html[xmlns] .arrowchat_clearfix {
 	max-width: 340px;
 	z-index: 1090 !important;
 	display: none;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #000;
 	padding: 3px 0 4px;
@@ -2482,7 +2485,7 @@ html[xmlns] .arrowchat_clearfix {
 	padding: 10px;
 	z-index: 1016;
 	display: none;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #000;
 	padding: 4px 0px 6px;
@@ -2648,7 +2651,7 @@ html[xmlns] .arrowchat_clearfix {
 	max-width: 340px;
 	z-index: 1090 !important;
 	display: none;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 11px;
 	color: #000;
 	padding: 3px 0 4px;
@@ -2663,7 +2666,7 @@ html[xmlns] .arrowchat_clearfix {
 	margin-left: 55px;
 	padding-right: 5px;
 	padding-top: 2px;
-	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	font-size: 9px;
 	color: #666;
 	text-align: left;

@@ -1717,9 +1717,12 @@ section.list {
 		width:100%;
 
 		&.online {
-			background: #f2fff4;
-			li {
-				/*background: $online-color;*/
+			.pics {
+				margin-right:5px;
+				border-right:5px solid $online-color;
+			}
+			.username a {
+				color: $online-color !important;
 			}
 		}
 
