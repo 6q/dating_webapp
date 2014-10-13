@@ -226,23 +226,19 @@ body.inside {
   	.previous,.next {
   		position:fixed;
   		top:230px;
-  		width:30px;
-  		height:50px;
-		font-size: 34px;
-		text-decoration: none;
-		font-weight: bold;
-  		background:#5AA7E3;
-  		color:#fff;
-  		border-radius:10px;
-  		padding:5px 15px;
-  		z-index: 2;
-  		opacity:0.4;  		
+  		width:60px;
+  		height:61px;
+		font-size: 0px;
+  		color:transparent;
+  		z-index: 2;	
   	}
   	.previous {
   		left:10px;
+  		background: image-url('mobile/arrow-right.png') left top no-repeat;
   	}
   	.next {
   		right:10px;
+  		background: image-url('mobile/arrow-left.png') left top no-repeat;
   	}
   }
   .pull-right {
