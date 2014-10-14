@@ -24,6 +24,10 @@
         position: absolute;
         top: 0;
         right: 0;
+        img {
+          width:20px;
+          height:20px;
+        }
       }
       &:hover {
         .overlay{ 

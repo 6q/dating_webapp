@@ -351,6 +351,6 @@ body.inside {
 	.alert_chat_show, .alert_chat_hide {
 		position:fixed;top:12px;left:60px;z-index:3000;text-align:center
 	}
-.alert.alert-danger.alert_chat_hide.fade {
+.alert_chat_hide.fade,.alert_chat_show.fade {
 	display:none;
 }

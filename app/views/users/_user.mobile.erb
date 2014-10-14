@@ -38,7 +38,7 @@
     <header>
       <h1>
         <div class="username">
-          <%= link_to truncate(user.display_name, length: 25), user %>
+          <div class="<%= user.online? ? "online" : "" %>"></div> <%= link_to truncate(user.display_name, length: 25), user %>
         </div>
         <span><%= "#{user.age} #{_('Años')}" %>, <%= truncate(user.city, length: 17) %></span>
         <br>
