@@ -3,7 +3,7 @@
   <%= link_to(' ', conversation_path(conversation.id, :box => @box, :page => params[:page]), :class => 'link_conversation') %>
     <%= user_link_with_picture(sender_or_recipient(conversation)) %>
     <div class="info">
-      <p class="msg-data"><%= time_ago_in_words_or_date(conversation.updated_at) %> - <% if conversation.last_sender == current_user %><%= _("Tu") %><% elsif conversation.last_sender %><%= link_to conversation.last_sender.display_name, conversation.last_sender %> <%= conversation.last_sender.age %> <%= _('Años') %>, <%= conversation.last_sender.city %><% else %><%= _('Usuario inexistente o inactivo') %><% end %> - (<%= conversation.messages.count %>)
+      <p class="msg-data"><% if conversation.last_sender == current_user %><%= _("Tu") %><% elsif conversation.last_sender %><%= link_to conversation.last_sender.display_name, conversation.last_sender %><% else %><%= _('Usuario inexistente o inactivo') %><% end %> - (<%= conversation.messages.count %>)
         <span class="readed vip-hide">
         <% if conversation.last_sender == current_user %>. <%= _('Leído') %>:
           <% if current_user.has_role?(:premium_user) %>
@@ -15,7 +15,9 @@
         </span>
       </p>
 
-      <p class="msg"><%= link_to(truncate(conversation.last_message.body, :length => 55), conversation_path(conversation.id, :box => @box, :page => params[:page])) %></p>
+      <p class="msg"><%= link_to(truncate(conversation.last_message.body, :length => 30), conversation_path(conversation.id, :box => @box, :page => params[:page])) %><br>
+        <small><%= time_ago_in_words_or_date(conversation.updated_at) %></small>
+      </p>
 
     </div>
     <% unless @box.eql?'trash' %>

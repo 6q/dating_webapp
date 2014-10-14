@@ -56,8 +56,7 @@ class ApplicationController < ActionController::Base
 
   def prepare_for_mobile
 
-    # change when the mobile version is ready to go
-    #session[:mobile_view] = is_mobile_device? if session[:mobile_view].nil?
+    session[:mobile_view] = is_mobile_device? if session[:mobile_view].nil?
     session[:mobile_view] = false if session[:mobile_view].nil?
       
     if params[:mobile] == 'true'

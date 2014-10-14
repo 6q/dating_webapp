@@ -20,10 +20,10 @@
 
             <div>
               <% interlocutor = sender_or_recipient(@conversation) %>
-              <div class="info">
-                  <p class="msg-data"><%= _('Conversación con: ') %>
+              <div >
+                  <p style="font-size:12px;text-align:center;margin-top:10px">
                     <% if interlocutor %>
-                      <%= link_to interlocutor.name, user_path(interlocutor) %> <%= interlocutor.age %> <%= _('Años') %>, <%= interlocutor.city %>
+                      <b><%= link_to interlocutor.name, user_path(interlocutor) %></b> <%= interlocutor.age %> <%= _('Años') %>, <%= interlocutor.city %>
                     <% else %>
                       <%= _('Usuario inexistente o inactivo') %>
                     <% end %>
@@ -40,11 +40,19 @@
 
                 <div class="pic"><%= link_to profile_pic(current_user, width: 60, height: 60), current_user %></div>
 
-                <div class="msg-actions">
+                <div class="msg-actions" style="margin:0">
                   <% if interlocutor %>
-                    <b><%= link_to _('Responder'), '#', class: 'action-reply' %></b> - <%= link_to 'Bloquear', "#user-block-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal' %>
+                    <div style="float:left;width:33%;text-align:left">
+                      <b><%= link_to _('Responder'), '#', class: 'action-reply' %></b> 
+                    </div>
+                    <div style="float:left;width:33%;text-align:center">
+                      <%= link_to 'Bloquear', "#user-block-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal' %>
+                    </div>
                   <% end %>
-                  <%= link_to _('Eliminar hilo'), "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
+                    <div style="float:left;width:33%;text-align:right">
+                      <%= link_to _('Eliminar hilo'), "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
+                    </div>
+                    <div style="clear:both"></div>
                 </div>
 
                 <% if current_user.can_message? %>
