@@ -1120,35 +1120,11 @@ new_facebook_full
 }
 
 #arrowchat_chatbox_left {
-	width: auto!important;
-	float: right;
-	cursor: pointer;
-	width: 16px;
-	height: 40px;
-	background: #EBEEF4;
-	padding-left: 6px;
-	padding-right: 6px;
-	padding-top: 2px;
-	color: #333;
-	border-left: 1px solid #BAC0CD;
-	border-top: 1px solid #bac0cd;
-	text-align: left;
+	display:none!important;
 }
 
 #arrowchat_chatbox_right {
-	width: auto!important;
-	float: right;
-	cursor: pointer;
-	width: 16px;
-	height: 40px;
-	background: #EBEEF4;
-	padding-left: 6px;
-	padding-right: 6px;
-	padding-top: 2px;
-	color: #333;
-	border-left: 1px solid #BAC0CD;
-	border-top: 1px solid #bac0cd;
-	text-align: left;
+	display:none!important;
 }
 
 .arrowchat_tabtext {
