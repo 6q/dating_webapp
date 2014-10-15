@@ -1,0 +1,29 @@
+<%= render "shared/best_suited_near_me" %>
+<section class="list">
+  <header>
+    <h1 class="section_title"><%= _('Me han visitado') %></h1>
+    <div class="clearfix"></div>
+  </header>
+
+  <%= render "empty-list" %>
+
+  <ul class="user-list clearfix">
+    <%= render @users, invisibles: true %>
+  </ul>
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
+  <%= paginate @users %>
+
+</section>
+
+<% unless current_user.has_role?(:premium_user) %>
+<script type="text/javascript">
+$(function() {
+  $('article.anonymous').unbind('click').click(function(event) {
+    event.preventDefault();
+    $('#upgrade-account-modal').click();
+  });
+});
+</script>
+<% end %>

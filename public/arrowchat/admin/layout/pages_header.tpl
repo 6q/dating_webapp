@@ -112,6 +112,7 @@
 					<li><a href="./system.php?do=adminsettings">Admin Settings</a></li>
 					<li><a href="./system.php?do=configsettings">Configuration</a></li>
 					<li><a href="./system.php?do=language">Languages</a></li>
+					<li><a href="./system.php?do=maintenance">Maintenance</a></li>
 					<li><a href="./system.php?do=repair">Repair ArrowChat</a></li>
 					<li><a href="./system.php?do=update">Update ArrowChat{if $arrowchat_has_update}<span class="bubble">1</span>{/if}</a></li>
 				</ul>
@@ -193,13 +194,14 @@
 					</ul> 
 				</div>
 				{/if}
-				{if $smarty.get.do eq 'adminsettings' or $smarty.get.do eq 'configsettings' or $smarty.get.do eq 'language' or $smarty.get.do eq 'update' or $smarty.get.do eq 'repair' or $smarty.get.do eq 'step1' or $smarty.get.do eq 'step2' or $smarty.get.do eq 'step3' or $smarty.get.do eq 'step5'}
+				{if $smarty.get.do eq 'adminsettings' or $smarty.get.do eq 'configsettings' or $smarty.get.do eq 'language' or $smarty.get.do eq 'update' or $smarty.get.do eq 'repair' or $smarty.get.do eq 'maintenance' or $smarty.get.do eq 'maintenance2' or $smarty.get.do eq 'step1' or $smarty.get.do eq 'step2' or $smarty.get.do eq 'step3' or $smarty.get.do eq 'step5'}
 				<div class="admin_title_bg"> 
 					<ul id ="menu-system"> 
 						<li class="navHead">System</li>
 						<li {if $smarty.get.do eq 'adminsettings'}class="active_nav"{/if}><a href="system.php?do=adminsettings">Admin Settings</a></li> 
 						<li {if $smarty.get.do eq 'configsettings'}class="active_nav"{/if}><a href="system.php?do=configsettings">Configuration</a></li> 
 						<li {if $smarty.get.do eq 'language'}class="active_nav"{/if}><a href="system.php?do=language">Languages</a></li> 
+						<li {if $smarty.get.do eq 'maintenance' or $smarty.get.do eq 'maintenance2'}class="active_nav"{/if}><a href="system.php?do=maintenance">Maintenance</a></li> 
 						<li {if $smarty.get.do eq 'repair'}class="active_nav"{/if}><a href="system.php?do=repair">Repair ArrowChat</a></li> 
 						<li {if $smarty.get.do eq 'update' or $smarty.get.do eq 'step1' or $smarty.get.do eq 'step2' or $smarty.get.do eq 'step3' or $smarty.get.do eq 'step5'}class="active_nav"{/if}><a href="system.php?do=update">Update ArrowChat{if $arrowchat_has_update} (1){/if}</a></li> 
 					</ul> 

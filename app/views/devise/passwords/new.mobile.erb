@@ -1,0 +1,27 @@
+<% title = _('¿Has olvidado tu contraseña?') %>
+<% content_for(:title) {title} %>
+<%= render 'shared/flat-header' %>
+
+<div class="container-fluid rounded-box page-content">
+  <div class="content row-fluid">
+    <div class="container-fluid nopadding text-center">
+      <div class="row-fluid text-center">
+        <h1><%= title %></h1>
+      </div>
+      <p><%= _('Introduce el email con el que te registraste y te enviaremos las instrucciones de recuperación.') %></p>
+
+      <%= form_for(resource, :as => resource_name,
+                    :url => password_path(resource_name), :method => :post) do |f| %>
+
+            <p>
+              <%= f.label :email, _('Tu correo electrónico') %>
+              <%= f.text_field :email, :autofocus => true, type: 'email', class: 'width95 text-center' %>
+            </p>
+            <p>
+              <%= f.submit _('Recuperar contraseña'), class: 'btn btn-info width96' %>
+            </p>
+
+      <% end %>
+    </div>
+  </div>
+</div>

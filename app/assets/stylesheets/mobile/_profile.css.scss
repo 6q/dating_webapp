@@ -1,0 +1,50 @@
+
+input[type="radio"], label .radio {
+  float:left;
+}
+input{
+  clear:left;
+}
+
+/* user pictures */
+
+#user-pictures {
+  padding:0 10px 10px 10px;
+  text-align:center;
+
+  @import 'partials/picture_gallery';
+
+  h2 {
+    font-size:1em;
+    padding:0;
+    color:$link-color;
+    font-weight:normal;
+  }
+  .pic-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width:100%;
+    max-width:100% !important;
+    ul {
+      max-width:100%;
+      li {
+        margin:0 5px 5px 0 !important;
+      }
+    }
+  }
+}
+
+#crop_modal {
+  img { max-width: initial; }
+}
+
+.profile {
+  .nav-tabs {
+    a {
+      font-weight: bold;
+    }
+  }
+}
+#complete_fields {
+	padding: 0 20px 20px 20px;
+}

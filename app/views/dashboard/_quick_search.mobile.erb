@@ -1,0 +1,51 @@
+<section class="direct-search">
+  <div class="boxed">
+    <div class="boxed-inner overflow-show">
+      <h4><%= _('Búsqueda directa:') %></h4>
+      <div class="searchform form-horizontal">
+        <%= search_form_for @search, :class => 'overflow-show' do |f| %>
+          <fieldset class="span6">
+            <div class="control-group sliders">
+              <label><%= _('Edad') %> <span></span></label>
+              <div class="controls">
+                <input id="years" type="slider" name="" value="<%= current_user.lf_age_from.blank? ? '18' : current_user.lf_age_from %>;<%= current_user.lf_age_to.blank? ? '80' : current_user.lf_age_to %>"/>
+                <%= f.hidden_field :years_start_lteq  %>
+                <%= f.hidden_field :years_end_gteq  %>
+              </div>
+            </div>
+            <div class="overflow-show control-group">
+              <label><%= _('Localidad') %></label>
+              <div class="controls">
+                <%= select_tag :city, options_for_select([current_user.city], current_user.city), { include_blank: _('Localidad...'), class: 'city', 'data-placeholder' => _('Localidad...') } %>
+                <%= text_field_tag :postal_code, current_user.postal_code, placeholder: _('CP'), class: 'span1' %>
+              </div>
+            </div>
+            <div class="control-group sliders">
+              <label><%= _('Distancia') %> <span></span></label>
+              <div class="controls">
+                <%= text_field_tag :distance, (params[:distance] || '250'), type: 'slider' %>
+              </div>
+            </div>
+            <div class="control-group">
+              <label><%= _('Palabra clave') %></label>
+              <div class="controls">
+                <%= f.text_field :name_or_surname_or_screen_name_or_description_cont %>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-options">
+            <label class="checkbox">
+              <%= f.check_box :pictures_main_not_null, {}, 1, '' %><%= _('Foto') %>
+            </label>
+            <label class="checkbox">
+              <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %><%= _('Online') %>
+            </label>
+            <%= f.submit _('Buscar'), class: 'btn btn-info' %>
+          </fieldset>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render partial: 'shared/search_js' %>

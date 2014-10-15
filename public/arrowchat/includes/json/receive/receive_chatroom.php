@@ -23,7 +23,7 @@
 	$global_is_mod		= 0;
 	$global_is_admin	= 0;
 	$chatroom_id		= get_var('chatroomid');
-	$popout				= get_var('popoutroom');
+	$popout_cr			= get_var('popoutroom');
 
 	// ###################### START CHATROOM BANLIST CHECK ###################
 	if (logged_in($userid))
@@ -62,14 +62,25 @@
 	// ##################### START CHATROOM USERS RECEIVE ####################
 	if (logged_in($userid)) 
 	{
-		if ($popout == "1")
+		if ($popout_cr == "1") {
+			$popout = 0;
 			updateUserSession();
+		}
 	
 		$db->execute("
-			INSERT INTO arrowchat_chatroom_users (user_id,chatroom_id,session_time) 
-			VALUES ('" . $db->escape_string($userid) . "', '" . $db->escape_string($chatroom_id) . "', '" . $time . "') 
+			INSERT INTO arrowchat_chatroom_users (
+				user_id,
+				chatroom_id,
+				session_time
+			) 
+			VALUES (
+				'" . $db->escape_string($userid) . "', 
+				'" . $db->escape_string($chatroom_id) . "', 
+				'" . $time . "'
+			) 
 			ON DUPLICATE KEY 
-				UPDATE chatroom_id = '" . $db->escape_string($chatroom_id) . "', session_time = '" . $time . "'
+			UPDATE chatroom_id = '" . $db->escape_string($chatroom_id) . "', 
+				session_time = '" . $time . "'
 		");
 		
 		$result = $db->execute("
@@ -77,7 +88,7 @@
 			FROM arrowchat_chatroom_users
 			WHERE (chatroom_id = '" . $db->escape_string($chatroom_id) . "'
 				AND session_time + 91 > " . $time . ")
-			ORDER BY is_admin DESC, is_mod DESC");
+			ORDER BY is_admin DESC, is_mod DESC, session_time DESC");
 		
 		while ($chatroom_users = $db->fetch_array($result)) 
 		{
@@ -111,8 +122,8 @@
 			if (check_if_guest($fetchid))
 			{
 				$sql = get_guest_details($fetchid);
-				$result = $db->execute($sql);
-				$user = $db->fetch_array($result);
+				$result2 = $db->execute($sql);
+				$user = $db->fetch_array($result2);
 				
 				$user['username'] = create_guest_username($user['userid'], $user['guest_name']);
 				$link = "#";
@@ -121,8 +132,8 @@
 			else
 			{
 				$sql = get_user_details($fetchid);
-				$result2 = $db->execute($sql);
-				$user = $db->fetch_array($result2);
+				$result3 = $db->execute($sql);
+				$user = $db->fetch_array($result3);
 				
 				$avatar	= get_avatar($user['avatar'], $fetchid);
 				$link	= get_link($user['link'], $fetchid);

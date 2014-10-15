@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <%= render partial: "layouts/common_head" %>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %> outside">
+    <%= render partial: "layouts/changing_background" %>
+    <div class="container-fluid">
+        <section role="main">
+          <%= render 'shared/flat-header' %>
+          <%= yield %>
+        </section>
+    </div>
+    <%= render 'shared/footer' %>
+    <%= render 'layouts/messages' %>
+    <%= render 'shared/modal_progress' %>
+    <%= render 'shared/cookies' %>
+    <%= render 'shared/scripts' %>
+  </body>
+</html>

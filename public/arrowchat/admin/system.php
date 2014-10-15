@@ -43,6 +43,7 @@
 			UPDATE arrowchat_config 
 			SET config_value = CASE 
 				WHEN config_name = 'base_url' THEN '" . $new_base_url . "'
+				WHEN config_name = 'login_url' THEN '" . get_var('config_login_url') . "'
 				WHEN config_name = 'online_timeout' THEN '" . get_var('config_online_timeout') . "'
 				WHEN config_name = 'heart_beat' THEN '" . get_var('config_heart_beat') . "'
 				WHEN config_name = 'buddy_list_heart_beat' THEN '" . get_var('config_buddy_list_heart_beat') . "'
@@ -50,12 +51,13 @@
 				WHEN config_name = 'push_on' THEN '" . get_var('push_on') . "'
 				WHEN config_name = 'push_publish' THEN '" . get_var('push_publish') . "'
 				WHEN config_name = 'push_subscribe' THEN '" . get_var('push_subscribe') . "'
-			END WHERE config_name IN ('channel_name', 'base_url', 'online_timeout', 'disable_smilies', 'heart_beat', 'buddy_list_heart_beat', 'idle_time', 'push_on', 'push_publish', 'push_subscribe')
+			END WHERE config_name IN ('channel_name', 'base_url', 'login_url', 'online_timeout', 'disable_smilies', 'heart_beat', 'buddy_list_heart_beat', 'idle_time', 'push_on', 'push_publish', 'push_subscribe')
 		");
 					
 		if ($result && $heart_beat_test) 
 		{
 			$base_url = $new_base_url;
+			$login_url = get_var('config_login_url');
 			$online_timeout = get_var('config_online_timeout');
 			$heart_beat = get_var('config_heart_beat');
 			$buddy_list_heart_beat = get_var('config_buddy_list_heart_beat');
@@ -105,6 +107,385 @@
 	if (var_check('auto-step-5')) 
 	{
 		$do = "step5";
+	}
+	
+	// Maintenance Submit Processor
+	if (var_check('maintenance_submit')) 
+	{
+		$_SESSION['clean_private_messages'] = get_var('clean_private_messages');
+		$_SESSION['clean_inactive_guests'] = get_var('clean_inactive_guests');
+		$_SESSION['clean_inactive_users'] = get_var('clean_inactive_users');
+		$_SESSION['clean_cr_messages'] = get_var('clean_cr_messages');
+		$_SESSION['clean_cr_rooms'] = get_var('clean_cr_rooms');
+		$_SESSION['clean_cr_users'] = get_var('clean_cr_users');
+		$_SESSION['clean_notifications'] = get_var('clean_notifications');
+		$_SESSION['counter'] = 0;
+		
+		header("Location: system.php?do=maintenance2");
+	}
+	
+	// Maintenance Processing
+	if ($do == 'maintenance2')
+	{
+		if (empty($_SESSION['clean_private_messages']) AND empty($_SESSION['clean_inactive_guests']) AND empty($_SESSION['clean_inactive_users']) AND empty($_SESSION['clean_cr_messages']) AND empty($_SESSION['clean_cr_rooms']) AND empty($_SESSION['clean_cr_users']) AND empty($_SESSION['clean_notifications']))
+		{
+			header("Location: system.php?do=maintenance");
+		}
+		
+		if (!empty($_SESSION['clean_private_messages']))
+		{
+			$cleaning_message = "Cleaning Private Messages";
+			
+			$result = $db->execute("
+				SELECT COUNT(*)
+				FROM arrowchat
+				WHERE (sent + (3600 * 24 * 28)  < " . time() . ")
+					OR (sent + (3600 * 24 * 14)  < " . time() . " AND user_read = 1)
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				$no_rows = $row['COUNT(*)'];
+				
+				if (empty($_SESSION['counter']))
+					$_SESSION['original_count'] = $no_rows;
+				
+				if ($no_rows < 5000) 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat
+							WHERE (sent + (3600 * 24 * 28)  < " . time() . ")
+								OR (sent + (3600 * 24 * 14)  < " . time() . " AND user_read = 1)
+						");
+						$_SESSION['counter'] = -1;
+						$_SESSION['clean_private_messages'] = 0;
+					}
+					
+					$cleaning_percent = 100;
+					$_SESSION['counter']++;
+				}
+				else 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat
+							WHERE (sent + (3600 * 24 * 28)  < " . time() . ")
+								OR (sent + (3600 * 24 * 14)  < " . time() . " AND user_read = 1)
+							LIMIT 5000
+						");
+						$cleaning_percent = round((5000 * $_SESSION['counter']) / $_SESSION['original_count'] * 100);
+					}
+					
+					$_SESSION['counter']++;
+				}
+			}
+		}
+		
+		if (!empty($_SESSION['clean_inactive_guests']) AND empty($_SESSION['clean_private_messages']))
+		{
+			$cleaning_message = "Cleaning Inactive Guests";
+			
+			$result = $db->execute("
+				SELECT COUNT(*)
+				FROM arrowchat_status
+				WHERE session_time + (3600 * 24 * 14)  < " . time() . "
+					AND userid LIKE 'g%'
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				$no_rows = $row['COUNT(*)'];
+				
+				if (empty($_SESSION['counter']))
+					$_SESSION['original_count'] = $no_rows;
+				
+				if ($no_rows < 5000) 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_status
+							WHERE session_time + (3600 * 24 * 14)  < " . time() . "
+								AND userid LIKE 'g%'
+						");
+						$_SESSION['counter'] = -1;
+						$_SESSION['clean_inactive_guests'] = 0;
+					}
+					
+					$cleaning_percent = 100;
+					$_SESSION['counter']++;
+				}
+				else 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_status
+							WHERE session_time + (3600 * 24 * 14)  < " . time() . "
+									AND userid LIKE 'g%'
+							LIMIT 5000
+						");
+						$cleaning_percent = round((5000 * $_SESSION['counter']) / $_SESSION['original_count'] * 100);
+					}
+					
+					$_SESSION['counter']++;
+				}
+			}
+		}
+		
+		if (!empty($_SESSION['clean_inactive_users']) AND empty($_SESSION['clean_inactive_guests']) AND empty($_SESSION['clean_private_messages']))
+		{
+			$cleaning_message = "Cleaning Inactive Users";
+			
+			$result = $db->execute("
+				SELECT COUNT(*)
+				FROM arrowchat_status
+				WHERE session_time + (3600 * 24 * 28)  < " . time() . "
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				$no_rows = $row['COUNT(*)'];
+				
+				if (empty($_SESSION['counter']))
+					$_SESSION['original_count'] = $no_rows;
+				
+				if ($no_rows < 5000) 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_status
+							WHERE session_time + (3600 * 24 * 28)  < " . time() . "
+						");
+						$_SESSION['counter'] = -1;
+						$_SESSION['clean_inactive_users'] = 0;
+					}
+					
+					$cleaning_percent = 100;
+					$_SESSION['counter']++;
+				}
+				else 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_status
+							WHERE session_time + (3600 * 24 * 28)  < " . time() . "
+							LIMIT 5000
+						");
+						$cleaning_percent = round((5000 * $_SESSION['counter']) / $_SESSION['original_count'] * 100);
+					}
+					
+					$_SESSION['counter']++;
+				}
+			}
+		}
+		
+		if (!empty($_SESSION['clean_cr_messages']) AND empty($_SESSION['clean_inactive_users']) AND empty($_SESSION['clean_inactive_guests']) AND empty($_SESSION['clean_private_messages']))
+		{
+			$cleaning_message = "Cleaning Chat Room Messages";
+			
+			$result = $db->execute("
+				SELECT COUNT(*)
+				FROM arrowchat_chatroom_messages
+				WHERE sent + (3600 * 24 * 7)  < " . time() . "
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				$no_rows = $row['COUNT(*)'];
+				
+				if (empty($_SESSION['counter']))
+					$_SESSION['original_count'] = $no_rows;
+				
+				if ($no_rows < 5000) 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_chatroom_messages
+							WHERE sent + (3600 * 24 * 7)  < " . time() . "
+						");
+						$_SESSION['counter'] = -1;
+						$_SESSION['clean_cr_messages'] = 0;
+					}
+					
+					$cleaning_percent = 100;
+					$_SESSION['counter']++;
+				}
+				else 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_chatroom_messages
+							WHERE sent + (3600 * 24 * 7)  < " . time() . "
+							LIMIT 5000
+						");
+						$cleaning_percent = round((5000 * $_SESSION['counter']) / $_SESSION['original_count'] * 100);
+					}
+					
+					$_SESSION['counter']++;
+				}
+			}
+		}
+		
+		if (!empty($_SESSION['clean_cr_rooms']) AND empty($_SESSION['clean_cr_messages']) AND empty($_SESSION['clean_inactive_users']) AND empty($_SESSION['clean_inactive_guests']) AND empty($_SESSION['clean_private_messages']))
+		{
+			$cleaning_message = "Cleaning User Created Chat Rooms";
+			
+			$result = $db->execute("
+				SELECT COUNT(*)
+				FROM arrowchat_chatroom_rooms
+				WHERE session_time + (3600 * 24 * 7)  < " . time() . "
+					AND length != '0'
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				$no_rows = $row['COUNT(*)'];
+				
+				if (empty($_SESSION['counter']))
+					$_SESSION['original_count'] = $no_rows;
+				
+				if ($no_rows < 5000) 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_chatroom_rooms
+							WHERE session_time + (3600 * 24 * 7)  < " . time() . "
+								AND length != '0'
+						");
+						$_SESSION['counter'] = -1;
+						$_SESSION['clean_cr_rooms'] = 0;
+					}
+					
+					$cleaning_percent = 100;
+					$_SESSION['counter']++;
+				}
+				else 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_chatroom_rooms
+							WHERE session_time + (3600 * 24 * 7)  < " . time() . "
+								AND length != '0'
+							LIMIT 5000
+						");
+						$cleaning_percent = round((5000 * $_SESSION['counter']) / $_SESSION['original_count'] * 100);
+					}
+					
+					$_SESSION['counter']++;
+				}
+			}
+		}
+		
+		if (!empty($_SESSION['clean_cr_users']) AND empty($_SESSION['clean_cr_rooms']) AND empty($_SESSION['clean_cr_messages']) AND empty($_SESSION['clean_inactive_users']) AND empty($_SESSION['clean_inactive_guests']) AND empty($_SESSION['clean_private_messages']))
+		{
+			$cleaning_message = "Cleaning Chat Room Users";
+			
+			$result = $db->execute("
+				SELECT COUNT(*)
+				FROM arrowchat_chatroom_users
+				WHERE session_time + (3600 * 24 * 14)  < " . time() . "
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				$no_rows = $row['COUNT(*)'];
+				
+				if (empty($_SESSION['counter']))
+					$_SESSION['original_count'] = $no_rows;
+				
+				if ($no_rows < 5000) 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_chatroom_users
+							WHERE session_time + (3600 * 24 * 14)  < " . time() . "
+						");
+						$_SESSION['counter'] = -1;
+						$_SESSION['clean_cr_users'] = 0;
+					}
+					
+					$cleaning_percent = 100;
+					$_SESSION['counter']++;
+				}
+				else 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_chatroom_users
+							WHERE session_time + (3600 * 24 * 14)  < " . time() . "
+							LIMIT 5000
+						");
+						$cleaning_percent = round((5000 * $_SESSION['counter']) / $_SESSION['original_count'] * 100);
+					}
+					
+					$_SESSION['counter']++;
+				}
+			}
+		}
+		
+		if (!empty($_SESSION['clean_notifications']) AND empty($_SESSION['clean_cr_users']) AND empty($_SESSION['clean_cr_rooms']) AND empty($_SESSION['clean_cr_messages']) AND empty($_SESSION['clean_inactive_users']) AND empty($_SESSION['clean_inactive_guests']) AND empty($_SESSION['clean_private_messages']))
+		{
+			$cleaning_message = "Cleaning Notifications";
+			
+			$result = $db->execute("
+				SELECT COUNT(*)
+				FROM arrowchat_notifications
+				WHERE alert_time + (3600 * 24 * 28)  < " . time() . "
+			");
+			
+			if ($row = $db->fetch_array($result))
+			{
+				$no_rows = $row['COUNT(*)'];
+				
+				if (empty($_SESSION['counter']))
+					$_SESSION['original_count'] = $no_rows;
+				
+				if ($no_rows < 5000) 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_notifications
+							WHERE alert_time + (3600 * 24 * 28)  < " . time() . "
+						");
+						$_SESSION['counter'] = -1;
+						$_SESSION['clean_notifications'] = 0;
+					}
+					
+					$cleaning_percent = 100;
+					$_SESSION['counter']++;
+				}
+				else 
+				{
+					if ($_SESSION['counter'] != 0)
+					{
+						$db->execute("
+							DELETE FROM arrowchat_notifications
+							WHERE alert_time + (3600 * 24 * 28)  < " . time() . "
+							LIMIT 5000
+						");
+						$cleaning_percent = round((5000 * $_SESSION['counter']) / $_SESSION['original_count'] * 100);
+					}
+					
+					$_SESSION['counter']++;
+				}
+			}
+		}
+
+		if ($cleaning_percent > 100)
+			$cleaning_percent = 100;
 	}
 	
 	// Repair Processor
@@ -172,7 +553,13 @@
 					('hide_applications_menu', '0', 0),
 					('guest_name_change', '1', '0'),
 					('guest_name_duplicates', '0', '0'),
-					('guest_name_bad_words', 'fuck,cunt,nigger,shit,admin,administrator,mod,moderator,support', '0')
+					('guest_name_bad_words', 'fuck,cunt,nigger,shit,admin,administrator,mod,moderator,support', '0'),
+					('admin_background_color', '', '0'),
+					('admin_text_color', '', '0'),
+					('facebook_app_id', '', '0'),
+					('blocked_words', 'fuck,[shit],nigger,[cunt],[ass],asshole', '0'),
+					('desktop_notifications', '0', '0'),
+					('login_url', '', '0')
 		");
 		
 		$result2 = $db->execute("
@@ -198,11 +585,13 @@
 			  `chatroom_sound` tinyint(1) unsigned default NULL,
 			  `announcement` tinyint(1) unsigned NOT NULL default \'1\',
 			  `unfocus_chat` text,
-			  `focus_chat` varchar(20) default NULL,
+			  `focus_chat` varchar(50) default NULL,
 			  `last_message` text,
+			  `clear_chats` text,
 			  `apps_bookmarks` text,
 			  `apps_other` text,
 			  `apps_open` int(10) unsigned default NULL,
+			  `apps_load` text,
 			  `block_chats` text,
 			  `session_time` int(20) unsigned NOT NULL,
 			  `is_admin` tinyint(1) unsigned NOT NULL default \'0\',
@@ -358,7 +747,9 @@
 		echo '<script type="text/javascript">document.getElementById(\'authenticating\').innerHTML = "Authenticating...";</script>';
 		flush_headers();
 		
-		$fp = @fopen("http://www.arrowchat.com/validate.php?u=" . get_var('validate_username') . "&p=" . get_var('validate_password'), "r");
+		// fopen causes a "no data received" error on some servers, so change to fpen for now
+		//$fp = @fpen("http://www.arrowchat.com/validate.php?u=" . get_var('validate_username') . "&p=" . get_var('validate_password'), "r");
+		
 		if ($fp) 
 		{
 			$validation = @fread($fp, 99); 

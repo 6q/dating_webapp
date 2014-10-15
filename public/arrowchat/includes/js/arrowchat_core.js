@@ -1,1 +1,4171 @@
-eval((function(x){var d="";var p=0;while(p<x.length){if(x.charAt(p)!="`")d+=x.charAt(p++);else{var l=x.charCodeAt(p+3)-28;if(l>4)d+=d.substr(d.length-x.charCodeAt(p+1)*96-x.charCodeAt(p+2)+3104-l,l);else d+="`";p+=4}}return d})("(function (a) {a.arrowchat = ` 2&) {var $body = a(\"body\");` 0\"ase` $\"maintenanc` *#show_bar_button` /\"popout_chat` +)options` ?(` &)_popup` 3\"chatrooms` U)buddy_list_tab` .\"userstab` R(tooltip = null` ')_content` y*`!h!` $+` 3!lis` )+s`!S0_creat`\"n#` &+_flyou` _#application`\"3#s = {}` &4`!'\"` -3`\"o*` &/`!_(` &5s`#=' = []` &&`!4&` .$chatbox_righ`\"n'boxe` a#` &%_wid`\"g'box_left;`&N%addHover($elements, classes) {` ,%.each`'>'i, ` 4#) {a(` $$.h` g!`'H)a(this).addClass(` w$;},`'q*` B$remove` =,);});}` H%showLoading`!s%` _!\"`(v&_hide_l` @\"\", ` ?%.hide();` @*`(d!` :0show(`!1(hide` cV` h#` vC`!d#`!3&closePopup($`%W!, $`&&\", hidden) {if ` 7# !== undefined` 4#` B\" == 1) {` C\"`$8&\"`!M&tabopen_` K\"\");} else` K%`$@(` E.\");}}`!F!`![\"`!;-` 1#` L7click ` )&`+c$` (,tray` 80` C$`!F!`$T)T`,'\"(`#&$`,6#) {` #$`#s%`&I*` Q$$target, text, is`(w!, custom`)$!` $%top` =!sideways`!&+ ==`-b\"`!3'`/\"<div id=\\`\"k(` ;\"\\\">` 9!`(?!` -0`.@$\\\"></div></div>\").appendTo(`1*!);`.j,`!6\"`&t'` 1+\",`/D%);}` N,.html(text`1x\"`#\"\"_offset = `#2#.` +\"(` 8)width` 9'` +!` 5*heigh` \\(` +\"` =$`!E#` _&`$f#` b$if (!`$9') {` #' = 0;`'/!` <$top` 9&top` 8&`%+#`%f(css({top:`\"G).top - a(window).scrollTop() -`\")+- 1 -`%k)left` b+`!f!+`#'*- 16` P&`&Y\"display:\"block\"}`.]'`%]/left`*:&`\"<#`'('`!E~`\"\"A`$u*+ 18`\"8;, 'background-position':` [*- 128 + \"px -60px\"}`1?*`\"q=`!~`!~`\"d923`\"x$118`\"TIif (W`%s,\"`!\"$\", \"absolute\"`,%&` ?\"top\", parseInt(`#4&`*P$) -` 5&` N*bottom\"` ,3` W&+`#~3`\"I!`0W!var exp = /(\\b(https?|ftp|file):\\/\\/[-A-Z0-9+&@#\\/%?=~_|!:,.;]*` ,+=~_|])/gi;`0r%replaceURLWithHTMLLinks`.\"\" {return`1'!.` D#(exp, \"<a href='$1'`%C#='_blank'>$1</a>\");}RegExp.escape = `!0%` f8/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, \"\\\\$&\");}`!z&smiley` U$mes`2A$c_disable_smilies != 1) {for (i`./! i < S` ]!.length; i++) {var` t#_test =` @#[i][1]`!c&<`!R!&lt;\")` ,&>` 0\"gt;\"`0=\"check_emoticon = mess.lastIndexOf(`!\"'`0K\"` D+!= -1) {mess` X$`!($new `#f\"(`#f)` h), \"g\"), \"<img`4O/` F\"\\\" src=\\\"\" + k + \"themes/\" + u_` (! + \"/images/`#U#` :!`\"x&0] + \".gif\\\" alt=\\\"\\\" /`%P!}}`%/#mess;}`$`%chatroomKeydown(key, $element`$m#key.keyCode == 13 && key.shiftKey == 0` F#msgcount` ,$setTimeout(`&_&) {` >& 0;}, 15000);}` 0$++`$+!` >%> 4) {`,h#Message`+|(`\"!$_m` 6\"_flyout\", lang[51], \"error`/<'var i =`\"H%.val();i = i`&.&^\\s+|\\s+$`&;!\");` B)` $)`,'!`+h\"\", \"`-w!` /,overflow-y\", \"hidden` 9(focus`!A!!= \"\" && a.post(`%U!includes/json/send/send`\"O%`\"a$.php\", {userid:u_id, username:u_name,`%7%id:Ccr,`%Z!age:i},`+.'e`$v#e) {add`#x#ToC` W#(e, ` j$i);$`$$%chat`.='` +*[0]` 5#H`#-!);}});`'!#false;}}`'!&userchat`&v1, typing) {clear`&L$pa);pa = `&P4`#7@` u\"`#<1` 5\":` <\", untype:1`#1)) {});fa = -1;}, `'e\"if (fa !=`!q&` ah`!+4` 8\"`4C\"`)qE`'bc`'|!{`(:\":`(8\", '`('&':`(($})`'I[`\"k2o`$A%`'G>` #! == \"-1\"`+[=box`+l+_\" +`#g#`+~#102`+r0`(b,box(` P$i, \"1`+F!\", e, 1, Math.floor(`1?!Date).g`'Z\"() / 1000));}}K = 1;`(c.`\"H%resizeChatfield(`/o'var `$D\"`%-'[0].client`)m\"`'@!` ?#< 94) `$w# =`!b\"max` l%`*@,,` y#);` E+in(94` 4&` y'>`!15) {`.O3` T#+ 4 + \"`.l!}`#s$`.^8auto` G!`2y0up(b`2|)`#15`,sW`-'0up`-),d`!!9a(\".`' &tabcontenttext\", $user_popups[d])`!T'` +K`!d8`.n!UserStatus`.S!(\"#` t&userstab_icon\").removeClass`(}(`!.!available2 ` ++busy` $-invisi` ;0away2\"`!\\(set`!['s` \"!` j~`!X0\");`,i@`!]\"`,w1` 5\":` <\"`/z/`\"K'howUserOffline() {w`+4!`$F-;`\"L:add`\"Q2`\"+)`#W*\"o`!0\"\");closePopup(`&8!` v!`&<!, $buddy_lis`&f!` ?*optionsbutton` I%` ))`!b5`'I!).html(`/ !7]`\"p(buildMaintenanc`\"x!$m` && = a(ArrowChat.Templates.` 9'_tab()).appendTo($base);` \\(.mouseover(`$<)if (c_guests_login_msg`1Q!1`2n!u_id` *!\") {showTooltip(` r(`19#58]`1,&` -;2`\"c!a(this`$d2tab`!l%\");}`!|1ut`\"\"*` i$`(>3` e+hide`!\\$` }!`$*+HideBarB`$~!`$6!hide_bar_`%1\"`$&5bar_` G!`$$4` Z+`$(4`#9)` E+`#C#14]);`\"zK`!(2`\"^k` u-click` t+`+a@etting`+~%hide:\"1\"});`+J-`)k)`2X$s`)k%` (&`)o$` D(applica`*2!` :#` Q%` )/);if (m !`(7#` T3` ])s[m]` `*` 8#s[m]);m = \"\";}if (j` d1`2j(j]`3 #s[j`%?!`3E(` P!box_bottom`3J$` F!`$Z4` E+_`$L!\");j`!P#`/,!Tim`%f!Z);a.idleTimer(\"destroy\");pushCancelAll();c` '!JSONP();`'}!.hide();$show`%X(show`)71Show`)>*` L+`)/9` G!`):.ody`!1/`)(@` E+`)D$5`(zN`!(2`(\\l` v,`)9/s`#\\\"`#n,` .%`)2X-`)i\"`4-*available\"`3&5icon\"`#52`(%!` Z%2\");w = 0;loadBuddyList(`&h\"Subscribe();receiveCore(`'5*60000 * `%{&I` 5#`#./`'9$`'I!`'.$`#+&tartCreateChatRoom() {var i`'$!`\"B(`,.$_c` L!_input\").val();var pass` 1!` ;=password` V+` gF\"`#|-` ^A\"\");i = i.replace(/^\\s+|\\s+$/g, ` :\"`,m! && `%f@`!)+`&)$userid:u_id, name:i,`\"|!word:`#!%}, `'T&e) {if` \"\"`/|%`\"($flyout`$k\"\"slide\", {dire` Y!:\"up\"}, 250`\"a5op`03\"` e\"\"`.'6` ;2_display\"`0m\"e == \"-1\") {` 3#Message` W1m` 6\"`!5$`,$#39], \"erro`+d! else ` s'2` AY40` k/{` M$`(|#d`)G%C` 2#`)L#}}`/N.` ;$s`/W'`4?,`/J5` ?&`/R.ase);` `'`38!` G?window()).css(\"`$;$, \"none\"`0U/`&*+`)L<\"` A.`#_#`*%=`&@$`\",(`/Q$ss(\"width\", c_` %!` W% + \"px`*!=`*1$`*$!holder`+#=`*e-` O*if (`!=-<= 25`28!` f0s_text\", `\"4-)`.V$}if (u`!B&block` *!s == 1` c5` D\" :`!e$attr(\"checked\", true`'N&` H8`1G3menu_un` j$`#%5`!);false`\"6.sound`\"#;` >\"`!dZ` _!`!c[`!);`\"*4tay`0J!`-A\"` d4tay`!c\\tay`!b\\`!)9`\"*3open`!>`+\"`!d[` _\"`!f[`!*<`\";(c_user`)&`1-!0\"`3j/`* %`,V/lick(`4Z&) {count`0p!`+29hideTooltip`*|$a(\".`\"+&tabaler`+E3length > 0`$2\"` 0Eremove(`.b0` 5\"`#l-tab_new`3]$\");}`2|/closePopup($userstab`2!\", $buddy_lis` i!` ?*options`!>\"` I%` ))`2i.`0\\\"lef`\"11.offset().left -` 6(` Y\"outerWidth() +` N0` 6'`3V#bottom\", \"25`1Y#this).toggl`##1`%Z!\"` )5`# $` @#`\"4.` `6open\"`1l\"`'$'hat !== undefined`'@*hat.scrollTop(50000);}`%p*` E%`%(#`3\"%focus();}`%g0mouseover`'~*`'e9`!o)` a%has`#/7) {`+@$show`(Y$` V-, lang[19]);}}`$A$`+G0tab`!t%\"`\"!9ut`\"/*` n$`(=6` m(`*A+`,J5password`#o%keydown`!1'h`#6#h.keyCode`3`!3) {c = ` W=d\").val(`!!>flyo`!?!`-:#`!N!_value` e@`!z#` fB` B(\"\"` |,` #'.replace(/^\\s+|\\s+$/g, \"`00\"`'60full_conten`\"(!tml(\"<div class=\\`$K'nofriends\\\">\" +`&!\"34] + \"</div>`)\\(`02+Ccr = c;`-S((c, crt[c],`!z();}`%3-`\"c%`&Q\"\")`0j1`$!~`$!~`$!~`$!~`$_@`\"[5stay`$j2`0V;menu_unchecked`/{#` j7 :`#n$is(\":` O%`!%!` 3?attr(\"` O$, false);` F%` I!= -1;`.p$` BQtrue);u` @+= Ccr` {-Ccr;}`\"<7window`\"'N` R\"`446`#j-` yC`#,3}a.post(k + \"includes/json/send/send_settings.php\", {`\"s):`\"m)}, `%|)}`&D8`\"C%`%dz`#MZ`&<F` I#`&D@` [<`&Y-open`&Z,`!'%`&L<`(iV`&&^`)dA`&(Z`\"b\"`&^&` *\"`&=Iblock`%h}`!!!`#WN` H+`&G<` I\"`&B@` Z;`&_\"` g-1`#p[` c!` q!s`$J&` 0!`$&Isound`0|~ound`()O` I*`1_=` J!`$N!`12(` /#0`1u=` p:`$Y+` o$` w1`$=\\` c!`0('ound`$^5.`!z.s_title\", $` )&popup`$u1` :'button` >#);}).children().not`!\")tab_name`%j2return`$@\"`!5Rmouseenter`&d2add`&f-chatboxtab` s!` ^!over3\"`\"YS` ]!leave`!/2remov`(-.`!&>`&P0create_`&\\$keydown`!.'h) {if (h.keyCode == 13) {startC` [!ChatRoom();}` z.` }\"`%#\"`$D2` T3`!]5`\"y!` U2`*n#`#i'smiley_box`#Z1`*w!visible`*t$` 4Fhide(\"slide\", {dire`!G!:\"up\"}, 250`(T/clearTimeout(Crref2`%K; `'p2html(lang[19]` K4_full_content` M$\"<div class=\\`%|'nofriends\\\">\" + ` x!34] + \"</div>\"`#v=`\"p!`!55popo`&H!` @#if (c_user`\"K& == \"1\"`*(`&!#.show();}` 0$receive`.L\"loadC` 2#List();var retain_ccr = Ccr;C` %!0`!5#push_engine != 1) {cancelJSONP();` }#Core()`/N%changePushChannel(\"`!M$\" +`!*', 0`(0%`\"^0`#0$`+g4showTooltip(`*_#,`$3\"92], 0, 10, 5);`,(<`!$&_hover`$R5`'Y#`&J(`,K,`+NW`\"C=`,hR`!Pj`/<Lhide`$=$`\"D!`!v%i`!z\"`(>1options_fly`(/\"`\" <` C*_display\");}`!'%kal`-B$`(N,` P#`-#.` 14`,]?);}}`$^3item`.p3`*R#` >72\").has`\"Z-mor`0f$_selected`/&/` [-toggl`#H.` Y2;}if (!`\"_]`,I!`\"=`+J#`#GZ`#H#`&20password`&=&`27;`(e&is`&R@`$}!`#3!` yE`%sC`*x5`&5#`-AO3`-_1parent(`-^;`$2#`,|~`-PJ`\"a(`-j/`,.*`\"A-`$]=`!le`-eL`\"4:2`+F2`\"@*`-I!`&_4`.N-`*n3`.=>`3_8`+W(`#;&` J\"`+gK`\"O=`'^N2`']O`!|2`'*~`%.H`'?j`!ck`'VO}`!}%buildPopoutChatB`!Q!() {$p` 0!` e!`!f# = a(\"<div/>\").attr(\"id\", `!/'` Q\"`!;!` P!`!J3bar_right` %7` X%html`!3\" class=\\` ?'inne` D$\\\"><i` 00cons `!X)in` 1!\\\" /></div`\".!ppendTo($base);`\"R/`%F\"ov`'y8` D/`(:#11]`*\":tab` x%`$F\"`!*6ut`!5*` p$`&@3` l+`'.*` r3`-@/` ~$`3p!);$buddy_lis` }!.show();$`&[#es` \",`%1\"` %-lef` ,%if (j != \"\") {$user`(#\"s[j]` =$}a.post(k + \"includes/json/send/send_settings.php\", {`&t&:\"99\"}, `\"/)});loadBuddyList();receiveCore();pushSubscribe();a.idleTimer(60000 * ArrowChat.I` 5#`) 0Application`)/\"s() {var pold = apps.slice();` S%mysortfn(a, b) {if (a[13] < b[13]) {return -1;}` 5&>` /,1;}` ##0;}`!'\"ort(` y$);for (b in`!F!`!%#typeof` -![b][0]`$B!undefined\"`!K$` 9#10] == \"\" ||` L%` .#0) {` &) 16;}$a`\"o&`&_#s[`!%&]`+`A` Y's`.B$\" +`!l'`)(2appname` ?)2` 53bar`'0!`,J3app`!3$\").css(\"width\",`\"[)+ \"px`,{$`%p&Templates.`!}*ookmarks_tab(k` e\", b)`,I.if (`#}&2`$!\"1`#{)9`$W\"1\" && u_id`$A&` )!`)<! &&` 85s_guest` t#) && c_no`\"V\"menu != 1) {`$U<`+E$`'*\"` 1#6`%t#` J2`*i$`$in + \"` x\"`$a6` 7$`$s!display\", \"none`$;Owindow`$X5ody);}}`)a! =`*|!`*q%a(\".`!N)_keep_ope`3c4menu_unchecked\"` F9 :inpu`'_!`#I!` M$, fal`&?$u`%+\"` K!`%k%` %,0\"`0W!\"#` s3`$ !` I(+ \"`!$6true`!t!` GD`2]5`\"]-}`\"^-`)}'`38%`2f*var c`&Z!`2v\"`&R%).substr(30`#&\"`'u1c].has`4?.ray`3|!\")) {} else`.4'c`+<\"<= 16`*.%` .#`(Q$showTooltip`!#4`,)#c][1]`#Q$}}`\"!%`%n/tab`\"_%\"`27!`\"q>ut`#$*` x$`#3` t+hide`!$` ~/traytitle\").`#,!`$,.e`$3'parent(`$;(;e = e`$F#ing(30, e.length - 6`$C7e]`,j4e]`!H#);}}).children().not`!t*ab_nam`!j3`4A#`).!`\"@:each` Q'i, element`#n!` $$`$.\"ent`'8,`$z8chatboxtab`!(!`%1-` o*leave`$fI` b:`\"<6 ` *'more`&P&`\".[`(P(`!u#, lang[23], 0, 10, 5);`\"z8`!G'_h`\"(#`$E6`\"FQ`#X?`(R*`#j;`!EJ`%9N`$@Ganchor`'2`\"&*`.@>20`0>/s`!\"\"popout`0O!c).toggl`3V\"`$IL` J\"` [\"` 69select`1+\");addH`0q!`\"k*`1W!item\"), ` Y,`$%2`2X)`-56`\"l;4` W<`\"]1`3:,`1e!`4$;c + \" :input\").is(\":` Y%`)c!` 3I`\"&\"` Y$,`-m\"`%X\"` N&id = -1;u`%<\"open = \"\";`3[$`\"A7` j=`!2[`3z\"`!]/c`!`+c`)f=`#,}a.post(k + \"includes/json/send/send_settings.php\", {`!y$:`!C(}, `&%)`*!0`!g!`.b%`&2Q30);closePopup`3p)` s$_popup, ` (0`)F&`3p%`3d+alert`.N%(`'+#pps[c][6] == \"\") {if (m != c && m !` -(` K!m][7` K!1) {`!]3`!f)s[m]`!i*` 8#` 3\"1)`&d%` -]);}m`'Y#`\"#\"`!v$` T7c].css(\"left\"` c3c].offset().left)` M\"bottom\", \"25px\"` /#width\", `#V$4]);`!\":`'@3tab`&a!hidden\"` F<`,50` \\#` F2` <6ray`'B!`,r$`\"##7] != \"1\" ||`\"6%14` .$) {a.ge`)0#`&{(/\" +` H%2] + \"/index`)5#`(D&d`-50`'z-` c(0` j!_content\").html(d`3z\"`!Y(= 1;m`+J!`&H$`&R~`&nbvar test`+>!`\"q'` L!s`4g\"m).parent(`+T(`$Z!` U\"=`3K(other`#N)`(/3s[m].hide(`(q'`\"4$window.open`+A', \"self\");}});}`$s%buildA`!('B` }!(`!*+`$}$`\"G\"<div/>`0U%id\",`!|(` E/`4<3bar_`*>!` %6` W%`%}!ArrowChat.Templates.`!\")tab()).appendTo($base`({*`/.*`!ZT` X\"`!b3tab` 7$`+y!display\", \"none`!eE`$f\"`\"\"+ody`!{2`,|*c_` %!`2d! + \"px`&S#` ,)<= 25`*9\"`1P(ray_name`.M+`22%`&U%var pold =`*W!.slice();`&8%mysortfn(a, b`1k$[13] < b[13]) {return -1`0<\"` 9\">` /,1;}` ##0`+>\".sort(` y$);`\"-!li`)N!`$m! style=\\\"border-`05\": 1px solid #e9e9e9; color: #808080; margin: 3px 2px 4px;\\\">\" + lang[2`,|\"</div><ul id=\\`%[3\\\" class` 4)connectedSortable\\\"`!f%list-` (!-type: none`!J&0px; padding` (\"min-height:20`!c#;for (b in`$5!`#t#typeof`/\"\"b`/#!!= \"undefined\"`$:$` 9#12`0]'` -(9`.u!\"1\" && u_id` *!`1?!` )!!` )!` 6\"s_gu`-&$` K\"` T.` <8`!8%`$w&+= `(<=bookmarks_list(k,`!2!, b);}}}}` `)\"</ul>`%-c8`%]364`%V:`/n.`$x~`$}y`$v\"`$x~`$x~`%Z<\";`.)!=`-G!`-<%a(\"#`2#'` n$\"`/G$`12\"`%\\!` i'`%Z$`/(#`\"3&`/!\"` g'`!i(, ` .'`%x.\")`-i!able({delay:50, `&%#With:`/u(`&3-\", scroll:false, axis:\"y\"` _!tainment` W)traycontent\", update:`0/%() {var result`4 \"`!YE\"toArray\");` Z&2` `!this` >(serialize\") + \"&\" +` =%attr(\"id` 5\"=1\";a.post(k + \"includes/json/send/send_settings.php\",`!5$, `\".)})`(`\"var b = 0; b <` F#.length; b++`\"`#c =` 6#[b].substr(17);`3s(`3w#s[c]`3y$`(+!c`)(# \"1\"`4-\"`\"f(`%Z4`#:3`!]62`!e/d`!o%2`!U@d].show`!q$d`!p%\";}}});} else`'c!`%'apps_subtitle\")`\"T$}` 5-_link:not(.ui-`\"6$-helper)\").live(\"click\"`$C+`#~$`%K.`\"-%9`)L\"`#l$6`+~\"\") {`$.4`\"F#closePopup(` >(s` D#_popup, ` (0);}` e4`\"\"!();}`+e!`)++`#&\"` ^2`!*\").mouseenter(`\"^)`\"Z%ddClass(`12(hatboxta`$(\"` ^!over\"` h\\leave`!22remove` |K` }0`!$\"ov`\"A,if (c_width`&H! <= 25` 2#` T1has`!?-tab`&4\")) {`'B$showToolti`%&2, lang[16], true);}}`#d8tab`!Fut`#$I` m+`\"]5hide`\",$);}`$_U`';\"`!U)`!x1`'^'` %7`$LB`!m+if (m`3V%`(u1m`) &m`,D#`!{6.css(\"left`\"E3.offset().left)` J\"bottom\", \"25px\");`$A$toggl`$41`&C#`\"\\1`!D#` C6open`%w\"}`#-%buildOp` c!B` b!`$+!o` ,\"` s\"`0j\"<div/>\"`-X', ` u'` E)\"`'02bar_right` %7` X%html(ArrowChat.Templates.notif`\"S%tab()).appendTo($base);`!t*`\"u\"`!VN` R\"`!W3tab` 7$`$j!display\", \"non`1m!`!]Bwindow`!w+ody`!v,`,P4`\"80`,34`%>\" || ($ == 0 ? `,@)` _)`,@#0]) :` \"A`':&`,?C`\"-0`,\"Z`*<+`,6,see_all_link\"`2S6`\"A(`!9#`\"?#21], 0, 10, 5`\"F&parent(`\"C2`!-$`$;#h`!d#a(\"#` ;&userstab`'&#`!i'` 2$`.8\"`2IM2`420`\"T0`3z/`#@*`\"<-`!33`!ak`#?0`!qX`0G/`!M*`)R*content`*)$`%@\"5]);var i = 0;a.ajax({url:k + \"includes/json/receive/r` \"\"` r*.php\", type:\"get\", cache:false, dataT` 8!json\", success:`!w&b`2U#b && b != null`!iJ\"\");a.each(b, ` r&e, ` e!` 5\"l` /(f, h` \"`-v;alert_\" + h.` &\"id` D$class` A*`!\\(_message_div`!c$h.markup`-f'`\"$A);i++`2[!);if (i`-=!`$kO9]);}if (a(`/7\").height() - `.Z2` 8$< 8` iF`0t!` U\"\", ` y1135);} else` @R\"auto\");}}}`\"u\"`.f+`(;/`\"U\"` s4`%)\"\").length >`#E;` G%`+H\"(`!1-`/_6_new`%Z$\");}closePopup($chatrooms`#|\", ` ''` s\"`%@\"Q`!L1`!5)`,1(tab`!k!nf`!f(a.post(`*I/send/send`*A1{userid:u_id}`(p() {});Q`+Y!`&F!`4I\"`#v#w == 1) {w`+y\"`.#2tex`'**4] + \" (<b>\" + R + \"</b>)\");`,5#Cor`\"+!(\".available\",`'?1`.!$);}`09*`'l1`&P!left` ]-.offset().left`(I4outerWidth() +` R-` 3'`'Z#bottom\", \"25px`1:!`1x\"toggl`%z1`\"+!\"`!j3` =6open` E-` 84` >#images_`!*$`'-(`2k*, $buddy_lis`!)!`*E%if `$q\"16] != \"\") {lo`&;\".href = ` 9$`+N~`+N~`,@,`' #`'h-tit`&t=`(})`,}1);}).children().not`!!)`+z!ame\"` ^1return `4_!;`!3Smouseenter` n*`'A$add`&.-chatbox` t$` ^!over2\"`/W!` nUleave`!12`.h3`!+;}` c%displayM`/A\"(id, `/L#, type) {clearTimeout(` 6#_t` *\"`/@\"a(\"#\" + id).is(\":visible\")`'6#` 5$hide(\"slide\", {dire`!B!:\"up\"}, 250`.Y+` T&`-y!`#5'`!A%`.>'` -#);type == \"error\" && `#p*` V$box`']$background-color\", \"#ffe2e2` :%order-`,t&1px solid #ffbebe\"`!1'notice` `Yfa` uDec`!8!`#b(show`#O;`%H\"`*j#`\"3~`\"3~`\"V[`%xI`#:N`(O+ = set`(s$`'a3`(1A);}, 5000`*0(loadChatroom(b, c, pass) {var global_mod = 0,` ($admin` ,\"` &!_markup = \"\";c` g#received = 1;a.ajax({url:k + \"includes/json/` E#/` M#`,6!room_room.php\", data:{` 2$id:b, ` ?%`2\"\":u` P&open` 6'stay` 3(stay` 4'pw:pass}`,k\":\"post\", cache:`0?!`!;\"T` 9!json\", success:`$+&o) {if` \"\"`-F)Crref2);var no_`(X! = true;o`'C!.each(o`,o(i, e` j#i`))') {` G#e` B(l, f) {` s'`26\"Ccr = 0`$$00;`%3(List();`/_+`0B+`#)!`&{$flyout\", f.m,`!V%`+*!}`/p\"`!F$) {`'.4`!I#`&[&`'#!30`'$!if (c_push_engine != 1) {cancelJSONP();` \\$ore(`,B&changePushChannel(\"`!{$\" + b, 1);}if (typeof crt2[b] != \"undefined`#k!`+Y)` ]$s_`34!`*`(tab_name`*`$lang[19] + \"&nbsp;&nbsp;(\" +`!&%+ \")\");}a(\"#`#[/leave\"`+8#`+M!`!9/_full_conten`+}%ArrowChat.Templates.`!s&`#i!));$` [%chat = `!13chat\"` C(`!X\"is` 97` :%\"`$c%opout_on =`$d\"`!y3` B\"\", `!'%s_popup`\"`%}` (Nmouseenter`&V*showTooltip(a(this), `$V\"17], 0, 10, 5);` 7#.addClass`(+1`\"=#hover`0U\"`%d6`!S1remove` l1boxtab` V!`\")!over3`)/\"`\"9S`&;!`0j,`\"@\"`!-7`!cb`#/4`\".4hide`$A$`!}Sunbind(\"click`!\\5` F8` U!`##*`1:\".open(`2;!public/` T$/?id=`+n#`+{&, \"menubar=0,resizable=0,width=900,height=650,top=25,left=25,scrollbars=0,status=0`%,9`//$inp`\"#3keydown`\"1'h`.}!turn`3$%K` >#h, `%a#` T]up` r=up`!!,var smiley_ex`, \"[]`!8+` 9#box`!&1`-a!\"\");for (var i`2r! i < S` W!.length; i++`4&#a.inArray(` =\"[i][0],`!@)) > -1) {`1E$`!+Iappend(\"<div class=\\`(7'` W#wrapper\\\" data-id=\\\"\" + i + \"\\\"><img` E5\\\" src` K#`'.!themes/\" + u_` (! + \"/images/smili` 8#`\"K( + \".gif\\\" alt=\\\"\\\" /></div>\");`\"h(.push`#'));}`/7+`\"q$utton`.wI`.^8` i)`,F%`'$-` vC`-?N` rJ`$q#`+TD`'}'code`4(!`\"d#ttr(\"`%V#\"`(L\"`$%!ing_tex`4R#`)ARval(`){Wfocus(` a\"\"\"` \"\"`!N*`&?%`\"2'][1]`$>4`*,4ide(\"slide\", {dire`#7!:\"up\"}, 250, `#D)}`%&Q`$'/`+(!`!@His(\":visible\")`&3!`!I}`+lPshow` XN});if (c_disable`!!!ies == 1`\"45`#l\"`\"7#`&*C).css(\"`3B!\", \"99%\");}o && a.each(o`!U(i, e`$I#i == \"user_title\") {` L#e` G(l, f` L#f.admin`!$global_` -# 1;}` ?\"mod` 4+` -! 1`\"u!` @!`!7\"`\"5!nam` x@typeof crt2[b]`!v\"ndefined\") {` 0% f.n`#&3s`\"D\" ` 0'tab`!;#`2~\"lang[19`/i!&nbsp;&nbsp;(\" +`!4%+ \")\"`%\"\"`!~,users\"`,F#longname;`!};(`#<*= 1 || `#0(`#I!&& f.t`%|%dmin_markup = `3+4`%p%options_padding\\\">` M!`3H!`&40ake_mod_\" + f.id`3f\"` f8flyout`,o!\\\">\" + `#I!52`#-!`3$\"`3*\"` }kban`#t!`!)_3`![-\"`$~\"`$1.`$%&2`#-~`3j\"`#Jc4`\"10`'%$`([#f.n` $\".length > 16 ?` -!substr(0, 16) + \"...\" :`)2$<div/>\"`4/$id\", `!K0`$F)).mouseover`0n*a(this).addClass(` W0list_hover\");}` d$ut` U2`#G\"` DF` ~9` I%`+;$\"<img`#{8avatar\\\" src=\\\"`\"\\\"a`$i\"/><span` C8` _!name`$m#f.n`$i\"span` F5`,4!contentdot ` 0&` ^\"status`!?\">` e#\").appendTo(`2s%`\"G&`1_!`$aHs`&j$`%+&`#>9` H(`#T&`(Z;`/^!`(OD` G\"`(5Y`(O$+ \"<br/`(}&4`+:.<hr` k/`*c$divider`%@!`*Pjvisit_profi`!o\\`\"5!`.Q}private_messag`!/`1`0D}lock`0`c8`.o/ + `0x(`)P'a(\"#`-~=);if (`1e(` @2`($*`).#`'J74]);} else ` v'3` 7f5]);}addH`06!a(\".`$*>\")`+x)` /+`/R%` W$UserO` >\"(f, global_`#i!);});}if (i == \"` k!history\") {d = \"\";a.each(e, `1'&l, f) {if (typeof `%^!List[f.userid]` p!undefined\") {l` l\"from`4$'`#V\"n == u`/x!` B$`/>'self\";}var sent_ti` Z!new Date`$7!* 1000`%E$`\"D\" == 1`\"'!+= `-=box`)O$\\\"`'u5`)c2`(s=` O$`1b#`%A! +`\"9)`$7#` C,`2e$ormatTimestamp(`\"`%)`!D!m`(f-`'5$`!\\~\"><img`\":@avatar\\\" src=\\\"` `\"a`+G#alt=\\\"\\\" `0$>` h$nam`\"w%`&/$+ \":`-\"B`#|4`#8V}});$` w%chat`*`\"`#y!` p!`#-!` I#);showC` H#Time(` N-scrollTop(50`'[!}}`'^\"c_disabl`#M$s`'h! || `,1*setting`#&!s_only :input\").is(\":checked\")`,t\"`+q0` |\"\").addClass(`#D'hid`!;%\");` L3`%4*` EB}` M;`!$focus(`/%%`,4!c`0@\"` L$`\"y!\"1\") {`#V'reate.show();}}`$Z!}`,%receiveUser(b, c, d, e, l, f, h`-;#!(b == null || ` (!\"`#H!if (uc`#t![b`-K!` =$` (*\"\"` F#aa[b] !`,N\"` '\"= 1;a.ajax({url:k + \"includes/json/`!`#/`!h#`\"S!.php\", data:{`.k\":b}, type:\"post\", cache:false` E\"T` 9!json\", success:`/m&o`!`#o) {c =`!y) o.n;d` /\"status` /$s;e` 1\"`$r\"` /$a;l` 1\"link` -$l`'U!G`\"_#null`&b.losebox_bottom`!&#\", $user[b]).remove`&,-available`.H'busy` $'offline`&g3`)z!);`!$!s[b]` q4tab` K;tab` i!c` g#_popup` o!length > 0 && `\"N*tabsubtitle ` ,'`((#`\"\\$` c&)`+w\"i);}`&&$0`+6\"`#T'toggl`'`!ChatTab`'[-`+h$mobile_device) {` *\"Support`(\\!`)9#a.post(`&y/send/send`,/$s`'##{un`*!!`)l!`'&!`&N&) {}`)Y\"`*9&se`.t!out(` <)`)e+`&y&` '!`&q%` )!`&h%` )!`&a#`*5#;}, 5`.I\"`!+#`\"s1` KQ`\"'!`!m%`#]?`)1\"`((+`+w!`&b&has`&30click\") && f`+R$if (j !`+r#`(l!Popup(`%r)j]`&)#s[j]);j = \"\";}if ` B\"`!1!offset().left < `.7!boxes` ,++` /(width(`!P!` S4-` Q6>= 0) {` P&`\"?!`/t'`(D-alert\").css(\"display\", \"none\")`,;!80`(4\"get(\"initialize\")`3Q!) {e`(X!}`!K'`42$`\"e&`$M!`&b)`!S.updateRightLast`$O!es();positionTabAlert`2,!);}}` 95`\"H$`!J&_wide`#X#`!`&` *() + 148);adjustBarSize();shortname = c`+|&12 ? c.substr(0, 12) + \"...\" : c;long` D/7` G,7` I*`\"p% = a(ArrowChat.Templates.`$U$(`!Q%)).attr(\"data-id\", b).appendTo`\"A,`.}(` >\"(\"<div class=\\`(='`0^2`0-'`/u! + \"\\\"></div>\"` r)`/H7`0D)` zJ`!!(`2H9`/r$`/n\"mouseenter`-M*a(this`1;2` b+hover\"`&[!` iLleave`!#2`2x3` Wa`(y\"`!)*`0sO` !`1=#, tab_`+7!:1`1>/`4J,`\"9\"(`%$(` *%`.M\"== b) {`.#$`)JJ-`)r\"`+m0\"-=148px\"`*%.y`(}\"null;`0\\!` %#ca` '\"0;});i = c`!O\"if (l`02& = \"<a href=\\\"\" + l`( #\"` Q!\"</a>\";}l` T&e` U%` 0!`'T3`2v\"box\\\">\" + c + \"<img src`!$#e`!%\"` E5\\\" /` X!i` X!`(E\";}`$)+`+C:window(c, `,a$, i`3r!b)`094`+h'body`$x\"c_video`%w!`3a$a(\"#`!k&` 6&`*t!b).hide()`3N\"c_file_transfer` M2` 6)` P2popout_on` W'`(Y(hat` =#\"` Q&addHover(` ?*`!h&\"), `#u'more_`)a$var ts67 = Math.round((new Date).getTime() / 1000` M\"path = k.replace(\"../\", \"/`-)\"`\"G,upload`\"M$` (\"ify({swf:` h!`*:*/` :%/` D%.swf\", ` *\"er` E.`&F!es` \"\"`!,#`*u$hideButton:true, b` (!Text:\" \", wmode:\"`$;!parent\", formData:{unixtime:ts67, user:u_id}, height:17, `*J!:42, auto`!##fileTypeExts:\"*.jpg;*.gif;*.png;*.zip;*.rar;*.jpeg;*.txt;*.doc;*.mp3;*.wmv;*.avi` -!4` 8\"x;*.wav\"` |&Desc:\"Supported File Types (.JPG, .JPEG, .GIF, .PNG, .WMV, .AVI, .MP4, .ZIP, .RAR` -!3, .WAV, .TXT, .DOC, .DOCX)\", onSelect:`0K+`&c(`%;#info_tex`'6'` 31` &9i_`$X\"\"`*>#backg`'5!`*>&` 3=order` E'}, onCancel`!w-`'83div`){)\"slide\", {dire` ]!:\"up\"}, 250`\"33`\"f(show`\"S;` -2`\"T:#5B74A8`\"IH1px solid #999`\"w$U`!F!Complete`\"x+`4/?message`4I$userid`(c!, to:b, ` ;#:\"file{\" +`,8\"+ \"}\"`4Z)e) {`1l\"== \"-1\") {`/f#M` ^\"(`-)'`3q#`!9$_flyou`/D#, lang[102], \"error\");} else` 5[68]`&<!tic`&>!`#q*tabcontent`$w!, `2N+).scrollTop`/M+` 9=[0]` V#H`,9!);}`.\\8`'9,`&)~`&.y`\"62c`*7!`\"@$click(`)Rs`!+2`0w!fer` zE`4E!pop`&.%).toggl`$:#` :,` 6)Class`'#(` >!`#>\"_s`/*!ed`409`\"J'`$e!`\"$Mvideo`(B!`!P~`\"'Gvar RN = Math.floor(` &!random() * 9999999999);while (String(RN).length < 10) {` g!\"0\" + RN;}`-<(public/`\"d!/`\"i\"session`-;$room:RN`,n)sess`-?n`!:!`.-!sess`-0~`-y5jqac`*0&.`!S!With`\"R\";`-sZ3`-O~`.'F}`(0!var smiley_exist = [];for (var i = 0; i < S` A!`&8#; i++`$,#a.inArray(` =\"[i][0],` j)) > -1) {`#`$`!t*` D#box`\"D0append(\"<div class=\\`#o'` V#wrapper\\\" data-id=\\\"\" + i + \"\\\"><img` E5\\\" src` K#`'P!themes/\" + u_` (! + \"/images/smili` 8#`\"J( + \".gif\\\" alt=\\\"\\\" /></div>\");`\"g(.push`#&));}`%E+`\"p$`0w\"`\"h/mouseenter`,I,this).add`+i-` h)_hove`'|!`2%,` vBleave`!&2remov`-'.` qJ`$o#`!,0`.}/`'C'code = `\"`%ttr(\"`%S#`.A#`$\"!ing_text` G!`(i)extarea`!'0val`/n\"` )Cfocus(` R\"\"\"` \"\"`!0*`%~%`!t'][1]`#~4`(42hide`2L;`.)() {`*`\"`$kK`#g/`*d!`!?Gis(\":visible\")`3e\"`!H{`+GOshow` WN});if (c_disable`! !ies == 1`\"25`#h\"`\"6#`&$5).css(\"width\", \"99%`0V1title ` )'more`*vOshowTooltip(`(e#`2'#23], 0, 10, 5);`+V8`!1'`*H%`!\\2`!G0`+13`3j#` R$`!|!`+54`\"9T`,k/hide`\"i$`\"L&`!M3`!{Z`#70`\"5=#`!/+\" + b`)^1`!z,` J-popout` Z$toggl`&t\"`$ZL` J\"` [\"` 69selected`!z0block`!t7`!UH`\"n4`!5J`&\">close`+E3`!}\");a.post(k + \"includes/json/send/send_settings.php\", {`\"f\"chat:b}`+s+if (typeof ` B!List[b] == \"undefined\")` ^#` 5% b;}loadBuddyList(`#!`#v-clear`#%~`#YJ` ]'tabcontenttex`!,%htm`3u!`#9Q`\"M\"`#X2`3,0`/$%`%#/keydown`#)'h) {return userchatK` >#h, `.K%b` WNup` f=up` c>`')K`08N89`0AE`-8#`-.%`!D!`/l~`\"/_`0X/`0>;`!j^`02K`0#*`!v]`0q>`(wQose`)E#, tab_alert:1`)F/`!C+`#a#(` 2#` %*if (j == b) {j = \"\";}$`#&#es_wide.width($`#<#` (*) - 148);` 5&.scrollTo(\"-=148px\");adjustBarSize();G`.X\"null;y`.d\"` '!ca` '\"0`#bChat`.B#`(nc8`)(I`/]$h`&%#`(O~`\"._`(~R`!qV`(N~`\"7;`)@/startP` M!Chat` Bc` &!Window({w` #!URL:`*F!public/` W\"/\", height:650, `(h!:900, top:25, left:25`!>5`!,0not` ?)`!c(`\"R1`*i&` 7\");}).children(` _.tab_name` X2`3b#false`#66`)=H`2R?`'~I`0vn`!(3`#O&`!gPtab` d(a(\"div`!t$`([6` K(text`!61`!xN`!+?` 7?`!=0`%q/var tba`/~!if (`$W-`2T!`!0*length > 0) {` W\"1`%/.` F/`2b5`!v0_new_message\"`1y%0`1w$0;}`!j\"`#F\"has` Q0`\"M!\")) {closePopup(`&d+, ` ^#`'6,` N!box_bottom`#^A` E+_`!:#;j = \"\";a.post(`,=!includes/json/send/send_settings.php\", {unfocus`'}!:b, tab_`#X!:1}, `$a)});} else {if (j != \"\"`\"C7j]`\",%j]`\"7Ej`\"'U`$O!!`!>\"`%;!offset().left < $`*A#es` ,++` /(`/;!() &&`$)&` A+-` Q6>= 0)) {` 6'scrollTo`!P&);updateRightLast`\"F!es()`!\"ca[b] != 1`.e!ceiveHistory(b);` 9\"= 1;}`$`P`$z4tba`%!/`'B+.css(\"lef`)2)`\"n.` G+outerW`#S#+` M(` .')` w\"`%I%\"25px`,A!`.\"9`%@#` *1user` 9&`!|-` [3open`-X\"`)JD`2 1`&t7b`-L!W`4O$`(I&`\"]\"position\", \"absolut`4C!ss(\"top\", parseInt(a(window).height()) -` 5&` j1`!{#` ,:` e&+ ` {&`'E$p`$c!\"`$;!}}`.p-content`0D!`45/` \\&` +K[0]` V#H`!Z!);getStatus(\"`(p!ingsession\")`(^! && ` w+extarea`!F0`(8!(`27!f` V%`26,)`0?&`0R%`)s!_disable_avatars =`)~\"`!2*` 7\"box\").hide(`&F!#` 7&`)k#_names_only\").parent(\"li` M&}}}`)g%formatTimestamp(b`3{#c = \"am\", d = b.getHours(), i` *$Minute` /!e` ,$Date();b` ;%onth();var g = d`\"O!d > 11) {`!#!pm`.a#` 2!2) {d -= 12` .$== 0` 1!` )(< 1` -$d` .\"i` ,$i = \"0\" + i;}var l = [\"Ja`(7!Feb\", \"Mar\", \"Ap` \"!May\", \"Ju` >!Jul` 7!ug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"], f = \"th\"`\"2!e`$V! || ` %!21` \"%31) {` G!st\"`2k$` J%2` I&2` @$nd` 6.3` >&3` @$rd`#6#c_us_time`/z&turn ` +!Na ? \"<span class=\\`,R(s\\\">\" + g + \":`#4! + \" \" + e + f` %%l[b] + \"</span>\" :` EN` T$`\"8$`!6Pd` f)c`!\"h` h/`!h&`(Q&`3R- {a.ajax({cache:false, url:`3X/` X#/` `#_h` b\"`3i#data:{chatbox:b}, type:\"post` 8#T` ,!js`/l!success:`3&c) {`%R!`+9-`.(>html(\"\");B = null`)z!d = \"\"`*Z\"uc`+c![b], init = `\"J!;a.each(c, `!A&e, l) {`'4!\"messages\"`.>!` H\"l` B(f, h`'U$`(q\"h.self`-O$fromname = u`!@!;` F! `->(lf\";_aa5 = _aa4` e\"`-|\"` R!` %\";tooltip = lang[90]`&j%` {'i;` \\$<a href=\\\"\" + uc_link`&<#\\\">`!+%\"</a>`!%(c`!+#[h.from]`!/'`!!$`,C\"full`\"0!` .(var o = new `.;!h.sent * 1000)`0_#show_` V&!= \"1\"`%>#` c$.indexOf(\" `2C\"-`#C+` @%slice(0,` (&` O();}`+o!`!B#- B > 60 || B =`%n\" || N !=`\"*&`!F#`%j\"= true`/<!+`#-!div>\";}` (#div`)Q/`(*#`%}#`%('clearfix\\\" id` F)` E#_\" + h.i`*8!\\\">` \\Afrom\"`+I$` ;6`4Q+`\"G!`+E#`#R%`+@!div><img alt`%~#`%A$` |!`!76` u#\\\" src` T#`&8#` T\"/>` x#`!t@_wrapper`\"@D`+(#`\"_(` '!ormatTimestamp(o)`#_!`$6$`\"I&`$u#B = `%l\";N `%M';`+;#true;last_id`(B$` N!id`)O%`%T'`$dA`!dT`!t/\";}});});a(\"#`-w4`!:!b`-{$<` S!`0l$` `#);showTimeAndT`%:\"(`)~$`%}+`-0! || `!&*setting`#9!s_only :input\").is(\":checked\")) {setA` i!Visibility(1);}`!c@scrollTop(50`+g!}`\"_!`/%%`!v0`1 ,`'5*\").mouseenter(`/m&) {` h!` _#a(this), ` \"#.attr(\"alt\"),`1&\", 55, -38, 1`$0$` v=leave`!)*hide`#}&` P4`%H#`!d7`!b$children().` \"%` W6`&X$` 63ts\").show`!1F`\"0/` avhide`!U\"`%G*ChatroomTime`%=2room_box`)q$`#.H` W1`*Y$`\"r\\`!A4`#4@` x]`#<0notifyNewM` c\"(b, c, d`3I#uc`*c![b]`3o(` (*\"\"`*c\"Timeout`!x*` g5;}, 5`*Q!`.W#receiveUser(b,` y'` '!status` &$`)2\"` &$link` '!1`-$\"d`,u!`!{#`#v*tabalert\", $users[b]).length > 0) {c = parseInt` 9A`.j!)) +` M&c);}}`.P! ==` q!` G%.removeClass(`0O'tab_new`%O&`%o+`!&2` g\"(`#<&`!~Q`!}Ec`#[\"bounce3`#_$` &% 0`!PAstop(true,`42!).effect(\"` c\"\", {times:3, distance:5}, 200, `&2)`!1&1`'S!`\"_$a`2z\"/>\").css(\"top\", \"-11px` ,$left\", \"112` 0!add`$#0`!|\"`\"Y%.appendTo(`\")&;}`$NN` w4`%7+}y`)\"! c;positionTabAlerts();}`-O'`3x/b`'~#b`$C$`$1*userlist`1~&`!@0hide` ;#s`&f-`, %`2b%` )V`,d$` -Z`4+)`-,#` 8*disabl` ]%`+c!`/.&`2K8_wrappe`!D4` 722`!O4`2Z-` R>` E#2\"`*H&`$S<`&Y3`$GK` )Y`$h-` 6T`$o)`$;1`$e3`%31`$c5`!H3`$?\\` RA`$v(`*3&buildBuddyListTab() {var d = \"\";$buddy_`%5!tab = `-6(attr(\"id\", `!-'` E*`&H3bar_button` &7righ`-Y%ArrowChat.Templates.`!&!`!\"$()`-x(base);`-y\"tab_popup`![A` E*`-w6` 7$`/o!display\", \"non`%V!`!S>window(d, _ts, acp`!u*ody`2s\"c`&P,`.M'#`!K&name_box`&l)` 5'setting` C!s_only\").parent(\"li` M&}`%)+`\">\"width\", c_` %!_blist + \"px\"`!`$` .(<= 25`!T-`#V%tex`$x!`!,#` Z\"theme_change !`0i0` <\"`%s%` W$` 7*powered_by`$(5`(n+search_friends`!U$placeholder(`\"=\"u_sound`#k3`#Z$` ?! :inpu`.\\!`&D!checked\", true`.=)` K4`&G3menu_un` i$`$p4`!';false`#s#u`$N\"_open`!}:`'/\"` C\"`!dY` ^'`!iZ`!-A`\"?*no`(L:`(8.`!nZ`)%)`!pW`!,@`\"B$u_is_guest`\"?! && c` *\"`+#\"`(~#` 4$u` 1' == \"\" && `(7*enter` X\"`2,&`3&&`!f'` }'`!`$`(^*` .=keydown(`1c%(h) {if (h.keyCod`!v\"3) {a.post(k + \"includes/json/send/send`#;$s.php\", {`-i%:a(this).val()}, `!(&data`!.#data != \"1\") {`+G#M`3V\"`1k)`/U%`4h$flyout\", data, \"error\"`%e)`#B=lideUp(\"fast\");u`$?# `!n);}});}}`,TBkeyup`#R'`.7-` P#not_f`,$#remove();var i = 1, e =`'}!, l = \"\", f`!G-if (f`&.\"` v-userlist\").each`!D*l` `'`4D%).substr(19`%w,` e$_\" + l`!i$`(|-` >%hover2`',4` `* + \" > span`!p+scontent`&(!icontains('\" + f + \"')`#4%Highlight();});e =`)j\"`%73`\"?[if (`!8xlength > 0`-q-`#K\\i`,0%` Z:`-y0` d-`#w~`$l)` 2xh` %f`%s(i++`1,3`#!,hide`+$$e`#Y#<div/>`0b&lass\", `#H'`*^, ` 1&no`+T#\").html(lang[26]).prependTo`!A-`\"E$\"`(\"!a(document).bind(\"idle.idleTimer\"`.i(`.j#w !`4T\"clearUserStatus`#k1stab_icon`3h3user_away2\");set` d'\"away\");isAway = 1`.=#`!c,activ`!;V`!&,vailable`')1`!jB` [$2`!s(0`!y\"`!^&(60000 * ArrowChat.I` 5#`!+,theme_butt`!5!click`0S-` ?-`2Z#).toggl`*R.` :(_`3S#`\"P\"`(7'` ?\"link`\"<3`!P(`*S\"` F:`!63mor` ]%selected\"`2L\"` Y\"switch`.V!` k-` 6\"`4N!`2T\"a.post(k + \"includes/json/send/send_settings.php\", {` e!:`!!(}`%~(` 4!`#Y-css`)w${href:`!.!external.php?type=css&t=\" +`\"!)});window.location.reload`1`\"`'j!`!\"(`!l#_sound`%14`1S\"`#O4enu_uncheck`#\\!`1Y.` x) :inp`& !is(\":` O%`\"X-` ?3`,r#` P#,`-p\");` A\"` 2! = -1;u` ,\"s`(C\"`-|1` [Ctru` p-` s)1;}`%+P` [!:` m'`%Q)) {`$58`% \"_ope`)g5`#od`! '`$,M` G1`$K4` G\"`$Y'`$9:` WA`$V#` m*`#zS` _\":` a(`$'Hnames_only`#R|`! &`$ M` G0`$93setAvatarVisibility(0);` ^!`$<E` l@`$^\"` {01`! +`$BSname:` _&`$IHblock_list`$W:parent().` \"#`1&(inner`${!\").hide(`2@,`! \"` ;#show`1M!ajax({url`0>\"`\"@*receive/r` \"\"`!^'`\"O#type:\"get\", cache:`$s!, dataT` 8!json\", success:`\"/&b) {if (b && b != null`&/\"`!b1 `3|\"\").html(\"\"`\"=!<option/>`%,%value\", \"0` C$lang[118]).appendTo(` e=);a.each(b`$_(e, `!_!` 5\"l` /(f, h`!y\"`!:6h.id`!N#h.username`!(J`&$\"}}`%~0un` M\"butto`/<5` w(panel_item` E%);var ` c$` r\"ser = `#x>val(`+P\"` N.!=`$.! {`(KP` c(:` k-`(~,if (typeof ` E!List[` E-]`!N!undefined\") {` E%.splice`!u., 1);}loadBuddyList(`$+#`)\",theme_link\").mouseenter`$!*showTooltip(`*B#, `',!94], 0, 10, 5);`*U-add`/P-`!-\"`%9\"_hover`(@\"`%X(serstab_popup `!e'` 2$title\").remov`0S.chatbox` A$`\"4!over2\"`&j$`\"G9leave`\"V*hide`\"\\$`\"6/`!13`!_i`#90`!oV`)$/`\"4,`!V-conten`,z!eight() < 150 ? ` @*`!$\"flyo`2D\"`!q%` -\"_revers`'K!:` =:`#L)` M-`!V+` M+toggl`#}4` e#display` f!`$n\"`&iG` K\"` p3mor` J%`+w\"`!m!if `-t+`,s)has` CC`-J:`!'J`#9*`05\"s`#(=` :*`#@'`+V.`!O)`+6N23`+6N`\"?(`*e~`(|>`\"Q.`*~e`!_h`+%]`4</`*os`&w-`+<H` L-`+=I`'b]`+R8`$Y2`+'b`/w)`+2W` [)`+1X`.WY}`!G*inner_menu\").show`&;\"` 7'block` :$hide(`'<\"ddHover`\"~+menu`'C#, `\"),`(s2gooffline`'g2`(*=`!a,`)O,`\"i3` :)`#l$` m!\");pushCancelAll();c` '!JSONP();a.idleTimer(\"destroy\");clearTimeout(Z`&%\"j != \"\") {closePopup($user`+R\"s[j], ` ,!s[j]`!|,` P!box_bottom\"` ?(`.*5` F*`\"+%j = \"\"`%<!`#s'`#K\"`).#`.~6` A\"`$Y$showUserO`$S\"`+2tab_icon`-K3`\"_!invisible2\");$`-n#es`&<(`.>S`%w/$buddy_list_tab`%v%}).children().not`)i*ab_nam` ]3return false`!3X`0<!enter`'n,`,{6`0b>` qV`3V/`!C$`&?4`!0:`#m,` 7%` w*if (c_width_blist <= 25` 3#` U,`.Z0tab`'k#) {} else {show`3:$` V+, lang[4]);}}`#S8tab`!l%`!x8ut`\"kI` h+hide`!b$` p1`&R/`\"{6` _+`+x(chatrooms`%L\", ` ''`-H\"`,\\\"w == 1 || bli` '!`,h!`,y.u`!6\"_open !` B\"loadBuddyList();}` _! 0;}` q&) {w` /!`&z3text\").html(\"<b>\" +`$K$ + \"</b> (` 1#R` *$)\");receiveCore(`/M\"Subscribe(`.|.`/I(60000 * ArrowChat.I` 5#);setUserStatus(\"available`2'-`,|E` Z%`-6+`4(#`$I)`/\"#`1h#`$R$` )));`0>\"`*D%.css(\"left\", `%,offset().left -`0y#` R&outerWidth() +` M.` 4')`!#\"`1b%\"25px`\"r!`'{\"`3r3`)g&`4+<`2\"$`!T,` _6open\");adjust`&`%Siz`0w#}`(_%startPopoutChat() {pushCancelAll();c` '!JSONP(`%b*\"destroy\"`&%.`,B-`24\"$p`!&!`-q!`)(#`%($`2U.` *$_right` %-lef` ,%`%`(`\"x*`%*-` ?*`%tA`*lPj != \"\"`+0!`!N*` S\"s[j],`&P#[j]`(a!`1S'` P!box_`&.%` A&`125` F*_`%p$j = \"\";}a.post(k + \"includes/json/send/send_settings.php\", {`$J\"chat:\"1\"}, `.U)`%~)`&91 {var searchHeight = 0, name` $(powered` )&`#@!`+L*` `\"_friends\").is(\":visi`,#!) {` y+` @;`* !` G\"()`.u\"`#w*enter_name_wrapper`!!0`!~)` >?` v=`\"e#_by` {0`\"z,` A7` u1window` .+`-*4` 7%<= 70 &&`#E+` O!content`!!, <`#r,` I!`)C!`0T'` F++ 0 +` >6wa`\"(- + 0) {`!<9`.}!h` L!\", `\"K6(94 +`'!*+`' (+`&{*) + \"`/h!} else` yI\"auto\");}`(R-ar`(U$if (c`-h\"maintenance != 1 && u_id`+_%if `,[1 !== undefined`)K#d`(!`%n*notification_message_div\").each(`*N)d += parseInt(`2D$`#C)) + 5;}`-J\"`#j&`\"[\"`&N\"`!\\/` 6&< 8`&@/`!Z(s_`#S&` M&= d`%?-` >4`%A4`!Z'110`$h;` WB`%&&`4!3var b`*-!`!>$width(), c`$J!`2a,as`/r.`2u$r\") || (c = 19);for (`%0\" d < barLinks.length; d++) {c +`)f,trayicon_\" + d`$}#W`!T\"`+O\"`$Y*`&?-` o!` 6*` Q0`38,` Q3` 7,` X/`!r*hide_bar` I#\")` c2` 6;` x+var i`#I!`#T!bha in apps`)C#apps[bha][12]`)_!1\" && typeof $appl`)$$` ~\"s[` J&0]` N\"`!]%\"`\"W%` 8=`![+`#W\"` K'`#A;` 7/`#P/c_no_apps_menu == 1` Z$130` >\"`&4+ > `**!i >`/,!` H!30;}positionBar(c`+(\"`,gI`'m#es_wide`(M$ <= $bas` '&- 250 - c) {` K&`)`\"` ?!\",`&9\"` [.)`)3%es.scrollTo(\"0px\", 0`*n&b `&{#` D\"` W#;var ` l)th_value = Math.floor((`!W5/ 148) * 148`\"{\"` Y1<` A\"{` t4148;}`\"C4` ?2`-2$c`\"$2b != c &&` 1(`\"w&-=148`\"|%c`-\\* !=`%L\"`/r1`!W!left\",`+,-ffset().left`0O4`'(( +`+d8`/\"#bottom\", \"25`\"M\"`&`!`+g!`!a&`+u&`!T/`,*.`!Z,` O,`!V,`,a9`!Q4if (`+E/` \\$`!%\"`+=/_` @)`*m!`\"?#` M5`\"B*`*w1`\"G(`!Z4}$userstab` c0buddy_list_tab`#3.` M+`#4,` O,`\"{Cm`+M%`.1/`!%\"s[m]`\"I5`.e%m]`\">Cif (j`,^*`\"6![j` S+ <`(s(` -*`%n#`)J)`$_!` T3`&^#` W0>=`.t!` U!`\"I$j`\"B+` \\6` G+`$&,` O&`#m?`.($closePopup`\"u\"` v&`!@'`,6#`\"-?`/N\"` 0,(`.X'`#9/`.U#- 1`.Y$`,w0c, 0, function (`#@$`#<\"lick();});}`2F%TabAlerts();updateRightLastClasses();W && ` J$Arrowchat`3|&mobile_device`3$` /\"Suppor` G!}`!O%`3`(`4Z!tray`/k\") {var window` -\" = a(` +\")`/j%`!3\"bar_fixed`!-$`1v\"`0d*` <&` |#` M,_alignment == `&?\"` ^*`&Q#` N\"padding`\"U%` P4center\"`\"+#left`2Z%`\"(#`\"9#-`!Q/ / 2;`!0.` \\&` ~=righ`\"#!`!--` }<` {9` H%`\"]&`(@$var check`$O%parseInt(450) +` &&`%%-` 1'` r) * 2`$K\"`!i)<` }() {`%a+` 2';}`$I; + \"`*J!`%i/`\"u1`!M)`'C/`(h'`\"n\"$`*>!= a(\".a`(V$_tabalertlr`4M$box_`/&!;` Q!`$\\!` 0C` G!);`!%!.html(\"0\"`,q#display\", \"none\");` u\"` &>`!$2\").each(`+Z)if (a(this).parent().attr(\"id\")`0{!` a&chatroom`4H$\" && !` O-has`, !(` P'`%u!` O#)`!!4`17]` S;`1]>` Y$`#J,block`0q'` 04`#{#`!{?`!*>var b =`%_+`\"Q5` 8#`\"f$- 30`%e)`){&`&PE` S\")`*U*`\"0#` 4#`\"]\"{`\"\\#:`#\"#`+t\":b}`#(&`!})`'k!`!p5` 9!`!~&22`(5(`!ZI`)R!`!Aa}}});`++&`3\\4`$L&0, `#@!_last = false, lr` $$`%`!`$N+`(F0` 5)` i!`(\\!` p)true`0s\"` FGlr` d!`!M!` O.es.scrollLeft() =`(9$`#g+text`#\\3\"0\");`$h*add`!66ef`\"8$`,T+previous_tab\")` P1` 7(` ]$b++`&V%var i = Math.floor`\"15/ 148`-s/`\"/7i`\"8,remove`!i^` Q3`\":0`$A9`-\\1=`)H&es_wide` 3$`$e@`*w(`$|*`&U\"`$o8`'@(`\"R+nex`!*!`$q3` 7$`$p0`$q+`\"b'`\"0) -`\"ZJ)`%)F`\"h(`%H(`\"l\"`%6;`\"OB` N3`\"h,`%I!b == 2) {`#pGlr`)GJr`2k'`\"\"J` w/` .@`\"5!!`-BS &&`.k(||`3/,` =H!` \\*`!(Hlr` ]\"lr` uK` Q$!lr) {adjustBarSize();}`1X&`'Q\"C`'E$(b) {if (j != \"\") {closePopup($user_popups[j], ` ,!s[j]);}`3S2\"`3.\"\"`3-#\", \"none\");var c = 100`2?!get(\"initialize\"`+t!1) {c = 0;}`);-To(b, c, `\"$%(`!l-`-(!`!]$.offset().left <`)y(` -*`-31&&`\"F&` A+-` Q6>`2k\"` P&click(`($&j = \"\";}}positionTabAlerts();updateRightLast`%+!es();});`$Z'et`\"f!) {V[b] = c` 3'get`$r!return ` =!? ` \"!:`!5!` >(Statu`%A\"` I#xa` K\"` \"\"` C+receiveUserFromUserlis`!*\"if (a(b).attr(\"id\"))`3\\\"c = ` ++.substr(19`\"p&` C$\"\"`*(\"c =`&l$` Y$parent(` Q5`!U'(c, uc_name[c]` '!s`\"H!` &$avatar` &$link[c]`#[(chatroomListClicked`\"@%`%;!room_create_flyout.is(\":visible`\"[!` 14hide(\"slide\", {dire`!1!:\"up\"}, 250);}`\"h#`#E2`#7<`\"mS` R!rt[c]`0@$a(\"#`+f*`\",!password_` ^!val(c)`!d#` ;1\" + c)`,O5`\"\"`#b\"`\";!` w<`#D\"\")`#&B`,B*` e%list`3&6`!F.`'%%` (d`\"o:`3M4` V+`2X!`\"gE`&t-` 1Eshow`#K;`.q+`%[=np` u!focu`-!$`#X&`$Rj`!B~`!zF}`%i;full_conten`\">!tml(\"<div class=\\`%F'nofriends\\\">\" + lang[34] + \"</div>`%\\#`$`~`,QC`-F,` Q\");Ccr`2)!loadC` <#(c, `,*\");}`.t&addMessageTo` B%b, c, d) {d = d.replace(/</g, \"&lt;`)X!` /#>` 0\"g` (*\\n` 2!<br>` *)\"` H\"quot;\");d = ` 6#URLWithHTMLLinks(d` 9\"smiley` Z$d`#h9m`\"'\"`*T!b).length > 0`#d6` F) + \" `%v0` >$`%~+formatTimestamp(new Date(Math.floor(` ,%).ge` G!() / 1000) *` \"\") + d`)k&`$o'hat.append`'!5` D%box`!a$\\\" id` 02`\"@-\\\"><img` ^8` L$avatar\\\" src=\\\"\" + u` .#` d\" alt=\\\"\\\" />`!O<` m$name`).#c + \":`))\"` 7D`$,#  ` :&self` k#`#Ui`*b&`*i%`$<+scrollTop(50000);}show`(s$` u\";`)&6box`)7$, i, e, l, f) {aa[b] != 1 && receiveUser(b, uc`#@![b]` '!status` &$`$9\"` &$link` '!1, 1`(f\"` T& == null ||` i' == \"\") {s`\"w\"out(`/-*`!_C;}, 5`\"p!`'a#var h = \"\", init = false`!R!parseInt(d) == 1) {fromname = u`!Y!;` Y!`%++\";`&k#=`&t%;tooltip =`/R\"90]`!<%` i(`\"K%` X'`#7'` \\'` N$;}var `1$!` ^#` 1%`!x)l`!|%c = c`-8y}c`-{7c);c`.%-c);d`&4%u_sounds`!l! && playNew`$}#Sound();separator = \":&nbsp;&nbsp;\"`.p/`+j(e`.]9` =)`.]0box` =#`._+c`&0&if (c_show_`$2&!= \"1\")` 8\"`$?$.indexOf(\" \") != -`&;+` @%slice(0,` (&` O();}}`(g#`)7%`(U!offline\") {display`#B#(`,g+`/4'_flyout`.~\",`'.\"13], \"error\");`!'!f - B > 60 || B`)s(N !=`&m&`#_\"`#='tab`#6#text\", $user_popups[b])`0q@`#&`)7'clearfix`10.`$h-\\\"`/I8` t&from\" + h` 7:disabl`1]$s`0l(`$f%`/7&img`1f#\" + `*1$`1\"`!85`2M0`2R)/`03#`!sA_wrapper`\"@D`'g$`\"`'`2&9f`1q(`3V!`1q(`1z%B = f;N `%e';last_id`'?! e`(j)` 0'!== \"undefined\"`)n9` M&`&-+`%D>`\"AT`\"H'\"`*q&`'LY` k~`!f#`*;!c`'D,`.m\"|| `#Z*setting`$V!s_only :input\").is(\":checked\")`4`\"A` i!Visibility(1);}` e*`\"j*`,#\").scrollTop(50000);showTimeAndT`(]\"();}j != b && `0l&i`0w%notif`0f'(b, 1, 1);}}function activateUser(b`/-#`46&`,(` (*\"\"`\">\"Timeout(` i%() {` g+;}, 500`%R&`!o&`%B!s[b].click(`!O*dd`!u#ToC`# \"(b, c` ~e` h4`!`-`$1@`'5(`&8/`$cQG`*t\"1`\"j(loadChatroomList(`\"h#c` -#received == 0`*{-` >$_leave\").hide(`!Z!`)d'` =%popo`'[!` ?$.ajax({url:k + \"includes/json/`!5#/`!=#`!#'ist.php\", cache:false, data:{` >%window:u` O&open, ` &%stay` 3(stay}, type:\"post\"` n\"T` ,!json\", success:`%3&b) {buil`#;*b);}}`&U)` 00 {Ccr = 0`\"|4`/Z!`+w$).html(\"\");var c = {};`'w!a.each(b, `!O&i, e`$i#i`';!` n$s`/r!` L\"e` F(l, f`% \"<div/>\").attr(\"id\", `-P+`![!`2(!.id).mouseover`()+(this).addClass(` R0list_hover\");}` d$`(r-` d#remove` DF` z=`#P%<span`/w3` I!name`4[$.n`)N\"span>` 9=status `#*5t`0q#` HDcount`!B%c`4I!ng[35]`!K'\"`+B$To(`%|A);crt[f.id] = f.t;crt2` &'n;`'P!);`*p. 1`'-4`#]#`.p\"`&C') `)e%ListClicked(l.target)`!'!` G%`!##`(Z$(c) {var global_mod = 0,` ($admin` ,\"` &!_markup = \"\";if (`)5!=`/}!`+SS`+q0`+--`,(&id:c}`+*Eif` \"\"var no_error = true`*(G` R!`*0;` s'`\" !;`,,$`$q/0;`0A.;display`2Y#`(r1m` 6\"_flyout\", f.m,`!V%`&-$if (`!F$) {`!}Fuser_title`\"-;if (f.`%U#= 1) {`%a+1;}` ?\"`&,!` 6)`&=\"1`/S\"`.)*_user`.3!var longname;$`\"X%`1p&`/;%`!H;(`!K*= 1 ||`'a)`!X!&&`+9!`!c#`'[,<div`++8options_padding\\\">` M!id` 92make_mod`/o%`,P\"` f8`%,\"_tex`,G$`,D!52`,B#div></div`!4\"`!\"fban`$1!`!)_3`![-\";}`$}$`-Q#f.n` $\".length > 16 ?` -!substr(0, 16) + \"...\" :` S!`3BG`\"!)`2p~`2{s`3d/img`#{8avatar\\\" src=\\\"`\"\\\"a`$i\"/`2i>`4$R`*,!`2r#dot`4O'` ^\"status`4H*`3d(`*H/)`$]Ls`&j$`%+&`#>9` H(`#T&`(X;`-r!`(MD` G\"`(5Y`(O$+ \"<br/`(}&4`(u.<hr` k/`*a$divider`%@!`*Njvisit_profi`!o\\`\"5!`,,}private`3_%`!1^1`-}lock`.;c84`.p. + `2b(`)P'a(\"#`-~=);if (`3T#2`-H!` A1`($*`).#`'J74]);} else ` v'3` 7f5]);}addH`06!a(\".`$*>\")`+x)` /+`/R%` W$UserO` >\"(f, global_`#i!);uc`/*#[f.id]`2p!a;});}}`#N\"c_disable` A#s == 1 || `\"T*setting`/6!s_only :inp`,v!is(\":checked\")`#7\"`\"40` |\"\"`-b2hid`!;%\"`.x!` O0`(k$` ?H}}}}});clearTim`3U!Crref2);` \"\" = set` 4$`3i)receiveC`!:#(c);}, 60000);}}` C%`#z0data, is`$&#`%|5make_mod`&3!data`&6!click`!?*a.post(k + \"includes/json/send/send`$A$s.php\", {` |&od:` v#,`!f%_id:Ccr}, ` |)});}`#!`![0remov` o~` }'`!2b`,u+`!(l` y\"chat`!g$`!Q)json_data) {if` %' != \"-1\"` 1#typeof ` i!List[` f#] == \"undefined\")`!+#` 5+`\"/$;}loadBuddyList();displayM`(\\\"`(D(`(m-`/S\"\",`,_\"103], \"error`(j!`#H9an`#=Bvar ban_length = prompt(`!.!57]`,9\"` 7'!= null &&` L(!= \"\" && !isNaN` F'`,$!`&$Xban`&@5` &'`!(&:`!3&`&e0`\"{6visit_profi`0w#`\"~8window.loca` /!`%-#l`#{7private`$x%` c<if `,Y!.b !`0(#`,_$`0;!` <#u_id !`&K%) {jqac`/.&.chatWith` g\"id);}`3h#{`&6U46`&^,`\">3`&BA`2_!rou`!y*` R<crou).`,;\"`1.-` F%`!*!ed`2(\"` X4s`\"8#` LHreat`\"o$_`#B#\");}`\"$!`*Y&a(this).toggl` {i`#I%` Z=`!S4);`32&`,;+ {`4>)Z);a.ajax({url:`)y/`4=#/`4E#_buddylist`*,#cache:false, type:\"get\",`\"\"!T` +!json\", success:`%Y&b) {buil`!V'b`,5\"c_disable_avatars`(2$a(\"`'y&`#7!list` ?#\").add`# -hid` _%\");}adjust`!+%Size();` /#ar` )#}}`!E\"`0M#c_`!$!heart_beat`-Y!`0F)var BLHT =` ;/* 1000;`)Z$` A'60` 4!Z = set`$2$`(\\)`0,},` X!`$|(`#7- {V.timestamp = ma;var c = {}, d = \"\";c.available` )$busy` $$offlin` 2%invisi` A'awa` E#onlineNumber = `%^%`%q#d = 0;b && a.each(b`/:(i, e`+*#i`4'!` W%`4'!` Z/1;totalFriends`!/%`!8+0;`!'#e`!\"(l, f`#Q!ngname = f.n.`2N#> 16 ?` -!substr(0, 16) + \"...\" : f.n`%V!G[f.id]`36$`&n-closebox_bottom_status\", $`*P!` X\"`+z5`$0%\"` *5busy` $6`$V#` '6away`(=3\" + f.s);`!_(` P4tab` PYtab`!\"+_popup`!/$`$1%0`%{!`#W)tabsubtitle ` ,'`28#`#d$` c)).html(f.m);}if (f.`+[!\"`#h& || ` -%way` $)`#p\" {`&@(++;}`&_.++`%c!`/l*setting_names_only :input\").is(\":che`0M\") {`)b!`,T3;}c[f.s] += \"<div id=\\` C'`-V%`#W\"id + \"\\\" class` 51\\\" onmouseover=\\\"jqac`2C#`$Q%'` o/hover');` V'ut` R*`%L(` E:><img`!K7`\"[# `3)!`\"-#src=\\\"`\"C\"a` -#/><span` S3scontentname\\\">\" + `*i%+ \"</span` =Adot `(J-`!>\">` _$/div>\";uc`*_#`+4#= f.s;uc`%I!` )'n;uc`\"@#` +'a;uc_link` )'l;}`'@#`-T/= 1 && bl`.1!0) {for` C#`!B\" in c`.T#c.hasOwnProperty` <()` <$[` *']`(+!\"`-3\"`'X'`\"x!`&Q%` Z(`)5\"\"\")`2a%` +K<`#C! + `!:+`$M!` 7!);}}}`*w*`%q$\").click`3S'l) {`#)#UserFromU` G#(l.target);});`!U/tab_text\"`!T%b`&!\"ang[4`!M#b> (` 1#`1P)` 6#)\");R`1j+`2&1=`-5%`\"z1`0B(`# &`'&/nof` s\"`'l$ang[8`#3*R` -~`!!*>= c_search_min ?`!*+` 4#` d#\").show() :` (<hide();`((/ 0`&G8`$3d}});}`&E%cancelJSONP(`(i#typeof CHA != \"undefined\") {clearTimeout(CHA`*A#` L#xOptions` F.` 2$.abort();}`!9&`\"Z#Core() {`!E);var url = k + \"includes/json/` S#/` [#_core.php?hash=\" + u_hash_`1\"\"&init` 2!acsi` -!room` -!Ccr;`!v%= a.ajax({url:url, dataType:\"jsonp\", success:`)o&b) {V.timestamp = ma`!|!c = \"\", d = {};d.`'#%` 4!;d.busy` $$offlin` 2%awa` 4#`$e)=`,%\"`%q-`.R!`.=! != null) {var i` :!a.each(b, `!n&e, l`%5#e`-z!typing`. !` I\"l` C(f, h` H#h.is_` H\"` T!1\"`,R&T` 2!(h.` :\"_id`.8&` <#Not` 11`0W$`!H\"announcements`!6;` r#A` H'(h`-h!` f'chatroom\"`\"s#d1 = 0, d2`#b\"`\"6;`'f#blockList[h.user`2Y!`'h,addC`!'#Message(h.id, h.n, h.m, ` V$, h.t, h.global);}`!K!h;d1++;})`$u!`!5#d2`(q.`!F1d2`!B6show`!U$Time();`\"r$Alerts(d1`!0\"` ]% != u_id) {u_` E$_sound == 1 && playNew`\"H#Sound`*K!}`#w'notifica`)*!`#$markup`#b>addN` U'(h.alert_`#=\"` `\");` d&` ,$;});`!-(`\">#` B#`%U)m`!w\"`&'C`$j,fro`$s!` _#, h.sen`$w!self, h.old`&q!K = 1;D = E;j`$o!\" && i >`2F#dd` w#ToContent(j, c);showTimeAndTooltip();`$<!`$!!u`$0\"s`#v=);}set(\"initialize\", \"0\");` 2!currenttim` /%if ($`! %w` %!) {K++` 6!K > 4) {D *= 2`\";#`#W!D > 12000` 9!=` &\";}}acsi++;window.onblur =`#d') {` 7\"_focus = false;}` J&` 0%` :7true;}`\"O!if (isA`.6!`!y\"var CHT = c_heart_beat * 1000 * 3`,T%` -9`\"D\"c_push_engine`\"y$CHA = set`38$`!_)`2Y);}, CHT`2z)`+8/id, name, `&B%`+D$`&K\"`+D#`*w\"`)|#=`)y&c_avatar[u_`*}! u` *#;}` j# = stripslashes(` 0#);` 6&replaceURLWithHTMLLink` @'var`!J!_time = new Date(sen`#/$`,q)`!G-`.%-`43'k + \"includes/json/`#D#/`#L#_user.php\"`4a\":{`\"d\":`\"k\"}, type:\"post\", cache:`&<!` J\"T` 9!json\", success:`$R&data`#[#` $#`!u'`.T$` d!.a`.8%Div`$Y!` :-`$i$`#(%`$q'`00%`)q!`&g#` ,bcount++;`&E&` h,im` M!` f\"` Q2`\"_\"a(\"#arrowchat`0;&` F#_\" + id).length > 0) {`\"%$if (` g\"`)O$a(\"<div/>\").attr(\"id\", \"` _?addClass(` 90box` I$\").html`!#\" class=\\` e8c`.c\" ` 9&`!n\"` 9-\\\">\" + forma`*Q!stamp(time) +`#8$ + \"</div`\"?!ppendTo($` d%chat`%&&`!o~`\"f'img`\"M@`&K\"\\\" src=\\\"`!+!m`\"3#\\\" alt=\\\"\\\" />`#;Dnam`#6$nam` d!:`\"~\"`#vK`#6i`/U#disabl`\"O$`3\\#|| `'l*setting`\"&!s_only :input\").is(\":checked\")`'a\".`#@=\"`$M2hid`!C%\");}`!i*.scrollTop(50`.E!show`0b$Tim`1*!`*F-Alerts(`*s!`)|9s_button `!u'tabalert\"`*;( && ` j!`*M#var` *\"2 = parseInt` OR`')!)) +` k\";` +V`!K\"`1H\"bounce2`,\"$` &% 0` KRstop(true, true).effect(\"` t\"\", {times:3, distance:5}, 200, `1'&`!?)1;});}`*v#if (!`%6%`!G$.has`%d-tabclick`&Y!` A.`&40tab_new`*|&;`, (css(\"top\", \"-11px` ,$lef`3R!_width`#$% - 10 + \"` E!` y3`$*.`)K0`!n$);}`'?&receiveAnn`#'!ment(h`'C#h.read ==`&p\"h.data != \"\"`)F\"`$r'a` V'\").remove();$body`!F#(Arr`(n\".Templates.` M(s_display(h)`#2!` j3`%n(` 0$_close\").`$K!(`%;)`!EBa.post(k + \"includes/json/send/send`,F$s.php\", {` d$:1}`&M+})`&N!`1E&` ?`$-'addNotification(`$~!_id, markup`\"0\"`2$;` O\"\" + ` W$` B$`05!` ?*n`!$'`.)%div`&0$`!1#`&/&`\"&*` S(s`0o$\"));Q++`-n'` ;(`-v#`\"%(` f'op` f!`*r6nf`#0(`*/\"` H)`)p>`.~.`\"Y)`.l.`!U-` ;1`$g&`'r)`$J! id`4%)` O.\\\"`4F4` :.`4Q+`#E\"`4=&`4E$`(]+` V.`#T(`$\\*divider\").hide();setTimeout`(i8`\"c1fadeOut(\"slow\"`(B+`#+I);}, 7`4C!`%%+`.3\\0`.b-\"8`.;=`&f!`(A!Q).pre`.S$`!N));}if (Q`%q3`!]!`#o)`!@$`-N#\", \"none\"`*|)stripslashes(str) {str = str.replace(/\\\\'/g, \"'\");` *1\"` :!\\\"` (40` :\"x00` *4\\\\` =\"\\\");retur`!W!`*P'`1$#M`#\"(id, from, `$0#, sent, self, old) {ma = id;clear`&O$dtit3);DTitChange(uc_name[from]`*f\"j ==` {! && ` 3)`1|\"` \"1null) {var o =` 2*` q!uc_status` M#== \"offline\") {loadBuddyList();}f = \"\"` V!self == 1) {fromname = u` ~!;` D! `%F&self\";avatar` A!` %\";tooltip = lang[90]`0{%`\"V6`!$'o` i'c` n#`\"9#` q&` H$;}var full` j!` .(`$M#`%A\"`&W&` 0#)` 5'`%\\#URLWithHTMLLink` @'`.S.`16$\" + id`.C9` =* + \"`,_(chatbox` >#`1L%`2*#`!9$`#9$if (c_show_`\"J&!`$L\"if (`\"U$.indexOf(\" \") != -`$e+` @%slice(0`'c\"` J-);}`*m!sent - B > 60 || B =`&f\" || N !=`#z&`\"[\"`2`*`\"1#text\", $user_popup`&#`4L$`1:#`0f.`\"y*`&['`)2!fix\\\"`1g,`#f.\\\" style=\\`,I$:none`1t6`!(*from\" + f` f\"` =4disable`'3#s`\"o!`2V#`#x%`2U&img alt=\\\"\" + `'Y$`!g\"`!85` u#\\\" src` T#`(N#` T\"/`3Q#`!sA_wrapper`\"@D`&}$`\"`'` '!orma`3t!stamp(new Date`%w\"* 1000)) +`.%$`\"Z'`!f\"` '!\"`)(\"c`!/!_anim`1$\"`,0$`)):show(\"slide\", {dire`/U!:`3$\"}`(`&` E?);}B =`/n!;N `'W';last_id`.:$ id`)U)` 1*!== \"undefined\"`!g9` M)`(&+`';@`$$S`$!-\"`\"|)`)OY` u~`!i*`,K!c`)6,`%z! || `#n*setting`$q!s_only :input\").is(\":checked\")) {setA` i!Visibility(1);}}`##$`0r<addM` &\"ToC`\";\"`/-!,`\"\"$, self, old, id, 0,`&Z!);j`4c!\" && 0 && activateUser` _!);}`\"-*`$<*`#k!` C!.scrollTop(50000);}fun`(A! receiveTyping(id`0o#typeof`%%\"s[id] !`'@/`2)(losebox_bottom_status`%f$` ^!).addClass(`%,'t`!5!`$b!`!E,Not` V~d]).remove`!6ApushCancelAll(`!O#c_push_engine`,O$push.unsubscribe({channel:\"u\" + u_id});` ,7`!A%\"}`-]\"Ccr > 0` _:chatro`1r\"Ccr}`'*!`!s)S` M%`!_=`!a9, callback:` w%(data` W#R`$a\"` -\";}`\"E$`\"-:` CN`\"/+` 4)`\":\"\"announcem`+N!in ` 6#`&B#A` 4'` S!.` E();`+\\!\"notific`1X!` Y(var markup2;addN` <'` g\"` M(.alert`#8!` *.` `\");` )(Alerts(` z#`!D$`$}$`+?#`!C(`(<'blockList[`!'!` F+.userid]`+c!`(U*ddC` E#`,W#`\"#\"` Q,`!}%` ),name` $3`-/%`!87` &3sent` $3global);` 0$`#/#1`(R\"` p7 !=`'G!) {u`1>!room_sound`0[\"&& playNew`\"d#Sound(`(q!`$&!`*#`&$.`,U#`!8!` ?\".id`&\"'` @5`-.&`%[$` N-`!~#s` K/`$E)` @$`$A&` )%`1A\"` &*`$/*` .%`#n'` )'lf` $,old);` 5. !`#B#u`#S\"`44#`#A5showTimeAndTooltip();K = 1;D = E`'u+ba`)B)Ccr = 0`%B%`\"p#d` 0!loa`'R%List();display`#/$`/u'`%F%`\"'#_flyout\"`\"P#error2, \"` $!`09*DTitChange(name`)P#dtit2 != 2) {document.title = lang[30] + \" \" + name + \"!\";` T\"= 2;} else` L/dtit` ?%1`\"~\"window_focu`#p!false) {dtit3 = setTimeout(`.C&) {`!o,;}, 1000)`! ;clear` j$`! !`\"i)c` n!PushC`/s\"` y!, connect`1F$` (\"`1(<` T#`/}L`!y#`3'6name`0h*buildTrayButtons() {for (var b = \"\", c ` \"\"arc` +$`&M\" d < barLinks.length; d++`0T#i =` 6%[d]`,L!i[6`.q\"\" || ` &$0) {` &\" 16`${\"`,@!` n+ -`#3!`!A$ `'G&right_border\";}b += \"<div id=\\`'o'trayicon_\" + d + \"\\\" class` 6-_b`\"p!` {'bar_left\" +`\"h\"` Y\"style=\\\"width:\" +`\"2\"+ \"px;\\\">`!C!` r.inner` ~#\\\"><img`!24icon\\\" src=\" + k + \"themes/\" + u_` (! + \"/images/icon` 7\"i[`)3\"`!/4` |!name\\\">` J\"7` K!</div></div>` &\"\"`$[#3`$\\\"_popup\") {c`#DG` P\"`#\\5` 6$`#L$`,]#:none`#16tray`)j!` )6`\"5)1`\"6(` :2minimizebox\\\"`\"_$br `*d!=\\\"all\\\"/` 1$`!=6content`!^:` >#tex` D!iframe allowtransparency=\\\"true\\\" ` <!`'i\"=0 `&T!=\\\"`\"7\"4`\"8!\\\" height` /%5` 0$`$\">`!;\"\\\"  ></` '\"`%=)`%H$}}$base.append(`%>!`#^!`(6!` ?#);$body` 3.c` 8)a(\".`),1\").mouseover`/?*var e = a(this).attr(\"id\")`.2!tr(19)`'0!`+~%e][6] <= 16 ||`,5&` 2\"`,4!) {`4C!`4:#a(\"#`\"v3e),` U)1], 1);}`!G%ddClass`3o(tab`\"%%\");}`\"5@`1u,` x$remove` c<hide`\"%$` z3`(W!`!'$ent`#I<`&k!t(`#f(;e = e`#q#ing(19, e`//&6);`\"[8chatboxtab`!G!`\"b=`!e)leave` vx`#R3`!=Tclick` zr`&q7`!0#`&3=`!;?`(o6j !`(]#closePopup($user`/s\"s[j], ` ,!s[j]`!:,` P!box_bottom\"` ?(`#m5` F*_`!{!\");j = \"\";}`!9,stab`!G\", $buddy_lis`(R!);` A(options`\"s\"` I%` )));var l = \"_self`2}\"`*h(3]) {l =`*|)3];}if (l`3:+if (m != e`#3*`$]7m`3K&\"), ` .8));m`\"m#`!#\"`-'$`%[8` s(.css(\"left\"` m9e).offset().left` R#`$k%\"25px` g$`1x!\"`-{*4`%S\"`!/B`./3open`0q\"`!L7` G1ray`%|$if `/d9`3#'\"`(/$src\") === undefined ||`\"s9` K8`#|C` K/`#F*2]);}m = e;} else`%Dz` |$var bar_link_ur`'z,2].replace(\"{USER_ID}\", u_id);` G.` &%` G,NAME` S\"name);window.open(` L(, l);}});}`,y%buildC`/F\"es() {$`/S#_left`-=0if (` =$es.scrollLeft(`$N!0) {`\"Y$` 6\"` u&\"-=148px\"`!A\"`!\"%righ` [M+ ` /'`(e!`!;\"` ,&_wide` 3$`!;8+`!J)`\"t&mobileSupport`!H$c_` 1\"_device == 1) {$base`*=,0` p!var posi` o!= ` D\"` )$(`1A-ab`+g)` e%a(document).height() -` q%.top - 9 + \"px !important`*d\"` w'app` 1m}`#,&run`!#%`&-!bas`3<\"\"<div/>`)a%id\", `+t'bas`*\"!ppendTo($body`,$\"c_` =!maintenance != 0 || c_guests_login_msg` 5\"&&`(f!`+?%`'g!M` W&()`*e%` |\"hide_bar_on` ]!` L$ShowBarB`2R!();` 0!Hide` )(}` 1!PopoutChat` 0%c_notifica`38!`!S%` K!O`3L\"` B'chatroom` :+C` /$`!8*BuddyListTab()`27\"c`*L!s`(p\" !`&y\"` I!Tray` Z\"s` C&appl`!U$`\"O'if (`#5& &&`#^&apps` 2!1\" ||`#_\"!` >$u_is` C\"`!6!` $9== 1` e11`)#%no` 0!_menu`!)A`!l'`#v+` 0'`\"C'`\"i/`!##`\"h0`&V!`&c#`'2\" id=\\`'\"'sound_player_holder\\\"></div>\"`,m,`'ZA` E)`'z*ase`*!!<span` ]\"`4L/nex`+;!` O)` i)` _\"`!>%` Q/tabtex`!1*` P/`!?%`+=!top\", \"-5px` +$display\", \"non`*2!` x2alertlr` u8`/I&`\"|Hes`#1/`0/+` BJ` N!`!U0es`%&'lef`$bJlef`$ZQprevious`$z5lef`$S[` X&`$/~`!&&`-)%`4:\");updateRightLast` q!` 4!`$`+`!D\"width`3u&addHover(a(\"#`#h2, ` &/`)@#`$=2r_mouseover`3[!window).bind(\"resize\", adjustBarSize);set(\"buddylist\", \"1\"` /#initial` Q\"` -&currenttim` j!b`2h\"typeof `4F$.`,H!style.maxH`4V! === \"undefined\") {W = true;`&=!`#'\"position`&v!bsolute\");$tooltip` ':userstab_popu` -;o`2E\"b`.?!` .?`#D,scroll\", function () {` U$A`$;$();}`23%push_engine`/e$push = PUBNUB.init({publish_key:` N#` ,#, subscribe` 2(` ,%`!!&`%Z!maintenance`1e$for (var d = 0; d < unfocus` O!.length; d++) {receiveUser(` ;([d], uc_name[` *+` 4\"status` &2avatar` &2link` '/`&^!`3/\"u_hide_bar`4L\"|| u`!(# == \"offline\"`4N#` '1 && ` ]'`\"v#`)D*`&%%`,(#html(\"Chat (O` b\")`3O'es.hide`*['`)m\"` %-lef` ,%} else {`'|\"` B$show_bar_`&x\"`,`-block\");}w = 1;a.idleTimer(\"destroy\"` s%`%57`\"`\"id != \"`\"m#popout_tim` ?!\"1\") {u` Z\"open != 0 && `%N)` 6&`%L'` +&`%E*` (,`%G$` (,`%E\"` +'`+h\"`(O5S`'$();}`!X#Core(`0N!`$j,list_available`$w%<div class=\\`.?'nofriends\\\">\" + lang[25] + \"</div>`*!\".`.o*room_full_conten`%~&` \\H34` z*loadBuddyList();u_b`\")!`$;!`(/!&& $`/T!_` 4!tab.click(`#=\"`#O\"`!X!`$l$-1`$%` .&=`%%#`'7!rooms`&j%` P:0) {Ccr = ` .+;` &$`$9#d`!k!`0Z(`!#%_creat`&`\"`0K)` 2,`(d%closePopup(`/}+,`\"_,);` A(`/z/, ` (*`)z#`\"_\"`0D'left\",`\"o/offset().left -` 6(` Y\"outerWidth() +` N0` 6')`!(\"bottom\", \"25px`+v$` I)toggleClass(`&.'tab`$O!\")` *4`#*$` @#`\">.` `6open`&q#C` N#`%F,, crt`*'#` ,%]`/J&` /%stay >`%l2stay`%o/`%8e`!i4stay`!p-stay]`3j#`!p,== -`.8#`(a-` 3\"`.m\"` 4!auto_joi`(K+` .0`![~`\"V#`!)0`\"\\\"` &0`\"]&apps`*]%`0l$` '*0\"`3Z-app`/i!_\" +` D()`+_%}`2#'`1W*=`1]$`2P3`-8,`3]$` ]#`!;!`(T#show`4?'es`4K-righ`4T%` -%lef` ,%}clearUserS`2J!();adjustBarSize`-m#c_mobile_devic`1~%a(window).bind(\"scroll\", ` H\"Support);` \")();}`2./tab_icon\").add`*:1`#i#`43\" + \"2\");}function positionA` M$() {$base`,(\"top\", `!j&`!h\"Top`,l!` .&height() - 25);`.m+` `(parseInt(` K.) -` 5&` N1`-V#` ,:` e&`!V(`!l*\"`.5\"`0#/`!7Q` O5`![2` ;0`!KGtooltip.length >`4[#` /$`!MP` O)`!_2` ;$`!?Fif (j`+ \") {`$B!`\"G\"s[j]`!%\"`&X$\", \"absolute\"`%y#` <,`%MO` S,`%f6` ?'`!wF}`(^'layNewMessageSound() {swfobject.embedSWF(k + \"themes/`)W\"` (! + \"/sounds/new%5Fm` f\".player.swf?` :\"wf=\" + ` 8Mswf&autoplay=1&loops=0`#v!`++%` T!_`!-\"_holder\", \"1\", \"1\", \"9.0.0\");}var bounce2 = 1,` &#3` '\"count = 0, V = {}, dtit = document.title` 1\"` [#dtit` Y#`#q\"_focus = true, xa` d#j = \"\", crou` $#$`!'\"w`!.\"bli` b\"isAway` /\"`3G/0, msg`!b'W = false, Y, Z, E = 3000, Crref2, `4V\"-1, `#R#`1a!out, D = E, K`!6\"ma` n\"R`!\"#`!c#K` 0#crt`\"(#cr`\"]!{}, y` ,#G` )#a`\"K$c`\"T$last_id` '#Aa = new Date, Na = Aa.getDate(), ab = Math.floor(` 8\"Time() / 1000), acs`#+#Q`!X\"fa`\">#acp = \"Powered By <a href='http://www.`%y%.com/' target='_blank'>`0|!Chat</a>`*\"!`!!\"B, push, N;var _ts`\"#_ts2;for (`$C!; d < T`'i!`-2#; d++) {if (` 3\"[d][2] ==`($$) {_ts2 = \"selected\";} else` 0&\";}`!1\"_t`2}!<`.y\" value=\\\"\" +`!2#[d][0] + \"\\\" \" +`!`! + \">` 6*1` ?!</` c\">\";}a.ajaxSetup({scriptCharset:\"utf-8\", cache:`&X!});a.expr[':'].icontains = `+i%(b, c, d) {return (b.textContent || b.innerTex` *!jqac(b)` A!() || \"\").toLowerCase().indexOf(d[3]` -*) >= 0;};arg`)}!s.callee.videoWith`!R*) {var win =`**#.open`-=\"public/` W!/?rid`,p!b, \"audio` 3!chat\", \"status=no,toolbar=no,menu` $#directorie` @!resizable=no,location=no,`/?\"bar` B!width=650,`/m\"=720\");win.`+s!()`\"90run`'d% = ` #(` ;.`+k$`\"h-if (u_hide_bar == 1) {showBar();}$` S$s_button.click();s`)x\"out(` j&) {`,2\"b;loadC` V#(b`/3!);}, 400`!|1chat`$H1`!C=`.\"#User(b, uc_name[b]` '!`$O\"` &$avatar` &$link[b]`!;1openCloseApp`!G)na`*-!a(\"`+e&_appname_\" + ` <!`\"%`\"52ngeAppImage` l-, imag` b> + \" img\").attr(\"src\",`4,!` [\"`!(0addAppAle`/r!`!),number`#n#` {?` 5'tabalert\")`-R# > 0 &&` m# > 0`!lB` ^2html(`!X#;` -Ueffect(\"bounce\", {times:3, distance:5}, 2`' !`.|\"if (!`$n<hasClass(\"`!-'ray`%A!\")`\"T\"<div/>\").css(\"top\", \"-11px` ,$lef`+e!6` .!add` c.`\"]2.appendTo`!J:;}`%@/getUser`/E-) {`0K\"({url:`-j!includes/json/`)3#/`);#_user.php\", data:{userid:b}, type:\"post`0w*` E\"T` 9!json\", success:`!E&o`&l#o) {`/=\"[c](o`$;%` *'0);}}}`'g1sendMess`)%,`\"F#c != \"\" && a.post`0<\"`\"E*send/send_m` d\"`\"I#{to:b, ` .#:c},` v'd`!x#d`\" #d == \"-1\") {display`!Q#`$(chatbox`!!$_flyout`$h!b, lang[102], \"error\"`\"d&ad`\"@$ToC` `\"`4A#1, 1, d` #\");}`'J*tabc`4Q\"text\", $user_popups[b]).`1u\"Top`*o+` 9=[0]` V#H`2A!);}K = 1;`$52getBaseUrl`$=)) {return k;};};})(jqac);jqac(doc` a!).ready`1J*`0a\"logged_in != 1 && c_disable_`3F&!`0~\"jqac`\":&(`! \"` '&`3w)();}});"))
+(function(a) {
+	a.arrowchat = function() {
+		var $body = a("body");
+		var $base;
+		var $maintenance;
+		var $show_bar_button;
+		var $popout_chat_button;
+		var $optionsbutton;
+		var $optionsbutton_popup;
+		var $chatrooms_button;
+		var $buddy_list_tab;
+		var $userstab_popup;
+		var $tooltip = null;
+		var $tooltip_content;
+		var $chatroom_chat;
+		var $chatroom_room_list;
+		var $chatrooms_popup;
+		var $chatroom_create;
+		var $chatroom_create_flyout;
+		var $application_buttons = {};
+		var $application_button_popups = {};
+		var $applications_button;
+		var $applications_button_popup;
+		var $applications_button_popups;
+		var $users = [];
+		var $user_popups = [];
+		var $chatbox_right;
+		var $chatboxes;
+		var $chatboxes_wide;
+		var $chatbox_left;
+
+		function addHover($elements, classes) {
+			$elements.each(function(i, element) {
+				a(element).hover(function() {
+					a(this).addClass(classes);
+				}, function() {
+					a(this).removeClass(classes);
+				});
+			});
+		}
+
+		function showLoading($element) {
+			a(".arrowchat_hide_loading", $element).hide();
+			a(".arrowchat_show_loading", $element).show();
+		}
+
+		function hideLoading($element) {
+			a(".arrowchat_hide_loading", $element).show();
+			a(".arrowchat_show_loading", $element).hide();
+		}
+
+		function closePopup($popup, $button, hidden) {
+			if ($popup !== undefined) {
+				if (hidden == 1) {
+					$popup.addClass("arrowchat_tabopen_hidden");
+				} else {
+					$popup.removeClass("arrowchat_tabopen");
+				}
+			}
+			if ($button !== undefined) {
+				$button.removeClass("arrowchat_tabclick arrowchat_userstabclick arrowchat_trayclick arrowchat_usertabclick");
+			}
+		}
+
+		function hideTooltip() {
+			if ($tooltip) {
+				$tooltip.hide();
+			}
+		}
+
+		function showTooltip($target, text, is_left, custom_left, custom_top, is_sideways) {
+			/*
+			if ($tooltip === null) {
+				$tooltip = a("<div id=\"arrowchat_tooltip\"><div class=\"arrowchat_tooltip_content\"></div></div>").appendTo($body);
+				$tooltip_content = a(".arrowchat_tooltip_content", $tooltip);
+			}
+			$tooltip_content.html(text);
+			var target_offset = $target.offset();
+			var target_width = $target.width();
+			var target_height = $target.height();
+			var tooltip_width = $tooltip.width();
+			if (!custom_left) {
+				custom_left = 0;
+			}
+			if (!custom_top) {
+				custom_top = 0;
+			}
+			if (is_left) {
+				$tooltip.css({
+					top: target_offset.top - a(window).scrollTop() - target_height - 1 - custom_top,
+					left: target_offset.left + target_width - 16 - custom_left,
+					display: "block"
+				}).addClass("arrowchat_tooltip_left");
+			} else if (is_sideways) {
+				$tooltip.css({
+					top: target_offset.top - a(window).scrollTop() - target_height - 1 - custom_top,
+					left: target_offset.left + target_width - tooltip_width + 18 - custom_left,
+					display: "block",
+					'background-position': tooltip_width - 128 + "px -60px"
+				}).removeClass("arrowchat_tooltip_left");
+			} else {
+				$tooltip.css({
+					top: target_offset.top - a(window).scrollTop() - target_height - 1 - custom_top,
+					left: target_offset.left + target_width - tooltip_width + 18 - custom_left,
+					display: "block",
+					'background-position': tooltip_width - 23 + "px -118px"
+				}).removeClass("arrowchat_tooltip_left");
+			}
+			if (W) {
+				$tooltip.css("position", "absolute");
+				$tooltip.css("top", parseInt(a(window).height()) - parseInt($tooltip.css("bottom")) - parseInt($tooltip.height()) + a(window).scrollTop() + "px");
+			}*/
+		}
+		var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
+
+		function replaceURLWithHTMLLinks(text) {
+			return text.replace(exp, "<a href='$1' target='_blank'>$1</a>");
+		}
+		RegExp.escape = function(text) {
+			return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+		};
+
+		function smileyreplace(mess) {
+			if (c_disable_smilies != 1) {
+				for (i = 0; i < Smiley.length; i++) {
+					var smiley_test = Smiley[i][1].replace(/</g, "&lt;").replace(/>/g, "&gt;");
+					var check_emoticon = mess.lastIndexOf(smiley_test);
+					if (check_emoticon != -1) {
+						mess = mess.replace(new RegExp(RegExp.escape(smiley_test), "g"), "<img class=\"arrowchat_smiley\" src=\"" + c_ac_path + "themes/" + u_theme + "/images/smilies/" + Smiley[i][0] + ".gif\" alt=\"\" />");
+					}
+				}
+			}
+			return mess;
+		}
+
+		function chatroomKeydown(key, $element) {
+			if (key.keyCode == 13 && key.shiftKey == 0) {
+				if (msgcount == 0) {
+					setTimeout(function() {
+						msgcount = 0;
+					}, 15000);
+				}
+				msgcount++;
+				if (msgcount > 4 && chatroom_admin != 1 && chatroom_mod != 1) {
+					displayMessage("arrowchat_chatroom_message_flyout", lang[51], "error");
+				} else {
+					var i = $element.val();
+					i = i.replace(/^\s+|\s+$/g, "");
+					$element.val("");
+					$element.css("height", "18px");
+					$element.css("overflow-y", "hidden");
+					$element.focus();
+					i != "" && a.ajax({
+						url: c_ac_path + "includes/json/send/send_message_chatroom.php",
+						type: "post",
+						cache: false,
+						dataType: "json",
+						data: {
+							userid: u_id,
+							username: u_name,
+							chatroomid: Ccr,
+							message: i
+						},
+						beforeSend: function() {
+							a(".arrowchat_chatroom_message_input").addClass("arrowchat_message_sending");
+						},
+						error: function() {
+							a(".arrowchat_chatroom_message_input").removeClass("arrowchat_message_sending");
+							displayMessage("arrowchat_chatroom_message_flyout", lang[135], "error");
+						},
+						success: function(e) {
+							a(".arrowchat_chatroom_message_input").removeClass("arrowchat_message_sending");
+							if (e) {
+								addMessageToChatroom(e, u_name, i);
+								$chatroom_chat.scrollTop($chatroom_chat[0].scrollHeight);
+							}
+						}
+					});
+					return false;
+				}
+			}
+		}
+
+		function userchatKeydown(key, $element, typing, jabber) {
+			if (jabber != 1) {
+				clearTimeout(pa);
+				pa = setTimeout(function() {
+					a.post(c_ac_path + "includes/json/send/send_typing.php", {
+						userid: u_id,
+						typing: typing,
+						untype: 1
+					}, function() {});
+					fa = -1;
+				}, 5000);
+				if (fa != typing) {
+					a.post(c_ac_path + "includes/json/send/send_typing.php", {
+						userid: u_id,
+						typing: typing
+					}, function() {});
+					fa = typing;
+				}
+			}
+			if (key.keyCode == 13 && key.shiftKey == 0) {
+				var i = $element.val();
+				i = i.replace(/^\s+|\s+$/g, "");
+				$element.val("").css({
+					height: "18px",
+					'overflow-y': "hidden"
+				}).focus();
+				if (jabber == 1 && i != "") {
+					sendJabberMessage(typing, i);
+				} else {
+					i != "" && a.ajax({
+						url: c_ac_path + "includes/json/send/send_message.php",
+						type: "post",
+						cache: false,
+						dataType: "json",
+						data: {
+							userid: u_id,
+							to: typing,
+							message: i
+						},
+						beforeSend: function() {
+							a(".arrowchat_textarea").addClass("arrowchat_message_sending");
+						},
+						error: function() {
+							a(".arrowchat_textarea").removeClass("arrowchat_message_sending");
+							displayMessage("arrowchat_chatbox_message_flyout_" + typing, lang[135], "error");
+						},
+						success: function(e) {
+							a(".arrowchat_textarea").removeClass("arrowchat_message_sending");
+							if (e) {
+								if (e == "-1") {
+									displayMessage("arrowchat_chatbox_message_flyout_" + typing, lang[102], "error");
+								} else {
+									addMessageToChatbox(typing, i, "1", "1", e, 1, Math.floor((new Date).getTime() / 1000));
+								}
+							}
+							K = 1;
+						}
+					});
+				}
+				return false;
+			}
+		}
+
+		function resizeChatfield($element) {
+			var height = $element[0].clientHeight;
+			if (height < 94) {
+				height = Math.max($element[0].scrollHeight, height);
+				height = Math.min(94, height);
+				if (height > $element[0].clientHeight) {
+					$element.css("height", height + 4 + "px");
+				}
+			} else {
+				$element.css("overflow-y", "auto");
+			}
+		}
+
+		function chatroomKeyup(b, $element) {
+			resizeChatfield($element);
+			$chatroom_chat.scrollTop($chatroom_chat[0].scrollHeight);
+		}
+
+		function userchatKeyup(key, $element, d) {
+			resizeChatfield($element);
+			a(".arrowchat_tabcontenttext", $user_popups[d]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[d])[0].scrollHeight);
+		}
+
+		function clearUserStatus() {
+			a("#arrowchat_userstab_icon").removeClass("arrowchat_user_available2 arrowchat_user_busy2 arrowchat_user_invisible2 arrowchat_user_away2");
+		}
+
+		function setUserStatus(status) {
+			a("#arrowchat_userstab_icon").removeClass("arrowchat_user_available2 arrowchat_user_busy2 arrowchat_user_invisible2");
+			a.post(c_ac_path + "includes/json/send/send_status.php", {
+				userid: u_id,
+				status: status
+			}, function() {});
+		}
+
+		function showUserOffline() {
+			w = 1;
+			clearUserStatus();
+			a("#arrowchat_userstab_icon").addClass("arrowchat_user_invisible2");
+			setUserStatus("offline");
+			closePopup($userstab_popup, $buddy_list_tab);
+			closePopup($optionsbutton_popup, $optionsbutton);
+			a("#arrowchat_userstab_text").html(lang[7]);
+		}
+
+		function buildMaintenance() {
+			$maintenance = a(ArrowChat.Templates.maintenance_tab(c_login_url)).appendTo($base);
+			$maintenance.mouseover(function() {
+				if (c_guests_login_msg == "1" && u_id == "") {
+					showTooltip($maintenance, lang[58]);
+				} else {
+					showTooltip($maintenance, lang[27]);
+				}
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			$maintenance.mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+		}
+
+		function buildHideBarButton() {
+			$hide_bar_button = a(ArrowChat.Templates.bar_hide_tab()).appendTo($base);
+			$hide_bar_button.mouseover(function() {
+				showTooltip($hide_bar_button, lang[14]);
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			$hide_bar_button.mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+			$hide_bar_button.click(function() {
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					hide: "1"
+				});
+				showUserOffline();
+				closePopup($chatrooms_popup, $chatrooms_button);
+				closePopup($applications_button_popup, $applications_button);
+				if (m != "") {
+					closePopup($application_button_popups[m], $application_buttons[m]);
+					m = "";
+				}
+				if (j != "") {
+					closePopup($user_popups[j], $users[j]);
+					a(".arrowchat_closebox_bottom", $users[j]).removeClass("arrowchat_closebox_bottom_click");
+					j = "";
+				}
+				clearTimeout(Z);
+				a.idleTimer("destroy");
+				pushCancelAll();
+				cancelJSONP();
+				$base.hide();
+				$show_bar_button.show();
+			});
+		}
+
+		function buildShowBarButton() {
+			$show_bar_button = a(ArrowChat.Templates.bar_show_tab()).appendTo($body);
+			$show_bar_button.mouseover(function() {
+				showTooltip($show_bar_button, lang[15]);
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			$show_bar_button.mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+			$show_bar_button.click(function() {
+				showBar();
+			});
+		}
+
+		function showBar() {
+			a.post(c_ac_path + "includes/json/send/send_settings.php", {
+				hide: "-1"
+			});
+			setUserStatus("available");
+			a("#arrowchat_userstab_icon").addClass("arrowchat_user_available2");
+			w = 0;
+			loadBuddyList();
+			pushSubscribe();
+			receiveCore();
+			a.idleTimer(60000 * ArrowChat.IdleTime);
+			$show_bar_button.hide();
+			$base.show();
+		}
+
+		function startCreateChatRoom() {
+			var i = a("#arrowchat_chatroom_create_input").val();
+			var passinput = a("#arrowchat_chatroom_create_password_input").val();
+			a("#arrowchat_chatroom_create_input").val("");
+			a("#arrowchat_chatroom_create_password_input").val("");
+			i = i.replace(/^\s+|\s+$/g, "");
+			i != "" && a.post(c_ac_path + "includes/json/send/send_chatroom_create.php", {
+				userid: u_id,
+				name: i,
+				password: passinput
+			}, function(e) {
+				if (e) {
+					$chatroom_create_flyout.hide("slide", {
+						direction: "up"
+					}, 250);
+					a("#arrowchat_chatroom_options_flyout").removeClass("arrowchat_chatroom_options_flyout_display");
+					if (e == "-1") {
+						displayMessage("arrowchat_chatroom_message_flyout", lang[39], "error");
+					} else if (e == "-2") {
+						displayMessage("arrowchat_chatroom_message_flyout", lang[40], "error");
+					} else {
+						chatroomreceived = 0;
+						loadChatroomList();
+					}
+				}
+			});
+		}
+
+		function buildChatroomsButton() {
+			$chatrooms_button = a(ArrowChat.Templates.chatrooms_tab()).appendTo($base);
+			$chatrooms_popup = a(ArrowChat.Templates.chatrooms_window()).css("display", "none").appendTo($body);
+			$chatroom_create = a("#arrowchat_chatroom_create");
+			$chatroom_create_flyout = a("#arrowchat_chatroom_create_flyout");
+			$chatrooms_button.css("width", c_width_chatroom + "px");
+			a("#arrowchat_chatroom_create_input").placeholder();
+			a("#arrowchat_chatroom_create_password_input").placeholder();
+			if (c_width_chatroom <= 25) {
+				a("#arrowchat_chatrooms_text", $chatrooms_button).hide();
+			}
+			if (u_chatroom_block_chats == 1) {
+				a("#arrowchat_chatroom_block :input").attr("checked", true);
+			} else {
+				a("#arrowchat_chatroom_block").addClass("arrowchat_menu_unchecked");
+				a("#arrowchat_chatroom_block :input").attr("checked", false);
+			}
+			if (u_chatroom_sound == 1) {
+				a("#arrowchat_chatroom_sound :input").attr("checked", true);
+			} else {
+				a("#arrowchat_chatroom_sound").addClass("arrowchat_menu_unchecked");
+				a("#arrowchat_chatroom_sound :input").attr("checked", false);
+			}
+			if (u_chatroom_stay != "-1") {
+				a("#arrowchat_chatroom_stay :input").attr("checked", true);
+			} else {
+				a("#arrowchat_chatroom_stay").addClass("arrowchat_menu_unchecked");
+				a("#arrowchat_chatroom_stay :input").attr("checked", false);
+			}
+			if (u_chatroom_open != "-1") {
+				a("#arrowchat_chatroom_window :input").attr("checked", true);
+			} else {
+				a("#arrowchat_chatroom_window").addClass("arrowchat_menu_unchecked");
+				a("#arrowchat_chatroom_window :input").attr("checked", false);
+			}
+			if (c_user_chatrooms == "0") {
+				$chatroom_create.hide();
+			}
+			$chatrooms_button.click(function() {
+				count = 0;
+				if (c_width_chatroom <= 25) {
+					hideTooltip();
+				}
+				if (a(".arrowchat_tabalert", $chatrooms_button).length > 0) {
+					a(".arrowchat_tabalert", $chatrooms_button).remove();
+					$chatrooms_button.removeClass("arrowchat_tab_new_message");
+				}
+				loadChatroomList();
+				closePopup($userstab_popup, $buddy_list_tab);
+				closePopup($optionsbutton_popup, $optionsbutton);
+				$chatrooms_popup.css("left", $chatrooms_button.offset().left - $chatrooms_popup.outerWidth() + $chatrooms_button.outerWidth()).css("bottom", "25px");
+				a(this).toggleClass("arrowchat_tabclick").toggleClass("arrowchat_userstabclick");
+				$chatrooms_popup.toggleClass("arrowchat_tabopen");
+				if ($chatroom_chat !== undefined) {
+					$chatroom_chat.scrollTop(50000);
+				}
+				a(".arrowchat_chatroom_message_input").focus();
+			});
+			$chatrooms_button.mouseover(function() {
+				if (c_width_chatroom <= 25) {
+					if ($chatrooms_button.hasClass("arrowchat_tabclick")) {} else {
+						showTooltip($chatrooms_button, lang[19]);
+					}
+				}
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			$chatrooms_button.mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+			a("#arrowchat_chatroom_password_input").keydown(function(h) {
+				if (h.keyCode == 13) {
+					c = a("#arrowchat_chatroom_password_id").val();
+					a("#arrowchat_chatroom_password_flyout").hide();
+					input_value = a("#arrowchat_chatroom_password_input").val();
+					a("#arrowchat_chatroom_password_input").val("");
+					input_value = input_value.replace(/^\s+|\s+$/g, "");
+					a(".arrowchat_chatroom_full_content").html("<div class=\"arrowchat_nofriends\">" + lang[34] + "</div>");
+					$chatroom_create.hide();
+					Ccr = c;
+					loadChatroom(c, crt[c], input_value);
+				}
+			});
+			a("#arrowchat_password_button").click(function() {
+				c = a("#arrowchat_chatroom_password_id").val();
+				a("#arrowchat_chatroom_password_flyout").hide();
+				input_value = a("#arrowchat_chatroom_password_input").val();
+				a("#arrowchat_chatroom_password_input").val("");
+				input_value = input_value.replace(/^\s+|\s+$/g, "");
+				a(".arrowchat_chatroom_full_content").html("<div class=\"arrowchat_nofriends\">" + lang[34] + "</div>");
+				$chatroom_create.hide();
+				Ccr = c;
+				loadChatroom(c, crt[c], input_value);
+			});
+			a("#arrowchat_chatroom_stay").click(function() {
+				a(this).toggleClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_chatroom_stay :input").is(":checked")) {
+					a("#arrowchat_chatroom_stay :input").attr("checked", false);
+					_chatroomstay = -1;
+				} else {
+					a("#arrowchat_chatroom_stay :input").attr("checked", true);
+					u_chatroom_stay = Ccr;
+					_chatroomstay = Ccr;
+				}
+				if (a("#arrowchat_chatroom_window :input").is(":checked")) {
+					a("#arrowchat_chatroom_window").toggleClass("arrowchat_menu_unchecked");
+					a("#arrowchat_chatroom_window :input").attr("checked", false);
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					chatroom_stay: _chatroomstay
+				}, function() {});
+			});
+			a("#arrowchat_chatroom_window").click(function() {
+				a(this).toggleClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_chatroom_window :input").is(":checked")) {
+					a("#arrowchat_chatroom_window :input").attr("checked", false);
+					_chatroomwindow = -1;
+				} else {
+					a("#arrowchat_chatroom_window :input").attr("checked", true);
+					u_chatroom_open = Ccr;
+					_chatroomwindow = Ccr;
+				}
+				if (a("#arrowchat_chatroom_stay :input").is(":checked")) {
+					a("#arrowchat_chatroom_stay").toggleClass("arrowchat_menu_unchecked");
+					a("#arrowchat_chatroom_stay :input").attr("checked", false);
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					chatroom_window: _chatroomwindow
+				}, function() {});
+			});
+			a("#arrowchat_chatroom_block").click(function() {
+				a(this).toggleClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_chatroom_block :input").is(":checked")) {
+					a("#arrowchat_chatroom_block :input").attr("checked", false);
+					_chatroomblock = -1;
+				} else {
+					a("#arrowchat_chatroom_block :input").attr("checked", true);
+					_chatroomblock = 1;
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					chatroom_block_chats: _chatroomblock
+				}, function() {});
+			});
+			a("#arrowchat_chatroom_sound").click(function() {
+				a(this).toggleClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_chatroom_sound :input").is(":checked")) {
+					a("#arrowchat_chatroom_sound :input").attr("checked", false);
+					_chatroomsound = -1;
+					u_chatroom_sound = 0;
+				} else {
+					a("#arrowchat_chatroom_sound :input").attr("checked", true);
+					_chatroomsound = 1;
+					u_chatroom_sound = 1;
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					chatroom_sound: _chatroomsound
+				}, function() {});
+			});
+			a(".arrowchat_chatrooms_title", $chatrooms_popup).click(function() {
+				$chatrooms_button.click();
+			}).children().not(".arrowchat_tab_name").click(function() {
+				return false;
+			});
+			a(".arrowchat_chatrooms_title", $chatrooms_popup).mouseenter(function() {
+				a(this).addClass("arrowchat_chatboxtabtitlemouseover3");
+			});
+			a(".arrowchat_chatrooms_title", $chatrooms_popup).mouseleave(function() {
+				a(this).removeClass("arrowchat_chatboxtabtitlemouseover3");
+			});
+			a("#arrowchat_chatroom_create_input").keydown(function(h) {
+				if (h.keyCode == 13) {
+					startCreateChatRoom();
+				}
+			});
+			a("#arrowchat_create_button").click(function() {
+				startCreateChatRoom();
+			});
+			a("#arrowchat_chatroom_leave").click(function() {
+				if (a(".arrowchat_smiley_box", $chatrooms_popup).is(":visible")) {
+					a(".arrowchat_smiley_box", $chatrooms_popup).hide("slide", {
+						direction: "up"
+					}, 250, function() {});
+				}
+				clearTimeout(Crref2);
+				a(".arrowchat_chatrooms_title .arrowchat_tab_name").html(lang[19]);
+				a(".arrowchat_chatroom_full_content").html("<div class=\"arrowchat_nofriends\">" + lang[34] + "</div>");
+				a("#arrowchat_chatroom_leave").hide();
+				a(".arrowchat_chatroom_popout").hide();
+				if (c_user_chatrooms == "1") {
+					$chatroom_create.show();
+				}
+				chatroomreceived = 0;
+				loadChatroomList();
+				var retain_ccr = Ccr;
+				Ccr = 0;
+				if (c_push_engine != 1) {
+					cancelJSONP();
+					receiveCore();
+				} else {
+					changePushChannel("chatroom" + retain_ccr, 0);
+				}
+			});
+			a(".arrowchat_chatroom_leave").mouseenter(function() {
+				showTooltip(a(this), lang[92], 0, 10, 5);
+				a(this).addClass("arrowchat_chatroom_leave_hover");
+				a("#arrowchat_chatrooms_popup .arrowchat_chatrooms_title").removeClass("arrowchat_chatboxtabtitlemouseover3");
+			});
+			a(".arrowchat_chatroom_leave").mouseleave(function() {
+				a(this).removeClass("arrowchat_chatroom_leave_hover");
+				a("#arrowchat_chatrooms_popup .arrowchat_chatrooms_title").addClass("arrowchat_chatboxtabtitlemouseover3");
+				hideTooltip();
+			});
+
+			function i() {
+				a("#arrowchat_chatroom_options_flyout").removeClass("arrowchat_chatroom_options_flyout_display");
+			}
+
+			function kal() {
+				if ($chatroom_create_flyout.is(":visible")) {
+					$chatroom_create_flyout.hide("slide", {
+						direction: "up"
+					}, 250);
+				}
+			}
+			a(".arrowchat_chatroom_item").click(function() {
+				i();
+				if (a(".arrowchat_chatroom_item2").hasClass("arrowchat_more_button_selected")) {
+					a(".arrowchat_chatroom_item2").toggleClass("arrowchat_more_button_selected");
+				}
+				if (!$chatroom_create_flyout.is(":visible")) {
+					$chatroom_create_flyout.show("slide", {
+						direction: "up"
+					}, 250);
+				} else {
+					$chatroom_create_flyout.hide("slide", {
+						direction: "up"
+					}, 250);
+				}
+				if (a("#arrowchat_chatroom_password_flyout").is(":visible")) {
+					a(".arrowchat_chatroom_list").removeClass("arrowchat_chatroom_clicked");
+					a("#arrowchat_chatroom_password_flyout").hide("slide", {
+						direction: "up"
+					}, 250);
+				}
+			});
+			a(".arrowchat_chatroom_item").mouseenter(function() {
+				showTooltip(a(this), lang[93], 0, 10, 5);
+				a(this).parent().addClass("arrowchat_chatroom_create_hover");
+				a("#arrowchat_chatrooms_popup .arrowchat_chatrooms_title").removeClass("arrowchat_chatboxtabtitlemouseover3");
+			});
+			a(".arrowchat_chatroom_item").mouseleave(function() {
+				hideTooltip();
+				a(this).parent().removeClass("arrowchat_chatroom_create_hover");
+				a("#arrowchat_chatrooms_popup .arrowchat_chatrooms_title").addClass("arrowchat_chatboxtabtitlemouseover3");
+			});
+			a(".arrowchat_chatroom_item2").click(function() {
+				hideTooltip();
+				kal();
+				a("#arrowchat_chatroom_options_flyout").toggleClass("arrowchat_chatroom_options_flyout_display");
+				a(this).addClass("arrowchat_more_button_hover");
+				a(this).toggleClass("arrowchat_more_button_selected");
+			});
+			a(".arrowchat_chatroom_item2").mouseenter(function() {
+				showTooltip(a(this), lang[23], 0, 10, 5);
+				a(this).parent().addClass("arrowchat_more_button_hover");
+				a("#arrowchat_chatrooms_popup .arrowchat_chatrooms_title").removeClass("arrowchat_chatboxtabtitlemouseover3");
+			});
+			a(".arrowchat_chatroom_item2").mouseleave(function() {
+				hideTooltip();
+				a(this).parent().removeClass("arrowchat_more_button_hover");
+				a("#arrowchat_chatrooms_popup .arrowchat_chatrooms_title").addClass("arrowchat_chatboxtabtitlemouseover3");
+			});
+		}
+
+		function buildPopoutChatButton() {
+			$popout_chat_button = a("<div/>").attr("id", "arrowchat_popoutchatbutton").addClass("arrowchat_bar_right").addClass("arrowchat_bar_button").html("<div class=\"arrowchat_inner_button\"><i class=\"arrowchat_icons arrowchat_popin_icon\" /></div>").appendTo($base);
+			$popout_chat_button.click(function() {
+				a(this).hide();
+				$buddy_list_tab.show();
+				$chatboxes.show();
+				$chatbox_right.show();
+				$chatbox_left.show();
+				if (j != "") {
+					$user_popups[j].show();
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					popoutchat: "99"
+				}, function() {});
+				loadBuddyList();
+				receiveCore();
+				pushSubscribe();
+				a.idleTimer(60000 * ArrowChat.IdleTime);
+			});
+		}
+
+		function buildApplicationButtons() {
+			var pold = apps.slice();
+
+			function mysortfn(a, b) {
+				if (a[13] < b[13]) {
+					return -1;
+				}
+				if (a[13] > b[13]) {
+					return 1;
+				}
+				return 0;
+			}
+			apps.sort(mysortfn);
+			for (b in apps) {
+				if (typeof apps[b][0] != "undefined") {
+					if (apps[b][10] == "" || apps[b][10] == 0) {
+						apps[b][10] = 16;
+					}
+					$application_buttons[apps[b][0]] = a("<div/>").attr("id", "arrowchat_applications_button_" + apps[b][0]).addClass("arrowchat_appname_" + apps[b][2]).addClass("arrowchat_bar_left").addClass("arrowchat_apps_button").css("width", apps[b][10] + "px").html(ArrowChat.Templates.applications_bookmarks_tab(c_ac_path, apps, b)).appendTo($base);
+					if ((apps[b][12] == "1" || apps[b][9] != "1" && u_id == "" || u_id != "" && apps[b][9] != "1" && u_is_guest == "1") && c_no_apps_menu != 1) {
+						$application_buttons[apps[b][0]].hide();
+					}
+					if (apps[b][6] == "") {
+						$application_button_popups[apps[b][0]] = a("<div/>").attr("id", "arrowchat_applications_button_" + apps[b][0] + "_popup").addClass("arrowchat_apppopup").css("display", "none").html(ArrowChat.Templates.applications_bookmarks_window(c_ac_path, apps, b)).appendTo($body);
+					}
+				}
+			}
+			apps = pold.slice();
+			a(".arrowchat_app_keep_open").addClass("arrowchat_menu_unchecked");
+			a(".arrowchat_app_keep_open :input").attr("checked", false);
+			if (u_apps_open != "" && u_apps_open != "0") {
+				a("#arrowchat_app_keep_open_" + u_apps_open + " :input").attr("checked", true);
+				a("#arrowchat_app_keep_open_" + u_apps_open).removeClass("arrowchat_menu_unchecked");
+			}
+			a(".arrowchat_apps_button").mouseover(function() {
+				var c = a(this).attr("id").substr(30);
+				if ($application_buttons[c].hasClass("arrowchat_trayclick")) {} else {
+					if (apps[c][10] <= 16 || apps[c][10] == "") {}
+				}
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			a(".arrowchat_apps_button").mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+			a(".arrowchat_traytitle").click(function() {
+				var e = a(this).parent().attr("id");
+				e = e.substring(30, e.length - 6);
+				if ($application_buttons[e]) {
+					$application_buttons[e].click();
+				}
+			}).children().not(".arrowchat_tab_name").click(function() {
+				return false;
+			});
+			a(".arrowchat_traytitle").each(function(i, element) {
+				a(element).mouseenter(function() {
+					a(this).addClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				a(element).mouseleave(function() {
+					a(this).removeClass("arrowchat_chatboxtabtitlemouseover");
+				});
+			});
+			a(".arrowchat_traytitle .arrowchat_more_button").each(function(i, element) {
+				a(element).mouseenter(function() {
+					a(this).addClass("arrowchat_more_button_hover");
+					a(".arrowchat_traytitle").removeClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				a(element).mouseleave(function() {
+					hideTooltip();
+					a(this).removeClass("arrowchat_more_button_hover");
+					a(".arrowchat_traytitle").addClass("arrowchat_chatboxtabtitlemouseover");
+				});
+			});
+			a(".arrowchat_traytitle .arrowchat_more_anchor").click(function() {
+				hideTooltip();
+				var c = a(this).attr("id").substr(20);
+				a("#arrowchat_apps_more_popout_" + c).toggle();
+				a(this).addClass("arrowchat_more_button_hover");
+				a(this).toggleClass("arrowchat_more_button_selected");
+			});
+			addHover(a(".arrowchat_menu_item"), "arrowchat_more_hover");
+			a(".arrowchat_app_keep_open").click(function() {
+				var c = a(this).attr("id").substr(24);
+				a(".arrowchat_app_keep_open").addClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_app_keep_open_" + c + " :input").is(":checked")) {
+					a("#arrowchat_app_keep_open_" + c + " :input").attr("checked", false);
+					var keep_open_id = -1;
+					u_apps_open = "";
+				} else {
+					a(".arrowchat_app_keep_open :input").attr("checked", false);
+					a("#arrowchat_app_keep_open_" + c + " :input").attr("checked", true);
+					var keep_open_id = c;
+					u_apps_open = c;
+					a(this).removeClass("arrowchat_menu_unchecked");
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					app_keep: keep_open_id
+				}, function() {});
+			});
+			a(".arrowchat_apps_button").click(function() {
+				var c = a(this).attr("id").substr(30);
+				closePopup($applications_button_popup, $applications_button);
+				a(this).children(".arrowchat_tabalert").remove();
+				if (apps[c][6] == "") {
+					if (m != c && m !== "") {
+						if (apps[m][7] == 1) {
+							closePopup($application_button_popups[m], $application_buttons[m], 1);
+						} else {
+							closePopup($application_button_popups[m], $application_buttons[m]);
+						}
+						m = "";
+					}
+					if (m == "") {
+						$application_button_popups[c].css("left", $application_buttons[c].offset().left).css("bottom", "25px").css("width", apps[c][4]);
+						$application_button_popups[c].removeClass("arrowchat_tabopen_hidden");
+						$application_button_popups[c].addClass("arrowchat_tabopen");
+						$application_buttons[c].addClass("arrowchat_trayclick");
+						if (apps[c][7] != "1" || apps[c][14] != "1") {
+							a.get(c_ac_path + "applications/" + apps[c][2] + "/index.php", function(d) {
+								a("#arrowchat_applications_button_" + apps[c][0] + "_content").html(d);
+							});
+						}
+						apps[c][14] = 1;
+						m = c;
+					} else {
+						if (apps[m][7] == 1) {
+							closePopup($application_button_popups[m], $application_buttons[m], 1);
+						} else {
+							closePopup($application_button_popups[m], $application_buttons[m]);
+						}
+						var test = a("#arrowchatapplist_" + m).parent().attr("id");
+						if (test == "arrowchat_other_applications") {
+							$application_buttons[m].hide();
+						}
+						m = "";
+					}
+				} else {
+					window.open(apps[c][6], "self");
+				}
+			});
+		}
+
+		function buildApplicationsButton() {
+			$applications_button = a("<div/>").attr("id", "arrowchat_applications_button").addClass("arrowchat_bar_left").addClass("arrowchat_bar_button").html(ArrowChat.Templates.applications_tab()).appendTo($base);
+			$applications_button_popup = a("<div/>").attr("id", "arrowchat_applications_button_popup").addClass("arrowchat_tabpopup").css("display", "none").html(ArrowChat.Templates.applications_window()).appendTo($body);
+			$applications_button.css("width", c_width_apps + "px");
+			if (c_width_apps <= 25) {
+				a(".arrowchat_tray_name", $applications_button).hide();
+			}
+			var pold = apps.slice();
+
+			function mysortfn(a, b) {
+				if (a[13] < b[13]) {
+					return -1;
+				}
+				if (a[13] > b[13]) {
+					return 1;
+				}
+				return 0;
+			}
+			apps.sort(mysortfn);
+			_appslist = "<div style=\"border-bottom: 1px solid #e9e9e9; color: #808080; margin: 3px 2px 4px;\">" + lang[20] + "</div><ul id=\"arrowchat_applications\" class=\"arrowchat_connectedSortable\" style=\"list-style-type: none; margin: 0px; padding: 0px;min-height:20px;\">";
+			for (b in apps) {
+				if (typeof apps[b][0] != "undefined") {
+					if (apps[b][12] != "1") {
+						if (apps[b][9] == "1" && u_id == "" || u_id != "" && u_is_guest == "1" && apps[b][9] == "1" || u_id != "" && u_is_guest != "1") {
+							_appslist += ArrowChat.Templates.applications_bookmarks_list(c_ac_path, apps, b);
+						}
+					}
+				}
+			}
+			_appslist += "</ul><div style=\"border-bottom: 1px solid #e9e9e9; color: #808080; margin: 8px 2px 4px;\">" + lang[64] + "</div><ul id=\"arrowchat_other_applications\" class=\"arrowchat_connectedSortable\" style=\"list-style-type: none; margin: 0px; padding: 0px;min-height:20px;\">";
+			for (b in apps) {
+				if (typeof apps[b][0] != "undefined") {
+					if (apps[b][12] == "1") {
+						if (apps[b][9] == "1" && u_id == "" || u_id != "" && u_is_guest == "1" && apps[b][9] == "1" || u_id != "" && u_is_guest != "1") {
+							_appslist += ArrowChat.Templates.applications_bookmarks_list(c_ac_path, apps, b);
+						}
+					}
+				}
+			}
+			_appslist += "</ul>";
+			apps = pold.slice();
+			a("#arrowchat_bookmarks").append("<div>" + _appslist + "</div>");
+			if (u_id != "") {
+				a("#arrowchat_applications, #arrowchat_other_applications").sortable({
+					delay: 50,
+					connectWith: ".arrowchat_connectedSortable",
+					scroll: false,
+					axis: "y",
+					containment: ".arrowchat_traycontent",
+					update: function() {
+						var result = a("#arrowchat_other_applications").sortable("toArray");
+						var result2 = a(this).sortable("serialize") + "&" + a(this).attr("id") + "=1";
+						a.post(c_ac_path + "includes/json/send/send_settings.php", result2, function() {});
+						for (var b = 0; b < result.length; b++) {
+							var c = result[b].substr(17);
+							$application_buttons[c].hide();
+							apps[c][12] = "1";
+						}
+						var result2 = a("#arrowchat_applications").sortable("toArray");
+						for (var b = 0; b < result2.length; b++) {
+							var d = result2[b].substr(17);
+							$application_buttons[d].show();
+							apps[d][12] = "";
+						}
+					}
+				});
+			} else {
+				a(".arrowchat_apps_subtitle").hide();
+			}
+			a(".arrowchat_app_link:not(.ui-sortable-helper)").on("click", function() {
+				var c = a(this).attr("id").substr(19);
+				if (apps[c][6] == "") {
+					$application_buttons[c].show();
+					closePopup($applications_button_popup, $applications_button);
+				}
+				$application_buttons[c].click();
+			});
+			a(".arrowchat_traytitle", $applications_button_popup).mouseenter(function() {
+				a(this).addClass("arrowchat_chatboxtabtitlemouseover");
+			});
+			a(".arrowchat_traytitle", $applications_button_popup).mouseleave(function() {
+				a(this).removeClass("arrowchat_chatboxtabtitlemouseover");
+			});
+			$applications_button.mouseover(function() {
+				if (c_width_apps <= 25) {
+					if ($applications_button.hasClass("arrowchat_tabclick")) {} else {}
+				}
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			$applications_button.mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				if (c_width_apps <= 25) {
+					hideTooltip();
+				}
+			});
+			a(".arrowchat_traytitle", $applications_button_popup).click(function() {
+				$applications_button.click();
+			});
+			$applications_button.click(function() {
+				if (c_width_apps <= 25) {
+					hideTooltip();
+				}
+				if (m != "") {
+					$application_buttons[m].click();
+					m = "";
+				}
+				$applications_button_popup.css("left", $applications_button.offset().left).css("bottom", "25px");
+				a(this).toggleClass("arrowchat_tabclick");
+				$applications_button_popup.toggleClass("arrowchat_tabopen");
+			});
+		}
+
+		function buildOptionsButton() {
+			$optionsbutton = a("<div/>").attr("id", "arrowchat_optionsbutton").addClass("arrowchat_bar_right").addClass("arrowchat_bar_button").html(ArrowChat.Templates.notifications_tab()).appendTo($base);
+			$optionsbutton_popup = a("<div/>").attr("id", "arrowchat_optionsbutton_popup").addClass("arrowchat_tabpopup").css("display", "none").html(ArrowChat.Templates.notifications_window()).appendTo($body);
+			$optionsbutton.mouseover(function() {});
+			$optionsbutton.mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+			a(".arrowchat_see_all_link").mouseenter(function() {
+				showTooltip(a(this), lang[21], 0, 10, 5);
+				a(this).parent().addClass("arrowchat_see_all_button_hover");
+				a("#arrowchat_userstab_popup .arrowchat_userstabtitle").removeClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a(".arrowchat_see_all_link").mouseleave(function() {
+				hideTooltip();
+				a(this).parent().removeClass("arrowchat_see_all_button_hover");
+				a("#arrowchat_userstab_popup .arrowchat_userstabtitle").addClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a(".arrowchat_see_all_link").click(function() {
+				a("#arrowchat_notifications_content").html(lang[25]);
+				var i = 0;
+				a.ajax({
+					url: c_ac_path + "includes/json/receive/receive_notifications.php",
+					type: "get",
+					cache: false,
+					dataType: "json",
+					success: function(b) {
+						if (b && b != null) {
+							a("#arrowchat_notifications_content").html("");
+							a.each(b, function(e, l) {
+								a.each(l, function(f, h) {
+									a("<div/>").attr("id", "arrowchat_alert_" + h.alert_id).attr("class", "arrowchat_notification_message_div").html(h.markup).appendTo(a("#arrowchat_notifications_content"));
+									i++;
+								});
+							});
+							if (i == 0) {
+								a("#arrowchat_notifications_content").html(lang[9]);
+							}
+							if (a(window).height() - $optionsbutton_popup.height() < 80) {
+								a("#arrowchat_notifications_content").css("height", a(window).height() - 135);
+							} else {
+								a("#arrowchat_notifications_content").css("height", "auto");
+							}
+						}
+					}
+				});
+			});
+			$optionsbutton.click(function() {
+				if (a("#arrowchat_notification_alert").length > 0) {
+					a("#arrowchat_notification_alert").remove();
+					$optionsbutton.removeClass("arrowchat_tab_new_message");
+				}
+				closePopup($chatrooms_popup, $chatrooms_button);
+				if (Q > 0) {
+					a("#arrowchat_optionsbutton .arrowchat_tabalertnf").remove();
+					a.post(c_ac_path + "includes/json/send/send_notifications.php", {
+						userid: u_id
+					}, function() {});
+					Q = 0;
+				}
+				if ($ == 0) {
+					if (w == 1) {
+						w = 0;
+						a("#arrowchat_userstab_text").html(lang[4] + " (<b>" + (R + jabberOnlineNumber) + "</b>)");
+						receiveCore();
+						a(".available", $optionsbutton_popup).click();
+					}
+					hideTooltip();
+					$optionsbutton_popup.css("left", $optionsbutton.offset().left - $optionsbutton_popup.outerWidth() + $optionsbutton.outerWidth()).css("bottom", "25px");
+					a(this).toggleClass("arrowchat_tabclick");
+					$optionsbutton_popup.toggleClass("arrowchat_tabopen");
+					$optionsbutton.toggleClass("arrowchat_optionsimages_click");
+					closePopup($userstab_popup, $buddy_list_tab);
+				} else if (lang[16] != "") {
+					location.href = lang[16];
+				}
+				if (a(window).height() - $optionsbutton_popup.height() < 80) {
+					a("#arrowchat_notifications_content").css("height", a(window).height() - 135);
+				} else {
+					a("#arrowchat_notifications_content").css("height", "auto");
+				}
+			});
+			a(".arrowchat_userstabtitle", $optionsbutton_popup).click(function() {
+				$optionsbutton.click();
+			}).children().not(".arrowchat_tab_name").click(function() {
+				return false;
+			});
+			a(".arrowchat_userstabtitle", $optionsbutton_popup).mouseenter(function() {
+				a(this).addClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a(".arrowchat_userstabtitle", $optionsbutton_popup).mouseleave(function() {
+				a(this).removeClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+		}
+
+		function displayMessage(id, message, type) {
+			clearTimeout(message_timeout);
+			if (a("#" + id).is(":visible")) {
+				a("#" + id).hide("slide", {
+					direction: "up"
+				}, 250, function() {
+					a("#" + id + " .arrowchat_message_text").html(message);
+					type == "error" && a(".arrowchat_message_box").css("background-color", "#ffe2e2").css("border-bottom", "1px solid #ffbebe");
+					type == "notice" && a(".arrowchat_message_box").css("background-color", "#fffae2").css("border-bottom", "1px solid #ffecbe");
+					a("#" + id).show("slide", {
+						direction: "up"
+					}, 250);
+				});
+			} else {
+				type == "error" && a(".arrowchat_message_box").css("background-color", "#ffe2e2").css("border-bottom", "1px solid #ffbebe");
+				type == "notice" && a(".arrowchat_message_box").css("background-color", "#fffae2").css("border-bottom", "1px solid #ffecbe");
+				a("#" + id + " .arrowchat_message_text").html(message);
+				a("#" + id).show("slide", {
+					direction: "up"
+				}, 250);
+			}
+			message_timeout = setTimeout(function() {
+				a("#" + id).hide("slide", {
+					direction: "up"
+				}, 250);
+			}, 5000);
+		}
+
+		function loadChatroom(b, c, pass) {
+			var global_mod = 0,
+				global_admin = 0,
+				admin_markup = "";
+			chatroom_mod = 0;
+			chatroom_admin = 0;
+			chatroomreceived = 1;
+			a.ajax({
+				url: c_ac_path + "includes/json/receive/receive_chatroom_room.php",
+				data: {
+					chatroomid: b,
+					chatroom_window: u_chatroom_open,
+					chatroom_stay: u_chatroom_stay,
+					chatroom_pw: pass
+				},
+				type: "post",
+				cache: false,
+				dataType: "json",
+				success: function(o) {
+					if (o) {
+						clearTimeout(Crref2);
+						var no_error = true;
+						o && a.each(o, function(i, e) {
+							if (i == "error") {
+								a.each(e, function(l, f) {
+									no_error = false;
+									Ccr = 0;
+									chatroomreceived = 0;
+									loadChatroomList();
+									displayMessage("arrowchat_chatroom_message_flyout", f.m, "error");
+								});
+							}
+						});
+						if (no_error) {
+							setTimeout(function() {
+								receiveChatroom(b);
+							}, 30000);
+							if (c_push_engine != 1) {
+								cancelJSONP();
+								receiveCore();
+							} else {
+								changePushChannel("chatroom" + b, 1);
+							}
+							if (typeof crt2[b] != "undefined") {
+								a(".arrowchat_chatrooms_title .arrowchat_tab_name").html(lang[19] + "&nbsp;&nbsp;(" + crt2[b] + ")");
+							}
+							a("#arrowchat_chatroom_leave").show();
+							a(".arrowchat_chatroom_full_content").html(ArrowChat.Templates.chatrooms_room());
+							$chatroom_chat = a("#arrowchat_chatroom_chat");
+							$chatroom_room_list = a("#arrowchat_chatroom_room_list");
+							if (c_popout_on == 1) {
+								a(".arrowchat_chatroom_popout", $chatrooms_popup).show();
+							}
+							a(".arrowchat_chatroom_popout", $chatrooms_popup).mouseenter(function() {
+								showTooltip(a(this), lang[117], 0, 10, 5);
+								a(this).addClass("arrowchat_chatroom_popout_hover");
+								a(".arrowchat_chatrooms_title", $chatrooms_popup).removeClass("arrowchat_chatboxtabtitlemouseover3");
+							});
+							a(".arrowchat_chatroom_popout", $chatrooms_popup).mouseleave(function() {
+								a(this).removeClass("arrowchat_chatroom_popout_hover");
+								a(".arrowchat_chatrooms_title", $chatrooms_popup).addClass("arrowchat_chatboxtabtitlemouseover3");
+								hideTooltip();
+							});
+							a(".arrowchat_chatroom_popout", $chatrooms_popup).unbind("click");
+							a(".arrowchat_chatroom_popout", $chatrooms_popup).click(function() {
+								window.open(c_ac_path + "public/chatroom/?id=" + b, "chatroom", "menubar=0,resizable=0,width=900,height=650,top=25,left=25,scrollbars=0,status=0");
+							});
+							a(".arrowchat_chatroom_message_input", $chatrooms_popup).keydown(function(h) {
+								return chatroomKeydown(h, a(this));
+							});
+							a(".arrowchat_chatroom_message_input", $chatrooms_popup).keyup(function(h) {
+								return chatroomKeyup(h, a(this));
+							});
+							var smiley_exist = [];
+							a(".arrowchat_smiley_box", $chatrooms_popup).html("");
+							for (var i = 0; i < Smiley.length; i++) {
+								if (a.inArray(Smiley[i][0], smiley_exist) > -1) {} else {
+									a(".arrowchat_smiley_box", $chatrooms_popup).append("<div class=\"arrowchat_smiley_wrapper\" data-id=\"" + i + "\"><img class=\"arrowchat_smiley\" src=\"" + c_ac_path + "themes/" + u_theme + "/images/smilies/" + Smiley[i][0] + ".gif\" alt=\"\" /></div>");
+									smiley_exist.push(Smiley[i][0]);
+								}
+							}
+							a(".arrowchat_smiley_button", $chatrooms_popup).mouseenter(function() {
+								a(this).addClass("arrowchat_smiley_button_hover");
+							});
+							a(".arrowchat_smiley_button", $chatrooms_popup).mouseleave(function() {
+								a(this).removeClass("arrowchat_smiley_button_hover");
+							});
+							a(".arrowchat_smiley_wrapper", $chatrooms_popup).click(function() {
+								var smiley_code = a(this).attr("data-id");
+								var existing_text = a(".arrowchat_chatroom_message_input", $chatrooms_popup).val();
+								a(".arrowchat_chatroom_message_input", $chatrooms_popup).focus().val("").val(existing_text + Smiley[smiley_code][1]);
+								a(".arrowchat_smiley_box", $chatrooms_popup).hide("slide", {
+									direction: "up"
+								}, 250, function() {});
+							});
+							a(".arrowchat_smiley_button", $chatrooms_popup).click(function() {
+								if (a(".arrowchat_smiley_box", $chatrooms_popup).is(":visible")) {
+									a(".arrowchat_smiley_box", $chatrooms_popup).hide("slide", {
+										direction: "up"
+									}, 250, function() {});
+								} else {
+									a(".arrowchat_smiley_box", $chatrooms_popup).show("slide", {
+										direction: "up"
+									}, 250, function() {});
+								}
+							});
+							if (c_disable_smilies == 1) {
+								a(".arrowchat_smiley_button").hide();
+								a(".arrowchat_chatroom_message_input").css("width", "99%");
+							}
+							o && a.each(o, function(i, e) {
+								if (i == "user_title") {
+									a.each(e, function(l, f) {
+										if (f.admin == 1) {
+											global_admin = 1;
+											chatroom_admin = 1;
+										}
+										if (f.mod == 1) {
+											global_mod = 1;
+											chatroom_mod = 1;
+										}
+									});
+								}
+								if (i == "chat_name") {
+									a.each(e, function(l, f) {
+										if (typeof crt2[b] == "undefined") {
+											crt2[b] = f.n;
+											a(".arrowchat_chatrooms_title .arrowchat_tab_name").html(lang[19] + "&nbsp;&nbsp;(" + crt2[b] + ")");
+										}
+									});
+								}
+								if (i == "chat_users") {
+									var longname;
+									a.each(e, function(l, f) {
+										if ((global_admin == 1 || global_mod == 1) && f.t == 1) {
+											admin_markup = "<div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_make_mod_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[52] + "</div></div><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_ban_user_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[53] + "</div></div>";
+										}
+										if (global_admin == 1 && f.t == 2) {
+											admin_markup = "<div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_remove_mod_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[54] + "</div></div>";
+										}
+										longname = renderHTMLString(f.n);
+										f.n = renderHTMLString(f.n).length > 16 ? renderHTMLString(f.n).substr(0, 16) + "..." : f.n;
+										a("<div/>").attr("id", "arrowchat_chatroom_user_" + f.id).mouseover(function() {
+											a(this).addClass("arrowchat_chatroom_list_hover");
+										}).mouseout(function() {
+											a(this).removeClass("arrowchat_chatroom_list_hover");
+										}).addClass("arrowchat_chatroom_room_list").addClass("arrowchat_chatroom_admin_" + f.t).html("<img class=\"arrowchat_chatroom_avatar\" src=\"" + f.a + "\"/><span class=\"arrowchat_chatroom_room_name\">" + f.n + "</span><span class=\"arrowchat_userscontentdot arrowchat_" + f.status + "\"></span>").appendTo($chatroom_room_list);
+										a("<div/>").attr("id", "arrowchat_chatroom_users_flyout_" + f.id).addClass("arrowchat_chatroom_users_flyout").html("<div class=\"arrowchat_chatroom_title_padding\"><div id=\"arrowchat_chatroom_title_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + longname + "<br/>" + lang[43] + "</div></div><hr class=\"arrowchat_options_divider\"/><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_visit_profile_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[42] + "</div></div><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_private_message_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[41] + "</div></div><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_block_user_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[84] + "</div></div>" + admin_markup).appendTo(a("#arrowchat_chatroom_user_" + f.id));
+										if (f.t == 2) {
+											a("#arrowchat_chatroom_title_" + f.id).html(longname + "<br/>" + lang[44]);
+										} else if (f.t == 3) {
+											a("#arrowchat_chatroom_title_" + f.id).html(longname + "<br/>" + lang[45]);
+										}
+										addHover(a(".arrowchat_chatroom_options_padding"), "arrowchat_options_padding_hover");
+										chatroomUserOptions(f, global_admin);
+									});
+									a(".arrowchat_chatroom_admin_3").css("background-color", "#" + c_admin_bg);
+									a(".arrowchat_chatroom_admin_3").css("color", "#" + c_admin_txt);
+								}
+								if (i == "chat_history") {
+									d = "";
+									a.each(e, function(l, f) {
+										if (typeof blockList[f.userid] == "undefined") {
+											var title = "";
+											if (f.mod == 1) {
+												title = lang[137];
+											}
+											if (f.admin == 1) {
+												title = lang[136];
+											}
+											l = "";
+											fromname = f.n;
+											if (f.n == u_name) {
+												l = " arrowchat_self";
+											}
+											var sent_time = new Date(f.t * 1000);
+											if (f.global == 1) {
+												d += "<div class=\"arrowchat_chatroom_box_message\" id=\"arrowchat_chatroom_message_" + f.id + "\"><div class=\"arrowchat_chatroom_message_content" + l + " arrowchat_global_chatroom_message\">" + formatTimestamp(sent_time) + f.m + "</div></div>";
+											} else {
+												d += "<div class=\"arrowchat_chatroom_box_message\" id=\"arrowchat_chatroom_message_" + f.id + "\"><img class=\"arrowchat_chatroom_message_avatar\" src=\"" + f.a + "\" alt=\"\" /><div class=\"arrowchat_chatroom_message_name\">" + fromname + title + ":</div><div class=\"arrowchat_chatroom_message_content" + l + "\">" + formatTimestamp(sent_time) + f.m + "</div></div>";
+											}
+										}
+									});
+									$chatroom_chat.html("<div>" + d + "</div>");
+									showChatroomTime();
+									$chatroom_chat.scrollTop(50000);
+								}
+							});
+							if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
+								a(".arrowchat_chatroom_avatar").addClass("arrowchat_hide_avatars");
+								a(".arrowchat_chatroom_message_avatar").addClass("arrowchat_hide_avatars");
+							}
+							a(".arrowchat_chatroom_message_input").focus();
+						} else {
+							if (c_user_chatrooms == "1") {
+								$chatroom_create.show();
+							}
+						}
+					}
+				}
+			});
+		}
+
+		function receiveUser(b, c, d, e, l, f, h) {
+			if (!(b == null || b == "")) {
+				if ((uc_name[b] == null || uc_name[b] == "") && b.toString().search("facebook") == "-1") {
+					if (aa[b] != 1) {
+						aa[b] = 1;
+						a.ajax({
+							url: c_ac_path + "includes/json/receive/receive_user.php",
+							data: {
+								userid: b
+							},
+							type: "post",
+							cache: false,
+							dataType: "json",
+							success: function(o) {
+								if (o) {
+									c = uc_name[b] = o.n;
+									d = uc_status[b] = o.s;
+									e = uc_avatar[b] = o.a;
+									l = uc_link[b] = o.l;
+									if (G[b] != null) {
+										a(".arrowchat_closebox_bottom_status", $user[b]).removeClass("arrowchat_available arrowchat_busy arrowchat_offline").addClass("arrowchat_" + d);
+										$users[b].removeClass("arrowchat_tab_offline").addClass("arrowchat_tab_" + c);
+										$user_popups[b].length > 0 && a(".arrowchat_tabsubtitle .arrowchat_message", $user_popups[b]).html(i);
+									}
+									aa[b] = 0;
+									if (c != null) {
+										toggleUserChatTab(b, c, d, e, l, f);
+										if (c_mobile_device) {
+											mobileSupport();
+										}
+									} else {
+										a.post(c_ac_path + "includes/json/send/send_settings.php", {
+											unfocus_chat: b
+										}, function() {});
+									}
+								}
+							}
+						});
+					} else {
+						setTimeout(function() {
+							receiveUser(b, uc_name[b], uc_status[b], uc_avatar[b], uc_link[b], f, h);
+						}, 500);
+					}
+				} else {
+					if (b.toString().search("facebook") == "-1") {
+						toggleUserChatTab(b, uc_name[b], uc_status[b], uc_avatar[b], uc_link[b], f);
+					} else {
+						toggleUserChatTab(b, uc_name[b], uc_status[b], uc_avatar[b], uc_link[b], f, 1);
+					}
+				}
+			}
+		}
+
+		function toggleUserChatTab(b, c, d, e, l, f, jabber) {
+			if (G[b] != null) {
+				if (!$users[b].hasClass("arrowchat_tabclick") && f != 1) {
+					if (j != "") {
+						closePopup($user_popups[j], $users[j]);
+						j = "";
+					}
+					if ($users[b].offset().left < $chatboxes.offset().left + $chatboxes.width() && $users[b].offset().left - $chatboxes.offset().left >= 0) {
+						$users[b].click();
+					} else {
+						a(".arrowchat_tabalert").css("display", "none");
+						e = 800;
+						if (get("initialize") == 1) {
+							e = 0;
+						}
+						$chatboxes.scrollTo($users[b], e, function() {
+							$users[b].click();
+							updateRightLastClasses();
+							positionTabAlerts();
+						});
+					}
+				}
+				updateRightLastClasses();
+			} else {
+				$chatboxes_wide.width($chatboxes_wide.width() + 148);
+				adjustBarSize();
+				shortname = renderHTMLString(c).length > 12 ? renderHTMLString(c).substr(0, 12) + "..." : c;
+				longname = renderHTMLString(c).length > 17 ? renderHTMLString(c).substr(0, 17) + "..." : c;
+				$users[b] = a(ArrowChat.Templates.chat_tab(shortname)).attr("data-id", b).appendTo($chatboxes_wide);
+				$users[b].append("<div class=\"arrowchat_closebox_bottom_status arrowchat_" + d + "\"></div>");
+				$users[b].addClass("arrowchat_tab_" + d);
+				jabber == 1 && $users[b].addClass("arrowchat_jabber_user_tab");
+				$users[b].append("<div class=\"arrowchat_closebox_bottom\"></div>");
+				a(".arrowchat_closebox_bottom", $users[b]).mouseenter(function() {
+					a(this).addClass("arrowchat_closebox_bottomhover");
+				});
+				a(".arrowchat_closebox_bottom", $users[b]).mouseleave(function() {
+					a(this).removeClass("arrowchat_closebox_bottomhover");
+				});
+				a(".arrowchat_closebox_bottom", $users[b]).click(function() {
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						close_chat: b,
+						tab_alert: 1
+					}, function() {});
+					$user_popups[b].remove();
+					$users[b].remove();
+					if (j == b) {
+						j = "";
+					}
+					$chatboxes_wide.width($chatboxes_wide.width() - 148);
+					$chatboxes.scrollTo("-=148px");
+					adjustBarSize();
+					y[b] = null;
+					G[b] = null;
+					ca[b] = 0;
+				});
+				i = c = "";
+				if (l != "") {
+					c = "<a href=\"" + l + "\">";
+					i = "</a>";
+				}
+				l = "";
+				if (e != "") {
+					l = "<div class=\"arrowchat_avatarbox\">" + c + "<img src=\"" + e + "\" class=\"arrowchat_avatar\" />" + i + "</div>";
+				}
+				$user_popups[b] = a(ArrowChat.Templates.chat_window(c, longname, i, l, b)).css("display", "none").appendTo($body);
+				if (c_video_chat != 1) {
+					a("#arrowchat_video_chat_" + b).hide();
+				}
+				if (c_file_transfer != 1) {
+					a("#arrowchat_file_transfer_" + b).hide();
+				}
+				if (c_popout_on != 1) {
+					a(".arrowchat_chat_popout").hide();
+				}
+				addHover(a(".arrowchat_video_chat"), "arrowchat_more_hover");
+				a("#arrowchat_file_cancel_" + b).click(function() {
+					a("#arrowchat_file_upload_div_" + b).hide("slide", {
+						direction: "up"
+					}, 250);
+				});
+				a("#arrowchat_file_transfer_" + b).click(function() {
+					var ts67 = Math.round((new Date).getTime());
+					var path = c_ac_path.replace("../", "/");
+					a("#arrowchat_file_upload_" + b).uploadify({
+						swf: path + "includes/js/uploadify/uploadify.swf",
+						uploader: path + "includes/classes/class_uploads.php",
+						hideButton: true,
+						buttonText: " ",
+						wmode: "transparent",
+						formData: {
+							unixtime: ts67,
+							user: u_id
+						},
+						height: 17,
+						width: 42,
+						auto: true,
+						fileTypeExts: "*.jpg;*.gif;*.png;*.zip;*.rar;*.jpeg;*.txt;*.doc;*.mp3;*.wmv;*.avi;*.mp4;*.docx;*.wav",
+						fileTypeDesc: "Supported File Types (.JPG, .JPEG, .GIF, .PNG, .WMV, .AVI, .MP4, .ZIP, .RAR, .MP3, .WAV, .TXT, .DOC, .DOCX)",
+						onSelect: function() {
+							a(".arrowchat_upload_info_text").hide();
+							a(".arrowchat_upload_text").hide();
+							a(".arrowchat_ui_button").css("background", "none");
+							a(".arrowchat_ui_button").css("border", "none");
+						},
+						onCancel: function() {
+							a("#arrowchat_file_upload_div_" + b).hide("slide", {
+								direction: "up"
+							}, 250);
+							a(".arrowchat_upload_info_text").show();
+							a(".arrowchat_upload_text").show();
+							a(".arrowchat_ui_button").css("background", "#5B74A8");
+							a(".arrowchat_ui_button").css("border", "1px solid #999");
+						},
+						onUploadComplete: function() {
+							a.post(c_ac_path + "includes/json/send/send_message.php", {
+								userid: u_id,
+								to: b,
+								message: "file{" + ts67 + "}"
+							}, function(e) {
+								if (e == "-1") {
+									displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[102], "error");
+								} else {
+									displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[68], "notice");
+								}
+								a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+							});
+							a("#arrowchat_file_upload_div_" + b).hide();
+							a(".arrowchat_upload_info_text").show();
+							a(".arrowchat_upload_text").show();
+							a(".arrowchat_ui_button").css("background", "#5B74A8");
+							a(".arrowchat_ui_button").css("border", "1px solid #999");
+						}
+					});
+					a("#arrowchat_more_popout_" + b).toggle();
+					a("#arrowchat_more_" + b).toggleClass("arrowchat_more_button_selected");
+					a("#arrowchat_file_upload_div_" + b).show("slide", {
+						direction: "up"
+					}, 250);
+				});
+				a("#arrowchat_video_chat_" + b).click(function() {
+					a("#arrowchat_more_popout_" + b).toggle();
+					a("#arrowchat_more_" + b).toggleClass("arrowchat_more_button_selected");
+					var RN = Math.floor(Math.random() * 9999999999);
+					while (String(RN).length < 10) {
+						RN = "0" + RN;
+					}
+					jqac.arrowchat.videoWith(RN);
+					a.post(c_ac_path + "includes/json/send/send_message.php", {
+						userid: u_id,
+						to: b,
+						message: "video{" + RN + "}"
+					}, function(e) {
+						if (e == "-1") {
+							displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[102], "error");
+						} else {
+							displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[63], "notice");
+						}
+						a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+					});
+				});
+				var smiley_exist = [];
+				for (var i = 0; i < Smiley.length; i++) {
+					if (a.inArray(Smiley[i][0], smiley_exist) > -1) {} else {
+						a(".arrowchat_smiley_box", $user_popups[b]).append("<div class=\"arrowchat_smiley_wrapper\" data-id=\"" + i + "\"><img class=\"arrowchat_smiley\" src=\"" + c_ac_path + "themes/" + u_theme + "/images/smilies/" + Smiley[i][0] + ".gif\" alt=\"\" /></div>");
+						smiley_exist.push(Smiley[i][0]);
+					}
+				}
+				a(".arrowchat_smiley_button", $user_popups[b]).mouseenter(function() {
+					a(this).addClass("arrowchat_smiley_button_hover");
+				});
+				a(".arrowchat_smiley_button", $user_popups[b]).mouseleave(function() {
+					a(this).removeClass("arrowchat_smiley_button_hover");
+				});
+				a(".arrowchat_smiley_wrapper", $user_popups[b]).click(function() {
+					var smiley_code = a(this).attr("data-id");
+					var existing_text = a(".arrowchat_textarea", $user_popups[b]).val();
+					a(".arrowchat_textarea", $user_popups[b]).focus().val("").val(existing_text + Smiley[smiley_code][1]);
+					a(".arrowchat_smiley_box", $user_popups[b]).hide("slide", {
+						direction: "up"
+					}, 250, function() {});
+				});
+				a(".arrowchat_smiley_button", $user_popups[b]).click(function() {
+					if (a(".arrowchat_smiley_box", $user_popups[b]).is(":visible")) {
+						a(".arrowchat_smiley_box", $user_popups[b]).hide("slide", {
+							direction: "up"
+						}, 250, function() {});
+					} else {
+						a(".arrowchat_smiley_box", $user_popups[b]).show("slide", {
+							direction: "up"
+						}, 250, function() {});
+					}
+				});
+				if (c_disable_smilies == 1) {
+					a(".arrowchat_smiley_button").hide();
+					a(".arrowchat_textarea").css("width", "99%");
+				}
+				a(".arrowchat_tabtitle .arrowchat_more_button", $user_popups[b]).mouseenter(function() {
+					showTooltip(a(this), lang[23], 0, 10, 5);
+					a(this).addClass("arrowchat_more_button_hover");
+					a(".arrowchat_tabtitle", $user_popups[b]).removeClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				a(".arrowchat_tabtitle .arrowchat_more_button", $user_popups[b]).mouseleave(function() {
+					hideTooltip();
+					a(this).removeClass("arrowchat_more_button_hover");
+					a(".arrowchat_tabtitle", $user_popups[b]).addClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				a("#arrowchat_more_" + b).click(function() {
+					hideTooltip();
+					a("#arrowchat_more_popout_" + b).toggle();
+					a(this).addClass("arrowchat_more_button_hover");
+					a(this).toggleClass("arrowchat_more_button_selected");
+				});
+				a("#arrowchat_block_" + b).click(function() {
+					a("#arrowchat_more_popout_" + b).toggle();
+					a("#arrowchat_more_" + b).toggleClass("arrowchat_more_button_selected");
+					a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).click();
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						block_chat: b
+					}, function() {
+						if (typeof blockList[b] == "undefined") {
+							blockList[b] = b;
+						}
+						loadBuddyList();
+					});
+				});
+				a("#arrowchat_clear_" + b).click(function() {
+					a("#arrowchat_more_popout_" + b).toggle();
+					a("#arrowchat_more_" + b).toggleClass("arrowchat_more_button_selected");
+					a("#arrowchat_tabcontenttext_" + b).html("");
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						clear_chat: b
+					}, function() {});
+				});
+				a(".arrowchat_textarea", $user_popups[b]).keydown(function(h) {
+					return userchatKeydown(h, a(this), b, jabber);
+				});
+				a(".arrowchat_textarea", $user_popups[b]).keyup(function(h) {
+					return userchatKeyup(h, a(this), b);
+				});
+				a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).mouseenter(function() {
+					showTooltip(a(this), lang[89], 0, 10, 5);
+					a(this).addClass("arrowchat_chatboxmouseoverclose");
+					a(".arrowchat_tabtitle", $user_popups[b]).removeClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).mouseleave(function() {
+					a(this).removeClass("arrowchat_chatboxmouseoverclose");
+					a(".arrowchat_tabtitle", $user_popups[b]).addClass("arrowchat_chatboxtabtitlemouseover");
+					hideTooltip();
+				});
+				a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).click(function() {
+					hideTooltip();
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						close_chat: b,
+						tab_alert: 1
+					}, function() {});
+					$user_popups[b].remove();
+					$users[b].remove();
+					if (j == b) {
+						j = "";
+					}
+					$chatboxes_wide.width($chatboxes_wide.width() - 148);
+					$chatboxes.scrollTo("-=148px");
+					adjustBarSize();
+					G[b] = null;
+					y[b] = null;
+					ca[b] = 0;
+				});
+				a(".arrowchat_tabtitle .arrowchat_chat_popout", $user_popups[b]).mouseenter(function() {
+					showTooltip(a(this), lang[88], 0, 10, 5);
+					a(this).addClass("arrowchat_chat_popout_hover");
+					a(".arrowchat_tabtitle", $user_popups[b]).removeClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				a(".arrowchat_tabtitle .arrowchat_chat_popout", $user_popups[b]).mouseleave(function() {
+					a(this).removeClass("arrowchat_chat_popout_hover");
+					a(".arrowchat_tabtitle", $user_popups[b]).addClass("arrowchat_chatboxtabtitlemouseover");
+					hideTooltip();
+				});
+				a(".arrowchat_tabtitle .arrowchat_chat_popout", $user_popups[b]).click(function() {
+					startPopoutChat();
+				});
+				a(".arrowchat_tabtitle .arrowchat_chat_popout", $user_popups[b]).popupWindow({
+					windowURL: c_ac_path + "public/popout/",
+					height: 650,
+					width: 900,
+					top: 25,
+					left: 25
+				});
+				a(".arrowchat_tabtitle", $user_popups[b]).not(".arrowchat_chat_popout").click(function() {
+					$users[b].click();
+				}).children().not(".arrowchat_tab_name").click(function() {
+					return false;
+				});
+				a(".arrowchat_tabtitle", $user_popups[b]).mouseenter(function() {
+					a(this).addClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				a(".arrowchat_tabtitle", $user_popups[b]).mouseleave(function() {
+					a(this).removeClass("arrowchat_chatboxtabtitlemouseover");
+				});
+				$users[b].mouseenter(function() {
+					a(this).addClass("arrowchat_tabmouseover");
+					a("div", $users[b]).addClass("arrowchat_tabmouseovertext");
+				});
+				$users[b].mouseleave(function() {
+					a(this).removeClass("arrowchat_tabmouseover");
+					a("div", $users[b]).removeClass("arrowchat_tabmouseovertext");
+				});
+				$users[b].click(function() {
+					var tba = 0;
+					if (a(".arrowchat_tabalert", $users[b]).length > 0) {
+						tba = 1;
+						a(".arrowchat_tabalert", $users[b]).remove();
+						$users[b].removeClass("arrowchat_tab_new_message");
+						G[b] = 0;
+						y[b] = 0;
+					}
+					if (a(this).hasClass("arrowchat_tabclick")) {
+						closePopup($user_popups[b], a(this));
+						a(".arrowchat_closebox_bottom", $users[b]).removeClass("arrowchat_closebox_bottom_click");
+						j = "";
+						a.post(c_ac_path + "includes/json/send/send_settings.php", {
+							unfocus_chat: b,
+							tab_alert: 1
+						}, function() {});
+					} else {
+						if (j != "") {
+							closePopup($user_popups[j], $users[j]);
+							a(".arrowchat_closebox_bottom", $users[j]).removeClass("arrowchat_closebox_bottom_click");
+							j = "";
+						}
+						if (!($users[b].offset().left < $chatboxes.offset().left + $chatboxes.width() && $users[b].offset().left - $chatboxes.offset().left >= 0)) {
+							$chatboxes.scrollTo($users[b]);
+							updateRightLastClasses();
+						}
+						if (ca[b] != 1) {
+							if (jabber == 1) {
+								getJabberHistory(b);
+							} else {
+								receiveHistory(b);
+							}
+							ca[b] = 1;
+						}
+						a.post(c_ac_path + "includes/json/send/send_settings.php", {
+							focus_chat: b,
+							tab_alert: tba
+						}, function() {});
+						$user_popups[b].css("left", $users[b].offset().left - $user_popups[b].outerWidth() + $users[b].outerWidth()).css("bottom", "25px");
+						a(this).addClass("arrowchat_tabclick").addClass("arrowchat_usertabclick");
+						$user_popups[b].addClass("arrowchat_tabopen");
+						a(".arrowchat_closebox_bottom", $users[b]).addClass("arrowchat_closebox_bottom_click");
+						j = b;
+						if (W) {
+							$user_popups[j].css("position", "absolute").css("top", parseInt(a(window).height()) - parseInt($user_popups[j].css("bottom")) - parseInt($user_popups[j].height()) + a(window).scrollTop() + "px");
+						}
+					}
+					a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+					getStatus("updatingsession") != 1 && a(".arrowchat_textarea", $user_popups[b]).focus();
+				});
+				f != 1 && $users[b].click();
+				y[b] = 0;
+				G[b] = 0;
+				if (c_disable_avatars == 1) {
+					a(".arrowchat_avatarbox").hide();
+					a("#arrowchat_setting_names_only").parent("li").hide();
+				}
+				if (jabber == 1) {
+					a(".arrowchat_more_button", $user_popups[b]).hide();
+					a(".arrowchat_chat_popout", $user_popups[b]).hide();
+				}
+			}
+		}
+
+		function formatTimestamp(b) {
+			var c = "am",
+				d = b.getHours(),
+				i = b.getMinutes(),
+				e = b.getDate();
+			b = b.getMonth();
+			var g = d;
+			if (d > 11) {
+				c = "pm";
+			}
+			if (d > 12) {
+				d -= 12;
+			}
+			if (d == 0) {
+				d = 12;
+			}
+			if (d < 10) {
+				d = d;
+			}
+			if (i < 10) {
+				i = "0" + i;
+			}
+			var l = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				f = "th";
+			if (e == 1 || e == 21 || e == 31) {
+				f = "st";
+			} else if (e == 2 || e == 22) {
+				f = "nd";
+			} else if (e == 3 || e == 23) {
+				f = "rd";
+			}
+			if (c_us_time != 1) {
+				return e != Na ? "<span class=\"arrowchat_ts\">" + g + ":" + i + " " + e + f + " " + l[b] + "</span>" : "<span class=\"arrowchat_ts\">" + g + ":" + i + "</span>";
+			} else {
+				return e != Na ? "<span class=\"arrowchat_ts\">" + d + ":" + i + c + " " + e + f + " " + l[b] + "</span>" : "<span class=\"arrowchat_ts\">" + d + ":" + i + c + "</span>";
+			}
+		}
+
+		function receiveHistory(b, times) {
+			if (times) {} else {
+				times = 1;
+			}
+			if (times > 1) {
+				a("<div class=\"arrowchat_message_history_loading\" style=\"text-align:center;padding:5px 0;\"><img src=\"" + c_ac_path + "themes/" + u_theme + "/images/img-loading.gif\" alt=\"Loading\" /></div>").prependTo(a("#arrowchat_tabcontenttext_" + b));
+			}
+			a.ajax({
+				cache: false,
+				url: c_ac_path + "includes/json/receive/receive_history.php",
+				data: {
+					chatbox: b,
+					history: times
+				},
+				type: "post",
+				dataType: "json",
+				success: function(c) {
+					a(".arrowchat_message_history_loading").remove();
+					history_ids[b] = 0;
+					numMessages = 0;
+					if (c) {
+						if (times == 1) {
+							a(".arrowchat_tabcontenttext", $user_popups[b]).html("");
+						}
+						last_sent[b] = null;
+						var d = "",
+							i = uc_name[b],
+							init = false;
+						a.each(c, function(e, l) {
+							e == "messages" && a.each(l, function(f, h) {
+								numMessages++;
+								f = "";
+								if (h.self == 1) {
+									fromname = u_name;
+									fromid = u_id;
+									f = " arrowchat_self";
+									_aa5 = _aa4 = "";
+									avatar = u_avatar;
+									tooltip = lang[90];
+								} else {
+									fromname = i;
+									fromid = b;
+									_aa4 = "<a href=\"" + uc_link[b] + "\">";
+									_aa5 = "</a>";
+									avatar = uc_avatar[h.from];
+									tooltip = fromname;
+								}
+								var full_name = fromid;
+								var o = new Date(h.sent * 1000);
+								if (c_show_full_name != "1") {
+									if (fromname.indexOf(" ") != -1) {
+										fromname = fromname.slice(0, fromname.indexOf(" "));
+									}
+								}
+								if (h.sent - last_sent[h.from] > 60 || last_sent[h.from] == null || last_name[h.from] != full_name) {
+									if (init == true) {
+										d += "</div>";
+									}
+									d += "<div class=\"arrowchat_chatboxmessage arrowchat_clearfix\" id=\"arrowchat_message_" + h.id + "\"><div class=\"arrowchat_chatboxmessagefrom" + f + "\"><div class=\"arrowchat_disable_avatars_name\">" + fromname + "</div><img alt=\"" + tooltip + "\" class=\"arrowchat_chatbox_avatar\" src=\"" + avatar + "\" /></div><div class=\"arrowchat_chatboxmessage_wrapper\"><div class=\"arrowchat_chatboxmessagecontent" + f + "\">" + formatTimestamp(o) + h.message + "</div></div>";
+									last_sent[h.from] = h.sent;
+									last_name[h.from] = full_name;
+									init = true;
+									last_id[h.from] = h.id;
+								} else {
+									d += "<div id=\"arrowchat_message_" + h.id + "\" class=\"arrowchat_chatboxmessagecontent" + f + "\">" + h.message + "</div>";
+								}
+							});
+						});
+						var current_top_element = a("#arrowchat_tabcontenttext_" + b).children().children().first();
+						if (times > 1) {
+							a(d).prependTo(a("#arrowchat_tabcontenttext_" + b).children("div"));
+						} else {
+							a("#arrowchat_tabcontenttext_" + b).html("<div>" + d + "</div>");
+						}
+						showTimeAndTooltip();
+						if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
+							setAvatarVisibility(1);
+						}
+						var previous_height = 0;
+						current_top_element.prevAll().each(function() {
+							previous_height += a(this).outerHeight();
+						});
+						if (times == 1) {
+							a("#arrowchat_tabcontenttext_" + b).scrollTop(50000);
+						} else {
+							a("#arrowchat_tabcontenttext_" + b).scrollTop(previous_height);
+						}
+						a("#arrowchat_tabcontenttext_" + b).scroll(function() {
+							if (a("#arrowchat_tabcontenttext_" + b).scrollTop() < 50 && history_ids[b] != 1) {
+								history_ids[b] = 1;
+								if (numMessages == 20) {
+									times++;
+									receiveHistory(b, times);
+								}
+							}
+						});
+					}
+				}
+			});
+		}
+
+		function showTimeAndTooltip() {
+			a(".arrowchat_chatbox_avatar").mouseenter(function() {
+				showTooltip(a(this), a(this).attr("alt"), false, 55, -38, 1);
+			});
+			a(".arrowchat_chatbox_avatar").mouseleave(function() {
+				hideTooltip();
+			});
+			a(".arrowchat_chatboxmessage").mouseenter(function() {
+				a(this).children().children(".arrowchat_chatboxmessagecontent").children(".arrowchat_ts").show();
+			});
+			a(".arrowchat_chatboxmessage").mouseleave(function() {
+				a(this).children().children(".arrowchat_chatboxmessagecontent").children(".arrowchat_ts").hide();
+			});
+		}
+
+		function showChatroomTime() {
+			a(".arrowchat_chatroom_box_message").mouseenter(function() {
+				a(this).children(".arrowchat_chatroom_message_content").children(".arrowchat_ts").show();
+			});
+			a(".arrowchat_chatroom_box_message").mouseleave(function() {
+				a(this).children(".arrowchat_chatroom_message_content").children(".arrowchat_ts").hide();
+			});
+		}
+
+		function notifyNewMessage(b, c, d) {
+			if (uc_name[b] == null || uc_name[b] == "") {
+				setTimeout(function() {
+					notifyNewMessage(b, c, d);
+				}, 500);
+			} else {
+				receiveUser(b, uc_name[b], uc_status[b], uc_avatar[b], uc_link[b], 1);
+				if (d == 1) {
+					if (a(".arrowchat_tabalert", $users[b]).length > 0) {
+						c = parseInt(a(".arrowchat_tabalert", $users[b]).html()) + parseInt(c);
+					}
+				}
+				if (c == 0) {
+					$users[b].removeClass("arrowchat_tab_new_message");
+					a(".arrowchat_tabalert", $users[b]).remove();
+				} else {
+					if (a(".arrowchat_tabalert", $users[b]).length > 0) {
+						a(".arrowchat_tabalert", $users[b]).html(c);
+						if (bounce3 == 1) {
+							bounce3 = 0;
+							a(".arrowchat_tabalert", $users[b]).stop(true, true).effect("bounce", {
+								times: 3,
+								distance: 5
+							}, 200, function() {
+								bounce3 = 1;
+							});
+						}
+					} else {
+						a("<div/>").css("top", "-11px").css("left", "112px").addClass("arrowchat_tabalert").html(c).appendTo($users[b]);
+					}
+					$users[b].removeClass("arrowchat_tab_new_message").addClass("arrowchat_tab_new_message");
+				}
+				y[b] = c;
+				positionTabAlerts();
+			}
+		}
+
+		function setAvatarVisibility(b) {
+			if (b == 1) {
+				a(".arrowchat_userlist_avatar").addClass("arrowchat_hide_avatars");
+				a(".arrowchat_chatroom_avatar").addClass("arrowchat_hide_avatars");
+				a(".arrowchat_chatroom_message_avatar").addClass("arrowchat_hide_avatars");
+				a(".arrowchat_chatbox_avatar").hide();
+				a(".arrowchat_disable_avatars_name").show();
+				a(".arrowchat_chatboxmessage_wrapper").addClass("arrowchat_chatboxmessage_wrapper2");
+				a(".arrowchat_chatboxmessagecontent").addClass("arrowchat_chatboxmessagecontent2");
+			} else {
+				a(".arrowchat_userlist_avatar").removeClass("arrowchat_hide_avatars");
+				a(".arrowchat_chatroom_avatar").removeClass("arrowchat_hide_avatars");
+				a(".arrowchat_chatroom_message_avatar").removeClass("arrowchat_hide_avatars");
+				a(".arrowchat_chatbox_avatar").show();
+				a(".arrowchat_disable_avatars_name").hide();
+				a(".arrowchat_chatboxmessage_wrapper").removeClass("arrowchat_chatboxmessage_wrapper2");
+				a(".arrowchat_chatboxmessagecontent").removeClass("arrowchat_chatboxmessagecontent2");
+			}
+		}
+
+		function buildBuddyListTab() {
+			var d = "";
+			$buddy_list_tab = a("<div/>").attr("id", "arrowchat_buddy_list_tab").addClass("arrowchat_bar_button").addClass("arrowchat_bar_right").html(ArrowChat.Templates.buddylist_tab()).appendTo($base);
+			$userstab_popup = a("<div/>").attr("id", "arrowchat_userstab_popup").addClass("arrowchat_tabpopup").css("display", "none").html(ArrowChat.Templates.buddylist_window(d, _ts, acp)).appendTo($body);
+			a(".arrowchat_facebook_connect").append("<img style=\"position:relative;left:2px;top:1px\" src=\"" + c_ac_path + "themes/" + u_theme + "/images/img-facebook-icon.gif\" alt=\"Connect to Facebook\" /><span style=\"position:relative;top:-2px;left:5px;\"><a href=\"javascript:void(0);\">" + lang[140] + "</a></span>").mouseover(function() {
+				a(this).addClass("arrowchat_facebook_connect_hover");
+			}).mouseout(function() {
+				a(this).removeClass("arrowchat_facebook_connect_hover");
+			});
+			a(".arrowchat_facebook_connect").click(function() {
+				arrowchatdoLogin();
+				return false;
+			});
+			if (c_disable_avatars == 1) {
+				a("#arrowchat_name_box").hide();
+				a("#arrowchat_setting_names_only").parent("li").hide();
+			}
+			$buddy_list_tab.css("width", c_width_blist + "px");
+			if (c_width_blist <= 25) {
+				a("#arrowchat_userstab_text").hide();
+			}
+			if (c_theme_change != 1) {
+				a(".arrowchat_theme_button").hide();
+			}
+			a(".arrowchat_powered_by").css("display", "none");
+			a(".arrowchat_search_friends_text").placeholder();
+			if (u_sounds == 1) {
+				a("#arrowchat_setting_sound :input").attr("checked", true);
+			} else {
+				a("#arrowchat_setting_sound").addClass("arrowchat_menu_unchecked");
+				a("#arrowchat_setting_sound :input").attr("checked", false);
+			}
+			if (u_blist_open == 1) {
+				a("#arrowchat_setting_window_open :input").attr("checked", true);
+			} else {
+				a("#arrowchat_setting_window_open").addClass("arrowchat_menu_unchecked");
+				a("#arrowchat_setting_window_open :input").attr("checked", false);
+			}
+			if (u_no_avatars == 1) {
+				a("#arrowchat_setting_names_only :input").attr("checked", true);
+			} else {
+				a("#arrowchat_setting_names_only").addClass("arrowchat_menu_unchecked");
+				a("#arrowchat_setting_names_only :input").attr("checked", false);
+			}
+			u_is_guest == 1 && c_guest_name_change == 1 && u_guest_name == "" && a(".arrowchat_enter_name_wrapper").show();
+			a("#arrowchat_guest_name_input").placeholder();
+			a("#arrowchat_guest_name_input").keydown(function(h) {
+				if (h.keyCode == 13) {
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						chat_name: a(this).val()
+					}, function(data) {
+						if (data != "1") {
+							displayMessage("arrowchat_buddylist_message_flyout", data, "error");
+						} else {
+							a(".arrowchat_enter_name_wrapper").slideUp("fast");
+							u_name = a(this).val();
+						}
+					});
+				}
+			});
+			a(".arrowchat_search_friends_text").keyup(function() {
+				a(".arrowchat_search_not_found").remove();
+				var i = 1,
+					e = true,
+					l = "",
+					f = a(this).val();
+				if (f == "") {
+					a(".arrowchat_userlist").each(function() {
+						l = a(this).attr("id").substr(19);
+						a("#arrowchat_userlist_" + l).removeClass("arrowchat_userlist_hover2").show();
+						a("#arrowchat_userlist_" + l + " > span.arrowchat_userscontentname:icontains('" + f + "')").removeHighlight();
+					});
+					e = false;
+				} else {
+					a(".arrowchat_userlist").each(function() {
+						l = a(this).attr("id").substr(19);
+						if (a("#arrowchat_userlist_" + l + " > span.arrowchat_userscontentname:icontains('" + f + "')").length > 0) {
+							a("#arrowchat_userlist_" + l).removeClass("arrowchat_userlist_hover2").show();
+							i == 1 && a("#arrowchat_userlist_" + l).addClass("arrowchat_userlist_hover2");
+							a("#arrowchat_userlist_" + l + " > span.arrowchat_userscontentname:icontains('" + f + "')").removeHighlight();
+							a("#arrowchat_userlist_" + l + " > span.arrowchat_userscontentname:icontains('" + f + "')").highlight(f);
+							e = false;
+							i++;
+						} else {
+							a("#arrowchat_userlist_" + l).hide();
+						}
+					});
+				}
+				e && a("<div/>").attr("class", "arrowchat_search_not_found arrowchat_nofriends").html(lang[26]).prependTo("#arrowchat_userscontent");
+			});
+			a(document).bind("idle.idleTimer", function() {
+				if (w != 1) {
+					clearUserStatus();
+					a("#arrowchat_userstab_icon").addClass("arrowchat_user_away2");
+					setUserStatus("away");
+					isAway = 1;
+				}
+			});
+			a(document).bind("active.idleTimer", function() {
+				if (w != 1) {
+					clearUserStatus();
+					setUserStatus("available");
+					a("#arrowchat_userstab_icon").addClass("arrowchat_user_available2");
+					isAway = 0;
+				}
+			});
+			a.idleTimer(60000 * ArrowChat.IdleTime);
+			a("#arrowchat_theme_button").click(function() {
+				a("#arrowchat_theme_flyout").toggleClass("arrowchat_theme_flyout_display");
+				a(".arrowchat_theme_link").addClass("arrowchat_theme_button_hover");
+				a(".arrowchat_theme_link").toggleClass("arrowchat_more_button_selected");
+				var theme_switch = a(".arrowchat_themeswitcher").val();
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					theme: theme_switch
+				}, function(theme) {
+					a("#arrowchat_css").attr({
+						href: c_ac_path + "external.php?type=css&t=" + theme_switch
+					});
+					window.location.reload();
+				});
+			});
+			a("#arrowchat_setting_sound").click(function() {
+				a(this).toggleClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_setting_sound :input").is(":checked")) {
+					a("#arrowchat_setting_sound :input").attr("checked", false);
+					_soundcheck = -1;
+					u_sounds = 0;
+				} else {
+					a("#arrowchat_setting_sound :input").attr("checked", true);
+					_soundcheck = 1;
+					u_sounds = 1;
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					sound: _soundcheck
+				}, function() {});
+			});
+			a("#arrowchat_setting_window_open").click(function() {
+				a(this).toggleClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_setting_window_open :input").is(":checked")) {
+					a("#arrowchat_setting_window_open :input").attr("checked", false);
+					_windowcheck = -1;
+				} else {
+					a("#arrowchat_setting_window_open :input").attr("checked", true);
+					_windowcheck = 1;
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					window: _windowcheck
+				}, function() {});
+			});
+			a("#arrowchat_setting_names_only").click(function() {
+				a(this).toggleClass("arrowchat_menu_unchecked");
+				if (a("#arrowchat_setting_names_only :input").is(":checked")) {
+					a("#arrowchat_setting_names_only :input").attr("checked", false);
+					setAvatarVisibility(0);
+					_namecheck = -1;
+				} else {
+					a("#arrowchat_setting_names_only :input").attr("checked", true);
+					setAvatarVisibility(1);
+					_namecheck = 1;
+				}
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					name: _namecheck
+				}, function() {});
+			});
+			a("#arrowchat_setting_block_list").click(function() {
+				a(this).parent().parent(".arrowchat_inner_menu").hide();
+				a(".arrowchat_block_menu").show();
+				a.ajax({
+					url: c_ac_path + "includes/json/receive/receive_block_list.php",
+					type: "get",
+					cache: false,
+					dataType: "json",
+					success: function(b) {
+						if (b && b != null) {
+							a(".arrowchat_block_menu select").html("");
+							a("<option/>").attr("value", "0").html(lang[118]).appendTo(a(".arrowchat_block_menu select"));
+							a.each(b, function(e, l) {
+								a.each(l, function(f, h) {
+									a("<option/>").attr("value", h.id).html(h.username).appendTo(a(".arrowchat_block_menu select"));
+								});
+							});
+						}
+					}
+				});
+			});
+			a("#arrowchat_unblock_button").click(function() {
+				a(".arrowchat_panel_item").click();
+				var unblock_chat_user = a(".arrowchat_block_menu select").val();
+				if (unblock_chat_user != "0") {
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						unblock_chat: unblock_chat_user
+					}, function() {
+						if (typeof blockList[unblock_chat_user] != "undefined") {
+							blockList.splice(unblock_chat_user, 1);
+						}
+						loadBuddyList();
+					});
+				}
+			});
+			a(".arrowchat_theme_link").mouseenter(function() {
+				showTooltip(a(this), lang[94], 0, 10, 5);
+				a(this).parent().addClass("arrowchat_theme_button_hover");
+				a("#arrowchat_userstab_popup .arrowchat_userstabtitle").removeClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a(".arrowchat_theme_link").mouseleave(function() {
+				hideTooltip();
+				a(this).parent().removeClass("arrowchat_theme_button_hover");
+				a("#arrowchat_userstab_popup .arrowchat_userstabtitle").addClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a(".arrowchat_theme_link").click(function() {
+				hideTooltip();
+				a("#arrowchat_userscontent").height() < 150 ? a("#arrowchat_theme_flyout").addClass("flyout_reversed") : a("#arrowchat_theme_flyout").removeClass("flyout_reversed");
+				a("#arrowchat_theme_flyout").toggleClass("arrowchat_theme_flyout_display");
+				a(this).addClass("arrowchat_theme_button_hover");
+				a(this).toggleClass("arrowchat_more_button_selected");
+				if (a(".arrowchat_panel_item").hasClass("arrowchat_more_button_selected")) {
+					a(".arrowchat_panel_item").toggleClass("arrowchat_more_button_selected");
+					a("#arrowchat_options_flyout").toggleClass("arrowchat_options_flyout_display");
+				}
+			});
+			a(".arrowchat_panel_item").mouseenter(function() {
+				showTooltip(a(this), lang[23], 0, 10, 5);
+				a(this).parent().addClass("arrowchat_more_button_hover");
+				a("#arrowchat_userstab_popup .arrowchat_userstabtitle").removeClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a(".arrowchat_panel_item").mouseleave(function() {
+				hideTooltip();
+				a(this).parent().removeClass("arrowchat_more_button_hover");
+				a("#arrowchat_userstab_popup .arrowchat_userstabtitle").addClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a(".arrowchat_panel_item").click(function() {
+				hideTooltip();
+				a("#arrowchat_userscontent").height() < 150 ? a("#arrowchat_options_flyout").addClass("flyout_reversed") : a("#arrowchat_options_flyout").removeClass("flyout_reversed");
+				a("#arrowchat_options_flyout").toggleClass("arrowchat_options_flyout_display");
+				a(this).addClass("arrowchat_more_button_hover");
+				a(this).toggleClass("arrowchat_more_button_selected");
+				if (a(".arrowchat_theme_link").hasClass("arrowchat_more_button_selected")) {
+					a(".arrowchat_theme_link").toggleClass("arrowchat_more_button_selected");
+					a("#arrowchat_theme_flyout").toggleClass("arrowchat_theme_flyout_display");
+				}
+				a(".arrowchat_inner_menu").show();
+				a(".arrowchat_block_menu").hide();
+			});
+			addHover(a(".arrowchat_menu_item"), "arrowchat_more_hover");
+			a("#arrowchat_gooffline").click(function() {
+				a(".arrowchat_panel_item").click();
+				a(".arrowchat_userstabtitle").toggleClass("arrowchat_userstabtitle_button_click");
+				pushCancelAll();
+				cancelJSONP();
+				a.idleTimer("destroy");
+				clearTimeout(Z);
+				if (j != "") {
+					closePopup($user_popups[j], $users[j]);
+					a(".arrowchat_closebox_bottom", $users[j]).removeClass("arrowchat_closebox_bottom_click");
+					j = "";
+				}
+				a("#arrowchat_panel_options").removeClass("arrowchat_panel_hover");
+				showUserOffline();
+				a("#arrowchat_userstab_icon").addClass("arrowchat_user_invisible2");
+				$chatboxes.hide();
+			});
+			a("#arrowchat_userstab_popup .arrowchat_userstabtitle").click(function() {
+				$buddy_list_tab.click();
+			}).children().not(".arrowchat_tab_name").click(function() {
+				return false;
+			});
+			a("#arrowchat_userstab_popup .arrowchat_userstabtitle").mouseenter(function() {
+				a(this).addClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			a("#arrowchat_userstab_popup .arrowchat_userstabtitle").mouseleave(function() {
+				a(this).removeClass("arrowchat_chatboxtabtitlemouseover2");
+			});
+			$buddy_list_tab.mouseover(function() {
+				if (c_width_blist <= 25) {
+					if ($buddy_list_tab.hasClass("arrowchat_tabclick")) {} else {
+						showTooltip($buddy_list_tab, lang[4]);
+					}
+				}
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			$buddy_list_tab.mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+			$buddy_list_tab.click(function() {
+				if (c_width_blist <= 25) {
+					hideTooltip();
+				}
+				closePopup($chatrooms_popup, $chatrooms_button);
+				if (w == 1 || bli == 1) {
+					clearTimeout(Z);
+					if (u_blist_open != 1) {
+						loadBuddyList();
+					}
+					bli = 0;
+				}
+				if (w == 1) {
+					w = 0;
+					a("#arrowchat_userstab_text").html("<b>" + lang[4] + "</b> (<b>" + (R + jabberOnlineNumber) + "</b>)");
+					receiveCore();
+					pushSubscribe();
+					a.idleTimer(60000 * ArrowChat.IdleTime);
+					setUserStatus("available");
+					a("#arrowchat_userstab_icon").addClass("arrowchat_user_available2");
+					$chatboxes.show();
+				}
+				closePopup($optionsbutton_popup, $optionsbutton);
+				$userstab_popup.css("left", $buddy_list_tab.offset().left - $userstab_popup.outerWidth() + $buddy_list_tab.outerWidth()).css("bottom", "25px");
+				a(this).toggleClass("arrowchat_tabclick").toggleClass("arrowchat_userstabclick");
+				$userstab_popup.toggleClass("arrowchat_tabopen");
+				adjustBuddyListSize();
+			});
+		}
+
+		function startPopoutChat() {
+			pushCancelAll();
+			cancelJSONP();
+			a.idleTimer("destroy");
+			clearTimeout(Z);
+			$buddy_list_tab.hide();
+			$popout_chat_button.show();
+			$chatboxes.hide();
+			$chatbox_right.hide();
+			$chatbox_left.hide();
+			closePopup($userstab_popup, $buddy_list_tab);
+			closePopup($optionsbutton_popup, $optionsbutton);
+			closePopup($chatrooms_popup, $chatrooms_button);
+			if (j != "") {
+				closePopup($user_popups[j], $users[j]);
+				a(".arrowchat_closebox_bottom", $users[j]).removeClass("arrowchat_closebox_bottom_click");
+				j = "";
+			}
+			a.post(c_ac_path + "includes/json/send/send_settings.php", {
+				popoutchat: "1"
+			}, function() {});
+		}
+
+		function adjustBuddyListSize() {
+			var searchHeight = 0,
+				nameHeight = 0,
+				poweredHeight = 0;
+			if (a("#arrowchat_search_friends").is(":visible")) {
+				searchHeight = a("#arrowchat_search_friends").outerHeight();
+			}
+			if (a(".arrowchat_enter_name_wrapper").is(":visible")) {
+				nameHeight = a(".arrowchat_enter_name_wrapper").outerHeight();
+			}
+			if (a(".arrowchat_powered_by").is(":visible")) {
+				poweredHeight = a(".arrowchat_powered_by").outerHeight();
+			}
+			if (a(".arrowchat_facebook_connect").is(":visible")) {
+				poweredHeight = poweredHeight + a(".arrowchat_facebook_connect").outerHeight();
+			}
+			if (a(window).outerHeight() - $userstab_popup.outerHeight() <= 70 && a("#arrowchat_userscontent").outerHeight() <= a("#arrowchat_userslist_available").outerHeight() + a("#arrowchat_userslist_away").outerHeight() + a("#arrowchat_facebook_friends").outerHeight(true) + a("#arrowchat_facebook_friends_list").outerHeight(true) + a("#arrowchat_site_users").outerHeight(true)) {
+				a("#arrowchat_userscontent").css("height", a(window).outerHeight() - (94 + searchHeight + nameHeight + poweredHeight) + "px");
+			} else {
+				a("#arrowchat_userscontent").css("height", "auto");
+			}
+		}
+
+		function adjustBarSize() {
+			if (c_chat_maintenance != 1 && u_id != "") {
+				if ($optionsbutton_popup !== undefined) {
+					var d = 0;
+					a(".arrowchat_notification_message_div").each(function() {
+						d += parseInt(a(this).outerHeight()) + 5;
+					});
+					if (a(window).height() - $optionsbutton_popup.height() < 80 && a("#arrowchat_notifications_content").height() <= d) {
+						a("#arrowchat_notifications_content").css("height", a(window).height() - 110 + "px");
+					} else {
+						a("#arrowchat_notifications_content").css("height", "auto");
+					}
+				}
+				adjustBuddyListSize();
+			}
+			var b = a(window).width(),
+				c = 0;
+			$chatbox_right.hasClass("arrowchat_chatbox_lr") || (c = 19);
+			for (d = 0; d < barLinks.length; d++) {
+				c += a("#arrowchat_trayicon_" + d).outerWidth();
+			}
+			if ($optionsbutton !== undefined) {
+				c += $optionsbutton.outerWidth();
+			}
+			if ($chatrooms_button !== undefined) {
+				c += $chatrooms_button.outerWidth();
+			}
+			if (a("#arrowchat_hide_bar_button") !== undefined) {
+				c += a("#arrowchat_hide_bar_button").outerWidth();
+			}
+			var i = 0;
+			for (bha in apps) {
+				if (apps[bha][12] != "1" && typeof $application_buttons[apps[bha][0]] != "undefined") {
+					c += $application_buttons[apps[bha][0]].outerWidth();
+				}
+			}
+			if ($applications_button !== undefined) {
+				c += $applications_button.outerWidth();
+			}
+			if (c_no_apps_menu == 1) {
+				c += 130;
+			}
+			if (barLinks.length > 0 && i > 0) {
+				c += 30;
+			}
+			positionBar(c);
+			if (c_chat_maintenance != 1 && u_id != "") {
+				if ($chatboxes_wide.width() <= $base.width() - 250 - c) {
+					$chatboxes.css("width", $chatboxes_wide.width());
+					$chatboxes.scrollTo("0px", 0);
+				} else {
+					b = $chatboxes.width();
+					var chatboxes_width_value = Math.floor(($base.width() - 250 - c) / 148) * 148;
+					if (chatboxes_width_value < 148) {
+						chatboxes_width_value = 148;
+					}
+					$chatboxes.css("width", chatboxes_width_value + "px");
+					c = $chatboxes.width();
+					b != c && $chatboxes.scrollTo("-=148px", 0);
+				}
+				c_notifications != 0 && $optionsbutton_popup.css("left", $optionsbutton.offset().left - $optionsbutton_popup.outerWidth() + $optionsbutton.outerWidth()).css("bottom", "25px");
+				c_chatrooms != 0 && $chatrooms_popup.css("left", $chatrooms_button.offset().left - $chatrooms_popup.outerWidth() + $chatrooms_button.outerWidth()).css("bottom", "25px");
+				if (typeof $applications_button_popup != "undefined") {
+					c_applications_on != 0 && $applications_button_popup.css("left", $applications_button.offset().left).css("bottom", "25px");
+				}
+				$userstab_popup.css("left", $buddy_list_tab.offset().left - $userstab_popup.outerWidth() + $buddy_list_tab.outerWidth()).css("bottom", "25px");
+				if (m != "") {
+					$application_button_popups[m].css("left", $application_buttons[m].offset().left).css("bottom", "25px");
+				}
+				if (j != "") {
+					if ($users[j].offset().left < $chatboxes.offset().left + $chatboxes.width() && $users[j].offset().left - $chatboxes.offset().left >= 0) {
+						$user_popups[j].css("left", $users[j].offset().left - $user_popups[j].outerWidth() + $users[j].outerWidth()).css("bottom", "25px");
+					} else {
+						closePopup($user_popups[j], $users[j]);
+						c = $users[j].offset().left - $chatboxes_wide.offset().left - (Math.floor($chatboxes.width() / 148) - 1) * 148;
+						$chatboxes.scrollTo(c, 0, function() {
+							if (typeof $users[j] != "undefined") {
+								$users[j].click();
+							}
+						});
+					}
+				}
+				positionTabAlerts();
+				updateRightLastClasses();
+				W && positionArrowchat();
+			}
+			if (c_mobile_device == 1) {
+				mobileSupport();
+			}
+		}
+
+		function positionBar(apps_tray_width) {
+			var window_width = a(window).width();
+			if (c_bar_fixed == 1) {
+				$base.css("width", c_bar_fixed_width);
+				if (c_bar_fixed_alignment == "left") {
+					$base.css("left", c_bar_padding);
+				}
+				if (c_bar_fixed_alignment == "center") {
+					var left_value = (window_width - c_bar_fixed_width) / 2;
+					$base.css("left", left_value);
+				}
+				if (c_bar_fixed_alignment == "right") {
+					var left_value = window_width - c_bar_fixed_width;
+					$base.css("left", left_value - c_bar_padding);
+				}
+			} else {
+				var check_width = parseInt(450) + parseInt(apps_tray_width) + parseInt(c_bar_padding * 2);
+				if (window_width < check_width) {
+					window_width = check_width;
+				}
+				$base.css("left", c_bar_padding + "px");
+				$base.css("width", window_width - c_bar_padding * 2);
+			}
+		}
+
+		function positionTabAlerts() {
+			var $left = a(".arrowchat_tabalertlr", $chatbox_left);
+			var $right = a(".arrowchat_tabalertlr", $chatbox_right);
+			$left.html("0").css("display", "none");
+			$right.html("0").css("display", "none");
+			a(".arrowchat_tabalert").each(function() {
+				if (a(this).parent().attr("id") != "arrowchat_chatrooms_button" && !a(this).parent().hasClass("arrowchat_apps_button")) {
+					if (a(this).parent().offset().left < $chatboxes.offset().left + $chatboxes.width() && a(this).parent().offset().left - $chatboxes.offset().left >= 0) {
+						a(this).css("display", "block");
+					} else {
+						a(this).css("display", "none");
+						if (a(this).parent().offset().left - $chatboxes.offset().left >= 0) {
+							var b = $chatbox_right.offset().left + $chatbox_right.width() - 30;
+							$right.html(parseInt(a(".arrowchat_tabalertlr", $chatbox_right).html()) + parseInt(a(this).html())).css({
+								display: "block",
+								left: b
+							});
+						} else {
+							b = $chatbox_left.offset().left + $chatbox_left.width() - 22;
+							$left.html(parseInt(a(".arrowchat_tabalertlr", $chatbox_left).html()) + parseInt(a(this).html())).css({
+								display: "block",
+								left: b
+							});
+						}
+					}
+				}
+			});
+		}
+
+		function updateRightLastClasses() {
+			var b = 0,
+				right_last = false,
+				lr = false;
+			if ($chatbox_right.hasClass("arrowchat_chatbox_right_last")) {
+				right_last = true;
+			}
+			if ($chatbox_right.hasClass("arrowchat_chatbox_lr")) {
+				lr = true;
+			}
+			if ($chatboxes.scrollLeft() == 0) {
+				a(".arrowchat_tabtext", $chatbox_left).html("0");
+				$chatbox_left.addClass("arrowchat_chatbox_left_last");
+				a(".arrowchat_previous_tab").addClass("arrowchat_previous_tab_last");
+				b++;
+			} else {
+				var i = Math.floor($chatboxes.scrollLeft() / 148);
+				a(".arrowchat_tabtext", $chatbox_left).html(i);
+				$chatbox_left.removeClass("arrowchat_chatbox_left_last");
+				a(".arrowchat_previous_tab").removeClass("arrowchat_previous_tab_last");
+			}
+			if ($chatboxes.scrollLeft() + $chatboxes.width() == $chatboxes_wide.width()) {
+				a(".arrowchat_tabtext", $chatbox_right).html("0");
+				$chatbox_right.addClass("arrowchat_chatbox_right_last");
+				a(".arrowchat_next_tab").addClass("arrowchat_next_tab_last");
+				b++;
+			} else {
+				i = Math.floor(($chatboxes_wide.width() - ($chatboxes.scrollLeft() + $chatboxes.width())) / 148);
+				a(".arrowchat_tabtext", $chatbox_right).html(i);
+				$chatbox_right.removeClass("arrowchat_chatbox_right_last");
+				a(".arrowchat_next_tab").removeClass("arrowchat_next_tab_last");
+			}
+			if (b == 2) {
+				$chatbox_right.addClass("arrowchat_chatbox_lr");
+				$chatbox_left.addClass("arrowchat_chatbox_lr");
+			} else {
+				$chatbox_right.removeClass("arrowchat_chatbox_lr");
+				$chatbox_left.removeClass("arrowchat_chatbox_lr");
+			}
+			if (!$chatbox_right.hasClass("arrowchat_chatbox_right_last") && right_last || $chatbox_right.hasClass("arrowchat_chatbox_right_last") && !right_last || !$chatbox_right.hasClass("arrowchat_chatbox_lr") && lr || $chatbox_right.hasClass("arrowchat_chatbox_lr") && !lr) {
+				adjustBarSize();
+			}
+		}
+
+		function scrollChatboxes(b) {
+			if (j != "") {
+				closePopup($user_popups[j], $users[j]);
+			}
+			a(".arrowchat_tabalert").css("display", "none");
+			var c = 100;
+			if (get("initialize") == 1) {
+				c = 0;
+			}
+			$chatboxes.scrollTo(b, c, function() {
+				if (j != "") {
+					if ($users[j].offset().left < $chatboxes.offset().left + $chatboxes.width() && $users[j].offset().left - $chatboxes.offset().left >= 0) {
+						$users[j].click();
+					} else {
+						j = "";
+					}
+				}
+				positionTabAlerts();
+				updateRightLastClasses();
+			});
+		}
+
+		function set(b, c) {
+			V[b] = c;
+		}
+
+		function get(b) {
+			return V[b] ? V[b] : "";
+		}
+
+		function getStatus(b) {
+			return xa[b] ? xa[b] : "";
+		}
+
+		function receiveUserFromUserlist(b) {
+			if (a(b).attr("id")) {
+				var c = a(b).attr("id").substr(19);
+			} else {
+				var c = "";
+			}
+			if (c == "") {
+				c = a(b).parent().attr("id").substr(19);
+			}
+			receiveUser(c, uc_name[c], uc_status[c], uc_avatar[c], uc_link[c]);
+		}
+
+		function chatroomListClicked(b) {
+			if ($chatroom_create_flyout.is(":visible")) {
+				$chatroom_create_flyout.hide("slide", {
+					direction: "up"
+				}, 250);
+			}
+			c = "";
+			if (a(b).attr("id")) {
+				c = a(b).attr("id").substr(19);
+			}
+			if (c == "") {
+				c = a(b).parent().attr("id").substr(19);
+			}
+			if (crt[c] == 2) {
+				a("#arrowchat_chatroom_password_id").val(c);
+				if (a("#arrowchat_chatroom_" + c).hasClass("arrowchat_chatroom_clicked")) {
+					a("#arrowchat_chatroom_password_flyout").hide("slide", {
+						direction: "up"
+					}, 250);
+					a(".arrowchat_chatroom_list").removeClass("arrowchat_chatroom_clicked");
+				} else {
+					a(".arrowchat_chatroom_list").removeClass("arrowchat_chatroom_clicked");
+					a("#arrowchat_chatroom_" + c).addClass("arrowchat_chatroom_clicked");
+					if (!a("#arrowchat_chatroom_password_flyout").is(":visible")) {
+						a("#arrowchat_chatroom_password_flyout").show("slide", {
+							direction: "up"
+						}, 250, function() {
+							a("#arrowchat_chatroom_password_input").focus();
+						});
+					} else {
+						a("#arrowchat_chatroom_password_flyout").hide("slide", {
+							direction: "up"
+						}, 250);
+						a("#arrowchat_chatroom_password_flyout").show("slide", {
+							direction: "up"
+						}, 250, function() {
+							a("#arrowchat_chatroom_password_input").focus();
+						});
+					}
+				}
+			} else {
+				a(".arrowchat_chatroom_full_content").html("<div class=\"arrowchat_nofriends\">" + lang[34] + "</div>");
+				if (a("#arrowchat_chatroom_password_flyout").is(":visible")) {
+					a("#arrowchat_chatroom_password_flyout").hide("slide", {
+						direction: "up"
+					}, 250);
+				}
+				$chatroom_create.hide();
+				Ccr = c;
+				loadChatroom(c, crt[c]);
+			}
+		}
+
+		function addMessageToChatroom(b, c, d) {
+			var title = "";
+			if (chatroom_mod == 1) {
+				title = lang[137];
+			}
+			if (chatroom_admin == 1) {
+				title = lang[136];
+			}
+			d = d.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>").replace(/\"/g, "&quot;");
+			d = replaceURLWithHTMLLinks(d);
+			d = smileyreplace(d);
+			if (a("#arrowchat_chatroom_message_" + b).length > 0) {
+				a("#arrowchat_chatroom_message_" + b + " .arrowchat_chatroom_message_content").html(formatTimestamp(new Date(Math.floor((new Date).getTime() / 1000) * 1000)) + d);
+			} else {
+				$chatroom_chat.append("<div class=\"arrowchat_chatroom_box_message\" id=\"arrowchat_chatroom_message_" + b + "\"><img class=\"arrowchat_chatroom_message_avatar\" src=\"" + u_avatar + "\" alt=\"\" /><div class=\"arrowchat_chatroom_message_name\">" + c + title + ":</div><div class=\"arrowchat_chatroom_message_content  arrowchat_self\">" + formatTimestamp(new Date(Math.floor((new Date).getTime() / 1000) * 1000)) + d + "</div></div>");
+				$chatroom_chat.scrollTop(50000);
+			}
+			showChatroomTime();
+		}
+
+		function addMessageToChatbox(b, c, d, i, e, l, f) {
+			aa[b] != 1 && receiveUser(b, uc_name[b], uc_status[b], uc_avatar[b], uc_link[b], 1, 1);
+			if (uc_name[b] == null || uc_name[b] == "") {
+				setTimeout(function() {
+					addMessageToChatbox(b, c, d, i, e, l, f);
+				}, 500);
+			} else {
+				var h = "",
+					init = false;
+				if (parseInt(d) == 1) {
+					fromname = u_name;
+					fromid = u_id;
+					h = " arrowchat_self";
+					avatar = u_avatar;
+					tooltip = lang[90];
+				} else {
+					fromname = uc_name[b];
+					fromid = b;
+					avatar = uc_avatar[b];
+					tooltip = fromname;
+				}
+				var full_name = fromid;
+				if (parseInt(l) == 1) {
+					c = c.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>").replace(/\"/g, "&quot;");
+				}
+				c = replaceURLWithHTMLLinks(c);
+				c = smileyreplace(c);
+				d != 1 && u_sounds == 1 && !a(".arrowchat_textarea", $user_popups[b]).is(":focus") && playNewMessageSound();
+				separator = ":&nbsp;&nbsp;";
+				if (a("#arrowchat_message_" + e).length > 0) {
+					a("#arrowchat_message_" + e + " .arrowchat_chatboxmessagecontent").html(c);
+				} else {
+					if (c_show_full_name != "1") {
+						if (fromname.indexOf(" ") != -1) {
+							fromname = fromname.slice(0, fromname.indexOf(" "));
+						}
+					}
+					if (uc_status[b] == "offline" && d != 1) {
+						displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[13], "error");
+					}
+					if (f - last_sent[b] > 60 || last_sent[b] == null || last_name[b] != full_name || last_name[b] == null || last_name[b] == "") {
+						a(".arrowchat_tabcontenttext", $user_popups[b]).append("<div class=\"arrowchat_chatboxmessage arrowchat_clearfix\" id=\"arrowchat_message_" + e + "\"><div class=\"arrowchat_chatboxmessagefrom" + h + "\"><div class=\"arrowchat_disable_avatars_name\">" + fromname + "</div><img alt=\"" + tooltip + "\" class=\"arrowchat_chatbox_avatar\" src=\"" + avatar + "\" /></div><div class=\"arrowchat_chatboxmessage_wrapper\"><div class=\"arrowchat_chatboxmessagecontent" + h + "\">" + formatTimestamp(new Date(f * 1000)) + c + "</div></div></div>");
+						last_sent[b] = f;
+						last_name[b] = full_name;
+						last_id[b] = e;
+					} else {
+						if (last_id[b] !== "undefined") {
+							a("#arrowchat_message_" + last_id[b]).append("<div id=\"arrowchat_message_" + e + "\" class=\"arrowchat_chatboxmessagecontent" + h + "\">" + c + "</div>");
+						} else {
+							a(".arrowchat_tabcontenttext", $user_popups[b]).append("<div id=\"arrowchat_message_" + e + "\" class=\"arrowchat_chatboxmessagecontent" + h + "\">" + c + "</div>");
+						}
+					}
+					if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
+						setAvatarVisibility(1);
+					}
+					a("#arrowchat_tabcontenttext_" + b).scrollTop(50000);
+					showTimeAndTooltip();
+				}
+				j != b && d != 1 && i != 1 && notifyNewMessage(b, 1, 1);
+				d != 1 && showDesktopNotification(b, c, e);
+			}
+		}
+
+		function activateUser(b) {
+			if (uc_name[b] == null || uc_name[b] == "") {
+				setTimeout(function() {
+					activateUser(b);
+				}, 500);
+			} else {
+				j != b && $users[b].click();
+			}
+		}
+
+		function addMessageToContent(b, c) {
+			if (uc_name[b] == null || uc_name[b] == "") {
+				setTimeout(function() {
+					addMessageToContent(b, c);
+				}, 500);
+			} else {
+				a("#arrowchat_tabcontenttext_" + b).append("<div>" + c + "</div>");
+				a("#arrowchat_tabcontenttext_" + b).scrollTop(50000);
+				G[b] = 1;
+			}
+		}
+
+		function loadChatroomList() {
+			if (chatroomreceived == 0) {
+				a("#arrowchat_chatroom_leave").hide();
+				a(".arrowchat_chatroom_popout").hide();
+				a.ajax({
+					url: c_ac_path + "includes/json/receive/receive_chatroom_list.php",
+					cache: false,
+					data: {
+						chatroom_window: u_chatroom_open,
+						chatroom_stay: u_chatroom_stay
+					},
+					type: "post",
+					dataType: "json",
+					success: function(b) {
+						buildChatroomList(b);
+					}
+				});
+			}
+		}
+
+		function buildChatroomList(b) {
+			Ccr = 0;
+			a(".arrowchat_chatroom_full_content").html("");
+			var c = {};
+			b && a.each(b, function(i, e) {
+				if (i == "chatrooms") {
+					a.each(e, function(l, f) {
+						a("<div/>").attr("id", "arrowchat_chatroom_" + f.id).mouseover(function() {
+							a(this).addClass("arrowchat_chatroom_list_hover");
+						}).mouseout(function() {
+							a(this).removeClass("arrowchat_chatroom_list_hover");
+						}).addClass("arrowchat_chatroom_list").html("<span class=\"arrowchat_chatroom_name\">" + f.n + "</span><span class=\"arrowchat_chatroom_status arrowchat_chatroom_" + f.t + "\"></span><span class=\"arrowchat_chatroom_count\">" + f.c + lang[35] + "</span>").appendTo(a(".arrowchat_chatroom_full_content"));
+						crt[f.id] = f.t;
+						crt2[f.id] = f.n;
+					});
+				}
+			});
+			chatroomreceived = 1;
+			a(".arrowchat_chatroom_list").click(function(l) {
+				chatroomListClicked(l.target);
+			});
+		}
+
+		function receiveChatroom(c) {
+			var global_mod = 0,
+				global_admin = 0,
+				admin_markup = "";
+			chatroom_mod = 0;
+			chatroom_admin = 0;
+			if (Ccr == c) {
+				a.ajax({
+					url: c_ac_path + "includes/json/receive/receive_chatroom.php",
+					cache: false,
+					type: "post",
+					data: {
+						chatroomid: c
+					},
+					dataType: "json",
+					success: function(b) {
+						if (b) {
+							var no_error = true;
+							b && a.each(b, function(i, e) {
+								if (i == "error") {
+									a.each(e, function(l, f) {
+										no_error = false;
+										Ccr = 0;
+										chatroomreceived = 0;
+										loadChatroomList();
+										displayMessage("arrowchat_chatroom_message_flyout", f.m, "error");
+									});
+								}
+							});
+							if (no_error) {
+								b && a.each(b, function(i, e) {
+									if (i == "user_title") {
+										a.each(e, function(l, f) {
+											if (f.admin == 1) {
+												global_admin = 1;
+												chatroom_admin = 1;
+											}
+											if (f.mod == 1) {
+												global_mod = 1;
+												chatroom_mod = 1;
+											}
+										});
+									}
+									if (i == "chat_users") {
+										var longname;
+										$chatroom_room_list.html("");
+										a.each(e, function(l, f) {
+											if ((global_admin == 1 || global_mod == 1) && f.t == 1) {
+												admin_markup = "<div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_make_mod_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[52] + "</div></div><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_ban_user_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[53] + "</div></div>";
+											}
+											longname = renderHTMLString(f.n);
+											f.n = renderHTMLString(f.n).length > 16 ? renderHTMLString(f.n).substr(0, 16) + "..." : f.n;
+											a("<div/>").attr("id", "arrowchat_chatroom_user_" + f.id).mouseover(function() {
+												a(this).addClass("arrowchat_chatroom_list_hover");
+											}).mouseout(function() {
+												a(this).removeClass("arrowchat_chatroom_list_hover");
+											}).addClass("arrowchat_chatroom_room_list").addClass("arrowchat_chatroom_admin_" + f.t).html("<img class=\"arrowchat_chatroom_avatar\" src=\"" + f.a + "\"/><span class=\"arrowchat_chatroom_room_name\">" + f.n + "</span><span class=\"arrowchat_userscontentdot arrowchat_" + f.status + "\"></span>").appendTo($chatroom_room_list);
+											a("<div/>").attr("id", "arrowchat_chatroom_users_flyout_" + f.id).addClass("arrowchat_chatroom_users_flyout").html("<div class=\"arrowchat_chatroom_title_padding\"><div id=\"arrowchat_chatroom_title_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + longname + "<br/>" + lang[43] + "</div></div><hr class=\"arrowchat_options_divider\"/><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_visit_profile_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[42] + "</div></div><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_private_message_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[41] + "</div></div><div class=\"arrowchat_chatroom_options_padding\"><div id=\"arrowchat_chatroom_block_user_" + f.id + "\" class=\"arrowchat_chatroom_flyout_text\">" + lang[84] + "</div></div>" + admin_markup).appendTo(a("#arrowchat_chatroom_user_" + f.id));
+											if (f.t == 2) {
+												a("#arrowchat_chatroom_title_" + f.id).html(longname + "<br/>" + lang[44]);
+											} else if (f.t == 3) {
+												a("#arrowchat_chatroom_title_" + f.id).html(longname + "<br/>" + lang[45]);
+											}
+											addHover(a(".arrowchat_chatroom_options_padding"), "arrowchat_options_padding_hover");
+											chatroomUserOptions(f, global_admin);
+											uc_avatar[f.id] = f.a;
+										});
+										a(".arrowchat_chatroom_admin_3").css("background-color", "#" + c_admin_bg);
+										a(".arrowchat_chatroom_admin_3").css("color", "#" + c_admin_txt);
+									}
+								});
+								if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
+									a(".arrowchat_chatroom_avatar").addClass("arrowchat_hide_avatars");
+									a(".arrowchat_chatroom_message_avatar").addClass("arrowchat_hide_avatars");
+								}
+							}
+						}
+					}
+				});
+				clearTimeout(Crref2);
+				Crref2 = setTimeout(function() {
+					receiveChatroom(c);
+				}, 60000);
+			}
+		}
+
+		function chatroomUserOptions(data, is_admin) {
+			a("#arrowchat_chatroom_make_mod_" + data.id).click(function() {
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					chatroom_mod: data.id,
+					chatroom_id: Ccr
+				}, function() {});
+			});
+			a("#arrowchat_chatroom_remove_mod_" + data.id).click(function() {
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					chatroom_remove_mod: data.id,
+					chatroom_id: Ccr
+				}, function() {});
+			});
+			a("#arrowchat_chatroom_block_user_" + data.id).click(function() {
+				a.post(c_ac_path + "includes/json/send/send_settings.php", {
+					block_chat: data.id
+				}, function(json_data) {
+					if (json_data != "-1") {
+						if (typeof blockList[data.id] == "undefined") {
+							blockList[data.id] = data.id;
+						}
+						loadBuddyList();
+						displayMessage("arrowchat_chatroom_message_flyout", lang[103], "error");
+					}
+				});
+			});
+			a("#arrowchat_chatroom_ban_user_" + data.id).click(function() {
+				var ban_length = prompt(lang[57]);
+				if (ban_length != null && ban_length != "" && !isNaN(ban_length)) {
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						chatroom_ban: data.id,
+						chatroom_id: Ccr,
+						chatroom_ban_length: ban_length
+					}, function() {});
+				}
+			});
+			a("#arrowchat_chatroom_visit_profile_" + data.id).click(function() {
+				window.location = data.l;
+			});
+			a("#arrowchat_chatroom_private_message_" + data.id).click(function() {
+				if (data.b != 1 || is_admin == 1) {
+					if (u_id != data.id) {
+						jqac.arrowchat.chatWith(data.id);
+					}
+				} else {
+					displayMessage("arrowchat_chatroom_message_flyout", lang[46], "error");
+				}
+			});
+			a("#arrowchat_chatroom_user_" + data.id).click(function() {
+				if (crou != data.id) {
+					a("#arrowchat_chatroom_user_" + crou).removeClass("arrowchat_chatroom_clicked");
+					a("#arrowchat_chatroom_users_flyout_" + crou).removeClass("arrowchat_chatroom_create_flyout_display");
+				}
+				crou = data.id;
+				a(this).toggleClass("arrowchat_chatroom_clicked");
+				a("#arrowchat_chatroom_users_flyout_" + data.id).toggleClass("arrowchat_chatroom_create_flyout_display");
+			});
+		}
+
+		function loadBuddyList() {
+			clearTimeout(Z);
+			a.ajax({
+				url: c_ac_path + "includes/json/receive/receive_buddylist.php",
+				cache: false,
+				type: "get",
+				dataType: "json",
+				success: function(b) {
+					buildBuddyList(b);
+					if (c_disable_avatars == 1) {
+						a(".arrowchat_userlist_avatar").addClass("arrowchat_hide_avatars");
+					}
+					adjustBuddyListSize();
+					adjustBarSize();
+				}
+			});
+			if (typeof c_list_heart_beat != "undefined") {
+				var BLHT = c_list_heart_beat * 1000;
+			} else {
+				var BLHT = 60000;
+			}
+			Z = setTimeout(function() {
+				loadBuddyList();
+			}, BLHT);
+		}
+
+		function buildBuddyList(b) {
+			V.timestamp = ma;
+			var c = {},
+				d = "";
+			c.available = "";
+			c.busy = "";
+			c.offline = "";
+			c.invisible = "";
+			c.away = "";
+			onlineNumber = buddylistreceived = 0;
+			b && a.each(b, function(i, e) {
+				if (i == "buddylist") {
+					buddylistreceived = 1;
+					totalFriendsNumber = onlineNumber = 0;
+					a.each(e, function(l, f) {
+						longname = renderHTMLString(f.n).length > 16 ? renderHTMLString(f.n).substr(0, 16) + "..." : f.n;
+						if (G[f.id] != null) {
+							a(".arrowchat_closebox_bottom_status", $users[f.id]).removeClass("arrowchat_available").removeClass("arrowchat_busy").removeClass("arrowchat_offline").removeClass("arrowchat_away").addClass("arrowchat_" + f.s);
+							$users[f.id].removeClass("arrowchat_tab_offline").removeClass("arrowchat_away").addClass("arrowchat_tab_" + f.s);
+							$user_popups[f.id].length > 0 && a(".arrowchat_tabsubtitle .arrowchat_message", $user_popups[f.id]).html(f.m);
+						}
+						if (f.s == "available" || f.s == "away" || f.s == "busy") {
+							onlineNumber++;
+						}
+						totalFriendsNumber++;
+						if (a("#arrowchat_setting_names_only :input").is(":checked")) {
+							d = "arrowchat_hide_avatars";
+						}
+						c[f.s] += "<div id=\"arrowchat_userlist_" + f.id + "\" class=\"arrowchat_userlist arrowchat_buddylist_admin_" + f.admin + "\" onmouseover=\"jqac(this).addClass('arrowchat_userlist_hover');\" onmouseout=\"jqac(this).removeClass('arrowchat_userlist_hover');\"><img class=\"arrowchat_userlist_avatar " + d + "\" src=\"" + f.a + "\" /><span class=\"arrowchat_userscontentname\">" + longname + "</span><span class=\"arrowchat_userscontentdot arrowchat_" + f.s + "\"></span></div>";
+						uc_status[f.id] = f.s;
+						uc_name[f.id] = f.n;
+						uc_avatar[f.id] = f.a;
+						uc_link[f.id] = f.l;
+					});
+				}
+				if (buddylistreceived == 1 && bli == 0) {
+					for (buddystatus in c) {
+						if (c.hasOwnProperty(buddystatus)) {
+							if (c[buddystatus] == "") {
+								a("#arrowchat_userslist_" + buddystatus).html("");
+							} else {
+								a("#arrowchat_userslist_" + buddystatus).html("<div>" + c[buddystatus] + "</div>");
+							}
+						}
+					}
+					a(".arrowchat_userlist").click(function(l) {
+						if (!a(this).hasClass("arrowchat_jabber_user")) {
+							receiveUserFromUserlist(l.target);
+						}
+					});
+					a("#arrowchat_userstab_text").html("<b>" + lang[4] + "</b> (<b>" + (onlineNumber + jabberOnlineNumber) + "</b>)");
+					R = onlineNumber;
+					totalFriendsNumber == 0 && a("#arrowchat_userslist_available").html("<div class=\"arrowchat_nofriends\">" + lang[8] + "</div>");
+					R == 0 && a("#arrowchat_userslist_available").html("<div class=\"arrowchat_nofriends\">" + lang[8] + "</div>");
+					R >= c_search_min ? a("#arrowchat_search_friends").show() : a("#arrowchat_search_friends").hide();
+					buddylistreceived = 0;
+				} else {
+					a("#arrowchat_userstab_text").html("<b>" + lang[4] + "</b> (<b>" + (onlineNumber + jabberOnlineNumber) + "</b>)");
+				}
+				a(".arrowchat_buddylist_admin_1").css("background-color", "#" + c_admin_bg);
+				a(".arrowchat_buddylist_admin_1").css("color", "#" + c_admin_txt);
+			});
+		}
+
+		function cancelJSONP() {
+			if (typeof CHA != "undefined") {
+				clearTimeout(CHA);
+			}
+			if (typeof xOptions != "undefined") {
+				xOptions.abort();
+			}
+		}
+
+		function receiveCore() {
+			cancelJSONP();
+			var url = c_ac_path + "includes/json/receive/receive_core.php?hash=" + u_hash_id + "&init=" + acsi + "&room=" + Ccr;
+			xOptions = a.ajax({
+				url: url,
+				dataType: "jsonp",
+				success: function(b) {
+					V.timestamp = ma;
+					var c = "",
+						d = {};
+					d.available = "";
+					d.busy = "";
+					d.offline = "";
+					d.away = "";
+					onlineNumber = buddylistreceived = 0;
+					if (b && b != null) {
+						var i = 0;
+						a.each(b, function(e, l) {
+							if (e == "typing") {
+								a.each(l, function(f, h) {
+									if (h.is_typing == "1") {
+										receiveTyping(h.typing_id);
+									} else {
+										receiveNotTyping(h.typing_id);
+									}
+								});
+							}
+							if (e == "announcements") {
+								a.each(l, function(f, h) {
+									receiveAnnouncement(h);
+								});
+							}
+							if (e == "chatroom") {
+								var d1 = 0,
+									d2 = "";
+								a.each(l, function(f, h) {
+									if (typeof blockList[h.userid] == "undefined") {
+										addChatroomMessage(h.id, h.n, h.m, h.userid, h.t, h.global, h.mod, h.admin);
+									}
+									d2 = h;
+									d1++;
+								});
+								if (typeof d2 != "undefined") {
+									if (typeof blockList[d2.userid] == "undefined") {
+										showChatroomTime();
+										chatroomAlerts(d1);
+										if (d2.userid != u_id) {
+											u_chatroom_sound == 1 && !a(".arrowchat_chatroom_message_input").is(":focus") && playNewMessageSound();
+										}
+									}
+								}
+							}
+							if (e == "notifications") {
+								var markup2 = "";
+								a.each(l, function(f, h) {
+									addNotification(h.alert_id, h.markup);
+									markup2 = h.markup;
+								});
+								notificationAlerts(markup2);
+							}
+							if (e == "messages") {
+								var play_sound = 0;
+								a.each(l, function(f, h) {
+									receiveMessage(h.id, h.from, h.message, h.sent, h.self, h.old);
+									if (!a(".arrowchat_textarea", $user_popups[h.from]).is(":focus")) {
+										play_sound = 1;
+									}
+								});
+								K = 1;
+								D = E;
+								j != "" && i > 0 && addMessageToContent(j, c);
+								showTimeAndTooltip();
+								d != 1 && u_sounds == 1 && play_sound == 1 && acsi != 1 && playNewMessageSound();
+							}
+						});
+					}
+					set("initialize", "0");
+					set("currenttime", "0");
+					if ($ != 1 && w != 1) {
+						K++;
+						if (K > 4) {
+							D *= 2;
+							K = 1;
+						}
+						if (D > 12000) {
+							D = 12000;
+						}
+					}
+					acsi++;
+				}
+			});
+			if (isAway == 1) {
+				var CHT = c_heart_beat * 1000 * 3;
+			} else {
+				var CHT = c_heart_beat * 1000;
+			}
+			if (c_push_engine != 1) {
+				CHA = setTimeout(function() {
+					receiveCore();
+				}, CHT);
+			}
+		}
+
+		function addChatroomMessage(id, name, message, userid, sent, global, mod, admin) {
+			if (userid == u_id) {
+				uc_avatar[u_id] = u_avatar;
+			}
+			message = stripslashes(message);
+			message = replaceURLWithHTMLLinks(message);
+			var sent_time = new Date(sent * 1000);
+			if (typeof uc_avatar[userid] == "undefined") {
+				a.ajax({
+					url: c_ac_path + "includes/json/receive/receive_user.php",
+					data: {
+						userid: userid
+					},
+					type: "post",
+					cache: false,
+					dataType: "json",
+					success: function(data) {
+						if (data) {
+							uc_avatar[userid] = data.a;
+							chatroomDiv(id, uc_avatar[userid], name, sent_time, message, global, mod, admin);
+						}
+					}
+				});
+			} else {
+				chatroomDiv(id, uc_avatar[userid], name, sent_time, message, global, mod, admin);
+			}
+			count++;
+		}
+
+		function chatroomDiv(id, image, name, time, message, global, mod, admin) {
+			var container = $chatroom_chat[0].scrollHeight - $chatroom_chat.scrollTop() - 10;
+			var container2 = $chatroom_chat.outerHeight();
+			var title = "";
+			if (mod == 1) {
+				title = lang[137];
+			}
+			if (admin == 1) {
+				title = lang[136];
+			}
+			if (a("#arrowchat_chatroom_message_" + id).length > 0) {} else {
+				if (global == 1) {
+					a("<div/>").attr("id", "arrowchat_chatroom_message_" + id).addClass("arrowchat_chatroom_box_message").html("<div class=\"arrowchat_chatroom_message_content arrowchat_global_chatroom_message\">" + formatTimestamp(time) + message + "</div>").appendTo($chatroom_chat);
+				} else {
+					a("<div/>").attr("id", "arrowchat_chatroom_message_" + id).addClass("arrowchat_chatroom_box_message").html("<img class=\"arrowchat_chatroom_message_avatar\" src=\"" + image + "\" alt=\"\" /><div class=\"arrowchat_chatroom_message_name\">" + name + title + ":</div><div class=\"arrowchat_chatroom_message_content\">" + formatTimestamp(time) + message + "</div>").appendTo($chatroom_chat);
+				}
+			}
+			if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
+				a(".arrowchat_chatroom_message_avatar").addClass("arrowchat_hide_avatars");
+			}
+			if (container <= container2) {
+				$chatroom_chat.scrollTop(50000);
+			} else {
+				displayMessage("arrowchat_chatroom_message_flyout", lang[134], "notice");
+			}
+			showChatroomTime();
+		}
+
+		function chatroomAlerts(count) {
+			if (a("#arrowchat_chatrooms_button .arrowchat_tabalert").length > 0 && count > 0) {
+				var count2 = parseInt(a("#arrowchat_chatrooms_button .arrowchat_tabalert").html()) + count;
+				a("#arrowchat_chatrooms_button .arrowchat_tabalert").html(count2);
+				if (bounce2 == 1) {
+					bounce2 = 0;
+					a("#arrowchat_chatrooms_button .arrowchat_tabalert").stop(true, true).effect("bounce", {
+						times: 3,
+						distance: 5
+					}, 200, function() {
+						bounce2 = 1;
+					});
+				}
+			} else if (!$chatrooms_button.hasClass("arrowchat_tabclick")) {
+				$chatrooms_button.addClass("arrowchat_tab_new_message");
+				a("<div/>").css("top", "-11px").css("left", c_width_chatroom - 10 + "px").addClass("arrowchat_tabalert").html(count).appendTo($chatrooms_button);
+			}
+		}
+
+		function receiveAnnouncement(h) {
+			if (h.read == 0 && h.data != "") {
+				a("#arrowchat_announcement").remove();
+				$body.append(ArrowChat.Templates.announcements_display(h));
+				a("#arrowchat_announcement .arrowchat_announce_close").click(function() {
+					a("#arrowchat_announcement").remove();
+					a.post(c_ac_path + "includes/json/send/send_settings.php", {
+						announce: 1
+					}, function() {});
+				});
+			} else {
+				a("#arrowchat_announcement").remove();
+			}
+		}
+
+		function addNotification(alert_id, markup) {
+			a("<div/>").attr("id", "arrowchat_alert_" + alert_id).attr("class", "arrowchat_notification_message_div").html(markup).appendTo(a("#arrowchat_notifications_content"));
+			Q++;
+		}
+
+		function notificationAlerts(markup) {
+			a("#arrowchat_optionsbutton .arrowchat_tabalertnf").remove();
+			if (!$optionsbutton.hasClass("arrowchat_tabclick")) {
+				if (a("#arrowchat_notification_alert").length > 0) {
+					a("#arrowchat_notification_alert").remove();
+				}
+				$body.append("<div id=\"arrowchat_notification_alert\"><div class=\"arrowchat_notification_alert_content\">" + markup + "</div></div>");
+				a("#arrowchat_notification_alert .arrowchat_notifications_divider").hide();
+				setTimeout(function() {
+					a("#arrowchat_notification_alert").fadeOut("slow", function() {
+						a("#arrowchat_notification_alert").remove();
+					});
+				}, 7000);
+				$optionsbutton.addClass("arrowchat_tab_new_message");
+				a("<div/>").css("top", "-10px").css("left", "8px").addClass("arrowchat_tabalertnf").html(Q).prependTo($optionsbutton);
+			}
+			if (Q > 0) {
+				a("#arrowchat_no_new_notifications").css("display", "none");
+			}
+		}
+
+		function stripslashes(str) {
+			str = str.replace(/\\'/g, "'");
+			str = str.replace(/\\"/g, "\"");
+			str = str.replace(/\\0/g, "\x00");
+			str = str.replace(/\\\\/g, "\\");
+			return str;
+		}
+
+		function receiveMessage(id, from, message, sent, self, old) {
+			ma = id;
+			clearTimeout(dtit3);
+			DTitChange(uc_name[from]);
+			if (j == from && uc_name[from] != "" && uc_name[from] != null) {
+				var container = a("#arrowchat_tabcontenttext_" + from)[0].scrollHeight - a("#arrowchat_tabcontenttext_" + from).scrollTop() - 10;
+				var container2 = a("#arrowchat_tabcontenttext_" + from).outerHeight();
+				var o = uc_name[from];
+				if (uc_status[from] == "offline") {
+					loadBuddyList();
+				}
+				f = "";
+				if (self == 1) {
+					fromname = u_name;
+					fromid = u_id;
+					f = " arrowchat_self";
+					avatar = u_avatar;
+					tooltip = lang[90];
+				} else {
+					DTitChange(uc_name[from]);
+					fromname = o;
+					fromid = from;
+					avatar = uc_avatar[from];
+					tooltip = fromname;
+				}
+				var full_name = fromid;
+				message = stripslashes(message);
+				message = replaceURLWithHTMLLinks(message);
+				if (a("#arrowchat_message_" + id).length > 0) {
+					a("#arrowchat_message_" + id + " .arrowchat_chatboxmessagecontent").html(message);
+				} else {
+					if (c_show_full_name != 1) {
+						if (fromname.indexOf(" ") != -1) {
+							fromname = fromname.slice(0, fromname.indexOf(" "));
+						}
+					}
+					if (sent - last_sent[from] > 60 || last_sent[from] == null || last_name[from] != full_name) {
+						a(".arrowchat_tabcontenttext", $user_popups[from]).append("<div class=\"arrowchat_chatboxmessage arrowchat_clearfix\" id=\"arrowchat_message_" + id + "\" style=\"display:none\"><div class=\"arrowchat_chatboxmessagefrom" + f + "\"><div class=\"arrowchat_disable_avatars_name\">" + fromname + "</div><img alt=\"" + tooltip + "\" class=\"arrowchat_chatbox_avatar\" src=\"" + avatar + "\" /></div><div class=\"arrowchat_chatboxmessage_wrapper\"><div class=\"arrowchat_chatboxmessagecontent" + f + "\">" + formatTimestamp(new Date(sent * 1000)) + message + "</div></div></div>");
+						if (c_chat_animations == 1 && old != 1) {
+							a("#arrowchat_message_" + id).show("slide", {
+								direction: "left"
+							});
+						} else {
+							a("#arrowchat_message_" + id).show();
+						}
+						last_sent[from] = sent;
+						last_name[from] = full_name;
+						last_id[from] = id;
+					} else {
+						if (last_id[from] !== "undefined") {
+							a("#arrowchat_message_" + last_id[from]).append("<div id=\"arrowchat_message_" + id + "\" class=\"arrowchat_chatboxmessagecontent" + f + "\">" + message + "</div>");
+						} else {
+							a(".arrowchat_tabcontenttext", $user_popups[from]).append("<div id=\"arrowchat_message_" + id + "\" class=\"arrowchat_chatboxmessagecontent" + f + "\">" + message + "</div>");
+						}
+					}
+					if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
+						setAvatarVisibility(1);
+					}
+				}
+				if (container <= container2 || !$users[from].hasClass("arrowchat_tabclick")) {
+					a("#arrowchat_tabcontenttext_" + from).scrollTop(50000);
+				} else {
+					displayMessage("arrowchat_chatbox_message_flyout_" + from, lang[134], "notice");
+				}
+				self != 1 && old != 1 && showDesktopNotification(from, message, id);
+			} else {
+				message = stripslashes(message);
+				addMessageToChatbox(from, message, self, old, id, 0, sent);
+				j == "" && 0 && activateUser(from);
+			}
+		}
+
+		function receiveTyping(id) {
+			if (typeof $users[id] != "undefined") {
+				a(".arrowchat_closebox_bottom_status", $users[id]).addClass("arrowchat_typing");
+			}
+		}
+
+		function receiveNotTyping(id) {
+			if (typeof $users[id] != "undefined") {
+				a(".arrowchat_closebox_bottom_status", $users[id]).removeClass("arrowchat_typing");
+			}
+		}
+
+		function pushCancelAll() {
+			if (c_push_engine == 1) {
+				push.unsubscribe({
+					channel: "u" + u_id
+				});
+				push.unsubscribe({
+					channel: "arrowchat"
+				});
+				if (Ccr > 0) {
+					push.unsubscribe({
+						channel: "chatroom" + Ccr
+					});
+				}
+			}
+		}
+
+		function pushSubscribe() {
+			if (c_push_engine == 1) {
+				push.subscribe({
+					channel: "u" + u_id,
+					callback: function(data) {
+						pushReceive(data);
+					}
+				});
+				push.subscribe({
+					channel: "arrowchat",
+					callback: function(data) {
+						pushReceive(data);
+					}
+				});
+			}
+		}
+
+		function pushReceive(data) {
+			if ("announcement" in data) {
+				receiveAnnouncement(data.announcement);
+			}
+			if ("notification" in data) {
+				var markup2;
+				addNotification(data.notification.alert_id, data.notification.markup);
+				notificationAlerts(markup2);
+			}
+			if ("chatroommessage" in data) {
+				if (typeof blockList[data.chatroommessage.userid] == "undefined") {
+					addChatroomMessage(data.chatroommessage.id, data.chatroommessage.name, data.chatroommessage.message, data.chatroommessage.userid, data.chatroommessage.sent, data.chatroommessage.global, data.chatroommessage.mod, data.chatroommessage.admin);
+					chatroomAlerts(1);
+					if (data.chatroommessage.userid != u_id) {
+						u_chatroom_sound == 1 && !a(".arrowchat_chatroom_message_input").is(":focus") && playNewMessageSound();
+					}
+				}
+			}
+			if ("typing" in data) {
+				receiveTyping(data.typing.id);
+			}
+			if ("nottyping" in data) {
+				receiveNotTyping(data.nottyping.id);
+			}
+			if ("messages" in data) {
+				receiveMessage(data.messages.id, data.messages.from, data.messages.message, data.messages.sent, data.messages.self, data.messages.old);
+				data.messages.self != 1 && u_sounds == 1 && !a(".arrowchat_textarea", $user_popups[data.messages.from]).is(":focus") && playNewMessageSound();
+				showTimeAndTooltip();
+				K = 1;
+				D = E;
+			}
+			if ("chatroomban" in data) {
+				Ccr = 0;
+				chatroomreceived = 0;
+				loadChatroomList();
+				displayMessage("arrowchat_chatroom_message_flyout", data.error2, "error");
+			}
+		}
+
+		function DTitChange(name) {
+			name = renderHTMLString(name);
+			if (dtit2 != 2) {
+				document.title = lang[30] + " " + name + "!";
+				dtit2 = 2;
+			} else {
+				document.title = dtit;
+				dtit2 = 1;
+			}
+			if (window_focus == false) {
+				dtit3 = setTimeout(function() {
+					DTitChange(name);
+				}, 1000);
+			} else {
+				document.title = dtit;
+				clearTimeout(dtit3);
+			}
+		}
+
+		function changePushChannel(name, connect) {
+			if (connect == 1) {
+				push.subscribe({
+					channel: name,
+					callback: function(data) {
+						pushReceive(data);
+					}
+				});
+			} else {
+				push.unsubscribe({
+					channel: name
+				});
+			}
+		}
+
+		function buildTrayButtons() {
+			for (var b = "", c = "", arcb = "", d = 0; d < barLinks.length; d++) {
+				var i = barLinks[d];
+				if (i[6] == "" || i[6] == 0) {
+					i[6] = 16;
+				}
+				if (d == barLinks.length - 1) {
+					arcb = " arrowchat_right_border";
+				}
+				b += "<div id=\"arrowchat_trayicon_" + d + "\" class=\"arrowchat_tray_button arrowchat_bar_left" + arcb + "\" style=\"width:" + i[6] + "px;\"><div class=\"arrowchat_inner_button\"><img class=\"arrowchat_tray_icon\" src=" + c_ac_path + "themes/" + u_theme + "/images/icons/" + i[0] + "><div class=\"arrowchat_tray_name\">" + i[7] + "</div></div></div>";
+				if (i[3] == "_popup") {
+					c += "<div id=\"arrowchat_trayicon_" + d + "_popup\" class=\"arrowchat_traypopup\" style=\"display:none\"><div class=\"arrowchat_traytitle\"><div class=\"arrowchat_name\">" + i[1] + "</div><div class=\"arrowchat_minimizebox\"></div><br clear=\"all\"/></div><div class=\"arrowchat_traycontent\"><div class=\"arrowchat_traycontenttext\"><iframe allowtransparency=\"true\" frameborder=0 width=\"" + i[4] + "\" height=\"" + i[5] + "\" id=\"arrowchat_trayicon_" + d + "_iframe\"  ></iframe></div></div></div>";
+				}
+			}
+			$base.append("<div>" + b + "</div>");
+			$body.append("<div>" + c + "</div>");
+			a(".arrowchat_tray_button").mouseover(function() {
+				var e = a(this).attr("id").substr(19);
+				if (barLinks[e][6] <= 16 || barLinks[e][6] == "") {
+					showTooltip(a("#arrowchat_trayicon_" + e), barLinks[e][1], 1);
+				}
+				a(this).addClass("arrowchat_tabmouseover");
+			});
+			a(".arrowchat_tray_button").mouseout(function() {
+				a(this).removeClass("arrowchat_tabmouseover");
+				hideTooltip();
+			});
+			a(".arrowchat_traytitle").mouseenter(function() {
+				var e = a(this).parent().attr("id");
+				e = e.substring(19, e.length - 6);
+				a(this).addClass("arrowchat_chatboxtabtitlemouseover");
+			});
+			a(".arrowchat_traytitle").mouseleave(function() {
+				var e = a(this).parent().attr("id");
+				e = e.substring(19, e.length - 6);
+				a(this).removeClass("arrowchat_chatboxtabtitlemouseover");
+			});
+			a(".arrowchat_traytitle").click(function() {
+				var e = a(this).parent().attr("id");
+				e = e.substring(19, e.length - 6);
+				a("#arrowchat_trayicon_" + e).click();
+			});
+			a(".arrowchat_tray_button").click(function() {
+				var e = a(this).attr("id").substr(19);
+				if (j != "") {
+					closePopup($user_popups[j], $users[j]);
+					a(".arrowchat_closebox_bottom", $users[j]).removeClass("arrowchat_closebox_bottom_click");
+					j = "";
+				}
+				closePopup($userstab_popup, $buddy_list_tab);
+				closePopup($optionsbutton_popup, $optionsbutton);
+				var l = "_self";
+				if (barLinks[e][3]) {
+					l = barLinks[e][3];
+				}
+				if (l == "_popup") {
+					if (m != e) {
+						closePopup(a("#arrowchat_trayicon_" + m + "_popup"), a("#arrowchat_trayicon_" + m));
+						m = "";
+					}
+					if (m == "") {
+						a("#arrowchat_trayicon_" + e + "_popup").css("left", a("#arrowchat_trayicon_" + e).offset().left).css("bottom", "25px").css("width", barLinks[e][4]);
+						a("#arrowchat_trayicon_" + e + "_popup").addClass("arrowchat_tabopen");
+						a("#arrowchat_trayicon_" + e).addClass("arrowchat_trayclick");
+						if (a("#arrowchat_trayicon_" + e + "_iframe").attr("src") === undefined || a("#arrowchat_trayicon_" + e + "_iframe").attr("src") == "") {
+							a("#arrowchat_trayicon_" + e + "_iframe").attr("src", barLinks[e][2]);
+						}
+						m = e;
+					} else {
+						closePopup(a("#arrowchat_trayicon_" + m + "_popup"), a("#arrowchat_trayicon_" + m));
+						m = "";
+					}
+				} else {
+					var bar_link_url = barLinks[e][2].replace("{USER_ID}", u_id);
+					bar_link_url = bar_link_url.replace("{USER_NAME}", u_name);
+					window.open(bar_link_url, l);
+				}
+			});
+		}
+
+		function buildChatboxes() {
+			$chatbox_left.click(function() {
+				if ($chatboxes.scrollLeft() == 0) {} else {
+					scrollChatboxes("-=148px");
+				}
+			});
+			$chatbox_right.click(function() {
+				if ($chatboxes.scrollLeft() + $chatboxes.width() == $chatboxes_wide.width()) {} else {
+					scrollChatboxes("+=148px");
+				}
+			});
+		}
+
+		function mobileSupport() {
+			if (c_mobile_device == 1) {
+				$base.css("bottom", "0px");
+				var position = $base.position();
+				a(".arrowchat_tabpopup").css("bottom", a(document).height() - position.top - 9 + "px !important");
+				a(".arrowchat_apppopup").css("bottom", a(document).height() - position.top - 9 + "px !important");
+			}
+		}
+
+		function notificationPermission() {
+			if (window.webkitNotifications && window.webkitNotifications.checkPermission) {
+				window.webkitNotifications.requestPermission();
+			} else if (window.Notification && window.Notification.requestPermission) {
+				window.Notification.requestPermission();
+			} else {
+				return;
+			}
+		}
+
+		function showDesktopNotification(id, message, message_id) {
+			var s_message = message.replace(/<(?:.|\n)*?>/gm, "").replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, "\"");
+			if (s_message != "") {
+				if (window.Notification && !window_focus && c_desktop_notify == 1) {
+					var time = (new Date).getTime();
+					var notification = new window.Notification(lang[144] + renderHTMLString(uc_name[id]), {
+						icon: uc_avatar[id],
+						body: s_message,
+						tag: message_id
+					});
+					notification.ondisplay = function(event) {
+						setTimeout(function() {
+							event.currentTarget.cancel();
+						}, 5000);
+					};
+				}
+			}
+		}
+
+		function runarrowchat() {
+			$base = a("<div/>").attr("id", "arrowchat_base").appendTo($body);
+			if (c_chat_maintenance != 0 || c_guests_login_msg != 0 && u_id == "") {
+				buildMaintenance();
+			} else {
+				if (c_hide_bar_on != 0) {
+					buildShowBarButton();
+					buildHideBarButton();
+				}
+				buildPopoutChatButton();
+				c_notifications != 0 && buildOptionsButton();
+				c_chatrooms != 0 && buildChatroomsButton();
+				buildBuddyListTab();
+			}
+			if (c_links_right != 1) {
+				buildTrayButtons();
+			}
+			if (c_applications_on != 0) {
+				if (u_id == "" && c_guests_apps == "1" || u_id != "" && u_is_guest != 1 || u_id != "" && u_is_guest == 1 && c_guests_apps == 1) {
+					if (c_no_apps_menu != 1) {
+						buildApplicationsButton();
+					}
+					buildApplicationButtons();
+				}
+			}
+			if (c_links_right == 1) {
+				buildTrayButtons();
+			}
+			$body.append("<div id=\"arrowchat_sound_player_holder\"></div>");
+			$chatbox_right = a("<div/>").attr("id", "arrowchat_chatbox_right").appendTo($base);
+			a("<span/>").addClass("arrowchat_next_tab").appendTo($chatbox_right);
+			a("<div/>").addClass("arrowchat_tabtext").appendTo($chatbox_right);
+			a("<span/>").css("top", "-5px").css("display", "none").addClass("arrowchat_tabalertlr").appendTo($chatbox_right);
+			$chatboxes = a("<div/>").attr("id", "arrowchat_chatboxes").appendTo($base);
+			$chatboxes_wide = a("<div/>").attr("id", "arrowchat_chatboxes_wide").appendTo($chatboxes);
+			$chatbox_left = a("<div/>").attr("id", "arrowchat_chatbox_left").appendTo($base);
+			a("<span/>").addClass("arrowchat_previous_tab").appendTo($chatbox_left);
+			a("<div/>").addClass("arrowchat_tabtext").appendTo($chatbox_left);
+			a("<span/>").css("top", "-5px").css("display", "none").addClass("arrowchat_tabalertlr").appendTo($chatbox_left);
+			buildChatboxes();
+			updateRightLastClasses();
+			$chatboxes_wide.css("width", "0px");
+			addHover(a("#arrowchat_chatbox_left, #arrowchat_chatbox_right"), "arrowchat_chatbox_lr_mouseover");
+			a(window).bind("resize", adjustBarSize);
+			set("buddylist", "1");
+			set("initialize", "1");
+			set("currenttime", ab);
+			c_facebook_app_id != "" && a(".arrowchat_facebook_connect").show();
+			a(window).focus(function() {
+				window_focus = true;
+			}).blur(function() {
+				window_focus = false;
+			});
+			if (c_desktop_notify == 1) {
+				a("#arrowchat_base").click(notificationPermission);
+			}
+			if (typeof document.body.style.maxHeight === "undefined") {
+				W = true;
+				$base.css("position", "absolute");
+				$tooltip.css("position", "absolute");
+				$userstab_popup.css("position", "absolute");
+				$optionsbutton_popup.css("position", "absolute");
+				a(window).bind("scroll", function() {
+					positionArrowchat();
+				});
+			}
+			if (c_push_engine == 1) {
+				push = PUBNUB.init({
+					publish_key: c_push_publish,
+					subscribe_key: c_push_subscribe
+				});
+			}
+			if (c_chat_maintenance != 1) {
+				for (var d = 0; d < unfocus_chat.length; d++) {
+					if (unfocus_chat[d].toString().search("facebook") == "-1") {
+						receiveUser(unfocus_chat[d], uc_name[unfocus_chat[d]], uc_status[unfocus_chat[d]], uc_avatar[unfocus_chat[d]], uc_link[unfocus_chat[d]], "1");
+					}
+				}
+			}
+			if (u_hide_bar == 1 || u_status == "offline") {
+				if (u_status == "offline" && u_hide_bar != 1) {
+					a("#arrowchat_userstab_text").html("Chat (Offline)");
+					$chatboxes.hide();
+					$chatbox_right.hide();
+					$chatbox_left.hide();
+				} else {
+					$base.hide();
+					$show_bar_button.css("display", "block");
+				}
+				w = 1;
+				a.idleTimer("destroy");
+			} else if (c_chat_maintenance != 1 && u_id != "" && u_popout_time != "1") {
+				if (u_chat_open.toString().search("facebook") == "-1") {
+					u_chat_open != 0 && receiveUser(u_chat_open, uc_name[u_chat_open], uc_status[u_chat_open], uc_avatar[u_chat_open], uc_link[u_chat_open]);
+				}
+				if (c_push_engine == 1) {
+					pushSubscribe();
+				}
+				receiveCore();
+				a("#arrowchat_userslist_available").html("<div class=\"arrowchat_nofriends\">" + lang[25] + "</div>");
+				a(".arrowchat_chatroom_full_content").html("<div class=\"arrowchat_nofriends\">" + lang[34] + "</div>");
+				loadBuddyList();
+				u_blist_open == 1 && $buddy_list_tab.click();
+				if (u_chatroom_open != -1) {
+					u_chatroom_open == 0 && $chatrooms_button.click();
+					if (u_chatroom_open != 0) {
+						Ccr = u_chatroom_open;
+						chatroomreceived = 1;
+						if (typeof $chatroom_create != "undefined") {
+							$chatroom_create.hide();
+						}
+						closePopup($userstab_popup, $buddy_list_tab);
+						closePopup($optionsbutton_popup, $optionsbutton);
+						$chatrooms_popup.css("left", $chatrooms_button.offset().left - $chatrooms_popup.outerWidth() + $chatrooms_button.outerWidth()).css("bottom", "25px");
+						$chatrooms_button.toggleClass("arrowchat_tabclick").toggleClass("arrowchat_userstabclick");
+						$chatrooms_popup.toggleClass("arrowchat_tabopen");
+						loadChatroom(u_chatroom_open, crt[u_chatroom_open]);
+					}
+				}
+				if (u_chatroom_stay > 0) {
+					Ccr = u_chatroom_stay;
+					chatroomreceived = 1;
+					if (typeof $chatroom_create != "undefined") {
+						$chatroom_create.hide();
+					}
+					loadChatroom(u_chatroom_stay, crt[u_chatroom_stay]);
+				}
+				if (u_chatroom_stay == -1 && u_chatroom_open == -1 && c_chatroom_auto_join != 0) {
+					Ccr = c_chatroom_auto_join;
+					chatroomreceived = 1;
+					if (typeof $chatroom_create != "undefined") {
+						$chatroom_create.hide();
+					}
+					loadChatroom(c_chatroom_auto_join, crt[c_chatroom_auto_join]);
+				}
+				if (u_apps_open != "" && u_apps_open != "0") {
+					a("#arrowchat_app_link_" + u_apps_open).click();
+				}
+			} else if (u_popout_time == "1") {
+				a.idleTimer("destroy");
+				$buddy_list_tab.hide();
+				$popout_chat_button.show();
+				$chatboxes.hide();
+				$chatbox_right.hide();
+				$chatbox_left.hide();
+			}
+			clearUserStatus();
+			adjustBarSize();
+			if (c_mobile_device == 1) {
+				a(window).bind("scroll", mobileSupport);
+				mobileSupport();
+			}
+			a("#arrowchat_userstab_icon").addClass("arrowchat_user_" + u_status + "2");
+		}
+
+		function positionArrowchat() {
+			$base.css("top", a(window).scrollTop() + a(window).height() - 25);
+			$userstab_popup.css("top", parseInt(a(window).height()) - parseInt($userstab_popup.css("bottom")) - parseInt($userstab_popup.height()) + a(window).scrollTop() + "px");
+			$optionsbutton_popup.css("top", parseInt(a(window).height()) - parseInt($optionsbutton_popup.css("bottom")) - parseInt($optionsbutton_popup.height()) + a(window).scrollTop() + "px");
+			$tooltip.length > 0 && $tooltip.css("top", parseInt(a(window).height()) - parseInt($tooltip.css("bottom")) - parseInt($tooltip.height()) + a(window).scrollTop() + "px");
+			if (j != "") {
+				$user_popups[j].css("position", "absolute");
+				$user_popups[j].css("top", parseInt(a(window).height()) - parseInt($user_popups[j].css("bottom")) - parseInt($user_popups[j].height()) + a(window).scrollTop() + "px");
+			}
+		}
+
+		function playNewMessageSound() {
+			swfobject.embedSWF(c_ac_path + "themes/" + u_theme + "/sounds/new%5Fmessage.player.swf?soundswf=" + c_ac_path + "themes/" + u_theme + "/sounds/new%5Fmessage.swf&autoplay=1&loops=0", "arrowchat_sound_player_holder", "1", "1", "9.0.0");
+		}
+
+		function getJabberUser(id, openChat, message) {
+			var numericid = jabberDecodeID(id).split("@")[0].split("-")[1];
+			a.ajax({
+				url: "http://graph.facebook.com/" + numericid,
+				dataType: "json",
+				type: "GET",
+				async: false,
+				success: function(output) {
+					uc_name[id] = output.name;
+					if (typeof output.status == "undefined") {
+						uc_status[id] = "offline";
+					} else {
+						uc_status[id] = output.status;
+					}
+					uc_avatar[id] = "http://graph.facebook.com/" + numericid + "/picture";
+					uc_link[id] = output.link;
+					if (openChat == 1) {
+						openJabberChat(id);
+					} else {
+						openJabberMinimizeChat(id, message);
+					}
+				}
+			});
+		}
+
+		function openJabberChat(id) {
+			toggleUserChatTab(id, uc_name[id], uc_status[id], uc_avatar[id], uc_link[id], 0, 1);
+			j = id;
+		}
+
+		function openJabberMinimizeChat(id, message) {
+			toggleUserChatTab(id, uc_name[id], uc_status[id], uc_avatar[id], uc_link[id], 1, 1);
+			if (message != 0) {
+				receiveMessage("f" + message.time, message.from, message.msg, message.time / 1000, 0, 0);
+			}
+			adjustBarSize();
+		}
+
+		function getJabberList(data) {
+			if (data != "") {
+				session_var = data[0].msg;
+			}
+			a.ajax({
+				url: "//arrowjabber.com/",
+				data: {
+					action: "getOnlineBuddies",
+					sid: session_var
+				},
+				dataType: "jsonp",
+				type: "GET",
+				beforeSend: function() {
+					jabberInitialize != 1 && a("#arrowchat_facebook_friends_list").html("<div class=\"arrowchat_nofriends\">" + lang[25] + "</div>");
+				},
+				error: function() {
+					jqac.arrowchat.facebookLogout();
+				},
+				success: function(data) {
+					if (data[0] && data[0].error == "1") {
+						getJabberID(facebookResponse);
+					} else {
+						var md5updated = 0;
+						jabberOnlineNumber = 0;
+						var d = "";
+						var buddylisttemp = "";
+						var jabber_focus = 0;
+						a("#arrowchat_facebook_friends_list").html("");
+						a.each(data, function(id, user) {
+							if (user.id) {
+								var numericid = user.id.split("@")[0].split("-")[1];
+								user.id = jabberEncodeID(user.id);
+								var longname = user.n.length > 16 ? user.n.substr(0, 16) + "..." : user.n;
+								jabberOnlineNumber++;
+								if (a("#arrowchat_setting_names_only :input").is(":checked")) {
+									d = "arrowchat_hide_avatars";
+								}
+								if (user.s == "available") {
+									buddylisttemp += "<div id=\"arrowchat_userlist_" + user.id + "\" class=\"arrowchat_userlist arrowchat_buddylist_admin_0 arrowchat_jabber_user\" onmouseover=\"jqac(this).addClass('arrowchat_userlist_hover');\" onmouseout=\"jqac(this).removeClass('arrowchat_userlist_hover');\"><img class=\"arrowchat_userlist_avatar " + d + "\" src=\"" + user.a + "\" /><span class=\"arrowchat_userscontentname\">" + longname + "</span><span class=\"arrowchat_userscontentdot arrowchat_" + user.s + "\"></span></div>";
+								}
+								uc_name[user.id] = user.n;
+								uc_status[user.id] = user.s;
+								uc_avatar[user.id] = user.a;
+								uc_link[user.id] = "http://www.facebook.com/" + numericid;
+								if (G[user.id] != null) {
+									a(".arrowchat_closebox_bottom_status", $users[user.id]).removeClass("arrowchat_available").removeClass("arrowchat_busy").removeClass("arrowchat_offline").removeClass("arrowchat_away").addClass("arrowchat_" + user.s);
+									$users[user.id].removeClass("arrowchat_tab_offline").removeClass("arrowchat_away").addClass("arrowchat_tab_" + user.s);
+								}
+								if (u_chat_open == user.id) {
+									jabber_focus = user.id;
+								}
+							}
+							if (user.md5) {
+								jabber_hash = user.md5;
+								md5updated = 1;
+							}
+						});
+						jabberOnlineNumber == 0 && a("#arrowchat_facebook_friends_list").html("<div class=\"arrowchat_nofriends\">" + lang[8] + "</div>");
+						a("#arrowchat_facebook_friends_list").append("<div>" + buddylisttemp + "</div>");
+						if (u_hide_bar != 1 && u_status != "offline") {
+							a("#arrowchat_userstab_text").html("<b>" + lang[4] + "</b> (<b>" + (onlineNumber + jabberOnlineNumber) + "</b>)");
+						}
+						a(".arrowchat_jabber_user").click(function(l) {
+							if (a(l.target).attr("id")) {
+								var c = a(l.target).attr("id").substr(19);
+							} else {
+								var c = "";
+							}
+							if (c == "") {
+								c = a(l.target).parent().attr("id").substr(19);
+							}
+							toggleUserChatTab(c, uc_name[c], uc_status[c], uc_avatar[c], uc_link[c], 0, 1);
+						});
+						if (jabberInitialize2 != 1) {
+							if (jabberOnlineNumber == 1 || jabberOnlineNumber == 0) {
+								jabberInitialize2 = 1;
+								getJabberList("");
+								return;
+							}
+						}
+						if (jabberInitialize != 1) {
+							for (var d = 0; d < unfocus_chat.length; d++) {
+								if (unfocus_chat[d].toString().search("facebook") != "-1") {
+									if (uc_name[unfocus_chat[d]] != "" && typeof uc_name[unfocus_chat[d]] != "undefined" && uc_link[unfocus_chat[d]].toString().search("facebook") != "-1") {
+										toggleUserChatTab(unfocus_chat[d], uc_name[unfocus_chat[d]], uc_status[unfocus_chat[d]], uc_avatar[unfocus_chat[d]], uc_link[unfocus_chat[d]], 1, 1);
+									} else {
+										getJabberUser(unfocus_chat[d], 0, 0);
+									}
+								}
+							}
+							if (jabber_focus != 0) {
+								a("#arrowchat_userlist_" + jabber_focus).click();
+								j = jabber_focus;
+							} else if (u_chat_open.toString().search("facebook") != "-1") {
+								getJabberUser(u_chat_open, 1, 0);
+							}
+						}
+						clearTimeout(jabberListTimer);
+						jabberListTimer = setTimeout(function() {
+							getJabberList("");
+						}, c_list_heart_beat * 1000);
+						adjustBuddyListSize();
+						getJabberMessages();
+						jabberInitialize = 1;
+					}
+				}
+			});
+		}
+
+		function getJabberMessages() {
+			clearTimeout(jabberMsgTimer);
+			a.ajax({
+				url: "//arrowjabber.com/",
+				data: {
+					action: "getRecentMessages",
+					sid: session_var
+				},
+				dataType: "jsonp",
+				type: "GET",
+				success: function(data) {
+					if (data[0] && data[0].error == "1") {
+						getJabberID(facebookResponse);
+					} else {
+						a.each(data, function(id, message) {
+							message.from = jabberEncodeID(message.from);
+							if (typeof uc_name[message.from] == "undefined") {
+								getJabberUser(message.from, 0, message);
+							} else {
+								receiveMessage("f" + message.time, message.from, message.msg, message.time / 1000, 0, 0);
+							}
+							u_sounds == 1 && !a(".arrowchat_textarea", $user_popups[message.from]).is(":focus") && playNewMessageSound();
+							showTimeAndTooltip();
+							K = 1;
+							D = E;
+						});
+						jabberMsgTimer = setTimeout(function() {
+							getJabberMessages();
+						}, c_heart_beat * 1000);
+					}
+				}
+			});
+		}
+
+		function getJabberID(response) {
+			var currenttime = new Date;
+			currenttime = parseInt(currenttime.getTime() / 1000);
+			if (errorCount == 0) {
+				setTimeout(function() {
+					errorCount = 0;
+				}, 10000);
+			}
+			errorCount++;
+			if (errorCount < 4) {
+				a.ajax({
+					url: "//arrowjabber.com/",
+					data: {
+						action: "login",
+						access_key: response.authResponse.accessToken,
+						fb_app_id: c_facebook_app_id,
+						user: response.authResponse.userID
+					},
+					dataType: "jsonp",
+					type: "GET",
+					beforeSend: function() {
+						jabberInitialize != 1 && a("#arrowchat_facebook_friends_list").html("<div class=\"arrowchat_nofriends\">" + lang[25] + "</div>");
+					},
+					error: function() {
+						jqac.arrowchat.facebookLogout();
+					},
+					success: function(data) {
+						a.cookie("ac_facebook_id", data[0].msg, {
+							expires: 365,
+							path: "/"
+						});
+						getJabberList(data);
+					}
+				});
+			} else {
+				jqac.arrowchat.facebookLogout();
+			}
+		}
+
+		function getJabberHistory(id) {
+			a.ajax({
+				url: "//arrowjabber.com/",
+				data: {
+					action: "getAllMessages",
+					user: jabberDecodeID(id),
+					sid: session_var
+				},
+				dataType: "jsonp",
+				type: "GET",
+				success: function(data) {
+					if (data[0] && data[0].error == "1") {
+						getJabberID(facebookResponse);
+					} else {
+						a("#arrowchat_tabcontenttext_" + id).html("");
+						last_sent[id] = null;
+						a.each(data, function(id, message) {
+							message.from = jabberEncodeID(message.from);
+							if (message.type == "received") {
+								receiveMessage("f" + message.time, message.from, message.msg, message.time / 1000, 0, 1);
+							} else {
+								addMessageToChatbox(message.from, message.msg, "1", "1", "f" + message.time, 1, message.time / 1000);
+							}
+							showTimeAndTooltip();
+						});
+					}
+				}
+			});
+		}
+
+		function jabberEncodeID(id) {
+			id = id.toLowerCase();
+			id = id.replace("-", "M");
+			id = id.replace("@", "A");
+			id = id.replace(/\./g, "D");
+			return id;
+		}
+
+		function jabberDecodeID(id) {
+			id = id.replace("M", "-");
+			id = id.replace("A", "@");
+			id = id.replace(/D/g, ".");
+			return id;
+		}
+
+		function sendJabberMessage(id, message) {
+			new_id = jabberDecodeID(id);
+			a(".arrowchat_textarea").addClass("arrowchat_message_sending");
+			a.getJSON("//arrowjabber.com/", {
+				action: "sendMessage",
+				to: new_id,
+				msg: message,
+				sid: session_var
+			}, function(data) {
+				a(".arrowchat_textarea").removeClass("arrowchat_message_sending");
+				if (data[0] && data[0].error == "1") {
+					displayMessage("arrowchat_chatbox_message_flyout_" + typing, lang[135], "error");
+				} else {
+					addMessageToChatbox(id, message, "1", "1", "f" + Math.floor((new Date).getTime()), 1, Math.floor((new Date).getTime() / 1000));
+				}
+			});
+		}
+
+		function renderHTMLString(string) {
+			var new_render = string;
+			if (typeof string != "undefined") {
+				var render = a("<div/>").attr("id", "arrowchat_render").html(string).appendTo("body");
+				new_render = a("#arrowchat_render").html();
+				render.remove();
+			}
+			return new_render;
+		}
+		var bounce2 = 1,
+			bounce3 = 1,
+			chatroom_mod = 0,
+			chatroom_admin = 0,
+			count = 0,
+			V = {},
+			dtit = document.title,
+			dtit2 = 1,
+			dtit3 = 1,
+			window_focus = true,
+			xa = {},
+			j = "",
+			crou = "",
+			$ = 0,
+			w = 0,
+			bli = 1,
+			isAway = 0,
+			chatroomreceived = 0,
+			msgcount = 0,
+			W = false,
+			Y, Z, E = 3000,
+			Crref2, Ccr = -1,
+			message_timeout, D = E,
+			K = 1,
+			ma = 0,
+			R = 0,
+			m = "",
+			Ka = 0,
+			crt = {},
+			crt2 = {},
+			y = {},
+			G = {},
+			aa = {},
+			ca = {},
+			last_id = {},
+			last_sent = {},
+			last_name = {},
+			history_ids = {},
+			Aa = new Date,
+			Na = Aa.getDate(),
+			ab = Math.floor(Aa.getTime() / 1000),
+			acsi = 1,
+			Q = 0,
+			fa = -1,
+			acp = "Powered By <a href='http://www.arrowchat.com/' target='_blank'>ArrowChat</a>",
+			pa = 0,
+			B, push, jabberListTimer, facebookResponse, jabber_hash = "",
+			session_var = "",
+			jabberInitialize = 0,
+			jabberInitialize2 = 0,
+			jabberMsgTimer, onlineNumber = 0,
+			jabberOnlineNumber = 0,
+			errorCount = 0,
+			N;
+		var _ts = "",
+			_ts2;
+		for (d = 0; d < Themes.length; d++) {
+			if (Themes[d][2] == u_theme) {
+				_ts2 = "selected";
+			} else {
+				_ts2 = "";
+			}
+			_ts = _ts + "<option value=\"" + Themes[d][0] + "\" " + _ts2 + ">" + Themes[d][1] + "</option>";
+		}
+		a.ajaxSetup({
+			scriptCharset: "utf-8",
+			cache: false
+		});
+		a.expr[':'].icontains = function(b, c, d) {
+			return (b.textContent || b.innerText || jqac(b).text() || "").toLowerCase().indexOf(d[3].toLowerCase()) >= 0;
+		};
+		arguments.callee.videoWith = function(b) {
+			var win = window.open(c_ac_path + "public/video/?rid=" + b, "audiovideochat", "status=no,toolbar=no,menubar=no,directories=no,resizable=no,location=no,scrollbars=no,width=650,height=720");
+			win.focus();
+		};
+		arguments.callee.runarrowchat = runarrowchat;
+		arguments.callee.chatroom = function(b) {
+			if (u_hide_bar == 1) {
+				showBar();
+			}
+			$chatrooms_button.click();
+			setTimeout(function() {
+				Ccr = b;
+				loadChatroom(b, "1");
+			}, 400);
+		};
+		arguments.callee.chatWith = function(b) {
+			if (u_hide_bar == 1) {
+				showBar();
+			}
+			receiveUser(b, uc_name[b], uc_status[b], uc_avatar[b], uc_link[b]);
+		};
+		arguments.callee.openCloseApp = function(name) {
+			a(".arrowchat_appname_" + name).click();
+		};
+		arguments.callee.changeAppImage = function(name, image) {
+			a(".arrowchat_appname_" + name + " img").attr("src", c_ac_path + image);
+		};
+		arguments.callee.addAppAlert = function(name, number) {
+			if (a(".arrowchat_appname_" + name + " .arrowchat_tabalert").length > 0 && number > 0) {
+				a(".arrowchat_appname_" + name + " .arrowchat_tabalert").html(number);
+				a(".arrowchat_appname_" + name + " .arrowchat_tabalert").effect("bounce", {
+					times: 3,
+					distance: 5
+				}, 200);
+			} else if (!a(".arrowchat_appname_" + name).hasClass("arrowchat_trayclick")) {
+				a("<div/>").css("top", "-11px").css("left", "6px").addClass("arrowchat_tabalert").html(number).appendTo(".arrowchat_appname_" + name);
+			}
+		};
+		arguments.callee.getUser = function(b, c) {
+			a.ajax({
+				url: c_ac_path + "includes/json/receive/receive_user.php",
+				data: {
+					userid: b
+				},
+				type: "post",
+				cache: false,
+				dataType: "json",
+				success: function(o) {
+					if (o) {
+						window[c](o);
+					} else {
+						window[c](0);
+					}
+				}
+			});
+		};
+		arguments.callee.sendMessage = function(b, c) {
+			c != "" && a.post(c_ac_path + "includes/json/send/send_message.php", {
+				to: b,
+				message: c
+			}, function(d) {
+				if (d) {
+					if (d == "-1") {
+						displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[102], "error");
+					} else {
+						addMessageToChatbox(b, c, 1, 1, d, 1, 1);
+					}
+					a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+				}
+				K = 1;
+			});
+		};
+		arguments.callee.getBaseUrl = function() {
+			return k;
+		};
+		arguments.callee.facebook = function(response) {
+			facebookResponse = response;
+			a(".arrowchat_facebook_connect a").html(lang[141]);
+			a.cookie("ac_facebook", "1", {
+				expires: 365,
+				path: "/"
+			});
+			a("#arrowchat_userscontent").append("<div id=\"arrowchat_facebook_friends\" class=\"arrowchat_group_container\"><span class=\"arrowchat_group_text\">" + lang[143] + "</span><div class=\"arrowchat_group_line_container\"><span class=\"arrowchat_group_line\"></span></div></div><div id=\"arrowchat_facebook_friends_list\"></div>");
+			a("#arrowchat_userscontent").prepend("<div id=\"arrowchat_site_users\" class=\"arrowchat_group_container\"><span class=\"arrowchat_group_text\">" + lang[142] + "</span><div class=\"arrowchat_group_line_container\"><span class=\"arrowchat_group_line\"></span></div></div>");
+			adjustBuddyListSize();
+			var fb_id_cookie = a.cookie("ac_facebook_id");
+			if (typeof fb_id_cookie != "undefined" && fb_id_cookie != "") {
+				session_var = fb_id_cookie;
+				getJabberList("");
+			} else if (session_var != "") {
+				getJabberList("");
+			} else {
+				getJabberID(response);
+			}
+		};
+		arguments.callee.facebookLogout = function() {
+			clearTimeout(jabberListTimer);
+			clearTimeout(jabberMsgTimer);
+			a(".arrowchat_facebook_connect a").html(lang[140]);
+			a.removeCookie("ac_facebook", {
+				path: "/"
+			});
+			a(".arrowchat_group_container").remove();
+			a("#arrowchat_facebook_friends_list").remove();
+			adjustBuddyListSize();
+			jabberOnlineNumber = 0;
+			a("#arrowchat_userstab_text").html("<b>" + lang[4] + "</b> (<b>" + (onlineNumber + jabberOnlineNumber) + "</b>)");
+			a(".arrowchat_jabber_user_tab .arrowchat_closebox_bottom").click();
+		};
+	};
+})(jqac);
+jqac(document).ready(function() {
+	if (u_logged_in != 1 && c_disable_arrowchat != 1) {
+		jqac.arrowchat();
+		jqac.arrowchat.runarrowchat();
+	}
+});
+
+$(function() {
+	$("i.arrowchat_hide_icon").click(function() {
+		$(".alert_chat_hide").removeClass("in").show();
+		$(".alert_chat_hide").delay(300).addClass("in").fadeOut(1000);
+	});
+
+	$("i.arrowchat_show_icon").click(function() {
+		$(".alert_chat_show").removeClass("in").show();
+		$(".alert_chat_show").delay(300).addClass("in").fadeOut(1000);
+	});
+});

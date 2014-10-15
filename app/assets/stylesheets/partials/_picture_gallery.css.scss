@@ -1,9 +1,9 @@
 .pic-container {
-  width:600px;
+  max-width:600px;
   margin-left:40px;
 
   ul {
-    width:600px;
+    max-width:600px;
     @include clearfix;
     padding:0;
     margin:0;

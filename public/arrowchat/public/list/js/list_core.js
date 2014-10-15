@@ -71,7 +71,7 @@ var jqac = jQuery;
 		
 		function loadBuddyList() {
 			a.ajax({
-				url: k + "includes/json/receive/receive_buddylist.php",
+				url: c_ac_path + "includes/json/receive/receive_buddylist.php",
 				cache: false,
 				type: "get",
 				dataType: "json",

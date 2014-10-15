@@ -1,0 +1,22 @@
+<% title = _("¿Qué es Cellove?") %>
+<% content_for(:title) {title} %>
+
+<div class="container-fluid rounded-box page-content">
+  <div class="content row-fluid">
+    <div class="container-fluid nopadding">
+      <div class="row-fluid text-center">
+        <h1><%= title %></h1>
+      </div>
+      <p><%= _('Cellove es una red social GRATIS de contactos online donde fácilmente puedes conocer a gente nueva, interactuar, ampliar tu círculo de amistades y encontrar la pareja que siempre has soñado tener.') %></p>
+
+       <p><%= _('Sabemos lo difícil y, al mismo tiempo, lo importante que es dar con tu media naranja o con una amistad duradera. Por eso, ofrecemos nuestra plataforma, que facilita y agiliza el contacto directo y eficaz con perfiles afines a ti, con total confianza y seguridad.') %></p>
+
+      <p><%= _('¿Te imaginas quedar con alguien que nunca has visto pero tener la sensación de que lo conoces de toda la vida? Ahora es posible gracias a Cellove. Podrás tener a tu alcance mucha más información de esa persona a través de su círculo más cercano y de una manera segura y fiable.') %></p>
+
+      <p><%= _('De esta manera, tendrás la sensación de que conoces más aspectos de su vida, teniendo más seguridad y confianza en tus próximas citas.') %></p>
+
+      <p><%= _('Con Cellove, ¡tus citas ya no serán a ciegas!') %></p>
+      <%= link_to _('¡Regístrate ahora Gratis!'), new_user_registration_path, class: 'more' %>
+    </div>
+  </div>
+</div>

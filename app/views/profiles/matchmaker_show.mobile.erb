@@ -1,0 +1,61 @@
+<% @current_page = 'profile-celestino'; %>
+
+  <div class="boxed headless">
+    <div class="boxed-inner">
+      <header>
+        <h1><%= _('¡Hola Celestin@!') %></h1>
+      </header>
+    </div>
+  </div>
+  <hr class="thin">
+  <%= form_for @user, :url => profile_path do |f| %>
+    <div class="boxed">
+      <div class="boxed-inner">
+        <article>
+          <header>
+            <h1><%= _('Datos de acceso a Cellove') %></h1>
+          </header>
+          <div class="clearfix">
+            <div class="span4 left">
+              <div class="control-group">
+                <%= f.label :email,_( 'Email'), :class => 'control-label' %>
+                <div class="controls">
+                  <%= f.email_field :email, :class => 'span2' %>
+                </div>
+              </div>
+            </div>
+            <div class="span4">
+              <div class="control-group">
+                <%= f.label :password,_( 'Contraseña'), :class => 'control-label' %>
+                <div class="controls">
+                  <%= f.password_field :password, :class => 'span2' %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="clearfix">
+            <div class="span8">
+              <div class="form-inline">
+                <%= _('Me llamo') %>
+                <%= f.text_field :name, :class => 'input-small' %>
+                <%= f.text_field :surname, :class => 'input-small' %>
+                <%= _('pero quiero que mi nombre para mostrar sea ') %>
+                <%= f.text_field :screen_name, :class => 'input-small' %>
+                <small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="center">
+            <%= f.submit _( 'Modificar datos de acceso'), :class => 'btn btn-info' %>
+            <hr class="thin">
+          </div>
+
+        </article>
+      </div>
+    </div>
+  <% end %>
+</section>

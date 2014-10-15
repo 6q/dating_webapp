@@ -1,0 +1,91 @@
+<% title = _("Registro Usuari@ Gratis") %>
+<% content_for(:title) {title} %>
+
+<div class="container-fluid rounded-box page-content register-form">
+  <div class="content row-fluid">
+    <div class="container-fluid nopadding text-center">
+      <div class="row-fluid text-center">
+        <h1><%= title %></h1>
+      </div>
+
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :multipart => true, :honeypot => true }, validate: true) do |f| %>
+          <%= display_base_errors resource %>
+
+
+                <p>
+                  <%= f.text_field :name, :autofocus => true, placeholder: _('Nombre'), class: 'width95 text-center' %>
+                </p>
+                <p>
+                  <%= f.text_field :surname, placeholder: _('Apellidos'), class: 'width95 text-center' %>
+                </p>
+                <p>
+                  <%= f.text_field :screen_name, placeholder: _('Nick (no obligatorio)'), class: 'width95 text-center' %>
+                </p>
+
+
+
+              <div id="photo">
+
+                    <label class="photoupload">
+                      <span><%=_('Sube tu foto') %></span>
+                      <%= f.file_field :picture, :name => 'picture', class: 'span4 upload_pic_input_unregistered' %>
+                    </label>
+                    <div id="picture_gallery"></div>
+
+              </div>
+
+
+              <p>
+                <%= f.label :gender, _('Soy') %>
+                <%= f.select :seeking, seeking_options, {}, { :class => 'width95 text-center' } %>
+              </p>
+              <p>
+                <%= f.label :marital_status, _('y estoy') %> 
+                <%= f.select :marital_status, marital_status_options, {}, { :class => 'width95 text-center' } %>
+              </p>
+
+              <p>
+                <%= f.label :birth_date, _('Nací el') %>
+              </p>
+              <p>
+                <%= f.date_select :birth_date, { date_separator: _('de '), order: [:day, :month, :year], discard_year: true }, class: 'width40' %>
+              </p>
+              <p>
+                <%= f.number_field :birth_date_year, placeholder: _('Año'), in: 1900...Time.now.year, class: 'width95 text-center' %>
+              </p>
+
+
+              <p>
+                <%= f.label :city, _('Y vivo en') %>
+                <%= f.select :city, ([resource.city] || []), { selected: (@geocoder ? @geocoder.city : resource.city) }, { class: 'location width95', 'data-placeholder' => _('Localidad...')} %>
+              </p>
+              <p>
+                <%= localized_country_select_tag('user', (@geocoder && @geocoder.country_code != 'RD' ? @geocoder.country_code : 'ES'), nil, id: 'user_country', name: 'user[country]', class: 'width95 text-center')  %>
+              </p>
+
+                  <%= f.label :email, _("Email") %>
+                  <%= f.email_field :email, class: 'width95 text-center' %>
+
+                  <%= f.label :password, _("Contraseña") %>
+                  <%= f.password_field :password, class: 'width95 text-center' %>
+
+                  <label><%= _('Al hacerte usuari@ de Cellove certificas que eres mayor de edad y que has leído y aceptas los %{condiciones_link} y la %{privacy_link} del sitio y los servicios descritos') %  {condiciones_link: link_to(_('Terminos y condiciones generales'), terms_conditions_path, target: "_blank"), privacy_link: link_to(_('Política de privacidad'), privacy_policy_path, target: "_blank")}%></label>
+
+                    <%= f.check_box :newsletter_optin, checked: true %>
+                    <label><%= _('Acepto recibir emails sobre usuari@s Cellove y comunicados Cellove.') %></label>
+
+                  <%= f.hidden_field :invitation_code, :value => params['invitation_code'] %>
+                  <%= f.hidden_field :provider %>
+                  <%= f.hidden_field :uid %>
+                  <%= f.hidden_field :oauth_token %>
+                  <%= f.hidden_field :oauth_expires_at %>
+                  <%= f.submit _('¡REGISTRARME GRATIS!'), :class => 'btn btn-info btn-large submit width100' %>
+
+        <% end %>
+
+<div id="crop_modal_wrapper"></div>
+
+<%= render "shared/conversions" %>
+    </div>
+  </div>
+</div>

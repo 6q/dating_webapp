@@ -47,3 +47,8 @@ $offline-color:#c00;
 
 body { background: $background-color; }
 body { @include base-font; }
+
+.vip-hide {
+	visibility: hidden;
+	display:none;
+}

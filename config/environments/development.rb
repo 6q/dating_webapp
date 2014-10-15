@@ -14,7 +14,7 @@ Cellove::Application.configure do
   config.action_controller.perform_caching = false
 
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'cellove.local' }
   config.action_mailer.delivery_method = :smtp
   # change to true to allow email to be sent during development
   config.action_mailer.perform_deliveries = true
@@ -28,7 +28,7 @@ Cellove::Application.configure do
   }
 
   # Absolute urls on assets for mailer
-  config.action_controller.asset_host = 'http://localhost:3000'
+  config.action_controller.asset_host = 'http://cellove.local'
   config.action_mailer.asset_host = config.action_controller.asset_host
 
   # Print deprecation notices to the Rails logger

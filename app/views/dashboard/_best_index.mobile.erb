@@ -1,0 +1,10 @@
+<% self.formats = [:html] %>
+<section id="best-index" class="home-users">
+<div class="clearfix list-header">
+  <h4 class="pull-left"><%= _('Usuari@s con mejor Índice Cellove') %></h4>
+  <div class="pull-right"><%= link_to_previous_page @best_index, '< ' + _('Anterior'), class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'best_index' } %>&nbsp;<%= link_to_next_page @best_index, _('Siguiente') + ' >', class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'best_index' } %> | <%= link_to _("Ver más"), users_path(special: :by_index) %></div>
+</div>
+<ul class="user-list clearfix">
+  <%= render @best_index %>
+</ul>
+</section>

@@ -1,0 +1,88 @@
+<section class="messages">
+  <header>
+    <h1 class="section_title"><%= _('Mensajes y actividades') %></h1>
+    <div class="clearfix"></div>
+  </header>
+
+  <div class="tabs">
+    <ul class="nav nav-tabs">
+      <li><a href="<%= url_for(conversations_path(anchor: 'inbox')) %>"><%= _('Recibidos') %><%= " (#{@conversations_inbox.total_count})" if @conversations_inbox.total_count > 0 %></a></li>
+      <li><a href="<%= url_for(conversations_path(anchor: 'sentbox')) %>"><%= _('Enviados') %><%= " (#{@conversations_sentbox.total_count})" if @conversations_sentbox.total_count > 0 %></a></li>
+      <li><a href="<%= url_for(conversations_path(anchor: 'trash')) %>"><%= _('Eliminados') %><%= " (#{@conversations_trash.total_count})" if @conversations_trash.total_count > 0 %></a></li>
+    </ul>
+  </div>
+
+  <div class="boxed">
+
+      <div class="msg-item">
+        <div class="clearfix">
+          <div class="conversation">
+
+            <div>
+              <% interlocutor = sender_or_recipient(@conversation) %>
+              <div >
+                  <p style="font-size:12px;text-align:center;margin-top:10px">
+                    <% if interlocutor %>
+                      <b><%= link_to interlocutor.name, user_path(interlocutor) %></b> <%= interlocutor.age %> <%= _('Años') %>, <%= interlocutor.city %>
+                    <% else %>
+                      <%= _('Usuario inexistente o inactivo') %>
+                    <% end %>
+                  </p>
+              </div>
+            </div>
+
+            <% @receipts.each do |receipt| %>
+              <%= render partial: 'conversation_full', locals: { receipt: receipt } %>
+            <% end %>
+            <%= render @conversation.activity if @conversation.activity %>
+
+              <div class="msg-reply-dialog clearfix">
+
+                <div class="pic"><%= link_to profile_pic(current_user, width: 60, height: 60), current_user %></div>
+
+                <div class="msg-actions" style="margin:0">
+                  <% if interlocutor %>
+                    <div style="float:left;width:33%;text-align:left">
+                      <b><%= link_to _('Responder'), '#', class: 'action-reply' %></b> 
+                    </div>
+                    <div style="float:left;width:33%;text-align:center">
+                      <%= link_to 'Bloquear', "#user-block-#{sender_or_recipient(@conversation).id}", 'data-toggle' => 'modal' %>
+                    </div>
+                  <% end %>
+                    <div style="float:left;width:33%;text-align:right">
+                      <%= link_to _('Eliminar hilo'), "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+
+                <% if current_user.can_message? %>
+                <div class="reply-form">
+                  <% if interlocutor %>
+                    <%= simple_form_for @conversation.messages.new, url: conversation_path(@conversation), method: :put do |f| %>
+                      <%= f.input_field :body %>
+                      <%= f.submit _('Responder'), class: 'btn btn-info pull-right' %>
+                    <% end %>
+                  <% end %>
+                </div>
+                <% else %>
+                <script type="text/javascript">
+                $(function() {
+                  $('.action-reply').unbind('click').click(function(event) {
+                    event.preventDefault();
+                    $('#upgrade-account-modal').click();
+                  });
+                });
+                </script>
+
+                <% end %>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<%= render partial: 'modal_delete', locals: { conversation: @conversation } %>
+<% if interlocutor %>
+<%= render partial: 'conversations/modal_activity', locals: { conversation: @conversation, user: sender_or_recipient(@conversation) } %>
+<%= render partial: 'shared/user/modal_user-block', locals: { user: sender_or_recipient(@conversation) } %>
+<% end %>

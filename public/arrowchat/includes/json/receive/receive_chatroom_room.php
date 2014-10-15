@@ -79,7 +79,7 @@
 	if (logged_in($userid)) 
 	{
 		$result = $db->execute("
-			SELECT type, name, password, author_id  
+			SELECT type, name, password, author_id, max_users
 			FROM arrowchat_chatroom_rooms 
 			WHERE id = '" . $db->escape_string($chatroom_id) . "'
 		");
@@ -91,6 +91,9 @@
 			// Save on queries and get the chatroom name here
 			$chat_name[] = array('n' =>  $row['name']);
 			$response['chat_name'] = $chat_name;
+			
+			// Save the max users
+			$chatroom_max_users = $row['max_users'];
 			
 			if ($row['type'] == 2) 
 			{
@@ -194,8 +197,10 @@
 			FROM arrowchat_chatroom_users
 			WHERE (chatroom_id = '" . $db->escape_string($chatroom_id) . "'
 				AND session_time + 91 > " . $time . ")
-			ORDER BY is_admin DESC, is_mod DESC
+			ORDER BY is_admin DESC, is_mod DESC, session_time DESC
 		");
+		
+		$i = 0;
 		
 		while ($chatroom_users = $db->fetch_array($result)) 
 		{
@@ -229,8 +234,8 @@
 			if (check_if_guest($fetchid))
 			{
 				$sql = get_guest_details($fetchid);
-				$result = $db->execute($sql);
-				$user = $db->fetch_array($result);
+				$result2 = $db->execute($sql);
+				$user = $db->fetch_array($result2);
 				
 				$user['username'] = create_guest_username($user['userid'], $user['guest_name']);
 				$link = "#";
@@ -239,8 +244,8 @@
 			else
 			{
 				$sql = get_user_details($fetchid);
-				$result2 = $db->execute($sql);
-				$user = $db->fetch_array($result2);
+				$result3 = $db->execute($sql);
+				$user = $db->fetch_array($result3);
 				
 				$avatar	= get_avatar($user['avatar'], $fetchid);
 				$link	= get_link($user['link'], $fetchid);
@@ -271,6 +276,19 @@
 			$user_cache[$fetchid] = $avatar;
 			
 			$chat_users[] = array('id' => $user['userid'], 'n' => $db->escape_string(strip_tags($user['username'])), 'a' => $avatar, 'l' => $link, 't' => $title, 'b' => $chatroom_users['block_chats'], 'status' => $user['status']);
+			
+			$i++;
+		}
+		
+		// Exit if too many users are in the chat room
+		if ($i > $chatroom_max_users AND $is_admin != 1 AND $chatroom_max_users != 0)
+		{
+			$error[] = array('t' => '3', 'm' => $language[127]);
+			$response['error'] = $error;
+			header('Content-type: application/json; charset=utf-8');
+			echo json_encode($response);
+			close_session();
+			exit;
 		}
 		
 		$user_title[] = array('admin' => $global_is_admin, 'mod' => $global_is_mod);
@@ -285,7 +303,7 @@
 		$history_length = $chatroom_history_length * 60;
 		
 		$result = $db->execute("
-			SELECT id, username, message, sent, user_id, global_message
+			SELECT id, username, message, sent, user_id, global_message, is_mod, is_admin
 			FROM arrowchat_chatroom_messages
 			WHERE (chatroom_id = '" . $db->escape_string($chatroom_id) . "'
 				AND sent + " . $history_length . " > " . $time . ")
@@ -321,7 +339,7 @@
 				$user_cache[$fetchid] = $avatar;
 			}
 			
-			$chat_history[] = array('id' => $chatroom_history['id'], 'n' => $db->escape_string(strip_tags($chatroom_history['username'])), 'm' => $chat_message, 't' => $chatroom_history['sent'], 'a' => $avatar, 'userid' => $fetchid, 'global' => $chatroom_history['global_message']);
+			$chat_history[] = array('id' => $chatroom_history['id'], 'n' => $db->escape_string(strip_tags($chatroom_history['username'])), 'm' => $chat_message, 't' => $chatroom_history['sent'], 'a' => $avatar, 'userid' => $fetchid, 'global' => $chatroom_history['global_message'], 'mod' => $chatroom_history['is_mod'], 'admin' => $chatroom_history['is_admin']);
 		}
 		
 		$response['chat_history'] = $chat_history;
