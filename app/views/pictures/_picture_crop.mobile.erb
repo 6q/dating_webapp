@@ -1,0 +1,27 @@
+<div id="crop_modal" class="modal hide fade" tabindex="-1" role="dialog">
+  <div id='html5-lightbox-cellove'>
+    <span class='heart'>&#9829;</span> <%= _('Redimensiona tu foto') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= _("Corta exactamente lo que quieras de la foto") %></h3>
+  </div>
+  <div class="modal-body">
+    <%= image_tag picture.image.thumb("500x500").url, id: 'picture_to_crop' %>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true"><%= _('Cerrar') %></button>
+    <button class="btn btn-primary save-cropped"><%= _('Guardar Cambios') %></button>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  // Sorry for the inline js.
+  $('.save-cropped').click(function () {
+    <% if picture.main %>
+      window.location = '/profile';
+    <% end %>
+  });
+});
+</script>

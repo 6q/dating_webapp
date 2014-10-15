@@ -164,7 +164,7 @@
 		
 		if ($attachment)
 		{
-			return $base_url . '../index.php?action=dlattach;attach=' . $user_id . ';type=avatar';
+			return $base_url . '../index.php?action=dlattach;attach=' . $row['id_attach'] . ';type=avatar';
 		}
 		else
 		{

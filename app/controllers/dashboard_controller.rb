@@ -20,8 +20,13 @@ class DashboardController < ApplicationController
 
       case params[:partial]
       when "could_interest_me"
-        could_interest_me           = current_user.could_interest_me(20, session[:shown_ids]).sample(20)
-        @could_interest_me          = Kaminari.paginate_array(could_interest_me).page(params[:page]).per(5)
+        if session[:mobile_view] == true
+          could_interest_me           = current_user.could_interest_me(100, session[:shown_ids]).sample(100)
+          @could_interest_me          = Kaminari.paginate_array(could_interest_me).page(params[:page]).per(1)
+        else 
+          could_interest_me           = current_user.could_interest_me(20, session[:shown_ids]).sample(20)
+          @could_interest_me          = Kaminari.paginate_array(could_interest_me).page(params[:page]).per(5)
+        end
         session[:could_interest_me] = could_interest_me.map(&:id)
         session[:shown_ids]        += session[:could_interest_me]
       when "best_index"
@@ -44,8 +49,12 @@ class DashboardController < ApplicationController
 
   def paginate_users
     if params[:page] && params[:partial]
-
-      instance_variable_set("@#{params[:partial]}", Kaminari.paginate_array(User.find(session[params[:partial].to_sym])).page(params[:page]).per(5))
+      if session[:mobile_view] == true
+        per_page = 1
+      else 
+        per_page = 5
+      end
+      instance_variable_set("@#{params[:partial]}", Kaminari.paginate_array(User.find(session[params[:partial].to_sym])).page(params[:page]).per(per_page))
 
       template = render_to_string(partial: params[:partial], formats: [:html])
 

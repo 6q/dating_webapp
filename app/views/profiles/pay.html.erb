@@ -1,57 +1,73 @@
-<section id="pay" class="boxed">
+<section id="pay_header" class="boxed">
   <div class="boxed-inner">
   <header>
-    <h1><%= _('Modalidades de uso') %></h1>
+    <h1><%= _('Hazte usuari@ VIP de Cellove') %></h1>
   </header>
-
-
+  </div>
+</section>
+<section id="pay_subheader">
+  <h2><%= _('Utiliza todo el potencial que te ofrece Cellove') + raw('<br>') + _('¡No pongas límites!')%></h2>
+</section>
+<section id="pay" class="boxed">
+  <div class="boxed-inner">
   <article>
-      <h2><%= _('Elige entre uno de nuestros planes:') %></h2>
-      <p><%= _('Contrata una de nuestras tres modalidades de uso en Cellove para sacarle el máximo partido de todas las herramientas, facilidades que te ofrecemos. Elije la modalidad que mejor se adapte a tus necesidades y disfruta de Cellove sin limitaciones ni restricciones de ningún tipo.') %></p>
-      
-      <form>
         <fieldset class="clearfix">
             <div class="payment">
-              <h3><%= _('GRATIS') %></h3>
+              <h3><%= _('PASE') + raw('<br>') + _('GRATIS') %></h3>
               <ul>
                 <li><%= _('Ilimitada navegación') %></li>
-                <li><%= _('Ilimitados mensajes privados') %></li>
-                <li><%= _('2 chats simultáneos') %></li>
-                <li><%= _('Enviar preguntas a Celestinos') %></li>
+                <li><%= _('Ilimitada recepción mensajes') %></li>
+                <li><%= _('Envío 5 mensajes diarios') %></li>
+                <li><%= _('1 Chat simultáneo') %></li>
+                <li><%= _('Limitación opciones avanz.') %></li>
                 <li><%= _('Publicidad en navegación') %></li>
                 <li>&nbsp;</li>
               </ul>
             </div>
 
             <div class="payment plan2">
-              <h3><%= _('VIP 3,95€/mes') %></h3>
+              <header>
+                <h3><%= _('PASE') + raw('<br>') + _('VIP') %></h3>
+                <h4><%= _('4,99€/mes') %></h4>
+              </header>
               <ul>
                 <li><%= _('Ilimitada navegación') %></li>
-                <li><%= _('Ilimitados mensajes privados') %></li>
-                <li><%= _('Capacidad ilimitada') %></li>
-                <li><%= _('Ilimitados chats simultáneos') %></li>
-                <li><%= _('Videochat online') %></li>
-                <li><%= _('Opc. de privacidad avanzadas') %></li>
-                <li><%= _('Acuse de recibo de mensajes') %></li>
+                <li><%= _('Ilimitada recepción mensajes') %></li>
+                <li><%= _('Ilimitados envíos mensajes') %></li>
+                <li><%= _('Acuse recibo mensajes') %></li>
+                <li><%= _('Ilimitados Chats simultáneos') %></li>
                 <li><%= _('Navegación oculta') %></li>
+                <li><%= _('Opciones avanzadas libres') %></li>
               </ul>
               <div class="call">
-                Contratar por: <%= link_to _('3,95 €/ mes'), pay_confirmation_path, class: 'btn btn-info' %>
-                <%= link_to _('47,4 €/año'), pay_confirmation_path, class: 'btn btn-info' %>
+                <% if current_user.has_role? :premium_user %>
+                  <%= _('Actualmente eres VIP') %> <%= link_to 'Cancelar', pay_cancellation_path, class: 'btn btn-info', confirm: _('¿Estas seguro?') %>
+                <% else %>
+                <%= form_tag pay_confirmation_path do %>
+                  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-name="Cellove"
+                          data-image="<%= asset_path('logo-cellove-square.jpg') %>"
+                          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                          data-description="<%= _('Subscripción mensual') %>"
+                          data-label="<%= _('Confirmar') %>"
+                          data-currency="EUR"
+                          data-panel-label="<%= _('Pagar') %>"
+                          data-email="<%= current_user.email %>"
+                          data-allow-remember-me="false"
+                          data-amount="499"></script>
+                <% end %>
+                <% end %>
               </div>
             </div>
         </fieldset>
-      </form>
-
-      <p><%= _('Las tres modalidades de uso estarán vigentes durante un año a partir del día de contratación, en el caso que no hayas consumido los recursos ofrecidos en cada modalidad. Si consumes los recursos de la modalidad que contrates, podrás volver a contratar una nueva modalidad de uso al instante.') %></p>
-
-    <div class="center">
-      <%= image_tag "payments.png" %>
-      <br>&nbsp;
-    </div>
 
   </article>
 
 </div>
 
+</section>
+
+<section id="why">
+  <h4><%= _('¿Por qué tengo que pagar para utilizar Cellove?') %></h4>
+  <p><%= _('Cellove ha sido diseñado y creado como una red social de contactos gratis para todos los usuari@s, con las funciones y herramientas necesarias para fidelizar y convertirnos en tu red social de contactos de confianza. Para mantener la plataforma y ofrecer nuestro servicio con garantías, es necesario disponer de un sistema de micropagos solo para usuari@s que quieran utilizar Cellove sin limitaciones.') %></p>
 </section>

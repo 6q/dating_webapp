@@ -1,0 +1,32 @@
+<%= render 'shared/best_suited_near_me' %>
+<section class="boxed">
+  <header>
+    <h1 class="section_title"><%= _('Índice Cellove') %></h1>
+  </header>
+  <div class="boxed-inner">
+    <div class="clearfix center">
+      <div><%= _('Tu indice Cellove es') %> <%= current_user.cellove_percentage %>/100</div>
+      <div class="progress width100">
+          <div class="bar" style="width: <%= current_user.cellove_percentage %>%;"></div>
+      </div>
+    </div>
+
+    <hr class="thin">
+
+
+      <article class="clearfix">
+        <h3><%= _('¿Cómo se calcula?') %></h3>
+        <p><%= _('Es un algoritmo super secreto, pero podemos decirte que tenemos en cuenta tu actividad en Cellove.') %></p>
+        <p><%= _('Eso incluye desde las visitas a tu perfil hasta el número de mensajes enviados/recibidos.') %></p>
+        <p><%= _('Hay otras cosas que aumentan tu indice Cellove, como los amigos a les que invitas o cuantos celestinos tengas.') %></p>
+
+        <h3><%= _('¿Quieres mejorarlo?') %></h3>
+        <p><%= _('Tienes muchas formas de hacerlo:') %></p>
+        <ul>
+          <li>- <%= link_to _("Completa tu perfil"), profile_path %> <%= _('al') %> 100%</li>
+        </ul>
+        <p><%= _('Pero sobretodo, ven a menudo ;-)') %></p>
+      </article>
+  </div>
+
+</section>

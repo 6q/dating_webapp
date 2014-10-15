@@ -1,0 +1,42 @@
+<!-- Modal -->
+<div id="proposal-accept-<%= activity.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <span class='heart'>&#9829;</span>  <%= _('Propuesta de Actividad') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <%= user_detail(sender_or_recipient(activity.conversation)) %>
+  </div>
+  <%= simple_form_for activity.conversation.messages.new, url: conversation_path(activity.conversation, accept_activity: true), method: :put do |f| %>
+    <div class="modal-body">
+      <p><%= _('¡Estás a un paso de aceptar la propuesta de') %> <%= sender_or_recipient(activity.conversation).try(:name) || _('Usuario inexistente o inactivo') %> <%= _('para') %> <strong><%= Activity::ACTIVITY_TYPE[activity.activity_type.to_sym] %><%= ' ' + _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
+      <div class="reply">
+        <%= f.input_field :body %>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <%= f.submit _('Aceptar actividad'), class: 'btn btn-success' %>
+    </div>
+  <% end %>
+</div>
+
+<!-- Modal -->
+<div id="proposal-reject-<%= activity.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id='html5-lightbox-cellove'>
+    <span class='heart'>&#9829;</span>  <%= _('Propuesta de Actividad') %><span class='right'></span>
+  </div>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <%= user_detail(sender_or_recipient(activity.conversation)) %>
+  </div>
+  <div class="modal-body">
+    <div>
+      <p><strong><%= sender_or_recipient(activity.conversation).try(:name) || _('Usuario inexistente o inactivo') %> <%= _('te ha propuesto') %> <%= Activity::ACTIVITY_TYPE[activity.activity_type] %> <%= _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>.
+      <p><%= _('Vaya. Parece que NO vas a aceptar la actividad que te propone') %> <%= sender_or_recipient(activity.conversation).try(:name) || _('Usuario inexistente o inactivo') %>. <%= _('Esperamos que la próxima vez funcione.') %></p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= link_to _('Cancelar'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
+    <%= link_to _('Rechazar propuesta de actividad'), activity_reject_path(activity), class: 'btn btn-danger', method: :post %>
+  </div>
+</div>

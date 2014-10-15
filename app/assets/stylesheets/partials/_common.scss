@@ -632,6 +632,7 @@ aside {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
 #html5-lightbox-cellove {
   display:block;
   position:relative;
@@ -670,4 +671,8 @@ aside {
 }
 .field_with_errors {
 	display: inline-block;
+}
+
+.over-pagination {
+  display:none;
 }

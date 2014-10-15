@@ -1,0 +1,63 @@
+.social_networks {
+  .nav {
+    margin-bottom:-1px;
+    margin-left:10px;
+
+    li {
+      margin-bottom: -1px;
+    }
+  }
+
+  .register-text {
+    margin-top: 60px;
+  }
+
+  .register-form {
+    #orientation {
+      select, input, #user_city_chzn a {
+        border: 1px solid red;
+      }
+      #user_city_chzn a {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    }
+
+    #access {
+      margin-bottom: 0px;
+      margin-left: 20px;
+    }
+  }
+
+}
+
+#fb-auth-button {
+position: relative;
+  width:100px;
+  height: 20px;
+  margin-left:5px;
+  margin:0;
+  padding:5px;
+  background-color: #435fad;
+  a {
+    color: white;
+    float:right;
+    text-decoration:none;
+    margin-right:6px;
+    i {
+      width:16px;
+      height:16px;
+      position: absolute;
+      top: 6px;
+      background:image-url('fb-icon.png') no-repeat;
+      left:10px;
+    }
+    &:hover {
+      background:#435fad;
+    }
+  }
+  &:hover {
+    opacity:.9;
+  }
+}

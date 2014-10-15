@@ -11,7 +11,7 @@ class ContactForm < MailForm::Base
   def headers
     {
       :subject => "[Cellove] Contact form",
-      :to => "help@cellove.com",
+      :to => ENV['CONTACT_EMAIL'] || "help@cellove.com",
       :from => %("#{name}" <#{email}>)
     }
   end

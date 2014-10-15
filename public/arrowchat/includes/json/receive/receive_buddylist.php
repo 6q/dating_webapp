@@ -74,8 +74,7 @@
 				
 				$link = get_link($chat['link'], $chat['userid']);
 				$avatar = get_avatar($chat['avatar'], $chat['userid']);
-        echo 'r';
-
+				
 				$block_chats_unserialized = unserialize($block_chats);
 				
 				if (!is_array($block_chats_unserialized))
@@ -152,7 +151,7 @@
 				{
 					if (!empty($chat['username']) AND $show_user)
 					{
-						$buddyList[] = array('id' => $chat['userid'], 'n' => stripslashes($db->escape_string(strip_tags($chat['username']))), 's' => $chat['status'], 'a' => $avatar, 'l' => $link);
+						$buddyList[] = array('id' => $chat['userid'], 'n' => stripslashes($db->escape_string(strip_tags($chat['username']))), 's' => $chat['status'], 'a' => $avatar, 'l' => $link, 'admin' => $chat['is_admin']);
 					}
 				}
 			}
@@ -269,7 +268,7 @@
 					{
 						if (!empty($chat['username']) AND $show_user)
 						{
-							$buddyList[] = array('id' => $chat['userid'], 'n' => stripslashes($db->escape_string(strip_tags($chat['username']))), 's' => $chat['status'], 'a' => $avatar, 'l' => $link);
+							$buddyList[] = array('id' => $chat['userid'], 'n' => stripslashes($db->escape_string(strip_tags($chat['username']))), 's' => $chat['status'], 'a' => $avatar, 'l' => $link, 'admin' => $chat['is_admin']);
 						}
 					}
 				}

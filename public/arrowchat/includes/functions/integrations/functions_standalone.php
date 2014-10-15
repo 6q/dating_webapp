@@ -10,6 +10,9 @@
 	|| #   http://www.arrowchat.com | http://www.arrowchat.com/license/   # ||
 	|| #################################################################### ||
 	*/
+	
+	// UNCOMMENT THE SESSION START IF YOU ARE USING SESSIONS TO GET THE USER ID
+	// session_start();
 
 	/**
 	 * This function returns the user ID of the logged in user on your site.  Technical support will not

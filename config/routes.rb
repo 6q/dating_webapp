@@ -72,7 +72,8 @@ Cellove::Application.routes.draw do
     get 'cellove-index',            to: 'users#cellove_index',                    as: :cellove_index
     get 'search',                   to: 'users#index',                            as: :search
     get 'pay',                      to: 'profiles#pay',                           as: :pay
-    get 'pay/confirmation',         to: 'profiles#pay_confirmation',              as: :pay_confirmation
+    post 'pay/confirmation',        to: 'profiles#pay_confirmation',              as: :pay_confirmation
+    get 'pay/cancellation',         to: 'profiles#pay_cancellation',              as: :pay_cancellation
 
     put 'general_settings',         to: 'users#general_settings',                 as: :general_settings
   end
@@ -108,6 +109,8 @@ Cellove::Application.routes.draw do
   resources :searches, only: [:create, :destroy, :show]
 
   get :cities, to: 'cities#index'
+
+  mount StripeEvent::Engine => '/stripe'
 
   # match '/404' => 'errors#error_404'
   # match '/422' => 'errors#error_422'

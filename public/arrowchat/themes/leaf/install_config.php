@@ -17,7 +17,7 @@
 	
 	// REQUIRED
 	// The application version.
-	$theme_version = "1.1";
+	$theme_version = "2.0";
 	
 	// REQUIRED
 	// Update link for the application.  Provided by ArrowChat.

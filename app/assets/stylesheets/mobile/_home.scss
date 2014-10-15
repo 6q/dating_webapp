@@ -1,0 +1,125 @@
+body.outside {
+  min-height: 100%;
+
+
+  .background-container {
+
+    margin: 0;
+    background-color:#17a4b2;
+    background: -moz-linear-gradient(top, rgba(26,40,53,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(26,40,53,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a2835', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    min-width: 100%;
+    min-height:100%;
+
+   .background-back {
+
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background: -moz-linear-gradient(top, rgba(26,40,53,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(26,40,53,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+      background: linear-gradient(to bottom, rgba(26,40,53,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a2835', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      position:absolute;
+      top:0;
+      left:0;
+      min-width: 100%;
+      min-height: 100%;
+
+    }
+
+    .background-main {
+
+      position:relative;
+      text-align:center;
+      color:white;
+      background-color:transparent;
+      min-width: 100%;
+      min-height: 100%;
+
+    }
+
+  }
+  header[role="banner"]{
+
+    /* random background here in default */
+    padding-top:20px;
+    position:relative;
+    padding-bottom:12px;
+    
+    #logo {
+      width:100%;
+      max-width: 286px;
+      height: 120px;
+      margin: 0 auto 0;
+      float:none;
+      position:relative;
+      padding:0px;
+      h1 {
+        width:100%;
+        height:90px;
+        float:left;
+        margin:0;
+        padding:0;
+        a {
+          background:image-url('mobile/logo-cellove.png') left top no-repeat;
+          background-size: contain;
+          text-indent:-999em;
+          width:100%;
+          height:90px;
+          display:block;
+          overflow:hidden;
+        }
+      }
+
+      h2 {
+        margin-top:-10px;
+        padding:0;
+        text-align:right;
+        width:100%;
+        float:left;
+        color:#FFF;
+        font-size:2.2em;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-weight: 400;
+      }
+
+      .beta {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-weight: 400;
+        font-size:1.1em;
+        color: #5CABE8;
+        position:absolute;
+        right:0;
+        top: -0.25em;
+        letter-spacing:1px;
+      }
+    }
+  }
+  .footer-links {
+    margin:20px 0;
+    
+    a {
+      font: #FFF;
+    }
+    a:hover {
+        font:#FFF !important;
+      }
+    
+  }
+}

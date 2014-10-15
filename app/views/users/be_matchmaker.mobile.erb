@@ -1,0 +1,46 @@
+<section class="celestinos boxed">
+  <div class="boxed-inner">
+    <header>
+      <h1 class="section_title"><%= _('Quiero ser Celestin@') + ' | <span>'.html_safe +  _('Realizar recomendación')+ '</span>'.html_safe %></h1>
+    </header>
+
+    <div class="box-title"><%= _('Quieres recomendar a una usuari@ registrad@<br> o alguien que no es usuari@?') %></div>
+    <div class="celes-box">
+      <ul>
+        <li class="red-heart">
+          <i class="red-heart"></i>
+          <%= _('Ex pareja') %>
+        </li>
+    
+        <li class="violet-heart">
+          <i class="violet-heart"></i>
+          <%= _('Amigo especial') %>
+        </li>
+    
+        <li class="green-heart">
+          <i class="green-heart"></i>
+          <%= _('Amigo') %>
+        </li>
+    
+        <li class="yellow-heart">
+          <i class="yellow-heart"></i>
+          <%= _('Familiar') %>
+        </li>
+      </ul>
+      <div class="btns">
+        <a class="btn btn-medium btn-info" href="#recommend-user" data-toggle="modal"><%= _('Quiero recomendar ahora') %></a>
+      </div>
+    </div>
+
+    <div class="your-celestines">
+      <h4 style="text-align:center"><%= _('Personas a las que haces de Celestin@') %></h4>
+      <% current_user.recommendations.each do |rec| %>
+        <%= render 'shared/user/celes-item', recommendation: rec, is_creator: true %>
+      <% end %>
+    </div>
+    <hr class="thin">
+  </div>
+
+</section>
+
+<%= render 'shared/user/modal_recommend-user' %>

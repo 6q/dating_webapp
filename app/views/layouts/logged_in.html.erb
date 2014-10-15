@@ -5,7 +5,7 @@
     <%= render "layouts/common_head" %>
     <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
   </head>
-  <body class="user <%= action_name %>">
+  <body class="user <%= controller_name %> <%= action_name %>">
     <%= render "layouts/changing_background" %>
     <header role="banner" class="clearfix">
       <div class="container">
@@ -54,32 +54,56 @@
         <% end %>
       </section>
     </div>
-
+    <%= render 'shared/set_format' %>
     <%= render 'shared/footer' %>
     <%= render 'shared/user/notifications' %>
     <%= render 'layouts/messages' %>
 
-    <%= render 'shared/user/modal_upgrade' %>
+    <%#= render 'shared/user/modal_upgrade' %>
     <%= render 'shared/modal_progress' %>
-    <%= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
+    <%#= link_to '', "#upgrade-account", 'data-toggle' => 'modal', id: 'upgrade-account-modal', style: 'display: none' %>
     <%= render 'shared/scripts' %>
   </body>
   <% unless current_user.has_role?(:matchmaker) %>
     <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
     <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
     <script type="text/javascript">
-      setTimeout(getNotifications, 5000);
-      c_video_chat = <%= current_user.has_role?(:premium_user) ? '1' : '0' %>;
 
-      <% unless current_user.has_role?(:premium_user) %>
+      setTimeout(getNotifications, 5000);
+
+      c_video_chat = 0;
       function chatWith(id) {
-        //if ($('#arrowchat_chatboxes_wide .arrowchat_bar_right').size() < 2) {
+      <% unless current_user.has_role?(:premium_user) %>
+        if ($('#arrowchat_chatboxes_wide .arrowchat_bar_right').size() < 5) {
           jqac.arrowchat.chatWith(id);
-        /*} else {
+        } else {
           $('#upgrade-account-modal').click();
-        }*/
-      }
+        }
+      <% else %>
+        jqac.arrowchat.chatWith(id);
       <% end %>
+      }
+
+      /*
+      <% unless current_user.has_role?(:premium_user) %>
+        $(document).ready(function() {
+          vip_modal = true;
+          $(document).on('input click keypress', 'textarea.arrowchat_textarea', function (e) {
+            if ($('#arrowchat_chatboxes_wide .arrowchat_bar_right').size() > 1) {
+              e.preventDefault();
+              $(this).val('');
+              if (vip_modal && !$('#upgrade-account').is(':visible')) {
+                vip_modal = false;
+                $('#upgrade-account-modal').click();
+                setTimeout(function(){
+                  vip_modal = true;
+                }, 3000);
+              }
+            }
+          });
+        });
+      <% end %>
+      */
     </script>
   <% end %>
 </html>

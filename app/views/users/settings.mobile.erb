@@ -1,0 +1,171 @@
+<header>
+  <h1 class="section_title"><%= _('Configuración') %></h1>
+</header>
+<section class="settings">
+
+  <section class="boxed">
+    <div class="boxed-inner">
+
+
+        <p><%= _('Desde aquí podrás configurar tus parámetros en Cellove') %></p>
+
+      <%= form_for(current_user, url: general_settings_path, :method => :put, class: 'form-inline') do |f| %>
+        <%= fields_for current_user.general_settings do |f1| %>
+
+          <article class="clearfix">
+            <h5><%= _('Visibilidad') %></h5>
+            <p><%= _('¿Quien quieres que te vea?') %></p>
+            <div class="col">
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Activar navegación oculta') %></strong></div>
+                <div class="checkbox">
+                  <%= f1.check_box :anonymous_browsing %>
+                  <%= f1.label :anonymous_browsing %>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Estar visible solo para los usuari@s con franja de edad indicada en: "Editar perfil" + "Que buscas"') %></strong></div>
+                <div class="checkbox">
+                  <%= f1.check_box :age_restriction %>
+                  <%= f1.label :age_restriction %>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="clearfix">
+            <h5><%= _('Notificaciones por email') %></h5>
+            <p><%= _('¿Que notificaciones quieres recibir?') %></p>
+
+            <div class="col">
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('No enviar notificaciones si estoy online') %></strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :no_email_online %>
+                    <%= f1.label :no_email_online %>
+                  </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Cuando alguien visite mi perfil') %></strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :profile_visit %>
+                    <%= f1.label :profile_visit %>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Cuando le guste a alguien') %></strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :like %>
+                    <%= f1.label :like %>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Cuando reciba un nuevo mensaje y/o actividad') %></strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :receive_message %>
+                    <%= f1.label :receive_message %>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Cuando alguien indique que Hacemos buena pareja') %> </strong><%= _('(votaciones de 3 ó 5 estrellas)') %></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :star_rating %>
+                    <%= f1.label :star_rating %>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Cuando un celestino me recomiende') %></strong></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :celestino_recommendation %>
+                    <%= f1.label :celestino_recommendation %>
+                </div>
+              </div>
+
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Quiero recibir la newsletter') %></strong> <%= _('(noticias y novedades)') %></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :newsletter %>
+                    <%= f1.label :newsletter %>
+                </div>
+              </div>
+
+              <div class="control-group clearfix">
+                <div class="span3 right"><strong><%= _('Quiero recibir sugerencias por email') %></strong> <%= _('(perfiles afines, semanal)') %></div>
+                  <div class="checkbox">
+                    <%= f1.check_box :user_suggestions %>
+                    <%= f1.label :user_suggestions %>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="button">
+            <%= f.submit _('Guardar Configuración'), class: 'btn btn-large btn-info' %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+
+  <hr class="thin">
+
+  <section class="boxed">
+    <div class="boxed-inner blocked">
+
+      <header>
+        <h1><%= _('Usuarios bloqueados') %></h1>
+        <div><%= _('Has bloqueado estos usuarios. ¿Has cambiado de opinión?') %></div>
+      </header>
+
+      <%= form_for(current_user, url: user_block_hide_settings_path(current_user), :method => :post) do |f| %>
+        <article>
+            <table border="0" cellpadding="5" cellspacing="0" align="center">
+              <tr>
+                <th></th>
+                <th><%= _('No le veo') %></th>
+                <th><%= _('No me ve') %></th>
+              </tr>
+
+              <% current_user.blocked_and_hidden_users.each do |user| %>
+                <tr>
+                  <td width="350" style="text-align:left">
+                    <%= user_detail user %>
+                  </td>
+                  <td width="100">
+                    <% hidden_user_name = 'user[' + user.id.to_s + '][hidden_user]' %>
+                    <%= f.check_box :hidden_user, checked: user.hidden, name: hidden_user_name %>
+                  </td>
+                  <td width="100">
+                    <% blocked_user_name = 'user[' + user.id.to_s + '][blocked_user]' %>
+                    <%= f.check_box :blocked_user, checked: user.blocked, name: blocked_user_name %>
+                  </td>
+                </tr>
+              <% end %>
+
+            </table>
+            <div class="button">
+              <%= f.submit _('Guardar Configuración'), class: 'btn btn-large btn-info' %>
+            </div>
+        </article>
+      <% end %>
+    </div>
+  </section>
+
+</section>
+
+<% unless current_user.has_role?(:premium_user) %>
+  <script>
+    $(function() {
+      $('#general_setting_anonymous_browsing').click(function(e) {
+        e.preventDefault();
+        $('#upgrade-account-modal').click();
+      });
+      $('#general_setting_newsletter').click(function(e) {
+        e.preventDefault();
+        $('#upgrade-account-modal').click();
+      });
+    });
+  </script>
+<% end %>

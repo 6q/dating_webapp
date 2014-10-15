@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require chosen
+ * require_tree .
+ *= require font-awesome
+*/
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin: -10px -20px 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.disabled {
+  opacity: 0.2;
+}
+
+.hidden {
+  display: none;
+}
+//
+// Application Stylesheet
+//
+
+@import "compass_twitter_bootstrap";
+@import "flexslider";
+@import "jslider";
+@import "fancybox/jquery.fancybox-1.3.1";
+@import "datepicker";
+@import "mobile/base";
+@import "mobile/content";
+@import "mobile/forms";
+@import "mobile/layout";
+@import "partials/backgrounds";
+@import "mobile/common";
+@import "mobile/user";
+@import "partials/sidebar";
+@import "partials/blog";
+@import "partials/modals";
+@import "mobile/payments";
+@import "mobile/profile";
+@import "mobile/notifications";
+@import "mobile/social_networks";
+@import "mobile/jquery.sidr";
+@import "mobile/jquery-ui";
+@import "mobile/swipebox";
+
+@import "mobile/logged_in";
+@import "mobile/home";
+@import "mobile/picture_gallery";

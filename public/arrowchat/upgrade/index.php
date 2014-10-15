@@ -27,13 +27,30 @@
 	
 		$result = $db->execute("
 			INSERT IGNORE INTO arrowchat_config (config_name, config_value, is_dynamic)
-			VALUES ('guest_name_change', '1', '0'), ('guest_name_duplicates', '0', '0'), ('guest_name_bad_words', 'fuck,cunt,nigger,shit,admin,administrator,mod,moderator,support', '0')
+			VALUES ('blocked_words', 'fuck,[shit],nigger,[cunt],[ass],asshole', '0'), ('login_url', '', '0'), ('admin_background_color', '', '0'), ('admin_text_color', '', '0'), ('desktop_notifications', '0', '0'), ('facebook_app_id', '', '0')
+		");
+		
+		$result = $db->execute("
+			ALTER TABLE `arrowchat_chatroom_rooms`
+			ADD `max_users` int(10) NOT NULL DEFAULT '0'
+			AFTER `length`
+		");
+		
+		$result = $db->execute("
+			ALTER TABLE `arrowchat_chatroom_messages`
+			ADD `is_mod` tinyint(1) unsigned DEFAULT '0',
+			ADD `is_admin` tinyint(1) unsigned DEFAULT '0'
 		");
 		
 		$result = $db->execute("
 			ALTER TABLE `arrowchat_status`
-			ADD `guest_name` varchar(50) DEFAULT NULL
-			AFTER `userid`
+			MODIFY `focus_chat` varchar(50)
+		");
+		
+		$result = $db->execute("
+			ALTER TABLE `arrowchat_status`
+			ADD `clear_chats` text
+			AFTER `last_message`
 		");
 		
 		if ($result)

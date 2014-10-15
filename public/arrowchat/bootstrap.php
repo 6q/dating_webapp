@@ -16,7 +16,7 @@
 	@ini_set('display_errors', 0);
 
 	// Define the current ArrowChat version
-	define('ARROWCHAT_VERSION', '1.6.11');
+	define('ARROWCHAT_VERSION', '1.7.2');
 	
 	// Define that we are within ArrowChat
 	define('IN_ARROWCHAT', true);
@@ -43,6 +43,12 @@
 	require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . "functions/functions_common.php");
 	if (!isset($language)) $language = "en";
 	require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_LANGUAGE . DIRECTORY_SEPARATOR . $language . DIRECTORY_SEPARATOR . $language . ".php");
+	
+	// Exit if the user agent is a bot
+	if (is_bot())
+	{
+		exit;
+	}
 	
 	// Require push system if enabled
 	if ($push_on == 1)

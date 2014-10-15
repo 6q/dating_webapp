@@ -1,0 +1,17 @@
+<% unless conversation.activity.blank? %>
+  <div class="clearfix proposal">
+    <div class="pull-left">
+      <b><%= _('Propuesta de actividad:') %></b> <%= "#{conversation.activity.body.capitalize} - #{conversation.activity.date ? I18n.l(conversation.activity.date, format: :long) : _('fecha a concretar contigo.') }" %>
+    </div>
+    <div class="pull-right">
+      <% if conversation.activity.rejected? %>
+        <%= _('Actividad rechazada') %>
+      <% elsif conversation.activity.accepted? %>
+        <%= _('Actividad aceptada') %>
+      <% else %>
+        <a data-toggle="modal" href="#proposal-accept-<%= conversation.activity.id %>"><%= _('Aceptar') %></a> - <a data-toggle="modal" href="#proposal-reject-<%= conversation.activity.id %>"><%= _('Rechazar') %></a>
+      <% end %>
+    </div>
+  </div>
+  <%= render partial: 'activities/modal_answer_proposal', locals: { activity: conversation.activity } %>
+<% end %>

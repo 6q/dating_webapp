@@ -54,6 +54,7 @@
                   <%= link_to _('Eliminar hilo'), "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
                 </div>
 
+                <% if current_user.can_message? %>
                 <div class="reply-form">
                   <% if interlocutor %>
                     <%= simple_form_for @conversation.messages.new, url: conversation_path(@conversation), method: :put do |f| %>
@@ -62,6 +63,17 @@
                     <% end %>
                   <% end %>
                 </div>
+                <% else %>
+                <script type="text/javascript">
+                $(function() {
+                  $('.action-reply').unbind('click').click(function(event) {
+                    event.preventDefault();
+                    $('#upgrade-account-modal').click();
+                  });
+                });
+                </script>
+
+                <% end %>
               </div>
           </div>
         </div>

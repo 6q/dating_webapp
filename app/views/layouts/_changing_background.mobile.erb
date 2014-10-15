@@ -1,0 +1,36 @@
+  <script>
+
+    $(function () {
+        var colors = ['#17a4b2', '#54904A', '#17B8A9', '#93152A', '#17747E','#17a4b2'];
+        var i = 0;
+        var cont = $('div.background-container');
+        var back = $('div.background-back');
+        var main = $('div.background-main');
+        back.css('opacity', 1);
+        back.css('backgroundColor', colors[0]); // start color , fades out
+        cont.css('backgroundColor', colors[1]); // target color
+        anim();
+        
+        function anim() {
+            if (i == colors.length - 1) {
+                i=0;
+                //return; // repeat ad infinitum
+            }
+            back.css({
+                backgroundColor: colors[i],
+                opacity: 1
+            });
+            cont.css({
+                backgroundColor: colors[i+1]
+            });
+            i++;
+            back.stop().animate({
+                opacity: 0
+            }, 2000, anim);
+        }
+      });
+  </script>
+  <div class="background-container">
+    <div class="background-back"></div>
+    <div class="background-main"></div>
+  </div>

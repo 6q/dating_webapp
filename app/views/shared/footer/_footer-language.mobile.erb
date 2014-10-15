@@ -1,0 +1,15 @@
+<div id="languageBox" class="container-fluid hidden rounded-box">
+    <div class="content row-fluid">
+		<div class="container-fluid nopadding">
+		    <div class="row-fluid text-center">
+		        <h4><%= _('Seleccionar Idioma') %></h4>
+		    </div>
+		    
+		    <li><%= link_to 'Español', url_for(locale: :es), class: 'more' %></li>
+		    <li><%= link_to 'Català', url_for(locale: :ca), class: 'more' %></li>
+		    <li><%= link_to 'English', url_for(locale: :en), class: 'more' %></li>
+		    <%= link_to _('Cancelar'), 'javascript:void(0)', :id => 'cancel_language', :class => 'cancel' %>
+		    
+		</div>
+    </div>
+</div>

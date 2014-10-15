@@ -51,15 +51,24 @@ class ProfilesController < ApplicationController
   def pay
   end
 
-  def
   def pay_confirmation
-    if true # Do some token/payment/what ever check here
-      current_user.upgrade_to_premium
-      flash[:success] = _('Actualización a usuari@ premium se ha realizado correctamente')
+    if current_user.upgrade_to_premium params[:stripeToken]
+      flash[:success] = _('Actualización a usuari@ VIP se ha realizado correctamente')
+      redirect_to root_path
     else
-      flash[:error] = _('Oops!')
+      flash[:error] = _('Actualización a usuari@ VIP No ha sido posible')
+      redirect_to pay_path
     end
-    redirect_to root_path
+  end
+
+  def pay_cancellation
+    if current_user.remove_premium
+      flash[:success] = _('Cancelación de usuari@ VIP se ha realizado correctamente')
+      redirect_to root_path
+    else
+      flash[:error] = _('Cancelación de usuari@ VIP No ha sido posible')
+      redirect_to pay_path
+    end
   end
 
   private

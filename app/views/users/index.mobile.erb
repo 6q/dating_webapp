@@ -1,0 +1,124 @@
+<%= render 'shared/best_suited_near_me' %>
+  
+<section class="search boxed">
+  <header>
+    <h1 class="section_title"><%= _('Encuentra personas afines a tí') %></h1>
+    <div class="clearfix"></div>
+  </header> 
+  <div class="search-box">
+
+      <a href="#adv-search" class="btn btn-info width100" data-toggle="collapse"><%= _('Realizar búsqueda') %></a>
+    <%= search_form_for @search, class: 'form-horizontal overflow-show' do |f| %>
+      <div id="adv-search" class="clearfix collapse">
+
+          <div class="control-group slider">
+            <label class="control-label"><%= _('Edad') %></label>
+            <div class="controls">
+              <input id="years" type="slider" value="<%= params[:q][:years_start_lteq] || (current_user.lf_age_from.blank? ? '18' : current_user.lf_age_from) %>;<%= params[:q][:years_end_gteq] || (current_user.lf_age_to.blank? ? '80' : current_user.lf_age_to) %>"/>
+              <%= f.hidden_field :years_start_lteq %>
+              <%= f.hidden_field :years_end_gteq %>
+            </div>
+          </div>
+
+            <div class="overflow-show control-group location-search">
+                <%= f.label :city, _('Localidad'), class: 'control-label location-label' %>
+                <%= select_tag :city, options_for_select([(params[:city] || current_user.city)], params[:city] || current_user.city), { include_blank: _('Localidad...'), class: 'city', 'data-placeholder' => _('Localidad...') } %>
+                <%= f.label :postal_code, _('Código postal'), class: 'control-label zip' %>
+                <%= text_field_tag :postal_code, (params[:postal_code] || current_user.postal_code), placeholder: _('CP'), class: 'span1' %>
+            </div>
+
+          <div class="clearfix">
+
+            <div class="">
+              <div class="control-group slider">
+                <label class="control-label"><%= _('Distancia') %></label>
+                <div class="controls">
+                  <%= text_field_tag :distance, (params[:distance] || User::DEFAULT_SEARCH_DISTANCE), type: 'slider' %>
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="control-group">
+                <%= f.label :description_cont, _('Palabra clave'), class: 'control-label' %>
+                <div class="controls">
+                  <%= f.text_field :name_or_surname_or_screen_name_or_description_cont %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+              <div class="control-group slider">
+                <label class="control-label"><%= _('Altura') %></label>
+                <div class="controls">
+                  <input id="altura" type="slider" name="" value="<%= @search.height_gteq || '150' %>;<%= @search.height_lteq || '220' %>"/>
+                  <%= f.hidden_field :height_gteq  %>
+                  <%= f.hidden_field :height_lteq  %>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <%= f.label :complexion_eq, _('Complexión'), class: 'control-label' %>
+                <div class="controls">
+                  <%= f.select :complexion_eq, User::COMPLEXION.map { |k, v| [v, k] }, { include_blank: _('Complexión...'), selected: @search.complexion_eq }, { style: 'width:100%' } %>
+                </div>
+              </div>
+
+        <div class="checkboxes">
+          <div class="col">
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Foto') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :pictures_main_not_null, {}, 1, '' %>
+                <%= f.label :pictures_main_not_null,_('Foto') %>
+              </div>
+            </div>
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Online') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :updated_at_gteq, {}, 5.minutes.ago, '' %>
+                <%= f.label :updated_at_gteq,_('Online') %>
+              </div>
+            </div>
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Fumador') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :smoker_in, {}, User.is_smoker, '' %>
+                <%= f.label :smoker_in,_('Fumador') %>
+              </div>
+            </div>
+            <div class="control-group clearfix">
+              <div class="span3 right"><strong><%= _('Con hijos') %></strong></div>
+              <div class="checkbox">
+                <%= f.check_box :children_in, {}, User.have_children, '' %>
+                <%= f.label :children_in,_('Con hijos') %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <%= f.submit _('Buscar'), class: 'btn btn-info' %>
+      </div>
+    <% end %>
+  </div>
+</section>
+<section class="list">
+  <header class="center">
+      <h1 class="section_title"><%= _('Resultados de la búsqueda') %></h1>
+  </header>
+  <% if @users.present? %>
+    <ul class="user-list clearfix">
+      <%= render @users %>
+    </ul>
+  <% else %>
+    <div class="failed_search"><strong><%= _('Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda.') %></strong></div>
+  <% end %>
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
+  <%= paginate @users %>
+</section>
+
+<%= render partial: 'shared/search_js' %>

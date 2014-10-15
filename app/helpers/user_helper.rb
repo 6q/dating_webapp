@@ -1,9 +1,10 @@
 #encoding: utf-8
 module UserHelper
   def profile_pic_url(user, options)
-    size  = "#{options[:width]}x#{options[:height]}#"
-    url   = nil
-    if user && profile_pic = user.profile_picture
+    size = "#{options[:width]}x#{options[:height]}#"
+    anonymous = options[:invisible]
+    url = nil
+    if user && !anonymous && profile_pic = user.profile_picture
       url = profile_pic.image.thumb(size).url
     else
       app         = Dragonfly[:images]
@@ -38,7 +39,7 @@ module UserHelper
     end
     html  = '<div class="user-detail clearfix">'
     html += user_link_with_picture(user)
-    html += "<div class=\"data\">#{link_to(user.name, user)}, #{user.age} Años - #{user.city}</div>"
+    html += "<div class=\"data\">#{link_to(user.name, user)}<br>#{user.age} Años<br>#{user.city}</div>"
     html += '</div>'
 
     html.html_safe

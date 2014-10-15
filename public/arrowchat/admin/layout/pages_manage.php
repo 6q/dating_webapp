@@ -618,6 +618,17 @@
 								</p>
 							</dd>
 						</dl>
+						<dl class="selectionBox">
+							<dt>
+								<label for="chatroom_max_users">Chat Room Max Users</label>
+							</dt>
+							<dd>
+								<input type="text" id="chatroom_max_users" class="selectionText" name="chatroom_max_users" maxlength="10" value="<?php if (var_check('chatroom_max_users')) echo get_var('chatroom_max_users'); ?>" />
+								<p class="explain">
+									The number of users that can be in a chat room before no one else is allowed in.  <b>Enter 0 for an unlimited number of users.</b>
+								</p>
+							</dd>
+						</dl>
 					</fieldset>
 					<dl class="selectionBox submitBox">
 						<dt></dt>
@@ -872,6 +883,17 @@
 								<input type="text" id="edit_chatroom_length" class="selectionText" name="edit_chatroom_length" maxlength="10" value="<?php echo $row['length']; ?>" />
 								<p class="explain">
 									The time, in minutes, that the chat room will last before not showing up anymore.  <b>Enter 0 for a chat room that lasts until deleted.</b>
+								</p>
+							</dd>
+						</dl>
+						<dl class="selectionBox">
+							<dt>
+								<label for="chatroom_max_users">Chat Room Max Users</label>
+							</dt>
+							<dd>
+								<input type="text" id="chatroom_max_users" class="selectionText" name="chatroom_max_users" maxlength="10" value="<?php echo $row['max_users']; ?>" />
+								<p class="explain">
+									The number of users that can be in a chat room before no one else is allowed in. <b>Enter 0 for an unlimited number of users.</b>
 								</p>
 							</dd>
 						</dl>

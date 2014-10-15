@@ -41,9 +41,14 @@ gem "whenever"
 gem 'rails-i18n', '~> 3.0.0.pre'
 gem 'newrelic_rpm'
 gem 'omniauth-facebook'
+gem 'json', '~> 1.8.1' # min. version for stripe
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'stripe_event'
 gem 'daemons', '~> 1.1.9'
 gem 'delayed_job_active_record', '~> 4.0.1'
+gem 'mobile-fu', '~> 1.3.1'
 gem 'honeypot-captcha'
+gem 'font-awesome-sass'
 
 group :test do
   gem 'sqlite3'
@@ -55,7 +60,7 @@ end
 gem 'minitest-rails', group: [:test, :development]
 
 group :development do
-  gem 'thin'
+  #gem 'thin'
   gem "guard-rails"
   gem "rb-fsevent"
   gem 'capistrano'

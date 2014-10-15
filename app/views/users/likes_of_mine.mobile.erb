@@ -1,0 +1,20 @@
+<%= render "shared/best_suited_near_me" %>
+<section class="list">
+  <header>
+    <h1 class="pull-left section_title"><%= _('Te gustan') %></h1>
+    <div class="sort-gustado">
+    </div>
+    <div class="clearfix"></div>
+  </header>
+
+  <%= render "empty-list" %>
+
+  <ul class="user-list clearfix">
+    <%= render @users %>
+  </ul>
+  <div class="pagination">
+    <%= pager_total(@users) %>
+  </div>
+  <%= paginate @users %>
+
+</section>

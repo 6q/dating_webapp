@@ -62,6 +62,7 @@
 	</div>
 </div>
 <div class="arrowchat_powered_by">'+acp+'</div>
+<div class="arrowchat_facebook_connect"></div>
 <div class="arrowchat_tabcontent arrowchat_tabstyle">
 	<div id="arrowchat_buddylist_message_flyout" class="arrowchat_message_box">
 		<div class="arrowchat_message_box_wrapper">

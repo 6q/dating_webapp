@@ -29,7 +29,7 @@
 	$password = "";
 
 	// ###################### START CREATE CHATROOM ##########################
-	if (!empty($_POST['name'])) 
+	if (!empty($chatroom_name) AND $chatroom_name != $language[98]) 
 	{
 		if (!empty($user_chatrooms)) 
 		{
@@ -44,7 +44,7 @@
 			
 			if ($result AND $db->count_select() < 1) 
 			{
-				if (!empty($chatroom_password) && $chatroom_password != "Password (Optional)") {
+				if (!empty($chatroom_password) && $chatroom_password != $language[99]) {
 					$type = "2";
 					$password = $chatroom_password;
 				}
@@ -79,9 +79,13 @@
 		{
 			echo "-2"; // Display user created chatrooms off error
 		}
-
-		close_session();
-		exit(0);
 	}
+	else
+	{
+		// Space for error that no chat room name was input
+	}
+	
+	close_session();
+	exit(0);
 
 ?>

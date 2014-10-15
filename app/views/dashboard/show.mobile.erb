@@ -1,0 +1,14 @@
+
+<section class="user-home" >
+
+	<div id="container_could_interest_me"><%= image_tag('/assets/ajax-loader.gif', :style => 'margin-top: 65px;') %></div>
+ 
+ </section>
+ 
+<script>
+    $.get( "<%= url_for(:controller=>'dashboard',:action=>'show_users', partial: 'could_interest_me') %>", function( data ) {
+      $( "#container_could_interest_me" ).html( data );
+      likes_bind();
+
+    });
+</script>

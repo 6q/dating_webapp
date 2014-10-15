@@ -504,6 +504,14 @@ section.chat{
         font-size:1.2em;
         font-weight:bold;
       }
+      .readed {
+        font-style: italic;
+
+        a {
+          font-size:1em;
+          font-weight:bold;
+        }
+      }
     }
 
     .msg-date {
@@ -1145,6 +1153,10 @@ section.chat{
 
     .star {
       margin:0px auto;
+      img {
+        height:16px;
+        width:16px;
+      }
     }
 
     ul {
@@ -1655,7 +1667,7 @@ section.messages{
 }
 
 section.list {
-.user-list {
+  .user-list {
     list-style:none;
     margin:0;
     padding:0;
@@ -1675,6 +1687,10 @@ section.list {
         border:none;
       }
     }
+  }
+
+  .anonymous {
+    cursor: pointer;
   }
 
   .user-card {

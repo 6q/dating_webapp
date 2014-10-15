@@ -17,6 +17,7 @@
 	require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'functions/functions_mobile.php');
 
 	$type = get_var('type');
+	$mobile = get_var('mobile');
 
 	// ############################ OPTIMIZATION #############################
 	if (!ob_start("ob_gzhandler"))
@@ -68,7 +69,7 @@
 	{
 		$mobile_device = 1;
 		
-		if ($enable_mobile != "1")
+		if ($enable_mobile != "1" AND $type != "mjs" AND $type != "djs" AND $type != "css")
 		{
 			close_session();
 			exit;
@@ -99,11 +100,15 @@
 	// This is the primary CSS file for ArrowChat
 	if ($type == "css") 
 	{
+
 		header ("Content-type: text/css; charset: UTF-8");
 		header('Expires: ' . gmdate("D, d M Y H:i:s", time() + 3600*24*7) . ' GMT');
 
-		require_once (dirname(__FILE__) . '/themes/' . $theme . '/css/style.css');
-		
+		if ($mobile == "true") {
+			require_once (dirname(__FILE__) . '/themes/' . $theme . '/css/style_mobile.css');			
+		} else {
+			require_once (dirname(__FILE__) . '/themes/' . $theme . '/css/style.css');	
+		}
 		close_session();
 		exit;
 	}
@@ -338,6 +343,10 @@
 				$user_avatar = $row['avatar'];
 				$user_avatar = get_avatar($user_avatar, $userid);
 			}
+			else
+			{
+				$user_avatar = $base_url . AC_FOLDER_ADMIN . "/images/img-no-avatar.gif";
+			}
 		}
 		
 		// Get all the rest of the general settings
@@ -398,7 +407,12 @@
 		$settings .= 'c_chat_animations="' . $enable_chat_animations . '",';
 		$settings .= 'c_disable_smilies="' . $disable_smilies . '",';
 		$settings .= 'c_guest_name_change="' . $guest_name_change . '",';
-		$settings .= 'k="' . $base_url . '";';		
+		$settings .= 'c_login_url="' . $login_url . '",';
+		$settings .= 'c_admin_bg="' . $admin_background_color . '",';
+		$settings .= 'c_admin_txt="' . $admin_text_color . '",';
+		$settings .= 'c_desktop_notify="' . $desktop_notifications . '",';
+		$settings .= 'c_facebook_app_id="' . $facebook_app_id . '",';
+		$settings .= 'c_ac_path="' . $base_url . '";';		
 			
 		require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'js/arrowchat_dynamic.js');	
 		
@@ -439,7 +453,7 @@
 		require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'js/arrowchat_templates.js');
 		
 		echo "\n\n// **********Main Script Start**********\n// http://www.arrowchat.com\n";
-		require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'js/arrowchat_core.dev.js');
+		require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . AC_FOLDER_INCLUDES . DIRECTORY_SEPARATOR . 'js/arrowchat_core.js');
 		
 		echo "\n\n// **********Applications Pre-loading Start**********\n";
 		foreach ($apps as $val) 

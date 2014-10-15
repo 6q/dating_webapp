@@ -1,0 +1,22 @@
+<% title = _("Contacta") %>
+<% content_for(:title) {title} %>
+
+<div class="container-fluid rounded-box page-content">
+  <div class="content row-fluid">
+    <div class="container-fluid nopadding text-center">
+      <div class="row-fluid text-center">
+        <h1><%= title %></h1>
+      </div>
+
+      <%= simple_form_for @contact_form, url: contact_form_path, :html => {:class => '', :honeypot => true  } do |f| %>
+
+        <%= f.text_field :name, :autofocus => true, :placeholder => _('Nombre'), :input_html => { :value => current_user && current_user.name    ? current_user.name     : "" }, :class => 'width95 text-center' %>
+        <%= f.text_field :surname, :placeholder => _('Apellidos'), :input_html => { :value => current_user && current_user.surname ? current_user.surname  : "" }, class: 'width95 text-center' %>
+        <%= f.text_field :email,   :placeholder => _('Email'),     :input_html => { :value => current_user && current_user.email   ? current_user.email    : "" }, class: 'width95 text-center' %>
+        <%= f.text_area :message, :placeholder => _('Mensaje'), as: :text, size: '50x10', class: 'width95' %>
+        <p><%= f.button :submit, class: 'btn btn-info btn-large width100', value: _('ENVIAR') %></p>
+
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -10,28 +10,51 @@
 
 
 function likes_bind() {
+  jQuery(document).on("ajax:beforeSend", ".ajax_like_trigger", function() {
+    $(".ajax_like_trigger").addClass('loading-icon');
+
+
+  });
+
   $(".ajax_like_trigger").unbind('ajax:success').bind("ajax:success",
     function(evt, user_id, status, xhr) {
       var firstEl, secondEl;
+      $(".ajax_like_trigger").removeClass('loading-icon');
       $(".user_like").addClass('hidden');
       $(".user_dislike").removeClass('hidden');
+
       firstEl = $('.like.active').find('[data-id=' + user_id + ']').parent();
       secondEl = $('.like.hidden').find('[data-id=' + user_id + ']').parent();
+
       firstEl.removeClass('disabled').removeClass('active').addClass('hidden');
       secondEl.removeClass('hidden').addClass('active');
+
     }
   ).unbind('ajax:error').bind("ajax:error", function(evt, data, status, xhr){
     //do something with the error here
   });
+
+  jQuery(document).on("ajax:beforeSend", ".ajax_dislike_trigger", function() {
+    $('.ajax_dislike_trigger').addClass('loading-icon');
+  });
+
   $(".ajax_dislike_trigger").unbind('ajax:success').bind("ajax:success",
     function(evt, user_id, status, xhr) {
+
       var firstEl, secondEl;
+
+      $('.ajax_dislike_trigger').removeClass('loading-icon');
+
       $(".user_dislike").addClass('hidden');
       $(".user_like").removeClass('hidden');
+
+
       firstEl = $('.like.hidden').find('[data-id=' + user_id + ']').parent();
       secondEl = $('.like.disabled.active').find('[data-id=' + user_id + ']').parent();
+
       firstEl.removeClass('hidden').addClass('active');
       secondEl.addClass('hidden').removeClass('active');
+
     }
   ).unbind('ajax:error').bind("ajax:error", function(evt, data, status, xhr){
     //do something with the error here

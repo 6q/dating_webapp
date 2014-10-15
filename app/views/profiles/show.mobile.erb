@@ -1,0 +1,103 @@
+<section class="profile">
+
+    <% if current_user.deleted_at.present? %>
+        <div class="reactivar-cuenta">
+            <%= link_to _('Reactivar cuenta'), recover_user_registration_path, method: :post, confirm: _('¿Estas seguro?'), :class => 'btn btn-info' %>
+        </div>
+    <% else %>
+        <header>
+            <h1 class="section_title"><%= _('Tu perfil') %></h1>
+        </header>
+
+        <div class="boxed-inner indice-cellove">
+            <p>
+                <%= _('Índice Cellove') %>: <%= current_user.cellove_percentage %>/100 <%= link_to _('¡Mejora tu índice!'), my_matchmakers_path(anchor: 'tab_mejora') %> - <%= _('Perfil %{progress}%% completado') % {progress: current_user.progress_status} %>
+            </p>
+        </div>
+
+
+        <article id="basic-tabs" class="profile-tabs">
+
+            <h3><%= _('Tus Fotos') %></h3> 
+            <div id="user-pictures">
+                <div id="picture_gallery">
+                    <%= render partial: 'pictures/picture_gallery', locals: {user: @user} %>
+                </div>
+            </div>
+
+            <h3><%= _('Datos de acceso a Cellove') %></h3>
+            <div>
+                <%= form_for @user, :url => profile_path, :html => {:class => "form-horizontal"} do |f| %>
+
+                            <fieldset class="datos_acceso">
+                                <p><%= _('Modifica aquí tus datos de acceso a Cellove') %></p>
+
+                                <p><%= _('Email') %></p>
+
+                                <p><%= f.email_field :email, :class => 'width100' %></p>
+
+                                <p><%= _('Contraseña') %></p>
+
+                                <p><%= f.password_field :password, :class => 'width100' %></p>
+
+                                <p><%= f.submit _('Modificar datos de acceso'), :class => 'btn btn-info' %></p>
+                            </fieldset>
+                <% end %>
+            </div>
+
+            <h3><%= _('¿Quien eres?') %></h1>
+            <div>
+                <%= form_for @user, :url => profile_path do |user| %>
+
+                            <fieldset class="quien form-inline">
+
+                                    <p><%= _('Me llamo') %></p>
+                                    <p><%= user.text_field :name, :class => 'input-small' %></p>
+                                    <p><%= user.text_field :surname, :class => 'input-small' %></p>
+                                    <p><%= _('pero quiero que mi nombre para mostrar sea') %></p>
+                                    <p><%= user.text_field :screen_name, :class => 'input-small' %></p>
+                                    <p><small><%= _('* Cellove recomienda utilizar tu nombre real para tener más posibilidades de contactos y Celestin@os. Deja este campo vacío para usar tu nombre real.') %></small></p>
+                                <div class="center">
+                                        <%= user.submit _('Modificar datos personales'), :class => 'btn btn-info' %>
+                                        <hr class="thin">
+                                    </div>
+                            </fieldset>
+
+                <% end %>
+            </div>
+
+            <h3><%= _('¿Cómo eres?') %></h1>
+            <div class="tab-pane active" id="como">
+                <%= render 'como' %>
+            </div>
+
+            <h3><%= _('Tus gustos') %></h1>
+            <div class="tab-pane" id="gustos">
+                <%= render 'gustos' %>
+            </div>
+
+            <h3><%= _('Qué buscas') %></h1>
+            <div class="tab-pane" id="buscas">
+                <%= render 'buscas' %>
+            </div>
+
+            <h3><%= _('Que dicen de ti') %></h1>
+            <div class="tab-pane" id="dicen">
+                <%= render 'dicen', user: current_user, show_footer: true %>
+            </div>
+
+            <h3><%= _('Desactivar cuenta') %></h1>
+            <div class="center delete">
+                <%= link_to _('Desactivar cuenta'), user_registration_path, method: :delete, confirm: _('¿Estas seguro?') %>
+            </div>
+        </article>
+    <% end %>
+</section>
+
+<script type="text/javascript">
+    $('#myTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    })
+</script>
+

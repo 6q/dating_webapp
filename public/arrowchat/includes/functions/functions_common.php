@@ -485,5 +485,22 @@
 	{
 		return preg_replace("!((([a-z]{3,5}://))". "[-a-z0-9.]{2,}\.[a-z]{2,4}". "(:[0-9]+)?". "(/([^\s]*[^\s,.])?)?". "(\?([^\s]*[^\s,.])?)?)!i",  "<a target=\"_blank\" href=\"\\1\">\\1</a>", $s);
 	}
+	
+	/**
+	 * Checks if the user agent is a bot
+	 *
+	 * @return	bool	True for a bot and false for not a bot
+	*/
+	function is_bot()
+	{
+		if (isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/bot|crawl|slurp|spider|alexa|froogle|inktomi|looksmart|firefly|directory|jeeves|tecnoseek|infoseek|galaxy|scooter|slurp|appie|fast|webbug|spade|zyborg|rabaz|feedfetcher|snoop|mediapartners|yandex|stackrambler/i', $_SERVER['HTTP_USER_AGENT'])) 
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
 
 ?>

@@ -1,0 +1,15 @@
+<section id="related-list">
+  <div class="boxed">
+    <div class="boxed-inner">
+      <ul class="clearfix">
+        <% @best_suited_near_me.sample(5).each do |user| %>
+          <li class="<%= user.online? ? "online" : "" %> is-related">
+            <%= link_to user do %>
+              <%= profile_pic(user, width: 80, height: 80) %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

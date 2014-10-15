@@ -508,6 +508,7 @@ ActiveRecord::Schema.define(:version => 20140509071650) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
     t.boolean  "seen",       :default => false
+    t.boolean  "invisible",  :default => false
   end
 
   add_index "user_visits", ["created_at"], :name => "created_at"
@@ -641,6 +642,8 @@ ActiveRecord::Schema.define(:version => 20140509071650) do
     t.string   "uid"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "customer_id"
+    t.string   "last_4_digits"
   end
 
   add_index "users", ["cellove_index"], :name => "index_users_on_cellove_index"

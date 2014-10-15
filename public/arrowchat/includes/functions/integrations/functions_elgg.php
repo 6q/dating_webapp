@@ -98,15 +98,13 @@
 		global $online_timeout;
 		
 		$sql = ("
-			SELECT DISTINCT " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " userid, " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " username, arrowchat_status.session_time lastactivity, " . TABLE_PREFIX . "entities." . DB_USERTABLE_AVATAR . " avatar, " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " link, arrowchat_status.is_admin, arrowchat_status.status 
-			FROM (SELECT guid_one, guid_two  FROM " . TABLE_PREFIX . "entity_relationships WHERE relationship = 'friend' UNION SELECT guid_two, guid_one FROM " . TABLE_PREFIX . "entity_relationships WHERE relationship = 'friend') friends  
-			JOIN " . TABLE_PREFIX . DB_USERTABLE . " 
-				ON  friends.guid_two = " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " 
+			SELECT DISTINCT " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " userid, " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " username, arrowchat_status.session_time lastactivity, " . TABLE_PREFIX . "entities." . DB_USERTABLE_AVATAR . " avatar, " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " link, arrowchat_status.is_admin, arrowchat_status.status
+			FROM " . TABLE_PREFIX . DB_USERTABLE . " 
+			JOIN arrowchat_status 
+				ON " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = arrowchat_status.userid 
 			LEFT JOIN " . TABLE_PREFIX . "entities
-				ON " . TABLE_PREFIX . "entities.guid = " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . "
-			LEFT JOIN arrowchat_status 
-				ON " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " = arrowchat_status.userid  
-			WHERE ('" . time() . "' - arrowchat_status.session_time - 60 < '" . $online_timeout . "') 
+				ON " . TABLE_PREFIX . "entities.guid = " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " 
+			WHERE ('" . time() . "'-arrowchat_status.session_time - 60 < '" . $online_timeout . "') 
 				AND " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " != '" . $db->escape_string($userid) . "' 
 			ORDER BY " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " ASC
 		");
@@ -127,9 +125,7 @@
 		
 		$sql = ("
 			SELECT DISTINCT " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " userid, " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " username, arrowchat_status.session_time lastactivity, " . TABLE_PREFIX . "entities." . DB_USERTABLE_AVATAR . " avatar, " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_NAME . " link, arrowchat_status.is_admin, arrowchat_status.status
-			FROM (SELECT guid_one, guid_two  FROM " . TABLE_PREFIX . "entity_relationships WHERE relationship = 'friend' UNION SELECT guid_two, guid_one FROM " . TABLE_PREFIX . "entity_relationships WHERE relationship = 'friend') friends  
-			JOIN " . TABLE_PREFIX . DB_USERTABLE . " 
-				ON  friends.guid_two = " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " 
+			FROM " . TABLE_PREFIX . DB_USERTABLE . " 
 			LEFT JOIN " . TABLE_PREFIX . "entities
 				ON " . TABLE_PREFIX . "entities.guid = " . TABLE_PREFIX . DB_USERTABLE . "." . DB_USERTABLE_USERID . " 
 			LEFT JOIN arrowchat_status 
@@ -165,7 +161,14 @@
 	{
 		global $base_url;
 
-		return $base_url . "../mod/profile/icondirect.php?joindate=" . $image . "&guid=" . $user_id . "&size=medium";
+		if (!empty($image))
+		{
+			return $base_url . "../mod/profile/icondirect.php?joindate=" . $image . "&guid=" . $user_id . "&size=medium";
+		}
+		else
+		{
+			return $base_url . AC_FOLDER_ADMIN . "/images/img-no-avatar.gif";
+		}
 	}
 
 	/**

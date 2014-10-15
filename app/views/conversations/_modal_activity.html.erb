@@ -1,3 +1,5 @@
+<% if current_user.can_message? %>
+
 <!-- Modal -->
 <div id="activity-proposal-<%= user.id %>" class="activity-proposal modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
@@ -51,3 +53,15 @@
     });
   });
 </script>
+
+<% else %>
+<script type="text/javascript">
+$(function() {
+  $('.action-proposal').unbind('click').click(function(event) {
+    event.preventDefault();
+    $('#upgrade-account-modal').click();
+  });
+});
+</script>
+
+<% end %>

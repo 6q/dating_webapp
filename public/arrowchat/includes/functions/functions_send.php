@@ -25,6 +25,7 @@
 		global $language;
 		global $smileys;
 		global $theme;
+		global $blocked_words;
 		
 		$text = htmlspecialchars($text, ENT_NOQUOTES);
 		$text = preg_replace('/\\\[rn]/', '<br/>', $text);
@@ -49,6 +50,33 @@
 			}
 		}
 		
+		if (!empty($blocked_words))
+		{
+			$bad_words = explode(",", $blocked_words);
+			$container_words = array();
+			$exact_match_words = array();
+			
+			foreach ($bad_words as $word)
+			{
+				$s_word = trim($word);
+				
+				if (preg_match('/\[(.*?)\]/', $s_word))
+				{
+					$exact_match_words[] = trim($s_word, '[]');
+				}
+				else
+				{
+					$container_words[] = $s_word;
+				}
+			}
+
+			if (!empty($exact_match_words))
+				$text = preg_replace("/\b(" . implode($exact_match_words,"|") . ")\b/i", "****", $text);
+				
+			if (!empty($container_words))
+				$text = preg_replace("/(" . implode($container_words,"|") . ")/i", "****", $text);
+		}
+		
 		if ($disable_smilies != 1) 
 		{ 
 			if (!empty($smileys)) 
@@ -64,7 +92,7 @@
 		
 		$text = preg_replace('@video[{](.*)[}]@', '<div class="arrowchat_action_message">' . $language[61] . '<br /><a href="javascript:jqac.arrowchat.videoWith(\'$1\');">' . $language[62] . '</a></div>', $text);
 		
-		$text = preg_replace('@file[{]([0-9]{10})[}]@', '<div class="arrowchat_action_message">' . $language[69] . '<br /><a href="' . $base_url . 'public/download.php?file=$1">' . $language[70] . '</a></div>', $text);
+		$text = preg_replace('@file[{]([0-9]{13})[}]@', '<div class="arrowchat_action_message">' . $language[69] . '<br /><a href="' . $base_url . 'public/download.php?file=$1">' . $language[70] . '</a></div>', $text);
 
 		return $text;
 	}

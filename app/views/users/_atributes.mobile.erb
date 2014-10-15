@@ -1,0 +1,118 @@
+<% if user.my_characteristics %>
+	    <h5><%= _('Romántico') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('romantic')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Aventurero') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('adventurer')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Amable') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('friendly')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Familiar') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('familiar')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Trabajador') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('hardWorking')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Extrovertido') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('extroverted')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Generoso') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('generous')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Reservado') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('reserved')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Sociable') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('sociable')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Tranquilo') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('quiet')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Exigente') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('demanding')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Orgulloso') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('prideful')}%" %>"></div>
+			</div>
+
+	    <h5><%= _('Solitario') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('solitary')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Tenaz') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('tenacious')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Atento') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('attentive')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Bienhumorado') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('goodHumored')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Espontáneo') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('spontaneous')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Inquieto') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('restless')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Sensible') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('sensitive')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Tímido') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('shy')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Posesivo') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('possessive')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Celoso') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('jealous')}%" %>"></div>
+			</div>
+			
+	    <h5><%= _('Fiel') %></h5>
+			<div class="progress">
+				<div class="bar" style="<%= "width: #{user.my_charact_percent('faithful')}%" %>"></div>
+			</div>
+<% else %>
+    <%= _('%{name} aún no ha definido sus atributos') % {name: user.name} %>
+<% end %>

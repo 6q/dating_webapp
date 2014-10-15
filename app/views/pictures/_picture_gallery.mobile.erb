@@ -1,0 +1,31 @@
+<h2><%= _('Tus fotos ') %>(<%= "#{user.pictures.count}/#{User::PICTURE_LIMIT}" %>)</h2>
+
+<div class="pic-container">
+  <ul>
+    <% user.pictures.each do |pic| %>
+      <li>
+        <div class="<%= 'main' if pic.main %>">
+          <div class="overlay">
+            <%= link_to image_tag('cross.png', title: _('Eliminar imagen'), alt: _('Eliminar imagen')), pic, method: :delete, confirm: _("¿Estas de seguro que quieres borrar la foto?"), title: _('Eliminar imagen') %>
+            <%= link_to image_tag('mainpic.png', title: _('Marcar como principal'), alt: _('Marcar como principal')), picture_path(pic, main: true), method: :put, title: _('Marcar como principal') %>
+          </div>
+          <span>
+            <%= link_to pic.image.jpg.url , :class => 'grouped_elements' do %>
+              <%= image_tag pic.image.thumb("80x80#").url %>
+            <% end %>
+          </span>
+        </div>
+      </li>
+    <% end %>
+    <% user_remaining_pictures(user).times do %>
+      <li class="empty">
+        <div class="upload_pic">
+          <input type="file" name="picture" class="upload_pic_input" />
+          <span>
+            <i class="icon icon-plus-sign"></i>
+          </span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

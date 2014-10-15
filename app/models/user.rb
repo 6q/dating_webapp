@@ -124,6 +124,8 @@
 #  uid                    :string(255)
 #  oauth_token            :string(255)
 #  oauth_expires_at       :datetime
+#  customer_id            :string(255)
+#  last_4_digits          :string(255)
 
 require_dependency 'minimum_age_validator'
 
@@ -528,16 +530,17 @@ class User < ActiveRecord::Base
   # If a tuple (user_id, visitor_id) already exists in UserVisit,
   # the visited_at attribute is updated
   def visited(user)
+    invisible = self.general_settings.anonymous_browsing
     visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
     if visit
-      visit.update_attributes({ visited_at: Time.now, seen: false })
+      visit.update_attributes({ visited_at: Time.now, seen: false, invisible: invisible })
     else
-      visit = user.user_visits.build({ visited_at: Time.now })
+      visit = user.user_visits.build({ visited_at: Time.now, invisible: invisible })
       visit.visitor_id = self.id
       visit.save
     end
 
-    if visit && !self.general_settings.anonymous_browsing
+    if visit && !invisible
       user.notifications.create({ sender_id: self.id, notifiable_id: visit.id, notifiable_type: 'visit' })
       send_notification_email(:profile_visit, user)
     end
@@ -666,12 +669,51 @@ class User < ActiveRecord::Base
     self.notes.where(evaluated_id: user.id)
   end
 
-  def upgrade_to_premium
+  def upgrade_to_premium(stripe_token)
     if self.has_role?(:regular_user)
+      # Amount in cents
+      @amount = 499
+
+      customer = Stripe::Customer.create(
+        :email => self.email,
+        :description => 'Cellove monthly payment from ' + self.email,
+        :card  => stripe_token,
+        :plan  => 'CELLOVE-VIP'
+      )
+
       self.remove_role :regular_user
       self.add_role :premium_user
+      self.last_4_digits = customer.cards.data.first["last4"]
+      self.customer_id   = customer.id
       self.save
+      UserMailer.vip(self).deliver
+      return true
     end
+    false
+  rescue Stripe::CardError => e
+    false
+  end
+
+  def remove_premium
+    if self.has_role?(:premium_user) && !customer_id.nil?
+      customer = Stripe::Customer.retrieve(customer_id)
+      unless customer.nil? or customer.respond_to?('deleted')
+        if customer.subscriptions.count > 0
+          customer.cancel_subscription
+        end
+      end
+      self.general_settings.update_attributes({anonymous_browsing: 0, newsletter: 1}, {as: :premium_user})
+      self.remove_role :premium_user
+      self.add_role :regular_user
+      self.last_4_digits = nil
+      self.customer_id   = nil
+      self.save
+      UserMailer.no_vip(self).deliver
+      return true
+    end
+    false
+  rescue Stripe::StripeError => e
+    false
   end
 
   # TODO: Refactor to other class
@@ -733,6 +775,10 @@ class User < ActiveRecord::Base
     else
       true
     end
+  end
+
+  def can_message?
+    self.has_role?(:premium_user) || 5 > (self.mailbox.conversations.map { |c| c.receipts.where(mailbox_type: "sentbox").where(c.receipts.arel_table[:created_at].gt(1.days.ago)) }.flatten.length)
   end
 
   def can_message_to?(user)

@@ -1,3 +1,5 @@
+<% if current_user.can_message? %>
+
 <!-- Modal -->
 <div id="fast-reply-<%= user.id %>" class="modal hide fade modal-new-message" tabindex="-1" role="dialog" aria-hidden="true">
   <div id='html5-lightbox-cellove'>
@@ -22,3 +24,16 @@
   <% end %>
 </div>
 <%= render partial: 'conversations/modal_activity', locals: { user: user }%>
+
+<% else %>
+<script type="text/javascript">
+$(function() {
+  $('.message').unbind('click').click(function(event) {
+    event.preventDefault();
+    $('#upgrade-account-modal').click();
+  });
+});
+</script>
+
+<% end %>
+

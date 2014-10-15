@@ -234,7 +234,7 @@
 		}
 	
 		$result = $db->execute("
-			SELECT id, username, message, sent, global_message, user_id
+			SELECT id, username, message, sent, global_message, user_id, is_mod, is_admin
 			FROM arrowchat_chatroom_messages 
 			WHERE chatroom_id = '" . $db->escape_string($chatroomid) . "'
 				AND " . $db->escape_string($time2) . " <= sent 
@@ -251,7 +251,7 @@
 				$chat_message = str_replace('\\"', '"', $chat_message);
 				$chat_message = clickable_links($chat_message);
 			
-				$chatroom[] = array('id' => $row['id'], 'userid' => $row['user_id'], 'n' => $row['username'], 'm' => $chat_message, 't' => $row['sent'], 'global' => $row['global_message']);
+				$chatroom[] = array('id' => $row['id'], 'userid' => $row['user_id'], 'n' => $row['username'], 'm' => $chat_message, 't' => $row['sent'], 'global' => $row['global_message'],'mod' => $row['is_mod'], 'admin' => $row['is_admin'], "chatroomid" => $chatroomid);
 				$_SESSION['chatroom_mess_ids'][] = $row['id'];
 			}
 		}
@@ -385,6 +385,7 @@
 				SET arrowchat.read = '1' 
 				WHERE arrowchat.to = '" . $db->escape_string($userid) . "' 
 					AND arrowchat.id <= '" . $db->escape_string($id_check) . "'
+					AND arrowchat.read = '0'
 			");
 
 			$db->execute("
