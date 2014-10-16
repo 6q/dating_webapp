@@ -1821,12 +1821,13 @@ section.list {
 			}
 			.block {
 				position:absolute;
-				top:130px;
-				right:5px;
+				top:20px;
+				right:20px;
 				a {
 					color:#DBDBDB;
 					font-weight:bold;
-					font-size:0.8em;
+					font-size:2em;
+					font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 					&:hover {
 						text-decoration:none;
 					}
@@ -2014,4 +2015,19 @@ h1 {
 
 .close {
 	font-size:45px;
+}
+
+.jslider .jslider-pointer {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius:20px;
+  border:1px solid #5AA7E4;
+  position: absolute;
+  left: 20%;
+  top: -7px;
+  margin-left: -6px;
+  cursor: pointer;
+  cursor: hand;
+  z-index:2;
 }

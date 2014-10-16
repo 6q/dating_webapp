@@ -1,4 +1,4 @@
-<% if current_user.can_message? %>
+<% # if current_user.can_message? %>
 
 <!-- Modal -->
 <div id="fast-reply-<%= user.id %>" class="modal hide fade modal-new-message" tabindex="-1" role="dialog" aria-hidden="true">
@@ -18,13 +18,14 @@
     </div>
     <div class="modal-footer">
       <%= link_to _('Cerrar'), '#', 'data-dismiss' => 'modal', 'aria-hidden' => 'true' %>
-      <%= f.submit _('Enviar'), class: 'btn btn-info' %>
+      <%= f.submit _('Enviar'), class: 'btn btn-info', id: 'submitbutton' %>
     </div>
   <% end %>
 </div>
 <%= render partial: 'conversations/modal_activity', locals: { user: user }%>
 
-<% else %>
+<% # else %>
+<!--
 <script type="text/javascript">
 $(function() {
   $('.message').unbind('click').click(function(event) {
@@ -33,6 +34,6 @@ $(function() {
   });
 });
 </script>
-
-<% end %>
+-->
+<% # end %>
 

@@ -44,12 +44,13 @@ $(document).ready(function(){
 
 
   // image slide thing for user cards
+  /*
   $(".user-card .pics").hover(function(){
     $("li:first-child", this).stop().animate({opacity:0},{queue:false,duration:500});
   }, function() {
     $("li:first-child", this).stop().animate({opacity:1},{queue:false,duration:500});
   });
-
+*/
 
   $('#related-list a, .user-card').tooltip({
     html:true

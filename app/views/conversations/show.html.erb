@@ -59,7 +59,7 @@
                   <% if interlocutor %>
                     <%= simple_form_for @conversation.messages.new, url: conversation_path(@conversation), method: :put do |f| %>
                       <%= f.input_field :body %>
-                      <%= f.submit _('Responder'), class: 'btn btn-info pull-right' %>
+                      <%= f.submit _('Responder'), class: 'btn btn-info pull-right', id: 'submitbutton'  %>
                     <% end %>
                   <% end %>
                 </div>

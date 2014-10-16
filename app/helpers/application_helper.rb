@@ -50,9 +50,11 @@ module ApplicationHelper
   end
 
   def cookies_warning
-    url   = link_to _('Política de Privacidad'), privacy_policy_path
-    html  = '<div class="alert alert-info alert-block"><i class="icon-remove"></i>' + _("Utilizamos cookies propias y de terceros para mejorar nuestros servicios y su experiencia. Si continua navegando, consideramos que acepta dicho uso. Puede cambiar la configuración u obtener más información en ") + url + '</div>'
-    html.html_safe
+    if session[:mobile_view] == false
+      url   = link_to _('Política de Privacidad'), privacy_policy_path
+      html  = '<div class="alert alert-info alert-block"><i class="icon-remove"></i>' + _("Utilizamos cookies propias y de terceros para mejorar nuestros servicios y su experiencia. Si continua navegando, consideramos que acepta dicho uso. Puede cambiar la configuración u obtener más información en ") + url + '</div>'
+      html.html_safe
+    end
   end
 
 end

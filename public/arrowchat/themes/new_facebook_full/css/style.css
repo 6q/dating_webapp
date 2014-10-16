@@ -105,7 +105,7 @@ new_facebook_full
 .arrowchat_userscontentname{font-size:11px;word-break:break-all;max-height:10px;float:left; padding-left:5px;padding-top:7px;padding-bottom:3px;text-align:left;max-width:125px;overflow:hidden}
 .arrowchat_userscontentdot{float:right;background-repeat:no-repeat;width:8px;height:8px;text-align:left;margin:9px 8px 0px 0px}
 .arrowchat_userlist_avatar{height:22px;width:22px;float:left;margin-top:2px;margin-left:10px;background-color:#fff}
-.arrowchat_chatbox_avatar{height:32px;width:32px;float:left;margin-top:5px;margin-left:5px;margin-bottom:5px;background-color:#fff}
+.arrowchat_chatbox_avatar{height:35px;width:35px;float:left;margin-top:5px;margin-left:5px;margin-bottom:5px;background-color:#fff}
 .placeholder{color:#a9a9a9}
 .highlight{font-weight:bold}
 #arrowchat_userstab_icon{background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:0px -88px;float:left;height:16px;margin:1px 2px 0px 0px;width:16px}

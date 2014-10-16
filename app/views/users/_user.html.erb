@@ -111,7 +111,7 @@
             </li>
         <% end %>
 
-        <% if current_user.can_interact_with?(user) && session[:mobile_view] == false %>
+        <% if current_user.can_interact_with?(user) %>
 
             <% if current_user.likes?(user) %>
 
@@ -133,20 +133,11 @@
 
         <% else %>
 
-            <% if current_user.likes?(user) %>
 
-                <li class="like disabled active" data-toggle="tooltip" title="<%= _('Ya no me gusta') %>">
-                    <%= link_to _('Ya no me gusta'), user_unlike_path(user), method: :post, data: { id: user.id.to_s }, :class => "ajax_dislike_trigger", :remote => true %>
-                </li>
-                <li class="like disabled hidden loading-icon" data-toggle="tooltip" title="<%= _('No cumples su franja de edad indicada') %>">
-                    <%= link_to _('Me gusta'), "#", data: { id: user.id.to_s } %>
-                </li>
-
-            <% else %>
                 <li class="like disabled loading-icon" data-toggle="tooltip" title="<%= _('No cumples su franja de edad indicada.') %>">
                     <%= link_to _('Me gusta'), "#" %>
                 </li>
-            <% end %>
+
 
         <% end %>
 

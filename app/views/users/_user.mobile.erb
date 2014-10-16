@@ -39,6 +39,13 @@
       <h1>
         <div class="username">
           <div class="<%= user.online? ? "online" : "" %>"></div> <%= link_to truncate(user.display_name, length: 25), user %>
+
+                <% if user_signed_in?
+                  block_modal_id = '#user-block-' + user.id.to_s %>
+                  <div class="block <%= (current_user.blocked?(user) || current_user.hidden?(user)) ? "disabled" : "" %> " data-toggle="tooltip" title="<%= _('Bloquear')%>">
+                    <%= link_to _('x'), block_modal_id, "data-toggle" => "modal" %>
+                  </div>
+                <% end %>
         </div>
         <span><%= "#{user.age} #{_('Años')}" %>, <%= truncate(user.city, length: 17) %></span>
         <br>

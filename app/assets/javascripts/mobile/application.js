@@ -123,4 +123,10 @@ $(function() {
 		$(".alert_chat_show").delay(200).addClass("in").fadeOut(2000);
 	});
 
+	$("#submitbutton").click(function() {
+   		$("#submitbutton").addClass("disabled");
+        return true;
+   });
+
+
 });
