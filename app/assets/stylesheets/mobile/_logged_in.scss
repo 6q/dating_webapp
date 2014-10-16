@@ -176,12 +176,13 @@ body.inside {
 	#main_box,#legalBox,#languageBox {
 		position:fixed;
 		width: calc(100% - 40px);
-		padding:20px;
+		padding:0 20px 0 20px;
 		background:#fff;
-		top:60px;
+		top:70px;
 		left:0;
 		z-index:9999;
 	}
+
 }
 
 #container_could_interest_me {

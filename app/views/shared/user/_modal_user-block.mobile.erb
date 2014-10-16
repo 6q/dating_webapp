@@ -16,14 +16,14 @@
     <% user_hide = UserHide.find_by_user_id(current_user) || UserHide.new({ user_id: current_user.id }) %>
 
     <%= form_for(current_user, url: user_block_hide_path(user), :method => :post) do |f| %>
-      <fieldset>
+      <fieldset style="padding:0;margin-top:15px">
         <%= fields_for user_hide do |f1| %>
           <%= f1.check_box :hidden_user, checked: current_user.hidden?(user), id: 'user[hidden_user_'+user.id.to_s+']' %>
-          <%= f1.label :hidden_user, "No quiero verla más", class: 'checkbox inline', for: 'user[hidden_user_'+user.id.to_s+']' %>
-        <% end %>
+          <%= f1.label :hidden_user, "No quiero verla más", class: 'checkbox inline checkbox_bloquejar', for: 'user[hidden_user_'+user.id.to_s+']' %> No quiero verla más
+        <% end %><br><br>
         <%= fields_for user_block do |f2| %>
           <%= f2.check_box :blocked_user, checked: current_user.blocked?(user), id: 'user[blocked_user_'+user.id.to_s+']' %>
-          <%= f2.label :blocked_user, _('No quiero que me vea más'), class: 'checkbox inline', for: 'user[blocked_user_'+user.id.to_s+']' %>
+          <%= f2.label :blocked_user, _('No quiero que me vea más'), class: 'checkbox inline checkbox_bloquejar', for: 'user[blocked_user_'+user.id.to_s+']' %> No quiero que me vea más
         <% end %>
       </fieldset>
   </div>
