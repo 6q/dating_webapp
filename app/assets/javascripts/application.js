@@ -39,3 +39,8 @@ $(function() {
   });
 
 });
+$(document).ready(parpadear);
+function parpadear(){ 
+  $('nav ul li span').fadeIn(500).delay(2000).fadeOut(500, parpadear);
+  $('#main-sidebar ul li span').fadeIn(500).delay(2000).fadeOut(500, parpadear);
+}
