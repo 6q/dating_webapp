@@ -4149,7 +4149,24 @@
 			a("#arrowchat_userstab_text").html("<b>" + lang[4] + "</b> (<b>" + (onlineNumber + jabberOnlineNumber) + "</b>)");
 			a(".arrowchat_jabber_user_tab .arrowchat_closebox_bottom").click();
 		};
+
+		a(".arrowchat_closebox").click(function() {
+			alert("dins");
+			id = a(this).parent().parent().attr( 'data-id' );
+			alert("click "+id);
+			a.post(c_ac_path + "includes/json/send/send_settings.php", {
+				close_chat: id,
+				tab_alert: 1
+			}, function() {});
+			alert("fin");
+			a(this).parent().find('.arrowchat_user_tab').addClass("hide");
+			return 0;
+		});
+
 	};
+
+
+
 })(jqac);
 jqac(document).ready(function() {
 	if (u_logged_in != 1 && c_disable_arrowchat != 1) {
@@ -4168,4 +4185,7 @@ $(function() {
 		$(".alert_chat_show").removeClass("in").show();
 		$(".alert_chat_show").delay(300).addClass("in").fadeOut(1000);
 	});
+
+
+
 });
