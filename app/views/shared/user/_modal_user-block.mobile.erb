@@ -5,11 +5,11 @@
   </div>
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3><%= _('¿Deseas bloquear a este usuario?') %></h3>
+    <h3 style="margin-bottom:5px"><%= _('¿Deseas bloquear a este usuario?') %></h3>
 
     <%= user_detail(user) %>
   </div>
-  <div class="modal-body">
+  <div class="modal-body" style="padding-top:0;padding-bottom:0">
     <p><%= _('Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a %{name}, desde tu apartado de configuración.') % {name: user.name} %></p>
 
     <% user_block = UserBlock.find_by_user_id(current_user) || UserBlock.new({ user_id: current_user.id }) %>
