@@ -9,7 +9,7 @@
 
     <%= user_detail(user) %>
   </div>
-  <div class="modal-body" style="padding-top:0;padding-bottom:0">
+  <div class="modal-body" style="padding-top:0;">
     <p><%= _('Puedes elegir una o las dos opciones. Si cambias de opinión, podrás desbloquear a %{name}, desde tu apartado de configuración.') % {name: user.name} %></p>
 
     <% user_block = UserBlock.find_by_user_id(current_user) || UserBlock.new({ user_id: current_user.id }) %>
