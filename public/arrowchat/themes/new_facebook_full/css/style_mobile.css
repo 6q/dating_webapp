@@ -865,6 +865,16 @@ new_facebook_full
 	margin-right: 3px;
 }
 
+.arrowchat_inner_button .arrowchat_closebox {
+	width: 30px;
+	height: 30px;
+	background: url(themes/<?php echo $theme; ?>/images/chat-close.png) no-repeat top left;
+	float: right;
+	text-align: left;
+	margin-right: 3px;
+	z-index:5;
+}
+
 .arrowchat_closebox_bottom {
 	width: 10px;
 	height: 9px;

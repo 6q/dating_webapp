@@ -1542,7 +1542,7 @@
 				a("#arrowchat_block_" + b).click(function() {
 					a("#arrowchat_more_popout_" + b).toggle();
 					a("#arrowchat_more_" + b).toggleClass("arrowchat_more_button_selected");
-					a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).click();
+					a(".arrowchat_closebox", $user_popups[b]).click();
 					a.post(c_ac_path + "includes/json/send/send_settings.php", {
 						block_chat: b
 					}, function() {
@@ -1566,17 +1566,17 @@
 				a(".arrowchat_textarea", $user_popups[b]).keyup(function(h) {
 					return userchatKeyup(h, a(this), b);
 				});
-				a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).mouseenter(function() {
+				a(".arrowchat_closebox", $user_popups[b]).mouseenter(function() {
 					showTooltip(a(this), lang[89], 0, 10, 5);
 					a(this).addClass("arrowchat_chatboxmouseoverclose");
 					a(".arrowchat_tabtitle", $user_popups[b]).removeClass("arrowchat_chatboxtabtitlemouseover");
 				});
-				a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).mouseleave(function() {
+				a(".arrowchat_closebox", $user_popups[b]).mouseleave(function() {
 					a(this).removeClass("arrowchat_chatboxmouseoverclose");
 					a(".arrowchat_tabtitle", $user_popups[b]).addClass("arrowchat_chatboxtabtitlemouseover");
 					hideTooltip();
 				});
-				a(".arrowchat_tabtitle .arrowchat_closebox", $user_popups[b]).click(function() {
+				a(".arrowchat_closebox", $user_popups[b]).click(function() {
 					hideTooltip();
 					a.post(c_ac_path + "includes/json/send/send_settings.php", {
 						close_chat: b,
