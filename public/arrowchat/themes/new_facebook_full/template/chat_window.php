@@ -1,6 +1,6 @@
 <div class="arrowchat_tabtitle">
 	<div class="arrowchat_tab_name">'+c+longname+i+'</div>
-	<div class="arrowchat_closebox"></div>
+	<!--<div class="arrowchat_closebox"></div>-->
 	<div class="arrowchat_more_button">
 		<a href="javascript:void(0)" class="arrowchat_more_anchor" id="arrowchat_more_'+b+'"></a>
 		<div id="arrowchat_more_popout_'+b+'" class="arrowchat_more_popout">
