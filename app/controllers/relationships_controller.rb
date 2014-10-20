@@ -49,7 +49,7 @@ class RelationshipsController < ApplicationController
         end
       end
     end
-    redirect_to :back
+    redirect_to :root
   end
 
   def block_hide_settings
