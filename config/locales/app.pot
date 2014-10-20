@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-25 11:31+0200\n"
+"POT-Creation-Date: 2014-10-20 10:12+0200\n"
 "PO-Revision-Date: 2013-07-18 20:33+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,9 @@ msgid " y mi código postal es el"
 msgstr ""
 
 msgid " y soy de étnia"
+msgstr ""
+
+msgid "%{height} cms de altura"
 msgstr ""
 
 msgid "%{link} ahora en Cellove, es fácil y rápido. ¡Ponle alas al amor!"
@@ -216,6 +219,9 @@ msgstr ""
 msgid "Algun@s usuari@s registrad@s en Cellove"
 msgstr ""
 
+msgid "Alta Celestin@"
+msgstr ""
+
 msgid "Alta<br>Celestin@<br>Gratis"
 msgstr ""
 
@@ -387,6 +393,12 @@ msgstr ""
 msgid "Cambia tu foto de perfil"
 msgstr ""
 
+msgid "Cambiar a la Versión Móvil"
+msgstr ""
+
+msgid "Cambiar a versión completa"
+msgstr ""
+
 msgid "Cambiar configuración"
 msgstr ""
 
@@ -498,13 +510,16 @@ msgstr ""
 msgid "Con nuestra función <b>Celestin@</b> podrás hacerlo de forma <b>gratuita</b>, aportando al usuari@ que recomiendas más popularidad, visibilidad y fiabilidad."
 msgstr ""
 
+msgid "Con ojos de color"
+msgstr ""
+
 msgid "Con una dieta"
 msgstr ""
 
-msgid "ConfiguraciÃ³n actualizada"
+msgid "Configuración"
 msgstr ""
 
-msgid "Configuración"
+msgid "Configuración actualizada"
 msgstr ""
 
 msgid "Configuración de cuenta"
@@ -538,6 +553,9 @@ msgid "Consigue Celestinos"
 msgstr ""
 
 msgid "Contacta"
+msgstr ""
+
+msgid "Contactar con Cellove"
 msgstr ""
 
 msgid "Contacto"
@@ -625,6 +643,9 @@ msgid "Dejaste de ser VIP | Cellove.com"
 msgstr ""
 
 msgid "Del Usuario"
+msgstr ""
+
+msgid "Denunciar perfil"
 msgstr ""
 
 msgid "Denunciar perfil a Cellove"
@@ -816,9 +837,6 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-msgid "Error en el envío"
-msgstr ""
-
 msgid "Es fácil y gratis."
 msgstr ""
 
@@ -924,6 +942,9 @@ msgstr ""
 msgid "Foto"
 msgstr ""
 
+msgid "Fotografias de "
+msgstr ""
+
 msgid "Fran & Irene"
 msgstr ""
 
@@ -957,7 +978,7 @@ msgstr ""
 msgid "Gracias a nuestro <b>sistema de Celestinos</b>, podrás comunicarte con sus familiares, amig@s o ex parejas."
 msgstr ""
 
-msgid "Gracias por contactar con Cellove"
+msgid "Gracias por tu contacto."
 msgstr ""
 
 msgid "Gratis!"
@@ -1152,7 +1173,13 @@ msgstr ""
 msgid "Lo estipulado en los dos párrafos anteriores es sin perjuicio del derecho de desistimiento que asiste al usuario para dejar sin efecto el contrato, derecho que el usuario podrá ejercitar notificándoselo así a CELLOVE SOCIAL NETWORK, S.L. en un plazo no superior a siete (7) días hábiles, a contar a partir de la celebración del contrato. El ejercicio por el usuario de este derecho podrá efectuarse sin necesidad de justificar su decisión y sin penalización a aquel."
 msgstr ""
 
+msgid "Lo sentimos pero la web móvil no está disponible para celestinos."
+msgstr ""
+
 msgid "Lo sentimos, en este momento no hay ningún resultado que concuerde con esta búsqueda. Pruébalo más tarde o amplia la búsqueda."
+msgstr ""
+
+msgid "Lo sentimos, pero las zonas de celestinos solo están disponibles desde la web en versión completa (no móvil)."
 msgstr ""
 
 msgid "Localidad"
@@ -1201,6 +1228,9 @@ msgid "Material para descargar"
 msgstr ""
 
 msgid "Matrimonio"
+msgstr ""
+
+msgid "Me considero"
 msgstr ""
 
 msgid "Me considero "
@@ -1278,6 +1308,9 @@ msgstr ""
 msgid "Mi nivel de estudios es"
 msgstr ""
 
+msgid "Mi pelo es de color"
+msgstr ""
+
 msgid "Mis Celestin@s"
 msgstr ""
 
@@ -1315,6 +1348,9 @@ msgid "Nacionalidad"
 msgstr ""
 
 msgid "Nací el"
+msgstr ""
+
+msgid "Nací el día"
 msgstr ""
 
 msgid "Navegación oculta"
@@ -1524,6 +1560,9 @@ msgstr ""
 msgid "Perfil %{progress}%% completado"
 msgstr ""
 
+msgid "Perfil de Usuari@"
+msgstr ""
+
 msgid "Perfil denunciado | Cellove.com"
 msgstr ""
 
@@ -1689,6 +1728,9 @@ msgstr ""
 msgid "Reactivar recomendación"
 msgstr ""
 
+msgid "Realizar búsqueda"
+msgstr ""
+
 msgid "Realizar recomendación"
 msgstr ""
 
@@ -1824,7 +1866,7 @@ msgstr ""
 msgid "Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?"
 msgstr ""
 
-msgid "Se ha denunciado al usuario. Â¡Gracias por tu ayuda!"
+msgid "Se ha denunciado al usuario. ¡Gracias por tu ayuda!"
 msgstr ""
 
 msgid "Se han enamorado en Cellove %{link}"
@@ -1977,7 +2019,13 @@ msgstr ""
 msgid "Tengo animales de compañía"
 msgstr ""
 
+msgid "Tengo nacionalidad"
+msgstr ""
+
 msgid "Tengo nacionalidad "
+msgstr ""
+
+msgid "Tengo un cuerpo"
 msgstr ""
 
 msgid "Tengo un cuerpo "
@@ -2005,6 +2053,9 @@ msgid "Todo usuario comprende y acepta que la plataforma web de Cellove®, www.c
 msgstr ""
 
 msgid "Todo usuario registrado puede ejercer en cualquier momento su derecho a acceder, rectificar, cancelar y, en su caso, oponerse a la inclusión de sus datos de carácter personal, mediante comunicación escrita dirigida a CELLOVE SOCIAL NETWORK, S.L., en la dirección indicada en el párrafo primero de este epígrafe. El usuario registrado también puede optar por ejercer los indicados derechos dirigiéndose por escrito a la siguiente dirección de correo electrónico cellove@cellove.com."
+msgstr ""
+
+msgid "Todos los campos son obligatorios."
 msgstr ""
 
 msgid "Tomar un café"
@@ -2077,6 +2128,9 @@ msgid "Tu recomendación ha sido rechazada."
 msgstr ""
 
 msgid "Tu índice es del %{index}%% y tienes %{count} Celestin@s."
+msgstr ""
+
+msgid "Tus Fotos"
 msgstr ""
 
 msgid "Tus búsquedas"
@@ -2176,6 +2230,9 @@ msgid "Ver más"
 msgstr ""
 
 msgid "Ver usuarios"
+msgstr ""
+
+msgid "Versión Completa"
 msgstr ""
 
 msgid "Visibilidad"
@@ -2334,6 +2391,9 @@ msgstr ""
 msgid "clásico"
 msgstr ""
 
+msgid "cms. Y peso"
+msgstr ""
+
 msgid "cms. y pese entre "
 msgstr ""
 
@@ -2347,6 +2407,9 @@ msgid "completo"
 msgstr ""
 
 msgid "con curvas"
+msgstr ""
+
+msgid "con estilo"
 msgstr ""
 
 msgid "con mis hijos"
@@ -2385,7 +2448,16 @@ msgstr ""
 msgid "de entre %{age_from} y %{age_to} años"
 msgstr ""
 
+msgid "de género"
+msgstr ""
+
 msgid "de todo un poco"
+msgstr ""
+
+msgid "del año"
+msgstr ""
+
+msgid "del mes de"
 msgstr ""
 
 msgid "del montón"
@@ -2565,6 +2637,9 @@ msgstr ""
 msgid "judío"
 msgstr ""
 
+msgid "kg."
+msgstr ""
+
 msgid "kosher"
 msgstr ""
 
@@ -2658,6 +2733,9 @@ msgstr ""
 msgid "me gusta beber solo cuando salgo"
 msgstr ""
 
+msgid "me gusta el"
+msgstr ""
+
 msgid "me gusta todo"
 msgstr ""
 
@@ -2668,6 +2746,9 @@ msgid "medio"
 msgstr ""
 
 msgid "mediterránea"
+msgstr ""
+
+msgid "mido"
 msgstr ""
 
 msgid "militar"
@@ -3028,6 +3109,9 @@ msgid "y nacionalidad"
 msgstr ""
 
 msgid "y que esté cerca de %{city}, %{country}"
+msgstr ""
+
+msgid "y soy de étnia"
 msgstr ""
 
 msgid "ya ha estado casad@ y no quiere repetir"
