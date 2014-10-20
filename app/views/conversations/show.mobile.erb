@@ -38,7 +38,7 @@
 
               <div class="msg-reply-dialog clearfix">
 
-                <div class="pic"><%= link_to profile_pic(current_user, width: 60, height: 60), current_user %></div>
+
 
                 <div class="msg-actions" style="margin:0">
                   <% if interlocutor %>
@@ -52,8 +52,8 @@
                     <div style="float:left;width:33%;text-align:right">
                       <%= link_to _('Eliminar hilo'), "#delete-confirm-#{@conversation.id.to_s}", 'data-toggle' => 'modal', :class => 'pull-right' %>
                     </div>
-                    <div style="clear:both"></div>
                 </div>
+                <div style="clear:both"></div>
 
                 <% if current_user.can_message? %>
                 <div class="reply-form">
