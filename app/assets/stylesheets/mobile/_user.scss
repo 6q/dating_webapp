@@ -484,6 +484,12 @@ section.chat{
 			color: #ff0 !important;
 		}
 	}
+	.reply-activity {
+		textarea {
+			width:100%;
+			height:40px;
+		}
+	}
 	.msg-reply {
 		clear: both;
 		@include clearfix;

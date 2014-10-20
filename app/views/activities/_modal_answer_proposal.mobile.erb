@@ -5,12 +5,12 @@
   </div>
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <%= user_detail(sender_or_recipient(activity.conversation)) %>
+    <div style="width: calc(100% - 20px);"><%= user_detail(sender_or_recipient(activity.conversation)) %></div>
   </div>
   <%= simple_form_for activity.conversation.messages.new, url: conversation_path(activity.conversation, accept_activity: true), method: :put do |f| %>
     <div class="modal-body">
       <p><%= _('¡Estás a un paso de aceptar la propuesta de') %> <%= sender_or_recipient(activity.conversation).try(:name) || _('Usuario inexistente o inactivo') %> <%= _('para') %> <strong><%= Activity::ACTIVITY_TYPE[activity.activity_type.to_sym] %><%= ' ' + _('el próximo día') + ' ' + l(activity.date) if activity.date %></strong>!</p>
-      <div class="reply">
+      <div class="reply-activity">
         <%= f.input_field :body %>
       </div>
     </div>
@@ -27,7 +27,7 @@
   </div>
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <%= user_detail(sender_or_recipient(activity.conversation)) %>
+    <div style="width: calc(100% - 20px);"><%= user_detail(sender_or_recipient(activity.conversation)) %></div>
   </div>
   <div class="modal-body">
     <div>

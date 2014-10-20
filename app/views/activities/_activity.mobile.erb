@@ -12,8 +12,8 @@
       <%= _('Actividad aceptada') %>
     <% else %>
       <% if activity.sender_id != current_user.id %>
-        <a class="btn btn-danger" href="#proposal-reject" data-toggle="modal"><i class="icon icon-remove icon-white"></i> <%= _('Rechazar') %></a>
-        <a class="btn btn-success" href="#proposal-accept" data-toggle="modal"><i class="icon icon-ok icon-white"></i> <%= _('Aceptar') %></a>
+        <a class="btn btn-danger" href="#proposal-reject-<%= activity.id %>" data-toggle="modal"><i class="icon icon-remove icon-white"></i> <%= _('Rechazar') %></a>
+        <a class="btn btn-success" href="#proposal-accept-<%= activity.id %>" data-toggle="modal"><i class="icon icon-ok icon-white"></i> <%= _('Aceptar') %></a>
       <% end %>
     <% end %>
   </div>
