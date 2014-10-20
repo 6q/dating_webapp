@@ -46,7 +46,11 @@ module UserHelper
   end
 
   def user_link_with_picture(user)
-    html = '<div class="pic">' + link_to(profile_pic(user, width: 60, height: 60), user) + '</div>'
+    if user == current_user
+      html = '<div class="pic">' + profile_pic(user, width: 60, height: 60) + '</div>'
+    else
+      html = '<div class="pic">' + link_to(profile_pic(user, width: 60, height: 60), user) + '</div>'
+    end
     html.html_safe
   end
 
