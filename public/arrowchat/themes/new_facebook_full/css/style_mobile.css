@@ -497,7 +497,7 @@ new_facebook_full
 
 .arrowchat_closebox_bottom_status {
 	position: absolute;
-	right: 0;
+	right: 30px;
 	top: 16px;
 	width: 11px;
 	height: 11px;
@@ -521,7 +521,7 @@ new_facebook_full
 	text-decoration: none !important;
 	line-height: normal;
 	top: 5px!important;
-	right: 25px!important;
+	right: 60px!important;
 	left: auto!important;
 	bottom: auto!important;
 }
@@ -637,7 +637,7 @@ new_facebook_full
 }
 
 .arrowchat_user_tab {
-	background: #fff;
+	background: #cfe7f7;
 	padding: 5px;
 	white-space: nowrap;
 	width: calc(100% - 20px)!important;
@@ -876,18 +876,15 @@ new_facebook_full
 }
 
 .arrowchat_closebox_bottom {
-	width: 10px;
-	height: 9px;
-	background: url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;
-	background-position: -304px -44px;
+	width: 30px;
+	height: 30px;
+	background: url(themes/<?php echo $theme; ?>/images/chat-close.png) no-repeat top left;
 	float: right;
 	text-align: left;
-	display: none;
+	margin-right: 3px;
+	z-index:5;
 }
 
-.arrowchat_tab_new_message .arrowchat_closebox_bottom {
-	background-position: -287px -44px;
-}
 
 .arrowchat_closebox_bottom_click {
 	background-position: -304px -44px !important;

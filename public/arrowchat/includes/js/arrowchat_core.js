@@ -4150,18 +4150,7 @@
 			a(".arrowchat_jabber_user_tab .arrowchat_closebox_bottom").click();
 		};
 
-		a(".arrowchat_closebox").click(function() {
-			alert("dins");
-			id = a(this).parent().parent().attr( 'data-id' );
-			alert("click "+id);
-			a.post(c_ac_path + "includes/json/send/send_settings.php", {
-				close_chat: id,
-				tab_alert: 1
-			}, function() {});
-			alert("fin");
-			a(this).parent().find('.arrowchat_user_tab').addClass("hide");
-			return 0;
-		});
+
 
 	};
 
