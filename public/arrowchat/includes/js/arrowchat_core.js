@@ -4149,7 +4149,13 @@
 			a("#arrowchat_userstab_text").html("<b>" + lang[4] + "</b> (<b>" + (onlineNumber + jabberOnlineNumber) + "</b>)");
 			a(".arrowchat_jabber_user_tab .arrowchat_closebox_bottom").click();
 		};
+
+
+
 	};
+
+
+
 })(jqac);
 jqac(document).ready(function() {
 	if (u_logged_in != 1 && c_disable_arrowchat != 1) {
@@ -4168,4 +4174,7 @@ $(function() {
 		$(".alert_chat_show").removeClass("in").show();
 		$(".alert_chat_show").delay(300).addClass("in").fadeOut(1000);
 	});
+
+
+
 });
