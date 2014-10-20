@@ -750,6 +750,10 @@ new_facebook_full
 	margin-left: 5px;
 	margin-bottom: 5px;
 	background-color: #fff;
+	display:block !important;
+}
+.arrowchat_disable_avatars_name {
+	display:none !important;
 }
 
 .placeholder {
@@ -1049,7 +1053,7 @@ new_facebook_full
 }
 
 .arrowchat_ts {
-	display: none;
+	display: block !important;
 	font-family: "PT Sans", "Helvetica Neue", Hevetica, Arial, sans-serif;
 	color: #808080;
 	font-size: 10px;
@@ -1290,14 +1294,6 @@ new_facebook_full
 	float: left;
 	margin-top: 5px;
 	margin-left: 10px;
-}
-
-.arrowchat_chatboxmessage_wrapper2 {
-	margin-top: 20px;
-}
-
-.arrowchat_chatboxmessagecontent2 {
-	margin-left: 0px;
 }
 
 .arrowchat_tabpopup textarea:focus {
