@@ -19,22 +19,12 @@ body.inside {
 			#open-menu {
 				float:left;
 				a {
-					width:63px;
-					height:40px;
-					span {
-						width: 23px;
-						position: relative;
-						margin-left: 20px;
-						margin-right: 10px;
-						margin: 10px 20px 0 20px;
-						display: block;
-						font-size: 0;
-						padding: 6px 0;
-						border-top: 3px solid white !important;
-						height: 3px;
-						border-bottom: 3px solid white !important;
-						background-clip: content-box;
-						background-color: white;
+					width:60px;
+					height:60px;
+
+					img {
+						margin-top:-10px;
+						margin-right:5px;
 					}
 				}
 				a:hover {
