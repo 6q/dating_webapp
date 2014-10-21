@@ -424,7 +424,7 @@ class User < ActiveRecord::Base
   end
 
   def self.people_i_like(user, order)
-    order ||= 'updated_at desc'
+    order ||= 'likes.updated_at desc'
 
     if order == 'distance asc'
       by_distance = true
