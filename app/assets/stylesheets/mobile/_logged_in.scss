@@ -145,6 +145,13 @@ body.inside {
 			width:20%;
 		}
 	}
+	#related-list.vermas ul {
+		margin:0;
+		img {
+			float:left;
+			width:25%;
+		}
+	}
 	footer {
 		a {
 			color:#000;
@@ -246,23 +253,36 @@ body.inside {
   	text-align:center;
   	z-index:2;
   	height:16px;
-	padding:20px 0;
-  	a {
-  		margin-right:5px;
-  		font-weight:bold;
-  		font-size:14px;
-  		background:#5AA7E3;
-  		color:#fff;
-  		border-radius:10px;
-  		padding:10px 20px;
-  	}
-  	a:hover {
-  		text-decoration:none;
-  		background:#346084;
-  	}
-  	a[rel="previous"] {
-  		display:none;
-  	}
+	padding: 10px 0 30px;
+	a {
+		color: #fff;
+		border-radius: 10px;
+		height: 38px;
+		width: 38px;
+		background: #5AA7E3 url(button-vermas.png) no-repeat 50% 55%;		
+		display: block;
+		float:left;
+	}
+	.paginate-users {
+		color: #fff;
+		width:auto;
+		border-radius: 10px;
+		background:none;
+		background: #5AA7E3;		
+		height: auto;
+		padding: 10px 20px;
+		font-weight: bold;
+		margin-right:10px;
+		margin-left:5px;
+	}
+	.boto-search {
+		color: #fff;
+		border-radius: 10px;
+		height: 38px;
+		width: 38px;
+		background: #5AA7E3 url(button-search.png) no-repeat 50% 55%;		
+		margin-right:10px;
+	}
 
   }
 	.user-list {
@@ -316,6 +336,7 @@ body.inside {
 		      border-radius: 10px;
 		      height:38px;
 		      width:38px;
+		      margin-left:5px;
 		      background:#c12222 image-url('white-heart.png') no-repeat 50% 55%;
 
 		    }		
