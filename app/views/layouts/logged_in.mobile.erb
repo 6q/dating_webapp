@@ -9,6 +9,15 @@
       $(window).load(function() {
         $(".loader").fadeOut("slow");
       })
+      var a=document.getElementsByTagName("a");
+      for(var i=0;i<a.length;i++)
+      {
+          a[i].onclick=function()
+          {
+              window.location=this.getAttribute("href");
+              return false
+          }
+      }
     </script>
   </head>
   <body class="user <%= controller_name %> <%= action_name %> inside">
