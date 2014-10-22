@@ -4,20 +4,35 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
     <%= render "layouts/logged_in_head" %>
     <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css&amp;mobile=true" charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <script>
       addToHomescreen();
       $(window).load(function() {
         $(".loader").fadeOut("slow");
       })
-      var a=document.getElementsByTagName("a");
-      for(var i=0;i<a.length;i++)
-      {
-          a[i].onclick=function()
-          {
-              window.location=this.getAttribute("href");
-              return false
-          }
+
+      /* IOS APP */
+      if(("standalone" in window.navigator) && window.navigator.standalone){
+
+      var noddy, remotes = false;
+
+      document.addEventListener('click', function(event) {
+
+      noddy = event.target;
+
+      while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+      noddy = noddy.parentNode;
       }
+
+      if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+      {
+      event.preventDefault();
+      document.location.href = noddy.href;
+      }
+
+      },false);
+      }
+
     </script>
   </head>
   <body class="user <%= controller_name %> <%= action_name %> inside">
