@@ -244,7 +244,7 @@ body.inside {
   	}
   }
   .pull-right {
-  	width:70%;
+  	width:67%;
   	float:right;
   	position:fixed;
   	bottom:0;
@@ -259,7 +259,7 @@ body.inside {
 		border-radius: 10px;
 		height: 38px;
 		width: 38px;
-		background: #5AA7E3 url(button-vermas.png) no-repeat 50% 55%;		
+		background: #5AA7E3 url(button-vermas.png) no-repeat 0 -1px;		
 		display: block;
 		float:left;
 	}
@@ -280,7 +280,7 @@ body.inside {
 		border-radius: 10px;
 		height: 38px;
 		width: 38px;
-		background: #5AA7E3 url(button-search.png) no-repeat 50% 55%;		
+		background: #5AA7E3 url(button-search.png) no-repeat;		
 		margin-right:10px;
 	}
 
@@ -309,9 +309,9 @@ body.inside {
 			position:fixed;
 			bottom:0;
 			left:0;
-			padding:0;
+			padding:0 0 0 5px;
 			background:#E5F2FB;
-			width: 30%;
+			width: 33%;
 			height:56px;
 			li {
 				width:50%;
@@ -328,7 +328,7 @@ body.inside {
 		      border-radius: 10px;
 		      height:38px;
 		      width:38px;
-		      background:#5AA7E3 image-url('white-plus.png') no-repeat 50% 55%;
+		      background:#5AA7E3 image-url('white-plus.png') no-repeat 50%;
 
 		    }	
 		    li.like a {
