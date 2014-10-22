@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: VERSION\n"
-"POT-Creation-Date: 2014-10-21 09:02+0000\n"
-"PO-Revision-Date: 2014-10-21 09:02+0000\n"
+"POT-Creation-Date: 2014-10-22 14:52+0000\n"
+"PO-Revision-Date: 2014-10-22 14:52+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE TEAM <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -2438,7 +2438,7 @@ msgid "Sigue escribiendo..."
 msgstr "Keep on writing..."
 
 msgid "Siguiente"
-msgstr "Following"
+msgstr "Next"
 
 msgid "Sin mensaje"
 msgstr "Without message"
@@ -3032,7 +3032,7 @@ msgid "el matrimonio es algo maravilloso"
 msgstr "The marriage is something marvelous"
 
 msgid "el próximo día"
-msgstr "The following day"
+msgstr "The next day"
 
 msgid "empleado"
 msgstr "Employee"
@@ -3542,7 +3542,7 @@ msgid "si tienes algún amigo con el que siempre has tenido mucha química, algo
 msgstr "if you have a friend you've always had something special, and you want to help him/her find love ... Recommend him/her on Cellove!"
 
 msgid "siguiente"
-msgstr "Following"
+msgstr "next"
 
 msgid "sin pelo"
 msgstr "Bald"

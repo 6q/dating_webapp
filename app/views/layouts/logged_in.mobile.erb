@@ -6,9 +6,13 @@
     <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css&amp;mobile=true" charset="utf-8" />
     <script>
       addToHomescreen();
+      $(window).load(function() {
+        $(".loader").fadeOut("slow");
+      })
     </script>
   </head>
   <body class="user <%= controller_name %> <%= action_name %> inside">
+    <div class="loader"></div>
     <header role="banner" class="clearfix">
       <div class="container">
         <div id="open-menu">
