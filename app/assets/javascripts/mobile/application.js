@@ -130,15 +130,25 @@ $(function() {
 
 });
 
-$(document).ready(function(){
-    if (("standalone" in window.navigator) && window.navigator.standalone) {
-      // For iOS Apps
-      $('a').on('click', function(e){
-        if ($( e.target ).prop( "tagName" ) !== "IMG") e.preventDefault();
-        var new_location = $(this).attr('href');
-        if (new_location != undefined && new_location.substr(0, 1) != '#' && $(this).attr('data-method') == undefined){
-          window.location = new_location;
-        }
-      });
-    }
-});
+// Listen for ALL links at the top level of the document. For
+// testing purposes, we're not going to worry about LOCAL vs.
+// EXTERNAL links - we'll just demonstrate the feature.
+$(document).on(
+"click",
+"a",
+function(event){
+// Stop the default behavior of the browser, which
+// is to change the URL of the page.
+if ($( event.target ).prop( "tagName" ) !== "IMG")
+event.preventDefault();
+// Manually change the location of the page to stay in
+// "Standalone" mode and change the URL at the same time.
+// Get href of parent if clicked on an image.
+if(!$(event.target).attr("href")){
+location.href = $(event.target).parent().attr("href");
+}
+else{
+location.href = $(event.target).attr("href");
+}
+}
+);
