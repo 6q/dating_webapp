@@ -49,12 +49,10 @@ class DashboardController < ApplicationController
       else
         return nil
       end
-      if session[:mobile_view] == true
-        render :partial => params[:partial], :formats => [:mobile]
-      else
-        render :partial => params[:partial], :formats => [:html]
-      end
+
+      render :partial => params[:partial], :formats => [:html]
     end
+    
   end
 
   def paginate_users
