@@ -15,7 +15,7 @@
         "click",
         "a",
         function(event){
-          if(!$(this).hasClass("external") && !$(this).hasClass("grouped_elements") && !($(this).attr('id')=="fancybox-close")){
+          if(!$(this).hasClass("external") && !$(this).hasClass("grouped_elements") && !$(this).hasClass("ajax_like_trigger") && !($(this).attr('id')=="fancybox-close")){
             event.preventDefault();
             if(!$(event.target).attr("href")){
               location.href = $(event.target).parent().attr("href");
