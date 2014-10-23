@@ -8,7 +8,7 @@
 			<div class="user-detail-container clearfix">
 				<div class="photo">
 					<% image_url = current_user.profile_picture && @user.profile_picture ? @user.profile_picture.image.jpg.url : images_profile_path %>
-					<a <%= "href=#{image_url} class=swipebox " if @user.profile_picture %> title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>">
+					<a <%= "href=#{image_url} class=grouped_elements " if @user.profile_picture %> title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>">
 						<% if @user.pictures.count > 1 %><div class="more-photos"><%= @user.pictures.count %> <i class="fa fa-camera"></i></div><% end %>
 						<%= profile_pic(@user) %>
 					</a>
@@ -37,7 +37,7 @@
 						<ul>
 							<% @user.pictures.each do |p| %>
 								<% image_url = current_user.profile_picture ? p.image.jpg.url : images_profile_path %>
-								<li><a class="swipebox" href="<%= image_url %>" title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
+								<li><a class="grouped_elements" href="<%= image_url %>" title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>"><%= image_tag(p.image.thumb('80x80').url)%></a></li>
 							<% end %>
 						</ul>
 					</div>
