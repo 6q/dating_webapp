@@ -11,28 +11,23 @@
         $(".loader").fadeOut("slow");
       })
 
-      /* IOS APP */
-      if(("standalone" in window.navigator) && window.navigator.standalone){
-
-        var noddy, remotes = false;
-
-        document.addEventListener('click', function(event) {
-
-          noddy = event.target;
-
-            while((noddy.nodeName !== "A" && noddy.nodeName !== "HTML") || noddy.hasClass("paginate-users")) {
-              noddy = noddy.parentNode;
+      $(document).on(
+        "click",
+        "a",
+        function(event){
+          if(!$(this).hasClass("external")){
+            event.preventDefault();
+            if(!$(event.target).attr("href")){
+              location.href = $(event.target).parent().attr("href");
             }
-
-            if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
-            {
-              event.preventDefault();
-              document.location.href = noddy.href;
+            else{
+              location.href = $(event.target).attr("href");
             }
-          
-
-        },false);
-      }
+          }
+          else {
+          }
+        }
+      );
 
     </script>
   </head>
