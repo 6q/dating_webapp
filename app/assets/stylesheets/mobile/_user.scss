@@ -2041,3 +2041,11 @@ h1 {
   cursor: hand;
   z-index:2;
 }
+
+#fancybox-left-ico {
+ left: 20px;
+}
+#fancybox-right-ico {
+ right: 20px;
+ left: auto;
+}
