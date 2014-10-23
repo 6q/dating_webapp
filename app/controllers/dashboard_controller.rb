@@ -17,16 +17,17 @@ class DashboardController < ApplicationController
 
   def show_users
 
-
+    if session[:mobile_view] == true
       @best_suited_near_me = current_user.best_suited_near_me(70)
       @search = User.search
       session[:shown_ids] = @best_suited_near_me.map(&:id) # Needed because of ajax loading
-
+    end
     if params[:partial]
 
 
       case params[:partial]
       when "could_interest_me"
+
         if session[:mobile_view] == true
           could_interest_me           = current_user.could_interest_me(100, session[:shown_ids]).sample(100)
           @could_interest_me          = Kaminari.paginate_array(could_interest_me).page(params[:page]).per(1)
@@ -36,6 +37,7 @@ class DashboardController < ApplicationController
         end
         session[:could_interest_me] = could_interest_me.map(&:id)
         session[:shown_ids]        += session[:could_interest_me]
+
       when "best_index"
         best_index            = current_user.best_index(20, session[:shown_ids]).sample(20)
         @best_index           = Kaminari.paginate_array(best_index).page(params[:page]).per(5)
