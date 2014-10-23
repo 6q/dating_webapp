@@ -11,11 +11,12 @@
         $(".loader").fadeOut("slow");
       })
 
+      /* IOS APP */
       $(document).on(
         "click",
         "a",
         function(event){
-          if(!$(this).hasClass("external") && !$(this).hasClass("grouped_elements") && !$(this).hasClass("ajax_like_trigger") && !($(this).attr('id')=="fancybox-close")){
+          if(!$(this).hasClass("external") && !$(this).hasClass("grouped_elements") && !$(this).hasClass("ajax_like_trigger") && !$(this).hasClass("ajax_dislike_trigger") && !($(this).attr('id')=="fancybox-close")){
             event.preventDefault();
             if(!$(event.target).attr("href")){
               location.href = $(event.target).parent().attr("href");
