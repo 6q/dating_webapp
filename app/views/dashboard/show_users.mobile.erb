@@ -7,13 +7,18 @@
 		  <div class="boxed">
 		    <div class="boxed-inner">
 		      <ul class="clearfix">
-		        <% @best_suited_near_me.sample(48).each do |user| %>
+		        <% @best_suited_near_me.sample(47).each do |user| %>
 		          <li class="<%= user.online? ? "online" : "" %> is-related">
 		            <%= link_to user do %>
 		              <%= profile_pic(user, width: 80, height: 80) %>
 		            <% end %>
 		          </li>
 		        <% end %>
+		          <li>
+		            <%= link_to search_path(q: { years_lteq: current_user.lf_age_from, years_gteq: current_user.lf_age_to, city_eq: current_user.city }) do %>
+		            	<%= image_tag("mobile/more-users.png") %>
+		            <% end %>
+		          </li>
 		      </ul>
 		    </div>
 		  </div>

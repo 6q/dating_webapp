@@ -49,8 +49,11 @@ class DashboardController < ApplicationController
       else
         return nil
       end
-
-      render :partial => params[:partial], :formats => [:html]
+      if session[:mobile_view] == true
+        render :partial => params[:partial], :formats => [:mobile]
+      else
+        render :partial => params[:partial], :formats => [:html]
+      end
     end
     
   end
