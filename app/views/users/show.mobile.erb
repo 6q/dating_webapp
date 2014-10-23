@@ -8,10 +8,16 @@
 			<div class="user-detail-container clearfix">
 				<div class="photo">
 					<% image_url = current_user.profile_picture && @user.profile_picture ? @user.profile_picture.image.jpg.url : images_profile_path %>
-					<a <%= "href=#{image_url} class=grouped_elements " if @user.profile_picture %> title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>" rel="user-pictures">
+
+					<% if @user.pictures.count > 0 %>
+						<a <%= "href=#{image_url} class=grouped_elements " if @user.profile_picture %> title="<%= _("Fotografias de ") %> <%= "#{@user.name} #{@user.surname}" %>" rel="user-pictures">
+					<% end %>
 						<% if @user.pictures.count > 1 %><div class="more-photos"><%= @user.pictures.count %> <i class="fa fa-camera"></i></div><% end %>
 						<%= profile_pic(@user) %>
-					</a>
+
+					<% if @user.pictures.count > 0 %>
+						</a>
+					<% end %>
 					<% if @user.pictures.count > 1 %>
 							<% @user.pictures.each do |p| %>
 								<% image_url = current_user.profile_picture ? p.image.jpg.url : images_profile_path %>
