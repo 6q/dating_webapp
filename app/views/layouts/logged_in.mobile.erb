@@ -15,7 +15,7 @@
         "click",
         "a",
         function(event){
-          if(!$(this).hasClass("external")){
+          if(!$(this).hasClass("external") || !$(this).hasClass("grouped_elements") ){
             event.preventDefault();
             if(!$(event.target).attr("href")){
               location.href = $(event.target).parent().attr("href");

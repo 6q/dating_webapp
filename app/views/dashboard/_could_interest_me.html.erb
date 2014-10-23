@@ -2,29 +2,30 @@
 
 <% if session[:mobile_view] == true %>
 
-	<section id="could-interest-me" class="home-users <%if params[:more]=='true' %>more-users<% end %>">
-	  <div class="clearfix list-header">
+  <section id="could-interest-me" class="home-users <%if params[:more]=='true' %>more-users<% end %>">
+    <div class="clearfix list-header">
 
-	    <h4 class="pull-left"><%= _('Usuari@s que te pueden gustar') %></h4>
+      <h4 class="pull-left"><%= _('Usuari@s que te pueden gustar') %></h4>
 
-	    <div class="pull-right">
-	      <%= link_to_next_page @could_interest_me, _('Siguiente') + ' >', class: 'paginate-users', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %> 
-	      <%= link_to "", search_path(q: { years_lteq: current_user.lf_age_from, years_gteq: current_user.lf_age_to, city_eq: current_user.city }), class: 'boto-search' %>
-	      <a href="/dashboard/show_users?more=true"></a>
-	    </div>
+      <div class="pull-right">
+        <%= link_to_next_page @could_interest_me, _('Siguiente') + ' >', class: 'paginate-users external', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %> 
+        <%= link_to "", search_path(q: { years_lteq: current_user.lf_age_from, years_gteq: current_user.lf_age_to, city_eq: current_user.city }), class: 'boto-search' %>
+        <a href="/dashboard/show_users?more=true"></a>
+      </div>
 
-	  </div>
-	  <div class="over-pagination">
+    </div>
+    <div class="over-pagination">
 
-	        <%= link_to_previous_page @could_interest_me, '< ', class: 'paginate-users previous', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %>
+          <%= link_to_previous_page @could_interest_me, '< ', class: 'paginate-users previous external', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %>
 
-	        <%= link_to_next_page @could_interest_me,  ' >', class: 'paginate-users next', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %>
+          <%= link_to_next_page @could_interest_me,  ' >', class: 'paginate-users next external', params: { controller: 'dashboard', action: 'paginate_users', partial: 'could_interest_me' } %>
 
-	  </div>
-	  <ul class="user-list clearfix">
-	    <%= render @could_interest_me %>
-	  </ul>
-	</section>
+    </div>
+    <ul class="user-list clearfix">
+      <%= render @could_interest_me %>
+    </ul>
+  </section>
+
 
 <% else %>
 
