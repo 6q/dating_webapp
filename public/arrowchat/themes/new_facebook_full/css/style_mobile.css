@@ -587,7 +587,7 @@ new_facebook_full
 	height: calc(100% - 55px);
 	border-bottom: 1px solid #c9d0da;
 	padding: 5px;
-	width: 100%;
+	width: calc(100% - 10px);
 	overflow-x: hidden;
 	overflow-y: auto;
 	text-align: left;
@@ -751,6 +751,7 @@ new_facebook_full
 	margin-bottom: 5px;
 	background-color: #fff;
 	display:block !important;
+	border-radius:20px;
 }
 .arrowchat_disable_avatars_name {
 	display:none !important;
@@ -998,6 +999,7 @@ new_facebook_full
 	font-weight: bold;
 	text-align: left;
 	border-top: 1px solid #eee;
+	overflow:none;
 }
 
 .arrowchat_chatboxmessagefrom a {
@@ -2033,6 +2035,7 @@ new_facebook_full
 
 .arrowchat_clearfix {
 	display: block;
+	overflow: visible!important;
 }
 
 html[xmlns] .arrowchat_clearfix {

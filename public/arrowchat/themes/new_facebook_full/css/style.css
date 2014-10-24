@@ -105,7 +105,7 @@ new_facebook_full
 .arrowchat_userscontentname{font-size:11px;word-break:break-all;max-height:10px;float:left; padding-left:5px;padding-top:7px;padding-bottom:3px;text-align:left;max-width:125px;overflow:hidden}
 .arrowchat_userscontentdot{float:right;background-repeat:no-repeat;width:8px;height:8px;text-align:left;margin:9px 8px 0px 0px}
 .arrowchat_userlist_avatar{height:22px;width:22px;float:left;margin-top:2px;margin-left:10px;background-color:#fff}
-.arrowchat_chatbox_avatar{height:35px;width:35px;float:left;margin-top:5px;margin-left:5px;margin-bottom:5px;background-color:#fff;display:block!important;}
+.arrowchat_chatbox_avatar{height:35px;width:35px;float:left;margin-top:5px;margin-left:5px;margin-bottom:5px;background-color:#fff;display:block!important;border-radius:20px;}
 .placeholder{color:#a9a9a9}
 .highlight{font-weight:bold}
 #arrowchat_userstab_icon{background:url(themes/<?php echo $theme; ?>/images/bg-core.png) no-repeat top left;background-position:0px -88px;float:left;height:16px;margin:1px 2px 0px 0px;width:16px}
@@ -144,7 +144,7 @@ new_facebook_full
 .arrowchat_textarea{background:none;width:195px;border:0px;height:18px;padding:1px 5px 0px 2px;overflow:hidden;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;color:#444;background-color:#fff;outline:none;resize:none;text-align:left;margin:0px}
 .arrowchat_tabcontentinput textarea:focus{border:0px;background:none;background-color:#fff;margin:0px;padding:1px 5px 0px 2px}
 .arrowchat_chatboxmessage{margin-left:5px;text-align:left}
-.arrowchat_chatboxmessagefrom{margin-left:-1em;font-weight:bold;text-align:left;border-top:1px solid #eee}
+.arrowchat_chatboxmessagefrom{margin-left:-1em;font-weight:bold;text-align:left;border-top:1px solid #eee;overflow:none;}
 .arrowchat_chatboxmessagefrom a {color:#3B5998;text-decoration:none}
 .arrowchat_chatboxmessagefrom a:hover {color:#3B5998;text-decoration:underline}
 .arrowchat_chatboxmessagefrom a:link{font-weight:bold}
@@ -285,7 +285,7 @@ new_facebook_full
 .arrowchat_ui_button div{color:#fff}
 .arrowchat_ui_button object{z-index:1100;position:relative}
 .arrowchat_clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
-.arrowchat_clearfix {display: block;}
+.arrowchat_clearfix {display: block; overflow:visible!important;}
 html[xmlns] .arrowchat_clearfix {display: block;}
 * html .arrowchat_clearfix {height: 1%;}
 .arrowchat_message_box{border-bottom:1px solid #ffbebe;color:#686868;background-color:#ffe2e2;font-size:11px;position:absolute;top:0px;left:0px;width:100%;display:none;z-index:1001}

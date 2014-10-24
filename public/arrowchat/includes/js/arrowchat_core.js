@@ -1790,7 +1790,7 @@
 										fromname = fromname.slice(0, fromname.indexOf(" "));
 									}
 								}
-								if (h.sent - last_sent[h.from] > 60 || last_sent[h.from] == null || last_name[h.from] != full_name) {
+								/*if (h.sent - last_sent[h.from] > 60 || last_sent[h.from] == null || last_name[h.from] != full_name) {*/
 									if (init == true) {
 										d += "</div>";
 									}
@@ -1799,9 +1799,9 @@
 									last_name[h.from] = full_name;
 									init = true;
 									last_id[h.from] = h.id;
-								} else {
+								/*} else {
 									d += "<div id=\"arrowchat_message_" + h.id + "\" class=\"arrowchat_chatboxmessagecontent" + f + "\">" + h.message + "</div>";
-								}
+								}*/
 							});
 						});
 						var current_top_element = a("#arrowchat_tabcontenttext_" + b).children().children().first();
@@ -2626,18 +2626,18 @@
 					if (uc_status[b] == "offline" && d != 1) {
 						displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[13], "error");
 					}
-					if (f - last_sent[b] > 60 || last_sent[b] == null || last_name[b] != full_name || last_name[b] == null || last_name[b] == "") {
+					/*if (f - last_sent[b] > 60 || last_sent[b] == null || last_name[b] != full_name || last_name[b] == null || last_name[b] == "") {*/
 						a(".arrowchat_tabcontenttext", $user_popups[b]).append("<div class=\"arrowchat_chatboxmessage arrowchat_clearfix\" id=\"arrowchat_message_" + e + "\"><div class=\"arrowchat_chatboxmessagefrom" + h + "\"><div class=\"arrowchat_disable_avatars_name\">" + fromname + "</div><img alt=\"" + tooltip + "\" class=\"arrowchat_chatbox_avatar\" src=\"" + avatar + "\" /></div><div class=\"arrowchat_chatboxmessage_wrapper\"><div class=\"arrowchat_chatboxmessagecontent" + h + "\">" + formatTimestamp(new Date(f * 1000)) + c + "</div></div></div>");
 						last_sent[b] = f;
 						last_name[b] = full_name;
 						last_id[b] = e;
-					} else {
+					/*} else {
 						if (last_id[b] !== "undefined") {
 							a("#arrowchat_message_" + last_id[b]).append("<div id=\"arrowchat_message_" + e + "\" class=\"arrowchat_chatboxmessagecontent" + h + "\">" + c + "</div>");
 						} else {
 							a(".arrowchat_tabcontenttext", $user_popups[b]).append("<div id=\"arrowchat_message_" + e + "\" class=\"arrowchat_chatboxmessagecontent" + h + "\">" + c + "</div>");
 						}
-					}
+					}*/
 					if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
 						setAvatarVisibility(1);
 					}
@@ -3222,7 +3222,7 @@
 							fromname = fromname.slice(0, fromname.indexOf(" "));
 						}
 					}
-					if (sent - last_sent[from] > 60 || last_sent[from] == null || last_name[from] != full_name) {
+					/*if (sent - last_sent[from] > 60 || last_sent[from] == null || last_name[from] != full_name) {*/
 						a(".arrowchat_tabcontenttext", $user_popups[from]).append("<div class=\"arrowchat_chatboxmessage arrowchat_clearfix\" id=\"arrowchat_message_" + id + "\" style=\"display:none\"><div class=\"arrowchat_chatboxmessagefrom" + f + "\"><div class=\"arrowchat_disable_avatars_name\">" + fromname + "</div><img alt=\"" + tooltip + "\" class=\"arrowchat_chatbox_avatar\" src=\"" + avatar + "\" /></div><div class=\"arrowchat_chatboxmessage_wrapper\"><div class=\"arrowchat_chatboxmessagecontent" + f + "\">" + formatTimestamp(new Date(sent * 1000)) + message + "</div></div></div>");
 						if (c_chat_animations == 1 && old != 1) {
 							a("#arrowchat_message_" + id).show("slide", {
@@ -3234,13 +3234,13 @@
 						last_sent[from] = sent;
 						last_name[from] = full_name;
 						last_id[from] = id;
-					} else {
+					/*} else {
 						if (last_id[from] !== "undefined") {
 							a("#arrowchat_message_" + last_id[from]).append("<div id=\"arrowchat_message_" + id + "\" class=\"arrowchat_chatboxmessagecontent" + f + "\">" + message + "</div>");
 						} else {
 							a(".arrowchat_tabcontenttext", $user_popups[from]).append("<div id=\"arrowchat_message_" + id + "\" class=\"arrowchat_chatboxmessagecontent" + f + "\">" + message + "</div>");
 						}
-					}
+					}*/
 					if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
 						setAvatarVisibility(1);
 					}
