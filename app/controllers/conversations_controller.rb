@@ -94,13 +94,6 @@ class ConversationsController < ApplicationController
           redirect_to conversations_path(:box => @box, :page => params[:page])
         end
       }
-      format.mobile {
-        if params[:location].present? and params[:location] == 'conversation'
-          redirect_to conversations_path(:box => :trash)
-        else
-          redirect_to conversations_path(:box => @box, :page => params[:page])
-        end
-      }
       format.js {
         if params[:location].present? and params[:location] == 'conversation'
           render :js => "window.location = '#{conversations_path(:box => @box, :page => params[:page])}';"
