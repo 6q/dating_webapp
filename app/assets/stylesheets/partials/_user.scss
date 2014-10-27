@@ -257,56 +257,7 @@ section.list {
     }
   }
 
-  .pagination {
-    @include clearfix;
-    font-size:.8em;
-    color:#999;
-    float: left;
 
-    span.page, span.next, span.prev {
-      display:block;
-      float:left;
-
-      a {
-				font-size: 12px;
-        display:inline-block;
-        border-radius:5px;
-        color:#fff;
-        padding: 3px 9px;
-				border: 1px solid #d3d3d3;
-        text-decoration:none;
-        margin:0 4px;
-				color: #333333;
-        &:hover {
-					background: #9fd3f3;
-        }
-      }
-    }
-
-		span.current {
-			font-size: 12px;
-      display:inline-block;
-      border-radius:5px;
-      color:#fff;
-      padding: 3px 9px;
-			border: 1px solid #d3d3d3;
-      text-decoration:none;
-      margin:0 4px;
-			color: #333333;
-			background: #9fd3f3;
-    }
-
-    span{
-      a {
-        float:left;
-        margin:0 3px;
-      }
-    }
-  }
-
-  nav.pagination{
-    float: right;
-  }
 }
 
 // USER CARDS & USER LISTS

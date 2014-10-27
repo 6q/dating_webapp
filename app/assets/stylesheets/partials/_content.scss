@@ -36,3 +36,67 @@ a.more {
 section[role=main] > article {
   @extend .content
 }
+
+  .pagination {
+    @include clearfix;
+    font-size:.8em;
+    color:#999;
+    float: left;
+    width:50%;
+    margin:20px 0 !important;
+
+
+    .total {
+      float:right;
+      text-align:right;
+      margin:3px 0 0 0!important;
+      padding-right:10px!important;
+    }
+
+  }
+
+    nav.pagination{
+      float: right;
+      width:50%;
+      margin:20px 0 !important;
+
+      span.page, span.next, span.prev {
+        display:block;
+        float:left!important;
+
+        a {
+          font-size: 12px;
+          display:inline-block;
+          border-radius:5px;
+          background:#fff;
+          padding: 3px 9px;
+          border: 1px solid #d3d3d3;
+          text-decoration:none;
+          margin:0 4px;
+          color: #333333;
+          &:hover {
+            background: #9fd3f3;
+          }
+        }
+      }
+
+      span.current {
+        font-size: 12px;
+        display:inline-block;
+        border-radius:5px;
+        color:#fff;
+        padding: 3px 9px;
+        border: 1px solid #d3d3d3;
+        text-decoration:none;
+        margin:0 4px;
+        color: #333333;
+        background: #9fd3f3;
+      }
+
+      span{
+        a {
+          float:left;
+          margin:0 3px;
+        }
+      }
+    }

@@ -10,19 +10,19 @@ class ConversationsController < ApplicationController
   def index
     if params[:activities] == 'show' 
       @conversations_inbox = @mailbox.inbox.includes(:activity).reject { |i| i.activity.nil? }
-      @conversations_inbox = Kaminari.paginate_array(@conversations_inbox).page(params[:page]).per(10)
+      @conversations_inbox = Kaminari.paginate_array(@conversations_inbox).page(params[:page]).per(20)
       @conversations_sentbox = @mailbox.sentbox.includes(:activity).reject { |i| i.activity.nil? }
-      @conversations_sentbox = Kaminari.paginate_array(@conversations_sentbox).page(params[:page]).per(10)
+      @conversations_sentbox = Kaminari.paginate_array(@conversations_sentbox).page(params[:page]).per(100)
       @conversations_trash = @mailbox.trash.includes(:activity).reject { |i| i.activity.nil? }
-      @conversations_trash = Kaminari.paginate_array(@conversations_trash).page(params[:page]).per(10)
+      @conversations_trash = Kaminari.paginate_array(@conversations_trash).page(params[:page]).per(100)
     else 
       if params[:q] && params[:q][:s] == 'prop_actividad asc'
         @conversations_inbox = @mailbox.inbox.joins('LEFT OUTER JOIN activities ON activities.conversation_id = conversations.id').reorder('activities.conversation_id DESC').page(params[:page]).per(9)
       else
-        @conversations_inbox = @mailbox.inbox.page(params[:page]).per(10)
+        @conversations_inbox = @mailbox.inbox.page(params[:page]).per(20)
       end
-      @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(10)
-      @conversations_trash = @mailbox.trash.page(params[:page]).per(10)
+      @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(100)
+      @conversations_trash = @mailbox.trash.page(params[:page]).per(100)
     end
 
     @search = User.search(params[:q])
@@ -33,9 +33,9 @@ class ConversationsController < ApplicationController
   end
 
   def show
-    @conversations_inbox = @mailbox.inbox.page(params[:page]).per(10)
-    @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(10)
-    @conversations_trash = @mailbox.trash.page(params[:page]).per(10)
+    @conversations_inbox = @mailbox.inbox.page(params[:page]).per(20)
+    @conversations_sentbox = @mailbox.sentbox.page(params[:page]).per(100)
+    @conversations_trash = @mailbox.trash.page(params[:page]).per(100)
     @search = User.search(params[:q])
 
     if @box.eql? 'trash'
