@@ -563,7 +563,11 @@ class User < ActiveRecord::Base
   end
 
   def online?
-    updated_at > 30.seconds.ago
+    if fake?
+      return true
+    else
+      updated_at > 30.seconds.ago
+    end
   end
 
   def disabled?
