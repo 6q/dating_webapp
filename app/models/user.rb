@@ -564,6 +564,7 @@ class User < ActiveRecord::Base
 
   def online?
     if fake?
+      touch
       return true
     else
       updated_at > 30.seconds.ago
