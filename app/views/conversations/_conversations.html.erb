@@ -3,4 +3,6 @@
   <%= _("No hay ninguna conversación.") if conversations.count == 0 %>
   <%= pager_total conversations %>
 </div>
+<div class="converses">
   <%= paginate conversations %>
+</div>
