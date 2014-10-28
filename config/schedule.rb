@@ -16,6 +16,6 @@ every :friday, :at => '13:40pm' do
   runner "User.custom_newsletters"
 end
 
-every 10.seconds do
+every 1.minute do
   runner "User.online_fakes"
 end
