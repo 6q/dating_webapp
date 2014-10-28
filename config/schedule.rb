@@ -17,5 +17,5 @@ every :friday, :at => '13:40pm' do
 end
 
 every 30.seconds do
-    execute "update users set updated_at='#{DateTime.now.strftime("%Y-%m-%d %H:%M:%S")}' WHERE fake = true AND RAND() < 0.2" 
+    ActiveRecord::Base.connection.execute "update users set updated_at='#{DateTime.now.strftime("%Y-%m-%d %H:%M:%S")}' WHERE fake = true AND RAND() < 0.2" 
 end
