@@ -16,6 +16,9 @@ every :friday, :at => '13:40pm' do
   runner "User.custom_newsletters"
 end
 
-every 30.seconds do
-    ActiveRecord::Base.connection.execute "update users set updated_at='#{DateTime.now.strftime("%Y-%m-%d %H:%M:%S")}' WHERE fake = true AND RAND() < 0.2" 
+every 10.seconds do
+	fake_users = User.fake.limit(100).order("RANDOM()")
+	fake_users do |fake_user|
+		fake_user.touch
+	end
 end
