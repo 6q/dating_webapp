@@ -1814,3 +1814,19 @@ section.list {
   }
 
 }
+
+.clean-trash {
+  display:block;
+  margin:20px 0 20px 10px;
+  a {
+    background:image-url('clean-trash.png') 0 0 no-repeat;
+    background-color:#5BA8E5;
+    color:#fff;
+    padding:12px 17px 12px 37px;
+    border-radius:2px;
+    &:hover {
+      text-decoration:none;
+    }
+  }
+
+}

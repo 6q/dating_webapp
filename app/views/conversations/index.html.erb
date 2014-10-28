@@ -29,7 +29,7 @@
         </div>
 
         <div class="tab-pane<%= ' active' if @box.eql? 'trash' %>" id="trash">
-          <div><%= link_to _('Vaciar papelera'), destroy_all_conversations_path, method: :delete, confirm: _('Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?') %></div>
+          <div class="clean-trash"><%= link_to _('Vaciar papelera'), destroy_all_conversations_path, method: :delete, confirm: _('Se eliminarán definitivamente todos los mensajes. ¿Estas seguro?') %></div>
           <%= render partial: 'conversations', locals: {conversations: @conversations_trash} %>
         </div>
         <!-- end tabs -->
