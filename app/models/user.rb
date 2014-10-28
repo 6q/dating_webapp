@@ -563,12 +563,12 @@ class User < ActiveRecord::Base
   end
 
   def online?
-    if fake?
-      touch
-      return true
-    else
-      updated_at > 30.seconds.ago
-    end
+   #if fake?
+    #  touch
+    #  return true
+    #else
+      updated_at > 60.seconds.ago
+    #end
   end
 
   def disabled?

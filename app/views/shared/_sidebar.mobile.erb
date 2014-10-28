@@ -32,7 +32,7 @@ $(document).ready(function() {
 		      </a>
 		    </li>
 		    <li>
-		    	<%= link_to _('Búsquedas'), search_path(q: { years_lteq: current_user.lf_age_from, years_gteq: current_user.lf_age_to, city_eq: current_user.city }) %>
+		    	<%= link_to _('Búsquedas'), search_path({ years_start_lteq: current_user.lf_age_from, years_end_gteq: current_user.lf_age_to, city_eq: current_user.city, distance: '250', pictures_main_not_null: true }) %>
 		    </li>
 		</ul>
 	</section>
