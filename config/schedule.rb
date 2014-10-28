@@ -17,8 +17,5 @@ every :friday, :at => '13:40pm' do
 end
 
 every 10.seconds do
-	fake_users = User.fake.limit(100).order("RANDOM()")
-	fake_users do |fake_user|
-		fake_user.touch
-	end
+  runner "User.online_fakes"
 end

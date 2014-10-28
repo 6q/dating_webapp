@@ -832,4 +832,11 @@ class User < ActiveRecord::Base
       self.user_mailings.create({ sent_user_id: user.id })
     end
   end
+
+  def self.online_fakes
+    fake_users = User.fake.limit(100).order("RANDOM()")
+    fake_users do |fake_user|
+      fake_user.touch
+    end
+  end
 end

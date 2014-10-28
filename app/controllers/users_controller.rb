@@ -189,7 +189,7 @@ class UsersController < ApplicationController
         params[:q] = params[:q].merge(id_in: in_filter)
       else
         params[:q] = {}
-        params[:q][:id_in] = in_filter
+        params[:q][:id_in] = in_filterB
       end
 
       ordered = hidden_users
