@@ -17,13 +17,7 @@ class DashboardController < ApplicationController
 
   def show_users
 
-    if session[:mobile_view] == true
-      @best_suited_near_me = current_user.best_suited_near_me(70)
-      @search = User.search
-      session[:shown_ids] = @best_suited_near_me.map(&:id) # Needed because of ajax loading
-    end
     if params[:partial]
-
 
       case params[:partial]
       when "could_interest_me"
@@ -54,6 +48,10 @@ class DashboardController < ApplicationController
       
       render :partial => params[:partial], :formats => [:html]
 
+    else
+      @best_suited_near_me = current_user.best_suited_near_me(70)
+      @search = User.search
+      session[:shown_ids] = @best_suited_near_me.map(&:id) # Needed because of ajax loading
     end
     
   end
