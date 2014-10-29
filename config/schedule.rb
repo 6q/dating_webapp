@@ -16,6 +16,18 @@ every :friday, :at => '13:40pm' do
   runner "User.custom_newsletters"
 end
 
+every day, at => '10:00am' do
+  runner "User.connect_fakes_start"
+end
+
 every 1.minute do
-  runner "User.online_fakes"
+  runner "User.maintain_fakes"
+end
+
+every 30.minute do
+  runner "User.connect_fakes"
+end
+
+every 15.minute do
+  runner "User.disconnect_fakes"
 end

@@ -241,6 +241,8 @@ class User < ActiveRecord::Base
   premium_user = lambda {|user| user.has_role?(:premium_user) }
   invited_user = lambda {|user| user.has_role?(:invited_user) }
 
+  online_users = []
+
   validates_presence_of :name
   validates_presence_of :surname
   validates_presence_of :email
@@ -563,12 +565,12 @@ class User < ActiveRecord::Base
   end
 
   def online?
-   if fake?
-      touch
-      return true
-    else
-      updated_at > 30.seconds.ago
-    end
+   #if fake?
+    #  touch
+    #  return true
+    #else
+      updated_at > 90.seconds.ago
+    #end
   end
 
   def disabled?
@@ -833,10 +835,50 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.online_fakes
-    fake_users = User.fake.limit(100).order("RANDOM()")
+
+  # run every day
+  def self.connect_fakes_start
+
+    online_users = []
+    fake_users = User.fake.limit(rand(300..400)).order("RANDOM()")
+
     fake_users do |fake_user|
+      
+      fake_user.touch
+      online_users += fake_user
+    end
+
+  end 
+
+  # run every 2 hour
+  def self.connect_fakes
+
+    fake_users = User.fake.limit(10).order("RANDOM()")
+
+    fake_users do |fake_user|
+      fake_user.touch
+      # if not online
+      unless fake_user.include?(online_users)
+        online_users += fake_user
+      end
+    end
+
+  end
+
+  #run every 1 minute
+  def self.maintain_fakes
+    online_users do |fake_user|
       fake_user.touch
     end
   end
+
+  # run every 1 hour
+  def self.disconnect_fakes
+    fake_users = online_users.limit(5).order("RANDOM()")
+    fake_users do |fake_user|
+      online_users.delete(fake_user)
+    end
+  end
+
+  
 end
