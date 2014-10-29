@@ -759,8 +759,8 @@ class User < ActiveRecord::Base
     user_visits.where('visitor_id = :id', id: user.id).first
   end
 
-  def liker?(user[)
-  ]    likers.where('creator_id = :id', id: user.id).first
+  def liker?(user)
+    likers.where('creator_id = :id', id: user.id).first
   end
 
   def active_for_authentication?
