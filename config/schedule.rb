@@ -17,18 +17,18 @@ every :friday, :at => '13:40pm' do
 end
 
 
-# every 1.day, :at => '10:00am' do
-#   runner "User.connect_fakes_start"
-# end
+every 1.day, :at => '10:00am' do
+   runner "User.connect_fakes_start"
+end
 
-# every 1.minute do
-#   runner "User.maintain_fakes"
-# end
+every 1.minute do
+   runner "User.maintain_fakes"
+end
 
-# every 30.minute do
-#   runner "User.connect_fakes"
-# end
+every 30.minute do
+   runner "User.connect_fakes"
+end
 
-# every 15.minute do
-#   runner "User.disconnect_fakes"
-# end
+every 15.minute do
+   runner "User.disconnect_fakes"
+end

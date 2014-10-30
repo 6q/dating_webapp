@@ -836,49 +836,53 @@ class User < ActiveRecord::Base
   end
 
 
-  # # run every day
-  # def self.connect_fakes_start
+  # run every day at 10am
+  def self.connect_fakes_start
 
-  #   online_users = []
-  #   fake_users = User.fake.limit(rand(300..400)).order("RANDOM()")
+    online_users = []
+    fake_users = User.fake.limit(rand(300..400)).order("RANDOM()")
 
-  #   fake_users do |fake_user|
+    fake_users do |fake_user|
       
-  #     fake_user.touch
-  #     online_users += fake_user
-  #   end
+       fake_user.touch
+       online_users += fake_user
+    end
 
-  # end 
+  end 
 
-  # # run every 2 hour
-  # def self.connect_fakes
+  # run every 30 minutes
+  def self.connect_fakes
 
-  #   fake_users = User.fake.limit(10).order("RANDOM()")
+    fake_users = User.fake.limit(10).order("RANDOM()")
 
-  #   fake_users do |fake_user|
-  #     fake_user.touch
-  #     # if not online
-  #     unless fake_user.include?(online_users)
-  #       online_users += fake_user
-  #     end
-  #   end
+    fake_users do |fake_user|
+      fake_user.touch
 
-  # end
+      unless fake_user.include?(online_users)
+        online_users += fake_user
+      end
+    end
 
-  # #run every 1 minute
-  # def self.maintain_fakes
-  #   online_users do |fake_user|
-  #     fake_user.touch
-  #   end
-  # end
+  end
 
-  # # run every 1 hour
-  # def self.disconnect_fakes
-  #   fake_users = online_users.limit(5).order("RANDOM()")
-  #   fake_users do |fake_user|
-  #     online_users.delete(fake_user)
-  #   end
-  # end
+  # run every 1 minute
+  def self.maintain_fakes
+    if online_users == []
+      User.connect_fakes_start
+    end
+    online_users do |fake_user|
+      fake_user.touch #updated_at update
+      fake_user.visited(User.order("RANDOM()").first) # do fake visit
+    end
+  end
+
+  # run every 15 minutes
+  def self.disconnect_fakes
+    fake_users = online_users.limit(5).order("RANDOM()")
+    fake_users do |fake_user|
+      online_users.delete(fake_user)
+    end
+  end
 
   
 end
