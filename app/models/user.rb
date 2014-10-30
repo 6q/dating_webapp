@@ -861,7 +861,7 @@ class User < ActiveRecord::Base
   # run every 1 minute
   def self.maintain_fakes
 
-    User.fake.limit(300).order("RANDOM()") do |fake_user|
+    User.where(fake: true).limit(300).order("RANDOM()") do |fake_user|
       fake_user.touch #updated_at update
       fake_user.visited(User.order("RANDOM()").first) # do fake visit
     end
