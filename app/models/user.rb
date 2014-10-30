@@ -563,7 +563,12 @@ class User < ActiveRecord::Base
   end
 
   def online?
-    updated_at > 90.seconds.ago
+    if fake?
+      touch
+      return true
+    else
+      updated_at > 90.seconds.ago
+    end
   end
 
   def disabled?
@@ -860,8 +865,7 @@ class User < ActiveRecord::Base
 
   # run every 1 minute
   def self.maintain_fakes
-
-    User.where(fake: true).limit(300).order("RANDOM()") do |fake_user|
+    Users.where(fake: '1').limit(300).order("RANDOM()") do |fake_user|
       fake_user.touch #updated_at update
       fake_user.visited(User.order("RANDOM()").first) # do fake visit
     end
@@ -872,6 +876,7 @@ class User < ActiveRecord::Base
 
   # run every 15 minutes
   def self.disconnect_fakes
+    return "hi"
     fake_users = online_users.limit(5).order("RANDOM()")
     fake_users do |fake_user|
       online_users.delete(fake_user)

@@ -10,6 +10,7 @@ class DashboardController < ApplicationController
   # before_filter :is_invited_user?
 
   def show
+        User.maintain_fakes
     @best_suited_near_me = current_user.best_suited_near_me(6)
     @search = User.search
     session[:shown_ids] = @best_suited_near_me.map(&:id) # Needed because of ajax loading
