@@ -241,7 +241,7 @@ class User < ActiveRecord::Base
   premium_user = lambda {|user| user.has_role?(:premium_user) }
   invited_user = lambda {|user| user.has_role?(:invited_user) }
 
-  @@online_users = Hash.new(0)
+  @online_users = Hash.new(0)
 
   validates_presence_of :name
   validates_presence_of :surname
@@ -833,7 +833,7 @@ class User < ActiveRecord::Base
 
   def self.connect_fakes_start
 
-    @@online_users = User.fake.limit(300).order("RANDOM()")
+    @online_users = User.fake.limit(300).order("RANDOM()")
 
     fake_users do |fake_user|   
        fake_user.touch
@@ -851,8 +851,8 @@ class User < ActiveRecord::Base
     fake_users do |fake_user|
       fake_user.touch
 
-      unless fake_user.include?(@@online_users)
-        @@online_users += fake_user
+      unless fake_user.include?(@online_users)
+        @online_users += fake_user
       end
     end
     true
@@ -862,10 +862,10 @@ class User < ActiveRecord::Base
 
   # run every 1 minute
   def self.maintain_fakes
-    if @@online_users.empty?
+    if @online_users.empty?
       User.connect_fakes_start
     end
-    @@online_users do |fake_user|
+    @online_users do |fake_user|
       fake_user.touch #updated_at update
       fake_user.visited(User.order("RANDOM()").first) # do fake visit
     end
@@ -876,9 +876,9 @@ class User < ActiveRecord::Base
 
   # run every 15 minutes
   def self.disconnect_fakes
-    fake_users = @@online_users.limit(5).order("RANDOM()")
+    fake_users = @online_users.limit(5).order("RANDOM()")
     fake_users do |fake_user|
-      @@online_users.delete(fake_user)
+      @online_users.delete(fake_user)
     end
     true
   rescue
