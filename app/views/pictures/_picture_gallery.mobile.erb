@@ -6,8 +6,8 @@
       <li>
         <div class="<%= 'main' if pic.main %>">
           <div class="overlay">
-            <%= link_to image_tag('cross.png', title: _('Eliminar imagen'), alt: _('Eliminar imagen')), pic, method: :delete, confirm: _("¿Estas de seguro que quieres borrar la foto?"), title: _('Eliminar imagen') %>
-            <%= link_to image_tag('mainpic.png', title: _('Marcar como principal'), alt: _('Marcar como principal')), picture_path(pic, main: true), method: :put, title: _('Marcar como principal') %>
+            <%= link_to image_tag('cross.png', title: _('Eliminar imagen'), alt: _('Eliminar imagen')), pic, method: :delete, confirm: _("¿Estas de seguro que quieres borrar la foto?"), title: _('Eliminar imagen'), :class => 'external' %>
+            <%= link_to image_tag('mainpic.png', title: _('Marcar como principal'), alt: _('Marcar como principal')), picture_path(pic, main: true), method: :put, title: _('Marcar como principal'), :class => 'external' %>
           </div>
           <span>
             <%= link_to pic.image.jpg.url , :class => 'grouped_elements' do %>

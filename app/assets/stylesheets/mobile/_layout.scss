@@ -475,3 +475,14 @@ display: none;
     }
   }
 }
+
+#progress_modal {
+  text-align:center;
+  width: calc(100% - 80px);
+  margin: 50px 40px;
+  border-radius:5px;
+  padding-top:15px;
+  img {
+    width:150px;
+  }
+}
