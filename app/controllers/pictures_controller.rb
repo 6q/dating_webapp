@@ -18,14 +18,15 @@ class PicturesController < ApplicationController
         end
       end
 
-        if @picture.save
-          session[:registration_image] = @picture.id unless current_user
+      if @picture.save
+        session[:registration_image] = @picture.id unless current_user
 
           render json: {
             crop_template: render_to_string(partial: 'pictures/picture_crop', locals: {picture: @picture}),
             update_path: picture_path(@picture)
           }
-        end
+
+      end
 
     end
   end

@@ -39,6 +39,7 @@ $(function () {
       done: function(event, data) {
         showModalAndCrop(event, data);
         $('#progress_modal').modal('hide');
+        window.location = '/profile';
       },
       progress: function (e, data) {
         var progress = parseInt(data.loaded / data.total * 100, 10);
