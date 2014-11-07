@@ -2,7 +2,7 @@
 $(document).ready(function() {
     $('#open-main-sidebar').sidr({
       name: 'main-sidebar',
-      side: 'left' // By default
+      side: 'right' // By default
     });
 });
 </script>
@@ -23,7 +23,8 @@ $(document).ready(function() {
 		      </a>
 		    </li>
 			<li>
-		      <a href="/user/cellove-index"><%= _('Índice Cellove') %> <em><%= current_user.cellove_percentage %>/100</em>
+		      <a href="/user/cellove-index">
+		      	<%= _('Índice Cellove') %> <em><%= current_user.cellove_percentage %>/100</em>
 		      </a>
 		    </li>
 				<li class="profile">

@@ -18,7 +18,7 @@ body.inside {
 			height:40px;
 
 			#open-menu {
-				float:right;
+				float:left;
 				a {
 					width:60px;
 					height:60px;
@@ -73,7 +73,7 @@ body.inside {
 			}
 			#header-actions {
 				position: relative;
-				float: left;
+				float: right;
 				margin-right: 10px;
 				margin-left: 10px;
 				font-size: .8em;

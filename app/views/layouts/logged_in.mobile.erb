@@ -36,13 +36,13 @@
     <div class="loader"></div>
     <header role="banner" class="clearfix">
       <div class="container">
-        <%= render 'shared/user/header-actions' %>
-        <div id="logo">
-          <h1><%= link_to "Cellove", dashboard_path %></h1>
-        </div>
         <div id="open-menu">
           <a id="open-main-sidebar" href="#main-sidebar"><%= image_tag("mobile-menu.png", :alt => "Menu") %></a> 
         </div>
+        <div id="logo">
+          <h1><%= link_to "Cellove", dashboard_path %></h1>
+        </div>
+        <%= render 'shared/user/header-actions' %>
       </div>
     </header>
 

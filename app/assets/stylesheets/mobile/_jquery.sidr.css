@@ -82,7 +82,8 @@
 	margin:0;
 	line-height:40px;
 	border-top:1px solid #fff;
-	border-bottom:1px solid #dfdfdf
+	border-bottom:1px solid #dfdfdf;
+	text-align: left;
 }
 .sidr ul li:hover,.sidr ul li.active,.sidr ul li.sidr-class-active
 {
