@@ -441,12 +441,13 @@ display: none;
 }
 
 #crop_modal {
-  height:100%;
-  width: 100%;
-  margin: 0;
+
+  width: calc(100% - 80px);
+  margin: 50px 40px;
   left: 0;
-  top: 0;
-  border-radius:0;
+  top: 50;
+  border-radius:5px;
+  background:#fff;
   #html5-lightbox-cellove {
     display:none;
   }
@@ -459,8 +460,7 @@ display: none;
   .modal-footer {
     text-align: center;
     vertical-align: middle;
-    height:100%;
-    width:100%;
+
     border-radius:0;
     padding:0;
     .btn {
@@ -468,10 +468,10 @@ display: none;
     }
     .save-cropped {
       display:inline;
-      width: 95%;
-      margin:40% 0 0 0;
-      padding:30px 50px;
-      font-size:24px !important;
+      margin: 20px;
+      padding: 20px;
+      width: calc(100% - 40px);
+      font-size:20px !important;
     }
   }
 }
@@ -482,6 +482,7 @@ display: none;
   margin: 50px 40px;
   border-radius:5px;
   padding-top:15px;
+  left:0;
   img {
     width:150px;
   }

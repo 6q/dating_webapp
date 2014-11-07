@@ -39,7 +39,8 @@ $(function () {
       done: function(event, data) {
         showModalAndCrop(event, data);
         $('#progress_modal').modal('hide');
-        window.location = '/profile';
+        if (window.location.href.indexOf("sign_up") > -1) {}
+        else window.location = '/profile';
       },
       progress: function (e, data) {
         var progress = parseInt(data.loaded / data.total * 100, 10);
