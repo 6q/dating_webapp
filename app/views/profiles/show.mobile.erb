@@ -2,7 +2,7 @@
 
     <% if current_user.deleted_at.present? %>
         <div class="reactivar-cuenta">
-            <%= link_to _('Reactivar cuenta'), recover_user_registration_path, method: :post, confirm: _('¿Estas seguro?'), :class => 'btn btn-info' %>
+            <%= link_to _('Reactivar cuenta'), recover_user_registration_path, method: :post, confirm: _('¿Estas seguro?'), :class => 'btn btn-info external' %>
         </div>
     <% else %>
         <header>
@@ -88,7 +88,7 @@
 
             <h3><%= _('Desactivar cuenta') %></h1>
             <div class="center delete">
-                <%= link_to _('Desactivar cuenta'), user_registration_path, method: :delete, confirm: _('¿Estas seguro?') %>
+                <%= link_to _('Desactivar cuenta'), user_registration_path, method: :delete, confirm: _('¿Estas seguro?'), :class => 'external' %>
             </div>
         </article>
     <% end %>
