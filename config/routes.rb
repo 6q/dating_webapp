@@ -1,4 +1,9 @@
 Cellove::Application.routes.draw do
+
+  if Rails.env.production?
+    match "*path" => redirect("https://www.cellove.com/%{path}"), :constraints => { :protocol => "http://" }
+  end  
+
   if Rails.env.development? || Rails.env.test?
     mount MailPreview => 'mail_view'
     get 'send_newsletters' => 'users#send_newsletters', as: :send_newsletters # Only for testing!
