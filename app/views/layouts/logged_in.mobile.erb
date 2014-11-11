@@ -37,7 +37,10 @@
     <header role="banner" class="clearfix">
       <div class="container">
         <div id="open-menu">
-          <a id="open-main-sidebar" href="#main-sidebar"><%= image_tag("mobile-menu.png", :alt => "Menu") %></a> 
+          <a id="open-main-sidebar" href="#main-sidebar"><%= image_tag("mobile-menu.png", :alt => "Menu") %>
+          <%= indicate_mobile_menu( current_user.likers.unseen.count + current_user.mailbox.inbox.unread(current_user).to_a.count + current_user.rates.unseen.count + current_user.user_visits.unseen.count ).html_safe %>
+
+          </a> 
         </div>
         <div id="logo">
           <h1><%= link_to "Cellove", dashboard_path %></h1>

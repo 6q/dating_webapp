@@ -102,4 +102,17 @@ module UserHelper
 
     html.html_safe
   end
+
+  def indicate_mobile_menu(count)
+    if count > 9
+      html = "<span>!</span>"
+    elsif count > 0
+      html = "<span>#{count}</span>"
+    else
+      html = ""
+    end
+
+    html.html_safe
+  end
+
 end
