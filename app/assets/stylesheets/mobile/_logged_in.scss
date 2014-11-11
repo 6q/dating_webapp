@@ -30,7 +30,7 @@ body.inside {
 					span {
 						border-radius: 10px;
 						border: 2px solid #fff;
-						background: red;
+						background: #C12222;
 						width: 12px;
 						height: 15px;
 						text-align: center;
@@ -189,6 +189,9 @@ body.inside {
 			font-weight: bold;
 			text-decoration: none;
 			font-style:normal;
+		}
+		span {
+			background: #C12222;
 		}
 	}
 	#main_box,#legalBox,#languageBox {

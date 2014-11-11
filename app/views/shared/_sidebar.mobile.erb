@@ -11,7 +11,7 @@ $(document).ready(function() {
 	  	<ul>
 		    <%
 		      number_of_visits = current_user.user_visits.unseen.count
-		      visit_str = ('<em>' + number_of_visits.to_s + '</em>').html_safe unless number_of_visits == 0
+		      visit_str = ('<span>' + number_of_visits.to_s + '</span>').html_safe unless number_of_visits == 0
 		    %>
 		    <li><%= link_to (_('Me han visitado') + (!visit_str.nil? ? visit_str : '')).html_safe, user_hits_path %></li>
 		    <li><%= link_to (_('Les he gustado') + indicate(current_user.likers.unseen.count)).html_safe, user_likes_path %></li>
