@@ -78,7 +78,7 @@ Cellove::Application.configure do
   }
 
   # Absolute urls on assets for mailer
-  config.action_controller.asset_host = 'https://cellove.com'
+  config.action_controller.asset_host = 'https://www.cellove.com'
   config.action_mailer.asset_host = config.action_controller.asset_host
 
   # Log the query plan for queries taking more than this (works
