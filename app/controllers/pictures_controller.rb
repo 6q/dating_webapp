@@ -36,6 +36,10 @@ class PicturesController < ApplicationController
       geometry = "#{cd[:w]}x#{cd[:h]}+#{cd[:x]}+#{cd[:y]}"
       @picture.image = @picture.image.thumb(geometry).tempfile
       @picture.save
+    elsif params[:rotate]
+      @picture.image = @picture.image.process(:rotate, 90, :background_colour => 'transparent').tempfile
+      @picture.save
+      redirect_to :back
     elsif main = params[:main]
       current_user.pictures.update_all(main: false)
       @picture.main = true
