@@ -27,6 +27,10 @@
         background:#e5e5e5;
         padding:3px 5px 0px;
         border-bottom-left-radius: 5px;
+        img {
+          height:20px;
+          margin:0 3px 3px 0;
+        }
       }
       &:hover {
         .overlay{ 
@@ -77,9 +81,6 @@
       }
       .main {
         background: #8CCC8C;
-        .overlay {
-          background: #8CCC8C;
-        }
       }
     }
   }
