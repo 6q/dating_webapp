@@ -1,5 +1,5 @@
 set :user, "deploy"
-set :domain, "mobile.cellove.com"
+set :domain, "88.198.45.199"
 set(:branch) { ENV.fetch('BRANCH', 'mobile') }
 set :stage, "mobile"
 
