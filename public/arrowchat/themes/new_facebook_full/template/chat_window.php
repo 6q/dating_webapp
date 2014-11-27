@@ -45,5 +45,5 @@
 		</div>
 	</div>
 	<div class="arrowchat_tabcontenttext" id="arrowchat_tabcontenttext_'+b+'"></div>
-	<div class="arrowchat_tabcontentinput"><textarea class="arrowchat_textarea"></textarea><div class="arrowchat_smiley_button"></div></div>
+	<div class="arrowchat_tabcontentinput"><textarea class="arrowchat_textarea"></textarea><button class="send_button">></button></div>
 </div>

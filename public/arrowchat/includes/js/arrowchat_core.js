@@ -200,7 +200,7 @@
 					fa = typing;
 				}
 			}
-			if (key.keyCode == 13 && key.shiftKey == 0) {
+			if ((key.keyCode == 13 && key.shiftKey == 0) || key == "BUTTON") {
 				var i = $element.val();
 				i = i.replace(/^\s+|\s+$/g, "");
 				$element.val("").css({
@@ -1563,6 +1563,9 @@
 				a(".arrowchat_textarea", $user_popups[b]).keydown(function(h) {
 					return userchatKeydown(h, a(this), b, jabber);
 				});
+				a(".send_button", $user_popups[b]).click(function() {
+					return userchatKeydown("BUTTON", a(".arrowchat_textarea", $user_popups[b]), b, jabber);
+				});
 				a(".arrowchat_textarea", $user_popups[b]).keyup(function(h) {
 					return userchatKeyup(h, a(this), b);
 				});
@@ -1818,11 +1821,9 @@
 						current_top_element.prevAll().each(function() {
 							previous_height += a(this).outerHeight();
 						});
-						if (times == 1) {
-							a("#arrowchat_tabcontenttext_" + b).scrollTop(50000);
-						} else {
-							a("#arrowchat_tabcontenttext_" + b).scrollTop(previous_height);
-						}
+
+						a("#arrowchat_tabcontenttext_" + b).scrollTop() = a("#arrowchat_tabcontenttext_" + b).scrollHeight();
+
 						a("#arrowchat_tabcontenttext_" + b).scroll(function() {
 							if (a("#arrowchat_tabcontenttext_" + b).scrollTop() < 50 && history_ids[b] != 1) {
 								history_ids[b] = 1;
@@ -2641,7 +2642,7 @@
 					if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
 						setAvatarVisibility(1);
 					}
-					a("#arrowchat_tabcontenttext_" + b).scrollTop(50000);
+					a("#arrowchat_tabcontenttext_" + b).scrollTop() = a("#arrowchat_tabcontenttext_" + b).scrollHeight();
 					showTimeAndTooltip();
 				}
 				j != b && d != 1 && i != 1 && notifyNewMessage(b, 1, 1);
@@ -2666,7 +2667,7 @@
 				}, 500);
 			} else {
 				a("#arrowchat_tabcontenttext_" + b).append("<div>" + c + "</div>");
-				a("#arrowchat_tabcontenttext_" + b).scrollTop(50000);
+				a("#arrowchat_tabcontenttext_" + b).scrollTop() = a("#arrowchat_tabcontenttext_" + b).scrollHeight();
 				G[b] = 1;
 			}
 		}
@@ -3245,8 +3246,9 @@
 						setAvatarVisibility(1);
 					}
 				}
+				a("#arrowchat_tabcontenttext_" + from).scrollTop() = a("#arrowchat_tabcontenttext_" + from).scrollHeight();
 				if (container <= container2 || !$users[from].hasClass("arrowchat_tabclick")) {
-					a("#arrowchat_tabcontenttext_" + from).scrollTop(50000);
+					a("#arrowchat_tabcontenttext_" + from).scrollTop() = a("#arrowchat_tabcontenttext_" + from).scrollHeight();
 				} else {
 					displayMessage("arrowchat_chatbox_message_flyout_" + from, lang[134], "notice");
 				}

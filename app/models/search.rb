@@ -27,15 +27,13 @@
 class Search < ActiveRecord::Base
   attr_accessible :afinity_eq, :complexion_eq, :children_in, :description_cont,
                   :distance, :height_gteq, :height_lteq, :online, :name,
-                  :pictures_main_eq, :postal_code_cont, :smoker_in,
+                  :pictures_main_eq, :smoker_in,
                   :sort, :city_eq, :years_gteq, :years_lteq
 
   belongs_to :user
 
   def search_path
-    if self.online?
-      updated_at_gteq = 90.seconds.ago
-    end
+
     Rails.application.routes.url_helpers.users_path(:q => {
       :years_start_lteq => self.years_lteq,
       :years_end_gteq => self.years_gteq,
@@ -51,8 +49,7 @@ class Search < ActiveRecord::Base
       :complexion_eq => self.complexion_eq
    },
     :distance => self.distance,
-    :city => self.city_eq,
-    :postal_code => self.postal_code_cont
+    :city => self.city_eq
   )
   end
 end

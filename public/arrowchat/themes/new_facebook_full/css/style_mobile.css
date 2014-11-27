@@ -970,7 +970,7 @@ new_facebook_full
 
 .arrowchat_textarea {
 	background: none;
-	width: 100%;
+	width: calc(100% - 40px);
 	border: 1px solid gray;
 	height: 22px !important;
 	padding: 1px 0px 0px 0px;
@@ -984,6 +984,8 @@ new_facebook_full
 	text-align: left;
 	margin: 0px;
 }
+
+.send_button {height:20px; width:20px;}
 
 .arrowchat_tabcontentinput textarea:focus {
 
