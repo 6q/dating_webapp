@@ -7,7 +7,8 @@ Geocoder.configure(
   #:lookup => :yahoo,
 
   lookup: :bing,
-  api_key: 'Aks_Erhf-lo2nJHiaa8x1jTG_MjY6IJjzs8fAnJ_O7jd-0kPqOkDhExRt1c9ue0w', # ENV['BING_GEOCODE_ID'] instead?
+  api_key: 'AoNvFv-tODwqbAfMyZdLBLIaxPzyj6rn6D6Ed6a2MaKY04auUMlO2sj7iX6y1v9E', # ENV['BING_GEOCODE_ID'] instead?
+  # Microsoft account: francesc@gestinet.com
   cache: Rails.cache,
 
 )
