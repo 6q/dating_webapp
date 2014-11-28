@@ -1561,14 +1561,19 @@ section.messages{
 	.col{
 		width:100%;
 		float: left;
-    clear:both;
+    	clear:both;
 
 		font-size:.9em;
 
-    .span3 {
-      width:calc(100% - 120px);
-      font-weight:bold;
-    }
+		.control-group {
+			width:50%;
+			float:left;
+		}
+
+	    .span3 {
+	      width:calc(100% - 120px);
+	      font-weight:bold;
+	    }
 
 		.text-right {
 			margin-bottom:15px;

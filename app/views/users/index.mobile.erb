@@ -1,5 +1,11 @@
 <%= render 'shared/best_suited_near_me' %>
-  
+
+<script>
+$(document).on('click', '.btn-search', function(e) {
+  $('html,body').scrollTop(0);
+  return false;
+});
+</script>
 <section class="search boxed">
   <header>
     <h1 class="section_title"><%= _('Encuentra personas afines a tí') %></h1>
@@ -7,7 +13,7 @@
   </header> 
   <div class="search-box">
 
-      <a href="#adv-search" class="btn btn-info width100" data-toggle="collapse"><%= _('Realizar búsqueda') %></a>
+      <a href="#adv-search" class="btn btn-info width100 btn-search" data-toggle="collapse"><%= _('Realizar búsqueda') %></a>
     <%= search_form_for @search, class: 'form-horizontal overflow-show' do |f| %>
       <div id="adv-search" class="clearfix collapse">
 
