@@ -971,7 +971,7 @@ new_facebook_full
 
 .arrowchat_textarea {
 	background: none;
-	width: calc(100% - 40px);
+	width: calc(100% - 50px);
 	border: 1px solid gray;
 	height: 22px !important;
 	padding: 1px 0px 0px 0px;
