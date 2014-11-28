@@ -141,8 +141,13 @@ new_facebook_full
 .arrowchat_chatboxtabtitlemouseover2{background-color:#5caae8 !important}
 .arrowchat_chatboxtabtitlemouseover3{background-color:#5caae8 !important}
 .arrowchat_tabcontentinput{padding:4px 5px 2px 5px;border:0px;outline:none;text-align:left;position:relative}
-.arrowchat_textarea{background:none;width:187px;border:0px;height:18px;padding:1px 5px 0px 2px;overflow:hidden;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;color:#444;background-color:#fff;outline:none;resize:none;text-align:left;margin:0px;}
-.send_button {height:16px;}
+.arrowchat_textarea{background:none;width:165px;border:0px;height:25px;padding:1px 5px 0px 2px;overflow:hidden;font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;font-size:11px;color:#444;background-color:#fff;outline:none;resize:none;text-align:left;margin:0px;}
+.send_button {height:25px; width:40px;
+	background: url(themes/<?php echo $theme; ?>/images/send_button.png) no-repeat top left;
+	padding:0;
+	margin:0 0 0 5px;
+	border:none;
+}
 .arrowchat_tabcontentinput textarea:focus{border:0px;background:none;background-color:#fff;margin:0px;padding:1px 5px 0px 2px}
 .arrowchat_chatboxmessage{margin-left:5px;text-align:left}
 .arrowchat_chatboxmessagefrom{margin-left:-1em;font-weight:bold;text-align:left;border-top:1px solid #eee;overflow:none;}
