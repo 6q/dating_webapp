@@ -264,7 +264,7 @@
 
 		function userchatKeyup(key, $element, d) {
 			resizeChatfield($element);
-			a(".arrowchat_tabcontenttext", $user_popups[d]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[d])[0].scrollHeight);
+			a(".arrowchat_tabcontenttext", $user_popups[d]).scrollTop(50000000);
 		}
 
 		function clearUserStatus() {
@@ -1451,7 +1451,7 @@
 								} else {
 									displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[68], "notice");
 								}
-								a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+								a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(5000000);
 							});
 							a("#arrowchat_file_upload_div_" + b).hide();
 							a(".arrowchat_upload_info_text").show();
@@ -1484,7 +1484,7 @@
 						} else {
 							displayMessage("arrowchat_chatbox_message_flyout_" + b, lang[63], "notice");
 						}
-						a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+						a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(5000000);
 					});
 				});
 				var smiley_exist = [];
@@ -1684,7 +1684,7 @@
 							$user_popups[j].css("position", "absolute").css("top", parseInt(a(window).height()) - parseInt($user_popups[j].css("bottom")) - parseInt($user_popups[j].height()) + a(window).scrollTop() + "px");
 						}
 					}
-					a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+					a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(5000000);
 					getStatus("updatingsession") != 1 && a(".arrowchat_textarea", $user_popups[b]).focus();
 				});
 				f != 1 && $users[b].click();
@@ -1821,8 +1821,7 @@
 						current_top_element.prevAll().each(function() {
 							previous_height += a(this).outerHeight();
 						});
-
-						a("#arrowchat_tabcontenttext_" + b).scrollTop() = a("#arrowchat_tabcontenttext_" + b).scrollHeight();
+						a("#arrowchat_tabcontenttext_" + b).scrollTop(5000000);
 
 						a("#arrowchat_tabcontenttext_" + b).scroll(function() {
 							if (a("#arrowchat_tabcontenttext_" + b).scrollTop() < 50 && history_ids[b] != 1) {
@@ -1833,6 +1832,7 @@
 								}
 							}
 						});
+						a("#arrowchat_tabcontenttext_" + b).animate({ scrollTop: a(document).height() }, "slow");
 					}
 				}
 			});
@@ -2582,7 +2582,7 @@
 				a("#arrowchat_chatroom_message_" + b + " .arrowchat_chatroom_message_content").html(formatTimestamp(new Date(Math.floor((new Date).getTime() / 1000) * 1000)) + d);
 			} else {
 				$chatroom_chat.append("<div class=\"arrowchat_chatroom_box_message\" id=\"arrowchat_chatroom_message_" + b + "\"><img class=\"arrowchat_chatroom_message_avatar\" src=\"" + u_avatar + "\" alt=\"\" /><div class=\"arrowchat_chatroom_message_name\">" + c + title + ":</div><div class=\"arrowchat_chatroom_message_content  arrowchat_self\">" + formatTimestamp(new Date(Math.floor((new Date).getTime() / 1000) * 1000)) + d + "</div></div>");
-				$chatroom_chat.scrollTop(50000);
+				$chatroom_chat.scrollTop(500000);
 			}
 			showChatroomTime();
 		}
@@ -2642,9 +2642,10 @@
 					if (c_disable_avatars == 1 || a("#arrowchat_setting_names_only :input").is(":checked")) {
 						setAvatarVisibility(1);
 					}
-					a("#arrowchat_tabcontenttext_" + b).scrollTop() = a("#arrowchat_tabcontenttext_" + b).scrollHeight();
+
 					showTimeAndTooltip();
 				}
+				a("#arrowchat_tabcontenttext_" + b).animate({ scrollTop: a(document).height() }, "slow");
 				j != b && d != 1 && i != 1 && notifyNewMessage(b, 1, 1);
 				d != 1 && showDesktopNotification(b, c, e);
 			}
@@ -3246,18 +3247,21 @@
 						setAvatarVisibility(1);
 					}
 				}
-				a("#arrowchat_tabcontenttext_" + from).scrollTop() = a("#arrowchat_tabcontenttext_" + from).scrollHeight();
+				
+				a("#arrowchat_tabcontenttext_" + from).animate({ scrollTop: a(document).height() }, "slow");
 				if (container <= container2 || !$users[from].hasClass("arrowchat_tabclick")) {
-					a("#arrowchat_tabcontenttext_" + from).scrollTop() = a("#arrowchat_tabcontenttext_" + from).scrollHeight();
+					a("#arrowchat_tabcontenttext_" + from).animate({ scrollTop: a(document).height() }, "slow");
 				} else {
 					displayMessage("arrowchat_chatbox_message_flyout_" + from, lang[134], "notice");
 				}
 				self != 1 && old != 1 && showDesktopNotification(from, message, id);
 			} else {
+				a("#arrowchat_tabcontenttext_" + from).animate({ scrollTop: a(document).height() }, "slow");
 				message = stripslashes(message);
 				addMessageToChatbox(from, message, self, old, id, 0, sent);
 				j == "" && 0 && activateUser(from);
 			}
+			a("#arrowchat_tabcontenttext_" + from).animate({ scrollTop: a(document).height() }, "slow");
 		}
 
 		function receiveTyping(id) {
@@ -4109,7 +4113,7 @@
 					} else {
 						addMessageToChatbox(b, c, 1, 1, d, 1, 1);
 					}
-					a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(a(".arrowchat_tabcontenttext", $user_popups[b])[0].scrollHeight);
+					a(".arrowchat_tabcontenttext", $user_popups[b]).scrollTop(5000000);
 				}
 				K = 1;
 			});
@@ -4177,6 +4181,15 @@ $(function() {
 		$(".alert_chat_show").delay(300).addClass("in").fadeOut(1000);
 	});
 
+	window.setInterval(function(){
+  		$(".arrowchat_tabcontenttext").animate({ scrollTop: $(document).height() }, "slow");
+	}, 5000);
 
 
 });
+
+
+
+
+
+

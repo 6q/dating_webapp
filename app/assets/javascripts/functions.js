@@ -4,41 +4,30 @@ $(document).ready(function(){
   // mini slider for flat pages
 
   jQuery.fn.exists = function(){return this.length>0;}
-  jQuery.fn.slideSwitch = function () {
-        
-    $('.miniSlider li.active').clone().appendTo('.miniSlider').removeClass('active');
 
-    doTheSlideThing = function(){
-      var $active = $('.miniSlider li.active');
+$(".miniSlider > li:gt(0)").fadeIn();
+setInterval(function() { 
+  $('.miniSlider > li:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('.miniSlider');
+},  3000);
 
-        if ( $active.length == 0 ) $active = $('.miniSlider li');
-
-        var $next =  $active.next().length ? $active.next()
-            : $('.miniSlider li').first();
-
-        $active.addClass('last-active');
-        
-        $next.css({opacity: 0.0})
-            .addClass('active')
-            .animate({opacity: 1.0}, 1000, function() {
-                $active.removeClass('active last-active');
-            });
-    }
-       setInterval( doTheSlideThing, 5000 );
-  }
-  $('.miniSlider').slideSwitch();
 
 
   // in love folding functions
 
-	$('#in-love .fold, #in-love header').click(function(e){
-		e.preventDefault();
-		$('#in-love .fold').toggleClass('active');
-		$('#in-love article p').slideToggle();
-	});
+  $('#in-love .fold, #in-love header').click(function(e){
+    e.preventDefault();
+    $('#in-love .fold').toggleClass('active');
+    $('#in-love article p').slideToggle();
+  });
 
-	$('.user #in-love .fold').removeClass('active');
+  $('.user #in-love .fold').removeClass('active');
   //$('#in-love .fold').click();
+
 
 
 
@@ -50,7 +39,7 @@ $(document).ready(function(){
   }, function() {
     $("li:first-child", this).stop().animate({opacity:1},{queue:false,duration:500});
   });
-*/
+  */
 
   $('#related-list a, .user-card').tooltip({
     html:true

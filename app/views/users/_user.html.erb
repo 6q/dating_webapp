@@ -141,9 +141,6 @@
 
         <% end %>
 
-        <li class="more" data-toggle="tooltip" title="<%= _('Ver el Perfil') %>">
-          <%= link_to _('Ver Perfil'), user %>
-        </li>
 
     <% else %>
 
@@ -151,7 +148,6 @@
         <li class="chat" data-toggle="tooltip" title="<%= _('Chatear') %>"><%= link_to _('Chat'), new_user_registration_path %></li>
           <li class="like active" data-toggle="tooltip" title="<%= _('Ya no me gusta') %>"><%= link_to _('Ya no me gusta'), new_user_registration_path %></li>
           <li class="like hidden" data-toggle="tooltip" title="<%= _('Me gusta') %>"><%= link_to _('Me gusta'), new_user_registration_path %></li>
-        <li class="more" data-toggle="tooltip" title="<%= _('Ver el Perfil') %>"><%= link_to _('Ver Perfil'), new_user_registration_path %></li>
 
     <% end %>
 

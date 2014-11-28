@@ -20,7 +20,33 @@
 //= require chosen.jquery.min
 //= require rails.validations
 //= require ajax-chosen.min
-//= require_tree .
+//= require activities
+//= require ajax-chosen
+//= require cities
+//= require conversations
+//= require cycle
+//= require dashboard
+//= require flat_pages
+//= require functions
+//= require home
+//= require invitations
+//= require jquery.raty
+//= require letsrate
+//= require lightbox
+//= require messages
+//= require notifications
+//= require picture_upload
+//= require rails.validations
+//= require recommendations
+//= require searches
+//= require social_networks
+//= require user_functions
+
+
+
+
+
+
 
 $(function() {
   // hide flash messages afer 3 seconds

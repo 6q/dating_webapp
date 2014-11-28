@@ -31,10 +31,10 @@
 
   li {
     display:block;
-    width:30px;
+    width:33%;
     height:30px;
     float:left;
-    margin:1px!important;
+    margin:0px!important;
     
     &.disabled {
       opacity: 0.2;
@@ -46,12 +46,12 @@
 
     a {
       display:block;
-      float:left;
       width:30px;
       height:30px;
       overflow:hidden;
       text-indent:-999em;
       background:image-url('sprite.png') left top no-repeat;
+      margin:0 auto;
     }
 
     &.message {
