@@ -71,3 +71,6 @@ es:
         updated: 'Actualizaste tu cuenta correctamente.'
         update_needs_confirmation: "Actualizaste tu cuenta correctamente, pero tenemos que revalidar tu email. Revisa tu correo para confirmar la dirección."
         destroyed: 'Adiós, tu cuenta ha sido desactivada. Esperamos verte de vuelta pronto!'
+    user_confirmations:
+      user:
+        confirmed: 'Tu cuenta ha sido confirmada. Has iniciado sesión correctamente.'

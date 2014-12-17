@@ -71,3 +71,6 @@ ca:
         updated: "Compte actualitzat correctament."
         update_needs_confirmation: "El teu compte actualitzat correctament, però hem de revalidar la teva adreça de correu electrònic. Revisa el teu email per confirmar la nova adreça."
         destroyed: "Adéu! El teu compte ha estat cancel·lat correctament. Esperem tornar-te a veure!"
+    user_confirmations:
+      user:
+        confirmed: 'El teu compte ha sigut confirmat. Has iniciat sessió correctament.'
