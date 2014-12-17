@@ -142,6 +142,13 @@
         <% end %>
 
 
+        <% if session[:mobile_view] == true %>
+          <li class="more" data-toggle="tooltip" title="<%= _('Ver el Perfil') %>">
+            <%= link_to _('Ver Perfil'), user %>
+          </li>
+        <% end %>
+
+
     <% else %>
 
         <li class="message" data-toggle="tooltip" title="<%= _('Enviar mensaje') %>"><%= link_to _('Enviar mensaje'), new_user_registration_path %></li>
