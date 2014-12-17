@@ -28,7 +28,7 @@ class Search < ActiveRecord::Base
   attr_accessible :afinity_eq, :complexion_eq, :children_in, :description_cont,
                   :distance, :height_gteq, :height_lteq, :online, :name,
                   :pictures_main_eq, :smoker_in,
-                  :sort, :city_eq, :years_gteq, :years_lteq
+                  :sort, :city_eq, :years_gteq, :years_lteq, :updated_at_gteq
 
   belongs_to :user
 
