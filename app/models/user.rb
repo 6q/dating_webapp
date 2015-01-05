@@ -531,7 +531,8 @@ class User < ActiveRecord::Base
   # If a tuple (user_id, visitor_id) already exists in UserVisit,
   # the visited_at attribute is updated
   def visited(user)
-    invisible = self.general_settings.anonymous_browsing
+    # invisible = self.general_settings.anonymous_browsing
+    invisible = false
     visit = UserVisit.where("visitor_id = ? AND user_id = ?", self.id, user.id).first
     if visit
       visit.update_attributes({ visited_at: Time.now, seen: false, invisible: invisible })
