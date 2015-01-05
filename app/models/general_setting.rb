@@ -24,6 +24,7 @@
 #  show_only_pm                 :boolean
 #  show_only_rated_me           :boolean
 #  anonymous_browsing           :boolean          default(FALSE)
+#  age_restriction           	:boolean          default(TRUE)
 #
 
 class GeneralSetting < ActiveRecord::Base

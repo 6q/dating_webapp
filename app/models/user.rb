@@ -776,7 +776,7 @@ class User < ActiveRecord::Base
   end
 
   def can_interact_with?(user)
-    if user.general_settings.age_restriction && user.lf_age_from.present? && user.lf_age_to.present?
+    if user.lf_age_from.present? && user.lf_age_to.present?
       self.age >= user.lf_age_from.to_i && self.age <= user.lf_age_to.to_i || user.likes?(self)
     else
       true
