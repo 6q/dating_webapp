@@ -127,6 +127,11 @@ class UsersController < ApplicationController
     redirect_to settings_path
   end
 
+  def save_locale
+    current_user.locale = params[:locale]
+    current_user.save
+  end
+
   def save_background
     current_user.background = params[:background]
     current_user.save

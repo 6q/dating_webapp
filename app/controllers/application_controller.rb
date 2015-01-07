@@ -36,7 +36,18 @@ class ApplicationController < ActionController::Base
   def set_cookie
     cookies[:userid] = current_user.id if user_signed_in?
     cookies[:env] = Rails.env
-    cookies[:locale] = params[:locale] ? params[:locale] : I18n.locale.to_s
+    
+    if user_signed_in?
+
+      if params[:locale]
+        current_user.locale = params[:locale]
+      end
+      cookies[:locale] = current_user.locale
+
+    else
+      cookies[:locale] = params[:locale] ? params[:locale] : I18n.locale.to_s
+    end
+
   end
   private :set_cookie
 

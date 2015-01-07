@@ -126,6 +126,7 @@
 #  oauth_expires_at       :datetime
 #  customer_id            :string(255)
 #  last_4_digits          :string(255)
+#  locale                 :string(255)
 
 require_dependency 'minimum_age_validator'
 
@@ -233,7 +234,7 @@ class User < ActiveRecord::Base
     :lf_like_sport, :lf_like_read, :lf_like_cinema, :lf_like_walk, :lf_like_beach, :lf_like_mountain,
     :lf_like_quiet, :lf_like_family, :lf_like_friends, :lf_language_level, :lf_height_to, :lf_relationship,
     :characteristics_attributes, :my_characteristics_attributes, :fake, :banned,
-    :provider, :uid, :oauth_token, :oauth_expires_at
+    :provider, :uid, :oauth_token, :oauth_expires_at, :locale
 
   attr_accessor :is_rec # if user is created by reccomendation
 
@@ -789,27 +790,33 @@ class User < ActiveRecord::Base
   end
 
   def can_message_to?(user)
-    if user.general_settings.receive_messages_only_from_likes
-      if self.liker?(user)
-        true
-      else
-        false
-      end
-    else
-      true
-    end
+    
+    true
+
+    #if user.general_settings.receive_messages_only_from_likes
+    #  if self.liker?(user)
+    #    true
+    #  else
+    #    false
+    #  end
+    #else
+    #  true
+    #end
   end
 
   def can_chat_to?(user)
-    if user.general_settings.allow_chat_only_from_likes
-      if self.liker?(user)
-        true
-      else
-        false
-      end
-    else
-      true
-    end
+
+    true
+
+    #if user.general_settings.allow_chat_only_from_likes
+    #  if self.liker?(user)
+    #    true
+    #  else
+    #    false
+    #  end
+    #else
+    #  true
+    #end
   end
 
   def self.from_omniauth(auth)
