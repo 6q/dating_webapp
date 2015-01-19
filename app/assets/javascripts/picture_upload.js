@@ -28,27 +28,34 @@ $(function () {
   }
 
   function bindUploads() {
-    $(".upload_pic_input, .upload_pic_input_unregistered").fileupload({
-      dataType: 'json',
-      url: '/pictures',
-      formData: [{
-        name: 'authenticity_token',
-        value: $('meta[name="csrf-token"]').attr('content')
-      }, {name: 'main', value: $('#picture_main').val()}],
-      acceptFileTypes: /(\.|\/)(jpe?g|png)$/i,
-      done: function(event, data) {
-        showModalAndCrop(event, data);
-        $('#progress_modal').modal('hide');
-      },
-      progress: function (e, data) {
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('#progress_modal .progress .bar').css('width', progress + '%');
-      },
-      start: function() {
-        $('#progress_modal').modal('show');
-      }
 
-    });
+
+      $(".upload_pic_input, .upload_pic_input_unregistered").fileupload({
+        dataType: 'json',
+        url: '/pictures',
+        formData: [{
+          name: 'authenticity_token',
+          value: $('meta[name="csrf-token"]').attr('content')
+        }, {name: 'main', value: $('#picture_main').val()}],
+        acceptFileTypes: /(\.|\/)(jpe?g|png)$/i,
+        done: function(event, data) {
+          showModalAndCrop(event, data);
+          $('#progress_modal').modal('hide');
+        },
+        progress: function (e, data) {
+          var progress = parseInt(data.loaded / data.total * 100, 10);
+          $('#progress_modal .progress .bar').css('width', progress + '%');
+        },
+        start: function() {
+          $('#progress_modal').modal('show');
+        },
+        error: function() {
+          $('#progress_modal').modal('hide');
+          alert('Lo sentimos, sólo se pueden subir imágenes en JPG, JPEG o PNG');
+        }
+
+      });
+
  }
 
   bindUploads();

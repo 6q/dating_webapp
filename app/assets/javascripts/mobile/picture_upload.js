@@ -48,7 +48,11 @@ $(function () {
       },
       start: function() {
         $('#progress_modal').modal('show');
-      }
+      },
+        error: function() {
+          $('#progress_modal').modal('hide');
+          alert('Lo sentimos, sólo se pueden subir imágenes en JPG, JPEG o PNG');
+        }
 
     });
  }
